@@ -1,6 +1,8 @@
-# The Warhol: Out Loud App
+# Nordic Museum Audio Guide
 
 Targets: iOS 9.0 or greater
+
+A new audio guide (work in progress) for the Nordic Museum, forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud).
 
 ###Building and Running
 
