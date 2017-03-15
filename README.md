@@ -4,7 +4,7 @@ Targets: iOS 9.0 or greater
 
 A new audio guide (work in progress) for the Nordic Museum, forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud).
 
-###Building and Running
+### Building and Running
 
 1. Install all React Native dependencies  
 [React Native getting started guide](https://facebook.github.io/react-native/docs/getting-started.html)
@@ -17,7 +17,7 @@ A new audio guide (work in progress) for the Nordic Museum, forked from [Warhol 
   react-native run-ios
   ```
   
-####Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
+#### Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
 <!-- -->
 
 1. Open ios/AndyWarholAccessibilityProject.xcworkspace in XCode.
@@ -27,6 +27,6 @@ A new audio guide (work in progress) for the Nordic Museum, forked from [Warhol 
 5. Under "Signing", select your team from the drop down menu.
 6. Now you should be ready to select your device in the menu bar and choose "Build" from the Product menu.
 
-###Intellectual Property
+### Intellectual Property
 
 All files that are the intellectual property owned by The Andy Warhol Museum and other third-parties have been removed from this repo and replaced with placeholders. This includes all the images and audio files included in the App Bundle. Additional museum information remains in the code to give an overall sense of the app.
