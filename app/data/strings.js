@@ -1,5 +1,5 @@
-const translations = {
-  'en': {
+export const strings = {
+  en: {
     bluetoothButton_OnLabel: 'Bluetooth is on',
     bluetoothButton_OffLabel: 'Turn Bluetooth on',
     bluetoothAlert_Header: 'Bluetooth',
@@ -162,5 +162,10 @@ const translations = {
     tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel: 'Page x of x. Let\'s get started.',
     tutorialScreen_GetStarted: 'Let\'s Get Started',
     imageDetailScreen_Title: 'Artwork',
+  },
+  emoji: {
+    nearMeScreen_Title: '📏',
+    storiesScreen_Title: '📖',
+    museumScreen_Title: '🏛',
   },
 };

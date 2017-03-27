@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   View,
@@ -93,7 +95,7 @@ class RootScreen extends Component {
             if (true) {
         */}
           <TabBarIOS.Item
-            title="Near Me"
+            title={I18n.t('nearMeScreen_Title')}
             renderAsOriginal={true}
             icon={require('../assets/nearTab.png')}
             selectedIcon={require('../assets/nearTabSelected.png')}
@@ -112,7 +114,7 @@ class RootScreen extends Component {
               ref={NEARME_REF}
               style={styles.container}
               initialRoute={{
-                title: 'Near Me',
+                title: I18n.t('nearMeScreen_Title'),
                 component: NearMe,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
@@ -123,7 +125,7 @@ class RootScreen extends Component {
             />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            title="Stories"
+            title={I18n.t('storiesScreen_Title')}
             renderAsOriginal={true}
             icon={require('../assets/storiesTab.png')}
             selectedIcon={require('../assets/storiesTabSelected.png')}
@@ -142,7 +144,7 @@ class RootScreen extends Component {
               ref={STORIES_REF}
               style={styles.container}
               initialRoute={{
-                title: 'Stories',
+                title: I18n.t('storiesScreen_Title'),
                 component: Everything,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
@@ -153,7 +155,7 @@ class RootScreen extends Component {
             />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            title="The Warhol"
+            title={I18n.t('museumScreen_Title')}
             renderAsOriginal={true}
             icon={require('../assets/warholTab.png')}
             selectedIcon={require('../assets/warholTabSelected.png')}
@@ -172,7 +174,7 @@ class RootScreen extends Component {
               ref={MUSEUM_REF}
               style={styles.container}
               initialRoute={{
-                title: 'The Warhol',
+                title: I18n.t('museumScreen_Title'),
                 component: Museum,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',

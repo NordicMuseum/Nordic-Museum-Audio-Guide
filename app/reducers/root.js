@@ -11,6 +11,7 @@ import { accessibility } from './accessibility';
 import { nav } from './navigation';
 import { preferences } from './preferences';
 import { tutorial } from './tutorial';
+import { localization } from './localization';
 
 const rootReducer = combineReducers({
   beacon,

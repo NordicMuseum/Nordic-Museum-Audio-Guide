@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   View,
   Text,
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
 let lastSeenNumber = 0;
 
 class NearMeScreen extends Component {
-  static title = 'Near Me'
+  static title = I18n.t('nearMeScreen_Title');
 
   static propTypes = {
     navigator: PropTypes.object.isRequired,
@@ -233,7 +235,7 @@ class NearMeScreen extends Component {
 
     let floor;
     if (this.props.floor === null) {
-      floor = 'Near Me';
+      floor = I18n.t('nearMeScreen_Title');
     } else if (this.props.floor === 0) {
       floor = 'Underground';
     } else if (this.props.floor === 1) {
