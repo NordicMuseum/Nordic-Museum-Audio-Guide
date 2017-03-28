@@ -168,8 +168,4 @@ export const strings = {
     storiesScreen_Title: '📖',
     museumScreen_Title: '🏛',
   },
-  sv: {
-    nearMeScreen_Title: 'Nära mig',
-    storiesScreen_Title: 'Berättelser',
-  },
 };
