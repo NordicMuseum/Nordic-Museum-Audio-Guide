@@ -12,6 +12,7 @@ import {
 
 import Swiper from 'react-native-swiper';
 
+import TutorialLanguagePage from './tutorialLanguagePage';
 import TutorialWelcomePage from './tutorialWelcomePage';
 import TutorialNearMePage from './tutorialNearMePage';
 import TutorialStoriesPage from './tutorialStoriesPage';
@@ -66,10 +67,12 @@ class TutorialScreen extends Component {
     tutorialHidden: PropTypes.bool.isRequired,
     currentPage: PropTypes.number.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       toggleAutoplay: PropTypes.func.isRequired,
       tutorialPageDidChange: PropTypes.func.isRequired,
       hideTutorial: PropTypes.func.isRequired,
+      switchLocale: PropTypes.func.isRequired,
     }),
   }
 
@@ -96,11 +99,13 @@ class TutorialScreen extends Component {
       locationServicesStatus,
       currentPage,
       tutorialHidden,
+      locale,
     } = this.props;
 
     const {
       toggleAutoplay,
       tutorialPageDidChange,
+      switchLocale,
     } = this.props.actions;
 
     if (tutorialHidden) {
@@ -111,12 +116,12 @@ class TutorialScreen extends Component {
 
     let floatingButton;
 
-    if (currentPage === 0 || currentPage === 1) {
+    if (currentPage <= 2) {
       floatingButton = (
         <TouchableOpacity
           accessible={true}
           accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 3. Next Page.`}
+          accessibilityLabel={`Page ${currentPage + 1} of 4. Next Page.`}
           style={styles.floatingButton}
           onPress={() => {
             this.refs[SWIPER_REF].scrollBy(1);
@@ -134,7 +139,7 @@ class TutorialScreen extends Component {
         <TouchableOpacity
           accessible={true}
           accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 3. Let\'s get started.`}
+          accessibilityLabel={`Page ${currentPage + 1} of 4. Let\'s get started.`}
           style={styles.floatingButton}
           onPress={() => {
             this.hideModal();
@@ -170,6 +175,12 @@ class TutorialScreen extends Component {
             tutorialPageDidChange(state.index);
           }}
         >
+          <TutorialLanguagePage
+            locale={locale}
+            actions={{
+              switchLocale,
+            }}
+          />
           <TutorialWelcomePage />
           <TutorialNearMePage
             bluetoothOn={bluetoothOn}

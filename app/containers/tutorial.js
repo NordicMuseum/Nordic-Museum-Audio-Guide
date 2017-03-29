@@ -13,6 +13,10 @@ import {
   hideTutorial,
 } from '../actions/tutorial';
 
+import {
+  switchLocale,
+} from '../actions/localization';
+
 const mapStateToProps = (state) => {
   return {
     timerActive: state.bottomPlayer.timerActive,
@@ -21,6 +25,7 @@ const mapStateToProps = (state) => {
     locationServicesStatus: state.beacon.locationServicesStatus,
     currentPage: state.tutorial.currentPage,
     tutorialHidden: state.tutorial.tutorialHidden,
+    locale: state.localization.locale,
   };
 };
 
@@ -31,6 +36,7 @@ const mapDispatchToProps = (dispatch) => {
         toggleAutoplay,
         tutorialPageDidChange,
         hideTutorial,
+        switchLocale,
       }, dispatch),
   };
 };
