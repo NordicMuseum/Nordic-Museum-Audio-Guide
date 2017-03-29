@@ -12,6 +12,7 @@ import GoogleAnalytics from 'react-native-google-analytics-bridge';
 import { trackingID } from './data/trackingID';
 
 import { WayfindingActor } from './actors/wayfindingActor';
+import { LocalizationActor } from './actors/localizationActor';
 
 import { decideIfToShowTutorial } from './actions/tutorial';
 import { analyticsTrackDeviceType } from './actions/analytics';
@@ -43,6 +44,8 @@ analyticsTrackDeviceType(!showTutorialEveryTime);
 const App = () => {
   const wayfindingActor = new WayfindingActor(store);
   wayfindingActor.startListening();
+
+  const localizationActor = new LocalizationActor(store);
 
   return (
     <Provider store={store}>
