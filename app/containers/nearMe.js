@@ -18,6 +18,7 @@ const mapStateToProps = (state) => {
     tracking: state.beacon.tracking,
     bluetoothOn: state.beacon.bluetoothOn,
     locationServicesStatus: state.beacon.locationServicesStatus,
+    locale: state.localization.locale,
   };
 };
 

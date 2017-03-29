@@ -171,5 +171,6 @@ export const strings = {
   sv: {
     nearMeScreen_Title: 'Nära mig',
     storiesScreen_Title: 'Berättelser',
+    museumScreen_Title: 'Museum',
   },
 };

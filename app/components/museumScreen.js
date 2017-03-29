@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   View,
   Image,
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
 });
 
 class MuseumScreen extends Component {
-  static title = 'Museum'
+  static title = I18n.t('museumScreen_Title');
 
   static propTypes = {
     navigator: PropTypes.object.isRequired,

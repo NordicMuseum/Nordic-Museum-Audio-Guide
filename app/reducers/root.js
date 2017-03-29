@@ -24,6 +24,7 @@ const rootReducer = combineReducers({
   nav,
   preferences,
   tutorial,
+  localization,
 });
 
 export default rootReducer;

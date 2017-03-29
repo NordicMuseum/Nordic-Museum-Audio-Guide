@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
     screenReader: state.accessibility.screenReader,
+    locale: state.localization.locale,
   };
 };
 

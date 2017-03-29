@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
     tourStops: state.filteredTourStops.tourStops,
     currentStopUUID: state.bottomPlayer.stopUUID,
     screenReader: state.accessibility.screenReader,
+    locale: state.localization.locale,
   };
 };
 

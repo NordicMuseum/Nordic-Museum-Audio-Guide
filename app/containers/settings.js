@@ -8,12 +8,17 @@ import {
   toggleAutoplay,
 } from '../actions/audio';
 
+import {
+  switchLocale,
+} from '../actions/localization';
+
 const mapStateToProps = (state) => {
   return {
     timerActive: state.bottomPlayer.timerActive,
     autoplayOn: state.bottomPlayer.autoplayOn,
     bluetoothOn: state.beacon.bluetoothOn,
     locationServicesStatus: state.beacon.locationServicesStatus,
+    locale: state.localization.locale,
   };
 };
 
@@ -22,6 +27,7 @@ const mapDispatchToProps = (dispatch) => {
     actions:
       bindActionCreators({
         toggleAutoplay,
+        switchLocale,
       }, dispatch),
   };
 };

@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   View,
@@ -24,7 +26,7 @@ const styles = StyleSheet.create({
 });
 
 class EverythingScreen extends Component {
-  static title = 'Everything';
+  static title = I18n.t('storiesScreen_Title');
 
   static propTypes = {
     navigator: PropTypes.object.isRequired,

@@ -12,6 +12,7 @@ import SwitchButton from './buttons/switchButton';
 
 import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
+import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -49,10 +50,12 @@ const SettingsScreen = (props) => {
     autoplayOn,
     bluetoothOn,
     locationServicesStatus,
+    locale,
   } = props;
 
   const {
     toggleAutoplay,
+    switchLocale,
   } = props.actions;
 
   let autoplayVoiceoverMessage;
@@ -122,6 +125,25 @@ const SettingsScreen = (props) => {
             </Text>
           </View>
         </View>
+        <View style={styles.cell}>
+          <View
+            style={styles.cellTitle}
+            accessible={true}
+            accessibilityLabel={'Language Settings'}
+          >
+            <Text style={[globalStyles.disclosure, { flex: 1 }]}>
+              Language
+            </Text>
+          </View>
+          <View style={styles.cellBody}>
+            <LanguageSwitcherButtons
+              locale={locale}
+              actions={{
+                switchLocale,
+              }}
+            />
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -133,8 +155,10 @@ SettingsScreen.propTypes = {
   autoplayOn: PropTypes.bool.isRequired,
   bluetoothOn: PropTypes.bool.isRequired,
   locationServicesStatus: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
     toggleAutoplay: PropTypes.func.isRequired,
+    switchLocale: PropTypes.func.isRequired,
   }),
 };
 

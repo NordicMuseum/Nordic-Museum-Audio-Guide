@@ -24,6 +24,7 @@ const mapStateToProps = (state) => {
     beaconsNum: state.closeTourStops.tourStops.length || 0,
     activeTab: state.nav.activeTab,
     playerStatus: state.bottomPlayer.playerStatus,
+    locale: state.localization.locale,
   };
 };
 
