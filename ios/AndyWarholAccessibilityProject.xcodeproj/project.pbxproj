@@ -1092,7 +1092,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototypeRZ;
+				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1111,7 +1111,7 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8EX26F4Q38;
+				DEVELOPMENT_TEAM = 9XVMLS28YU;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1134,7 +1134,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototypeRZ;
+				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
