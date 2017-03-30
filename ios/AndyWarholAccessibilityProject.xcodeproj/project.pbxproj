@@ -1088,7 +1088,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
+				PRODUCT_BUNDLE_IDENTIFIER = SE.nordiskamuseet.audioguide;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1130,7 +1130,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
+				PRODUCT_BUNDLE_IDENTIFIER = SE.nordiskamuseet.audioguide;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
