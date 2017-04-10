@@ -34,12 +34,40 @@ const languages = [
     code: 'en',
   },
   {
-    name: 'Swedish',
+    name: 'Svenska',
     code: 'sv',
   },
   {
-    name: 'Emoji',
-    code: 'emoji',
+    name: 'Deutsch',
+    code: 'de',
+  },
+  {
+    name: 'Español',
+    code: 'es',
+  },
+  {
+    name: 'Русский',
+    code: 'ru',
+  },
+  {
+    name: 'Français',
+    code: 'fr',
+  },
+  {
+    name: 'Suomi',
+    code: 'fi',
+  },
+  {
+    name: 'Italiano',
+    code: 'it',
+  },
+  {
+    name: 'العربية',
+    code: 'ar',
+  },
+  {
+    name: '简体中文',
+    code: 'zh',
   },
 ];
 
