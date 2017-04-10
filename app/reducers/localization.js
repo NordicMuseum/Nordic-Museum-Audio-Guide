@@ -12,7 +12,7 @@ const initialState = {
 I18n.translations = strings;
 I18n.defaultLocale = 'en';
 I18n.locale = initialState.locale;
-I18n.fallbacks = true;
+I18n.fallbacks = false;
 
 export function localization(state = initialState, action) {
   switch (action.type) {
