@@ -205,8 +205,16 @@ export const strings = {
     '0001': 'Добро пожаловать в Северный музей',
     '0024': 'Квартира 40-х годов 20 века',
   },
-  fr: {},
-  zh: {},
+  fr: {
+    // CHAPTER HEADERS
+    '0001': 'Bienvenue au Musée nordique',
+    '0024': 'L\'appartement des années 1940',
+  },
+  zh: {
+    // CHAPTER HEADERS
+    '0001': '欢迎来到北欧博物馆',
+    '0024': '20世纪40年代的公寓',
+  },
   svSimple: {},
   svKids: {},
 };
