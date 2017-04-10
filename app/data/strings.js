@@ -162,15 +162,50 @@ export const strings = {
     tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel: 'Page x of x. Let\'s get started.',
     tutorialScreen_GetStarted: 'Let\'s Get Started',
     imageDetailScreen_Title: 'Artwork',
-  },
-  emoji: {
-    nearMeScreen_Title: '📏',
-    storiesScreen_Title: '📖',
-    museumScreen_Title: '🏛',
+    // CHAPTER HEADERS
+    '0001': 'Welcome to the Nordic Museum',
+    '0024': 'The 1940s Apartment',
   },
   sv: {
     nearMeScreen_Title: 'Nära mig',
     storiesScreen_Title: 'Berättelser',
     museumScreen_Title: 'Museum',
+    // CHAPTER HEADERS
+    '0001': 'Välkommen till Nordiska museet',
+    '0024': 'Folkhemslägenheten',
   },
+  it: {
+    // CHAPTER HEADERS
+    '0001': 'Benvenuti al Nordic Museum',
+    '0024': 'L\'appartamento stile anni \'40',
+  },
+  ar: {
+    // CHAPTER HEADERS
+    '0001': 'مرحباً بكم في متحف الشمال',
+    '0024': 'شقة أربعينيات القرن العشرين',
+  },
+  es: {
+    // CHAPTER HEADERS
+    '0001': 'Bienvenidos al Museo Nórdico',
+    '0024': 'El apartamento de los años 40',
+  },
+  fi: {
+    // CHAPTER HEADERS
+    '0001': 'Tervetuloa Nordiska museetiin',
+    '0024': 'Asunto kansankodissa',
+  },
+  de: {
+    // CHAPTER HEADERS
+    '0001': 'Willkommen im Nordischen Museum',
+    '0024': 'Die Wohnung der 1940er Jahre',
+  },
+  ru: {
+    // CHAPTER HEADERS
+    '0001': 'Добро пожаловать в Северный музей',
+    '0024': 'Квартира 40-х годов 20 века',
+  },
+  fr: {},
+  zh: {},
+  svSimple: {},
+  svKids: {},
 };
