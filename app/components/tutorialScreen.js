@@ -175,13 +175,13 @@ class TutorialScreen extends Component {
             tutorialPageDidChange(state.index);
           }}
         >
+          <TutorialWelcomePage />
           <TutorialLanguagePage
             locale={locale}
             actions={{
               switchLocale,
             }}
           />
-          <TutorialWelcomePage />
           <TutorialNearMePage
             bluetoothOn={bluetoothOn}
             locationServicesStatus={locationServicesStatus}
