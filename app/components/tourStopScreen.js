@@ -70,6 +70,7 @@ class TourStopScreen extends Component {
     initialCategory: PropTypes.string.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
     preferences: PropTypes.object.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       loadAudio: PropTypes.func.isRequired,
@@ -206,6 +207,7 @@ class TourStopScreen extends Component {
             autoplayOn={this.props.autoplayOn}
             playerStatus={this.props.playerStatus}
             screenReader={this.props.screenReader}
+            locale={this.props.locale}
             actions={{
               toggleAudioTranscript,
               loadAudio,

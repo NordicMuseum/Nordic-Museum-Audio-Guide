@@ -70,6 +70,7 @@ class BottomPlayer extends Component {
     timerStartAt: PropTypes.number.isRequired,
     timerNumber: PropTypes.number.isRequired,
     autoplayOn: PropTypes.bool.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       togglePausePlay: PropTypes.func.isRequired,
       replayAudio: PropTypes.func.isRequired,
@@ -115,6 +116,7 @@ class BottomPlayer extends Component {
       timerStartAt,
       timerNumber,
       autoplayOn,
+      locale,
     } = this.props;
 
     const {
@@ -231,6 +233,7 @@ class BottomPlayer extends Component {
           nextDisabled={nextDisabled}
           playRate={playRate}
           autoplayOn={autoplayOn}
+          locale={locale}
           actions={{
             togglePausePlay,
             replayAudio,

@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   Text,
@@ -58,6 +60,7 @@ class ControlsView extends Component {
     nextDisabled: PropTypes.bool.isRequired,
     // autoplayOn is only used to figure out if rerender is nessecary
     autoplayOn: PropTypes.bool.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       navToTourStop: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
@@ -75,8 +78,9 @@ class ControlsView extends Component {
     const rateChanged = this.props.playRate !== nextProps.playRate;
     const titleChanged = this.props.audioTitle !== nextProps.audioTitle;
     const autoplayChanged = this.props.autoplayOn !== nextProps.autoplayOn;
+    const localeChanged = this.props.locale !== nextProps.locale;
 
-    return statusChanged || rateChanged || titleChanged || autoplayChanged;
+    return statusChanged || rateChanged || titleChanged || autoplayChanged || localeChanged;
   }
 
   render() {
@@ -120,14 +124,14 @@ class ControlsView extends Component {
           onPress={navToTourStop}
           accessible={true}
           accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`${parseVoiceoverText(title)}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
+          accessibilityLabel={`${parseVoiceoverText(I18n.t(audioTitle))}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
         >
           <View style={[styles.row, styles.titleRow]}>
             <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
               {stopTitle}
             </Text>
             <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
-              &nbsp; {parseDisplayText(title)}
+              &nbsp; {parseDisplayText(I18n.t(audioTitle))}
             </Text>
           </View>
         </TouchableOpacity>

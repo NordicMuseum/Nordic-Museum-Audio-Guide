@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   Text,
   View,
@@ -93,6 +95,7 @@ class AudioContentItem extends Component {
     contentWidth: PropTypes.number.isRequired,
     index: PropTypes.number.isRequired,
     listLength: PropTypes.number.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       audioAction: PropTypes.func.isRequired,
@@ -166,7 +169,7 @@ class AudioContentItem extends Component {
                 accessible={true}
                 accessibilityTraits={['button', 'startsMedia']}
                 accessibilityLabel={
-                  `${parseVoiceoverText(audioContent.title)}. ${(index + 1)} of ` +
+                  `${parseVoiceoverText(I18n.t(audioContent.title))}. ${(index + 1)} of ` +
                   `${listLength}. ${audioContent.duration} seconds`
                 }
               >
@@ -177,7 +180,7 @@ class AudioContentItem extends Component {
                       active ? { fontWeight: '500' } : {},
                     ]}
                   >
-                    {parseDisplayText(audioContent.title)}
+                    {parseDisplayText(I18n.t(audioContent.title))}
                     <Text style={styles.seconds}>
                       {`  ${audioDurationFormatted}`}
                     </Text>
@@ -202,7 +205,7 @@ class AudioContentItem extends Component {
             styles={{
               width: transcriptContainerWidth,
             }}
-            accessibilityLabel={parseVoiceoverText(audioContent.title)}
+            accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
             onPress={() => { toggleAudioTranscript(); }}
             showTranscript={audioContent.showTranscript}
           />

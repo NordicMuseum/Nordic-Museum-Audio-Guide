@@ -76,6 +76,7 @@ const AudioContentList = (props) => {
             index={index}
             listLength={props.audioContent.length}
             contentWidth={width - SCROLLMARGINS * 2}
+            locale={props.locale}
             actions={{
               toggleAudioTranscript: () => {
                 analyticsTrackTranscriptOpenned(props.tourStopTitle, content.title);
@@ -149,6 +150,7 @@ AudioContentList.propTypes = {
   autoplayOn: PropTypes.bool.isRequired,
   screenReader: PropTypes.bool.isRequired,
   playerStatus: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
     toggleAudioTranscript: PropTypes.func.isRequired,
     loadAudio: PropTypes.func.isRequired,

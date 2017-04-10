@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
     autoplayOn: state.bottomPlayer.autoplayOn,
     preferences: state.preferences,
     currentStopUUID: state.bottomPlayer.stopUUID,
+    locale: state.localization.locale,
   };
 };
 

@@ -33,6 +33,7 @@ const mapStateToProps = (state) => {
     timerStartAt: state.bottomPlayer.timerStartAt,
     timerNumber: state.bottomPlayer.timerNumber,
     autoplayOn: state.bottomPlayer.autoplayOn,
+    locale: state.localization.locale,
   };
 };
 
