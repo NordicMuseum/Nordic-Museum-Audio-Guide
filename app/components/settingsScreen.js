@@ -48,6 +48,7 @@ const SettingsScreen = (props) => {
   const {
     timerActive,
     autoplayOn,
+    autoplayInitial,
     bluetoothOn,
     locationServicesStatus,
     locale,
@@ -55,6 +56,7 @@ const SettingsScreen = (props) => {
 
   const {
     toggleAutoplay,
+    toggleAutoplayInitial,
     switchLocale,
   } = props.actions;
 
@@ -129,6 +131,33 @@ const SettingsScreen = (props) => {
           <View
             style={styles.cellTitle}
             accessible={true}
+            accessibilityLabel={autoplayVoiceoverMessage}
+            onAccessibilityTap={() => {
+              toggleAutoplay(autoplayOn, timerActive);
+            }}
+          >
+            <Text style={[globalStyles.disclosure, { flex: 1 }]}>
+              Autoplay Initial
+            </Text>
+            <SwitchButton
+              width={40}
+              height={25}
+              onPress={() => {
+                toggleAutoplayInitial(!autoplayInitial);
+              }}
+              value={autoplayInitial}
+            />
+          </View>
+          <View style={styles.cellBody}>
+            <Text style={globalStyles.body}>
+              Temporary setting for testing if a story should autoplay when loaded.
+            </Text>
+          </View>
+        </View>
+        <View style={styles.cell}>
+          <View
+            style={styles.cellTitle}
+            accessible={true}
             accessibilityLabel={'Language Settings'}
           >
             <Text style={[globalStyles.disclosure, { flex: 1 }]}>
@@ -153,11 +182,13 @@ SettingsScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
   timerActive: PropTypes.bool.isRequired,
   autoplayOn: PropTypes.bool.isRequired,
+  autoplayInitial: PropTypes.bool.isRequired,
   bluetoothOn: PropTypes.bool.isRequired,
   locationServicesStatus: PropTypes.string.isRequired,
   locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
     toggleAutoplay: PropTypes.func.isRequired,
+    toggleAutoplayInitial: PropTypes.func.isRequired,
     switchLocale: PropTypes.func.isRequired,
   }),
 };

@@ -6,6 +6,7 @@ import SettingsScreen from '../components/settingsScreen';
 
 import {
   toggleAutoplay,
+  toggleAutoplayInitial,
 } from '../actions/audio';
 
 import {
@@ -16,6 +17,7 @@ const mapStateToProps = (state) => {
   return {
     timerActive: state.bottomPlayer.timerActive,
     autoplayOn: state.bottomPlayer.autoplayOn,
+    autoplayInitial: state.bottomPlayer.autoplayInitial,
     bluetoothOn: state.beacon.bluetoothOn,
     locationServicesStatus: state.beacon.locationServicesStatus,
     locale: state.localization.locale,
@@ -27,6 +29,7 @@ const mapDispatchToProps = (dispatch) => {
     actions:
       bindActionCreators({
         toggleAutoplay,
+        toggleAutoplayInitial,
         switchLocale,
       }, dispatch),
   };

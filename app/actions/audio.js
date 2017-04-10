@@ -47,6 +47,7 @@ export const UPDATE_AUDIO_CURRENT_TIME = 'UPDATE_AUDIO_CURRENT_TIME';
 export const AUDIO_DID_FINISH_PLAYING = 'AUDIO_DID_FINISH_PLAYING';
 
 export const TOGGLE_AUTOPLAY = 'TOGGLE_AUTOPLAY';
+export const TOGGLE_AUTOPLAY_INITIAL = 'TOGGLE_AUTOPLAY_INITIAL';
 
 // *** Play Rate Types ***
 export const PLAY_RATE_NORMAL = 'PLAY_RATE_NORMAL';
@@ -222,7 +223,7 @@ export function loadAudioContent(
       return content.category === 'VISUAL_DESCRIPTION';
     });
 
-    if (categoryIndex != -1) {
+    if (categoryIndex !== -1) {
       swapElementsInArray(audioContent, categoryIndex, audioContent.length - 1);
     }
 
@@ -470,6 +471,13 @@ export function toggleAutoplay(autoplayOn, timerActive) {
     dispatch(
       toggleAutoplaySuccess(newAutoplayStatus)
     );
+  };
+}
+
+export function toggleAutoplayInitial(autoplayInitial) {
+  return {
+    type: TOGGLE_AUTOPLAY_INITIAL,
+    autoplayInitial,
   };
 }
 

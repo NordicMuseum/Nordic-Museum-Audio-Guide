@@ -10,6 +10,7 @@ import {
   SEEK_AUDIO_TO_TIME,
   REPLAY_AUDIO,
   TOGGLE_AUTOPLAY,
+  TOGGLE_AUTOPLAY_INITIAL,
   PLAYER_STATUS_PAUSE,
   PLAYER_STATUS_PLAY,
   PLAYER_STATUS_FINISHED,
@@ -51,6 +52,7 @@ const initialState = {
   timerNumber: 0,
   timerActive: false,
   autoplayOn: true,
+  autoplayInitial: false,
 };
 
 export function bottomPlayer(state = initialState, action) {
@@ -140,6 +142,15 @@ export function bottomPlayer(state = initialState, action) {
         state,
         {
           autoplayOn: action.autoplayOn,
+        }
+      );
+    }
+
+    case TOGGLE_AUTOPLAY_INITIAL: {
+      return Object.assign({},
+        state,
+        {
+          autoplayInitial: action.autoplayInitial,
         }
       );
     }
