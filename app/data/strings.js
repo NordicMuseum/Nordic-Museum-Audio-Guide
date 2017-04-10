@@ -160,6 +160,7 @@ export const strings = {
     tutorialScreen_StoriesAutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
     tutorialScreen_NavigationButtonsAccessibilityLabel: 'Page x of x. Next Page.',
     tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel: 'Page x of x. Let\'s get started.',
+    tutorialScreen_GetStarted: 'Next',
     tutorialScreen_GetStarted: 'Let\'s Get Started',
     imageDetailScreen_Title: 'Artwork',
     // CHAPTER HEADERS
