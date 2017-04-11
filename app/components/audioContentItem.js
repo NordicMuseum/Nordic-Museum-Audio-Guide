@@ -102,6 +102,13 @@ class AudioContentItem extends Component {
     }),
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.locale !== nextProps.locale &&
+        this.props.audioContent.active) {
+      this.props.actions.reloadAudio();
+    }
+  }
+
   render() {
     const {
       audioContent,

@@ -82,6 +82,16 @@ const AudioContentList = (props) => {
                 analyticsTrackTranscriptOpenned(props.tourStopTitle, content.title);
                 toggleAudioTranscript(content.uuid);
               },
+              reloadAudio: () => {
+                loadAudio(
+                  props.audioContent,
+                  content,
+                  props.autoplayOn,
+                  props.currentAudio,
+                  props.currentAudioTime,
+                  props.tourStopTitle,
+                );
+              },
               audioAction: () => {
                 if (props.currentAudio === content.uuid &&
                     props.playerStatus !== PLAYER_STATUS_UNLOADED &&
