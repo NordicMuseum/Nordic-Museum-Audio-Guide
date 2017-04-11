@@ -3,6 +3,8 @@ import {
   NativeModules,
 } from 'react-native';
 
+import I18n from 'react-native-i18n';
+
 import {
   setAudioManagerEventListeners,
 } from './audioEvents';
@@ -129,8 +131,12 @@ async function fireAudioAction(
 
   setAudioManagerEventListeners(dispatch, autoplayOn, nextUUID !== null);
   try {
+    let url = activeAudio.audioURL;
+    if (activeAudio.audioURL.length === 4) {
+      url = (activeAudio.audioURL).concat('/', I18n.locale);
+    }
     const [, duration] = await AudioManager.loadLocalAudio(
-      activeAudio.audioURL,
+      url,
       activeAudio.uuid,
       playAudioAfterLoad,
     );
