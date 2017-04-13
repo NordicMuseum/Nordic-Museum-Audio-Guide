@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   View,
   StyleSheet,
@@ -51,125 +53,159 @@ const AboutScreen = (props) => {
         automaticallyAdjustContentInsets={false}
       >
         <Text style={globalStyles.body}>
-          Located in Pittsburgh, Pennsylvania, the place of Andy Warhol’s birth, The Andy Warhol Museum holds the largest collection of Warhol’s artwork and archival materials and is one of the most comprehensive single-artist museums in the world. The Warhol is one of the four Carnegie Museums of Pittsburgh.
+          {I18n.t('aboutScreen_Overview')}
         </Text>
         <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          About Carnegie Museums of Pittsburgh
+          {I18n.t('aboutScreen_AboutHeader')}
         </Text>
         <Text style={globalStyles.body}>
-          Established in 1895 by Andrew Carnegie, Carnegie Museums of Pittsburgh is a collection of four distinctive museums: Carnegie Museum of Art, Carnegie Museum of Natural History, Carnegie Science Center, and The Andy Warhol Museum. The museums reached more than 1.4 million people a year through exhibitions, educational programs, outreach activities, and special events.
+          {I18n.t('aboutScreen_AboutBody')}
         </Text>
         <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          Hours
+          {I18n.t('aboutScreen_HoursHeader')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_HoursBody1')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_HoursBody2')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_HoursBody3')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_HoursBody4')}
         </Text>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Monday
+              {I18n.t('aboutScreen_HoursMonday')}
             </Text>
           </View>
-          <View style={styles.hours}>
+          <View 
+            style={styles.hours}
+            accessible={true}
+            accessibilityLabel={I18n.t('aboutScreen_HoursMondayHoursAccessibilityLabel')}
+          >
             <Text style={globalStyles.body}>
-              Closed
+              {I18n.t('aboutScreen_HoursMondayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Tuesday
+              {I18n.t('aboutScreen_HoursTuesday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 5pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursTuesdayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 5pm
+              {I18n.t('aboutScreen_HoursTuesdayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Wednesday
+              {I18n.t('aboutScreen_HoursWednesday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 5pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursWednesdayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 5pm
+              {I18n.t('aboutScreen_HoursWednesdayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Thursday
+              {I18n.t('aboutScreen_HoursThursday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 5pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursThursdayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 5pm
+              {I18n.t('aboutScreen_HoursThursdayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Friday
+              {I18n.t('aboutScreen_HoursFriday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 10pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursFridayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 10pm
+              {I18n.t('aboutScreen_HoursFridayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Saturday
+              {I18n.t('aboutScreen_HoursSaturday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 5pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursSaturdayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 5pm
+              {I18n.t('aboutScreen_HoursSaturdayHours')}
             </Text>
           </View>
         </View>
         <View style={styles.hoursRow}>
           <View style={styles.hoursDay}>
             <Text style={globalStyles.body}>
-              Sunday
+              {I18n.t('aboutScreen_HoursSunday')}
             </Text>
           </View>
           <View
             style={styles.hours}
             accessible={true}
-            accessibilityLabel={'10am to 5pm'}
+            accessibilityLabel={I18n.t('aboutScreen_HoursSundayHoursAccessibilityLabel')}
           >
             <Text style={globalStyles.body}>
-              10am - 5pm
+              {I18n.t('aboutScreen_HoursSundayHours')}
             </Text>
           </View>
         </View>
+      <Text style={[globalStyles.h1, styles.aboutHeader]}>
+          {I18n.t('aboutScreen_AdmissionHeader')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_AdmissionBody1')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_AdmissionBody2')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_AdmissionBody3')}
+        </Text>
+      <Text style={[globalStyles.h1, styles.aboutHeader]}>
+          {I18n.t('aboutScreen_ForChildrenHeader')}
+        </Text>
+        <Text style={globalStyles.body}>
+          {I18n.t('aboutScreen_ForChildrenBody')}
+        </Text>
       </ScrollView>
     </View>
   );
