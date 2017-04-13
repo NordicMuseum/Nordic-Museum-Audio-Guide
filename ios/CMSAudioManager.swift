@@ -140,9 +140,11 @@ class CMSAudioManager: RCTEventEmitter {
 
       case .readyToPlay:
         player.actionAtItemEnd = .pause
-        
-        if playAudioAfterLoad {
-          player.rate = self.playerRate
+                
+        if !playAudioAfterLoad {
+            player.rate = 0.0
+        } else {
+            player.rate = self.playerRate
         }
 
         let interval = CMTimeMakeWithSeconds(1, Int32(NSEC_PER_SEC))

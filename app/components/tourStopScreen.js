@@ -71,6 +71,7 @@ class TourStopScreen extends Component {
     currentStopUUID: PropTypes.string.isRequired,
     preferences: PropTypes.object.isRequired,
     locale: PropTypes.string.isRequired,
+    autoplayInitial: PropTypes.bool.isRequired,
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       loadAudio: PropTypes.func.isRequired,
@@ -104,6 +105,7 @@ class TourStopScreen extends Component {
         this.props.currentAudio,
         this.props.currentAudioTime,
         this.props.screenReader,
+        this.props.autoplayInitial,
       );
     }
   }
@@ -201,6 +203,7 @@ class TourStopScreen extends Component {
           </TouchableOpacity>
           <AudioContentList
             tourStopTitle={this.props.tourStop.shortTitle}
+            tourStopUUID={this.props.tourStop.uuid}
             audioContent={this.props.audioContent}
             currentAudio={this.props.currentAudio}
             currentAudioTime={this.props.currentAudioTime}

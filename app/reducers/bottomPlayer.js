@@ -88,7 +88,7 @@ export function bottomPlayer(state = initialState, action) {
           index: action.activeAudioIndex,
           duration,
           time: 0,
-          playerStatus: PLAYER_STATUS_PLAY,
+          playerStatus: action.playing ? PLAYER_STATUS_PLAY : PLAYER_STATUS_PAUSE,
           playerOpen: true,
           nextUUID: action.nextUUID,
         }

@@ -90,6 +90,8 @@ const AudioContentList = (props) => {
                   props.currentAudio,
                   props.currentAudioTime,
                   props.tourStopTitle,
+                  props.tourStopUUID,
+                  false
                 );
               },
               audioAction: () => {
@@ -105,6 +107,8 @@ const AudioContentList = (props) => {
                     props.currentAudio,
                     props.currentAudioTime,
                     props.tourStopTitle,
+                    props.tourStopUUID,
+                    true,
                   );
                 }
               },
@@ -154,6 +158,7 @@ const AudioContentList = (props) => {
 
 AudioContentList.propTypes = {
   tourStopTitle: PropTypes.string.isRequired,
+  tourStopUUID: PropTypes.string.isRequired,
   audioContent: PropTypes.array,
   currentAudio: PropTypes.string,
   currentAudioTime: PropTypes.number,

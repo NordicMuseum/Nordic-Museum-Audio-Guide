@@ -99,6 +99,7 @@ class AudioContentItem extends Component {
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       audioAction: PropTypes.func.isRequired,
+      reloadAudio: PropTypes.func.isRequired,
     }),
   }
 

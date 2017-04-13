@@ -148,7 +148,7 @@ const SettingsScreen = (props) => {
               value={autoplayInitial}
             />
           </View>
-          <View style={styles.cellBody}>
+          <View style={[styles.cellBody, { backgroundColor: '#f2a99f' }]}>
             <Text style={globalStyles.body}>
               Temporary setting for testing if a story should autoplay when loaded.
             </Text>

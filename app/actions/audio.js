@@ -91,6 +91,7 @@ function loadAudioSuccess(
   replaceAudioContent,
   stopTitle,
   stopUUID,
+  playing = true,
 ) {
   return {
     type: LOAD_AUDIO_SUCCESS,
@@ -101,6 +102,7 @@ function loadAudioSuccess(
     replaceAudioContent,
     stopTitle,
     stopUUID,
+    playing,
   };
 }
 
@@ -154,6 +156,7 @@ async function fireAudioAction(
         replaceAudioContent,
         stopTitle,
         stopUUID,
+        playAudioAfterLoad,
       )
     );
   } catch (e) {
@@ -187,6 +190,7 @@ export function loadAudioContent(
   currentUUID,
   timeListened,
   screenReaderOn,
+  autoplayInitial,
 ) {
   AudioManager.unloadAudio();
 
@@ -262,7 +266,7 @@ export function loadAudioContent(
       autoplayOn,
       stopTitle,
       stopUUID,
-      false,
+      autoplayInitial,
     );
   };
 }
@@ -275,6 +279,8 @@ export function loadAudio(
   currentUUID,
   timeListened,
   stopTitle,
+  stopUUID,
+  playAfterLoad,
 ) {
   return async (dispatch) => {
     for (const content of audioContent) {
@@ -294,7 +300,7 @@ export function loadAudio(
     );
 
     fireAudioAction(
-      audioContent, activeAudio, dispatch, false, autoplayOn, stopTitle
+      audioContent, activeAudio, dispatch, false, autoplayOn, stopTitle, stopUUID, playAfterLoad
     );
   };
 }
