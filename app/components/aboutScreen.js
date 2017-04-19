@@ -68,127 +68,9 @@ const AboutScreen = (props) => {
           {I18n.t('aboutScreen_HoursBody1')}
         </Text>
         <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_HoursBody2')}
+          {I18n.t('aboutScreen_HoursBody1')}
         </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_HoursBody3')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_HoursBody4')}
-        </Text>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursMonday')}
-            </Text>
-          </View>
-          <View 
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursMondayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursMondayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursTuesday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursTuesdayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursTuesdayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursWednesday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursWednesdayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursWednesdayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursThursday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursThursdayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursThursdayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursFriday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursFridayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursFridayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursSaturday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursSaturdayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursSaturdayHours')}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.hoursRow}>
-          <View style={styles.hoursDay}>
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursSunday')}
-            </Text>
-          </View>
-          <View
-            style={styles.hours}
-            accessible={true}
-            accessibilityLabel={I18n.t('aboutScreen_HoursSundayHoursAccessibilityLabel')}
-          >
-            <Text style={globalStyles.body}>
-              {I18n.t('aboutScreen_HoursSundayHours')}
-            </Text>
-          </View>
-        </View>
-      <Text style={[globalStyles.h1, styles.aboutHeader]}>
+        <Text style={[globalStyles.h1, styles.aboutHeader]}>
           {I18n.t('aboutScreen_AdmissionHeader')}
         </Text>
         <Text style={globalStyles.body}>
@@ -196,15 +78,6 @@ const AboutScreen = (props) => {
         </Text>
         <Text style={globalStyles.body}>
           {I18n.t('aboutScreen_AdmissionBody2')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_AdmissionBody3')}
-        </Text>
-      <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          {I18n.t('aboutScreen_ForChildrenHeader')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_ForChildrenBody')}
         </Text>
       </ScrollView>
     </View>

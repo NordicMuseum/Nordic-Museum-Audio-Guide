@@ -85,13 +85,13 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'About The Andy Warhol Museum.',
+                label: I18n.t('museumScreen_ListItem1Label'),
               }}
               bottomBorder={true}
-              title="About The Andy Warhol Museum"
+              title={I18n.t('museumScreen_ListItem1Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'About',
+                  title: I18n.t('aboutScreen_Title'),
                   component: AboutScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
