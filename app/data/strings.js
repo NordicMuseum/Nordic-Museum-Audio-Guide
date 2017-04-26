@@ -222,7 +222,7 @@ export const strings = {
     aboutScreen_Title: 'Il Museo Nordico',
     aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotogra a, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un\'esposizione sull\'unica popolazione indigena della Svezia, i Sami.',
     aboutScreen_AboutHeader: 'L\'edificio',
-    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L\'imponente edi cio, situato sull\'isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907. Il cuore del museo è un enorme salone lungo 126 metri e con un sof tto alto 24 metri. Al centro del salone troneggia la grande statua in legno di quercia del sovrano Gustav Vasa (1523-1560), realizzata dal noto scultore Carl Milles.Il museo è stato fondato da Artur Hazelius nel 1873. L\'imponente edi cio, situato sull\'isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907. Il cuore del museo è un enorme salone lungo 126 metri e con un sof tto alto 24 metri. Al centro del salone troneggia la grande statua in legno di quercia del sovrano Gustav Vasa (1523-1560), realizzata dal noto scultore Carl Milles.',
+    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L\'imponente edi cio, situato sull\'isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
     // CHAPTER HEADERS
     '0001': 'Benvenuti al Nordic Museum',
     '0002': 'Eva, un classico del funzionalismo',
@@ -313,7 +313,7 @@ export const strings = {
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet on Ruotsin suurin kulttuuri- historiallinen museo. Se on arjen palatsi, joka toimii näyttämönä tarinoille ihmisten elämästä Pohjoismaissa eilen, tänään ja huomenna. Museossa voit tutustua vaatteisiin ja muotiin, tekstiileihin ja koruihin, huonekaluihin ja tapaan asua, valokuviin, leluihin, kansantaiteeseen sekä lasiin ja posliiniin. Museossa on myös Ruotsin ainoaa alkuperäiskansaa saamelaisia käsittelevä näyttely.',
     aboutScreen_AboutHeader: 'Rakennus',
-    aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnogra an keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907. Museon sydän on 24 metriä korkea ja 126 metriä pitkä valtava sali. Salin keskellä on kuningas Kustaa Vaasan (1523–1560) suuri tammipatsas, jonka on suunnitellut tunnettu kuvanveistäjä Carl Milles.',
+    aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnogra an keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907.',
     // CHAPTER HEADERS
     '0001': 'Tervetuloa Nordiska museetiin',
     '0002': 'Funkisklassikko Eva',
@@ -344,7 +344,7 @@ export const strings = {
     aboutScreen_Title: 'Das Nordische Museum',
     aboutScreen_Overview: 'Das Nordische Museum ist das größte kulturgeschicht- liche Museum Schwedens. Ein Palast der Alltagskultur, in dem vom Leben und von den Menschen in Skandinavien gestern, heute und morgen erzählt wird. Entdecken Sie Kleidung und Mode, Textilien und Schmuck, Möbel und Einrichtungsgegenstände, Fotos, Spielzeug, Volkskunst, Glas und Geschirr. Hier gibt es auch eine Ausstellung zur einzigen Urbevölkerung Schwedens, den Samen, zu sehen.',
     aboutScreen_AboutHeader: 'Das Gebäude',
-    aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht. Das Herzstück des Museums bildet eine 24 Meter hohe und 126 Meter lange Halle. In ihrer Mitte steht eine Statue des Königs Gustav Wasa (1523–1560). Sie wurde nach Entwürfen des berühmten Bildhauers Carl Milles aus Eichenholz geschnitzt.',
+    aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht.',
     // CHAPTER HEADERS
     '0001': 'Willkommen im Nordischen Museum',
     '0002': 'Funktionalistische Klassikerin Eva',
@@ -375,7 +375,7 @@ export const strings = {
     aboutScreen_Title: 'Музей северных стран',
     aboutScreen_Overview: 'Музей северных стран — крупнейший в Швеции историко-культурный музей. Это общедоступный дворец, в котором можно прикоснуться к прошлому, настоящему и будущему Северных стран и их жителей. Посетите экспозиции, посвященные одежде и моде, текстилю и украшениям, жилищам и мебели, фотографии, игрушкам, народному искусству, стеклу и фарфору. Отдельная выставка посвящена единственному коренному народу Швеции, саамам',
     aboutScreen_AboutHeader: 'Здание',
-    aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году. Сердце музея — огромный зал длиной 126 метров с потолком высотой 24 метра. В центре зала расположена большая статуя, изображающая короля Густава Васу (1523–1560). Эта статуя выполнена из дуба знаменитым скульптором Карлом Миллесом.',
+    aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году.',
     // CHAPTER HEADERS
     '0001': 'Добро пожаловать в Северный музей',
     '0002': 'Классический функционалист Ева',
@@ -406,7 +406,7 @@ export const strings = {
     aboutScreen_Title: 'Le musée nordique',
     aboutScreen_Overview: 'Le musée nordique est le plus grand musée d\'histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au  l des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L\'une des expositions retrace l\'histoire du seul peuple indigène de Suède, les Samis.',
     aboutScreen_AboutHeader: 'L\'édifice',
-    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L\'imposant monument situé sur l\'île de Djurgården, l\'île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907. Au cœur du musée se trouve un gigantesque hall de 126 mètres de long avec une hauteur sous plafond de 24 mètres. Une statue représentant le roi Gustave Vasa (1523-1560), créée en bois de chêne par le célèbre sculpteur Carl Milles, se dresse au milieu du hall.',
+    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L\'imposant monument situé sur l\'île de Djurgården, l\'île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
     // CHAPTER HEADERS
     '0001': 'Bienvenue au Musée nordique',
     '0002': 'La chaise Eva classique et fonctionnelle',
