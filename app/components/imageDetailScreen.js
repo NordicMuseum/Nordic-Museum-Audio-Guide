@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   Text,
@@ -15,7 +17,9 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles } from '../styles';
+import NavigationBar from './navigationBar';
+
+import { globalStyles, OFF_BLACK, TEAL } from '../styles';
 
 const SPACING = 10;
 const IMAGE_MAX_HEIGHT = 475 / 2; // Divided by 2 because of retina screens
@@ -56,37 +60,52 @@ const ImageDetailScreen = (props) => {
   }
 
   return (
-    <View
-      style={[styles.container, { marginBottom: props.containerMargin }]}
-    >
-      <ScrollView
-        automaticallyAdjustContentInsets={false}
-        style={{
-          paddingLeft: SPACING,
-          paddingRight: SPACING,
-          paddingBottom: SPACING,
+    <View style={{ flex: 1 }}>
+      <NavigationBar
+        label={I18n.t('imageDetailScreen_Title')}
+        labelStyle={{
+          color: OFF_BLACK,
         }}
+        buttonColor={TEAL}
+        backButtonPress={() => { props.navigator.pop(); }}
+        backButtonLabel={props.tourStopTitle}
+        barStyle={{
+          backgroundColor: '#ffffff',
+          height: 44,
+        }}
+      />
+      <View
+        style={[styles.container, { marginBottom: props.containerMargin }]}
       >
-        <Image
-          style={[
-            styles.image,
-            {
-              width: imageWidth,
-              height: imageHeight,
-            },
-          ]}
-          source={{ uri: props.imageURL }}
-        />
-        <View
-          accessible={true}
-          accessibilityTraits={['text']}
-          accessibilityLabel={parseVoiceoverText(props.longCopyright)}
+        <ScrollView
+          automaticallyAdjustContentInsets={false}
+          style={{
+            paddingLeft: SPACING,
+            paddingRight: SPACING,
+            paddingBottom: SPACING,
+          }}
         >
-          <Text style={[styles.longCopyright, globalStyles.body]}>
-            {parseDisplayText(props.longCopyright)}
-          </Text>
-        </View>
-      </ScrollView>
+          <Image
+            style={[
+              styles.image,
+              {
+                width: imageWidth,
+                height: imageHeight,
+              },
+            ]}
+            source={{ uri: props.imageURL }}
+          />
+          <View
+            accessible={true}
+            accessibilityTraits={['text']}
+            accessibilityLabel={parseVoiceoverText(props.longCopyright)}
+          >
+            <Text style={[styles.longCopyright, globalStyles.body]}>
+              {parseDisplayText(props.longCopyright)}
+            </Text>
+          </View>
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -98,6 +117,7 @@ ImageDetailScreen.propTypes = {
   imageWidth: PropTypes.number.isRequired,
   longCopyright: PropTypes.string.isRequired,
   containerMargin: PropTypes.number.isRequired,
+  tourStopTitle: PropTypes.string.isRequired,
 };
 
 export default ImageDetailScreen;

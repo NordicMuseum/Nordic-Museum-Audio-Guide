@@ -10,10 +10,12 @@ import {
   Text,
 } from 'react-native';
 
+import NavigationBar from './navigationBar';
+
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { globalStyles } from '../styles';
+import { globalStyles, OFF_BLACK, TEAL } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,44 +44,59 @@ const styles = StyleSheet.create({
 
 const AboutScreen = (props) => {
   return (
-    <View style={[styles.container, { marginBottom: BOTTOMBARHEIGHT }]}>
-      <ScrollView
-        contentContainerStyle={{
-          paddingTop: 10,
-          paddingLeft: 10,
-          paddingRight: 10,
-          paddingBottom: BOTTOMPLAYERHEIGHT + 10,
+    <View style={{ flex: 1 }}>
+      <NavigationBar
+        label={I18n.t('aboutScreen_Title')}
+        labelStyle={{
+          color: OFF_BLACK,
         }}
-        automaticallyAdjustContentInsets={false}
-      >
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_Overview')}
-        </Text>
-        <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          {I18n.t('aboutScreen_AboutHeader')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_AboutBody')}
-        </Text>
-        <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          {I18n.t('aboutScreen_HoursHeader')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_HoursBody1')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_HoursBody1')}
-        </Text>
-        <Text style={[globalStyles.h1, styles.aboutHeader]}>
-          {I18n.t('aboutScreen_AdmissionHeader')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_AdmissionBody1')}
-        </Text>
-        <Text style={globalStyles.body}>
-          {I18n.t('aboutScreen_AdmissionBody2')}
-        </Text>
-      </ScrollView>
+        buttonColor={TEAL}
+        backButtonPress={() => { props.navigator.pop(); }}
+        backButtonLabel={I18n.t('museumScreen_Title')}
+        barStyle={{
+          backgroundColor: '#ffffff',
+          height: 44,
+        }}
+      />
+      <View style={[styles.container, { marginBottom: BOTTOMBARHEIGHT }]}>
+        <ScrollView
+          contentContainerStyle={{
+            paddingTop: 10,
+            paddingLeft: 10,
+            paddingRight: 10,
+            paddingBottom: BOTTOMPLAYERHEIGHT + 10,
+          }}
+          automaticallyAdjustContentInsets={false}
+        >
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_Overview')}
+          </Text>
+          <Text style={[globalStyles.h1, styles.aboutHeader]}>
+            {I18n.t('aboutScreen_AboutHeader')}
+          </Text>
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_AboutBody')}
+          </Text>
+          <Text style={[globalStyles.h1, styles.aboutHeader]}>
+            {I18n.t('aboutScreen_HoursHeader')}
+          </Text>
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_HoursBody1')}
+          </Text>
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_HoursBody1')}
+          </Text>
+          <Text style={[globalStyles.h1, styles.aboutHeader]}>
+            {I18n.t('aboutScreen_AdmissionHeader')}
+          </Text>
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_AdmissionBody1')}
+          </Text>
+          <Text style={globalStyles.body}>
+            {I18n.t('aboutScreen_AdmissionBody2')}
+          </Text>
+        </ScrollView>
+      </View>
     </View>
   );
 };

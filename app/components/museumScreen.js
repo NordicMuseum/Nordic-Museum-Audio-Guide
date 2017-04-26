@@ -97,6 +97,7 @@ class MuseumScreen extends Component {
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
+                  navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
                   },
@@ -118,6 +119,7 @@ class MuseumScreen extends Component {
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
+                  navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
                   },
@@ -139,6 +141,7 @@ class MuseumScreen extends Component {
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
+                  navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
                   },
@@ -160,6 +163,7 @@ class MuseumScreen extends Component {
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
+                  navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
                   },
@@ -181,6 +185,7 @@ class MuseumScreen extends Component {
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
+                  navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
                   },

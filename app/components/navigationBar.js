@@ -5,10 +5,13 @@ import {
   Text,
   View,
   StyleSheet,
+  TouchableOpacity,
+  Image,
 } from 'react-native';
 
 const styles = StyleSheet.create({
   bar: {
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
@@ -20,6 +23,24 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 17,
   },
+  backButton: {
+    position: 'absolute',
+    left: 0,
+    top: -3,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  backButtonLabel: {
+    fontSize: 17,
+  },
+  backArrow: {
+    transform: [
+      { rotate: '180deg' },
+    ],
+    width: 30,
+    height: 50,
+  },
 });
 
 const NavigationBar = (props) => {
@@ -27,6 +48,21 @@ const NavigationBar = (props) => {
     <View
       style={[props.barStyle, styles.bar]}
     >
+      {props.backButtonPress &&
+       props.backButtonLabel &&
+        <TouchableOpacity
+          onPress={props.backButtonPress}
+          style={styles.backButton}
+        >
+          <Image
+            source={require('../assets/DisclosureIndicator.png')}
+            style={[styles.backArrow, { tintColor: props.buttonColor }]}
+          />
+          <Text style={[styles.backButtonLabel, { color: props.buttonColor }]}>
+            {props.backButtonLabel}
+          </Text>
+        </TouchableOpacity>
+      }
       <Text style={[props.labelStyle, styles.label]}>
         {props.label}
       </Text>
@@ -44,6 +80,9 @@ NavigationBar.propTypes = {
     PropTypes.object,
   ]).isRequired,
   label: PropTypes.string.isRequired,
+  buttonColor: PropTypes.string,
+  backButtonLabel: PropTypes.string,
+  backButtonPress: PropTypes.func,
 };
 
 export default NavigationBar;

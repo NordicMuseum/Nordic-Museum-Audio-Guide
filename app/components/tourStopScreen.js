@@ -1,6 +1,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   Text,
@@ -15,6 +17,8 @@ import { TourStop } from '../models/tourStop';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
+
+import NavigationBar from './navigationBar';
 import AudioContentList from './audioContentList';
 import ImageDetailScreen from './imageDetailScreen';
 
@@ -23,7 +27,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles } from '../styles.js';
+import { globalStyles, OFF_BLACK, TEAL } from '../styles.js';
 
 const HEADER_IMAGE_MAX_DIMENSION = 100;
 
@@ -150,74 +154,91 @@ class TourStopScreen extends Component {
     }
 
     return (
-      <View
-        style={[styles.container, { marginBottom: containerMargin }]}
-      >
-        <ScrollView
-          automaticallyAdjustContentInsets={false}
+      <View style={{ flex: 1 }}>
+        <NavigationBar
+          label={this.props.tourStop.shortTitle}
+          labelStyle={{
+            color: OFF_BLACK,
+          }}
+          buttonColor={TEAL}
+          backButtonPress={() => { this.props.navigator.pop(); }}
+          backButtonLabel={I18n.t('storiesScreen_Title')}
+          barStyle={{
+            backgroundColor: '#ffffff',
+            height: 44,
+          }}
+        />
+        <View
+          style={[styles.container, { marginBottom: containerMargin }]}
         >
-          <TouchableOpacity
-            accessibilityTraits={['header', 'button']}
-            accessibilityLabel={
-              `Artwork Information. ${accessibilityLabel}. ` +
-              'Double tap to go to long credits.'
-            }
-            onPress={() => {
-              this.props.navigator.push({
-                title: 'Artwork',
-                component: ImageDetailScreen,
-                barTintColor: '#ffffff',
-                tintColor: '#097D8D',
-                titleTextColor: '#4D4D4D',
-                shadowHidden: true,
-                passProps: {
-                  navigator: this.props.navigator,
-                  imageURL: this.props.imageURL,
-                  imageHeight,
-                  imageWidth,
-                  longCopyright: this.props.tourStop.longCredit,
-                  containerMargin,
-                },
-              });
-            }}
+          <ScrollView
+            automaticallyAdjustContentInsets={false}
           >
-            <View style={styles.header}>
-              <Image
-                style={[
-                  styles.headerImage,
-                  {
-                    width: headerImageWidth,
-                    height: headerImageHeight,
+            <TouchableOpacity
+              accessibilityTraits={['header', 'button']}
+              accessibilityLabel={
+                `Artwork Information. ${accessibilityLabel}. ` +
+                'Double tap to go to long credits.'
+              }
+              onPress={() => {
+                this.props.navigator.push({
+                  title: 'Artwork',
+                  component: ImageDetailScreen,
+                  barTintColor: '#ffffff',
+                  tintColor: '#097D8D',
+                  titleTextColor: '#4D4D4D',
+                  shadowHidden: true,
+                  navigationBarHidden: true,
+                  passProps: {
+                    navigator: this.props.navigator,
+                    imageURL: this.props.imageURL,
+                    imageHeight,
+                    imageWidth,
+                    longCopyright: this.props.tourStop.longCredit,
+                    containerMargin,
+                    tourStopTitle: this.props.tourStop.shortTitle,
                   },
-                ]}
-                source={{ uri: this.props.imageURL }}
-              />
-              <View
-                style={styles.headerText}
-              >
-                <Text style={globalStyles.body}>
-                  {parseDisplayText(this.props.tourStop.shortCredit)}
-                </Text>
+                });
+              }}
+            >
+              <View style={styles.header}>
+                <Image
+                  style={[
+                    styles.headerImage,
+                    {
+                      width: headerImageWidth,
+                      height: headerImageHeight,
+                    },
+                  ]}
+                  source={{ uri: this.props.imageURL }}
+                />
+                <View
+                  style={styles.headerText}
+                >
+                  <Text style={globalStyles.body}>
+                    {parseDisplayText(this.props.tourStop.shortCredit)}
+                  </Text>
+                </View>
               </View>
-            </View>
-          </TouchableOpacity>
-          <AudioContentList
-            tourStopTitle={this.props.tourStop.shortTitle}
-            tourStopUUID={this.props.tourStop.uuid}
-            audioContent={this.props.audioContent}
-            currentAudio={this.props.currentAudio}
-            currentAudioTime={this.props.currentAudioTime}
-            autoplayOn={this.props.autoplayOn}
-            playerStatus={this.props.playerStatus}
-            screenReader={this.props.screenReader}
-            locale={this.props.locale}
-            actions={{
-              toggleAudioTranscript,
-              loadAudio,
-              togglePausePlay,
-            }}
-          />
-        </ScrollView>
+            </TouchableOpacity>
+            <AudioContentList
+              tourStopTitle={this.props.tourStop.shortTitle}
+              tourStopUUID={this.props.tourStop.uuid}
+              audioContent={this.props.audioContent}
+              currentAudio={this.props.currentAudio}
+              currentAudioTime={this.props.currentAudioTime}
+              autoplayOn={this.props.autoplayOn}
+              playerStatus={this.props.playerStatus}
+              screenReader={this.props.screenReader}
+              locale={this.props.locale}
+              actions={{
+                toggleAudioTranscript,
+                loadAudio,
+                togglePausePlay,
+              }}
+            />
+          </ScrollView>
+        </View>
       </View>
     );
   }
