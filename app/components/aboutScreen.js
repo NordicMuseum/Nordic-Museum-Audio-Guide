@@ -80,11 +80,17 @@ const AboutScreen = (props) => {
           <Text style={[globalStyles.h1, styles.aboutHeader]}>
             {I18n.t('aboutScreen_HoursHeader')}
           </Text>
-          <Text style={globalStyles.body}>
+          <Text
+            accessibilityLabel={I18n.t('aboutScreen_HoursBody1AccessibilityLabel')}
+            style={globalStyles.body}
+          >
             {I18n.t('aboutScreen_HoursBody1')}
           </Text>
-          <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_HoursBody1')}
+          <Text
+            accessibilityLabel={I18n.t('aboutScreen_HoursBody2AccessibilityLabel')}
+            style={globalStyles.body}
+          >
+            {I18n.t('aboutScreen_HoursBody2')}
           </Text>
           <Text style={[globalStyles.h1, styles.aboutHeader]}>
             {I18n.t('aboutScreen_AdmissionHeader')}
