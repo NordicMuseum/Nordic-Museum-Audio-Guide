@@ -6,14 +6,16 @@ import {
   View,
   Image,
   StyleSheet,
+  ScrollView,
 } from 'react-native';
 
-import { globalStyles, OFF_WHITE, TURQUOISE, GRAY } from '../styles';
+import { OFF_WHITE, TURQUOISE, GRAY } from '../styles';
 
 import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: 'column',
     marginHorizontal: 15,
   },
@@ -48,6 +50,9 @@ const styles = StyleSheet.create({
     flex: 1,
     color: OFF_WHITE,
   },
+  languageScroller: {
+    marginBottom: 150,
+  },
 });
 
 const TutorialLanguagePage = (props) => {
@@ -70,12 +75,17 @@ const TutorialLanguagePage = (props) => {
           Language
         </Text>
       </View>
-      <LanguageSwitcherButtons
-        locale={locale}
-        actions={{
-          switchLocale,
-        }}
-      />
+      <ScrollView
+        bounces={false}
+        style={styles.languageScroller}
+      >
+        <LanguageSwitcherButtons
+          locale={locale}
+          actions={{
+            switchLocale,
+          }}
+        />
+      </ScrollView>
     </View>
   );
 };

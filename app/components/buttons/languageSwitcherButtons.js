@@ -38,6 +38,26 @@ const languages = [
     code: 'sv',
   },
   {
+    name: 'Svenska Simple',
+    code: 'sv-simple',
+  },
+  {
+    name: 'Svenska Kids',
+    code: 'sv-kids',
+  },
+  {
+    name: 'Northern Sami',
+    code: 'se-sme',
+  },
+  {
+    name: 'Lule Sami',
+    code: 'se-smj',
+  },
+  {
+    name: 'Southern Sami',
+    code: 'se-sma',
+  },
+  {
     name: 'Deutsch',
     code: 'de',
   },
