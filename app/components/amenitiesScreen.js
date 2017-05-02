@@ -73,7 +73,7 @@ const AmenitiesScreen = (props) => {
             return (
               <View key={index}>
                 <ExpandableHeader
-                  title={floor.floorTitle}
+                  title={I18n.t(floor.floorTitle)}
                   expanded={props.expandedFloors[index]}
                   numberOfObjects={floor.amenities.length}
                   objectSingular={'amenity'}

@@ -8,9 +8,10 @@ import {
   Image,
 } from 'react-native';
 
+import I18n from 'react-native-i18n';
+
 import {
   parseDisplayText,
-  parseVoiceoverText,
 } from '../utilities';
 
 import { globalStyles } from '../styles';
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
   },
   amenityTitle: {
     marginBottom: 10,
+    fontWeight: '500',
   },
   borderStyle: {
     borderBottomWidth: 1,
@@ -40,22 +42,7 @@ const styles = StyleSheet.create({
 });
 
 const AmenitiesItem = (props) => {
-  let hours;
-
   const description = parseDisplayText(props.amenity.description);
-
-  if (props.amenity.hours !== '') {
-    hours = (
-      <View
-        accessible={true}
-        accessibilityLabel={parseVoiceoverText(props.amenity.hours)}
-      >
-        <Text style={[globalStyles.body, { marginTop: 10 }]}>
-          {props.amenity.hours}
-        </Text>
-      </View>
-    );
-  }
 
   return (
     <View
@@ -69,13 +56,20 @@ const AmenitiesItem = (props) => {
         source={{ uri: props.amenity.icon }}
       />
       <View style={styles.textContainer}>
-        <Text style={[styles.amenityTitle, globalStyles.body, { fontWeight: '500' }]}>
-          {props.amenity.title}
+        <Text
+          style={[
+            styles.amenityTitle,
+            globalStyles.body,
+            description === '' ? { marginBottom: 0 } : { marginBottom: 10 },
+          ]}
+        >
+          {I18n.t(props.amenity.title)}
         </Text>
-        <Text style={[styles.amenityDescription, globalStyles.body]}>
-          {description}
-        </Text>
-        {hours}
+        {description !== '' &&
+          <Text style={[styles.amenityDescription, globalStyles.body]}>
+            {I18n.t(description)}
+          </Text>
+        }
       </View>
     </View>
   );
