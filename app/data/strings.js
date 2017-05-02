@@ -1,5 +1,9 @@
 export const strings = {
   en: {
+    floor1_Label: 'Floor 1',
+    floor2_Label: 'Floor 2',
+    floor3_Label: 'Floor 3',
+    floor4_Label: 'Floor 4',
     bluetoothButton_OnLabel: 'Bluetooth is on',
     bluetoothButton_OffLabel: 'Turn Bluetooth on',
     bluetoothAlert_Header: 'Bluetooth',
@@ -80,10 +84,6 @@ export const strings = {
     amenitiesScreen_ObjectSingular: 'amenity',
     amenitesScreen_ObjectPlural: 'amenities',
     // AMENITIES
-    amenities_Floor1Title: 'Floor 1',
-    amenities_Floor2Title: 'Floor 2',
-    amenities_Floor3Title: 'Floor 3',
-    amenities_Floor4Title: 'Floor 4',
     amenities_CloakroomTitle: 'Cloakroom',
     amenities_ToiletsTitle: 'Toilets',
     amenities_BabyChangingTablesTitle: 'Baby changing tables',

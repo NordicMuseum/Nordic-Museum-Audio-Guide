@@ -1,7 +1,11 @@
-
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import EverythingScreen from '../components/everythingScreen';
+
+import {
+  toggleStopsExpanded,
+} from '../actions/filteredTourStops';
 
 const mapStateToProps = (state) => {
   return {
@@ -14,7 +18,12 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    actions:
+      bindActionCreators({
+        toggleStopsExpanded,
+      }, dispatch),
+  };
 };
 
 export default connect(

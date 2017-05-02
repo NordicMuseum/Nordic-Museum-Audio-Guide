@@ -4,7 +4,7 @@ import uuid from 'uuid';
 export const allAmenities = [
   {
     floor: 1,
-    floorTitle: 'amenities_Floor1Title',
+    floorTitle: 'floor1_Label',
     amenities: [
       {
         uuid: uuid.v4(),
@@ -58,7 +58,7 @@ export const allAmenities = [
   },
   {
     floor: 2,
-    floorTitle: 'amenities_Floor2Title',
+    floorTitle: 'floor2_Label',
     amenities: [
       {
         uuid: uuid.v4(),
@@ -148,7 +148,7 @@ export const allAmenities = [
   },
   {
     floor: 3,
-    floorTitle: 'amenities_Floor3Title',
+    floorTitle: 'floor3_Label',
     amenities: [
       {
         uuid: uuid.v4(),
@@ -184,7 +184,7 @@ export const allAmenities = [
   },
   {
     floor: 4,
-    floorTitle: 'amenities_Floor4Title',
+    floorTitle: 'floor4_Label',
     amenities: [
       {
         uuid: uuid.v4(),
