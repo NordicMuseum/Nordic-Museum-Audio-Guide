@@ -141,6 +141,7 @@ const Grid = (props) => {
         enableEmptySections={true}
         contentContainerStyle={styles.gridRow}
         dataSource={dataSource}
+        removeClippedSubviews={false}
         renderRow={(item, sectionIndex, index) => {
           return renderItem(item, index, props.onCellPress, null, true);
         }}
@@ -154,6 +155,7 @@ const Grid = (props) => {
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
           initialListSize={20}
+          removeClippedSubviews={false}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, true);
           }}
@@ -163,6 +165,7 @@ const Grid = (props) => {
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
           initialListSize={20}
+          removeClippedSubviews={false}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, false);
           }}
