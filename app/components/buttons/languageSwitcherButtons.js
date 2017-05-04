@@ -38,23 +38,23 @@ const languages = [
     code: 'sv',
   },
   {
-    name: 'Svenska Simple',
+    name: 'Lätt svenska',
     code: 'sv-simple',
   },
   {
-    name: 'Svenska Kids',
+    name: 'Barnens audioguide',
     code: 'sv-kids',
   },
   {
-    name: 'Northern Sami',
+    name: 'Davvisámegiella',
     code: 'se-sme',
   },
   {
-    name: 'Lule Sami',
+    name: 'Julevsámegiella',
     code: 'se-smj',
   },
   {
-    name: 'Southern Sami',
+    name: 'Åarjelsaemien gïele',
     code: 'se-sma',
   },
   {

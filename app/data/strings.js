@@ -217,10 +217,18 @@ export const strings = {
     '0024': 'The 1940s Apartment',
   },
   sv: {
+    floor1_Label: 'Plan 1',
+    floor2_Label: 'Plan 2',
+    floor3_Label: 'Plan 3',
+    floor4_Label: 'Plan 4',
     nearMeScreen_Title: 'Nära mig',
     storiesScreen_Title: 'Berättelser',
     museumScreen_Title: 'Museet',
     museumScreen_ListItem1Label: 'Om Nordiska museet',
+    museumScreen_ListItem2Label: 'Tillgänglighet',
+    museumScreen_ListItem3Label: 'Hitta på museet',
+    museumScreen_ListItem4Label: 'Inställningar',
+    museumScreen_ListItem5Label: 'Medverkande',
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet är Sveriges största kulturhistoriska museum. Ett vardagens palats där berättelser om livet och om människor i Norden, igår, idag och imorgon tar plats. Upptäck kläder och mode, textilier och smycken, möbler och boende, fotogra , leksaker, folkkonst, glas och porslin. Här  nns också en utställning om Sveriges enda urfolk, samerna.',
     aboutScreen_AboutHeader: 'Byggnaden',
@@ -554,4 +562,7 @@ export const strings = {
   },
   svSimple: {},
   svKids: {},
+  seSme: {},
+  seSmj: {},
+  seSma: {}
 };
