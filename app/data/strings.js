@@ -184,6 +184,12 @@ export const strings = {
     tutorialScreen_GetStarted: 'Next',
     tutorialScreen_GetStarted: 'Let’s Get Started',
     imageDetailScreen_Title: 'Artwork',
+    // STORY HEADERS
+    'longTitle_01':'Highlights floor 2',
+    'shortTitle_01':'Highlights floor 2',
+    'imageAccessibilityLabel_01':'Highlights floor 2',
+    'shortCredit_01':'<i>Highlights floor 2</i>',
+    'longCredit_01':'Foto: Aron Ambrosiani\n<i>Highlights floor 2</i>',
     // CHAPTER HEADERS
     '0001': 'Welcome to the Nordic Museum',
     '0002': 'Functionalist Classic Eva',
@@ -268,6 +274,12 @@ export const strings = {
     amenities_SmallThingsTitle: 'Småting',
     amenities_SmallThingsDescription: 'Utställningen Småting innehåller en mängd olika föremål som fanns i svenska hem förr. Många  kommer från hushåll i de övre samhällsklasserna och är från 1600-talet till 1900-talet. Här ryms allt från exklusiva statusobjekt till vardagliga ting, masstilverkade prydnadssaker och souvenirer finns representerade och kan berätta om sin tids smak och sin ägares ställning i samhället.',
     // END OF AMENITIES
+    // STORY HEADERS
+    'longTitle_01':'Höjdpunkter plan 2',
+    'shortTitle_01':'Höjdpunkter plan 2',
+    'imageAccessibilityLabel_01':'Höjdpunkter plan 2',
+    'shortCredit_01':'<i>Höjdpunkter plan 2</i>',
+    'longCredit_01':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 2</i>',
     // CHAPTER HEADERS
     '0001': 'Välkommen till Nordiska museet',
     '0002': 'Funkisklassikern Eva',

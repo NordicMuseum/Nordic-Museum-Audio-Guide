@@ -6,17 +6,17 @@ import uuid from 'uuid';
 export const tourStops = [
   {
     uuid: uuid.v4(),
-    floor: 1,
+    floor: 2,
     order: 0,
-    shortTitle: 'Highlights floor 1',
-    longTitle: 'Highlights floor 1',
+    shortTitle: 'shortTitle_01',
+    longTitle: 'longTitle_01',
     regions: ['Great Hall', '1940s Apartment'],
     imageURL: 'andyAndJulia.png',
     imageWidth: 250,
     imageHeight: 250,
-    imageAccessibilityLabel: '',
-    shortCredit: '<i>Highlights floor 1</i>',
-    longCredit: 'Foto: Aron Ambrosiani\n<i>Highlights floor 1</i>',
+    imageAccessibilityLabel: 'imageAccessibilityLabel_01',
+    shortCredit: 'shortCredit_01',
+    longCredit: 'longCredit_01',
     tags: [],
     initialAudio: 'INTRODUCTION',
     audioContent: [
