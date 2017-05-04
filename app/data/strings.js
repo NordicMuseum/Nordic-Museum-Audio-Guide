@@ -185,11 +185,21 @@ export const strings = {
     tutorialScreen_GetStarted: 'Let’s Get Started',
     imageDetailScreen_Title: 'Artwork',
     // STORY HEADERS
-    'longTitle_01':'Highlights floor 2',
-    'shortTitle_01':'Highlights floor 2',
-    'imageAccessibilityLabel_01':'Highlights floor 2',
-    'shortCredit_01':'<i>Highlights floor 2</i>',
-    'longCredit_01':'Foto: Aron Ambrosiani\n<i>Highlights floor 2</i>',
+    '01_longTitle':'Highlights floor 2',
+    '01_shortTitle':'Highlights floor 2',
+    '01_imageAccessibilityLabel':'Highlights floor 2',
+    '01_shortCredit':'<i>Highlights floor 2</i>',
+    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights floor 2</i>',
+    '02_longTitle':'Highlights floor 3',
+    '02_shortTitle':'Highlights floor 3',
+    '02_imageAccessibilityLabel':'Highlights floor 3',
+    '02_shortCredit':'<i>Highlights floor 3</i>',
+    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights floor 3</i>',
+    '03_longTitle':'Traditions',
+    '03_shortTitle':'Traditions',
+    '03_imageAccessibilityLabel':'Traditions',
+    '03_shortCredit':'<i>Traditions</i>',
+    '03_longCredit':'Foto: Aron Ambrosiani\n<i>Traditions</i>',
     // CHAPTER HEADERS
     '0001': 'Welcome to the Nordic Museum',
     '0002': 'Functionalist Classic Eva',
@@ -283,11 +293,21 @@ export const strings = {
     amenities_SmallThingsDescription: 'Utställningen Småting innehåller en mängd olika föremål som fanns i svenska hem förr. Många  kommer från hushåll i de övre samhällsklasserna och är från 1600-talet till 1900-talet. Här ryms allt från exklusiva statusobjekt till vardagliga ting, masstilverkade prydnadssaker och souvenirer finns representerade och kan berätta om sin tids smak och sin ägares ställning i samhället.',
     // END OF AMENITIES
     // STORY HEADERS
-    'longTitle_01':'Höjdpunkter plan 2',
-    'shortTitle_01':'Höjdpunkter plan 2',
-    'imageAccessibilityLabel_01':'Höjdpunkter plan 2',
-    'shortCredit_01':'<i>Höjdpunkter plan 2</i>',
-    'longCredit_01':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 2</i>',
+    '01_longTitle':'Höjdpunkter plan 2',
+    '01_shortTitle':'Höjdpunkter plan 2',
+    '01_imageAccessibilityLabel':'Höjdpunkter plan 2',
+    '01_shortCredit':'<i>Höjdpunkter plan 2</i>',
+    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 2</i>',
+    '02_longTitle':'Höjdpunkter plan 3',
+    '02_shortTitle':'Höjdpunkter plan 3',
+    '02_imageAccessibilityLabel':'Höjdpunkter plan 3',
+    '02_shortCredit':'<i>Höjdpunkter plan 3</i>',
+    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 3</i>',
+    '03_longTitle':'Traditioner',
+    '03_shortTitle':'Traditioner',
+    '03_imageAccessibilityLabel':'Traditioner',
+    '03_shortCredit':'<i>Traditioner</i>',
+    '03_longCredit':'Foto: Aron Ambrosiani\n<i>Traditioner</i>',
     // CHAPTER HEADERS
     '0001': 'Välkommen till Nordiska museet',
     '0002': 'Funkisklassikern Eva',
@@ -313,12 +333,14 @@ export const strings = {
     '0022': 'När Hanse-Kalle dog',
     '0023': 'Portalen till vardagens palats',
     '0024': 'Folkhemslägenheten',
+    // TRANSCRIPTS
+    '0001_transcript': '',
   },
   it: {
     aboutScreen_Title: 'Il Museo Nordico',
-    aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotogra a, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un\'esposizione sull\'unica popolazione indigena della Svezia, i Sami.',
-    aboutScreen_AboutHeader: 'L\'edificio',
-    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L\'imponente edi cio, situato sull\'isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
+    aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotogra a, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un’esposizione sull’unica popolazione indigena della Svezia, i Sami.',
+    aboutScreen_AboutHeader: 'L’edificio',
+    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L’imponente edi cio, situato sull’isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
     // CHAPTER HEADERS
     '0001': 'Benvenuti al Nordic Museum',
     '0002': 'Eva, un classico del funzionalismo',
@@ -344,6 +366,8 @@ export const strings = {
     '0022': 'Quando morì Hanse-Kalle',
     '0023': 'Entriamo nel palazzo della vita quotidiana',
     '0024': 'L’appartamento stile anni ’40',
+    //TRANSCRIPTS
+    '0001_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia./ Mi chiamo  Sanne Houby-Nielsen e sono la Direttrice del Museo.\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\nCercate gli stand gialli delle audioguide.\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
   },
   ar: {
     // CHAPTER HEADERS
@@ -371,6 +395,8 @@ export const strings = {
     '0022': 'عندما مات هانز - كال',
     '0023': 'بوابة إلى قصر الحياة اليومية',
     '0024': 'شقة أربعينيات القرن العشرين',
+    //TRANSCRIPTS
+    '0001_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\nانتبهوا للافتات الإرشاد السمعي الصفراء .\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
   },
   es: {
     aboutScreen_Title: 'El Museo Nórdico',
@@ -435,6 +461,8 @@ export const strings = {
     '0022': 'Hanse-Kallen hautajaiset',
     '0023': 'Portaali arjen palatsiin',
     '0024': 'Asunto kansankodissa',
+    // TRANSCRIPTS
+    '0001_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\nEtsikää keltaisia audio-opas-telineitä.\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
   },
   de: {
     aboutScreen_Title: 'Das Nordische Museum',
@@ -500,9 +528,9 @@ export const strings = {
   },
   fr: {
     aboutScreen_Title: 'Le musée nordique',
-    aboutScreen_Overview: 'Le musée nordique est le plus grand musée d\'histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au  l des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L\'une des expositions retrace l\'histoire du seul peuple indigène de Suède, les Samis.',
-    aboutScreen_AboutHeader: 'L\'édifice',
-    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L\'imposant monument situé sur l\'île de Djurgården, l\'île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
+    aboutScreen_Overview: 'Le musée nordique est le plus grand musée d’histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au  l des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L’une des expositions retrace l’histoire du seul peuple indigène de Suède, les Samis.',
+    aboutScreen_AboutHeader: 'L’édifice',
+    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L’imposant monument situé sur l’île de Djurgården, l’île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
     // CHAPTER HEADERS
     '0001': 'Bienvenue au Musée nordique',
     '0002': 'La chaise Eva classique et fonctionnelle',
@@ -559,6 +587,8 @@ export const strings = {
     '0022': '汉斯-卡勒的葬礼',
     '0023': '通往豪宅居所的大门',
     '0024': '20世纪40年代的公寓',
+    //TRANSCRIPTS
+    '0001_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n請留意黃色的導賞台。\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
   },
   svSimple: {},
   svKids: {},
