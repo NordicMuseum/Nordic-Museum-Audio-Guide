@@ -15,7 +15,6 @@ import Swiper from 'react-native-swiper';
 import TutorialLanguagePage from './tutorialLanguagePage';
 import TutorialWelcomePage from './tutorialWelcomePage';
 import TutorialNearMePage from './tutorialNearMePage';
-import TutorialStoriesPage from './tutorialStoriesPage';
 
 import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles';
 
@@ -116,12 +115,12 @@ class TutorialScreen extends Component {
 
     let floatingButton;
 
-    if (currentPage <= 2) {
+    if (currentPage <= 1) {
       floatingButton = (
         <TouchableOpacity
           accessible={true}
           accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 4. Next Page.`}
+          accessibilityLabel={`Page ${currentPage + 1} of 3. Next Page.`}
           style={styles.floatingButton}
           onPress={() => {
             this.refs[SWIPER_REF].scrollBy(1);
@@ -139,7 +138,7 @@ class TutorialScreen extends Component {
         <TouchableOpacity
           accessible={true}
           accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 4. Let\'s get started.`}
+          accessibilityLabel={`Page ${currentPage + 1} of 3. Let\'s get started.`}
           style={styles.floatingButton}
           onPress={() => {
             this.hideModal();
@@ -185,13 +184,6 @@ class TutorialScreen extends Component {
           <TutorialNearMePage
             bluetoothOn={bluetoothOn}
             locationServicesStatus={locationServicesStatus}
-          />
-          <TutorialStoriesPage
-            timerActive={timerActive}
-            autoplayOn={autoplayOn}
-            actions={{
-              toggleAutoplay,
-            }}
           />
         </Swiper>
         <View style={[styles.floatingButtonContainer, { width }]}>
