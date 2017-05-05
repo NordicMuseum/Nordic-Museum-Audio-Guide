@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   Text,
@@ -94,8 +96,8 @@ const Grid = (props) => {
         accessible={true}
         accessibilityTraits={traits}
         accessibilityLabel={
-          `${parseVoiceoverText(item.longTitle)}, ${realIndex} of ${gridLength}.` +
-          ` Plays audio for ${item.shortTitle} story.`
+          `${parseVoiceoverText(I18n.t(item.longTitle))}, ${realIndex} of ${gridLength}.` +
+          ` Plays audio for ${I18n.t(item.shortTitle)} story.`
         }
       >
         <TouchableOpacity
@@ -122,7 +124,7 @@ const Grid = (props) => {
                 globalStyles.disclosure,
               ]}
             >
-              {parseDisplayText(item.longTitle)}
+              {parseDisplayText(I18n.t(item.longTitle))}
             </Text>
           </View>
         </TouchableOpacity>

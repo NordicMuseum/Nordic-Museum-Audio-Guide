@@ -150,13 +150,13 @@ class TourStopScreen extends Component {
     if (this.props.tourStop.shortCreditAccessibilityLabel) {
       accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCreditAccessibilityLabel);
     } else {
-      accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCredit);
+      accessibilityLabel = parseVoiceoverText(I18n.t(this.props.tourStop.shortCredit));
     }
 
     return (
       <View style={{ flex: 1 }}>
         <NavigationBar
-          label={this.props.tourStop.shortTitle}
+          label={I18n.t(this.props.tourStop.shortTitle)}
           labelStyle={{
             color: OFF_BLACK,
           }}
@@ -197,6 +197,7 @@ class TourStopScreen extends Component {
                     longCopyright: this.props.tourStop.longCredit,
                     containerMargin,
                     tourStopTitle: this.props.tourStop.shortTitle,
+                    locale: this.props.locale,
                   },
                 });
               }}
@@ -216,7 +217,7 @@ class TourStopScreen extends Component {
                   style={styles.headerText}
                 >
                   <Text style={globalStyles.body}>
-                    {parseDisplayText(this.props.tourStop.shortCredit)}
+                    {parseDisplayText(I18n.t(this.props.tourStop.shortCredit))}
                   </Text>
                 </View>
               </View>

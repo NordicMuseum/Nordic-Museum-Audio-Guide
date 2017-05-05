@@ -225,7 +225,7 @@ class AudioContentItem extends Component {
           duration={collapsibleDuration}
         >
           <View style={styles.transcriptContainer}>
-            {breakIntoParagraphTextComponents(audioContent.transcript)}
+            {breakIntoParagraphTextComponents(I18n.t(audioContent.transcript))}
           </View>
         </Collapsible>
       </View>

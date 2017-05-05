@@ -68,7 +68,7 @@ const ImageDetailScreen = (props) => {
         }}
         buttonColor={TEAL}
         backButtonPress={() => { props.navigator.pop(); }}
-        backButtonLabel={props.tourStopTitle}
+        backButtonLabel={I18n.t(props.tourStopTitle)}
         barStyle={{
           backgroundColor: '#ffffff',
           height: 44,
@@ -98,10 +98,10 @@ const ImageDetailScreen = (props) => {
           <View
             accessible={true}
             accessibilityTraits={['text']}
-            accessibilityLabel={parseVoiceoverText(props.longCopyright)}
+            accessibilityLabel={parseVoiceoverText(I18n.t(props.longCopyright))}
           >
             <Text style={[styles.longCopyright, globalStyles.body]}>
-              {parseDisplayText(props.longCopyright)}
+              {parseDisplayText(I18n.t(props.longCopyright))}
             </Text>
           </View>
         </ScrollView>
@@ -118,6 +118,7 @@ ImageDetailScreen.propTypes = {
   longCopyright: PropTypes.string.isRequired,
   containerMargin: PropTypes.number.isRequired,
   tourStopTitle: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 export default ImageDetailScreen;
