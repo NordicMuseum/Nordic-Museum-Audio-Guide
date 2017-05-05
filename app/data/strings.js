@@ -139,9 +139,9 @@ export const strings = {
     grid_Of: 'of',
     grid_AccessibilityLabel: 'Plays audio for x story.',
     museumScreen_Title: 'Museum',
-    museumScreen_ImageAccessibilityLabel: 'The Andy Warhol Museum',
+    museumScreen_ImageAccessibilityLabel: 'The Nordic Museum',
     museumScreen_ListItem1Label: 'About The Nordic Museum',
-    museumScreen_ListItem2Label: 'Accessibility at The Warhol',
+    museumScreen_ListItem2Label: 'Accessibility',
     museumScreen_ListItem3Label: 'Museum Amenities',
     museumScreen_ListItem4Label: 'Settings',
     museumScreen_ListItem5Label: 'Credits',
@@ -239,6 +239,10 @@ export const strings = {
     museumScreen_ListItem3Label: 'Hitta på museet',
     museumScreen_ListItem4Label: 'Inställningar',
     museumScreen_ListItem5Label: 'Medverkande',
+    amenitiesScreen_Title: 'Hitta på museet',
+    accessibilityScreen_Title: 'Tillgänglighet',
+    settingsScreen_Title: 'Inställningar',
+    creditsScreen_Title: 'Medverkande',
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet är Sveriges största kulturhistoriska museum. Ett vardagens palats där berättelser om livet och om människor i Norden, igår, idag och imorgon tar plats. Upptäck kläder och mode, textilier och smycken, möbler och boende, fotogra , leksaker, folkkonst, glas och porslin. Här  nns också en utställning om Sveriges enda urfolk, samerna.',
     aboutScreen_AboutHeader: 'Byggnaden',
@@ -367,7 +371,7 @@ export const strings = {
     '0023': 'Entriamo nel palazzo della vita quotidiana',
     '0024': 'L’appartamento stile anni ’40',
     //TRANSCRIPTS
-    '0001_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia./ Mi chiamo  Sanne Houby-Nielsen e sono la Direttrice del Museo.\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\nCercate gli stand gialli delle audioguide.\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
+    '0001_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia. Mi chiamo Sanne Houby-Nielsen e sono la Direttrice del Museo.\n\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\n\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\n\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\n\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\n\nCercate gli stand gialli delle audioguide.\n\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
   },
   ar: {
     // CHAPTER HEADERS
@@ -396,7 +400,7 @@ export const strings = {
     '0023': 'بوابة إلى قصر الحياة اليومية',
     '0024': 'شقة أربعينيات القرن العشرين',
     //TRANSCRIPTS
-    '0001_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\nانتبهوا للافتات الإرشاد السمعي الصفراء .\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
+    '0001_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\n\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\n\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\n\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\n\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\n\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\n\nانتبهوا للافتات الإرشاد السمعي الصفراء .\n\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
   },
   es: {
     aboutScreen_Title: 'El Museo Nórdico',
@@ -462,7 +466,7 @@ export const strings = {
     '0023': 'Portaali arjen palatsiin',
     '0024': 'Asunto kansankodissa',
     // TRANSCRIPTS
-    '0001_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\nEtsikää keltaisia audio-opas-telineitä.\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
+    '0001_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\n\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\n\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\n\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\n\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\n\nEtsikää keltaisia audio-opas-telineitä.\n\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
   },
   de: {
     aboutScreen_Title: 'Das Nordische Museum',
@@ -588,7 +592,7 @@ export const strings = {
     '0023': '通往豪宅居所的大门',
     '0024': '20世纪40年代的公寓',
     //TRANSCRIPTS
-    '0001_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n請留意黃色的導賞台。\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
+    '0001_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n\n請留意黃色的導賞台。\n\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
   },
   svSimple: {},
   svKids: {},

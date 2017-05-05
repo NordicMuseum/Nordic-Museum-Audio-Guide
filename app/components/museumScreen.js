@@ -71,7 +71,7 @@ class MuseumScreen extends Component {
         <View style={styles.header}>
           <Image
             accessible={true}
-            accessibilityLabel={'The Andy Warhol Museum'}
+            accessibilityLabel={I18n.t('museumScreen_ImageAccessibilityLabel')}
             accessibilityTraits={'image'}
             resizeMode={'cover'}
             style={[styles.image, { width, height }]}
@@ -107,13 +107,13 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'Accessibility at The Warhol.',
+                label: I18n.t('museumScreen_ListItem2Label'),
               }}
               bottomBorder={true}
-              title="Accessibility at The Warhol"
+              title={I18n.t('museumScreen_ListItem2Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'Accessibility',
+                  title: I18n.t('accessibilityScreen_Title'),
                   component: AccessibilityScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
@@ -129,13 +129,13 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'Museum Amenities.',
+                label: I18n.t('museumScreen_ListItem3Label'),
               }}
               bottomBorder={true}
-              title="Museum amenities"
+              title={I18n.t('museumScreen_ListItem3Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'Amenities',
+                  title: I18n.t('amenitiesScreen_Title'),
                   component: AmenitiesScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
@@ -151,13 +151,13 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'Settings.',
+                label: I18n.t('museumScreen_ListItem4Label'),
               }}
               bottomBorder={true}
-              title="Settings"
+              title={I18n.t('museumScreen_ListItem4Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'Settings',
+                  title: I18n.t('settingsScreen_Title'),
                   component: SettingsScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
@@ -173,13 +173,13 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'Credits.',
+                label: I18n.t('museumScreen_ListItem5Label'),
               }}
               bottomBorder={false}
-              title="Credits"
+              title={I18n.t('museumScreen_ListItem5Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'Credits',
+                  title: I18n.t('creditsScreen_Title'),
                   component: CreditsScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
