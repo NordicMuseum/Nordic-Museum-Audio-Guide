@@ -128,7 +128,7 @@ class ControlsView extends Component {
         >
           <View style={[styles.row, styles.titleRow]}>
             <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
-              {stopTitle}
+              {I18n.t(stopTitle)}
             </Text>
             <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
               &nbsp; {parseDisplayText(I18n.t(audioTitle))}
