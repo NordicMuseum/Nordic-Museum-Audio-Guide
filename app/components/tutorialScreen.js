@@ -60,15 +60,12 @@ const SWIPER_REF = 'SWIPER_REF';
 
 class TutorialScreen extends Component {
   static propTypes = {
-    timerActive: PropTypes.bool.isRequired,
-    autoplayOn: PropTypes.bool.isRequired,
     bluetoothOn: PropTypes.bool.isRequired,
     tutorialHidden: PropTypes.bool.isRequired,
     currentPage: PropTypes.number.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
-      toggleAutoplay: PropTypes.func.isRequired,
       tutorialPageDidChange: PropTypes.func.isRequired,
       hideTutorial: PropTypes.func.isRequired,
       switchLocale: PropTypes.func.isRequired,
@@ -92,8 +89,6 @@ class TutorialScreen extends Component {
 
   render() {
     const {
-      timerActive,
-      autoplayOn,
       bluetoothOn,
       locationServicesStatus,
       currentPage,
@@ -102,7 +97,6 @@ class TutorialScreen extends Component {
     } = this.props;
 
     const {
-      toggleAutoplay,
       tutorialPageDidChange,
       switchLocale,
     } = this.props.actions;

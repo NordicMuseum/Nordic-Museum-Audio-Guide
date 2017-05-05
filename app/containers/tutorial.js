@@ -5,10 +5,6 @@ import { connect } from 'react-redux';
 import TutorialScreen from '../components/tutorialScreen';
 
 import {
-  toggleAutoplay,
-} from '../actions/audio';
-
-import {
   tutorialPageDidChange,
   hideTutorial,
 } from '../actions/tutorial';
@@ -19,8 +15,6 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    timerActive: state.bottomPlayer.timerActive,
-    autoplayOn: state.bottomPlayer.autoplayOn,
     bluetoothOn: state.beacon.bluetoothOn,
     locationServicesStatus: state.beacon.locationServicesStatus,
     currentPage: state.tutorial.currentPage,
@@ -33,7 +27,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions:
       bindActionCreators({
-        toggleAutoplay,
         tutorialPageDidChange,
         hideTutorial,
         switchLocale,
