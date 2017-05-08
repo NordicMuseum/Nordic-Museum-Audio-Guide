@@ -36,6 +36,8 @@
 		0703A97A1E9D4284001E2266 /* 0021 in Resources */ = {isa = PBXBuildFile; fileRef = 0703A9641E9D4284001E2266 /* 0021 */; };
 		0703A97B1E9D4284001E2266 /* 0022 in Resources */ = {isa = PBXBuildFile; fileRef = 0703A9651E9D4284001E2266 /* 0022 */; };
 		0703A97C1E9D4284001E2266 /* 0023 in Resources */ = {isa = PBXBuildFile; fileRef = 0703A9661E9D4284001E2266 /* 0023 */; };
+		07CD9D641EBBBE1C0014FC81 /* CMSRTLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD9D621EBBBE010014FC81 /* CMSRTLManager.swift */; };
+		07CD9D651EBBBE1C0014FC81 /* CMSRTLManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD9D631EBBBE010014FC81 /* CMSRTLManagerBridge.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -270,6 +272,8 @@
 		0703A9641E9D4284001E2266 /* 0021 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 0021; sourceTree = "<group>"; };
 		0703A9651E9D4284001E2266 /* 0022 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 0022; sourceTree = "<group>"; };
 		0703A9661E9D4284001E2266 /* 0023 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 0023; sourceTree = "<group>"; };
+		07CD9D621EBBBE010014FC81 /* CMSRTLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSRTLManager.swift; sourceTree = "<group>"; };
+		07CD9D631EBBBE010014FC81 /* CMSRTLManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSRTLManagerBridge.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AndyWarholAccessibilityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndyWarholAccessibilityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -455,6 +459,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		07CD9D4E1EBBBD740014FC81 /* CMSRTLManager */ = {
+			isa = PBXGroup;
+			children = (
+				07CD9D621EBBBE010014FC81 /* CMSRTLManager.swift */,
+				07CD9D631EBBBE010014FC81 /* CMSRTLManagerBridge.m */,
+			);
+			name = CMSRTLManager;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +618,7 @@
 		32CADBC31D709B25006122E5 /* Native Modules */ = {
 			isa = PBXGroup;
 			children = (
+				07CD9D4E1EBBBD740014FC81 /* CMSRTLManager */,
 				32CADBC41D709B33006122E5 /* CMSAccessibilityManager */,
 				32CADBC51D709B3C006122E5 /* CMSAudioManager */,
 				32CADBC61D709B45006122E5 /* CMSBeaconManager */,
@@ -1139,6 +1153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CD9D641EBBBE1C0014FC81 /* CMSRTLManager.swift in Sources */,
+				07CD9D651EBBBE1C0014FC81 /* CMSRTLManagerBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				32CADBC01D709B15006122E5 /* CMSAudioManagerBridge.m in Sources */,
 				32CADBBE1D709B15006122E5 /* CMSAccessibilityManagerBridge.m in Sources */,

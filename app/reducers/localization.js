@@ -34,6 +34,7 @@ export function localization(state = initialState, action) {
         state,
         {
           locale: action.locale,
+          rtl: action.rtl !== undefined ? action.rtl : state.rtl,
         }
       );
     }

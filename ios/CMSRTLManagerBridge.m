@@ -10,16 +10,16 @@
 #import <Foundation/Foundation.h>
 
 #import "RCTBridgeModule.h"
-#import "RCTEventEmitter.h"
+#import "RCTI18nUtil.h"
+#import "RCTRootView.h"
+#import "AppDelegate.h"
 
-@interface RCT_EXTERN_MODULE(CMSRTLManager)
 
-- (dispatch_queue_t)methodQueue {
-  return dispatch_get_main_queue();
-}
+@interface RCT_EXTERN_MODULE(CMSRTLManager, NSObject)
 
-RCT_EXTERN_METHOD(setRTL:bool rtl
-                  resolve:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(setRTL:(BOOL) rtl
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  )
 
 @end

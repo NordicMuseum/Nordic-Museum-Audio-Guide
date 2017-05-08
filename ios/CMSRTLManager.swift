@@ -12,16 +12,31 @@ import Foundation
 @objc(CMSRTLManager)
 class CMSRTLManager: NSObject {
   
-  @objc func setRTL(rtl: bool,
-                    resolve:@escaping RCTPromiseResolveBlock,
-                    reject:@escaping RCTPromiseRejectBlock) {
+  @objc func setRTL(_ rtl: Bool,
+                    resolver resolve: RCTPromiseResolveBlock,
+                    rejecter reject: RCTPromiseRejectBlock) -> Void {
+    
+    let appDelegate  = UIApplication.shared.delegate // as! AppDelegate
+    // let view = appDelegate?.window!?.rootViewController?.view // as! YourViewController
+    
+    RCTI18nUtil.sharedInstance()
 
-    if true {
-        resolve(nil)
-        return
+    if (rtl == true) {
+      // print("setting to true because");
+      UIView.appearance().semanticContentAttribute = .forceRightToLeft
+      (RCTI18nUtil.sharedInstance() as AnyObject).forceRTL(true)
+      //view?.setNeedsLayout()
+      //view?.layoutSubviews()
+      //view?.layoutIfNeeded()
+      resolve(true);
     } else {
-        reject("Beacon Scanning failed", "uuidString is invalid", nil);
-        return
+      // print("setting to false because");
+      UIView.appearance().semanticContentAttribute = .forceLeftToRight
+      (RCTI18nUtil.sharedInstance() as AnyObject).forceRTL(false)
+      //view?.setNeedsLayout()
+      //view?.layoutSubviews()
+      //view?.layoutIfNeeded()
+      resolve(false);
     }
   }
 

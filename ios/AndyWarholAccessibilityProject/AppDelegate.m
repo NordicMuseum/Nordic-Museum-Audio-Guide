@@ -11,6 +11,7 @@
 
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
+#import "RCTI18nUtil.h"
 
 @implementation AppDelegate
 
@@ -24,7 +25,7 @@
                                                       moduleName:@"AndyWarholAccessibilityProject"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
-  
+
   // Fix the white flash before the app is completely loaded
   // This is due to the App being loaded but the js bundle not being ready
   // See: https://github.com/facebook/react-native/issues/1402
@@ -32,7 +33,7 @@
   for (NSString *imgName in allPngImageNames){
     if ([imgName containsString:@"LaunchImage"]){
       UIImage *img = [UIImage imageNamed:imgName];
-      
+
       if (img.scale == [UIScreen mainScreen].scale && CGSizeEqualToSize(img.size, [UIScreen mainScreen].bounds.size)) {
         rootView.backgroundColor = [UIColor colorWithPatternImage:img];
       }
@@ -44,6 +45,9 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  [[RCTI18nUtil sharedInstance] allowRTL:YES];
+
   return YES;
 }
 

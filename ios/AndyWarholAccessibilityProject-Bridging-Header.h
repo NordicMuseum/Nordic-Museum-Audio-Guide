@@ -16,5 +16,7 @@
 #import "RCTEventEmitter.h"
 #import "RCTEventDispatcher.h"
 #import "RCTUIManager.h"
+#import "RCTI18nUtil.h"
+#import "RCTRootView.h"
 
 #endif /* AndyWarholAccessibilityProject-Bridging-Header_h */
