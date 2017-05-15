@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
+import SegmentedController from './buttons/segmentedController';
 import Grid from './grid';
 import TourStop from '../containers/tourStop';
 
@@ -21,7 +22,21 @@ import { TEAL, OFF_BLACK } from '../styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
+    paddingTop: 20,
+    backgroundColor: '#ededed',
+  },
+  scroll: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  segementedController: {
+    paddingTop: 25,
+    paddingBottom: 25,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 50,
+    marginRight: 50,
   },
 });
 
@@ -34,8 +49,9 @@ class EverythingScreen extends Component {
     tourStops: PropTypes.array.isRequired,
     screenReader: PropTypes.bool.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
+    currentFloor: PropTypes.number.isRequired,
     actions: PropTypes.shape({
-      toggleStopsExpanded: PropTypes.func.isRequired,
+      showFloor: PropTypes.func.isRequired,
     }).isRequired,
   }
 
@@ -46,14 +62,35 @@ class EverythingScreen extends Component {
     }
 
     return (
-      <View
-        style={[styles.container, { marginBottom: containerMargin }]}
-      >
+      <View style={[styles.container, { marginBottom: containerMargin }]}>
+        <View style={styles.segementedController}>
+          <SegmentedController
+            style={{ flex: 1 }}
+            buttons={[
+              {
+                label: I18n.t('floor2_Label'),
+                onPress: () => { this.props.actions.showFloor(1); },
+                active: this.props.currentFloor === 1,
+              },
+              {
+                label: I18n.t('floor3_Label'),
+                onPress: () => { this.props.actions.showFloor(2); },
+                active: this.props.currentFloor === 2,
+              },
+              {
+                label: I18n.t('floor4_Label'),
+                onPress: () => { this.props.actions.showFloor(3); },
+                active: this.props.currentFloor === 3,
+              },
+            ]}
+          />
+        </View>
         <ScrollView
+          style={styles.scroll}
           automaticallyAdjustContentInsets={false}
         >
           <Grid
-            items={this.props.tourStops[2].stops}
+            items={this.props.tourStops[this.props.currentFloor].stops}
             selected={this.props.currentStopUUID}
             screenReader={this.props.screenReader}
             onCellPress={(item) => {

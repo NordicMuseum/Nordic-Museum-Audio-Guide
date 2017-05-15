@@ -1,7 +1,7 @@
 
 import {
   ALL_TOUR_STOPS,
-  TOGGLE_STOPS_EXPANDED,
+  SHOW_FLOOR,
  } from '../actions/filteredTourStops';
 
 import { TourStop } from '../models/tourStop';
@@ -9,6 +9,7 @@ import { TourStop } from '../models/tourStop';
 const stops = TourStop.allRealmObjects();
 
 const initialState = {
+  currentFloor: 1,
   tourStops: [
     {
       floor: 1,
@@ -43,16 +44,8 @@ export function filteredTourStops(state = initialState, action) {
       return initialState;
     }
 
-    case TOGGLE_STOPS_EXPANDED: {
-      const updatedExpandedFloors = state.tourStops
-        .map((stop, index) => {
-          if (stop.floor === action.floor) {
-            return Object.assign({}, stop, { expanded: !stop.expanded });
-          }
-          return stop;
-        });
-
-      return Object.assign({}, state, { tourStops: updatedExpandedFloors });
+    case SHOW_FLOOR: {
+      return Object.assign({}, state, { currentFloor: action.floor });
     }
 
     default:

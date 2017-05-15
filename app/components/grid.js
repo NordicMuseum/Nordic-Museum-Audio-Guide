@@ -25,7 +25,6 @@ const SPACING = 5;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: SPACING,
   },
   gridColumn: {
     flexDirection: 'column',
