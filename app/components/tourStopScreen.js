@@ -20,7 +20,6 @@ import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
 import NavigationBar from './navigationBar';
 import AudioContentList from './audioContentList';
-import ImageDetailScreen from './imageDetailScreen';
 
 import {
   parseDisplayText,
@@ -174,33 +173,11 @@ class TourStopScreen extends Component {
           <ScrollView
             automaticallyAdjustContentInsets={false}
           >
-            <TouchableOpacity
+            <View
               accessibilityTraits={['header', 'button']}
               accessibilityLabel={
-                `Artwork Information. ${accessibilityLabel}. ` +
-                'Double tap to go to long credits.'
+                'Artwork Information. ${accessibilityLabel}.'
               }
-              onPress={() => {
-                this.props.navigator.push({
-                  title: 'Artwork',
-                  component: ImageDetailScreen,
-                  barTintColor: '#ffffff',
-                  tintColor: '#097D8D',
-                  titleTextColor: '#4D4D4D',
-                  shadowHidden: true,
-                  navigationBarHidden: true,
-                  passProps: {
-                    navigator: this.props.navigator,
-                    imageURL: this.props.imageURL,
-                    imageHeight,
-                    imageWidth,
-                    longCopyright: this.props.tourStop.longCredit,
-                    containerMargin,
-                    tourStopTitle: this.props.tourStop.shortTitle,
-                    locale: this.props.locale,
-                  },
-                });
-              }}
             >
               <View style={styles.header}>
                 <Image
@@ -221,7 +198,7 @@ class TourStopScreen extends Component {
                   </Text>
                 </View>
               </View>
-            </TouchableOpacity>
+            </View>
             <AudioContentList
               tourStopTitle={this.props.tourStop.shortTitle}
               tourStopUUID={this.props.tourStop.uuid}
