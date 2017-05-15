@@ -121,6 +121,7 @@
 		E0075EB11ECA46B300C993C9 /* swedishFolkArt.png in Resources */ = {isa = PBXBuildFile; fileRef = E0075EB01ECA46B300C993C9 /* swedishFolkArt.png */; };
 		E0075EB31ECA471900C993C9 /* homesAndInteriors.png in Resources */ = {isa = PBXBuildFile; fileRef = E0075EB21ECA471900C993C9 /* homesAndInteriors.png */; };
 		E0075EB51ECA475300C993C9 /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = E0075EB41ECA475300C993C9 /* highlights.png */; };
+		E0075ED51ECA51E400C993C9 /* museumBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E0075ED41ECA51E400C993C9 /* museumBackground.png */; };
 		F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D260585236149398895A4E6 /* libRealmReact.a */; };
 		FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */; };
 /* End PBXBuildFile section */
@@ -360,6 +361,7 @@
 		E0075EB01ECA46B300C993C9 /* swedishFolkArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swedishFolkArt.png; sourceTree = "<group>"; };
 		E0075EB21ECA471900C993C9 /* homesAndInteriors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homesAndInteriors.png; sourceTree = "<group>"; };
 		E0075EB41ECA475300C993C9 /* highlights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highlights.png; sourceTree = "<group>"; };
+		E0075ED41ECA51E400C993C9 /* museumBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museumBackground.png; sourceTree = "<group>"; };
 		F39A74A6707D471E83235513 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -504,6 +506,7 @@
 				E0075EB01ECA46B300C993C9 /* swedishFolkArt.png */,
 				E0075EB21ECA471900C993C9 /* homesAndInteriors.png */,
 				E0075EB41ECA475300C993C9 /* highlights.png */,
+				E0075ED41ECA51E400C993C9 /* museumBackground.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -1010,6 +1013,7 @@
 				32CADB891D709AC3006122E5 /* Campbells_Visual.mp3 in Resources */,
 				32CADBA41D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 in Resources */,
 				3264D3F61E6DAE2700FE083B /* Beck_Jessica_College-Years_Introduction.mp3 in Resources */,
+				E0075ED51ECA51E400C993C9 /* museumBackground.png in Resources */,
 				32CADB851D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 in Resources */,
 				E0075EB51ECA475300C993C9 /* highlights.png in Resources */,
 				3264D3F91E6DAE2700FE083B /* Warhola_Donald_NeighborhoodWatch.mp3 in Resources */,
