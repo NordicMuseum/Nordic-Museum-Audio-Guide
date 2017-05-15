@@ -14,6 +14,7 @@ import {
   TAB_MUSEUM,
   TAB_NEARME,
   TAB_STORIES,
+  TAB_SEARCH,
 } from '../actions/navigation';
 
 import {
@@ -24,6 +25,7 @@ import {
 import Tutorial from '../containers/tutorial';
 import NearMe from '../containers/nearMe';
 import Everything from '../containers/everything';
+import SearchByNumber from '../containers/searchByNumber';
 import Museum from '../containers/museum';
 import BottomPlayer from '../containers/bottomPlayer';
 
@@ -34,6 +36,7 @@ export const BOTTOMBARHEIGHT = 49;
 const MUSEUM_REF = 'MUSEUM_REF';
 const NEARME_REF = 'NEARME_REF';
 const STORIES_REF = 'STORIES_REF';
+const SEARCH_REF = 'SEARCH_REF';
 
 const styles = StyleSheet.create({
   tabContent: {
@@ -146,6 +149,36 @@ class RootScreen extends Component {
               initialRoute={{
                 title: I18n.t('storiesScreen_Title'),
                 component: Everything,
+                navigationBarHidden: true,
+                barTintColor: '#ffffff',
+                tintColor: TEAL,
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+              }}
+            />
+          </TabBarIOS.Item>
+          <TabBarIOS.Item
+            title={'#'}
+            renderAsOriginal={true}
+            icon={require('../assets/storiesTab.png')}
+            selectedIcon={require('../assets/storiesTabSelected.png')}
+            selected={this.props.activeTab === TAB_SEARCH}
+            onPress={() => {
+              if (this.props.activeTab === TAB_SEARCH &&
+                  this.refs.SEARCH_REF != null) {
+                this.refs.SEARCH_REF.popToTop();
+                return;
+              }
+
+              this.props.actions.updateActiveTab(TAB_SEARCH);
+            }}
+          >
+            <NavigatorIOS
+              ref={SEARCH_REF}
+              style={styles.container}
+              initialRoute={{
+                title: '#',
+                component: SearchByNumber,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
                 tintColor: TEAL,
