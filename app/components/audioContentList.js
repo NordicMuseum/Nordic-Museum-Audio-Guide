@@ -32,9 +32,6 @@ const styles = StyleSheet.create({
     margin: SCROLLMARGINS,
     marginTop: 15,
   },
-  chaptersHeader: {
-    marginBottom: 5,
-  },
   betaMessage: {
     textAlign: 'center',
   },
@@ -121,26 +118,9 @@ const AudioContentList = (props) => {
       );
     });
 
-    let chapterPlural = 'Chapters';
-
-    if (props.audioContent.length === 1) {
-      chapterPlural = 'Chapter';
-    }
-
     renderView = (
       <View>
-        <View
-          accessible={true}
-          accessibilityTraits={['text', 'header']}
-          accessibilityLabel={`${props.audioContent.length} ${chapterPlural}.`}
-        >
-          <Text style={[styles.chaptersHeader, globalStyles.h1]}>
-            Chapters
-          </Text>
-        </View>
-        <View>
-          {contentList}
-        </View>
+        {contentList}
       </View>
     );
   }
