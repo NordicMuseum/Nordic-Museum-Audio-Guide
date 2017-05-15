@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginLeft: 0,
     marginRight: 0,
     marginBottom: SPACING,
-    backgroundColor: '#FB7D12',
+    backgroundColor: '#ccc',
     flex: 1,
   },
   cellImage: {
