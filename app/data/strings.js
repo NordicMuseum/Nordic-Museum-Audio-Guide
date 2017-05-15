@@ -1,9 +1,6 @@
 export const strings = {
   en: {
-    floor1_Label: 'Floor 1',
-    floor2_Label: 'Floor 2',
-    floor3_Label: 'Floor 3',
-    floor4_Label: 'Floor 4',
+    //1. IN-APP STRINGS
     bluetoothButton_OnLabel: 'Bluetooth is on',
     bluetoothButton_OffLabel: 'Turn Bluetooth on',
     bluetoothAlert_Header: 'Bluetooth',
@@ -29,6 +26,67 @@ export const strings = {
     toggleSpeedButton_AccessibilityLabel: ' Double tap to change audio speed.',
     transcriptButton_OpenedAccessibilityLabel: ' transcript opened. Double tap to close.',
     transcriptButton_ClosedAccessibilityLabel: ' transcript closed. Double tap to open.',
+    audioContentItem_Of: 'of', // Example: Audio item 1 of 3
+    audioContentItem_Seconds: 'seconds',
+    audioContentList_ChapterSingular: 'Chapter',
+    audioContentList_ChapterPlural: 'Chapters',
+    autoplayProgressView_CountDownTextSingular: 'Starts in 1 second',
+    autoplayProgressView_CountDownTextPlural: 'Starts in x seconds',
+    autoplayProgressView_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
+    autoplayProgressView_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
+    closePlayerView_Text: 'You’ve reached the end of x.',
+    closePlayerView_AccessibilityLabel: 'Double tap to return to the chapter listing for this story.',
+    closePlayerView_ClosePlayer: 'Close Player',
+    controlsView_StopTitleAccessibilityLabel: ' Double tap to return to the chapter listing for this story.',
+    exandableHeader_OpenAccessibilityLabel: ' Double tap to close.',
+    exandableHeader_ClosedAccessibilityLabel: ' Double tap to open.',
+    grid_Of: 'of',
+    grid_AccessibilityLabel: 'Plays audio for x story.',
+    nearMeScreen_Title: 'Near Me',
+    nearMeScreen_LocationOffText: 'While at the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
+    nearMeScreen_StoriesMessage: 'While at the museum, we show you stories based on what’s near you.',
+    nearMeScreen_StoriesMessageNone: 'There are no stories near you.',
+    nearMeScreen_StoriesMessageSingular: 'There is one story near you.',
+    nearMeScreen_StoriesMessagePlural: 'There are x stories near you.',
+    nearMeScreen_StoriesMessageFallback: 'Stories are available on floor 7.',
+    nearMeScreen_Regions: 'regions',
+    nearMeScreen_Amenities: 'Amenities',
+    nearMeScreen_Floor: 'Floor',
+    nearMeScreen_Entrance: 'Entrance Space',
+    nearMeScreen_Underground: 'Underground',
+    rootScreen_NearMeTabItem: 'Near Me',
+    rootScreen_StoriesTabItem: 'Stories',
+    rootScreen_MuseumTabItem: 'The Warhol',
+    storiesScreen_Title: 'Stories',
+    settingsScreen_Title: 'Settings',
+    settingsScreen_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
+    settingsScreen_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
+    settingsScreen_NearMeHeader: 'Near Me',
+    settingsSceen_NearMeBody: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
+    settingsScreen_AutoplayHeader: 'Autoplay',
+    settingsScreen_AutoplayBody: 'Out Loud is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or artwork. If you turn on autoplay, we’ll automatically play all chapters within a story.',
+    timeProgressView_SecondsRemaining: 'x seconds remaining',
+    tourStopScreen_ArtworkInformationAccessibilityLabel: 'Artwork Information. Double tap to go to long credits.',
+    tutorialScreen_WelcomeTitle: 'out loud',
+    tutorialScreen_WelcomeMessage: 'Welcome to The Andy Warhol Museum’s inclusive audio guide',
+    tutorialScreen_NoWorries: 'Don’t worry—you can change these preferences later.',
+    tutorialScreen_NearMe: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
+    tutorialScreen_Stories: 'Out Loud is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or artwork. If you turn on autoplay, we’ll automatically play all chapters for you.',
+    tutorialScreen_StoriesAutoplayOn: 'Autoplay is on',
+    tutorialScreen_StoriesAutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
+    tutorialScreen_StoriesAutoplayOff: 'Autoplay is off',
+    tutorialScreen_StoriesAutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
+    tutorialScreen_NavigationButtonsAccessibilityLabel: 'Page x of x. Next Page.',
+    tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel: 'Page x of x. Let’s get started.',
+    tutorialScreen_GetStarted: 'Next',
+    tutorialScreen_GetStarted: 'Let’s Get Started',
+    imageDetailScreen_Title: 'Artwork',
+
+    //2. MUSEUM CONTENT
+    floor1_Label: 'Floor 1',
+    floor2_Label: 'Floor 2',
+    floor3_Label: 'Floor 3',
+    floor4_Label: 'Floor 4',
     aboutScreen_Title: 'The Nordic Museum',
     aboutScreen_Overview: 'The Nordic Museum is Sweden’s largest museum of cultural history. An everyday palace, and a place of stories about the life and people of the Nordic region – yesterday, today and tomorrow. Discover clothes and fashion, textiles and jewellery, homes and furniture, photography, toys, folk art, glass and porcelain. There is also an exhibition about the only indigenous people in Sweden, the Sami.',
     aboutScreen_AboutHeader: 'The building',
@@ -83,7 +141,23 @@ export const strings = {
     amenitiesScreen_Title: 'Amenities',
     amenitiesScreen_ObjectSingular: 'amenity',
     amenitesScreen_ObjectPlural: 'amenities',
-    // AMENITIES
+    creditsScreen_Title: 'Credits',
+    creditsScreen_Overview: 'Accessibility initiatives at The Andy Warhol Museum are generously supported by Allegheny Regional Asset District, The Edith L. Trees Charitable Trust, and the FISA Foundation in honor of Dr. Mary Margaret Kimmel.',
+    creditsScreen_SpecialThanks: 'We’d like to extend a special thank you to our invaluable consultants and partners who helped make this project possible: Ann Lapidus, Gabe McMoreland, Brian Rutherford, and Sina Bahram, Prime Access Consulting. We also thank staff across The Warhol who have worked to make this project possible.',
+    creditsScreen_ProjectManagerHeader: 'Project manager',
+    creditsScreen_EducationalContentHeader: 'Educational Content',
+    creditsScreen_Development: 'Development',
+    creditsScreen_AdvisoryTeam: 'Advisory Team',
+    creditsScreen_ImageCredit: 'The Warhol section image: <i>Silver Clouds</i> installation, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola, Warhol art © The Andy Warhol Foundation for the Visual Arts, Inc.',
+    museumScreen_Title: 'Museum',
+    museumScreen_ImageAccessibilityLabel: 'The Nordic Museum',
+    museumScreen_ListItem1Label: 'About The Nordic Museum',
+    museumScreen_ListItem2Label: 'Accessibility',
+    museumScreen_ListItem3Label: 'Museum Amenities',
+    museumScreen_ListItem4Label: 'Settings',
+    museumScreen_ListItem5Label: 'Credits',
+
+    //3. AMENITIES
     amenities_CloakroomTitle: 'Cloakroom',
     amenities_ToiletsTitle: 'Toilets',
     amenities_BabyChangingTablesTitle: 'Baby changing tables',
@@ -113,94 +187,25 @@ export const strings = {
     amenities_ToyRoomTitle: 'Toy Room',
     amenities_TemporaryExhibitionTitle: 'Temporary exhibition',
     amenities_SmallThingsTitle: 'Small Things',
-    // END OF AMENITIES
-    audioContentItem_Of: 'of', // Example: Audio item 1 of 3
-    audioContentItem_Seconds: 'seconds',
-    audioContentList_ChapterSingular: 'Chapter',
-    audioContentList_ChapterPlural: 'Chapters',
-    autoplayProgressView_CountDownTextSingular: 'Starts in 1 second',
-    autoplayProgressView_CountDownTextPlural: 'Starts in x seconds',
-    autoplayProgressView_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
-    autoplayProgressView_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
-    closePlayerView_Text: 'You’ve reached the end of x.',
-    closePlayerView_AccessibilityLabel: 'Double tap to return to the chapter listing for this story.',
-    closePlayerView_ClosePlayer: 'Close Player',
-    controlsView_StopTitleAccessibilityLabel: ' Double tap to return to the chapter listing for this story.',
-    creditsScreen_Title: 'Credits',
-    creditsScreen_Overview: 'Accessibility initiatives at The Andy Warhol Museum are generously supported by Allegheny Regional Asset District, The Edith L. Trees Charitable Trust, and the FISA Foundation in honor of Dr. Mary Margaret Kimmel.',
-    creditsScreen_SpecialThanks: 'We’d like to extend a special thank you to our invaluable consultants and partners who helped make this project possible: Ann Lapidus, Gabe McMoreland, Brian Rutherford, and Sina Bahram, Prime Access Consulting. We also thank staff across The Warhol who have worked to make this project possible.',
-    creditsScreen_ProjectManagerHeader: 'Project manager',
-    creditsScreen_EducationalContentHeader: 'Educational Content',
-    creditsScreen_Development: 'Development',
-    creditsScreen_AdvisoryTeam: 'Advisory Team',
-    creditsScreen_ImageCredit: 'The Warhol section image: <i>Silver Clouds</i> installation, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola, Warhol art © The Andy Warhol Foundation for the Visual Arts, Inc.',
-    exandableHeader_OpenAccessibilityLabel: ' Double tap to close.',
-    exandableHeader_ClosedAccessibilityLabel: ' Double tap to open.',
-    grid_Of: 'of',
-    grid_AccessibilityLabel: 'Plays audio for x story.',
-    museumScreen_Title: 'Museum',
-    museumScreen_ImageAccessibilityLabel: 'The Nordic Museum',
-    museumScreen_ListItem1Label: 'About The Nordic Museum',
-    museumScreen_ListItem2Label: 'Accessibility',
-    museumScreen_ListItem3Label: 'Museum Amenities',
-    museumScreen_ListItem4Label: 'Settings',
-    museumScreen_ListItem5Label: 'Credits',
-    nearMeScreen_Title: 'Near Me',
-    nearMeScreen_LocationOffText: 'While at the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
-    nearMeScreen_StoriesMessage: 'While at the museum, we show you stories based on what’s near you.',
-    nearMeScreen_StoriesMessageNone: 'There are no stories near you.',
-    nearMeScreen_StoriesMessageSingular: 'There is one story near you.',
-    nearMeScreen_StoriesMessagePlural: 'There are x stories near you.',
-    nearMeScreen_StoriesMessageFallback: 'Stories are available on floor 7.',
-    nearMeScreen_Regions: 'regions',
-    nearMeScreen_Amenities: 'Amenities',
-    nearMeScreen_Floor: 'Floor',
-    nearMeScreen_Entrance: 'Entrance Space',
-    nearMeScreen_Underground: 'Underground',
-    rootScreen_NearMeTabItem: 'Near Me',
-    rootScreen_StoriesTabItem: 'Stories',
-    rootScreen_MuseumTabItem: 'The Warhol',
-    storiesScreen_Title: 'Stories',
-    settingsScreen_Title: 'Settings',
-    settingsScreen_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
-    settingsScreen_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
-    settingsScreen_NearMeHeader: 'Near Me',
-    settingsSceen_NearMeBody: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
-    settingsScreen_AutoplayHeader: 'Autoplay',
-    settingsScreen_AutoplayBody: 'Out Loud is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or artwork. If you turn on autoplay, we’ll automatically play all chapters within a story.',
-    timeProgressView_SecondsRemaining: 'x seconds remaining',
-    tourStopScreen_ArtworkInformationAccessibilityLabel: 'Artwork Information. Double tap to go to long credits.',
-    tutorialScreen_WelcomeTitle: 'out loud',
-    tutorialScreen_WelcomeMessage: 'Welcome to The Andy Warhol Museum’s inclusive audio guide',
-    tutorialScreen_NoWorries: 'Don’t worry—you can change these preferences later.',
-    tutorialScreen_NearMe: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
-    tutorialScreen_Stories: 'Out Loud is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or artwork. If you turn on autoplay, we’ll automatically play all chapters for you.',
-    tutorialScreen_StoriesAutoplayOn: 'Autoplay is on',
-    tutorialScreen_StoriesAutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
-    tutorialScreen_StoriesAutoplayOff: 'Autoplay is off',
-    tutorialScreen_StoriesAutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
-    tutorialScreen_NavigationButtonsAccessibilityLabel: 'Page x of x. Next Page.',
-    tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel: 'Page x of x. Let’s get started.',
-    tutorialScreen_GetStarted: 'Next',
-    tutorialScreen_GetStarted: 'Let’s Get Started',
-    imageDetailScreen_Title: 'Artwork',
-    // STORY HEADERS
-    '01_longTitle':'Highlights floor 2',
-    '01_shortTitle':'Highlights floor 2',
-    '01_imageAccessibilityLabel':'Highlights floor 2',
-    '01_shortCredit':'<i>Highlights floor 2</i>',
-    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights floor 2</i>',
-    '02_longTitle':'Highlights floor 3',
-    '02_shortTitle':'Highlights floor 3',
-    '02_imageAccessibilityLabel':'Highlights floor 3',
-    '02_shortCredit':'<i>Highlights floor 3</i>',
-    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights floor 3</i>',
+
+    //4. STORY HEADERS
+    '01_longTitle':'Highlights',
+    '01_shortTitle':'Highlights',
+    '01_imageAccessibilityLabel':'Highlights',
+    '01_shortCredit':'<i>Highlights</i>',
+    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights</i>',
+    '02_longTitle':'Highlights',
+    '02_shortTitle':'Highlights',
+    '02_imageAccessibilityLabel':'Highlights',
+    '02_shortCredit':'<i>Highlights</i>',
+    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Highlights</i>',
     '03_longTitle':'Traditions',
     '03_shortTitle':'Traditions',
     '03_imageAccessibilityLabel':'Traditions',
     '03_shortCredit':'<i>Traditions</i>',
     '03_longCredit':'Foto: Aron Ambrosiani\n<i>Traditions</i>',
-    // CHAPTER HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Welcome to the Nordic Museum',
     '0002': 'Functionalist Classic Eva',
     '0003': 'The Merchant’s Drawing Room',
@@ -225,8 +230,16 @@ export const strings = {
     '0022': 'When Hanse-Kalle Died',
     '0023': 'Portal to the Palace of Everyday Life',
     '0024': 'The 1940s Apartment',
+
+    //6. TRANSCRIPTS
   },
   sv: {
+    //1. IN-APP STRINGS
+    audioContentList_ChapterSingular: 'Kapitel',
+    audioContentList_ChapterPlural: 'Kapitel',
+    settingsScreen_Title: 'Inställningar',
+
+    //2. MUSEUM CONTENT
     floor1_Label: 'Plan 1',
     floor2_Label: 'Plan 2',
     floor3_Label: 'Plan 3',
@@ -241,7 +254,6 @@ export const strings = {
     museumScreen_ListItem5Label: 'Medverkande',
     amenitiesScreen_Title: 'Hitta på museet',
     accessibilityScreen_Title: 'Tillgänglighet',
-    settingsScreen_Title: 'Inställningar',
     creditsScreen_Title: 'Medverkande',
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet är Sveriges största kulturhistoriska museum. Ett vardagens palats där berättelser om livet och om människor i Norden, igår, idag och imorgon tar plats. Upptäck kläder och mode, textilier och smycken, möbler och boende, fotogra , leksaker, folkkonst, glas och porslin. Här  nns också en utställning om Sveriges enda urfolk, samerna.',
@@ -255,7 +267,8 @@ export const strings = {
     aboutScreen_AdmissionHeader: 'Entré',
     aboutScreen_AdmissionBody1: 'Juni–augusti: Vuxen: 120 kr, Barn och ungdomar till och med 18 år: fri entré',
     aboutScreen_AdmissionBody2: 'September–maj: Vuxen: 100 kr, Barn och ungdomar till och med 18 år: fri entré',
-    // AMENITIES
+
+    //3. AMENITIES
     amenities_CloakroomTitle: 'Garderob',
     amenities_ToiletsTitle: 'Toaletter',
     amenities_BabyChangingTablesTitle: 'Skötrum',
@@ -295,24 +308,25 @@ export const strings = {
     amenities_TemporaryExhibitionTitle: 'Tillfällig utställning',
     amenities_SmallThingsTitle: 'Småting',
     amenities_SmallThingsDescription: 'Utställningen Småting innehåller en mängd olika föremål som fanns i svenska hem förr. Många  kommer från hushåll i de övre samhällsklasserna och är från 1600-talet till 1900-talet. Här ryms allt från exklusiva statusobjekt till vardagliga ting, masstilverkade prydnadssaker och souvenirer finns representerade och kan berätta om sin tids smak och sin ägares ställning i samhället.',
-    // END OF AMENITIES
-    // STORY HEADERS
-    '01_longTitle':'Höjdpunkter plan 2',
-    '01_shortTitle':'Höjdpunkter plan 2',
-    '01_imageAccessibilityLabel':'Höjdpunkter plan 2',
-    '01_shortCredit':'<i>Höjdpunkter plan 2</i>',
-    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 2</i>',
-    '02_longTitle':'Höjdpunkter plan 3',
-    '02_shortTitle':'Höjdpunkter plan 3',
-    '02_imageAccessibilityLabel':'Höjdpunkter plan 3',
-    '02_shortCredit':'<i>Höjdpunkter plan 3</i>',
-    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter plan 3</i>',
+
+    //4. STORY HEADERS
+    '01_longTitle':'Höjdpunkter',
+    '01_shortTitle':'Höjdpunkter',
+    '01_imageAccessibilityLabel':'Höjdpunkter',
+    '01_shortCredit':'<i>Höjdpunkter</i>',
+    '01_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter</i>',
+    '02_longTitle':'Höjdpunkter',
+    '02_shortTitle':'Höjdpunkter',
+    '02_imageAccessibilityLabel':'Höjdpunkter',
+    '02_shortCredit':'<i>Höjdpunkter</i>',
+    '02_longCredit':'Foto: Aron Ambrosiani\n<i>Höjdpunkter</i>',
     '03_longTitle':'Traditioner',
     '03_shortTitle':'Traditioner',
     '03_imageAccessibilityLabel':'Traditioner',
     '03_shortCredit':'<i>Traditioner</i>',
     '03_longCredit':'Foto: Aron Ambrosiani\n<i>Traditioner</i>',
-    // CHAPTER HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Välkommen till Nordiska museet',
     '0002': 'Funkisklassikern Eva',
     '0003': 'Grosshandlarens salong',
@@ -337,15 +351,23 @@ export const strings = {
     '0022': 'När Hanse-Kalle dog',
     '0023': 'Portalen till vardagens palats',
     '0024': 'Folkhemslägenheten',
-    // TRANSCRIPTS
-    '0001_transcript': '',
+
+    //6. TRANSCRIPTS
   },
   it: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'Il Museo Nordico',
     aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotogra a, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un’esposizione sull’unica popolazione indigena della Svezia, i Sami.',
     aboutScreen_AboutHeader: 'L’edificio',
     aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L’imponente edi cio, situato sull’isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Benvenuti al Nordic Museum',
     '0002': 'Eva, un classico del funzionalismo',
     '0003': 'Il salotto del mercante',
@@ -370,15 +392,25 @@ export const strings = {
     '0022': 'Quando morì Hanse-Kalle',
     '0023': 'Entriamo nel palazzo della vita quotidiana',
     '0024': 'L’appartamento stile anni ’40',
-    //TRANSCRIPTS
+
+    //6. TRANSCRIPTS
     '0001_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia. Mi chiamo Sanne Houby-Nielsen e sono la Direttrice del Museo.\n\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\n\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\n\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\n\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\n\nCercate gli stand gialli delle audioguide.\n\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
   },
   ar: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'متحف الشمال ',
     aboutScreen_Overview: 'متحف الشمال هو أكبر متحف يحتفي بالتاريخ الثقافي في السويد. وهو قصر يعج بالحياة اليومية، ومكان يسرد حكايات عن سكان منطقة الشمال ويصور معيشتهم - في الأمس واليوم والغد. اكتشف الملابس والأزياء، والمنسوجات والحُلي، والمنازل والأثاث، والأعمال التصويرية، والألعاب، والفنون الشعبية، وأعمال الزجاج والخزف. كما يوجد أيضًا معرض عن السكان الأصليين الوحيدين في السويد، ألا وهم الساميون. ',
     aboutScreen_AboutHeader: 'المبنى',
     aboutScreen_AboutBody: 'يعود تأسيس المتحف إلى عام 1873 على يد آرتور هازليوس. ويقع هذا المبنى الفخم على جزيرة ديورجاردن - وهو مشهد طبيعي في حد ذاته - وقد صممه إيزاك غوستاف كلاسون على طراز عصر النهضة، وتم افتتاحه في 1907.',
-    // CHAPTER HEADERS
+
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'مرحباً بكم في متحف الشمال',
     '0002': 'إيفا - الكرسي الوظيفي الكلاسيكي',
     '0003': 'غرفة رسم التاجر',
@@ -403,17 +435,26 @@ export const strings = {
     '0022': 'عندما مات هانز - كال',
     '0023': 'بوابة إلى قصر الحياة اليومية',
     '0024': 'شقة أربعينيات القرن العشرين',
-    //TRANSCRIPTS
+
+    //6. TRANSCRIPTS
     '0001_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\n\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\n\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\n\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\n\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\n\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\n\nانتبهوا للافتات الإرشاد السمعي الصفراء .\n\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
   },
   es: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'El Museo Nórdico',
     aboutScreen_Overview: 'El Museo Nórdico es el mayor museo de historia cultural de Suecia. Un palacio cotidiano y un lugar donde se cuentan historias sobre la vida y la gente de la región nórdica: de ayer, de hoy y de mañana. Descubra trajes y moda, tejidos y joyería, hogares y muebles, fotografía, juguetes, arte tradicional y piezas de cristal y porcelana. El museo también alberga una exposición sobre el único pueblo indígena de Suecia: los sami.',
     aboutScreen_AboutHeader: 'Edificio',
     aboutScreen_AboutBody: 'El museo fue fundado en 1873 por Artur Hazelius. El imponente edi cio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.',
     aboutScreen_HoursHeader: 'Horario de apertura',
     aboutScreen_AdmissionHeader: 'Entrada',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Bienvenidos al Museo Nórdico',
     '0002': 'Eva clásica funcional',
     '0003': 'El salón del mercader',
@@ -438,13 +479,23 @@ export const strings = {
     '0022': 'La muerte de Hanse-Kalle',
     '0023': 'La entrada al palacio de la vida cotidiana',
     '0024': 'El apartamento de los años 40',
+
+    //6. TRANSCRIPTS
   },
   fi: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet on Ruotsin suurin kulttuuri- historiallinen museo. Se on arjen palatsi, joka toimii näyttämönä tarinoille ihmisten elämästä Pohjoismaissa eilen, tänään ja huomenna. Museossa voit tutustua vaatteisiin ja muotiin, tekstiileihin ja koruihin, huonekaluihin ja tapaan asua, valokuviin, leluihin, kansantaiteeseen sekä lasiin ja posliiniin. Museossa on myös Ruotsin ainoaa alkuperäiskansaa saamelaisia käsittelevä näyttely.',
     aboutScreen_AboutHeader: 'Rakennus',
     aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnogra an keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907.',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Tervetuloa Nordiska museetiin',
     '0002': 'Funkisklassikko Eva',
     '0003': 'Kauppiaan salonki',
@@ -469,15 +520,24 @@ export const strings = {
     '0022': 'Hanse-Kallen hautajaiset',
     '0023': 'Portaali arjen palatsiin',
     '0024': 'Asunto kansankodissa',
-    // TRANSCRIPTS
+
+    //6. TRANSCRIPTS
     '0001_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\n\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\n\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\n\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\n\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\n\nEtsikää keltaisia audio-opas-telineitä.\n\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
   },
   de: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'Das Nordische Museum',
     aboutScreen_Overview: 'Das Nordische Museum ist das größte kulturgeschicht- liche Museum Schwedens. Ein Palast der Alltagskultur, in dem vom Leben und von den Menschen in Skandinavien gestern, heute und morgen erzählt wird. Entdecken Sie Kleidung und Mode, Textilien und Schmuck, Möbel und Einrichtungsgegenstände, Fotos, Spielzeug, Volkskunst, Glas und Geschirr. Hier gibt es auch eine Ausstellung zur einzigen Urbevölkerung Schwedens, den Samen, zu sehen.',
     aboutScreen_AboutHeader: 'Das Gebäude',
     aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht.',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Willkommen im Nordischen Museum',
     '0002': 'Funktionalistische Klassikerin Eva',
     '0003': 'Der Salon des Großhändlers',
@@ -502,13 +562,23 @@ export const strings = {
     '0022': 'Als Hanse-Kalle starb',
     '0023': 'Portal zum Palast des Alltags',
     '0024': 'Die Wohnung der 1940er Jahre',
+
+    //6. TRANSCRIPTS
   },
   ru: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'Музей северных стран',
     aboutScreen_Overview: 'Музей северных стран — крупнейший в Швеции историко-культурный музей. Это общедоступный дворец, в котором можно прикоснуться к прошлому, настоящему и будущему Северных стран и их жителей. Посетите экспозиции, посвященные одежде и моде, текстилю и украшениям, жилищам и мебели, фотографии, игрушкам, народному искусству, стеклу и фарфору. Отдельная выставка посвящена единственному коренному народу Швеции, саамам',
     aboutScreen_AboutHeader: 'Здание',
     aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году.',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Добро пожаловать в Северный музей',
     '0002': 'Классический функционалист Ева',
     '0003': 'Купеческий кабинет',
@@ -533,13 +603,23 @@ export const strings = {
     '0022': 'День, когда умер Ганзе-Калле',
     '0023': 'Портал во Дворец Повседневности',
     '0024': 'Квартира 40-х годов 20 века',
+
+    //6. TRANSCRIPTS
   },
   fr: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: 'Le musée nordique',
     aboutScreen_Overview: 'Le musée nordique est le plus grand musée d’histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au  l des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L’une des expositions retrace l’histoire du seul peuple indigène de Suède, les Samis.',
     aboutScreen_AboutHeader: 'L’édifice',
     aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L’imposant monument situé sur l’île de Djurgården, l’île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': 'Bienvenue au Musée nordique',
     '0002': 'La chaise Eva classique et fonctionnelle',
     '0003': 'Le salon du marchand',
@@ -564,13 +644,23 @@ export const strings = {
     '0022': 'À la mort d’Hanse-Kalle',
     '0023': 'Portail du Palais de la vie quotidienne',
     '0024': 'L’appartement des années 1940',
+
+    //6. TRANSCRIPTS
   },
   zh: {
+    //1. IN-APP STRINGS
+
+    //2. MUSEUM CONTENT
     aboutScreen_Title: '北欧博物馆',
     aboutScreen_Overview: '北欧博物馆是瑞典最大的文化历史博物馆。这是一座展示 日常生活实景的博物馆，讲述了北欧地区的人文风情、生活 百态，是连接过去、现在以及未来的桥梁。在这里可以看到 各式衣着服饰和时尚潮流、纺织品和珠宝首饰、家居摆设和 家具陈列、摄影作品、玩具、民间艺术、玻璃和瓷器作品。同 时，这里还有关于瑞典唯一的土著居民萨米人的展览。',
     aboutScreen_AboutHeader: '建筑',
     aboutScreen_AboutBody: '博物馆由亚瑟•哈兹里乌斯于 1873 年成立。这座建筑坐落于动物园岛 上，由伊萨克•古斯塔夫•克拉松按照文艺复兴时期的建筑风格设计，并 于 1907 年落成，壮观伟岸，已然成为一道风景。博物馆的中心为一巨 大主厅，长 126 米，顶高 24 米，主厅的正中央矗立着著名雕塑家卡 尔•米勒斯设计的大型古斯塔夫•瓦萨国王 (1523-1560) 橡木雕像。',
-    // CHAPTER HEADERS
+
+    //3. AMENITIES
+
+    //4. STORY HEADERS
+
+    //5. CHAPTER HEADERS
     '0001': '欢迎来到北欧博物馆',
     '0002': '实用型伊娃古典靠椅',
     '0003': '商人的客厅',
@@ -595,12 +685,48 @@ export const strings = {
     '0022': '汉斯-卡勒的葬礼',
     '0023': '通往豪宅居所的大门',
     '0024': '20世纪40年代的公寓',
-    //TRANSCRIPTS
+
+    //6. TRANSCRIPTS
     '0001_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n\n請留意黃色的導賞台。\n\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
   },
-  svSimple: {},
-  svKids: {},
-  seSme: {},
-  seSmj: {},
-  seSma: {}
+  svSimple: {
+    //1. IN-APP STRINGS
+    //2. MUSEUM CONTENT
+    //3. AMENITIES
+    //4. STORY HEADERS
+    //5. CHAPTER HEADERS
+    //6. TRANSCRIPTS
+  },
+  svKids: {
+    //1. IN-APP STRINGS
+    //2. MUSEUM CONTENT
+    //3. AMENITIES
+    //4. STORY HEADERS
+    //5. CHAPTER HEADERS
+    //6. TRANSCRIPTS
+  },
+  seSme: {
+    //1. IN-APP STRINGS
+    //2. MUSEUM CONTENT
+    //3. AMENITIES
+    //4. STORY HEADERS
+    //5. CHAPTER HEADERS
+    //6. TRANSCRIPTS
+  },
+  seSmj: {
+    //1. IN-APP STRINGS
+    //2. MUSEUM CONTENT
+    //3. AMENITIES
+    //4. STORY HEADERS
+    //5. CHAPTER HEADERS
+    //6. TRANSCRIPTS
+  },
+  seSma: {
+    //1. IN-APP STRINGS
+    //2. MUSEUM CONTENT
+    //3. AMENITIES
+    //4. STORY HEADERS
+    //5. CHAPTER HEADERS
+    //6. TRANSCRIPTS
+  }
 };

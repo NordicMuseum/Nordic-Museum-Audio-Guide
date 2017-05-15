@@ -10,13 +10,13 @@ export const allAmenities = [
         uuid: uuid.v4(),
         title: 'amenities_CloakroomTitle',
         description: '',
-        icon: 'placeholder.png',
+        icon: 'Amenities_Coatcheck.png',
       },
       {
         uuid: uuid.v4(),
         title: 'amenities_ToiletsTitle',
         description: '',
-        icon: 'placeholder.png',
+        icon: 'Amenities_Restrooms.png',
       },
       {
         uuid: uuid.v4(),
@@ -70,19 +70,19 @@ export const allAmenities = [
         uuid: uuid.v4(),
         title: 'amenities_EntranceTitle',
         description: '',
-        icon: 'placeholder.png',
+        icon: 'Amenities_Admissions.png',
       },
       {
         uuid: uuid.v4(),
         title: 'amenities_ShopTitle',
         description: 'amenities_ShopDescription',
-        icon: 'placeholder.png',
+        icon: 'Amenities_Shop.png',
       },
       {
         uuid: uuid.v4(),
         title: 'amenities_RestaurantAndCafeTitle',
         description: 'amenities_RestaurantAndCafeDescription',
-        icon: 'placeholder.png',
+        icon: 'Amenities_Cafe.png',
       },
       {
         uuid: uuid.v4(),
