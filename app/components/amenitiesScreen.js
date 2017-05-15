@@ -12,11 +12,8 @@ import I18n from 'react-native-i18n';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL, LIGHT_BLUE } from '../styles';
+import { OFF_BLACK, TEAL } from '../styles';
 
-import Collapsible from 'react-native-collapsible';
-
-import ExpandableHeader from './expandableHeader';
 import AmenitiesItem from './amenitiesItem';
 import NavigationBar from './navigationBar';
 import SegmentedController from './buttons/segmentedController';
@@ -35,7 +32,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   segementedController: {
-    paddingTop: 90,
+    marginTop: 90,
     paddingBottom: 25,
     height: 40,
     alignItems: 'center',
