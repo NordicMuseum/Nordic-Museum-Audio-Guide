@@ -12,6 +12,7 @@ import { nav } from './navigation';
 import { preferences } from './preferences';
 import { tutorial } from './tutorial';
 import { localization } from './localization';
+import { searchByNumber } from './searchByNumber';
 
 const rootReducer = combineReducers({
   beacon,
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
   preferences,
   tutorial,
   localization,
+  searchByNumber,
 });
 
 export default rootReducer;

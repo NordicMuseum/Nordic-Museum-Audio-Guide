@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 import SearchByNumberScreen from '../components/searchByNumberScreen';
 
 import {
-  showFloor,
-} from '../actions/amenities';
+  editDigits,
+} from '../actions/searchByNumber';
 
 const mapStateToProps = (state) => {
   return {
+    digits: state.searchByNumber.digits,
     playerOpen: state.bottomPlayer.playerOpen,
-    allAmenities: state.amenities.allAmenities,
-    currentFloor: state.amenities.currentFloor,
     screenReader: state.accessibility.screenReader,
   };
 };
@@ -20,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions:
       bindActionCreators({
-        showFloor,
+        editDigits,
       }, dispatch),
   };
 };
