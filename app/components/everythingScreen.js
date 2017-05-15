@@ -9,11 +9,8 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Collapsible from 'react-native-collapsible';
-
 import Grid from './grid';
 import TourStop from '../containers/tourStop';
-import ExpandableHeader from './expandableHeader';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -55,55 +52,28 @@ class EverythingScreen extends Component {
         <ScrollView
           automaticallyAdjustContentInsets={false}
         >
-          {this.props.tourStops.map((floor, index) => {
-            let collapsibleDuration;
-
-            if (this.props.screenReader) {
-              collapsibleDuration = 0;
-            } else {
-              collapsibleDuration = 750;
-            }
-
-            return (
-              <View key={index}>
-                <ExpandableHeader
-                  title={I18n.t(floor.floorTitle)}
-                  expanded={floor.expanded}
-                  numberOfObjects={floor.stops.length}
-                  objectSingular={'amenity'}
-                  objectPlural={'amenities'}
-                  onPress={() => { this.props.actions.toggleStopsExpanded(floor.floor); }}
-                />
-                <Collapsible
-                  collapsed={!floor.expanded}
-                  duration={collapsibleDuration}
-                >
-                  <Grid
-                    items={floor.stops}
-                    selected={this.props.currentStopUUID}
-                    screenReader={this.props.screenReader}
-                    onCellPress={(item) => {
-                      this.props.navigator.push({
-                        title: item.shortTitle,
-                        component: TourStop,
-                        barTintColor: '#ffffff',
-                        tintColor: TEAL,
-                        titleTextColor: OFF_BLACK,
-                        shadowHidden: true,
-                        navigationBarHidden: true,
-                        passProps: {
-                          tab: TAB_STORIES,
-                          tourStop: item,
-                          initialCategory: item.initialAudio,
-                          imageURL: item.imageURL,
-                        },
-                      });
-                    }}
-                  />
-                </Collapsible>
-              </View>
-            );
-          })}
+          <Grid
+            items={this.props.tourStops[2].stops}
+            selected={this.props.currentStopUUID}
+            screenReader={this.props.screenReader}
+            onCellPress={(item) => {
+              this.props.navigator.push({
+                title: item.shortTitle,
+                component: TourStop,
+                barTintColor: '#ffffff',
+                tintColor: TEAL,
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+                navigationBarHidden: true,
+                passProps: {
+                  tab: TAB_STORIES,
+                  tourStop: item,
+                  initialCategory: item.initialAudio,
+                  imageURL: item.imageURL,
+                },
+              });
+            }}
+          />
         </ScrollView>
       </View>
     );

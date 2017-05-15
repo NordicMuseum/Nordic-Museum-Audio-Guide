@@ -19,7 +19,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, OFF_BLACK } from '../styles';
+import { globalStyles } from '../styles';
 
 const SPACING = 5;
 
@@ -37,35 +37,48 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   cellContainer: {
-    marginLeft: SPACING,
-    marginRight: SPACING,
-    marginBottom: SPACING * 2,
-    shadowColor: OFF_BLACK,
-    shadowOpacity: 0.3,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
+    marginLeft: 0,
+    marginRight: 0,
+    marginBottom: SPACING,
+    backgroundColor: '#FB7D12',
+    flex: 1,
   },
   cellImage: {
-    resizeMode: 'contain',
+    resizeMode: 'stretch',
+    flex: 1,
   },
-  cellText: {
-    padding: SPACING,
+  cellTitleText: {
+    backgroundColor: 'transparent',
+    color: '#FFFFFF',
+    fontWeight: '600',
+    position: 'absolute',
+    bottom: SPACING * 2,
+    left: SPACING * 2,
+    flex: 0.6,
+  },
+  cellDurationText: {
+    backgroundColor: 'transparent',
+    color: '#FFFFFF',
+    fontWeight: '600',
+    position: 'absolute',
+    bottom: SPACING * 2,
+    right: SPACING * 2,
+    textAlign: 'right',
   },
 });
 
-function getImageScale(cellWidth, imageWidth) {
-  return cellWidth / imageWidth;
-}
+// function getImageScale(cellWidth, imageWidth) {
+//  return cellWidth / imageWidth;
+// }
 
-function getImageHeight(cellWidth, imageWidth, imageHeight) {
-  return getImageScale(cellWidth, imageWidth) * imageHeight;
-}
+// function getImageHeight(cellWidth, imageWidth, imageHeight) {
+//  return getImageScale(cellWidth, imageWidth) * imageHeight;
+// }
 
 const Grid = (props) => {
-  const width = Dimensions.get('window').width;
-  const cellWidth = (width / 2) - SPACING * 2; // 2 items per row
+  const { width, height } = Dimensions.get('window');
+  const cellWidth = width; // 2 items per row
+  const cellHeight = height / 4;
   const gridLength = props.items.length;
 
   const renderItem = (item, index, onPress, oddCell, screenReader) => {
@@ -110,7 +123,7 @@ const Grid = (props) => {
                 styles.cellImage,
                 {
                   width: cellWidth,
-                  height: getImageHeight(cellWidth, item.imageWidth, item.imageHeight),
+                  height: cellHeight,
                 },
               ]}
               source={{
@@ -119,12 +132,21 @@ const Grid = (props) => {
             />
             <Text
               style={[
-                styles.cellText,
                 { width: cellWidth },
                 globalStyles.disclosure,
+                styles.cellTitleText,
               ]}
             >
-              {parseDisplayText(I18n.t(item.longTitle))}
+              {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
+            </Text>
+            <Text
+              style={[
+                { width: cellWidth },
+                globalStyles.disclosure,
+                styles.cellDurationText,
+              ]}
+            >
+              30 MIN
             </Text>
           </View>
         </TouchableOpacity>
@@ -135,10 +157,8 @@ const Grid = (props) => {
   const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
   const dataSource = ds.cloneWithRows(props.items);
 
-  let listView;
-
-  if (props.screenReader) {
-    listView = (
+  return (
+    <View style={styles.container}>
       <ListView
         enableEmptySections={true}
         contentContainerStyle={styles.gridRow}
@@ -148,37 +168,6 @@ const Grid = (props) => {
           return renderItem(item, index, props.onCellPress, null, true);
         }}
       />
-    );
-  } else {
-    listView = (
-      <View style={styles.gridRow}>
-        <ListView
-          enableEmptySections={true}
-          contentContainerStyle={styles.gridColumn}
-          dataSource={dataSource}
-          initialListSize={20}
-          removeClippedSubviews={false}
-          renderRow={(item, sectionIndex, index) => {
-            return renderItem(item, index, props.onCellPress, true);
-          }}
-        />
-        <ListView
-          enableEmptySections={true}
-          contentContainerStyle={styles.gridColumn}
-          dataSource={dataSource}
-          initialListSize={20}
-          removeClippedSubviews={false}
-          renderRow={(item, sectionIndex, index) => {
-            return renderItem(item, index, props.onCellPress, false);
-          }}
-        />
-      </View>
-    );
-  }
-
-  return (
-    <View style={styles.container}>
-      {listView}
     </View>
   );
 };
