@@ -1450,7 +1450,7 @@ export const tourStops = [
     shortCredit: '<i>Sapmi_Interviews_shortCredit</i>',
     longCredit: 'Sapmi_Interviews_longCredit',
     tags: [],
-    initialAudio: '',
+    initialAudio: 'INTRODUCTION',
     audioContent: [
     {
         uuid: uuid.v4(),
@@ -1874,7 +1874,7 @@ export const tourStops = [
     shortCredit: '<i>HomesAndInteriorsVisualDescriptions_shortCredit</i>',
     longCredit: 'HomesAndInteriorsVisualDescriptions_longCredit',
     tags: [],
-    initialAudio: '',
+    initialAudio: 'INTRODUCTION',
     audioContent: [
     {
         uuid: uuid.v4(),
