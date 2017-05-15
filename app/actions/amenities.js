@@ -1,11 +1,11 @@
 
 // *** Action Types ***
-export const TOGGLE_FLOOR_EXPANDED = 'TOGGLE_FLOOR_EXPANDED';
+export const SHOW_AMENITIES_FLOOR = 'SHOW_AMENITIES_FLOOR';
 
 // *** Action Creators ***
-export function toggleFloorExpanded(index) {
+export function showFloor(floor) {
   return {
-    type: TOGGLE_FLOOR_EXPANDED,
-    index,
+    type: SHOW_AMENITIES_FLOOR,
+    floor,
   };
 }

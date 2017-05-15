@@ -19,10 +19,11 @@ import Collapsible from 'react-native-collapsible';
 import ExpandableHeader from './expandableHeader';
 import AmenitiesItem from './amenitiesItem';
 import NavigationBar from './navigationBar';
+import SegmentedController from './buttons/segmentedController';
+
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 65,
     alignItems: 'stretch',
     flex: 1,
   },
@@ -33,6 +34,15 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingBottom: 0,
   },
+  segementedController: {
+    paddingTop: 90,
+    paddingBottom: 25,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 50,
+    marginRight: 50,
+  },
 });
 
 const AmenitiesScreen = (props) => {
@@ -42,7 +52,7 @@ const AmenitiesScreen = (props) => {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: '#ededed' }}>
       <NavigationBar
         label={I18n.t('amenitiesScreen_Title')}
         labelStyle={{
@@ -52,51 +62,49 @@ const AmenitiesScreen = (props) => {
         backButtonPress={() => { props.navigator.pop(); }}
         backButtonLabel={I18n.t('museumScreen_Title')}
         barStyle={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#ededed',
           height: 44,
         }}
       />
+      <View style={styles.segementedController}>
+        <SegmentedController
+          style={{ flex: 1 }}
+          buttons={[
+            {
+              label: I18n.t('floor1_Label'),
+              onPress: () => { props.actions.showFloor(0); },
+              active: props.currentFloor === 0,
+            },
+            {
+              label: I18n.t('floor2_Label'),
+              onPress: () => { props.actions.showFloor(1); },
+              active: props.currentFloor === 1,
+            },
+            {
+              label: I18n.t('floor3_Label'),
+              onPress: () => { props.actions.showFloor(2); },
+              active: props.currentFloor === 2,
+            },
+            {
+              label: I18n.t('floor4_Label'),
+              onPress: () => { props.actions.showFloor(3); },
+              active: props.currentFloor === 3,
+            },
+          ]}
+        />
+      </View>
       <View style={[styles.container, { marginBottom: containerMargin }]}>
         <ScrollView
           automaticallyAdjustContentInsets={false}
           contentContainerStyle={{ paddingBottom: 10 }}
         >
-          {props.allAmenities.map((floor, index) => {
-            let collapsibleDuration;
-
-            if (props.screenReader) {
-              collapsibleDuration = 0;
-            } else {
-              collapsibleDuration = 750;
-            }
-
+          {props.allAmenities[props.currentFloor].amenities.map((amenity, index) => {
             return (
-              <View key={index}>
-                <ExpandableHeader
-                  title={I18n.t(floor.floorTitle)}
-                  expanded={props.expandedFloors[index]}
-                  numberOfObjects={floor.amenities.length}
-                  objectSingular={'amenity'}
-                  objectPlural={'amenities'}
-                  onPress={() => { props.actions.toggleFloorExpanded(index); }}
-                />
-                <Collapsible
-                  collapsed={!props.expandedFloors[index]}
-                  duration={collapsibleDuration}
-                >
-                  <View style={[styles.amenitiesContainer, { backgroundColor: LIGHT_BLUE }]}>
-                    {floor.amenities.map((amenity, i) => {
-                      return (
-                        <AmenitiesItem
-                          key={amenity.uuid}
-                          amenity={amenity}
-                          border={i !== (floor.amenities.length - 1)}
-                        />
-                      );
-                    })}
-                  </View>
-                </Collapsible>
-              </View>
+              <AmenitiesItem
+                key={amenity.uuid}
+                amenity={amenity}
+                border={index !== (props.allAmenities[props.currentFloor].amenities.length - 1)}
+              />
             );
           })}
         </ScrollView>
@@ -109,10 +117,10 @@ AmenitiesScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
   playerOpen: PropTypes.bool.isRequired,
   allAmenities: PropTypes.array.isRequired,
-  expandedFloors: PropTypes.array.isRequired,
+  currentFloor: PropTypes.number.isRequired,
   screenReader: PropTypes.bool.isRequired,
   actions: PropTypes.shape({
-    toggleFloorExpanded: PropTypes.func.isRequired,
+    showFloor: PropTypes.func.isRequired,
   }).isRequired,
 };
 
