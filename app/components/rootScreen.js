@@ -39,14 +39,6 @@ const STORIES_REF = 'STORIES_REF';
 const SEARCH_REF = 'SEARCH_REF';
 
 const styles = StyleSheet.create({
-  tabContent: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  tabText: {
-    color: 'white',
-    margin: 50,
-  },
   container: {
     flex: 1,
   },
