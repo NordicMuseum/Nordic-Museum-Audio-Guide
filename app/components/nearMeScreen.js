@@ -61,8 +61,10 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   settingContainer: {
-    paddingHorizontal: 5,
-    paddingVertical: 10,
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
     backgroundColor: LIGHT_BLUE,
   },
 });

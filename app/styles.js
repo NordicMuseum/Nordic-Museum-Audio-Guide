@@ -4,8 +4,8 @@ import {
 } from 'react-native';
 
 export const TEAL = '#097D8D';
-export const TURQUOISE = '#4CCEDE';
-export const LIGHT_BLUE = '#EFFBFB';
+export const TURQUOISE = '#EA3D4E';
+export const LIGHT_BLUE = '#EDD6DD';
 export const GREEN = '#7DCC77';
 export const GRAY = '#7D7D7D';
 export const LIGHT_GRAY = '#EDEDED';
