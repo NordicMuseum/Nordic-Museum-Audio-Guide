@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   progressRow: {
     justifyContent: 'flex-start',
     alignItems: 'stretch',
-    height: 9,
+    height: 16,
   },
 });
 

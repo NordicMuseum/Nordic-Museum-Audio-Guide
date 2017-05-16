@@ -30,6 +30,7 @@ import ToggleSpeedButton from './buttons/toggleSpeedButton';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    paddingTop: 12,
   },
   row: {
     flexDirection: 'row',

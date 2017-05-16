@@ -21,12 +21,19 @@ const styles = StyleSheet.create({
   },
   timestampRow: {
     justifyContent: 'space-between',
-    marginTop: 5,
-    marginBottom: 3,
+    alignItems: 'center',
     height: 16,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
-  timestampText: {
+  timestampTextLeft: {
+    backgroundColor: 'transparent',
     marginLeft: 5,
+  },
+  timestampTextRight: {
+    backgroundColor: 'transparent',
     marginRight: 5,
   },
 });
@@ -79,13 +86,13 @@ const TimeProgressView = (props) => {
         accessibilityLabel={`${timeRemaining} seconds remaining`}
       >
         <Text
-          style={[styles.timestampText, globalStyles.progressLabel]}
+          style={[styles.timestampTextLeft, globalStyles.progressLabel]}
           accessible={false}
         >
           {timeString}
         </Text>
         <Text
-          style={[styles.timestampText, globalStyles.progressLabel]}
+          style={[styles.timestampTextRight, globalStyles.progressLabel]}
           accessible={false}
         >
           {timeRemainingString}
