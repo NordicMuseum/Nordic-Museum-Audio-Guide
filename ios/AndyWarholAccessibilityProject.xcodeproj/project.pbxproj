@@ -46,80 +46,13 @@
 		327F7E9A1ECAB49F003A67BC /* 0022 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E4E1ECAB49F003A67BC /* 0022 */; };
 		327F7E9B1ECAB49F003A67BC /* 0023 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E4F1ECAB49F003A67BC /* 0023 */; };
 		327F7E9C1ECAB49F003A67BC /* 0024 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E501ECAB49F003A67BC /* 0024 */; };
-		327F7E9D1ECAB49F003A67BC /* AndyAndJulia_visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E511ECAB49F003A67BC /* AndyAndJulia_visual.mp3 */; };
-		327F7E9E1ECAB49F003A67BC /* Beck_Jessica_College-Years_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E521ECAB49F003A67BC /* Beck_Jessica_College-Years_Introduction.mp3 */; };
-		327F7E9F1ECAB49F003A67BC /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E531ECAB49F003A67BC /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */; };
-		327F7EA01ECAB49F003A67BC /* Beck_Jessica_New-York_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E541ECAB49F003A67BC /* Beck_Jessica_New-York_Introduction.mp3 */; };
-		327F7EA11ECAB49F003A67BC /* Beck_Jessica_New-York_Persona.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E551ECAB49F003A67BC /* Beck_Jessica_New-York_Persona.mp3 */; };
-		327F7EA21ECAB49F003A67BC /* Beck_Jessica_New-York_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E561ECAB49F003A67BC /* Beck_Jessica_New-York_Success.mp3 */; };
-		327F7EA31ECAB49F003A67BC /* Blotted-Line_Collaboration_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E571ECAB49F003A67BC /* Blotted-Line_Collaboration_v2.mp3 */; };
-		327F7EA41ECAB49F003A67BC /* Blotted-Line_Commercial_to_fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E581ECAB49F003A67BC /* Blotted-Line_Commercial_to_fine.mp3 */; };
-		327F7EA51ECAB49F003A67BC /* Blotted-Line_Introduction_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E591ECAB49F003A67BC /* Blotted-Line_Introduction_v2.mp3 */; };
-		327F7EA61ECAB4A0003A67BC /* Blotted-Line_Process_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5A1ECAB49F003A67BC /* Blotted-Line_Process_v2.mp3 */; };
-		327F7EA71ECAB4A0003A67BC /* BoyBook_GettingSerious.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5B1ECAB49F003A67BC /* BoyBook_GettingSerious.mp3 */; };
-		327F7EA81ECAB4A0003A67BC /* BoyBook_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5C1ECAB49F003A67BC /* BoyBook_Introduction.mp3 */; };
-		327F7EA91ECAB4A0003A67BC /* BoyBook_UnidentifiedMale_VisualDescription.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5D1ECAB49F003A67BC /* BoyBook_UnidentifiedMale_VisualDescription.mp3 */; };
-		327F7EAA1ECAB4A0003A67BC /* Campbells_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5E1ECAB49F003A67BC /* Campbells_Visual.mp3 */; };
-		327F7EAB1ECAB4A0003A67BC /* Childhood_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E5F1ECAB49F003A67BC /* Childhood_Visual.mp3 */; };
-		327F7EAC1ECAB4A0003A67BC /* CocaCola_Tactile_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E601ECAB49F003A67BC /* CocaCola_Tactile_Visual.mp3 */; };
-		327F7EAD1ECAB4A0003A67BC /* CocaCola_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E611ECAB49F003A67BC /* CocaCola_Visual.mp3 */; };
-		327F7EAE1ECAB4A0003A67BC /* CollegeYears_Visual_ThreeFigures.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E621ECAB49F003A67BC /* CollegeYears_Visual_ThreeFigures.mp3 */; };
-		327F7EAF1ECAB4A0003A67BC /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E631ECAB49F003A67BC /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */; };
-		327F7EB01ECAB4A0003A67BC /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E641ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */; };
-		327F7EB11ECAB4A0003A67BC /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E651ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-Intro.mp3 */; };
-		327F7EB21ECAB4A0003A67BC /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E661ECAB49F003A67BC /* Marsden_Grace_Campbells_Introduction.mp3 */; };
-		327F7EB31ECAB4A0003A67BC /* Marsden_Grace_Campbells_Torn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E671ECAB49F003A67BC /* Marsden_Grace_Campbells_Torn.mp3 */; };
-		327F7EB41ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E681ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */; };
-		327F7EB51ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E691ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Introduction.mp3 */; };
-		327F7EB61ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6A1ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */; };
-		327F7EB71ECAB4A0003A67BC /* Pearlstein_HowDoesItFeelToBeFamous.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6B1ECAB49F003A67BC /* Pearlstein_HowDoesItFeelToBeFamous.mp3 */; };
-		327F7EB81ECAB4A0003A67BC /* Pearlstein_Moving_to_NYC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6C1ECAB49F003A67BC /* Pearlstein_Moving_to_NYC.mp3 */; };
-		327F7EB91ECAB4A0003A67BC /* PittsburghNewYork_VIsual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6D1ECAB49F003A67BC /* PittsburghNewYork_VIsual.mp3 */; };
-		327F7EBA1ECAB4A0003A67BC /* Singelis_Campbells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6E1ECAB49F003A67BC /* Singelis_Campbells.mp3 */; };
-		327F7EBB1ECAB4A0003A67BC /* Singelis_Walks_in_NewYork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E6F1ECAB49F003A67BC /* Singelis_Walks_in_NewYork.mp3 */; };
-		327F7EBC1ECAB4A0003A67BC /* TactileCocaCola_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E701ECAB49F003A67BC /* TactileCocaCola_Tactile.mp3 */; };
-		327F7EBD1ECAB4A0003A67BC /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E711ECAB49F003A67BC /* TactileFemaleFashionFigure_Tactile.mp3 */; };
-		327F7EBE1ECAB4A0003A67BC /* TactileFemaleFashionFigure_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E721ECAB49F003A67BC /* TactileFemaleFashionFigure_Visual.mp3 */; };
-		327F7EBF1ECAB4A0003A67BC /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E731ECAB49F003A67BC /* TactileRecliningMaleTorso_Tactile.mp3 */; };
-		327F7EC01ECAB4A0003A67BC /* TactileRecliningMaleTorso_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E741ECAB49F003A67BC /* TactileRecliningMaleTorso_Visual.mp3 */; };
-		327F7EC11ECAB4A0003A67BC /* VisualDescription_Shoe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E751ECAB49F003A67BC /* VisualDescription_Shoe.mp3 */; };
-		327F7EC21ECAB4A0003A67BC /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E761ECAB49F003A67BC /* Warhola_Donald_7th-Floor-Overview.mp3 */; };
-		327F7EC31ECAB4A0003A67BC /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E771ECAB49F003A67BC /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */; };
-		327F7EC41ECAB4A0003A67BC /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E781ECAB49F003A67BC /* Warhola_Donald_Childhood_Family_portrait.mp3 */; };
-		327F7EC51ECAB4A0003A67BC /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E791ECAB49F003A67BC /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */; };
-		327F7EC61ECAB4A0003A67BC /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7A1ECAB49F003A67BC /* Warhola_Donald_Childhood_Warhola_Family.mp3 */; };
-		327F7EC71ECAB4A0003A67BC /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7B1ECAB49F003A67BC /* Warhola_Donald_Julia_Mothers_Influence.mp3 */; };
-		327F7EC81ECAB4A0003A67BC /* Warhola_Donald_Julia_Prayer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7C1ECAB49F003A67BC /* Warhola_Donald_Julia_Prayer.mp3 */; };
-		327F7EC91ECAB4A0003A67BC /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7D1ECAB49F003A67BC /* Warhola_Donald_Julia_Signature_style.mp3 */; };
-		327F7ECA1ECAB4A0003A67BC /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7E1ECAB49F003A67BC /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */; };
-		327F7ECB1ECAB4A0003A67BC /* Warhola_Donald_NeighborhoodWatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E7F1ECAB49F003A67BC /* Warhola_Donald_NeighborhoodWatch.mp3 */; };
-		327F7ECC1ECAB4A0003A67BC /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E801ECAB49F003A67BC /* Warhola_Donald-Childhood_Introduction.mp3 */; };
-		327F7ECD1ECAB4A0003A67BC /* Warhola_Donald-Julia_FoldingScreen-v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E811ECAB49F003A67BC /* Warhola_Donald-Julia_FoldingScreen-v2.mp3 */; };
-		327F7ECE1ECAB4A0003A67BC /* Warhola_Donald-Julia_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E821ECAB49F003A67BC /* Warhola_Donald-Julia_Introduction.mp3 */; };
-		327F7ECF1ECAB4A0003A67BC /* Warhola_John_Movie_Projector-v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E831ECAB49F003A67BC /* Warhola_John_Movie_Projector-v2.mp3 */; };
-		327F7ED01ECAB4A0003A67BC /* Warhola_Julia_Folksong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 327F7E841ECAB49F003A67BC /* Warhola_Julia_Folksong.mp3 */; };
-		327F7EEA1ECAB4F0003A67BC /* andyAndJulia.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED21ECAB4F0003A67BC /* andyAndJulia.png */; };
-		327F7EEB1ECAB4F0003A67BC /* blottedLineStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED31ECAB4F0003A67BC /* blottedLineStill.png */; };
-		327F7EEC1ECAB4F0003A67BC /* boyBook.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED41ECAB4F0003A67BC /* boyBook.png */; };
-		327F7EED1ECAB4F0003A67BC /* campbells.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED51ECAB4F0003A67BC /* campbells.png */; };
-		327F7EEE1ECAB4F0003A67BC /* childhood.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED61ECAB4F0003A67BC /* childhood.png */; };
-		327F7EEF1ECAB4F0003A67BC /* cocaCola.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED71ECAB4F0003A67BC /* cocaCola.png */; };
-		327F7EF01ECAB4F0003A67BC /* college.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED81ECAB4F0003A67BC /* college.png */; };
-		327F7EF11ECAB4F0003A67BC /* commercialWork.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7ED91ECAB4F0003A67BC /* commercialWork.png */; };
-		327F7EF21ECAB4F0003A67BC /* earlyYears.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDA1ECAB4F0003A67BC /* earlyYears.png */; };
 		327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDB1ECAB4F0003A67BC /* highlights.png */; };
 		327F7EF41ECAB4F1003A67BC /* homesAndInteriors.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */; };
-		327F7EF51ECAB4F1003A67BC /* lobbySpace.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDD1ECAB4F0003A67BC /* lobbySpace.png */; };
 		327F7EF61ECAB4F1003A67BC /* museumBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDE1ECAB4F0003A67BC /* museumBackground.png */; };
-		327F7EF71ECAB4F1003A67BC /* newYork.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDF1ECAB4F0003A67BC /* newYork.png */; };
-		327F7EF81ECAB4F1003A67BC /* Nordens ljus_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE01ECAB4F0003A67BC /* Nordens ljus_11.jpg */; };
 		327F7EF91ECAB4F1003A67BC /* powerOfFashion.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE11ECAB4F0003A67BC /* powerOfFashion.png */; };
 		327F7EFA1ECAB4F1003A67BC /* sapmi.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE21ECAB4F0003A67BC /* sapmi.png */; };
 		327F7EFB1ECAB4F1003A67BC /* swedishFolkArt.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE31ECAB4F0003A67BC /* swedishFolkArt.png */; };
 		327F7EFC1ECAB4F1003A67BC /* tableSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE41ECAB4F0003A67BC /* tableSettings.png */; };
-		327F7EFD1ECAB4F1003A67BC /* Tactile-Coca-Cola.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE51ECAB4F0003A67BC /* Tactile-Coca-Cola.png */; };
-		327F7EFE1ECAB4F1003A67BC /* Tactile-Female_Fashion_Figure.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE61ECAB4F0003A67BC /* Tactile-Female_Fashion_Figure.png */; };
-		327F7EFF1ECAB4F1003A67BC /* Tactile-Reclining_Male_Torso.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE71ECAB4F0003A67BC /* Tactile-Reclining_Male_Torso.png */; };
 		327F7F001ECAB4F1003A67BC /* textileGallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE81ECAB4F0003A67BC /* textileGallery.png */; };
 		327F7F011ECAB4F1003A67BC /* traditions.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EE91ECAB4F0003A67BC /* traditions.png */; };
 		32CADBBD1D709B15006122E5 /* CMSAccessibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBB71D709B15006122E5 /* CMSAccessibilityManager.swift */; };
@@ -295,80 +228,13 @@
 		327F7E4E1ECAB49F003A67BC /* 0022 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 0022; path = audio/0022; sourceTree = "<group>"; };
 		327F7E4F1ECAB49F003A67BC /* 0023 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 0023; path = audio/0023; sourceTree = "<group>"; };
 		327F7E501ECAB49F003A67BC /* 0024 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 0024; path = audio/0024; sourceTree = "<group>"; };
-		327F7E511ECAB49F003A67BC /* AndyAndJulia_visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AndyAndJulia_visual.mp3; path = audio/AndyAndJulia_visual.mp3; sourceTree = "<group>"; };
-		327F7E521ECAB49F003A67BC /* Beck_Jessica_College-Years_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Beck_Jessica_College-Years_Introduction.mp3"; path = "audio/Beck_Jessica_College-Years_Introduction.mp3"; sourceTree = "<group>"; };
-		327F7E531ECAB49F003A67BC /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Beck_Jessica_New-York_Commercial-Fine-Art.mp3"; path = "audio/Beck_Jessica_New-York_Commercial-Fine-Art.mp3"; sourceTree = "<group>"; };
-		327F7E541ECAB49F003A67BC /* Beck_Jessica_New-York_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Beck_Jessica_New-York_Introduction.mp3"; path = "audio/Beck_Jessica_New-York_Introduction.mp3"; sourceTree = "<group>"; };
-		327F7E551ECAB49F003A67BC /* Beck_Jessica_New-York_Persona.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Beck_Jessica_New-York_Persona.mp3"; path = "audio/Beck_Jessica_New-York_Persona.mp3"; sourceTree = "<group>"; };
-		327F7E561ECAB49F003A67BC /* Beck_Jessica_New-York_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Beck_Jessica_New-York_Success.mp3"; path = "audio/Beck_Jessica_New-York_Success.mp3"; sourceTree = "<group>"; };
-		327F7E571ECAB49F003A67BC /* Blotted-Line_Collaboration_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Blotted-Line_Collaboration_v2.mp3"; path = "audio/Blotted-Line_Collaboration_v2.mp3"; sourceTree = "<group>"; };
-		327F7E581ECAB49F003A67BC /* Blotted-Line_Commercial_to_fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Blotted-Line_Commercial_to_fine.mp3"; path = "audio/Blotted-Line_Commercial_to_fine.mp3"; sourceTree = "<group>"; };
-		327F7E591ECAB49F003A67BC /* Blotted-Line_Introduction_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Blotted-Line_Introduction_v2.mp3"; path = "audio/Blotted-Line_Introduction_v2.mp3"; sourceTree = "<group>"; };
-		327F7E5A1ECAB49F003A67BC /* Blotted-Line_Process_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Blotted-Line_Process_v2.mp3"; path = "audio/Blotted-Line_Process_v2.mp3"; sourceTree = "<group>"; };
-		327F7E5B1ECAB49F003A67BC /* BoyBook_GettingSerious.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BoyBook_GettingSerious.mp3; path = audio/BoyBook_GettingSerious.mp3; sourceTree = "<group>"; };
-		327F7E5C1ECAB49F003A67BC /* BoyBook_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BoyBook_Introduction.mp3; path = audio/BoyBook_Introduction.mp3; sourceTree = "<group>"; };
-		327F7E5D1ECAB49F003A67BC /* BoyBook_UnidentifiedMale_VisualDescription.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BoyBook_UnidentifiedMale_VisualDescription.mp3; path = audio/BoyBook_UnidentifiedMale_VisualDescription.mp3; sourceTree = "<group>"; };
-		327F7E5E1ECAB49F003A67BC /* Campbells_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Campbells_Visual.mp3; path = audio/Campbells_Visual.mp3; sourceTree = "<group>"; };
-		327F7E5F1ECAB49F003A67BC /* Childhood_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Childhood_Visual.mp3; path = audio/Childhood_Visual.mp3; sourceTree = "<group>"; };
-		327F7E601ECAB49F003A67BC /* CocaCola_Tactile_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CocaCola_Tactile_Visual.mp3; path = audio/CocaCola_Tactile_Visual.mp3; sourceTree = "<group>"; };
-		327F7E611ECAB49F003A67BC /* CocaCola_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CocaCola_Visual.mp3; path = audio/CocaCola_Visual.mp3; sourceTree = "<group>"; };
-		327F7E621ECAB49F003A67BC /* CollegeYears_Visual_ThreeFigures.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CollegeYears_Visual_ThreeFigures.mp3; path = audio/CollegeYears_Visual_ThreeFigures.mp3; sourceTree = "<group>"; };
-		327F7E631ECAB49F003A67BC /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Diaz_Jose-Coke-Hand_Painted_Pop.mp3"; path = "audio/Diaz_Jose-Coke-Hand_Painted_Pop.mp3"; sourceTree = "<group>"; };
-		327F7E641ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Diaz_Jose-Commercial_Art-I_Miller.mp3"; path = "audio/Diaz_Jose-Commercial_Art-I_Miller.mp3"; sourceTree = "<group>"; };
-		327F7E651ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Diaz_Jose-Commercial_Art-Intro.mp3"; path = "audio/Diaz_Jose-Commercial_Art-Intro.mp3"; sourceTree = "<group>"; };
-		327F7E661ECAB49F003A67BC /* Marsden_Grace_Campbells_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Marsden_Grace_Campbells_Introduction.mp3; path = audio/Marsden_Grace_Campbells_Introduction.mp3; sourceTree = "<group>"; };
-		327F7E671ECAB49F003A67BC /* Marsden_Grace_Campbells_Torn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Marsden_Grace_Campbells_Torn.mp3; path = audio/Marsden_Grace_Campbells_Torn.mp3; sourceTree = "<group>"; };
-		327F7E681ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marsden_Grace_Coca-Cola_Expressionist_elements.mp3"; path = "audio/Marsden_Grace_Coca-Cola_Expressionist_elements.mp3"; sourceTree = "<group>"; };
-		327F7E691ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marsden_Grace_Coca-Cola_Introduction.mp3"; path = "audio/Marsden_Grace_Coca-Cola_Introduction.mp3"; sourceTree = "<group>"; };
-		327F7E6A1ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Marsden_Grace_Coca-Cola_Mass-Appeal.mp3"; path = "audio/Marsden_Grace_Coca-Cola_Mass-Appeal.mp3"; sourceTree = "<group>"; };
-		327F7E6B1ECAB49F003A67BC /* Pearlstein_HowDoesItFeelToBeFamous.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pearlstein_HowDoesItFeelToBeFamous.mp3; path = audio/Pearlstein_HowDoesItFeelToBeFamous.mp3; sourceTree = "<group>"; };
-		327F7E6C1ECAB49F003A67BC /* Pearlstein_Moving_to_NYC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pearlstein_Moving_to_NYC.mp3; path = audio/Pearlstein_Moving_to_NYC.mp3; sourceTree = "<group>"; };
-		327F7E6D1ECAB49F003A67BC /* PittsburghNewYork_VIsual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = PittsburghNewYork_VIsual.mp3; path = audio/PittsburghNewYork_VIsual.mp3; sourceTree = "<group>"; };
-		327F7E6E1ECAB49F003A67BC /* Singelis_Campbells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Singelis_Campbells.mp3; path = audio/Singelis_Campbells.mp3; sourceTree = "<group>"; };
-		327F7E6F1ECAB49F003A67BC /* Singelis_Walks_in_NewYork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Singelis_Walks_in_NewYork.mp3; path = audio/Singelis_Walks_in_NewYork.mp3; sourceTree = "<group>"; };
-		327F7E701ECAB49F003A67BC /* TactileCocaCola_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TactileCocaCola_Tactile.mp3; path = audio/TactileCocaCola_Tactile.mp3; sourceTree = "<group>"; };
-		327F7E711ECAB49F003A67BC /* TactileFemaleFashionFigure_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TactileFemaleFashionFigure_Tactile.mp3; path = audio/TactileFemaleFashionFigure_Tactile.mp3; sourceTree = "<group>"; };
-		327F7E721ECAB49F003A67BC /* TactileFemaleFashionFigure_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TactileFemaleFashionFigure_Visual.mp3; path = audio/TactileFemaleFashionFigure_Visual.mp3; sourceTree = "<group>"; };
-		327F7E731ECAB49F003A67BC /* TactileRecliningMaleTorso_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TactileRecliningMaleTorso_Tactile.mp3; path = audio/TactileRecliningMaleTorso_Tactile.mp3; sourceTree = "<group>"; };
-		327F7E741ECAB49F003A67BC /* TactileRecliningMaleTorso_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TactileRecliningMaleTorso_Visual.mp3; path = audio/TactileRecliningMaleTorso_Visual.mp3; sourceTree = "<group>"; };
-		327F7E751ECAB49F003A67BC /* VisualDescription_Shoe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VisualDescription_Shoe.mp3; path = audio/VisualDescription_Shoe.mp3; sourceTree = "<group>"; };
-		327F7E761ECAB49F003A67BC /* Warhola_Donald_7th-Floor-Overview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_Donald_7th-Floor-Overview.mp3"; path = "audio/Warhola_Donald_7th-Floor-Overview.mp3"; sourceTree = "<group>"; };
-		327F7E771ECAB49F003A67BC /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_Donald_Childhood_Carpatho-Rusyn.mp3"; path = "audio/Warhola_Donald_Childhood_Carpatho-Rusyn.mp3"; sourceTree = "<group>"; };
-		327F7E781ECAB49F003A67BC /* Warhola_Donald_Childhood_Family_portrait.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Childhood_Family_portrait.mp3; path = audio/Warhola_Donald_Childhood_Family_portrait.mp3; sourceTree = "<group>"; };
-		327F7E791ECAB49F003A67BC /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3; path = audio/Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3; sourceTree = "<group>"; };
-		327F7E7A1ECAB49F003A67BC /* Warhola_Donald_Childhood_Warhola_Family.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Childhood_Warhola_Family.mp3; path = audio/Warhola_Donald_Childhood_Warhola_Family.mp3; sourceTree = "<group>"; };
-		327F7E7B1ECAB49F003A67BC /* Warhola_Donald_Julia_Mothers_Influence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Julia_Mothers_Influence.mp3; path = audio/Warhola_Donald_Julia_Mothers_Influence.mp3; sourceTree = "<group>"; };
-		327F7E7C1ECAB49F003A67BC /* Warhola_Donald_Julia_Prayer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Julia_Prayer.mp3; path = audio/Warhola_Donald_Julia_Prayer.mp3; sourceTree = "<group>"; };
-		327F7E7D1ECAB49F003A67BC /* Warhola_Donald_Julia_Signature_style.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Julia_Signature_style.mp3; path = audio/Warhola_Donald_Julia_Signature_style.mp3; sourceTree = "<group>"; };
-		327F7E7E1ECAB49F003A67BC /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_Julia_The_Boss_Is_Going.mp3; path = audio/Warhola_Donald_Julia_The_Boss_Is_Going.mp3; sourceTree = "<group>"; };
-		327F7E7F1ECAB49F003A67BC /* Warhola_Donald_NeighborhoodWatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Donald_NeighborhoodWatch.mp3; path = audio/Warhola_Donald_NeighborhoodWatch.mp3; sourceTree = "<group>"; };
-		327F7E801ECAB49F003A67BC /* Warhola_Donald-Childhood_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_Donald-Childhood_Introduction.mp3"; path = "audio/Warhola_Donald-Childhood_Introduction.mp3"; sourceTree = "<group>"; };
-		327F7E811ECAB49F003A67BC /* Warhola_Donald-Julia_FoldingScreen-v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_Donald-Julia_FoldingScreen-v2.mp3"; path = "audio/Warhola_Donald-Julia_FoldingScreen-v2.mp3"; sourceTree = "<group>"; };
-		327F7E821ECAB49F003A67BC /* Warhola_Donald-Julia_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_Donald-Julia_Introduction.mp3"; path = "audio/Warhola_Donald-Julia_Introduction.mp3"; sourceTree = "<group>"; };
-		327F7E831ECAB49F003A67BC /* Warhola_John_Movie_Projector-v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Warhola_John_Movie_Projector-v2.mp3"; path = "audio/Warhola_John_Movie_Projector-v2.mp3"; sourceTree = "<group>"; };
-		327F7E841ECAB49F003A67BC /* Warhola_Julia_Folksong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Warhola_Julia_Folksong.mp3; path = audio/Warhola_Julia_Folksong.mp3; sourceTree = "<group>"; };
-		327F7ED21ECAB4F0003A67BC /* andyAndJulia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = andyAndJulia.png; path = images/andyAndJulia.png; sourceTree = "<group>"; };
-		327F7ED31ECAB4F0003A67BC /* blottedLineStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blottedLineStill.png; path = images/blottedLineStill.png; sourceTree = "<group>"; };
-		327F7ED41ECAB4F0003A67BC /* boyBook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boyBook.png; path = images/boyBook.png; sourceTree = "<group>"; };
-		327F7ED51ECAB4F0003A67BC /* campbells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = campbells.png; path = images/campbells.png; sourceTree = "<group>"; };
-		327F7ED61ECAB4F0003A67BC /* childhood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = childhood.png; path = images/childhood.png; sourceTree = "<group>"; };
-		327F7ED71ECAB4F0003A67BC /* cocaCola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cocaCola.png; path = images/cocaCola.png; sourceTree = "<group>"; };
-		327F7ED81ECAB4F0003A67BC /* college.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = college.png; path = images/college.png; sourceTree = "<group>"; };
-		327F7ED91ECAB4F0003A67BC /* commercialWork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = commercialWork.png; path = images/commercialWork.png; sourceTree = "<group>"; };
-		327F7EDA1ECAB4F0003A67BC /* earlyYears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = earlyYears.png; path = images/earlyYears.png; sourceTree = "<group>"; };
 		327F7EDB1ECAB4F0003A67BC /* highlights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlights.png; path = images/highlights.png; sourceTree = "<group>"; };
 		327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homesAndInteriors.png; path = images/homesAndInteriors.png; sourceTree = "<group>"; };
-		327F7EDD1ECAB4F0003A67BC /* lobbySpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lobbySpace.png; path = images/lobbySpace.png; sourceTree = "<group>"; };
 		327F7EDE1ECAB4F0003A67BC /* museumBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = museumBackground.png; path = images/museumBackground.png; sourceTree = "<group>"; };
-		327F7EDF1ECAB4F0003A67BC /* newYork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newYork.png; path = images/newYork.png; sourceTree = "<group>"; };
-		327F7EE01ECAB4F0003A67BC /* Nordens ljus_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Nordens ljus_11.jpg"; path = "images/Nordens ljus_11.jpg"; sourceTree = "<group>"; };
 		327F7EE11ECAB4F0003A67BC /* powerOfFashion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = powerOfFashion.png; path = images/powerOfFashion.png; sourceTree = "<group>"; };
 		327F7EE21ECAB4F0003A67BC /* sapmi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sapmi.png; path = images/sapmi.png; sourceTree = "<group>"; };
 		327F7EE31ECAB4F0003A67BC /* swedishFolkArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swedishFolkArt.png; path = images/swedishFolkArt.png; sourceTree = "<group>"; };
 		327F7EE41ECAB4F0003A67BC /* tableSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableSettings.png; path = images/tableSettings.png; sourceTree = "<group>"; };
-		327F7EE51ECAB4F0003A67BC /* Tactile-Coca-Cola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tactile-Coca-Cola.png"; path = "images/Tactile-Coca-Cola.png"; sourceTree = "<group>"; };
-		327F7EE61ECAB4F0003A67BC /* Tactile-Female_Fashion_Figure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tactile-Female_Fashion_Figure.png"; path = "images/Tactile-Female_Fashion_Figure.png"; sourceTree = "<group>"; };
-		327F7EE71ECAB4F0003A67BC /* Tactile-Reclining_Male_Torso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tactile-Reclining_Male_Torso.png"; path = "images/Tactile-Reclining_Male_Torso.png"; sourceTree = "<group>"; };
 		327F7EE81ECAB4F0003A67BC /* textileGallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textileGallery.png; path = images/textileGallery.png; sourceTree = "<group>"; };
 		327F7EE91ECAB4F0003A67BC /* traditions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = traditions.png; path = images/traditions.png; sourceTree = "<group>"; };
 		32CADBB71D709B15006122E5 /* CMSAccessibilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMSAccessibilityManager.swift; path = code/CMSAccessibilityManager.swift; sourceTree = "<group>"; };
@@ -559,58 +425,6 @@
 				327F7E4E1ECAB49F003A67BC /* 0022 */,
 				327F7E4F1ECAB49F003A67BC /* 0023 */,
 				327F7E501ECAB49F003A67BC /* 0024 */,
-				327F7E511ECAB49F003A67BC /* AndyAndJulia_visual.mp3 */,
-				327F7E521ECAB49F003A67BC /* Beck_Jessica_College-Years_Introduction.mp3 */,
-				327F7E531ECAB49F003A67BC /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */,
-				327F7E541ECAB49F003A67BC /* Beck_Jessica_New-York_Introduction.mp3 */,
-				327F7E551ECAB49F003A67BC /* Beck_Jessica_New-York_Persona.mp3 */,
-				327F7E561ECAB49F003A67BC /* Beck_Jessica_New-York_Success.mp3 */,
-				327F7E571ECAB49F003A67BC /* Blotted-Line_Collaboration_v2.mp3 */,
-				327F7E581ECAB49F003A67BC /* Blotted-Line_Commercial_to_fine.mp3 */,
-				327F7E591ECAB49F003A67BC /* Blotted-Line_Introduction_v2.mp3 */,
-				327F7E5A1ECAB49F003A67BC /* Blotted-Line_Process_v2.mp3 */,
-				327F7E5B1ECAB49F003A67BC /* BoyBook_GettingSerious.mp3 */,
-				327F7E5C1ECAB49F003A67BC /* BoyBook_Introduction.mp3 */,
-				327F7E5D1ECAB49F003A67BC /* BoyBook_UnidentifiedMale_VisualDescription.mp3 */,
-				327F7E5E1ECAB49F003A67BC /* Campbells_Visual.mp3 */,
-				327F7E5F1ECAB49F003A67BC /* Childhood_Visual.mp3 */,
-				327F7E601ECAB49F003A67BC /* CocaCola_Tactile_Visual.mp3 */,
-				327F7E611ECAB49F003A67BC /* CocaCola_Visual.mp3 */,
-				327F7E621ECAB49F003A67BC /* CollegeYears_Visual_ThreeFigures.mp3 */,
-				327F7E631ECAB49F003A67BC /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */,
-				327F7E641ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */,
-				327F7E651ECAB49F003A67BC /* Diaz_Jose-Commercial_Art-Intro.mp3 */,
-				327F7E661ECAB49F003A67BC /* Marsden_Grace_Campbells_Introduction.mp3 */,
-				327F7E671ECAB49F003A67BC /* Marsden_Grace_Campbells_Torn.mp3 */,
-				327F7E681ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */,
-				327F7E691ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Introduction.mp3 */,
-				327F7E6A1ECAB49F003A67BC /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */,
-				327F7E6B1ECAB49F003A67BC /* Pearlstein_HowDoesItFeelToBeFamous.mp3 */,
-				327F7E6C1ECAB49F003A67BC /* Pearlstein_Moving_to_NYC.mp3 */,
-				327F7E6D1ECAB49F003A67BC /* PittsburghNewYork_VIsual.mp3 */,
-				327F7E6E1ECAB49F003A67BC /* Singelis_Campbells.mp3 */,
-				327F7E6F1ECAB49F003A67BC /* Singelis_Walks_in_NewYork.mp3 */,
-				327F7E701ECAB49F003A67BC /* TactileCocaCola_Tactile.mp3 */,
-				327F7E711ECAB49F003A67BC /* TactileFemaleFashionFigure_Tactile.mp3 */,
-				327F7E721ECAB49F003A67BC /* TactileFemaleFashionFigure_Visual.mp3 */,
-				327F7E731ECAB49F003A67BC /* TactileRecliningMaleTorso_Tactile.mp3 */,
-				327F7E741ECAB49F003A67BC /* TactileRecliningMaleTorso_Visual.mp3 */,
-				327F7E751ECAB49F003A67BC /* VisualDescription_Shoe.mp3 */,
-				327F7E761ECAB49F003A67BC /* Warhola_Donald_7th-Floor-Overview.mp3 */,
-				327F7E771ECAB49F003A67BC /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */,
-				327F7E781ECAB49F003A67BC /* Warhola_Donald_Childhood_Family_portrait.mp3 */,
-				327F7E791ECAB49F003A67BC /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */,
-				327F7E7A1ECAB49F003A67BC /* Warhola_Donald_Childhood_Warhola_Family.mp3 */,
-				327F7E7B1ECAB49F003A67BC /* Warhola_Donald_Julia_Mothers_Influence.mp3 */,
-				327F7E7C1ECAB49F003A67BC /* Warhola_Donald_Julia_Prayer.mp3 */,
-				327F7E7D1ECAB49F003A67BC /* Warhola_Donald_Julia_Signature_style.mp3 */,
-				327F7E7E1ECAB49F003A67BC /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */,
-				327F7E7F1ECAB49F003A67BC /* Warhola_Donald_NeighborhoodWatch.mp3 */,
-				327F7E801ECAB49F003A67BC /* Warhola_Donald-Childhood_Introduction.mp3 */,
-				327F7E811ECAB49F003A67BC /* Warhola_Donald-Julia_FoldingScreen-v2.mp3 */,
-				327F7E821ECAB49F003A67BC /* Warhola_Donald-Julia_Introduction.mp3 */,
-				327F7E831ECAB49F003A67BC /* Warhola_John_Movie_Projector-v2.mp3 */,
-				327F7E841ECAB49F003A67BC /* Warhola_Julia_Folksong.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -618,28 +432,13 @@
 		327F7F021ECAB502003A67BC /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				327F7ED21ECAB4F0003A67BC /* andyAndJulia.png */,
-				327F7ED31ECAB4F0003A67BC /* blottedLineStill.png */,
-				327F7ED41ECAB4F0003A67BC /* boyBook.png */,
-				327F7ED51ECAB4F0003A67BC /* campbells.png */,
-				327F7ED61ECAB4F0003A67BC /* childhood.png */,
-				327F7ED71ECAB4F0003A67BC /* cocaCola.png */,
-				327F7ED81ECAB4F0003A67BC /* college.png */,
-				327F7ED91ECAB4F0003A67BC /* commercialWork.png */,
-				327F7EDA1ECAB4F0003A67BC /* earlyYears.png */,
 				327F7EDB1ECAB4F0003A67BC /* highlights.png */,
 				327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */,
-				327F7EDD1ECAB4F0003A67BC /* lobbySpace.png */,
 				327F7EDE1ECAB4F0003A67BC /* museumBackground.png */,
-				327F7EDF1ECAB4F0003A67BC /* newYork.png */,
-				327F7EE01ECAB4F0003A67BC /* Nordens ljus_11.jpg */,
 				327F7EE11ECAB4F0003A67BC /* powerOfFashion.png */,
 				327F7EE21ECAB4F0003A67BC /* sapmi.png */,
 				327F7EE31ECAB4F0003A67BC /* swedishFolkArt.png */,
 				327F7EE41ECAB4F0003A67BC /* tableSettings.png */,
-				327F7EE51ECAB4F0003A67BC /* Tactile-Coca-Cola.png */,
-				327F7EE61ECAB4F0003A67BC /* Tactile-Female_Fashion_Figure.png */,
-				327F7EE71ECAB4F0003A67BC /* Tactile-Reclining_Male_Torso.png */,
 				327F7EE81ECAB4F0003A67BC /* textileGallery.png */,
 				327F7EE91ECAB4F0003A67BC /* traditions.png */,
 			);
@@ -1019,108 +818,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327F7EC81ECAB4A0003A67BC /* Warhola_Donald_Julia_Prayer.mp3 in Resources */,
-				327F7EFD1ECAB4F1003A67BC /* Tactile-Coca-Cola.png in Resources */,
 				327F7E9A1ECAB49F003A67BC /* 0022 in Resources */,
-				327F7EAD1ECAB4A0003A67BC /* CocaCola_Visual.mp3 in Resources */,
-				327F7EC01ECAB4A0003A67BC /* TactileRecliningMaleTorso_Visual.mp3 in Resources */,
-				327F7EA61ECAB4A0003A67BC /* Blotted-Line_Process_v2.mp3 in Resources */,
 				327F7E931ECAB49F003A67BC /* 0015 in Resources */,
-				327F7EBB1ECAB4A0003A67BC /* Singelis_Walks_in_NewYork.mp3 in Resources */,
-				327F7EBF1ECAB4A0003A67BC /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */,
-				327F7EEF1ECAB4F0003A67BC /* cocaCola.png in Resources */,
-				327F7EB21ECAB4A0003A67BC /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */,
 				3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */,
-				327F7E9E1ECAB49F003A67BC /* Beck_Jessica_College-Years_Introduction.mp3 in Resources */,
 				327F7E8E1ECAB49F003A67BC /* 0010 in Resources */,
-				327F7EA51ECAB49F003A67BC /* Blotted-Line_Introduction_v2.mp3 in Resources */,
 				327F7F001ECAB4F1003A67BC /* textileGallery.png in Resources */,
 				327F7E9B1ECAB49F003A67BC /* 0023 in Resources */,
 				327F7E871ECAB49F003A67BC /* 0003 in Resources */,
-				327F7EB01ECAB4A0003A67BC /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */,
-				327F7EF51ECAB4F1003A67BC /* lobbySpace.png in Resources */,
-				327F7EC61ECAB4A0003A67BC /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */,
 				327F7E8D1ECAB49F003A67BC /* 0009 in Resources */,
-				327F7EA71ECAB4A0003A67BC /* BoyBook_GettingSerious.mp3 in Resources */,
-				327F7EF71ECAB4F1003A67BC /* newYork.png in Resources */,
-				327F7EB51ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */,
 				327F7E961ECAB49F003A67BC /* 0018 in Resources */,
-				327F7EF11ECAB4F0003A67BC /* commercialWork.png in Resources */,
 				327F7E9C1ECAB49F003A67BC /* 0024 in Resources */,
-				327F7EB31ECAB4A0003A67BC /* Marsden_Grace_Campbells_Torn.mp3 in Resources */,
-				327F7EF81ECAB4F1003A67BC /* Nordens ljus_11.jpg in Resources */,
-				327F7EC91ECAB4A0003A67BC /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */,
 				327F7E8B1ECAB49F003A67BC /* 0007 in Resources */,
-				327F7EBE1ECAB4A0003A67BC /* TactileFemaleFashionFigure_Visual.mp3 in Resources */,
 				327F7E901ECAB49F003A67BC /* 0012 in Resources */,
-				327F7EB41ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */,
-				327F7EEE1ECAB4F0003A67BC /* childhood.png in Resources */,
-				327F7EA41ECAB49F003A67BC /* Blotted-Line_Commercial_to_fine.mp3 in Resources */,
 				327F7EFC1ECAB4F1003A67BC /* tableSettings.png in Resources */,
-				327F7ECE1ECAB4A0003A67BC /* Warhola_Donald-Julia_Introduction.mp3 in Resources */,
-				327F7EFE1ECAB4F1003A67BC /* Tactile-Female_Fashion_Figure.png in Resources */,
-				327F7EAA1ECAB4A0003A67BC /* Campbells_Visual.mp3 in Resources */,
-				327F7EC71ECAB4A0003A67BC /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */,
 				327F7E941ECAB49F003A67BC /* 0016 in Resources */,
 				327F7E8A1ECAB49F003A67BC /* 0006 in Resources */,
 				327F7E881ECAB49F003A67BC /* 0004 in Resources */,
-				327F7EAB1ECAB4A0003A67BC /* Childhood_Visual.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				327F7EEB1ECAB4F0003A67BC /* blottedLineStill.png in Resources */,
-				327F7EEA1ECAB4F0003A67BC /* andyAndJulia.png in Resources */,
-				327F7EA91ECAB4A0003A67BC /* BoyBook_UnidentifiedMale_VisualDescription.mp3 in Resources */,
-				327F7EC41ECAB4A0003A67BC /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */,
 				327F7EFB1ECAB4F1003A67BC /* swedishFolkArt.png in Resources */,
-				327F7ECC1ECAB4A0003A67BC /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */,
-				327F7EAE1ECAB4A0003A67BC /* CollegeYears_Visual_ThreeFigures.mp3 in Resources */,
-				327F7EB71ECAB4A0003A67BC /* Pearlstein_HowDoesItFeelToBeFamous.mp3 in Resources */,
 				327F7E921ECAB49F003A67BC /* 0014 in Resources */,
 				327F7E8F1ECAB49F003A67BC /* 0011 in Resources */,
-				327F7EA31ECAB49F003A67BC /* Blotted-Line_Collaboration_v2.mp3 in Resources */,
-				327F7EB11ECAB4A0003A67BC /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */,
-				327F7EC51ECAB4A0003A67BC /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */,
-				327F7EC21ECAB4A0003A67BC /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */,
-				327F7E9F1ECAB49F003A67BC /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */,
 				327F7E911ECAB49F003A67BC /* 0013 in Resources */,
 				327F7EF61ECAB4F1003A67BC /* museumBackground.png in Resources */,
-				327F7EA01ECAB49F003A67BC /* Beck_Jessica_New-York_Introduction.mp3 in Resources */,
-				327F7EB91ECAB4A0003A67BC /* PittsburghNewYork_VIsual.mp3 in Resources */,
-				327F7ED01ECAB4A0003A67BC /* Warhola_Julia_Folksong.mp3 in Resources */,
-				327F7EAF1ECAB4A0003A67BC /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */,
-				327F7EBC1ECAB4A0003A67BC /* TactileCocaCola_Tactile.mp3 in Resources */,
-				327F7EA11ECAB49F003A67BC /* Beck_Jessica_New-York_Persona.mp3 in Resources */,
 				327F7E951ECAB49F003A67BC /* 0017 in Resources */,
 				327F7E991ECAB49F003A67BC /* 0021 in Resources */,
 				327F7EF91ECAB4F1003A67BC /* powerOfFashion.png in Resources */,
-				327F7EA21ECAB49F003A67BC /* Beck_Jessica_New-York_Success.mp3 in Resources */,
 				327F7F011ECAB4F1003A67BC /* traditions.png in Resources */,
-				327F7ECB1ECAB4A0003A67BC /* Warhola_Donald_NeighborhoodWatch.mp3 in Resources */,
-				327F7EF21ECAB4F0003A67BC /* earlyYears.png in Resources */,
 				327F7E8C1ECAB49F003A67BC /* 0008 in Resources */,
-				327F7E9D1ECAB49F003A67BC /* AndyAndJulia_visual.mp3 in Resources */,
-				327F7ECD1ECAB4A0003A67BC /* Warhola_Donald-Julia_FoldingScreen-v2.mp3 in Resources */,
-				327F7EB81ECAB4A0003A67BC /* Pearlstein_Moving_to_NYC.mp3 in Resources */,
 				327F7E861ECAB49F003A67BC /* 0002 in Resources */,
 				327F7E981ECAB49F003A67BC /* 0020 in Resources */,
-				327F7EC31ECAB4A0003A67BC /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */,
-				327F7EA81ECAB4A0003A67BC /* BoyBook_Introduction.mp3 in Resources */,
-				327F7EC11ECAB4A0003A67BC /* VisualDescription_Shoe.mp3 in Resources */,
 				327F7EFA1ECAB4F1003A67BC /* sapmi.png in Resources */,
 				327F7E851ECAB49F003A67BC /* 0001 in Resources */,
-				327F7EEC1ECAB4F0003A67BC /* boyBook.png in Resources */,
-				327F7EB61ECAB4A0003A67BC /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */,
-				327F7EBA1ECAB4A0003A67BC /* Singelis_Campbells.mp3 in Resources */,
 				327F7E971ECAB49F003A67BC /* 0019 in Resources */,
-				327F7EBD1ECAB4A0003A67BC /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */,
-				327F7EED1ECAB4F0003A67BC /* campbells.png in Resources */,
-				327F7EAC1ECAB4A0003A67BC /* CocaCola_Tactile_Visual.mp3 in Resources */,
 				327F7E891ECAB49F003A67BC /* 0005 in Resources */,
-				327F7EFF1ECAB4F1003A67BC /* Tactile-Reclining_Male_Torso.png in Resources */,
 				327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */,
 				327F7EF41ECAB4F1003A67BC /* homesAndInteriors.png in Resources */,
-				327F7ECA1ECAB4A0003A67BC /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */,
-				327F7ECF1ECAB4A0003A67BC /* Warhola_John_Movie_Projector-v2.mp3 in Resources */,
-				327F7EF01ECAB4F0003A67BC /* college.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
