@@ -7,12 +7,13 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { TURQUOISE } from '../../styles';
+import { OFF_BLACK } from '../../styles';
 
 const styles = StyleSheet.create({
   transcriptButton: {
-    width: 30,
-    height: 30,
+    width: 40,
+    resizeMode: 'contain',
+    tintColor: OFF_BLACK,
   },
 });
 
@@ -46,9 +47,13 @@ const TranscriptButton = (props) => {
         style={[
           styles.transcriptButton,
           props.styles,
-          props.showTranscript ? { tintColor: TURQUOISE } : {},
+          {
+            transform: [
+              { rotate: props.showTranscript ? '0deg' : '180deg' },
+            ],
+          },
         ]}
-        source={require('../../assets//Transcript.png')}
+        source={require('../../assets/DisclosureIndicatorCollapsibleOpen.png')}
       />
     </TouchableOpacity>
   );

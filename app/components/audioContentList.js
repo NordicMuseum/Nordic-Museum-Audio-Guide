@@ -24,13 +24,9 @@ import AudioContentItem from './audioContentItem';
 
 import { globalStyles } from '../styles';
 
-const SCROLLMARGINS = 15;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: SCROLLMARGINS,
-    marginTop: 15,
   },
   betaMessage: {
     textAlign: 'center',
@@ -72,7 +68,7 @@ const AudioContentList = (props) => {
             screenReader={props.screenReader}
             index={index}
             listLength={props.audioContent.length}
-            contentWidth={width - SCROLLMARGINS * 2}
+            contentWidth={width}
             locale={props.locale}
             actions={{
               toggleAudioTranscript: () => {

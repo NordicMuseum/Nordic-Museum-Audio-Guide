@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 3,
     padding: 5,
   },
   controlButton: {
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     borderRightColor: '#ddd',
     flex: 1,
     padding: 5,
-    paddingVertical: 0,
+    paddingVertical: 2,
   },
   lastControlButton: {
     borderWidth: 0,
     flex: 1,
     padding: 5,
-    paddingVertical: 0,
+    paddingVertical: 2,
   },
   buttonLabel: {
     textAlign: 'center',

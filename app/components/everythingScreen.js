@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
   segementedController: {
     paddingTop: 25,
     paddingBottom: 25,
-    height: 40,
+    height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 50,
-    marginRight: 50,
+    marginLeft: 60,
+    marginRight: 60,
   },
 });
 

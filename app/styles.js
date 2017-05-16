@@ -3,7 +3,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-export const TEAL = '#097D8D';
+export const TEAL = '#801340';
 export const TURQUOISE = '#EA3D4E';
 export const LIGHT_BLUE = '#EDD6DD';
 export const GREEN = '#7DCC77';

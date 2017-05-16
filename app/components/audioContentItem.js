@@ -19,29 +19,23 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, TURQUOISE } from '../styles';
+import { globalStyles } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    paddingBottom: 2,
+    padding: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   row: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
-  },
-  rowOne: {
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    paddingTop: 10,
-    paddingBottom: 5,
-  },
-  rowTwo: {
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    backgroundColor: '#F0F0F0',
-    height: 5,
+    alignItems: 'center',
   },
   progressBar: {
     overflow: 'hidden',
@@ -114,7 +108,6 @@ class AudioContentItem extends Component {
     const {
       audioContent,
       screenReader,
-      contentWidth,
       index,
       listLength,
     } = this.props;
@@ -123,11 +116,6 @@ class AudioContentItem extends Component {
       toggleAudioTranscript,
       audioAction,
     } = this.props.actions;
-
-    const audioPercentage = getPercentage(
-      audioContent.lastPlayedTime,
-      audioContent.duration
-    );
 
     const active = audioContent.active;
 
@@ -138,28 +126,15 @@ class AudioContentItem extends Component {
       collapsibleDuration = 500;
     }
 
-    let audioDurationFormatted;
-
-    if (audioContent.duration < 10) {
-      audioDurationFormatted = `0:0${audioContent.duration}`;
-    } else if (audioContent.duration < 60) {
-      audioDurationFormatted = `0:${audioContent.duration}`;
-    } else {
-      const minutes = Math.floor((audioContent.duration / 60) % 60);
-      const seconds = audioContent.duration - (60 * minutes);
-
-      if (seconds < 10) {
-        audioDurationFormatted = `${minutes}:0${seconds}`;
-      } else {
-        audioDurationFormatted = `${minutes}:${seconds}`;
-      }
-    }
-
     const indent = audioContent.depth * 30;
-    const transcriptContainerWidth = 35;
 
     return (
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          active ? { backgroundColor: '#EDD6DD' } : {},
+        ]}
+      >
         <View style={styles.row}>
           <View
             style={[
@@ -167,7 +142,7 @@ class AudioContentItem extends Component {
               { paddingLeft: indent },
             ]}
           >
-            <View style={[styles.row, styles.rowOne]}>
+            <View style={styles.row}>
               <TouchableOpacity
                 style={{ flex: 2 }}
                 activeOpacity={0.6}
@@ -181,38 +156,21 @@ class AudioContentItem extends Component {
                   `${listLength}. ${audioContent.duration} seconds`
                 }
               >
-                <View>
+
+                <View style={{ flexDirection: 'row' }}>
+                  <Text style={[globalStyles.body, { marginRight: 10 }]}>
+                    {audioContent.title}
+                  </Text>
                   <Text
-                    style={[
-                      globalStyles.disclosure,
-                      active ? { fontWeight: '500' } : {},
-                    ]}
+                    style={globalStyles.body}
                   >
                     {parseDisplayText(I18n.t(audioContent.title))}
-                    <Text style={styles.seconds}>
-                      {`  ${audioDurationFormatted}`}
-                    </Text>
                   </Text>
                 </View>
               </TouchableOpacity>
             </View>
-            <View style={[styles.row, styles.rowTwo]}>
-              <View
-                style={[
-                  active ? styles.progressBarActive : styles.progressBar,
-                  { backgroundColor: TURQUOISE, opacity: active ? 1 : 0.3 },
-                  progressWidthStyle(
-                    (contentWidth - indent - transcriptContainerWidth),
-                    audioPercentage
-                   ),
-                ]}
-              />
-            </View>
           </View>
           <TranscriptButton
-            styles={{
-              width: transcriptContainerWidth,
-            }}
             accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
             onPress={() => { toggleAudioTranscript(); }}
             showTranscript={audioContent.showTranscript}
