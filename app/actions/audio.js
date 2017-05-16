@@ -161,7 +161,6 @@ async function fireAudioAction(
     );
   } catch (e) {
     clearTimer();
-    console.log(e);
     dispatch(
       loadAudioFailure(e)
     );

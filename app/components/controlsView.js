@@ -132,7 +132,7 @@ class ControlsView extends Component {
               {I18n.t(stopTitle)}
             </Text>
             <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
-              &nbsp; {parseDisplayText(I18n.t(audioTitle))}
+              &nbsp; {parseDisplayText(I18n.t(title))}
             </Text>
           </View>
         </TouchableOpacity>

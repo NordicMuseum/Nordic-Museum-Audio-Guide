@@ -4,6 +4,7 @@ import {
   UPDATE_AUDIO_CURRENT_TIME,
   TOGGLE_AUDIO_TRANSCRIPT,
   LOAD_AUDIO_FAILURE,
+  PLAYER_STATUS_UNLOADED,
 } from '../actions/audio';
 
 const initialState = [
@@ -59,6 +60,18 @@ export function audioContent(state = initialState, action) {
       const { content, activeAudio, replaceAudioContent } = action;
 
       return assignAudioContent(state, content, activeAudio.uuid, replaceAudioContent);
+    }
+
+    case PLAYER_STATUS_UNLOADED: {
+      return state
+        .map((content) => {
+          return Object.assign({},
+            content,
+            {
+              active: false,
+            }
+          );
+        });
     }
 
     case UPDATE_AUDIO_CURRENT_TIME: {

@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   View,
@@ -44,7 +46,7 @@ const ClosePlayerView = (props) => {
           onPress={props.navToTourStop}
           accessible={true}
           accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`You've reached the end of ${props.stopTitle}. Double tap to return to the chapter listing for this story.`}
+          accessibilityLabel={`You've reached the end of ${I18n.t(props.stopTitle)}. Double tap to return to the chapter listing for this story.`}
         >
           <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
             You've reached the end of
@@ -58,7 +60,7 @@ const ClosePlayerView = (props) => {
               }]
             }
           >
-            {props.stopTitle}
+            {I18n.t(props.stopTitle)}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity

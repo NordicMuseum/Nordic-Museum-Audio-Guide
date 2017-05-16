@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 import ProgressBar from './progressBar';
-import SwitchButton from './buttons/switchButton';
 
 import { globalStyles } from '../styles';
 
@@ -22,18 +21,16 @@ const styles = StyleSheet.create({
   },
   autoplayRow: {
     justifyContent: 'space-between',
-    marginTop: 5,
-    marginBottom: 3,
     height: 16,
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
   autoplayText: {
     marginLeft: 5,
-    marginRight: 5,
-  },
-  autoplaySwitch: {
-    marginRight: 5,
-    marginLeft: 5,
-    flexDirection: 'row',
+    backgroundColor: 'transparent',
   },
 });
 
@@ -96,19 +93,6 @@ const AutoplayProgressView = (props) => {
           <Text style={[styles.autoplayText, globalStyles.progressLabel]}>
             {countDownText}
           </Text>
-        </View>
-        <View style={styles.autoplaySwitch}>
-          <Text style={[styles.autoplayText, globalStyles.progressLabel]}>
-            Autoplay
-          </Text>
-          <SwitchButton
-            width={28}
-            height={16}
-            onPress={() => {
-              toggleAutoplay(autoplayOn, timerActive);
-            }}
-            value={autoplayOn}
-          />
         </View>
       </View>
     </View>
