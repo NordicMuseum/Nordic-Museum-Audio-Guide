@@ -49,7 +49,6 @@ const NavigationBar = (props) => {
       style={[props.barStyle, styles.bar]}
     >
       {props.backButtonPress &&
-       props.backButtonLabel &&
         <TouchableOpacity
           onPress={props.backButtonPress}
           style={styles.backButton}
@@ -79,7 +78,7 @@ NavigationBar.propTypes = {
     Text.propTypes.style,
     PropTypes.object,
   ]).isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   buttonColor: PropTypes.string,
   backButtonLabel: PropTypes.string,
   backButtonPress: PropTypes.func,

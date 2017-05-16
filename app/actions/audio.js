@@ -134,7 +134,7 @@ async function fireAudioAction(
   setAudioManagerEventListeners(dispatch, autoplayOn, nextUUID !== null);
   try {
     let url = activeAudio.audioURL;
-    if (activeAudio.audioURL.length === 4) {
+    if (activeAudio.audioURL.length === 3) {
       url = (activeAudio.audioURL).concat('/', I18n.locale);
     }
     const [, duration] = await AudioManager.loadLocalAudio(
@@ -161,6 +161,7 @@ async function fireAudioAction(
     );
   } catch (e) {
     clearTimer();
+    console.log(e);
     dispatch(
       loadAudioFailure(e)
     );

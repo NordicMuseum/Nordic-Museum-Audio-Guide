@@ -26,16 +26,14 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, OFF_BLACK, TEAL } from '../styles.js';
-
-const HEADER_IMAGE_MAX_DIMENSION = 100;
+import { globalStyles, OFF_BLACK, TEAL, TURQUOISE } from '../styles.js';
 
 const width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 65,
+    marginTop: 167,
   },
   header: {
     flexDirection: 'row',
@@ -43,14 +41,101 @@ const styles = StyleSheet.create({
     width,
   },
   headerImage: {
-    margin: 12.5,
-    height: 10,
-    width: 100,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 167,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerTitle: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    top: 20,
+    left: 0,
+    right: 0,
+    height: 147,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerTitleText: {
+    backgroundColor: 'transparent',
+    color: '#FFFFFF',
+    fontWeight: '600',
+    fontSize: 22,
+    textAlign: 'center',
+  },
+  playAllButtonContainer: {
+    position: 'absolute',
+    flex: 1,
+    top: 147,
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 5,
+  },
+  playAllButton: {
+    backgroundColor: TURQUOISE,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    paddingHorizontal: 25,
+    borderRadius: 3,
+  },
+  playAllButtonIcon: {
+    tintColor: '#ffffff',
+    height: 16,
+    width: 16,
+    marginRight: 10,
     resizeMode: 'contain',
   },
-  headerText: {
-    marginRight: 12.5,
+  playAllButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  scrollableContent: {
+    paddingTop: 10,
+  },
+  audioContentInfo: {
+    paddingTop: 20,
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  audioContentQuickInfo: {
+    flexDirection: 'row',
+  },
+  audioContentFloor: {
+    flexDirection: 'row',
+    marginRight: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  floorIcon: {
+    marginRight: 10,
+    tintColor: OFF_BLACK,
+  },
+  floorText: {
+    fontSize: 16,
+    color: OFF_BLACK,
+  },
+  audioContentDuration: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  durationIcon: {
+    marginRight: 10,
+    tintColor: OFF_BLACK,
+  },
+  durationText: {
+    fontSize: 16,
+    color: OFF_BLACK,
   },
   imageTitle: {
     fontStyle: 'italic',
@@ -124,24 +209,9 @@ class TourStopScreen extends Component {
       togglePausePlay,
     } = this.props.actions;
 
-    const {
-      imageWidth,
-      imageHeight,
-    } = this.props.tourStop;
-
     let containerMargin = BOTTOMBARHEIGHT;
     if (this.props.playerOpen) {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    }
-
-    let headerImageWidth;
-    let headerImageHeight;
-    if (imageHeight > imageWidth) {
-      headerImageHeight = HEADER_IMAGE_MAX_DIMENSION;
-      headerImageWidth = (imageWidth / imageHeight) * HEADER_IMAGE_MAX_DIMENSION;
-    } else {
-      headerImageWidth = HEADER_IMAGE_MAX_DIMENSION;
-      headerImageHeight = (imageHeight / imageWidth) * HEADER_IMAGE_MAX_DIMENSION;
     }
 
     let accessibilityLabel;
@@ -154,47 +224,66 @@ class TourStopScreen extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <NavigationBar
-          label={I18n.t(this.props.tourStop.shortTitle)}
-          labelStyle={{
-            color: OFF_BLACK,
-          }}
-          buttonColor={TEAL}
-          backButtonPress={() => { this.props.navigator.pop(); }}
-          backButtonLabel={I18n.t('storiesScreen_Title')}
-          barStyle={{
-            backgroundColor: '#ffffff',
-            height: 44,
-          }}
-        />
+        <Image
+          style={styles.headerImage}
+          source={{ uri: this.props.imageURL }}
+        >
+          <NavigationBar
+            labelStyle={{
+              color: OFF_BLACK,
+            }}
+            buttonColor={'#ffffff'}
+            backButtonPress={() => { this.props.navigator.pop(); }}
+            barStyle={{
+              backgroundColor: 'transparent',
+              height: 44,
+            }}
+          />
+          <View
+            style={styles.headerTitle}
+            pointerEvents={'none'}
+          >
+            <Text style={styles.headerTitleText}>
+              {parseDisplayText(I18n.t(this.props.tourStop.shortTitle)).toUpperCase()}
+            </Text>
+          </View>
+        </Image>
+        <View style={styles.playAllButtonContainer}>
+          <TouchableOpacity style={styles.playAllButton}>
+            <Image
+              style={styles.playAllButtonIcon}
+              source={require('../assets/PlayButton.png')}
+            />
+            <Text style={styles.playAllButtonText}>
+              PLAY ALL
+            </Text>
+          </TouchableOpacity>
+        </View>
         <View
           style={[styles.container, { marginBottom: containerMargin }]}
         >
           <ScrollView
             automaticallyAdjustContentInsets={false}
+            style={styles.scrollableContent}
           >
-            <View
-              accessibilityTraits={['header', 'button']}
-              accessibilityLabel={
-                'Artwork Information. ${accessibilityLabel}.'
-              }
-            >
-              <View style={styles.header}>
-                <Image
-                  style={[
-                    styles.headerImage,
-                    {
-                      width: headerImageWidth,
-                      height: headerImageHeight,
-                    },
-                  ]}
-                  source={{ uri: this.props.imageURL }}
-                />
-                <View
-                  style={styles.headerText}
-                >
-                  <Text style={globalStyles.body}>
-                    {parseDisplayText(I18n.t(this.props.tourStop.shortCredit))}
+            <View style={styles.audioContentInfo}>
+              <View style={styles.audioContentQuickInfo}>
+                <View style={styles.audioContentFloor}>
+                  <Image
+                    style={styles.floorIcon}
+                    source={require('../assets/FloorIcon.png')}
+                  />
+                  <Text style={styles.floorText}>
+                    FLOOR 2
+                  </Text>
+                </View>
+                <View style={styles.audioContentDuration}>
+                  <Image
+                    style={styles.durationIcon}
+                    source={require('../assets/ClockIcon.png')}
+                  />
+                  <Text style={styles.durationText}>
+                    30 MIN
                   </Text>
                 </View>
               </View>
