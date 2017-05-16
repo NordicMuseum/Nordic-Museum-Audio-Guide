@@ -20,7 +20,7 @@ import AccessibilityScreen from './accessibilityScreen';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL } from '../styles';
+import { OFF_BLACK, TEAL, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -198,7 +198,7 @@ class MuseumScreen extends Component {
           style={[styles.statusBar,
             {
               width,
-              backgroundColor: 'rgba(255, 255, 255, .85);',
+              backgroundColor: LIGHT_GRAY,
             },
           ]}
         />

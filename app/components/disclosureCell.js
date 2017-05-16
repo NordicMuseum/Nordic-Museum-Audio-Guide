@@ -9,7 +9,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { globalStyles, LIGHT_BLUE } from '../styles';
+import { globalStyles, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   cell: {
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 41,
     backgroundColor: '#fff',
-    borderBottomWidth: 3,
-    borderBottomColor: LIGHT_BLUE,
+    borderBottomWidth: 1,
+    borderBottomColor: LIGHT_GRAY,
   },
   cellTitle: {
     flex: 1,

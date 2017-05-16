@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   betaMessage: {
+    paddingTop: 20,
     textAlign: 'center',
   },
 });
