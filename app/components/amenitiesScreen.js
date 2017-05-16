@@ -12,7 +12,7 @@ import I18n from 'react-native-i18n';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL } from '../styles';
+import { OFF_BLACK, TEAL, LIGHT_GRAY } from '../styles';
 
 import AmenitiesItem from './amenitiesItem';
 import NavigationBar from './navigationBar';
@@ -49,7 +49,7 @@ const AmenitiesScreen = (props) => {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#ededed' }}>
+    <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
       <NavigationBar
         label={I18n.t('amenitiesScreen_Title')}
         labelStyle={{
@@ -59,7 +59,7 @@ const AmenitiesScreen = (props) => {
         backButtonPress={() => { props.navigator.pop(); }}
         backButtonLabel={I18n.t('museumScreen_Title')}
         barStyle={{
-          backgroundColor: '#ededed',
+          backgroundColor: LIGHT_GRAY,
           height: 44,
         }}
       />

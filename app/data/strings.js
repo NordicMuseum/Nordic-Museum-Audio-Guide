@@ -42,7 +42,7 @@ export const strings = {
     exandableHeader_ClosedAccessibilityLabel: ' Double tap to open.',
     grid_Of: 'of',
     grid_AccessibilityLabel: 'Plays audio for x story.',
-    nearMeScreen_Title: 'Near Me',
+    nearMeScreen_Title: 'Nearby',
     nearMeScreen_LocationOffText: 'While at the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
     nearMeScreen_StoriesMessage: 'While at the museum, we show you stories based on what’s near you.',
     nearMeScreen_StoriesMessageNone: 'There are no stories near you.',
@@ -54,10 +54,10 @@ export const strings = {
     nearMeScreen_Floor: 'Floor',
     nearMeScreen_Entrance: 'Entrance Space',
     nearMeScreen_Underground: 'Underground',
-    rootScreen_NearMeTabItem: 'Near Me',
-    rootScreen_StoriesTabItem: 'Stories',
-    rootScreen_MuseumTabItem: 'The Warhol',
-    storiesScreen_Title: 'Stories',
+    rootScreen_NearMeTabItem: 'Nearby',
+    rootScreen_StoriesTabItem: 'Browse',
+    rootScreen_MuseumTabItem: 'Info',
+    storiesScreen_Title: 'Browse',
     settingsScreen_Title: 'Settings',
     settingsScreen_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
     settingsScreen_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
@@ -149,7 +149,7 @@ export const strings = {
     creditsScreen_Development: 'Development',
     creditsScreen_AdvisoryTeam: 'Advisory Team',
     creditsScreen_ImageCredit: 'The Warhol section image: <i>Silver Clouds</i> installation, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola, Warhol art © The Andy Warhol Foundation for the Visual Arts, Inc.',
-    museumScreen_Title: 'Museum',
+    museumScreen_Title: 'Info',
     museumScreen_ImageAccessibilityLabel: 'The Nordic Museum',
     museumScreen_ListItem1Label: 'About The Nordic Museum',
     museumScreen_ListItem2Label: 'Accessibility',
@@ -242,7 +242,7 @@ export const strings = {
     'HomesAndInteriors_imageAccessibilityLabel':'Homes and Interiors',
     'HomesAndInteriors_shortCredit':'<i>Homes and Interiors</i>',
     'HomesAndInteriors_longCredit':'Photo: Karolina Kristensson\n<i>Homes and Interiors</i>',
- 
+
     'HomesAndInteriorsVisualDescriptions_shortTitle':'Homes and Interiors: Visual Descriptions',
     'HomesAndInteriorsVisualDescriptions_longTitle':'Homes and Interiors: Visual Descriptions',
     'HomesAndInteriorsVisualDescriptions_imageAccessibilityLabel':'Homes and Interiors: Visual Descriptions',
@@ -260,7 +260,7 @@ export const strings = {
     'Highlights_floor3_imageAccessibilityLabel':'Highlights',
     'Highlights_floor3_shortCredit':'<i>Highlights</i>',
     'Highlights_floor3_longCredit':'Photo: Karolina Kristensson\n<i>Highlights</i>',
- 
+
     'Highlights_floor4_shortTitle':'Highlights',
     'Highlights_floor4_longTitle':'Highlights',
     'Highlights_floor4_imageAccessibilityLabel':'Highlights',
@@ -425,7 +425,7 @@ export const strings = {
     'HomesAndInteriors_imageAccessibilityLabel':'Hem och bostad',
     'HomesAndInteriors_shortCredit':'<i>Hem och bostad</i>',
     'HomesAndInteriors_longCredit':'Foto: Karolina Kristensson\n<i>Hem och bostad</i>',
- 
+
     'HomesAndInteriorsVisualDescriptions_shortTitle':'Hem och bostad: Syntolkningar',
     'HomesAndInteriorsVisualDescriptions_longTitle':'Hem och bostad: Syntolkningar',
     'HomesAndInteriorsVisualDescriptions_imageAccessibilityLabel':'Hem och bostad: Syntolkningar',
@@ -443,12 +443,12 @@ export const strings = {
     'Highlights_floor3_imageAccessibilityLabel':'Höjdpunkter',
     'Highlights_floor3_shortCredit':'<i>Höjdpunkter</i>',
     'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
- 
+
     'Highlights_floor4_shortTitle':'Höjdpunkter',
     'Highlights_floor4_longTitle':'Höjdpunkter',
     'Highlights_floor4_imageAccessibilityLabel':'Höjdpunkter',
     'Highlights_floor4_shortCredit':'<i>Höjdpunkter</i>',
-    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',    
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
 
     //5. CHAPTER HEADERS
     '201': 'Välkommen till Nordiska museet',

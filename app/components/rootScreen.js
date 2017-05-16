@@ -29,7 +29,7 @@ import SearchByNumber from '../containers/searchByNumber';
 import Museum from '../containers/museum';
 import BottomPlayer from '../containers/bottomPlayer';
 
-import { OFF_WHITE, TEAL, OFF_BLACK, TURQUOISE } from '../styles.js';
+import { OFF_WHITE, TEAL, OFF_BLACK, LIGHT_GRAY } from '../styles.js';
 
 export const BOTTOMBARHEIGHT = 49;
 
@@ -84,8 +84,8 @@ class RootScreen extends Component {
         <Tutorial />
         <TabBarIOS
           translucent={false}
-          barTintColor={TURQUOISE}
-          unselectedTintColor={OFF_BLACK}
+          barTintColor={OFF_BLACK}
+          unselectedTintColor={LIGHT_GRAY}
           tintColor={OFF_WHITE}
         >
         {/*
@@ -99,7 +99,7 @@ class RootScreen extends Component {
         */}
           <TabBarIOS.Item
             title={I18n.t('nearMeScreen_Title')}
-            renderAsOriginal={true}
+            // renderAsOriginal={true}
             icon={require('../assets/nearTab.png')}
             selectedIcon={require('../assets/nearTabSelected.png')}
             badge={this.props.beaconsNum}
@@ -129,7 +129,7 @@ class RootScreen extends Component {
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={I18n.t('storiesScreen_Title')}
-            renderAsOriginal={true}
+            // renderAsOriginal={true}
             icon={require('../assets/storiesTab.png')}
             selectedIcon={require('../assets/storiesTabSelected.png')}
             selected={this.props.activeTab === TAB_STORIES}
@@ -158,10 +158,10 @@ class RootScreen extends Component {
             />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            title={'#'}
-            renderAsOriginal={true}
-            icon={require('../assets/storiesTab.png')}
-            selectedIcon={require('../assets/storiesTabSelected.png')}
+            title={'Search #'}
+            // renderAsOriginal={true}
+            icon={require('../assets/searchTab.png')}
+            selectedIcon={require('../assets/searchTabSelected.png')}
             selected={this.props.activeTab === TAB_SEARCH}
             onPress={() => {
               if (this.props.activeTab === TAB_SEARCH &&
@@ -177,7 +177,7 @@ class RootScreen extends Component {
               ref={SEARCH_REF}
               style={styles.container}
               initialRoute={{
-                title: '#',
+                title: 'Search #',
                 component: SearchByNumber,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
@@ -189,9 +189,9 @@ class RootScreen extends Component {
           </TabBarIOS.Item>
           <TabBarIOS.Item
             title={I18n.t('museumScreen_Title')}
-            renderAsOriginal={true}
-            icon={require('../assets/warholTab.png')}
-            selectedIcon={require('../assets/warholTabSelected.png')}
+            // renderAsOriginal={true}
+            icon={require('../assets/museumTab.png')}
+            selectedIcon={require('../assets/museumTabSelected.png')}
             selected={this.props.activeTab === TAB_MUSEUM}
             onPress={() => {
               if (this.props.activeTab === TAB_MUSEUM &&

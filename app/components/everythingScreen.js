@@ -17,13 +17,13 @@ import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 import { TAB_STORIES } from '../actions/navigation';
 
-import { TEAL, OFF_BLACK } from '../styles';
+import { TEAL, OFF_BLACK, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: '#ededed',
+    backgroundColor: LIGHT_GRAY,
   },
   scroll: {
     flex: 1,

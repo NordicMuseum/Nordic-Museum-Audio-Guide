@@ -13,13 +13,13 @@ import {
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { TEAL, OFF_BLACK, LIGHT_BLUE } from '../styles';
+import { TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: '#ededed',
+    backgroundColor: LIGHT_GRAY,
     justifyContent: 'center',
   },
   display: {
