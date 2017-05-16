@@ -19,7 +19,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles } from '../styles';
+import { LIGHT_GRAY } from '../styles';
 
 const SPACING = 5;
 
@@ -53,26 +53,33 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: SPACING * 2,
     left: SPACING * 2,
-    flex: 0.6,
+    fontSize: 18,
+  },
+  cellDuration: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    bottom: SPACING * 2,
+    right: SPACING * 2,
+    flexDirection: 'row',
+    flex: 0.4,
+    alignItems: 'flex-end',
+  },
+  cellDurationIcon: {
+    height: 16,
+    width: 16,
+    marginRight: SPACING,
+    tintColor: LIGHT_GRAY,
   },
   cellDurationText: {
     backgroundColor: 'transparent',
     color: '#FFFFFF',
     fontWeight: '600',
-    position: 'absolute',
-    bottom: SPACING * 2,
-    right: SPACING * 2,
     textAlign: 'right',
+    fontSize: 16,
+    lineHeight: 16,
+    marginRight: 2,
   },
 });
-
-// function getImageScale(cellWidth, imageWidth) {
-//  return cellWidth / imageWidth;
-// }
-
-// function getImageHeight(cellWidth, imageWidth, imageHeight) {
-//  return getImageScale(cellWidth, imageWidth) * imageHeight;
-// }
 
 const Grid = (props) => {
   const { width, height } = Dimensions.get('window');
@@ -128,25 +135,25 @@ const Grid = (props) => {
               source={{
                 uri: item.imageURL,
               }}
-            />
-            <Text
-              style={[
-                { width: cellWidth },
-                globalStyles.disclosure,
-                styles.cellTitleText,
-              ]}
             >
-              {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
-            </Text>
-            <Text
-              style={[
-                { width: cellWidth },
-                globalStyles.disclosure,
-                styles.cellDurationText,
-              ]}
-            >
-              30 MIN
-            </Text>
+              <View style={{ flex: 0.6 }}>
+                <Text style={styles.cellTitleText}>
+                  {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
+                </Text>
+              </View>
+              <View style={styles.cellDuration}>
+                <Image
+                  style={styles.cellDurationIcon}
+                  source={require('../assets/ClockIcon.png')}
+                />
+                <Text style={styles.cellDurationText}>
+                  30
+                </Text>
+                <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
+                  MIN
+                </Text>
+              </View>
+            </Image>
           </View>
         </TouchableOpacity>
       </View>
