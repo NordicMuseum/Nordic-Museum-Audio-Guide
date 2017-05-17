@@ -90,7 +90,7 @@ export const strings = {
     aboutScreen_Title: 'The Nordic Museum',
     aboutScreen_Overview: 'The Nordic Museum is Sweden’s largest museum of cultural history. An everyday palace, and a place of stories about the life and people of the Nordic region – yesterday, today and tomorrow. Discover clothes and fashion, textiles and jewellery, homes and furniture, photography, toys, folk art, glass and porcelain. There is also an exhibition about the only indigenous people in Sweden, the Sami.',
     aboutScreen_AboutHeader: 'The building',
-    aboutScreen_AboutBody: 'The museum was founded back in 1873 by Artur Hazelius. The imposing building on Djurgården island – a sight in itself – was designed in Renaissance style by Isak Gustaf Clason, and opened in 1907.',
+    aboutScreen_AboutBody: 'The museum was founded back in 1873 by Artur Hazelius. The imposing building on Djurgården island – a sight in itself – was designed in Renaissance style by Isak Gustaf Clason, and opened in 1907.',
     aboutScreen_HoursHeader: 'Opening Hours',
     aboutScreen_HoursBody1: 'June–August: daily 9–18',
     aboutScreen_HoursBody2: 'September–May: daily 10–17',
@@ -318,9 +318,9 @@ export const strings = {
     accessibilityScreen_Title: 'Tillgänglighet',
     creditsScreen_Title: 'Medverkande',
     aboutScreen_Title: 'Nordiska museet',
-    aboutScreen_Overview: 'Nordiska museet är Sveriges största kulturhistoriska museum. Ett vardagens palats där berättelser om livet och om människor i Norden, igår, idag och imorgon tar plats. Upptäck kläder och mode, textilier och smycken, möbler och boende, fotogra , leksaker, folkkonst, glas och porslin. Här  nns också en utställning om Sveriges enda urfolk, samerna.',
+    aboutScreen_Overview: 'Nordiska museet är Sveriges största kulturhistoriska museum. Ett vardagens palats där berättelser om livet och om människor i Norden, igår, idag och imorgon tar plats. Upptäck kläder och mode, textilier och smycken, möbler och boende, fotografi, leksaker, folkkonst, glas och porslin. Här finns också en utställning om Sveriges enda urfolk, samerna.',
     aboutScreen_AboutHeader: 'Byggnaden',
-    aboutScreen_AboutBody: 'Museet grundades redan år 1873 av Artur Hazelius. Den väldiga byggnaden på Djurgården, som är en sevärdhet i sig, är ritad i renässansstil av Isak Gustaf Clason och invigdes 1907.',
+    aboutScreen_AboutBody: 'Museet grundades redan år 1873 av Artur Hazelius. Den väldiga byggnaden på Djurgården, som är en sevärdhet i sig, är ritad i renässansstil av Isak Gustaf Clason och invigdes 1907.',
     aboutScreen_HoursHeader: 'Öppettider',
     aboutScreen_HoursBody1: 'Juni–augusti: dagligen kl 9–18',
     aboutScreen_HoursBody2: 'September–maj: dagligen kl 10–17',
@@ -612,9 +612,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Il Museo Nordico',
-    aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotogra a, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un’esposizione sull’unica popolazione indigena della Svezia, i Sami.',
+    aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotografia, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un’esposizione sull’unica popolazione indigena della Svezia, i Sami.',
     aboutScreen_AboutHeader: 'L’edificio',
-    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L’imponente edi cio, situato sull’isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
+    aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L’imponente edificio, situato sull’isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
 
     //3. AMENITIES
 
@@ -698,9 +698,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'El Museo Nórdico',
-    aboutScreen_Overview: 'El Museo Nórdico es el mayor museo de historia cultural de Suecia. Un palacio cotidiano y un lugar donde se cuentan historias sobre la vida y la gente de la región nórdica: de ayer, de hoy y de mañana. Descubra trajes y moda, tejidos y joyería, hogares y muebles, fotografía, juguetes, arte tradicional y piezas de cristal y porcelana. El museo también alberga una exposición sobre el único pueblo indígena de Suecia: los sami.',
+    aboutScreen_Overview: 'El Museo Nórdico es el mayor museo de historia cultural de Suecia. Un palacio cotidiano y un lugar donde se cuentan historias sobre la vida y la gente de la región nórdica: de ayer, de hoy y de mañana. Descubra trajes y moda, tejidos y joyería, hogares y muebles, fotografía, juguetes, arte tradicional y piezas de cristal y porcelana. El museo también alberga una exposición sobre el único pueblo indígena de Suecia: los sami.',
     aboutScreen_AboutHeader: 'Edificio',
-    aboutScreen_AboutBody: 'El museo fue fundado en 1873 por Artur Hazelius. El imponente edi cio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.',
+    aboutScreen_AboutBody: 'El museo fue fundado en 1873 por Artur Hazelius. El imponente edificio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.',
     aboutScreen_HoursHeader: 'Horario de apertura',
     aboutScreen_AdmissionHeader: 'Entrada',
 
@@ -741,9 +741,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Nordiska museet',
-    aboutScreen_Overview: 'Nordiska museet on Ruotsin suurin kulttuuri- historiallinen museo. Se on arjen palatsi, joka toimii näyttämönä tarinoille ihmisten elämästä Pohjoismaissa eilen, tänään ja huomenna. Museossa voit tutustua vaatteisiin ja muotiin, tekstiileihin ja koruihin, huonekaluihin ja tapaan asua, valokuviin, leluihin, kansantaiteeseen sekä lasiin ja posliiniin. Museossa on myös Ruotsin ainoaa alkuperäiskansaa saamelaisia käsittelevä näyttely.',
+    aboutScreen_Overview: 'Nordiska museet on Ruotsin suurin kulttuuri-historiallinen museo. Se on arjen palatsi, joka toimii näyttämönä tarinoille ihmisten elämästä Pohjoismaissa eilen, tänään ja huomenna. Museossa voit tutustua vaatteisiin ja muotiin, tekstiileihin ja koruihin, huonekaluihin ja tapaan asua, valokuviin, leluihin, kansantaiteeseen sekä lasiin ja posliiniin. Museossa on myös Ruotsin ainoaa alkuperäiskansaa saamelaisia käsittelevä näyttely.',
     aboutScreen_AboutHeader: 'Rakennus',
-    aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnogra an keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907.',
+    aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnografian keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907.',
 
     //3. AMENITIES
 
@@ -783,9 +783,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Das Nordische Museum',
-    aboutScreen_Overview: 'Das Nordische Museum ist das größte kulturgeschicht- liche Museum Schwedens. Ein Palast der Alltagskultur, in dem vom Leben und von den Menschen in Skandinavien gestern, heute und morgen erzählt wird. Entdecken Sie Kleidung und Mode, Textilien und Schmuck, Möbel und Einrichtungsgegenstände, Fotos, Spielzeug, Volkskunst, Glas und Geschirr. Hier gibt es auch eine Ausstellung zur einzigen Urbevölkerung Schwedens, den Samen, zu sehen.',
+    aboutScreen_Overview: 'Das Nordische Museum ist das größte kulturgeschicht-liche Museum Schwedens. Ein Palast der Alltagskultur, in dem vom Leben und von den Menschen in Skandinavien gestern, heute und morgen erzählt wird. Entdecken Sie Kleidung und Mode, Textilien und Schmuck, Möbel und Einrichtungsgegenstände, Fotos, Spielzeug, Volkskunst, Glas und Geschirr. Hier gibt es auch eine Ausstellung zur einzigen Urbevölkerung Schwedens, den Samen, zu sehen.',
     aboutScreen_AboutHeader: 'Das Gebäude',
-    aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht.',
+    aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht.',
 
     //3. AMENITIES
 
@@ -824,9 +824,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Музей северных стран',
-    aboutScreen_Overview: 'Музей северных стран — крупнейший в Швеции историко-культурный музей. Это общедоступный дворец, в котором можно прикоснуться к прошлому, настоящему и будущему Северных стран и их жителей. Посетите экспозиции, посвященные одежде и моде, текстилю и украшениям, жилищам и мебели, фотографии, игрушкам, народному искусству, стеклу и фарфору. Отдельная выставка посвящена единственному коренному народу Швеции, саамам',
+    aboutScreen_Overview: 'Музей северных стран — крупнейший в Швеции историко-культурный музей. Это общедоступный дворец, в котором можно прикоснуться к прошлому, настоящему и будущему Северных стран и их жителей. Посетите экспозиции, посвященные одежде и моде, текстилю и украшениям, жилищам и мебели, фотографии, игрушкам, народному искусству, стеклу и фарфору. Отдельная выставка посвящена единственному коренному народу Швеции, саамам.',
     aboutScreen_AboutHeader: 'Здание',
-    aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году.',
+    aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году.',
 
     //3. AMENITIES
 
@@ -865,9 +865,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Le musée nordique',
-    aboutScreen_Overview: 'Le musée nordique est le plus grand musée d’histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au  l des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L’une des expositions retrace l’histoire du seul peuple indigène de Suède, les Samis.',
+    aboutScreen_Overview: 'Le musée nordique est le plus grand musée d’histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au fil des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L’une des expositions retrace l’histoire du seul peuple indigène de Suède, les Samis.',
     aboutScreen_AboutHeader: 'L’édifice',
-    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L’imposant monument situé sur l’île de Djurgården, l’île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
+    aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L’imposant monument situé sur l’île de Djurgården, l’île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
 
     //3. AMENITIES
 
@@ -906,9 +906,9 @@ export const strings = {
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: '北欧博物馆',
-    aboutScreen_Overview: '北欧博物馆是瑞典最大的文化历史博物馆。这是一座展示 日常生活实景的博物馆，讲述了北欧地区的人文风情、生活 百态，是连接过去、现在以及未来的桥梁。在这里可以看到 各式衣着服饰和时尚潮流、纺织品和珠宝首饰、家居摆设和 家具陈列、摄影作品、玩具、民间艺术、玻璃和瓷器作品。同 时，这里还有关于瑞典唯一的土著居民萨米人的展览。',
+    aboutScreen_Overview: '北欧博物馆是瑞典最大的文化历史博物馆。这是一座展示日常生活实景的博物馆，讲述了北欧地区的人文风情、生活百态，是连接过去、现在以及未来的桥梁。在这里可以看到各式衣着服饰和时尚潮流、纺织品和珠宝首饰、家居摆设和家具陈列、摄影作品、玩具、民间艺术、玻璃和瓷器作品。同时，这里还有关于瑞典唯一的土著居民萨米人的展览。',
     aboutScreen_AboutHeader: '建筑',
-    aboutScreen_AboutBody: '博物馆由亚瑟•哈兹里乌斯于 1873 年成立。这座建筑坐落于动物园岛 上，由伊萨克•古斯塔夫•克拉松按照文艺复兴时期的建筑风格设计，并 于 1907 年落成，壮观伟岸，已然成为一道风景。博物馆的中心为一巨 大主厅，长 126 米，顶高 24 米，主厅的正中央矗立着著名雕塑家卡 尔•米勒斯设计的大型古斯塔夫•瓦萨国王 (1523-1560) 橡木雕像。',
+    aboutScreen_AboutBody: '博物馆由亚瑟•哈兹里乌斯于 1873 年成立。这座建筑坐落于动物园岛上，由伊萨克•古斯塔夫•克拉松按照文艺复兴时期的建筑风格设计，并于 1907 年落成，壮观伟岸，已然成为一道风景。',
 
     //3. AMENITIES
 
