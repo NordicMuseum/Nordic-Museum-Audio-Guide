@@ -25,7 +25,7 @@ const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
 // Hydrate the DB
 import hydrate from './data/hydrate';
-hydrate(newVersion);
+hydrate(newVersion || __DEV__);
 
 const store = configureStore();
 store.dispatch(
