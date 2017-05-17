@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 20,
     backgroundColor: LIGHT_GRAY,
+    alignItems: 'center',
   },
   scroll: {
     flex: 1,
@@ -35,8 +36,7 @@ const styles = StyleSheet.create({
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 60,
-    marginRight: 60,
+    width: 250,
   },
 });
 

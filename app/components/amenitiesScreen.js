@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'stretch',
     flex: 1,
+    backgroundColor: '#ffffff',
   },
   amenitiesContainer: {
     margin: 10,
@@ -32,13 +33,11 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   segementedController: {
-    marginTop: 90,
     paddingBottom: 25,
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 50,
-    marginRight: 50,
+    width: 334,
   },
 });
 
@@ -57,38 +56,39 @@ const AmenitiesScreen = (props) => {
         }}
         buttonColor={TEAL}
         backButtonPress={() => { props.navigator.pop(); }}
-        backButtonLabel={I18n.t('museumScreen_Title')}
         barStyle={{
           backgroundColor: LIGHT_GRAY,
           height: 44,
         }}
       />
-      <View style={styles.segementedController}>
-        <SegmentedController
-          style={{ flex: 1 }}
-          buttons={[
-            {
-              label: I18n.t('floor1_Label'),
-              onPress: () => { props.actions.showFloor(0); },
-              active: props.currentFloor === 0,
-            },
-            {
-              label: I18n.t('floor2_Label'),
-              onPress: () => { props.actions.showFloor(1); },
-              active: props.currentFloor === 1,
-            },
-            {
-              label: I18n.t('floor3_Label'),
-              onPress: () => { props.actions.showFloor(2); },
-              active: props.currentFloor === 2,
-            },
-            {
-              label: I18n.t('floor4_Label'),
-              onPress: () => { props.actions.showFloor(3); },
-              active: props.currentFloor === 3,
-            },
-          ]}
-        />
+      <View style={{ alignItems: 'center', marginTop: 85 }}>
+        <View style={styles.segementedController}>
+          <SegmentedController
+            style={{ flex: 1 }}
+            buttons={[
+              {
+                label: I18n.t('floor1_Label'),
+                onPress: () => { props.actions.showFloor(0); },
+                active: props.currentFloor === 0,
+              },
+              {
+                label: I18n.t('floor2_Label'),
+                onPress: () => { props.actions.showFloor(1); },
+                active: props.currentFloor === 1,
+              },
+              {
+                label: I18n.t('floor3_Label'),
+                onPress: () => { props.actions.showFloor(2); },
+                active: props.currentFloor === 2,
+              },
+              {
+                label: I18n.t('floor4_Label'),
+                onPress: () => { props.actions.showFloor(3); },
+                active: props.currentFloor === 3,
+              },
+            ]}
+          />
+        </View>
       </View>
       <View style={[styles.container, { marginBottom: containerMargin }]}>
         <ScrollView

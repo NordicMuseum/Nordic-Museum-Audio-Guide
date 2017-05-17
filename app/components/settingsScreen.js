@@ -76,7 +76,6 @@ const SettingsScreen = (props) => {
         }}
         buttonColor={TEAL}
         backButtonPress={() => { props.navigator.pop(); }}
-        backButtonLabel={I18n.t('museumScreen_Title')}
         barStyle={{
           backgroundColor: '#ffffff',
           height: 44,
