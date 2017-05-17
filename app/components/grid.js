@@ -21,7 +21,7 @@ import {
 
 import { LIGHT_GRAY } from '../styles';
 
-const SPACING = 5;
+const SPACING = 2;
 
 const styles = StyleSheet.create({
   container: {

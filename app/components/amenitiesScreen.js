@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 50,
-    marginRight: 50,
+    marginLeft: 20,
+    marginRight: 20,
   },
 });
 
