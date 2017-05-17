@@ -118,6 +118,7 @@ class SearchByNumberScreen extends Component {
     });
 
     if (tourStop !== undefined) {
+      this.props.actions.editDigits([null, null, null]);
       this.props.navigator.push({
         title: tourStop.shortTitle,
         component: TourStop,
