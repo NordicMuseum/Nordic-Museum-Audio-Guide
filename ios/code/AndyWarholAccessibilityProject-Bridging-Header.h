@@ -12,6 +12,8 @@
 
 #import <EstimoteSDK/EstimoteSDK.h>
 
+#import "AppDelegate.h"
+
 #import "RCTBridgeModule.h"
 #import "RCTEventEmitter.h"
 #import "RCTEventDispatcher.h"

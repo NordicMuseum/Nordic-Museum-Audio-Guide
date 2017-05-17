@@ -7,6 +7,7 @@ import {
 
 const initialState = {
   locale: 'en',
+  rtl: null,
 };
 
 I18n.translations = strings;

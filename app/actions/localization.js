@@ -1,34 +1,35 @@
 import {
   NativeModules,
   I18nManager,
+  Settings,
 } from 'react-native';
 
 // *** Action Types ***
 export const SWITCH_LOCALE = 'SWITCH_LOCALE';
 
 // *** Action Creators ***
-function setRTL(rtl) {
-  try {
-    I18nManager.forceRTL(rtl);
-    return NativeModules.CMSRTLManager.setRTL(rtl);
-  } catch (e) {
-    return undefined;
-  }
+function updateRTL(rtl) {
+  I18nManager.forceRTL(rtl);
+  NativeModules.CMSRTLManager.forceRTL(rtl);
 }
 
 export function switchLocale(locale) {
-  let rtl;
-  if (locale === 'ar') {
-    console.log('SHOULD BE RTL!!');
-    rtl = setRTL(true);
-  } else {
-    console.log('SHOULD NOT BE RTL!!');
-    rtl = setRTL(false);
-  }
-  console.log(rtl);
-  return {
-    type: SWITCH_LOCALE,
-    locale,
-    rtl,
+  return async (dispatch, getState) => {
+    const rtl = locale === 'ar';
+    const prevRTL = getState().localization.rtl;
+
+    if (rtl !== prevRTL && prevRTL != null) {
+      Settings.set({
+        reloadAppForRTLSwitchLocale: locale,
+        reloadAppForRTLSwitch: true,
+      });
+      updateRTL(rtl, locale);
+    }
+
+    dispatch({
+      type: SWITCH_LOCALE,
+      locale,
+      rtl,
+    });
   };
 }

@@ -17,9 +17,6 @@
 
 @interface RCT_EXTERN_MODULE(CMSRTLManager, NSObject)
 
-RCT_EXTERN_METHOD(setRTL:(BOOL) rtl
-                  resolver:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject
-                  )
+RCT_EXTERN_METHOD(forceRTL:(BOOL) rtl)
 
 @end

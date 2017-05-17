@@ -12,31 +12,25 @@ import Foundation
 @objc(CMSRTLManager)
 class CMSRTLManager: NSObject {
   
-  @objc func setRTL(_ rtl: Bool,
-                    resolver resolve: RCTPromiseResolveBlock,
-                    rejecter reject: RCTPromiseRejectBlock) -> Void {
-    
-    let appDelegate  = UIApplication.shared.delegate // as! AppDelegate
-    // let view = appDelegate?.window!?.rootViewController?.view // as! YourViewController
-    
-    RCTI18nUtil.sharedInstance()
+  @objc func forceRTL(_ rtl: Bool) -> Void {
+    let appDelegate  = UIApplication.shared.delegate as! AppDelegate
 
     if (rtl == true) {
-      // print("setting to true because");
       UIView.appearance().semanticContentAttribute = .forceRightToLeft
-      (RCTI18nUtil.sharedInstance() as AnyObject).forceRTL(true)
-      //view?.setNeedsLayout()
-      //view?.layoutSubviews()
-      //view?.layoutIfNeeded()
-      resolve(true);
+      UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
     } else {
-      // print("setting to false because");
       UIView.appearance().semanticContentAttribute = .forceLeftToRight
-      (RCTI18nUtil.sharedInstance() as AnyObject).forceRTL(false)
-      //view?.setNeedsLayout()
-      //view?.layoutSubviews()
-      //view?.layoutIfNeeded()
-      resolve(false);
+      UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
+    }
+    
+    mainThread {
+      appDelegate.forceReload()
+    }
+  }
+  
+  func mainThread(_ closure:@escaping () -> ()) {
+    DispatchQueue.main.async {
+      closure()
     }
   }
 

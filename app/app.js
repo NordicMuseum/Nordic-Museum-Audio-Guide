@@ -41,12 +41,11 @@ GoogleAnalytics.setDryRun(false);
 
 analyticsTrackDeviceType(!showTutorialEveryTime);
 
+const localizationActor = new LocalizationActor(store);
+const wayfindingActor = new WayfindingActor(store);
+wayfindingActor.startListening();
+
 const App = () => {
-  const wayfindingActor = new WayfindingActor(store);
-  wayfindingActor.startListening();
-
-  const localizationActor = new LocalizationActor(store);
-
   return (
     <Provider store={store}>
       <RootContainer />
