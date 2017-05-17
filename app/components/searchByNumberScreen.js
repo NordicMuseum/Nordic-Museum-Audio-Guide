@@ -8,6 +8,8 @@ import {
   View,
   TouchableOpacity,
   Text,
+  Dimensions,
+  Image,
 } from 'react-native';
 
 import TourStop from '../containers/tourStop';
@@ -15,49 +17,73 @@ import TourStop from '../containers/tourStop';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
+import { TEAL, OFF_BLACK, TURQUOISE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: LIGHT_GRAY,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   display: {
-    flex: 0.2,
+    flex: 0.3,
     width: 200,
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
   },
   digitDisplay: {
-    width: 20,
+    width: 40,
+    height: 40,
+  },
+  digitDisplayText: {
+    color: OFF_BLACK,
+    fontSize: 24,
+    fontWeight: '600',
+    borderBottomWidth: 5,
+    borderBottomColor: 'white',
   },
   emptyDigit: {
     borderBottomWidth: 5,
-    borderBottomColor: 'red',
+    borderBottomColor: OFF_BLACK,
     width: 40,
+    height: 40,
   },
   digitPad: {
-    flex: 0.8,
-    backgroundColor: 'white',
+    flex: 0.7,
+    padding: 5,
   },
   digitRow: {
     flexDirection: 'row',
   },
   digit: {
     flex: 0.3,
-    height: 40,
+    height: 60,
+    margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: LIGHT_BLUE,
+    backgroundColor: TURQUOISE,
+  },
+  digitText: {
+    color: 'white',
+    fontSize: 24,
+    fontWeight: '600',
   },
   nonDigit: {
     flex: 0.3,
-    height: 40,
+    margin: 5,
+    height: 60,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  deleteButton: {
+    tintColor: TURQUOISE,
+    height: 30,
+    width: 40,
+    resizeMode: 'contain',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
@@ -91,22 +117,24 @@ class SearchByNumberScreen extends Component {
       });
     });
 
-    this.props.navigator.push({
-      title: tourStop.shortTitle,
-      component: TourStop,
-      barTintColor: '#ffffff',
-      tintColor: TEAL,
-      titleTextColor: OFF_BLACK,
-      shadowHidden: true,
-      navigationBarHidden: true,
-      passProps: {
-        tab: 'TAB_SEARCH',
-        tourStop,
-        intialTrack: digits.toString(),
-        initialCategory: tourStop.initialAudio,
-        imageURL: tourStop.imageURL,
-      },
-    });
+    if (tourStop !== undefined) {
+      this.props.navigator.push({
+        title: tourStop.shortTitle,
+        component: TourStop,
+        barTintColor: '#ffffff',
+        tintColor: TEAL,
+        titleTextColor: OFF_BLACK,
+        shadowHidden: true,
+        navigationBarHidden: true,
+        passProps: {
+          tab: 'TAB_SEARCH',
+          tourStop,
+          intialTrack: digits.toString(),
+          initialCategory: tourStop.initialAudio,
+          imageURL: tourStop.imageURL,
+        },
+      });
+    }
   }
 
   addDigit(digit) {
@@ -126,6 +154,7 @@ class SearchByNumberScreen extends Component {
     }
 
     this.props.actions.editDigits(updatedDigits);
+
     if (digitIndex === 2) {
       this.loadTourStop(updatedDigits.join(''));
     }
@@ -146,6 +175,8 @@ class SearchByNumberScreen extends Component {
   }
 
   render() {
+    const width = Dimensions.get('window').width;
+
     let containerMargin = BOTTOMBARHEIGHT;
     if (this.props.playerOpen) {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
@@ -161,7 +192,7 @@ class SearchByNumberScreen extends Component {
                 style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
               >
                 {digit !== null &&
-                  <Text>
+                  <Text style={styles.digitDisplayText}>
                     {digit}
                   </Text>
                 }
@@ -169,13 +200,13 @@ class SearchByNumberScreen extends Component {
             );
           })}
         </View>
-        <View style={styles.digitPad}>
+        <View style={[styles.digitPad, { width }]}>
           <View style={styles.digitRow}>
             <TouchableOpacity
               onPress={() => { this.addDigit(1); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 1
               </Text>
             </TouchableOpacity>
@@ -183,7 +214,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(2); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 2
               </Text>
             </TouchableOpacity>
@@ -191,7 +222,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(3); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 3
               </Text>
             </TouchableOpacity>
@@ -201,7 +232,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(4); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 4
               </Text>
             </TouchableOpacity>
@@ -209,7 +240,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(5); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 5
               </Text>
             </TouchableOpacity>
@@ -217,7 +248,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(6); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 6
               </Text>
             </TouchableOpacity>
@@ -227,7 +258,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(7); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 7
               </Text>
             </TouchableOpacity>
@@ -235,7 +266,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(8); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 8
               </Text>
             </TouchableOpacity>
@@ -243,7 +274,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(9); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 9
               </Text>
             </TouchableOpacity>
@@ -254,7 +285,7 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.addDigit(0); }}
               style={styles.digit}
             >
-              <Text>
+              <Text style={styles.digitText}>
                 0
               </Text>
             </TouchableOpacity>
@@ -262,9 +293,10 @@ class SearchByNumberScreen extends Component {
               onPress={() => { this.deleteDigit(); }}
               style={styles.nonDigit}
             >
-              <Text>
-                DEL
-              </Text>
+              <Image
+                source={require('../assets/DeleteButton.png')}
+                style={styles.deleteButton}
+              />
             </TouchableOpacity>
           </View>
         </View>
