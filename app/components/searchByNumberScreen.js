@@ -10,6 +10,8 @@ import {
   Text,
 } from 'react-native';
 
+import TourStop from '../containers/tourStop';
+
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
@@ -67,25 +69,66 @@ class SearchByNumberScreen extends Component {
     playerOpen: PropTypes.bool.isRequired,
     digits: PropTypes.array.isRequired,
     screenReader: PropTypes.bool.isRequired,
+    tourStops: PropTypes.arrayOf(PropTypes.object).isRequired,
     actions: PropTypes.shape({
       editDigits: PropTypes.func.isRequired,
     }).isRequired,
   }
 
+  loadTourStop(digits) {
+    let tourStop;
+    this.props.tourStops.find((floor) => {
+      return floor.stops.find((stop) => {
+        const audioContent = stop.audioContent.find((audioClip) => {
+          if (audioClip.title === digits.toString()) return true;
+          return false;
+        });
+        if (audioContent !== undefined) {
+          tourStop = stop;
+          return true;
+        }
+        return false;
+      });
+    });
+
+    this.props.navigator.push({
+      title: tourStop.shortTitle,
+      component: TourStop,
+      barTintColor: '#ffffff',
+      tintColor: TEAL,
+      titleTextColor: OFF_BLACK,
+      shadowHidden: true,
+      navigationBarHidden: true,
+      passProps: {
+        tab: 'TAB_SEARCH',
+        tourStop,
+        intialTrack: digits.toString(),
+        initialCategory: tourStop.initialAudio,
+        imageURL: tourStop.imageURL,
+      },
+    });
+  }
+
   addDigit(digit) {
     const updatedDigits = [];
     let digitAdded = false;
+    let digitIndex = 0;
     for (let i = 0; i < 3; i++) {
       if (this.props.digits[i] !== null) {
         updatedDigits[i] = this.props.digits[i];
       } else if (!digitAdded) {
         updatedDigits[i] = digit;
         digitAdded = true;
+        digitIndex = i;
       } else {
         updatedDigits[i] = null;
       }
     }
+
     this.props.actions.editDigits(updatedDigits);
+    if (digitIndex === 2) {
+      this.loadTourStop(updatedDigits.join(''));
+    }
   }
 
   deleteDigit() {

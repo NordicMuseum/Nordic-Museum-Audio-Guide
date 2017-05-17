@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
     digits: state.searchByNumber.digits,
     playerOpen: state.bottomPlayer.playerOpen,
     screenReader: state.accessibility.screenReader,
+    tourStops: state.filteredTourStops.tourStops,
   };
 };
 
