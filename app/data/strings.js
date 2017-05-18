@@ -26,6 +26,7 @@ export const strings = {
     toggleSpeedButton_AccessibilityLabel: ' Double tap to change audio speed.',
     transcriptButton_OpenedAccessibilityLabel: ' transcript opened. Double tap to close.',
     transcriptButton_ClosedAccessibilityLabel: ' transcript closed. Double tap to open.',
+    tryAgain: 'Try again',
     audioContentItem_Of: 'of', // Example: Audio item 1 of 3
     audioContentItem_Seconds: 'seconds',
     audioContentList_ChapterSingular: 'Chapter',
@@ -300,6 +301,7 @@ export const strings = {
     audioContentList_ChapterSingular: 'Kapitel',
     audioContentList_ChapterPlural: 'Kapitel',
     settingsScreen_Title: 'Inställningar',
+    tryAgain: 'Försök igen',
 
     //2. MUSEUM CONTENT
     floor1_Label: 'PLAN 1',

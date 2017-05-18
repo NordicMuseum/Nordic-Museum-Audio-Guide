@@ -18,7 +18,7 @@ import TourStopScreen from '../containers/tourStop';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { TEAL, OFF_BLACK, TURQUOISE, LIGHT_GRAY } from '../styles';
+import { TEAL, OFF_BLACK, TURQUOISE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,6 +29,11 @@ const styles = StyleSheet.create({
   },
   display: {
     flex: 0.3,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+  displayRow: {
     width: 200,
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -89,6 +94,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  tryAgainMessage: {
+    position: 'absolute',
+    bottom: 20,
+    left: 0,
+    width: 200,
+  },
+  tryAgainText: {
+    fontSize: 20,
+    color: OFF_BLACK,
+    textAlign: 'center',
+  },
 });
 
 class SearchByNumberScreen extends Component {
@@ -103,6 +119,21 @@ class SearchByNumberScreen extends Component {
     actions: PropTypes.shape({
       editDigits: PropTypes.func.isRequired,
     }).isRequired,
+  }
+
+  componentWillMount() {
+    this.props.actions.editDigits([null, null, null]);
+    this.setState({
+      numberNotFound: false,
+      tryAgainMessage: null,
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.state.tryAgainMessage) {
+      clearTimeout(this.state.tryAgainMessage);
+      this.setState({ tryAgainMessage: null });
+    }
   }
 
   loadTourStop(digits) {
@@ -130,6 +161,18 @@ class SearchByNumberScreen extends Component {
           initialCategory: tourStop.initialAudio,
           imageURL: tourStop.imageURL,
         },
+      });
+    } else {
+      const tryAgainMessage = setTimeout(() => {
+        this.setState({
+          numberNotFound: false,
+          tryAgainMessage: null,
+        });
+        this.props.actions.editDigits([null, null, null]);
+      }, 1000);
+      this.setState({
+        numberNotFound: true,
+        tryAgainMessage,
       });
     }
   }
@@ -182,20 +225,29 @@ class SearchByNumberScreen extends Component {
     return (
       <View style={[styles.container, { marginBottom: containerMargin }]}>
         <View style={styles.display}>
-          {this.props.digits.map((digit, index) => {
-            return (
-              <View
-                key={index}
-                style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
-              >
-                {digit !== null &&
-                  <Text style={styles.digitDisplayText}>
-                    {digit}
-                  </Text>
-                }
-              </View>
-            );
-          })}
+          <View style={styles.displayRow}>
+            {this.props.digits.map((digit, index) => {
+              return (
+                <View
+                  key={index}
+                  style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
+                >
+                  {digit !== null &&
+                    <Text style={styles.digitDisplayText}>
+                      {digit}
+                    </Text>
+                  }
+                </View>
+              );
+            })}
+          </View>
+          {this.state.numberNotFound &&
+            <View style={styles.tryAgainMessage}>
+              <Text style={styles.tryAgainText}>
+                {I18n.t('tryAgain')}
+              </Text>
+            </View>
+          }
         </View>
         <View style={[styles.digitPad, { width }]}>
           <View style={styles.digitRow}>
