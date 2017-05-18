@@ -2,6 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
+import { TourStop } from '../models/tourStop';
 
 import {
   StyleSheet,
@@ -12,7 +13,7 @@ import {
   Image,
 } from 'react-native';
 
-import TourStop from '../containers/tourStop';
+import TourStopScreen from '../containers/tourStop';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -39,9 +40,10 @@ const styles = StyleSheet.create({
   },
   digitDisplayText: {
     color: OFF_BLACK,
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: '600',
     borderBottomWidth: 5,
+    textAlign: 'center',
     borderBottomColor: 'white',
   },
   emptyDigit: {
@@ -53,14 +55,16 @@ const styles = StyleSheet.create({
   digitPad: {
     flex: 0.7,
     padding: 5,
+    alignItems: 'center',
   },
   digitRow: {
     flexDirection: 'row',
   },
   digit: {
-    flex: 0.3,
     height: 60,
-    margin: 5,
+    width: 60,
+    borderRadius: 30,
+    margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: TURQUOISE,
@@ -71,9 +75,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   nonDigit: {
-    flex: 0.3,
-    margin: 5,
+    margin: 10,
     height: 60,
+    width: 60,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -103,25 +107,17 @@ class SearchByNumberScreen extends Component {
 
   loadTourStop(digits) {
     let tourStop;
-    this.props.tourStops.find((floor) => {
-      return floor.stops.find((stop) => {
-        const audioContent = stop.audioContent.find((audioClip) => {
-          if (audioClip.title === digits.toString()) return true;
-          return false;
-        });
-        if (audioContent !== undefined) {
-          tourStop = stop;
-          return true;
-        }
-        return false;
-      });
-    });
+    const stops = TourStop.allRealmObjects();
+    const tourStops = stops.filtered(`audioContent.title = '${digits.toString()}'`);
+    if (tourStops.length > 0) {
+      tourStop = tourStops[0];
+    }
 
     if (tourStop !== undefined) {
       this.props.actions.editDigits([null, null, null]);
       this.props.navigator.push({
         title: tourStop.shortTitle,
-        component: TourStop,
+        component: TourStopScreen,
         barTintColor: '#ffffff',
         tintColor: TEAL,
         titleTextColor: OFF_BLACK,
