@@ -7,6 +7,8 @@ import {
   realmObjectIsInvalidHelper,
 } from '../realm';
 
+import { Durations } from './durations';
+
 export class AudioContent {
   static NAME = 'AudioContent'
 
@@ -17,7 +19,7 @@ export class AudioContent {
       uuid: { type: 'string' },
       category: { type: 'string' },
       title: { type: 'string' },
-      duration: { type: 'int' },
+      duration: { type: Durations.NAME },
       depth: { type: 'int', default: 0 },
       speaker: { type: 'string' },
       audioURL: { type: 'string' },

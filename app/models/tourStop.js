@@ -8,6 +8,7 @@ import {
 } from '../realm';
 
 import { AudioContent } from './audioContent';
+import { Durations } from './durations';
 
 export class TourStop {
   static NAME = 'TourStop'
@@ -30,8 +31,9 @@ export class TourStop {
       shortCredit: { type: 'string' },
       longCredit: { type: 'string' },
       tags: { type: 'string' }, // Stored as String, but converted from Array
+      duration: { type: Durations.NAME },
       initialAudio: { type: 'string' },
-      audioContent: { type: 'list', objectType: 'AudioContent' },
+      audioContent: { type: 'list', objectType: AudioContent.NAME },
     },
   }
 
