@@ -107,6 +107,8 @@ const styles = StyleSheet.create({
   },
 });
 
+const tryAgainMessageTime = 1000; // 1 second in milliseconds
+
 class SearchByNumberScreen extends Component {
   static title = '#';
 
@@ -169,7 +171,7 @@ class SearchByNumberScreen extends Component {
           tryAgainMessage: null,
         });
         this.props.actions.editDigits([null, null, null]);
-      }, 1000);
+      }, tryAgainMessageTime);
       this.setState({
         numberNotFound: true,
         tryAgainMessage,
