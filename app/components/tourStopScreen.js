@@ -255,6 +255,18 @@ class TourStopScreen extends Component {
           <TouchableOpacity
             style={styles.playAllButton}
             activeOpacity={0.9}
+            onPress={() => {
+              this.props.actions.loadAudio(
+                this.props.audioContent,
+                this.props.audioContent[0],
+                true,
+                this.props.audioContent[0].uuid,
+                0,
+                this.props.tourStop.title,
+                this.props.currentStopUUID,
+                true,
+              );
+            }}
           >
             <Image
               style={styles.playAllButtonIcon}
