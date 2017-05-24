@@ -38,10 +38,9 @@ function addEventListeners(dispatch, autoplayOn, nextAudioExists) {
       if (autoplayOn && nextAudioExists) {
         startTimer(dispatch);
       }
-
       // Rounded because it's the duration
       dispatch(
-        audioDidFinishPlaying(body.uuid, Math.round(body.time)),
+        audioDidFinishPlaying(body.uuid, Math.round(body.time), autoplayOn),
       );
     });
 }

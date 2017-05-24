@@ -97,7 +97,7 @@ const AudioContentList = (props) => {
                   loadAudio(
                     props.audioContent,
                     content,
-                    props.autoplayOn,
+                    false,
                     props.currentAudio,
                     props.currentAudioTime,
                     props.tourStopTitle,
@@ -108,9 +108,7 @@ const AudioContentList = (props) => {
               },
             }}
           />
-          <View
-            style={index !== array.length - 1 ? styles.bottomBorder : {}}
-          />
+          <View style={index !== array.length - 1 ? styles.bottomBorder : {}} />
         </View>
       );
     });

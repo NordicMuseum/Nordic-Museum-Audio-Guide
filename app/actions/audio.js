@@ -451,11 +451,12 @@ export function updateAudioCurrentTime(uuid, time) {
   };
 }
 
-export function audioDidFinishPlaying(uuid, time) {
+export function audioDidFinishPlaying(uuid, time, displayTimer) {
   return {
     type: AUDIO_DID_FINISH_PLAYING,
     uuid,
     time,
+    displayTimer,
   };
 }
 

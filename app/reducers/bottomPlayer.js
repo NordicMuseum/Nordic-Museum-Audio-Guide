@@ -196,7 +196,7 @@ export function bottomPlayer(state = initialState, action) {
         {
           time: state.duration,
           playerStatus: PLAYER_STATUS_FINISHED,
-          timerActive: state.autoplayOn,
+          timerActive: state.autoplayOn && action.displayTimer,
           timerNumber: state.timerStartAt,
         }
       );
