@@ -163,6 +163,7 @@ class TourStopScreen extends Component {
     preferences: PropTypes.object.isRequired,
     locale: PropTypes.string.isRequired,
     autoplayInitial: PropTypes.bool.isRequired,
+    searchedByNumber: PropTypes.string,
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       loadAudio: PropTypes.func.isRequired,
@@ -197,6 +198,7 @@ class TourStopScreen extends Component {
         this.props.currentAudioTime,
         this.props.screenReader,
         this.props.autoplayInitial,
+        this.props.searchedByNumber,
       );
     }
   }

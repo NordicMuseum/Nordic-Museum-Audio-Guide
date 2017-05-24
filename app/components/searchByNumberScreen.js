@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   tryAgainMessage: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 15,
     left: 0,
     width: 200,
   },
@@ -157,7 +157,7 @@ class SearchByNumberScreen extends Component {
         passProps: {
           tab: 'TAB_SEARCH',
           tourStop,
-          intialTrack: digits.toString(),
+          searchedByNumber: digits.toString(),
           initialCategory: tourStop.initialAudio,
           imageURL: tourStop.imageURL,
         },

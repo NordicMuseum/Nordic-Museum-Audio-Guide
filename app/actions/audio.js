@@ -130,7 +130,6 @@ async function fireAudioAction(
   if (activeAudioIndex + 1 < audioContent.length) {
     nextUUID = audioContent[activeAudioIndex + 1].uuid;
   }
-
   setAudioManagerEventListeners(dispatch, autoplayOn, nextUUID !== null);
   try {
     let url = activeAudio.audioURL;
@@ -191,6 +190,7 @@ export function loadAudioContent(
   timeListened,
   screenReaderOn,
   autoplayInitial,
+  searchedByNumber,
 ) {
   AudioManager.unloadAudio();
 
@@ -258,16 +258,33 @@ export function loadAudioContent(
       return;
     }
 
-    fireAudioAction(
-      audioContent,
-      activeAudio,
-      dispatch,
-      true,
-      autoplayOn,
-      stopTitle,
-      stopUUID,
-      autoplayInitial,
-    );
+    if (searchedByNumber !== undefined) {
+      const numberToPlay = audioContent.filter((chapter) => {
+        if (chapter.title === searchedByNumber) return true;
+        return false;
+      });
+      fireAudioAction(
+        audioContent,
+        numberToPlay[0],
+        dispatch,
+        true,
+        false,
+        stopTitle,
+        stopUUID,
+        true,
+      );
+    } else {
+      fireAudioAction(
+        audioContent,
+        activeAudio,
+        dispatch,
+        true,
+        autoplayOn,
+        stopTitle,
+        stopUUID,
+        autoplayInitial,
+      );
+    }
   };
 }
 
