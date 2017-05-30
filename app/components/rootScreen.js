@@ -148,7 +148,7 @@ class RootScreen extends Component {
             />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            title={'Search #'}
+            title={I18n.t('searchScreen_Title')}
             // renderAsOriginal={true}
             icon={require('../assets/searchTab.png')}
             selectedIcon={require('../assets/searchTabSelected.png')}
@@ -167,7 +167,7 @@ class RootScreen extends Component {
               ref={SEARCH_REF}
               style={styles.container}
               initialRoute={{
-                title: 'Search #',
+                title: I18n.t('searchScreen_Title'),
                 component: SearchByNumber,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
