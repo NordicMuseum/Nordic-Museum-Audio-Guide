@@ -15,7 +15,7 @@ import {
   LOCATION_SERVICES_STATUS_AUTHORIZED,
 } from '../actions/beacon';
 
-import { OFF_WHITE, TURQUOISE, LIGHT_GRAY } from '../styles';
+import { OFF_WHITE, ACTION, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginBottom: 35,
   },
   titleLogo: {
-    tintColor: TURQUOISE,
+    tintColor: ACTION,
   },
   titleText: {
     marginHorizontal: 15,

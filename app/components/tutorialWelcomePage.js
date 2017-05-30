@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { OFF_WHITE, TURQUOISE } from '../styles';
+import { OFF_WHITE, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   logo: {
     marginTop: 125,
     alignSelf: 'center',
-    tintColor: TURQUOISE,
+    tintColor: ACTION,
   },
   text: {
     color: OFF_WHITE,

@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import { OFF_WHITE, TURQUOISE, GRAY } from '../styles';
+import { OFF_WHITE, ACTION, GRAY } from '../styles';
 
 import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
 
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginBottom: 35,
   },
   titleLogo: {
-    tintColor: TURQUOISE,
+    tintColor: ACTION,
   },
   titleText: {
     marginHorizontal: 15,

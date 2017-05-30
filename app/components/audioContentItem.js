@@ -19,7 +19,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles } from '../styles';
+import { globalStyles, SELECTED } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -132,7 +132,7 @@ class AudioContentItem extends Component {
       <View
         style={[
           styles.container,
-          active ? { backgroundColor: '#EDD6DD' } : {},
+          active ? { backgroundColor: SELECTED } : {},
         ]}
       >
         <View style={styles.row}>

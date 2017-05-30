@@ -12,7 +12,7 @@ import I18n from 'react-native-i18n';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL, LIGHT_GRAY } from '../styles';
+import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles';
 
 import AmenitiesItem from './amenitiesItem';
 import NavigationBar from './navigationBar';
@@ -54,7 +54,7 @@ const AmenitiesScreen = (props) => {
         labelStyle={{
           color: OFF_BLACK,
         }}
-        buttonColor={TEAL}
+        buttonColor={ACTION}
         backButtonPress={() => { props.navigator.pop(); }}
         barStyle={{
           backgroundColor: LIGHT_GRAY,

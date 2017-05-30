@@ -26,7 +26,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, OFF_BLACK, TEAL, TURQUOISE, LIGHT_GRAY } from '../styles.js';
+import { globalStyles, OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
 
 const width = Dimensions.get('window').width;
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     zIndex: 5,
   },
   playAllButton: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

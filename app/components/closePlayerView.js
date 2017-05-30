@@ -12,7 +12,7 @@ import {
 
 import ProgressBar from './progressBar';
 
-import { globalStyles, TURQUOISE } from '../styles';
+import { globalStyles, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -70,7 +70,7 @@ const ClosePlayerView = (props) => {
           accessibilityTraits={'button'}
           accessibilityLabel={'Close Player'}
         >
-          <Text style={[globalStyles.disclosure, { color: TURQUOISE }]}>
+          <Text style={[globalStyles.disclosure, { color: ACTION }]}>
            Close Player
           </Text>
         </TouchableOpacity>

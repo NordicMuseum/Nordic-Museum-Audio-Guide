@@ -20,7 +20,7 @@ import AccessibilityScreen from './accessibilityScreen';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL, LIGHT_GRAY } from '../styles';
+import { OFF_BLACK, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -94,7 +94,6 @@ class MuseumScreen extends Component {
                   title: I18n.t('aboutScreen_Title'),
                   component: AboutScreen,
                   barTintColor: '#ffffff',
-                  tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
                   navigationBarHidden: true,
@@ -116,7 +115,6 @@ class MuseumScreen extends Component {
                   title: I18n.t('accessibilityScreen_Title'),
                   component: AccessibilityScreen,
                   barTintColor: '#ffffff',
-                  tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
                   navigationBarHidden: true,
@@ -138,7 +136,6 @@ class MuseumScreen extends Component {
                   title: I18n.t('amenitiesScreen_Title'),
                   component: AmenitiesScreen,
                   barTintColor: '#ffffff',
-                  tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
                   navigationBarHidden: true,
@@ -160,7 +157,6 @@ class MuseumScreen extends Component {
                   title: I18n.t('settingsScreen_Title'),
                   component: SettingsScreen,
                   barTintColor: '#ffffff',
-                  tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
                   navigationBarHidden: true,
@@ -182,7 +178,6 @@ class MuseumScreen extends Component {
                   title: I18n.t('creditsScreen_Title'),
                   component: CreditsScreen,
                   barTintColor: '#ffffff',
-                  tintColor: TEAL,
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
                   navigationBarHidden: true,

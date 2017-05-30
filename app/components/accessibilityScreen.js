@@ -17,7 +17,7 @@ import NavigationBar from './navigationBar';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { globalStyles, TEAL, OFF_BLACK } from '../styles';
+import { globalStyles, ACTION, OFF_BLACK } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -39,7 +39,7 @@ const AccessibilityScreen = (props) => {
         labelStyle={{
           color: OFF_BLACK,
         }}
-        buttonColor={TEAL}
+        buttonColor={ACTION}
         backButtonPress={() => { props.navigator.pop(); }}
         barStyle={{
           backgroundColor: '#ffffff',

@@ -16,7 +16,7 @@ import TutorialLanguagePage from './tutorialLanguagePage';
 import TutorialWelcomePage from './tutorialWelcomePage';
 import TutorialNearMePage from './tutorialNearMePage';
 
-import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles';
+import { OFF_BLACK, ACTION, globalStyles } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   floatingButtonText: {
-    color: TURQUOISE,
+    color: ACTION,
   },
   dot: {
     width: 8,
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   inactiveDot: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
     opacity: 0.5,
   },
   activeDot: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
   },
 });
 

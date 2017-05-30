@@ -19,14 +19,14 @@ import {
   requestLocationServicesAuthorization,
 } from '../../actions/beacon';
 
-import { OFF_WHITE, LIGHT_GRAY, TURQUOISE } from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   notAllowedText: {
     color: OFF_WHITE,
   },
   notAllowedBackground: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
     borderWidth: 0,
     marginBottom: 0,
   },

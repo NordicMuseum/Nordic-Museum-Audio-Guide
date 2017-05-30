@@ -18,7 +18,7 @@ import TourStopScreen from '../containers/tourStop';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { TEAL, OFF_BLACK, TURQUOISE } from '../styles';
+import { TEAL, OFF_BLACK, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
   },
   digitText: {
     color: 'white',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   deleteButton: {
-    tintColor: TURQUOISE,
+    tintColor: ACTION,
     height: 30,
     width: 40,
     resizeMode: 'contain',
@@ -152,7 +152,6 @@ class SearchByNumberScreen extends Component {
         title: tourStop.shortTitle,
         component: TourStopScreen,
         barTintColor: '#ffffff',
-        tintColor: TEAL,
         titleTextColor: OFF_BLACK,
         shadowHidden: true,
         navigationBarHidden: true,

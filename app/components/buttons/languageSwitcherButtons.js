@@ -9,7 +9,7 @@ import {
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, LIGHT_GRAY, TURQUOISE } from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   offStyle: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     marginVertical: 0,
   },
   onStyle: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
     borderWidth: 0,
     marginBottom: 0,
     marginVertical: 0,

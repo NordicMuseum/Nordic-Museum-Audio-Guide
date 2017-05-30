@@ -24,14 +24,14 @@ import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
 
 import {
-   screenReaderScreenChanged,
- } from '../actions/accessibility';
+  screenReaderScreenChanged,
+} from '../actions/accessibility';
 
- import {
-    analyticsTrackBeaconRegion,
-  } from '../actions/analytics';
+import {
+  analyticsTrackBeaconRegion,
+} from '../actions/analytics';
 
-import { globalStyles, TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
+import { globalStyles, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -225,7 +225,6 @@ class NearMeScreen extends Component {
                 title: item.shortTitle,
                 component: TourStop,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
                 passProps: {

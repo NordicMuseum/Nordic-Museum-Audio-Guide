@@ -29,7 +29,7 @@ import SearchByNumber from '../containers/searchByNumber';
 import Museum from '../containers/museum';
 import BottomPlayer from '../containers/bottomPlayer';
 
-import { OFF_WHITE, TEAL, OFF_BLACK, LIGHT_GRAY } from '../styles.js';
+import { OFF_WHITE, OFF_BLACK, LIGHT_GRAY } from '../styles.js';
 
 export const BOTTOMBARHEIGHT = 49;
 
@@ -113,7 +113,6 @@ class RootScreen extends Component {
                 component: NearMe,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
               }}
@@ -143,7 +142,6 @@ class RootScreen extends Component {
                 component: Everything,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
               }}
@@ -173,7 +171,6 @@ class RootScreen extends Component {
                 component: SearchByNumber,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
               }}
@@ -203,7 +200,6 @@ class RootScreen extends Component {
                 component: Museum,
                 navigationBarHidden: true,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
               }}

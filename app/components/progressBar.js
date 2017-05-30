@@ -7,7 +7,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-import { TURQUOISE, GRAY } from '../styles';
+import { ACTION, GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +42,7 @@ const ProgressBar = (props) => {
           style={[
             styles.progressBar,
             progressWidthStyle(width, props.percentage),
-            { backgroundColor: TURQUOISE },
+            { backgroundColor: ACTION },
           ]}
         />
       </View>

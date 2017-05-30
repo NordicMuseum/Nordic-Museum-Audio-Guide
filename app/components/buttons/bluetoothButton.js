@@ -11,7 +11,7 @@ import {
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, LIGHT_GRAY, TURQUOISE } from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   onStyle: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: OFF_WHITE,
   },
   offStyle: {
-    backgroundColor: TURQUOISE,
+    backgroundColor: ACTION,
     borderWidth: 0,
     marginBottom: 0,
   },
