@@ -1,41 +1,43 @@
 {
   "26186:39016": {
-    "name": "z45k",
+    "name": "Table Settings S / z45k",
     "uuid": "26186:39016",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "60304:3501": {
-    "name": "lMAa",
+    "name": "NE Stairs 3 / lMAa",
     "uuid": "60304:3501",
     "floor": "3",
-    "region": "T7_3",
+    "region": "Strindberg",
     "blocks": []
   },
   "44397:38284": {
-    "name": "Kkuk",
+    "name": "Swedish Folk Art N / Kkuk",
     "uuid": "44397:38284",
     "floor": "4",
     "region": "Swedish Folk Art",
     "blocks": []
   },
   "4647:64443": {
-    "name": "QttE",
+    "name": "SE Stairs 4 / QttE",
     "uuid": "4647:64443",
     "floor": "4",
-    "region": "T1_4",
+    "region": "Homes and Interiors E",
     "blocks": []
   },
   "2038:13923": {
-    "name": "7TZi",
+    "name": "Power of Fashion S / 7TZi",
     "uuid": "2038:13923",
     "floor": "3",
     "region": "Power of Fashion",
-    "blocks": []
+    "blocks": [
+      "64983:52819"
+    ]
   },
   "39163:24424": {
-    "name": "M6Uy",
+    "name": "Textile Gallery N / M6Uy",
     "uuid": "39163:24424",
     "floor": "3",
     "region": "Textile Gallery",
@@ -44,364 +46,394 @@
     ]
   },
   "55254:7275": {
-    "name": "QKDq",
+    "name": "Table Settings N / QKDq",
     "uuid": "55254:7275",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "49469:24250": {
-    "name": "ooG2",
+    "name": "Great Hall NE Elevator / ooG2",
     "uuid": "49469:24250",
     "floor": "2",
     "region": "Great Hall",
     "blocks": []
   },
   "25154:16721": {
-    "name": "64uY",
+    "name": "Traditions S / 64uY",
     "uuid": "25154:16721",
     "floor": "3",
     "region": "Traditions",
     "blocks": []
   },
   "19495:48956": {
-    "name": "KoTj",
+    "name": "SE Stairs 4 / KoTj",
     "uuid": "19495:48956",
     "floor": "4",
-    "region": "T1_4",
+    "region": "Homes and Interiors E",
     "blocks": []
   },
   "12560:22011": {
-    "name": "nwGm",
+    "name": "Entrance N / nwGm",
     "uuid": "12560:22011",
     "floor": "2",
     "region": "Entrance",
     "blocks": []
   },
   "37149:53082": {
-    "name": "g2cm",
+    "name": "Homes and Interiors SW / g2cm",
     "uuid": "37149:53082",
     "floor": "4",
     "region": "Homes and Interiors W",
     "blocks": []
   },
+  "37531:44693": {
+    "name": "Homes and Interiors EC / 4IXe",
+    "uuid": "37531:44693",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "blocks": []
+  },
   "56649:2920": {
-    "name": "irXK",
+    "name": "SW Stairs 4 / irXK",
     "uuid": "56649:2920",
     "floor": "4",
-    "region": "T2_4",
+    "region": "Homes and Interiors W",
     "blocks": []
   },
   "1734:56714": {
-    "name": "1AGJ",
+    "name": "Homes and Interiors NW / 1AGJ",
     "uuid": "1734:56714",
     "floor": "4",
     "region": "Homes and Interiors W",
     "blocks": []
   },
   "13181:47913": {
-    "name": "fLrD",
+    "name": "Homes and Interiors SE / fLrD",
     "uuid": "13181:47913",
     "floor": "4",
     "region": "Homes and Interiors E",
     "blocks": []
   },
   "8192:38137": {
-    "name": "nWyX",
+    "name": "Homes and Interiors SW / nWyX",
     "uuid": "8192:38137",
     "floor": "4",
     "region": "Homes and Interiors W",
     "blocks": []
   },
   "59632:58752": {
-    "name": "J8Kg",
+    "name": "SW Stairs 2 / J8Kg",
     "uuid": "59632:58752",
     "floor": "2",
     "region": "T3_2",
     "blocks": []
   },
   "64331:55483": {
-    "name": "Rc3t",
+    "name": "SW Stairs 3 / Rc3t",
     "uuid": "64331:55483",
     "floor": "3",
     "region": "T3_3",
     "blocks": []
   },
   "46380:64788": {
-    "name": "HgPZ",
+    "name": "Table Settings N / HgPZ",
     "uuid": "46380:64788",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "10721:32292": {
-    "name": "IXIf",
+    "name": "SE Stairs 2 / IXIf",
     "uuid": "10721:32292",
     "floor": "2",
     "region": "T1_2",
     "blocks": []
   },
   "17750:62531": {
-    "name": "85FB",
+    "name": "SW Stairs 3 / 85FB",
     "uuid": "17750:62531",
     "floor": "3",
     "region": "T3_3",
     "blocks": []
   },
   "2699:50318": {
-    "name": "xGCr",
+    "name": "Table Settings S / xGCr",
     "uuid": "2699:50318",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "49552:65149": {
-    "name": "lXoB",
+    "name": "SE Stairs 3 / lXoB",
     "uuid": "49552:65149",
     "floor": "3",
     "region": "T1_3",
     "blocks": []
   },
   "15986:5921": {
-    "name": "J7uw",
+    "name": "NW Stairs 4 / J7uw",
     "uuid": "15986:5921",
     "floor": "4",
-    "region": "T5_4",
+    "region": "Sapmi",
     "blocks": []
   },
   "47336:29503": {
-    "name": "kqSA",
+    "name": "Sapmi S / kqSA",
     "uuid": "47336:29503",
     "floor": "4",
     "region": "Sapmi",
     "blocks": []
   },
   "36045:43556": {
-    "name": "BDmZ",
+    "name": "Homes and Interiors NE / BDmZ",
     "uuid": "36045:43556",
     "floor": "4",
     "region": "Homes and Interiors E",
     "blocks": []
   },
   "2925:12947": {
-    "name": "q1jZ",
+    "name": "Swedish Folk Art S / q1jZ",
     "uuid": "2925:12947",
     "floor": "4",
     "region": "Swedish Folk Art",
     "blocks": []
   },
   "53648:49383": {
-    "name": "klxp",
+    "name": "Central Stairs 4S / klxp",
     "uuid": "53648:49383",
     "floor": "4",
-    "region": "Central Stairs 4",
+    "region": "Jewellery",
     "blocks": []
   },
   "32170:20338": {
-    "name": "ge6h",
+    "name": "Sapmi N / ge6h",
     "uuid": "32170:20338",
     "floor": "4",
     "region": "Sapmi",
     "blocks": []
   },
   "26798:58347": {
-    "name": "8362",
+    "name": "Power of Fashion N / 8362",
     "uuid": "26798:58347",
     "floor": "3",
     "region": "Power of Fashion",
     "blocks": []
   },
   "52169:65240": {
-    "name": "qWBN",
+    "name": "Sapmi N / qWBN",
     "uuid": "52169:65240",
     "floor": "4",
     "region": "Sapmi",
     "blocks": []
   },
   "18104:3267": {
-    "name": "w95r",
+    "name": "Jewellery N / w95r",
     "uuid": "18104:3267",
     "floor": "3",
     "region": "Jewellery",
     "blocks": []
   },
   "57605:29522": {
-    "name": "4rtU",
+    "name": "Swedish Folk Art N / 4rtU",
     "uuid": "57605:29522",
     "floor": "4",
     "region": "Swedish Folk Art",
     "blocks": []
   },
+  "63094:30105": {
+    "name": "Power of Fashion C / XlId",
+    "uuid": "63094:30105",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "blocks": []
+  },
   "26837:18007": {
-    "name": "GY4c",
+    "name": "Strindberg E / GY4c",
     "uuid": "26837:18007",
     "floor": "3",
     "region": "Strindberg",
     "blocks": []
   },
+  "48100:31636": {
+    "name": "1940s Apartment / m02n",
+    "uuid": "48100:31636",
+    "floor": "2",
+    "region": "1940s Apartment",
+    "blocks": []
+  },
   "50459:19564": {
-    "name": "hks9",
+    "name": "Doll House / hks9",
     "uuid": "50459:19564",
     "floor": "3",
     "region": "Doll House",
     "blocks": []
   },
   "26287:33506": {
-    "name": "45mq",
+    "name": "Central Stairs 4N / 45mq",
     "uuid": "26287:33506",
     "floor": "4",
     "region": "Central Stairs 4",
     "blocks": []
   },
   "48313:21116": {
-    "name": "83hw",
+    "name": "Central Stairs 3N / 83hw",
     "uuid": "48313:21116",
     "floor": "3",
-    "region": "Central Stairs 3",
+    "region": "Power of Fashion",
     "blocks": []
   },
   "49122:20803": {
-    "name": "CpV8",
+    "name": "NE Stairs 4 / CpV8",
     "uuid": "49122:20803",
     "floor": "4",
-    "region": "T7_4",
+    "region": "Swedish Folk Art",
     "blocks": []
   },
   "48454:2700": {
-    "name": "K2SD",
+    "name": "SW Stairs 4 / K2SD",
     "uuid": "48454:2700",
     "floor": "4",
-    "region": "T2_4",
+    "region": "Homes and Interiors W",
+    "blocks": []
+  },
+  "50892:13985": {
+    "name": "Swedish Folk Art C / HehR",
+    "uuid": "50892:13985",
+    "floor": "4",
+    "region": "Swedish Folk Art",
     "blocks": []
   },
   "50397:35932": {
-    "name": "qT2i",
+    "name": "NE Stairs 2 / qT2i",
     "uuid": "50397:35932",
     "floor": "2",
     "region": "T7_2",
     "blocks": []
   },
   "30676:22048": {
-    "name": "ulXP",
+    "name": "SW Elevator 4 / ulXP",
     "uuid": "30676:22048",
     "floor": "4",
-    "region": "Elevator",
+    "region": "Homes and Interiors W",
     "blocks": []
   },
   "12049:57835": {
-    "name": "PnOZ",
+    "name": "Great Hall SW Elevator / PnOZ",
     "uuid": "12049:57835",
     "floor": "2",
     "region": "Great Hall",
     "blocks": []
   },
   "28931:30514": {
-    "name": "OOlP",
+    "name": "NW Stairs 2 / OOlP",
     "uuid": "28931:30514",
     "floor": "2",
     "region": "T5_2",
     "blocks": []
   },
   "37919:4093": {
-    "name": "wqHv",
+    "name": "Table Settings N / wqHv",
     "uuid": "37919:4093",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "8938:19670": {
-    "name": "bF7O",
+    "name": "Gustav Vasa / bF7O",
     "uuid": "8938:19670",
     "floor": "3",
     "region": "Gustav Vasa",
     "blocks": []
   },
   "45422:63734": {
-    "name": "rU4X",
+    "name": "Power of Fashion S / rU4X",
     "uuid": "45422:63734",
     "floor": "3",
     "region": "Power of Fashion",
-    "blocks": []
+    "blocks": [
+      "64983:52819"
+    ]
   },
   "25821:11923": {
-    "name": "51aw",
+    "name": "Table Settings S / 51aw",
     "uuid": "25821:11923",
     "floor": "3",
     "region": "Table Settings",
     "blocks": []
   },
   "48249:64307": {
-    "name": "gjT8",
+    "name": "Strindberg W / gjT8",
     "uuid": "48249:64307",
     "floor": "3",
     "region": "Strindberg",
     "blocks": []
   },
   "49406:10306": {
-    "name": "Z5YR",
+    "name": "Traditions S / Z5YR",
     "uuid": "49406:10306",
     "floor": "3",
     "region": "Traditions",
     "blocks": []
   },
   "50003:7050": {
-    "name": "EgXp",
+    "name": "Gustav Vasa / EgXp",
     "uuid": "50003:7050",
     "floor": "3",
     "region": "Gustav Vasa",
     "blocks": []
   },
   "916:34642": {
-    "name": "cxbF",
+    "name": "Entrance S / cxbF",
     "uuid": "916:34642",
     "floor": "2",
     "region": "Entrance",
     "blocks": []
   },
   "8894:22556": {
-    "name": "ggg3",
+    "name": "Traditions S / ggg3",
     "uuid": "8894:22556",
     "floor": "3",
     "region": "Traditions",
     "blocks": []
   },
   "62786:65337": {
-    "name": "k6mQ",
+    "name": "Central Stairs 4N / k6mQ",
     "uuid": "62786:65337",
     "floor": "4",
-    "region": "Central Stairs 4",
+    "region": "Jewellery",
     "blocks": []
   },
   "48658:50019": {
-    "name": "5oyf",
+    "name": "Swedish Folk Art S / 5oyf",
     "uuid": "48658:50019",
     "floor": "4",
     "region": "Swedish Folk Art",
     "blocks": []
   },
   "63022:61802": {
-    "name": "fjPD",
+    "name": "Traditions N / fjPD",
     "uuid": "63022:61802",
     "floor": "3",
     "region": "Traditions",
     "blocks": []
   },
   "2915:19385": {
-    "name": "fkFG",
+    "name": "Traditions N / fkFG",
     "uuid": "2915:19385",
     "floor": "3",
     "region": "Traditions",
     "blocks": []
   },
   "42635:9454": {
-    "name": "hTf0",
+    "name": "Central Stairs 3S / hTf0",
     "uuid": "42635:9454",
     "floor": "3",
-    "region": "Central Stairs 3",
+    "region": "Jewellery",
     "blocks": []
   },
   "3395:24209": {
-    "name": "zsUf",
+    "name": "Textile Gallery N / zsUf",
     "uuid": "3395:24209",
     "floor": "3",
     "region": "Textile Gallery",
@@ -410,56 +442,56 @@
     ]
   },
   "50649:38868": {
-    "name": "mSfs",
+    "name": "Jewellery S / mSfs",
     "uuid": "50649:38868",
     "floor": "3",
     "region": "Jewellery",
     "blocks": []
   },
   "41906:48910": {
-    "name": "5abs",
+    "name": "NW Stairs 3 / 5abs",
     "uuid": "41906:48910",
     "floor": "3",
-    "region": "T5_3",
+    "region": "Strindberg",
     "blocks": []
   },
   "4566:64223": {
-    "name": "RRmU",
+    "name": "NE Stairs 4 / RRmU",
     "uuid": "4566:64223",
     "floor": "4",
-    "region": "T7_4",
+    "region": "Swedish Folk Art",
     "blocks": []
   },
   "71:4198": {
-    "name": "cPvv",
+    "name": "Sapmi S / cPvv",
     "uuid": "71:4198",
     "floor": "4",
     "region": "Sapmi",
     "blocks": []
   },
   "2696:21588": {
-    "name": "KE1R",
+    "name": "NW Stairs 4 / KE1R",
     "uuid": "2696:21588",
     "floor": "4",
-    "region": "T5_4",
+    "region": "Sapmi",
     "blocks": []
   },
   "30811:7446": {
-    "name": "2eVK",
+    "name": "Power of Fashion N / 2eVK",
     "uuid": "30811:7446",
     "floor": "3",
     "region": "Power of Fashion",
     "blocks": []
   },
   "64983:52819": {
-    "name": "lvzE",
+    "name": "Central Stairs 3N / lvzE",
     "uuid": "64983:52819",
     "floor": "3",
-    "region": "Central Stairs 3",
+    "region": "Jewellery",
     "blocks": []
   },
   "41929:39606": {
-    "name": "VUZH",
+    "name": "SE Stairs 3 / VUZH",
     "uuid": "41929:39606",
     "floor": "3",
     "region": "T1_3",

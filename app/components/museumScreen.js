@@ -127,10 +127,10 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('museumScreen_ListItem3Label'),
+                label: I18n.t('amenitiesScreen_Title'),
               }}
               bottomBorder={true}
-              title={I18n.t('museumScreen_ListItem3Label')}
+              title={I18n.t('amenitiesScreen_Title')}
               onPress={() => {
                 this.props.navigator.push({
                   title: I18n.t('amenitiesScreen_Title'),
@@ -148,10 +148,10 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('museumScreen_ListItem4Label'),
+                label: I18n.t('settingsScreen_Title'),
               }}
               bottomBorder={true}
-              title={I18n.t('museumScreen_ListItem4Label')}
+              title={I18n.t('settingsScreen_Title')}
               onPress={() => {
                 this.props.navigator.push({
                   title: I18n.t('settingsScreen_Title'),
