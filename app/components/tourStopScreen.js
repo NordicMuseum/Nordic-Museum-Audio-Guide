@@ -26,7 +26,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
+import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
 
 const width = Dimensions.get('window').width;
 
@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10,
-    paddingHorizontal: 25,
+    paddingTop: 16,
+    paddingBottom: 16,
     borderRadius: 3,
   },
   playAllButtonIcon: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   audioContentInfo: {
-    paddingTop: 30,
+    paddingTop: 43,
     paddingBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -255,7 +255,7 @@ class TourStopScreen extends Component {
         </Image>
         <View style={styles.playAllButtonContainer}>
           <TouchableOpacity
-            style={styles.playAllButton}
+            style={[styles.playAllButton, { width: 0.65 * width }]}
             activeOpacity={0.9}
             onPress={() => {
               this.props.actions.loadAudio(
