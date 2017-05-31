@@ -119,7 +119,6 @@ const AccessibilityScreen = (props) => {
                 title: 'CMP Notification',
                 component: AccessibilityNotificationScreen,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
                 passProps: {

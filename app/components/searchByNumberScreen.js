@@ -18,7 +18,7 @@ import TourStopScreen from '../containers/tourStop';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { TEAL, OFF_BLACK, ACTION } from '../styles';
+import { OFF_BLACK, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
