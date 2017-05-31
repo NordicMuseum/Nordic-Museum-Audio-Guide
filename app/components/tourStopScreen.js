@@ -83,8 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 16,
-    paddingBottom: 16,
+    height: 48,
     borderRadius: 3,
   },
   playAllButtonIcon: {

@@ -17,7 +17,7 @@ import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 import { TAB_STORIES } from '../actions/navigation';
 
-import { TEAL, OFF_BLACK, LIGHT_GRAY } from '../styles';
+import { OFF_BLACK, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -98,7 +98,6 @@ class EverythingScreen extends Component {
                 title: item.shortTitle,
                 component: TourStop,
                 barTintColor: '#ffffff',
-                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
                 navigationBarHidden: true,
