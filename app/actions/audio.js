@@ -224,7 +224,7 @@ export function loadAudioContent(
         // contentToUpdate.preferencePercentage = (globalPreferences.find((preference) => {
         //  return content.category === preference.category;
         // })).percentage;
-        contentToUpdate.preferencePercentage = 1;
+        contentToUpdate.preferencePercentage = 1.1;
       }
       return contentToUpdate;
     });

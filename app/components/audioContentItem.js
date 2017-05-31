@@ -19,7 +19,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, SELECTED, HIGHLIGHTS } from '../styles';
+import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -51,7 +51,12 @@ const styles = StyleSheet.create({
   },
   highlightedNumber: {
     backgroundColor: HIGHLIGHTS,
-    padding: 2,
+    paddingVertical: 1,
+    paddingHorizontal: 3,
+    marginRight: 8,
+  },
+  highlightedNumberText: {
+    color: OFF_WHITE,
   },
 });
 
@@ -156,13 +161,13 @@ class AudioContentItem extends Component {
               >
 
                 <View style={{ flexDirection: 'row' }}>
-                  <View
-                    style={[
-                      { marginRight: 10 },
-                      audioContent.category === 'Highlight' ? styles.highlightedNumber : {},
-                    ]}
-                  >
-                    <Text style={globalStyles.body}>
+                  <View style={audioContent.category === 'Highlight' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 }}>
+                    <Text
+                      style={[
+                        globalStyles.body,
+                        audioContent.category === 'Highlight' ? styles.highlightedNumberText : {},
+                      ]}
+                    >
                       {audioContent.title}
                     </Text>
                   </View>
