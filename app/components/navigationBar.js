@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    width: 80,
+    height: 50,
   },
   backButtonLabel: {
     fontSize: 17,
