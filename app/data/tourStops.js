@@ -35,11 +35,11 @@ export const tourStops = [
           seSmj: 3,
           seSma: 3,
     },
-    initialAudio: 'INTRODUCTION',
+    initialAudio: 'HIGHLIGHT',
     audioContent: [
       {
         uuid: uuid.v4(),
-        category: 'Highlight',
+        category: 'HIGHLIGHT',
         depth: 0,
         title: '201',
         duration: {
@@ -65,7 +65,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
-        category: 'INTRODUCTION',
+        category: 'HIGHLIGHT',
         depth: 0,
         title: '202',
         duration: {
