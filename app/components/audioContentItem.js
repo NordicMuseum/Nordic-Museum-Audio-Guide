@@ -161,11 +161,11 @@ class AudioContentItem extends Component {
               >
 
                 <View style={{ flexDirection: 'row' }}>
-                  <View style={audioContent.category === 'Highlight' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 }}>
+                  <View style={audioContent.category === 'HIGHLIGHT' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 }}>
                     <Text
                       style={[
                         globalStyles.body,
-                        audioContent.category === 'Highlight' ? styles.highlightedNumberText : {},
+                        audioContent.category === 'HIGHLIGHT' ? styles.highlightedNumberText : {},
                       ]}
                     >
                       {audioContent.title}
