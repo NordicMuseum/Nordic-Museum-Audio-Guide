@@ -24,14 +24,14 @@ import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
 
 import {
-  screenReaderScreenChanged,
-} from '../actions/accessibility';
+   screenReaderScreenChanged,
+ } from '../actions/accessibility';
 
 import {
-  analyticsTrackBeaconRegion,
-} from '../actions/analytics';
+    analyticsTrackBeaconRegion,
+  } from '../actions/analytics';
 
-import { globalStyles, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
+import { globalStyles, TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -93,7 +93,7 @@ class NearMeScreen extends Component {
     screenReader: PropTypes.bool.isRequired,
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
-    floor: PropTypes.number,
+    floor: PropTypes.string,
     tracking: PropTypes.bool,
     bluetoothOn: PropTypes.bool.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
@@ -133,7 +133,7 @@ class NearMeScreen extends Component {
 
       if (this.props.floor === null) {
         storiesMessage = 'While at the museum, we show you stories based on what’s near you.';
-      } else if (this.props.floor === 7) {
+      } else if (this.props.floor === '7') {
         if (tourStopsNum === 0) {
           storiesMessage = 'There are no stories near you.';
         } else if (tourStopsNum === 1) {
@@ -225,6 +225,7 @@ class NearMeScreen extends Component {
                 title: item.shortTitle,
                 component: TourStop,
                 barTintColor: '#ffffff',
+                tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
                 passProps: {
@@ -244,9 +245,9 @@ class NearMeScreen extends Component {
     let floor;
     if (this.props.floor === null) {
       floor = I18n.t('nearMeScreen_Title');
-    } else if (this.props.floor === 0) {
+    } else if (this.props.floor === '0') {
       floor = 'Underground';
-    } else if (this.props.floor === 1) {
+    } else if (this.props.floor === '1') {
       floor = 'Entrance Space';
     } else {
       floor = `Floor ${this.props.floor}`;

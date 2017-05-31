@@ -5,6 +5,7 @@ import {
 
 // TODO: In the future load data from a database to prevent memory pressure
 import { blockRules } from '../data/beaconBlockRules';
+import newBlockRules from '../data/beaconBlockRules.json';
 
 import { TourStop } from '../models/tourStop';
 const tourStops = TourStop.allRealmObjects().sorted('order');
@@ -30,58 +31,52 @@ export function closeTourStops(state = initialState, action) {
         return state;
       }
 
-      // 1. Figure out which beacons we care about by filtering out the blocked ones
+      // 1. Filter out blocked beacons
+      const beaconsToBlock = [];
+      const beacons = _.chain(action.newBeacons)
+        .reduce((beaconList, beaconUUID) => {
+          const foundBeacon = newBlockRules[beaconUUID];
 
-      // NOTE: Blocking cascades!
-      // e.g. If 'y' blocks 'x' and 'x' blocks 'z' then even if 'x' is being
-      // blocked it will still block 'z'
-      const beaconUUIDs = action.newBeacons;
+          if (foundBeacon != null) {
+            beaconList.push(foundBeacon);
 
-      const beaconsToBlock = _(state.blockRules)
+            for (const block of foundBeacon.blocks) {
+              if (!includes(beaconsToBlock, block)) {
+                beaconsToBlock.push(block);
+              }
+            }
+          }
+
+          return beaconList;
+        }, [])
         .filter((beacon) => {
-          return includes(beaconUUIDs, beacon.uuid);
-        })
-        .flatMap('blocks')
-        .uniq()
-        .value();
-
-      const beaconsUUIDsToShow = _(beaconUUIDs)
-        .filter((uuid) => {
-          return !includes(beaconsToBlock, uuid);
+          return !includes(beaconsToBlock, beacon.uuid);
         })
         .value();
 
       // 2. Find out the users floor and regions by the remaining beacons
-      const beaconData = _(state.blockRules)
-        .filter((beacon) => {
-          return includes(beaconsUUIDsToShow, beacon.uuid);
-        })
-        .value();
-
       // A. Detect the floor the user is on
-      const detectedFloors = _(beaconData)
+      const detectedFloors = _(beacons)
         .flatMap('floor')
         .uniq()
         .value();
 
+      // Only update floor if unanimous
       let detectedFloor;
-
-      // Only update if unanimous
       if (detectedFloors.length !== 1) {
         detectedFloor = state.detectedFloor;
       } else {
         detectedFloor = detectedFloors[0];
       }
 
-      // B. Detect the regions relevent to the user
-      const detectedRegions = _(beaconData)
+      // B. Detect the regions
+      const previousRegions = _(beacons)
         .flatMap('region')
         .uniq()
         .value();
 
-      const previousRegions = detectedRegions;
+      // Only update regions if detected twice in a row
       let regions;
-
       if (state.regions.length === 0) {
         regions = previousRegions;
       } else {
