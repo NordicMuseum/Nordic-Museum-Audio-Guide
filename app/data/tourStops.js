@@ -39,7 +39,7 @@ export const tourStops = [
     audioContent: [
       {
         uuid: uuid.v4(),
-        category: 'INTRODUCTION',
+        category: 'Highlight',
         depth: 0,
         title: '201',
         duration: {

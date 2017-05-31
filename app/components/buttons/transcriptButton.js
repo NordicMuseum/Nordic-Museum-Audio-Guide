@@ -10,8 +10,14 @@ import {
 import { OFF_BLACK } from '../../styles';
 
 const styles = StyleSheet.create({
-  transcriptButton: {
+  transcriptButtonContainer: {
     width: 40,
+    height: 32,
+    paddingTop: 5,
+    alignItems: 'flex-end',
+  },
+  transcriptButton: {
+    width: 15,
     resizeMode: 'contain',
     tintColor: OFF_BLACK,
   },
@@ -41,6 +47,7 @@ const TranscriptButton = (props) => {
       accessible={true}
       accessibilityLabel={accessibilityLabel}
       accessibilityTraits={'button'}
+      style={styles.transcriptButtonContainer}
     >
       <Image
         resizeMode={'contain'}
@@ -53,7 +60,7 @@ const TranscriptButton = (props) => {
             ],
           },
         ]}
-        source={require('../../assets/DisclosureIndicatorCollapsibleOpen.png')}
+        source={require('../../assets/TranscriptButton.png')}
       />
     </TouchableOpacity>
   );

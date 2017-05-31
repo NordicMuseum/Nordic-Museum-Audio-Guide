@@ -221,9 +221,10 @@ export function loadAudioContent(
         // this should be second, so assign 100%
         contentToUpdate.preferencePercentage = 1;
       } else {
-        contentToUpdate.preferencePercentage = (globalPreferences.find((preference) => {
-          return content.category === preference.category;
-        })).percentage;
+        // contentToUpdate.preferencePercentage = (globalPreferences.find((preference) => {
+        //  return content.category === preference.category;
+        // })).percentage;
+        contentToUpdate.preferencePercentage = 1;
       }
       return contentToUpdate;
     });

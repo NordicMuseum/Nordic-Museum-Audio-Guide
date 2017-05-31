@@ -19,15 +19,16 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { globalStyles, SELECTED } from '../styles';
+import { globalStyles, SELECTED, HIGHLIGHTS } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    padding: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingTop: 16,
+    paddingBottom: 8,
+    paddingLeft: 15,
+    paddingRight: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#ffffff',
     alignItems: 'center',
@@ -35,18 +36,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    alignItems: 'center',
-  },
-  progressBar: {
-    overflow: 'hidden',
-  },
-  progressBarActive: {
-    overflow: 'hidden',
-  },
-  seconds: {
-    paddingLeft: 25,
-    fontWeight: '200',
-    fontSize: 14,
+    alignItems: 'flex-start',
   },
   transcriptContainer: {
     paddingTop: 5,
@@ -54,6 +44,14 @@ const styles = StyleSheet.create({
   },
   audioItemStatus: {
     flex: 1,
+  },
+  titleText: {
+    flexDirection: 'column',
+    flex: 1,
+  },
+  highlightedNumber: {
+    backgroundColor: HIGHLIGHTS,
+    padding: 2,
   },
 });
 
@@ -158,11 +156,18 @@ class AudioContentItem extends Component {
               >
 
                 <View style={{ flexDirection: 'row' }}>
-                  <Text style={[globalStyles.body, { marginRight: 10 }]}>
-                    {audioContent.title}
-                  </Text>
+                  <View
+                    style={[
+                      { marginRight: 10 },
+                      audioContent.category === 'Highlight' ? styles.highlightedNumber : {},
+                    ]}
+                  >
+                    <Text style={globalStyles.body}>
+                      {audioContent.title}
+                    </Text>
+                  </View>
                   <Text
-                    style={globalStyles.body}
+                    style={[globalStyles.body, styles.titleText]}
                   >
                     {parseDisplayText(I18n.t(audioContent.title))}
                   </Text>
