@@ -293,7 +293,7 @@ class TourStopScreen extends Component {
                     source={require('../assets/FloorIcon.png')}
                   />
                   <Text style={styles.floorText}>
-                    FLOOR 2
+                    {I18n.t('floor').toUpperCase()} 2
                   </Text>
                 </View>
                 <View style={styles.audioContentDuration}>
