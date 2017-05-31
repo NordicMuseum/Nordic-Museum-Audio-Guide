@@ -13,6 +13,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
+
 import { TourStop } from '../models/tourStop';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
@@ -32,8 +34,6 @@ const width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: 167,
     backgroundColor: LIGHT_GRAY,
   },
   header: {
@@ -102,6 +102,10 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   audioContentInfo: {
+    position: 'absolute',
+    top: 170,
+    left: 0,
+    right: 0,
     paddingTop: 43,
     paddingBottom: 20,
     alignItems: 'center',
@@ -141,6 +145,18 @@ const styles = StyleSheet.create({
   },
   imageTitle: {
     fontStyle: 'italic',
+  },
+  stickySection: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    paddingTop: 30,
+  },
+  stickyHeaderTitleText: {
+    backgroundColor: 'transparent',
+    color: OFF_BLACK,
+    fontWeight: '600',
+    fontSize: 17,
   },
 });
 
@@ -227,104 +243,121 @@ class TourStopScreen extends Component {
     }
 
     return (
-      <View style={{ flex: 1 }}>
-        <Image
-          style={styles.headerImage}
-          source={{ uri: this.props.imageURL }}
-        >
-          <NavigationBar
-            labelStyle={{
-              color: OFF_BLACK,
-            }}
-            buttonColor={'#ffffff'}
-            backButtonPress={() => { this.props.navigator.pop(); }}
-            barStyle={{
-              backgroundColor: 'transparent',
-              height: 44,
-            }}
-          />
-          <View
-            style={styles.headerTitle}
-            pointerEvents={'none'}
-          >
-            <Text style={styles.headerTitleText}>
-              {parseDisplayText(I18n.t(this.props.tourStop.shortTitle)).toUpperCase()}
-            </Text>
-          </View>
-        </Image>
-        <View style={styles.playAllButtonContainer}>
-          <TouchableOpacity
-            style={[styles.playAllButton, { width: 0.65 * width }]}
-            activeOpacity={0.9}
-            onPress={() => {
-              this.props.actions.loadAudio(
-                this.props.audioContent,
-                this.props.audioContent[0],
-                true,
-                this.props.audioContent[0].uuid,
-                0,
-                this.props.tourStop.title,
-                this.props.currentStopUUID,
-                true,
-              );
-            }}
-          >
-            <Image
-              style={styles.playAllButtonIcon}
-              source={require('../assets/PlayButton.png')}
-            />
-            <Text style={styles.playAllButtonText}>
-              PLAY ALL
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View
+      <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
+        <ParallaxScrollView
           style={[styles.container, { marginBottom: containerMargin }]}
-        >
-          <ScrollView
-            automaticallyAdjustContentInsets={false}
-            style={styles.scrollableContent}
-          >
-            <View style={styles.audioContentInfo}>
-              <View style={styles.audioContentQuickInfo}>
-                <View style={styles.audioContentFloor}>
-                  <Image
-                    style={styles.floorIcon}
-                    source={require('../assets/FloorIcon.png')}
-                  />
-                  <Text style={styles.floorText}>
-                    FLOOR 2
+          backgroundColor={LIGHT_GRAY}
+          contentBackgroundColor={LIGHT_GRAY}
+          parallaxHeaderHeight={254}
+          stickyHeaderHeight={64}
+          renderStickyHeader={() => (
+            <NavigationBar
+              label={parseDisplayText(I18n.t(this.props.tourStop.shortTitle))}
+              labelStyle={{
+                color: OFF_BLACK,
+              }}
+              buttonColor={OFF_BLACK}
+              backButtonPress={() => { this.props.navigator.pop(); }}
+              barStyle={{
+                backgroundColor: 'transparent',
+                height: 44,
+              }}
+            />
+          )}
+          renderForeground={() => (
+            <View style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}>
+              <Image
+                style={styles.headerImage}
+                source={{ uri: this.props.imageURL }}
+              >
+                <NavigationBar
+                  labelStyle={{
+                    color: OFF_BLACK,
+                  }}
+                  buttonColor={'#ffffff'}
+                  backButtonPress={() => { this.props.navigator.pop(); }}
+                  barStyle={{
+                    backgroundColor: 'transparent',
+                    height: 44,
+                  }}
+                />
+                <View
+                  style={styles.headerTitle}
+                  pointerEvents={'none'}
+                >
+                  <Text style={styles.headerTitleText}>
+                    {parseDisplayText(I18n.t(this.props.tourStop.shortTitle)).toUpperCase()}
                   </Text>
                 </View>
-                <View style={styles.audioContentDuration}>
+              </Image>
+              <View style={styles.playAllButtonContainer}>
+                <TouchableOpacity
+                  style={[styles.playAllButton, { width: 0.65 * width }]}
+                  activeOpacity={0.9}
+                  onPress={() => {
+                    this.props.actions.loadAudio(
+                      this.props.audioContent,
+                      this.props.audioContent[0],
+                      true,
+                      this.props.audioContent[0].uuid,
+                      0,
+                      this.props.tourStop.title,
+                      this.props.currentStopUUID,
+                      true,
+                    );
+                  }}
+                >
                   <Image
-                    style={styles.durationIcon}
-                    source={require('../assets/ClockIcon.png')}
+                    style={styles.playAllButtonIcon}
+                    source={require('../assets/PlayButton.png')}
                   />
-                  <Text style={styles.durationText}>
-                    30 MIN
+                  <Text style={styles.playAllButtonText}>
+                    PLAY ALL
                   </Text>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.audioContentInfo}>
+                <View style={styles.audioContentQuickInfo}>
+                  <View style={styles.audioContentFloor}>
+                    <Image
+                      style={styles.floorIcon}
+                      source={require('../assets/FloorIcon.png')}
+                    />
+                    <Text style={styles.floorText}>
+                      FLOOR 2
+                    </Text>
+                  </View>
+                  <View style={styles.audioContentDuration}>
+                    <Image
+                      style={styles.durationIcon}
+                      source={require('../assets/ClockIcon.png')}
+                    />
+                    <Text style={styles.durationText}>
+                      30 MIN
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
-            <AudioContentList
-              tourStopTitle={this.props.tourStop.shortTitle}
-              tourStopUUID={this.props.tourStop.uuid}
-              audioContent={this.props.audioContent}
-              currentAudio={this.props.currentAudio}
-              currentAudioTime={this.props.currentAudioTime}
-              autoplayOn={this.props.autoplayOn}
-              playerStatus={this.props.playerStatus}
-              screenReader={this.props.screenReader}
-              locale={this.props.locale}
-              actions={{
-                toggleAudioTranscript,
-                loadAudio,
-                togglePausePlay,
-              }}
-            />
-          </ScrollView>
-        </View>
+          )}
+        >
+          <AudioContentList
+            tourStopTitle={this.props.tourStop.shortTitle}
+            tourStopUUID={this.props.tourStop.uuid}
+            audioContent={this.props.audioContent}
+            currentAudio={this.props.currentAudio}
+            currentAudioTime={this.props.currentAudioTime}
+            autoplayOn={this.props.autoplayOn}
+            playerStatus={this.props.playerStatus}
+            screenReader={this.props.screenReader}
+            locale={this.props.locale}
+            actions={{
+              toggleAudioTranscript,
+              loadAudio,
+              togglePausePlay,
+            }}
+          />
+        </ParallaxScrollView>
       </View>
     );
   }
