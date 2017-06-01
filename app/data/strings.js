@@ -83,6 +83,7 @@ export const strings = {
     tutorialScreen_GetStarted: 'Next',
     tutorialScreen_GetStarted: 'Let’s Get Started',
     imageDetailScreen_Title: 'Artwork',
+    playAll: 'Play all',
 
     //2. MUSEUM CONTENT
     floor1_Label: 'FLOOR 1',
@@ -363,6 +364,7 @@ export const strings = {
   timeProgressView_SecondsRemaining: 'x sekunder återstår',
   closePlayerView_Text: 'Du har nått slutet av x.',
   settingsScreen_Title: '⚙️ Inställningar',
+  playAll: 'Spela alla',
 
     //2. MUSEUM CONTENT
     floor1_Label: 'PLAN 1',
@@ -371,7 +373,7 @@ export const strings = {
     floor4_Label: 'PLAN 4',
     nearMeScreen_Title: 'Nära mig',
     storiesScreen_Title: 'Bläddra',
-    museumScreen_Title: 'Mer…',
+    museumScreen_Title: 'Info',
     searchScreen_Title: 'Sök #',
     museumScreen_ListItem1Label: 'Om Nordiska museet',
     museumScreen_ListItem2Label: 'Tillgänglighet',
@@ -708,10 +710,12 @@ export const strings = {
   'bluetoothAlert_Body': 'Vai a Impostazioni, Bluetooth per attivare Bluetooth.',
   'locationServicesAlert_Body': 'Vai a Impostazioni, Privacy, Servizi di posizione, Audioguida per consentire l’accesso alla posizione durante l’utilizzo di questa app.',
   'rootScreen_MuseumTabItem': 'Informazioni',
+  'museumScreen_Title': 'Informazioni',
   'tutorialScreen_GetStarted': 'Come iniziare',
   'locationServicesAlert_Header': 'Accesso alla posizione',
   'locationServicesButton_AuthorizedLabel': 'Accesso alla posizione consentito',
   'settingsScreen_NearMeHeader': 'Vicino a me',
+  'nearMeScreen_Title': 'Vicino a me',
   'tutorialScreen_GetStarted': 'Avanti',
   'grid_Of': 'di',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Pagina x di x. Come iniziare.',
@@ -742,6 +746,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'restano x secondi',
   'closePlayerView_Text': 'Sei alla fine di x.',
   'settingsScreen_Title': '⚙ Impostazioni',
+  searchScreen_Title: 'Cerca #',
+  playAll: 'Giocare tutto',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Il Museo Nordico',
@@ -752,6 +758,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Le parti salienti',
+    'Highlights_floor2_longTitle':'Le parti salienti',
+    'Highlights_floor2_imageAccessibilityLabel':'Le parti salienti',
+    'Highlights_floor2_shortCredit':'<i>Le parti salienti</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
+
+    'Highlights_floor3_shortTitle':'Le parti salienti',
+    'Highlights_floor3_longTitle':'Le parti salienti',
+    'Highlights_floor3_imageAccessibilityLabel':'Le parti salienti',
+    'Highlights_floor3_shortCredit':'<i>Le parti salienti</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
+
+    'Highlights_floor4_shortTitle':'Le parti salienti',
+    'Highlights_floor4_longTitle':'Le parti salienti',
+    'Highlights_floor4_imageAccessibilityLabel':'Le parti salienti',
+    'Highlights_floor4_shortCredit':'<i>Le parti salienti</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
 
     //5. CHAPTER HEADERS
   '201': 'Benvenuti al Nordic Museum',
@@ -818,10 +841,12 @@ export const strings = {
   'bluetoothAlert_Body': 'انتقل إلى الإعدادات، ثم بلوتوث لتشغيل البلوتوث.',
   'locationServicesAlert_Body': 'انتقل إلى الإعدادات، ثم الخصوصية، ثم خدمات الموقع، ثم الدليل الصوتي للسماح بالوصول إلى الموقع أثناء استخدام هذا التطبيق.',
   'rootScreen_MuseumTabItem': 'معلومات',
+  'museumScreen_Title': 'معلومات',
   'tutorialScreen_GetStarted': 'هيا بنا نبدأ',
   'locationServicesAlert_Header': 'الوصول إلى الموقع',
   'locationServicesButton_AuthorizedLabel': 'تم السماح بالوصول إلى الموقع',
   'settingsScreen_NearMeHeader': 'بالقرب مني',
+  'nearMeScreen_Title': 'بالقرب مني',
   'tutorialScreen_GetStarted': 'التالى',
   'grid_Of': 'من',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'صفحة x من x. هيا بنا نبدأ.',
@@ -852,6 +877,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'هناك x ثانية متبقية',
   'closePlayerView_Text': 'لقد وصلت إلى نهاية x.',
   'settingsScreen_Title': '⚙ الإعدادات',
+  searchScreen_Title: 'بحث #',
+  playAll: 'لعب كل',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'متحف الشمال ',
@@ -863,6 +890,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'مقتطفات',
+    'Highlights_floor2_longTitle':'مقتطفات',
+    'Highlights_floor2_imageAccessibilityLabel':'مقتطفات',
+    'Highlights_floor2_shortCredit':'<i>مقتطفات</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
+
+    'Highlights_floor3_shortTitle':'مقتطفات',
+    'Highlights_floor3_longTitle':'مقتطفات',
+    'Highlights_floor3_imageAccessibilityLabel':'مقتطفات',
+    'Highlights_floor3_shortCredit':'<i>مقتطفات</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
+
+    'Highlights_floor4_shortTitle':'مقتطفات',
+    'Highlights_floor4_longTitle':'مقتطفات',
+    'Highlights_floor4_imageAccessibilityLabel':'مقتطفات',
+    'Highlights_floor4_shortCredit':'<i>مقتطفات</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
 
     //5. CHAPTER HEADERS
   '201': 'مرحباً بكم في متحف الشمال',
@@ -928,10 +972,12 @@ export const strings = {
   'bluetoothAlert_Body': 'Vaya a Ajustes > Bluetooth para activar el Bluetooth',
   'locationServicesAlert_Body': 'Vaya a Ajustes > Privacidad > Servicios de Ubicación > Audioguía para permitir el acceso a su ubicación mientras utiliza la aplicación.',
   'rootScreen_MuseumTabItem': 'Información',
+  'museumScreen_Title': 'Información',
   'tutorialScreen_GetStarted': 'Empecemos',
   'locationServicesAlert_Header': 'Acceso de ubicación',
   'locationServicesButton_AuthorizedLabel': 'Acceso de ubicación permitido',
   'settingsScreen_NearMeHeader': 'Cerca de mí',
+  'nearMeScreen_Title': 'Cerca de mí',
   'tutorialScreen_GetStarted': 'Siguiente',
   'grid_Of': 'de',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Página x de x. Empecemos.',
@@ -962,6 +1008,9 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'x segundos restantes',
   'closePlayerView_Text': 'Ha llegado al final de x.',
   'settingsScreen_Title': '⚙ Ajustes',
+  searchScreen_Title: 'Buscar #',
+  museumScreen_Title: 'Información',
+  playAll: 'Jugar todo',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'El Museo Nórdico',
@@ -974,6 +1023,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Atracciones principales',
+    'Highlights_floor2_longTitle':'Atracciones principales',
+    'Highlights_floor2_imageAccessibilityLabel':'Atracciones principales',
+    'Highlights_floor2_shortCredit':'<i>Atracciones principales</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
+
+    'Highlights_floor3_shortTitle':'Atracciones principales',
+    'Highlights_floor3_longTitle':'Atracciones principales',
+    'Highlights_floor3_imageAccessibilityLabel':'Atracciones principales',
+    'Highlights_floor3_shortCredit':'<i>Atracciones principales</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
+
+    'Highlights_floor4_shortTitle':'Atracciones principales',
+    'Highlights_floor4_longTitle':'Atracciones principales',
+    'Highlights_floor4_imageAccessibilityLabel':'Atracciones principales',
+    'Highlights_floor4_shortCredit':'<i>Atracciones principales</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',    
 
     //5. CHAPTER HEADERS
   '201': 'Bienvenidos al Museo Nórdico',
@@ -1038,10 +1104,12 @@ export const strings = {
   'bluetoothAlert_Body': 'Aktivoi Bluetooth valitsemalla Asetukset ja Bluetooth.',
   'locationServicesAlert_Body': 'Anna laitteelle oikeus käyttää paikannusta, kun käytät tätä sovellusta, valitsemalla Asetukset, Yksityisyys, Paikannus ja Ääniopas.',
   'rootScreen_MuseumTabItem': 'Info',
+  'museumScreen_Title': 'Info',
   'tutorialScreen_GetStarted': 'Aloitetaan',
   'locationServicesAlert_Header': 'Paikannus',
   'locationServicesButton_AuthorizedLabel': 'Paikannus sallittu',
   'settingsScreen_NearMeHeader': 'Lähelläni',
+  'nearMeScreen_Title': 'Lähelläni',
   'tutorialScreen_GetStarted': 'Seuraava',
   'grid_Of': '',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Sivu x / x. Aloitetaan.',
@@ -1072,6 +1140,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'x sekuntia jäljellä',
   'closePlayerView_Text': 'x on lopussa.',
   'settingsScreen_Title': '⚙ Asetukset',
+  searchScreen_Title: 'Haku #',
+  playAll: 'Pelaa kaikki',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Nordiska museet',
@@ -1082,6 +1152,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Kohokohtia',
+    'Highlights_floor2_longTitle':'Kohokohtia',
+    'Highlights_floor2_imageAccessibilityLabel':'Kohokohtia',
+    'Highlights_floor2_shortCredit':'<i>Kohokohtia</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
+
+    'Highlights_floor3_shortTitle':'Kohokohtia',
+    'Highlights_floor3_longTitle':'Kohokohtia',
+    'Highlights_floor3_imageAccessibilityLabel':'Kohokohtia',
+    'Highlights_floor3_shortCredit':'<i>Kohokohtia</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
+
+    'Highlights_floor4_shortTitle':'Kohokohtia',
+    'Highlights_floor4_longTitle':'Kohokohtia',
+    'Highlights_floor4_imageAccessibilityLabel':'Kohokohtia',
+    'Highlights_floor4_shortCredit':'<i>Kohokohtia</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
 
     //5. CHAPTER HEADERS
   '201': 'Tervetuloa Nordiska museetiin',
@@ -1147,10 +1234,12 @@ export const strings = {
   'bluetoothAlert_Body': '',
   'locationServicesAlert_Body': 'Gehen Sie zu Einstellungen, dann zu Datenschutz, dann zu Ortungsdiensten, dann zu Audioguide, um Ortungsdienste zuzulassen, während Sie diese App benutzen.',
   'rootScreen_MuseumTabItem': 'Info',
+  'museumScreen_Title': 'Info',
   'tutorialScreen_GetStarted': 'Fangen wir an',
   'locationServicesAlert_Header': 'Zugang zum Standort',
   'locationServicesButton_AuthorizedLabel': 'Zugang zum Standort zugelassen',
   'settingsScreen_NearMeHeader': 'In meiner Nähe',
+  'nearMeScreen_Title': 'In meiner Nähe',
   'tutorialScreen_GetStarted': 'Weiter',
   'grid_Of': 'aus',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Seite x von x. Fangen wir an.',
@@ -1181,6 +1270,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'x Sekunden übrig',
   'closePlayerView_Text': 'Sie haben das Ende von x erreicht.',
   'settingsScreen_Title': '⚙ Einstellungen',
+  searchScreen_Title: 'Suche #',
+  playAll: 'Alles spielen',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Das Nordische Museum',
@@ -1191,6 +1282,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Höhepunkte',
+    'Highlights_floor2_longTitle':'Höhepunkte',
+    'Highlights_floor2_imageAccessibilityLabel':'Höhepunkte',
+    'Highlights_floor2_shortCredit':'<i>Höhepunkte</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
+
+    'Highlights_floor3_shortTitle':'Höhepunkte',
+    'Highlights_floor3_longTitle':'Höhepunkte',
+    'Highlights_floor3_imageAccessibilityLabel':'Höhepunkte',
+    'Highlights_floor3_shortCredit':'<i>Höhepunkte</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
+
+    'Highlights_floor4_shortTitle':'Höhepunkte',
+    'Highlights_floor4_longTitle':'Höhepunkte',
+    'Highlights_floor4_imageAccessibilityLabel':'Höhepunkte',
+    'Highlights_floor4_shortCredit':'<i>Höhepunkte</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
 
     //5. CHAPTER HEADERS
   '201': 'Willkommen im Nordischen Museum',
@@ -1255,10 +1363,12 @@ export const strings = {
   'bluetoothAlert_Body': 'Перейдите в Настройки и к опции Bluetooth, чтобы ее включить',
   'locationServicesAlert_Body': 'Перейдите в Настройки, затем к опциям ',
   'rootScreen_MuseumTabItem': 'Информация',
+  'museumScreen_Title': 'Информация',
   'tutorialScreen_GetStarted': 'Начнем.',
   'locationServicesAlert_Header': 'Доступ к информации об объекте',
   'locationServicesButton_AuthorizedLabel': 'Доступ к информации об объекте включен',
   'settingsScreen_NearMeHeader': 'Около меня',
+  'nearMeScreen_Title': 'Около меня',
   'tutorialScreen_GetStarted': 'Далее',
   'grid_Of': 'Из',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Страница х из х. Начнем.',
@@ -1289,6 +1399,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'Остается Х секунд',
   'closePlayerView_Text': 'Вы дошли до конца Х',
   'settingsScreen_Title': '⚙ Настройки',
+  searchScreen_Title: 'Поиск #',
+  playAll: 'Играть все',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Музей северных стран',
@@ -1299,6 +1411,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Реликвии',
+    'Highlights_floor2_longTitle':'Реликвии',
+    'Highlights_floor2_imageAccessibilityLabel':'Реликвии',
+    'Highlights_floor2_shortCredit':'<i>Реликвии</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Реликвии</i>',
+
+    'Highlights_floor3_shortTitle':'Реликвии',
+    'Highlights_floor3_longTitle':'Реликвии',
+    'Highlights_floor3_imageAccessibilityLabel':'Реликвии',
+    'Highlights_floor3_shortCredit':'<i>Реликвии</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Реликвии</i>',
+
+    'Highlights_floor4_shortTitle':'Реликвии',
+    'Highlights_floor4_longTitle':'Реликвии',
+    'Highlights_floor4_imageAccessibilityLabel':'Реликвии',
+    'Highlights_floor4_shortCredit':'<i>Реликвии</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Реликвии</i>',
 
     //5. CHAPTER HEADERS
   '201': 'Добро пожаловать в Северный музей',
@@ -1363,10 +1492,12 @@ export const strings = {
   'bluetoothAlert_Body': 'Allez dans ',
   'locationServicesAlert_Body': 'Allez dans ',
   'rootScreen_MuseumTabItem': 'Infos',
+  'museumScreen_Title': 'Infos',
   'tutorialScreen_GetStarted': 'Commencer',
   'locationServicesAlert_Header': 'Localisation',
   'locationServicesButton_AuthorizedLabel': 'Localisation autorisée',
   'settingsScreen_NearMeHeader': 'À proximité',
+  'nearMeScreen_Title': 'À proximité',
   'tutorialScreen_GetStarted': 'Suivant',
   'grid_Of': 'de',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': 'Page x sur x. Commencer.',
@@ -1397,6 +1528,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': 'x secondes restantes',
   'closePlayerView_Text': 'Vous avez atteint la fin de x.',
   'settingsScreen_Title': '⚙ Réglages',
+  searchScreen_Title: 'Rechercher #',
+  playAll: 'Jouer à tous',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: 'Le musée nordique',
@@ -1407,6 +1540,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Les incontournables',
+    'Highlights_floor2_longTitle':'Les incontournables',
+    'Highlights_floor2_imageAccessibilityLabel':'Les incontournables',
+    'Highlights_floor2_shortCredit':'<i>Les incontournables</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
+
+    'Highlights_floor3_shortTitle':'Les incontournables',
+    'Highlights_floor3_longTitle':'Les incontournables',
+    'Highlights_floor3_imageAccessibilityLabel':'Les incontournables',
+    'Highlights_floor3_shortCredit':'<i>Les incontournables</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
+
+    'Highlights_floor4_shortTitle':'Les incontournables',
+    'Highlights_floor4_longTitle':'Les incontournables',
+    'Highlights_floor4_imageAccessibilityLabel':'Les incontournables',
+    'Highlights_floor4_shortCredit':'<i>Les incontournables</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
 
     //5. CHAPTER HEADERS
   '201': 'Bienvenue au Musée nordique',
@@ -1471,10 +1621,12 @@ export const strings = {
   'bluetoothAlert_Body': '前往“设置”，选择“蓝牙”启动蓝牙功能。',
   'locationServicesAlert_Body': '前往“设置”，依次选择“隐私”、“定位服务”、“语音讲解”，允许本应用共享位置。',
   'rootScreen_MuseumTabItem': '信息',
+  'museumScreen_Title': '信息',
   'tutorialScreen_GetStarted': '现在开始吧',
   'locationServicesAlert_Header': '共享位置',
   'locationServicesButton_AuthorizedLabel': '已允许共享位置',
   'settingsScreen_NearMeHeader': '附近展览',
+  'nearMeScreen_Title': '附近展览',
   'tutorialScreen_GetStarted': '下一项',
   'grid_Of': '来自',
   'tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel': '第x页，共x页，开始',
@@ -1505,6 +1657,8 @@ export const strings = {
   'timeProgressView_SecondsRemaining': '剩余x秒',
   'closePlayerView_Text': '您已欣赏完x。',
   'settingsScreen_Title': '⚙ 设置',
+  searchScreen_Title: '搜索 #',
+  playAll: '全部播放',
 
     //2. MUSEUM CONTENT
     aboutScreen_Title: '北欧博物馆',
@@ -1515,6 +1669,23 @@ export const strings = {
     //3. AMENITIES
 
     //4. STORY HEADERS
+    'Highlights_floor2_shortTitle':'Höjdpunkter',
+    'Highlights_floor2_longTitle':'Höjdpunkter',
+    'Highlights_floor2_imageAccessibilityLabel':'Höjdpunkter',
+    'Highlights_floor2_shortCredit':'<i>Höjdpunkter</i>',
+    'Highlights_floor2_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+
+    'Highlights_floor3_shortTitle':'Höjdpunkter',
+    'Highlights_floor3_longTitle':'Höjdpunkter',
+    'Highlights_floor3_imageAccessibilityLabel':'Höjdpunkter',
+    'Highlights_floor3_shortCredit':'<i>Höjdpunkter</i>',
+    'Highlights_floor3_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+
+    'Highlights_floor4_shortTitle':'Höjdpunkter',
+    'Highlights_floor4_longTitle':'Höjdpunkter',
+    'Highlights_floor4_imageAccessibilityLabel':'Höjdpunkter',
+    'Highlights_floor4_shortCredit':'<i>Höjdpunkter</i>',
+    'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
 
     //5. CHAPTER HEADERS
   '201': '欢迎来到北欧博物馆',

@@ -313,7 +313,7 @@ class TourStopScreen extends Component {
                     source={require('../assets/PlayButton.png')}
                   />
                   <Text style={styles.playAllButtonText}>
-                    PLAY ALL
+                    {parseDisplayText(I18n.t('playAll')).toUpperCase()}
                   </Text>
                 </TouchableOpacity>
               </View>
