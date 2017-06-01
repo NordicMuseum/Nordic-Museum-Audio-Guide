@@ -1300,6 +1300,12 @@ export const strings = {
     'Highlights_floor4_shortCredit':'<i>Höhepunkte</i>',
     'Highlights_floor4_longCredit':'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
 
+    'TableSettings_shortTitle':'Tischdekorationen',
+    'TableSettings_longTitle':'Tischdekorationen',
+    'TableSettings_imageAccessibilityLabel':'Tischdekorationen',
+    'TableSettings_shortCredit':'<i>Tischdekorationen</i>',
+    'TableSettings_longCredit':'Photo: Karolina Kristensson\n<i>Tischdekorationen</i>',
+
     //5. CHAPTER HEADERS
   '201': 'Willkommen im Nordischen Museum',
   '202': 'Die Wohnung der 1940er Jahre',
