@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 48,
-    borderRadius: 3,
+    borderRadius: 9,
   },
   playAllButtonIcon: {
     tintColor: '#ffffff',

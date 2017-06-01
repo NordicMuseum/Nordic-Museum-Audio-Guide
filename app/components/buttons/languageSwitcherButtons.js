@@ -16,12 +16,14 @@ const styles = StyleSheet.create({
     borderColor: LIGHT_GRAY,
     backgroundColor: OFF_WHITE,
     marginVertical: 0,
+    borderRadius: 0,
   },
   onStyle: {
     backgroundColor: ACTION,
     borderWidth: 0,
     marginBottom: 0,
     marginVertical: 0,
+    borderRadius: 0,
   },
   onTextStyle: {
     color: OFF_WHITE,

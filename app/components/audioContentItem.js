@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     paddingVertical: 1,
     paddingHorizontal: 3,
     marginRight: 8,
+    borderRadius: 2,
   },
   highlightedNumberText: {
     color: OFF_WHITE,
