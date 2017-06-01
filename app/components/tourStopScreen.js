@@ -250,6 +250,19 @@ class TourStopScreen extends Component {
           contentBackgroundColor={LIGHT_GRAY}
           parallaxHeaderHeight={254}
           stickyHeaderHeight={64}
+          renderFixedHeader={() => (
+            <NavigationBar
+              labelStyle={{
+                color: OFF_BLACK,
+              }}
+              buttonColor={ACTION}
+              backButtonPress={() => { this.props.navigator.pop(); }}
+              barStyle={{
+                backgroundColor: 'transparent',
+                height: 44,
+              }}
+            />
+          )}
           renderStickyHeader={() => (
             <NavigationBar
               label={parseDisplayText(I18n.t(this.props.tourStop.shortTitle))}
@@ -257,7 +270,6 @@ class TourStopScreen extends Component {
                 color: OFF_BLACK,
               }}
               buttonColor={OFF_BLACK}
-              backButtonPress={() => { this.props.navigator.pop(); }}
               barStyle={{
                 backgroundColor: 'transparent',
                 height: 44,
@@ -270,17 +282,6 @@ class TourStopScreen extends Component {
                 style={styles.headerImage}
                 source={{ uri: this.props.imageURL }}
               >
-                <NavigationBar
-                  labelStyle={{
-                    color: OFF_BLACK,
-                  }}
-                  buttonColor={'#ffffff'}
-                  backButtonPress={() => { this.props.navigator.pop(); }}
-                  barStyle={{
-                    backgroundColor: 'transparent',
-                    height: 44,
-                  }}
-                />
                 <View
                   style={styles.headerTitle}
                   pointerEvents={'none'}
