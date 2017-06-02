@@ -29,7 +29,12 @@ export function localization(state = initialState, action) {
         I18n.fallbacks = true;
       } else {
         I18n.defaultLocale = 'en';
-        I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
+        if (__DEV__) {
+          I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
+        }
+        else {
+          I18n.fallbacks = true; 
+        }
       }
       return Object.assign({},
         state,
