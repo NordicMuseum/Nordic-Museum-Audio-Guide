@@ -4366,7 +4366,7 @@ export const tourStops = [
     },
     audioURL: '412', 
     transcript: '412_transcript',
-    speaker: 'Giuseppe Acerbi',
+    speaker: 'Mary Wollstonecraft',
   },
   { 
     uuid: uuid.v4(), 
@@ -4418,7 +4418,7 @@ export const tourStops = [
     },
     audioURL: '415', 
     transcript: '415_transcript',
-    speaker: 'Mary Wollstonecraft',
+    speaker: 'Giuseppe Acerbi',
   },
   { 
     uuid: uuid.v4(), 

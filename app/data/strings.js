@@ -620,13 +620,13 @@ export const strings = {
   '406': 'Musik från tiden: Ack vad för usel koja',
   '407': 'Röst från 1751: en ny våning för amiralen',
   '408': 'I paradsängkammaren',
-  '409': 'Musik från tiden: Lento och Vivace ur Triosonate D-dur',
+  '409': 'Musik från tiden: Menuet och Marsch med variation',
   '410': 'En pigas vardag',
-  '411': 'Musik från tiden: Andante ur Sinfonia D-dur',
-  '412': 'Röst från 1799: den kalla vintern och kakelugnarna',
+  '411': 'Musik från tiden: Lento och Vivace ur Triosonate D-dur',
+  '412': 'Röst från 1790-talet: ett enklare svenskt hem',
   '413': 'I bryggarbostaden',
-  '414': 'Musik från tiden: Menuet och Marsch med variation',
-  '415': 'Röst från 1790-talet: ett enklare svenskt hem',
+  '414': 'Musik från tiden: Andante ur Sinfonia D-dur',
+  '415': 'Röst från 1799: den kalla vintern och kakelugnarna',
   '416': 'Musik från tiden: Romans ur Stråkkvartett B-dur opus 1 nr 3',
   '417': 'Röst från 1821: Årstafrun beställer empiremöblemang',
   '418': 'Musik från tiden: Första aftonen i nya hemmet och Natthimlen',
@@ -1786,7 +1786,8 @@ export const strings = {
   '456': 'En serietidning från förr',
     //6. TRANSCRIPTS
   },
-  seSme: {
+
+  seSme: { // Northern Sami
     //1. IN-APP STRINGS
     //2. MUSEUM CONTENT
     //3. AMENITIES
@@ -1794,7 +1795,7 @@ export const strings = {
     //5. CHAPTER HEADERS
     //6. TRANSCRIPTS
   },
-  seSmj: {
+  seSmj: { // Lule Sami
     //1. IN-APP STRINGS
     //2. MUSEUM CONTENT
     //3. AMENITIES
@@ -1802,7 +1803,7 @@ export const strings = {
     //5. CHAPTER HEADERS
     //6. TRANSCRIPTS
   },
-  seSma: {
+  seSma: { // Southern Sami
     //1. IN-APP STRINGS
     //2. MUSEUM CONTENT
     //3. AMENITIES
