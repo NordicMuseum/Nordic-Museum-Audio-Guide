@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   highlightedNumber: {
     backgroundColor: HIGHLIGHTS,
-    paddingVertical: 1,
+    height: 20,
     paddingHorizontal: 3,
     marginRight: 8,
     borderRadius: 2,
