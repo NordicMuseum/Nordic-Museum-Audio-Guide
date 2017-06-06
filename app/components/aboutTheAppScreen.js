@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const CreditsScreen = (props) => {
+const AboutTheAppScreen = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationBar
-        label={I18n.t('creditsScreen_Title')}
+        label={I18n.t('aboutTheAppScreen_Title')}
         labelStyle={{
           color: OFF_BLACK,
         }}
@@ -56,42 +56,59 @@ const CreditsScreen = (props) => {
           }}
           automaticallyAdjustContentInsets={false}
         >
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            Accessibility initiatives at The Andy Warhol Museum are generously supported by Allegheny Regional Asset District, The Edith L. Trees Charitable Trust, and the FISA Foundation in honor of Dr. Mary Margaret Kimmel.
+          <Text style={[globalStyles.h1, styles.creditsHeader]}>
+            {I18n.t('aboutTheAppAudioContentHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            We'd like to extend a special thank you to our invaluable consultants and partners who helped make this project possible: Ann Lapidus, Gabe McMoreland, Brian Rutherford, and Sina Bahram, Prime Access Consulting. We also thank staff across The Warhol who have worked to make this project possible.
+            {I18n.t('aboutTheAppAudioContentBody')}
           </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            Project manager
+            {I18n.t('aboutTheAppTheAppHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            Desi Gonzalez
+            {I18n.t('aboutTheAppTheAppBody')}
           </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            Educational content
+            {I18n.t('aboutTheAppProjectManagerNordicMuseumHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            Nicole Dezelon {'\n'}
-            Leah Morelli
-          </Text>
+            {I18n.t('aboutTheAppProjectManagerNordicMuseumBody')}
+          </Text>          
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            Development
+            {I18n.t('aboutTheAppProjectManagerCarnegieInstituteHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            Ruben Niculcea {'\n'}
-            Sam Ticknor
-          </Text>
+            {I18n.t('aboutTheAppProjectManagerCarnegieInstituteBody')}
+          </Text>          
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            Advisory team
+            {I18n.t('aboutTheAppDevelopmentAndDesignHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            Jeffrey Inscho {'\n'}
-            Karen Lautanen {'\n'}
-            Chris Maury {'\n'}
+            {I18n.t('aboutTheAppDevelopmentAndDesignBody')}
+          </Text>          
+          <Text style={[globalStyles.h1, styles.creditsHeader]}>
+            {I18n.t('aboutTheAppAdvisoryTeamHeader')}
           </Text>
-          <Text style={[globalStyles.body, { marginTop: 20 }]}>
-            {parseDisplayText('The Warhol section image: <i>Silver Clouds</i> installation, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola, Warhol art © The Andy Warhol Foundation for the Visual Arts, Inc.')}
+          <Text style={[globalStyles.body, globalStyles.paragraph]}>
+            {I18n.t('aboutTheAppAdvisoryTeamBody')}
+          </Text>          
+          <Text style={[globalStyles.h1, styles.creditsHeader]}>
+            {I18n.t('aboutTheAppAppIconAndDesignAssetsHeader')}
+          </Text>
+          <Text style={[globalStyles.body, globalStyles.paragraph]}>
+            {I18n.t('aboutTheAppAppIconAndDesignAssetsBody')}
+          </Text>          
+          <Text style={[globalStyles.h1, styles.creditsHeader]}>
+            {I18n.t('aboutTheAppTranslationsHeader')}
+          </Text>
+          <Text style={[globalStyles.body, globalStyles.paragraph]}>
+            {I18n.t('aboutTheAppTranslationsBody')}
+          </Text>          
+          <Text style={[globalStyles.h1, styles.creditsHeader]}>
+            {I18n.t('aboutTheAppPhotoCreditsHeader')}
+          </Text>
+          <Text style={[globalStyles.body, globalStyles.paragraph]}>
+            {I18n.t('aboutTheAppPhotoCreditsBody')}
           </Text>
         </ScrollView>
       </View>
@@ -99,8 +116,8 @@ const CreditsScreen = (props) => {
   );
 };
 
-CreditsScreen.propTypes = {
+AboutTheAppScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
 };
 
-export default CreditsScreen;
+export default AboutTheAppScreen;

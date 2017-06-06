@@ -14,7 +14,7 @@ import DisclosureCell from './disclosureCell';
 import AmenitiesScreen from '../containers/amenities';
 import AboutScreen from './aboutScreen';
 import SettingsScreen from '../containers/settings';
-import CreditsScreen from './creditsScreen';
+import AboutTheAppScreen from './aboutTheAppScreen';
 import AccessibilityScreen from './accessibilityScreen';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
@@ -169,14 +169,14 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('museumScreen_ListItem5Label'),
+                label: I18n.t('aboutTheAppScreen_Title'),
               }}
               bottomBorder={false}
-              title={I18n.t('museumScreen_ListItem5Label')}
+              title={I18n.t('aboutTheAppScreen_Title')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: I18n.t('creditsScreen_Title'),
-                  component: CreditsScreen,
+                  title: I18n.t('aboutTheAppScreen_Title'),
+                  component: AboutTheAppScreen,
                   barTintColor: '#ffffff',
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
