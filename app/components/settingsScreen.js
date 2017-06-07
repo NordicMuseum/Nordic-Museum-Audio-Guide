@@ -39,7 +39,7 @@ const SettingsScreen = (props) => {
     switchLocale,
   } = props.actions;
 
-  const paddingBottom = (playerOpen ? BOTTOMPLAYERHEIGHT : 0) + 10;
+  const paddingBottom = playerOpen ? BOTTOMPLAYERHEIGHT : 0;
 
   return (
     <View style={{ flex: 1 }}>
@@ -58,18 +58,16 @@ const SettingsScreen = (props) => {
       <View style={[styles.container, { marginBottom: BOTTOMBARHEIGHT }]}>
         <ScrollView
           contentContainerStyle={{
-            paddingTop: 10,
-            paddingLeft: 10,
-            paddingRight: 10,
             paddingBottom,
+            marginHorizontal: 25,
           }}
           automaticallyAdjustContentInsets={false}
         >
           <View style={styles.cell}>
             <LanguageSwitcherButtons
               locale={locale}
-              actions={{
-                switchLocale,
+              onPress={(languageCode) => {
+                switchLocale(languageCode);
               }}
             />
           </View>

@@ -8,7 +8,6 @@ import {
   Text,
   View,
   Image,
-  ScrollView,
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
@@ -25,7 +24,6 @@ import AudioContentList from './audioContentList';
 
 import {
   parseDisplayText,
-  parseVoiceoverText,
 } from '../utilities';
 
 import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
@@ -236,14 +234,6 @@ class TourStopScreen extends Component {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
     }
 
-    let accessibilityLabel;
-
-    if (this.props.tourStop.shortCreditAccessibilityLabel) {
-      accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCreditAccessibilityLabel);
-    } else {
-      accessibilityLabel = parseVoiceoverText(I18n.t(this.props.tourStop.shortCredit));
-    }
-
     return (
       <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
         <ParallaxScrollView
@@ -296,7 +286,6 @@ class TourStopScreen extends Component {
               <View style={styles.playAllButtonContainer}>
                 <TouchableOpacity
                   style={[styles.playAllButton, { width: 0.65 * width }]}
-                  activeOpacity={0.9}
                   onPress={() => {
                     this.props.actions.loadAudio(
                       this.props.audioContent,

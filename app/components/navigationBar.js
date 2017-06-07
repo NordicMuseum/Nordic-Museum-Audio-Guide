@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 const NavigationBar = (props) => {
   return (
     <View
-      style={[props.barStyle, styles.bar]}
+      style={[styles.bar, props.barStyle]}
     >
       {props.backButtonPress &&
         <TouchableOpacity
