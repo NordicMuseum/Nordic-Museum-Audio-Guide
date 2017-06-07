@@ -38,8 +38,9 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     backgroundColor: 'transparent',
-    color: GRAY,
-    fontSize: 55,
+    color: OFF_BLACK,
+    opacity: 0.9,
+    fontSize: 36,
     fontWeight: '600',
   },
   playAllButton: {
