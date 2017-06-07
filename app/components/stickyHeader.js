@@ -11,7 +11,6 @@ import { HEADER_BACKGROUND_COLOR, OFF_WHITE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     height: 44,
     justifyContent: 'center',
     backgroundColor: HEADER_BACKGROUND_COLOR,

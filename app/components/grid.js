@@ -10,9 +10,10 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 
-import { ListView } from 'realm/react-native';
+import StickyHeader from './stickyHeader';
 
 import {
   parseDisplayText,
@@ -25,22 +26,13 @@ const SPACING = 5;
 
 const styles = StyleSheet.create({
   container: {
-  },
-  gridColumn: {
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-  },
-  gridRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
+    flex: 1,
   },
   cellContainer: {
     marginLeft: 0,
     marginRight: 0,
     marginBottom: SPACING,
     backgroundColor: '#ccc',
-    flex: 1,
   },
   cellImage: {
     resizeMode: 'stretch',
@@ -100,6 +92,7 @@ const Grid = (props) => {
       <View
         style={[styles.cellContainer, {
           width: cellWidth,
+          flex: 1,
         }]}
         key={item.uuid}
         accessible={true}
@@ -150,20 +143,37 @@ const Grid = (props) => {
     );
   };
 
-  const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-  const dataSource = ds.cloneWithRows(props.items);
+  let totalIndex = 0;
+  let content = [];
+  let stickyHeaders = [];
+  let lastFloorSeen;
+  props.items.forEach((tourStop, index) => {
+    if (lastFloorSeen !== tourStop.floor & props.renderHeaders) {
+      stickyHeaders.push(totalIndex);
+      content.push(
+        <StickyHeader
+          key={totalIndex}
+          title={`${I18n.t('floor')} ${tourStop.floor}`}
+        />
+      );
+      totalIndex++;
+      lastFloorSeen = tourStop.floor;
+    }
+
+    content.push(
+      renderItem(tourStop, index, props.onCellPress)
+    );
+    totalIndex++;
+  });
 
   return (
     <View style={styles.container}>
-      <ListView
-        enableEmptySections={true}
-        contentContainerStyle={styles.gridRow}
-        dataSource={dataSource}
-        removeClippedSubviews={false}
-        renderRow={(item, sectionIndex, index) => {
-          return renderItem(item, index, props.onCellPress);
-        }}
-      />
+      <ScrollView
+        automaticallyAdjustContentInsets={false}
+        stickyHeaderIndices={stickyHeaders}
+      >
+        {content}
+      </ScrollView>
     </View>
   );
 };
@@ -174,6 +184,7 @@ Grid.propTypes = {
     PropTypes.object,
   ]).isRequired,
   selected: PropTypes.string,
+  renderHeaders: PropTypes.bool.isRequired,
   onCellPress: PropTypes.func.isRequired,
   screenReader: PropTypes.bool.isRequired,
   locale: PropTypes.string.isRequired,

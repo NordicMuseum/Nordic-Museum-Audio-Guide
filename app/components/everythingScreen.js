@@ -6,7 +6,6 @@ import I18n from 'react-native-i18n';
 import {
   StyleSheet,
   View,
-  ScrollView,
 } from 'react-native';
 
 import NavigationBar from './navigationBar';
@@ -68,34 +67,31 @@ class EverythingScreen extends Component {
           }}
         />
         <View style={[styles.container, { marginBottom: containerMargin }]}>
-          <ScrollView
-            automaticallyAdjustContentInsets={false}
-          >
-            <Grid
-              locale={this.props.locale}
-              items={this.props.tourStops}
-              selected={this.props.currentStopUUID}
-              screenReader={this.props.screenReader}
-              onCellPress={(item) => {
-                this.props.navigator.push({
-                  title: item.shortTitle,
-                  component: TourStop,
-                  barTintColor: '#ffffff',
-                  titleTextColor: OFF_BLACK,
-                  shadowHidden: true,
-                  navigationBarHidden: true,
-                  passProps: {
-                    tab: TAB_STORIES,
-                    floor: item.floor,
-                    duration: item.duration[this.props.locale],
-                    tourStop: item,
-                    initialCategory: item.initialAudio,
-                    imageURL: item.imageURL,
-                  },
-                });
-              }}
-            />
-          </ScrollView>
+          <Grid
+            locale={this.props.locale}
+            items={this.props.tourStops}
+            renderHeaders={true}
+            selected={this.props.currentStopUUID}
+            screenReader={this.props.screenReader}
+            onCellPress={(item) => {
+              this.props.navigator.push({
+                title: item.shortTitle,
+                component: TourStop,
+                barTintColor: '#ffffff',
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+                navigationBarHidden: true,
+                passProps: {
+                  tab: TAB_STORIES,
+                  floor: item.floor,
+                  duration: item.duration[this.props.locale],
+                  tourStop: item,
+                  initialCategory: item.initialAudio,
+                  imageURL: item.imageURL,
+                },
+              });
+            }}
+          />
         </View>
       </View>
     );

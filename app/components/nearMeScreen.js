@@ -221,6 +221,7 @@ class NearMeScreen extends Component {
           <Grid
             locale={this.props.locale}
             items={tourStops}
+            renderHeaders={false}
             screenReader={this.props.screenReader}
             onCellPress={(item) => {
               this.props.navigator.push({
