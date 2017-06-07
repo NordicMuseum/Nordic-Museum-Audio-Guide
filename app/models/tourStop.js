@@ -85,6 +85,7 @@ export class TourStop {
       shortCredit: realmObject.shortCredit,
       longCredit: realmObject.longCredit,
       tags: realmObject.tags.split(','),
+      duration: realmObject.duration,
       initialAudio: realmObject.initialAudio,
       audioContent: TourStop.jsonAudioContent(realmObject),
     };

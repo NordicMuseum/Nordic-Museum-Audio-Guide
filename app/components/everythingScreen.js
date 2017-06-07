@@ -50,6 +50,7 @@ class EverythingScreen extends Component {
     screenReader: PropTypes.bool.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
     currentFloor: PropTypes.number.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       showFloor: PropTypes.func.isRequired,
     }).isRequired,
@@ -90,6 +91,7 @@ class EverythingScreen extends Component {
           automaticallyAdjustContentInsets={false}
         >
           <Grid
+            locale={this.props.locale}
             items={this.props.tourStops[this.props.currentFloor].stops}
             selected={this.props.currentStopUUID}
             screenReader={this.props.screenReader}
@@ -103,6 +105,8 @@ class EverythingScreen extends Component {
                 navigationBarHidden: true,
                 passProps: {
                   tab: TAB_STORIES,
+                  floor: item.floor,
+                  duration: item.duration[this.props.locale],
                   tourStop: item,
                   initialCategory: item.initialAudio,
                   imageURL: item.imageURL,

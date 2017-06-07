@@ -7,8 +7,6 @@ import {
   Text,
 } from 'react-native';
 
-import I18n from 'react-native-i18n';
-
 import { HEADER_BACKGROUND_COLOR, OFF_WHITE } from '../styles';
 
 const styles = StyleSheet.create({
@@ -29,7 +27,7 @@ const StickyHeader = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyles}>
-        {I18n.t(props.title)}
+        {props.title}
       </Text>
     </View>
   );

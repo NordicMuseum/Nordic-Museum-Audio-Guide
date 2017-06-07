@@ -147,7 +147,7 @@ const Grid = (props) => {
                   source={require('../assets/ClockIcon.png')}
                 />
                 <Text style={styles.cellDurationText}>
-                  30
+                  {Math.floor(item.duration[props.locale] / 60)}
                 </Text>
                 <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
                   MIN
@@ -186,6 +186,7 @@ Grid.propTypes = {
   selected: PropTypes.string,
   onCellPress: PropTypes.func.isRequired,
   screenReader: PropTypes.bool.isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 export default Grid;

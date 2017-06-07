@@ -97,6 +97,7 @@ class NearMeScreen extends Component {
     tracking: PropTypes.bool,
     bluetoothOn: PropTypes.bool.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -218,6 +219,7 @@ class NearMeScreen extends Component {
             </Text>
           </View>
           <Grid
+            locale={this.props.locale}
             items={tourStops}
             screenReader={this.props.screenReader}
             onCellPress={(item) => {
@@ -230,6 +232,8 @@ class NearMeScreen extends Component {
                 shadowHidden: true,
                 passProps: {
                   tab: TAB_NEARME,
+                  floor: item.floor,
+                  duration: item.duration[this.props.locale],
                   tourStop: item,
                   initialCategory: item.initialAudio,
                   imageURL: item.imageURL,

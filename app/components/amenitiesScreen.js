@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 
 import {
   View,
-  Text,
   StyleSheet,
   ScrollView,
 } from 'react-native';
@@ -43,7 +42,7 @@ const AmenitiesScreen = (props) => {
     content.push(
       <StickyHeader
         key={totalIndex}
-        title={floor.floorTitle}
+        title={`${I18n.t('floor')} ${floor.floor}`}
       />
     );
     totalIndex++;

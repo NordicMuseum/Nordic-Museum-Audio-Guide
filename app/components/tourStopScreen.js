@@ -179,6 +179,8 @@ class TourStopScreen extends Component {
     locale: PropTypes.string.isRequired,
     autoplayInitial: PropTypes.bool.isRequired,
     searchedByNumber: PropTypes.string,
+    floor: PropTypes.number.isRequired,
+    duration: PropTypes.number.isRequired,
     actions: PropTypes.shape({
       toggleAudioTranscript: PropTypes.func.isRequired,
       loadAudio: PropTypes.func.isRequired,
@@ -325,7 +327,7 @@ class TourStopScreen extends Component {
                       source={require('../assets/FloorIcon.png')}
                     />
                     <Text style={styles.floorText}>
-                      {I18n.t('floor').toUpperCase()} 2
+                      {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}
                     </Text>
                   </View>
                   <View style={styles.audioContentDuration}>
@@ -334,7 +336,9 @@ class TourStopScreen extends Component {
                       source={require('../assets/ClockIcon.png')}
                     />
                     <Text style={styles.durationText}>
-                      30 MIN
+                      {`${
+                        Math.floor(this.props.duration / 60)
+                        } MIN`}
                     </Text>
                   </View>
                 </View>
