@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 
 import {
   View,
+  Text,
   StyleSheet,
   ScrollView,
 } from 'react-native';
@@ -14,9 +15,9 @@ import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
 import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles';
 
+import StickyHeader from './stickyHeader';
 import AmenitiesItem from './amenitiesItem';
 import NavigationBar from './navigationBar';
-import SegmentedController from './buttons/segmentedController';
 
 
 const styles = StyleSheet.create({
@@ -24,20 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flex: 1,
     backgroundColor: '#ffffff',
-  },
-  amenitiesContainer: {
-    margin: 10,
-    marginTop: 0,
-    paddingTop: 0,
-    padding: 10,
-    paddingBottom: 0,
-  },
-  segementedController: {
-    paddingBottom: 25,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 334,
+    marginTop: 65,
   },
 });
 
@@ -46,6 +34,31 @@ const AmenitiesScreen = (props) => {
   if (props.playerOpen) {
     containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
   }
+
+  let totalIndex = 0;
+  let content = [];
+  let stickyHeaders = [];
+  props.allAmenities.forEach((floor) => {
+    stickyHeaders.push(totalIndex);
+    content.push(
+      <StickyHeader
+        key={totalIndex}
+        title={floor.floorTitle}
+      />
+    );
+    totalIndex++;
+
+    floor.amenities.forEach((amenity, index) => {
+      content.push(
+        <AmenitiesItem
+          key={totalIndex}
+          amenity={amenity}
+          border={index !== (floor.amenities.length - 1)}
+        />
+      );
+      totalIndex++;
+    });
+  });
 
   return (
     <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
@@ -61,49 +74,17 @@ const AmenitiesScreen = (props) => {
           height: 44,
         }}
       />
-      <View style={{ alignItems: 'center', marginTop: 85 }}>
-        <View style={styles.segementedController}>
-          <SegmentedController
-            style={{ flex: 1 }}
-            buttons={[
-              {
-                label: I18n.t('floor1_Label'),
-                onPress: () => { props.actions.showFloor(0); },
-                active: props.currentFloor === 0,
-              },
-              {
-                label: I18n.t('floor2_Label'),
-                onPress: () => { props.actions.showFloor(1); },
-                active: props.currentFloor === 1,
-              },
-              {
-                label: I18n.t('floor3_Label'),
-                onPress: () => { props.actions.showFloor(2); },
-                active: props.currentFloor === 2,
-              },
-              {
-                label: I18n.t('floor4_Label'),
-                onPress: () => { props.actions.showFloor(3); },
-                active: props.currentFloor === 3,
-              },
-            ]}
-          />
-        </View>
-      </View>
-      <View style={[styles.container, { marginBottom: containerMargin }]}>
+      <View
+        style={[styles.container, {
+          marginBottom: containerMargin,
+        }]}
+      >
         <ScrollView
           automaticallyAdjustContentInsets={false}
           contentContainerStyle={{ paddingBottom: 10 }}
+          stickyHeaderIndices={stickyHeaders}
         >
-          {props.allAmenities[props.currentFloor].amenities.map((amenity, index) => {
-            return (
-              <AmenitiesItem
-                key={amenity.uuid}
-                amenity={amenity}
-                border={index !== (props.allAmenities[props.currentFloor].amenities.length - 1)}
-              />
-            );
-          })}
+          {content}
         </ScrollView>
       </View>
     </View>
@@ -114,11 +95,7 @@ AmenitiesScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
   playerOpen: PropTypes.bool.isRequired,
   allAmenities: PropTypes.array.isRequired,
-  currentFloor: PropTypes.number.isRequired,
   screenReader: PropTypes.bool.isRequired,
-  actions: PropTypes.shape({
-    showFloor: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 export default AmenitiesScreen;

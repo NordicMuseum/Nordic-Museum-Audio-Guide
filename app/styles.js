@@ -10,6 +10,8 @@ export const LIGHT_GRAY = '#EDEDED';
 export const OFF_BLACK = '#1A1A1A';
 export const OFF_WHITE = '#F7F7F7';
 
+export const HEADER_BACKGROUND_COLOR = '#bab6ba';
+
 export const HIGHLIGHTS = '#FFC200';
 export const ACTION = '#E52484';
 export const SELECTED = '#FAE3E7';
@@ -24,7 +26,7 @@ export const globalStyles = StyleSheet.create({
   },
   h1: {
     fontSize: 18,
-    fontWeight: '500',
+    fontWeight: 'bold',
     color: OFF_BLACK,
   },
   h2: {
