@@ -164,6 +164,16 @@ export const strings = {
     amenities_ToyRoomTitle: 'Toy Room',
     amenities_TemporaryExhibitionTitle: 'Temporary exhibition',
     amenities_SmallThingsTitle: 'Small Things',
+    'amenities_LibraryAndArchiveDescription': 'Welcome to browse a magazine, immerse yourself in a new interest or find sources for your research in our extensive research library and archive, which you will find on Floor 1.',
+    'amenities_WheelchairPushchairEntranceDescription': 'Entrance without stairs is on the ground floor, to the right of the main entrance.',
+    'amenities_StrollerParkingDescription': 'Unattended stroller parking is located outside the Children’s Playhouse on Floor 2 (the Great Hall).',
+    'amenities_NordicLightDescription': 'With Nordic Light, we want to look at how light – whether from nature or man-made technology – affects the way we live our lives. Focusing on people and their lives, both on ordinary days and special occasions, we look into the importance of light from dawn to dusk, and from fireplace to PH lamp.',
+    'amenities_JourneyOfLightDescription': 'In the Journey of Light, the children’s own path through the exhibition, our youngest visitors can find things that no-one else can see with the help of a magic candle.',
+    'amenities_ShapesOfLightDescription': 'Over 100 years of Nordic lamp design are displayed in a visual timeline showing how the design of lamps has changed in the Nordic region since the arrival of electricity',
+    'amenities_NorthernLightsDescription': 'Experience the fascination of the Northern Lights',
+    'amenities_LightInTraditionsDescription': 'About the significance of light in the traditions of Halloween, Advent, Nowruz (‘New Day’), Walpurgis Night and Midsummer.',
+    'amenities_ToyRoomDescription': 'The Nordic Museum’s Toy Room shows around 200 toys that children have previously played with. Through these steam engines, adventure books, teddy bears, tin soldiers, lego, puzzles and games, the visitor gets an insight into how children’s games looked in Sweden before present day. Perhaps you are reminded of your own childhood? The toy room, which was furnished at the time of the opening of the museum in 1907, was later rebuilt. In the early 2000s, it was restored to its original condition and the displays were complemented with modern toys.',
+    'amenities_SmallThingsDescription': 'The exhibition Small Things contains a variety of items that used to be found in Swedish homes. Many are from households in the upper classes of society and are from the 17th century to the 20th century. Here, everything from exclusive status objects to everyday things, massive ornaments and souvenirs are represented and can tell us about the taste of their time and the owners’ position in society.',
 
     // 4. STORY HEADERS
     'Traditions_shortTitle': 'Traditions',
