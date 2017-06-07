@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import SegmentedController from './buttons/segmentedController';
+import NavigationBar from './navigationBar';
 import Grid from './grid';
 import TourStop from '../containers/tourStop';
 
@@ -21,22 +21,18 @@ import { OFF_BLACK, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 20,
-    backgroundColor: LIGHT_GRAY,
-    alignItems: 'center',
-  },
-  scroll: {
+    alignItems: 'stretch',
     flex: 1,
     backgroundColor: '#ffffff',
+    marginTop: 64,
   },
-  segementedController: {
-    paddingTop: 25,
-    paddingBottom: 25,
-    height: 44,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 250,
+  statusBar: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 20,
+    backgroundColor: LIGHT_GRAY,
   },
 });
 
@@ -46,14 +42,10 @@ class EverythingScreen extends Component {
   static propTypes = {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
-    tourStops: PropTypes.array.isRequired,
+    tourStops: PropTypes.object.isRequired,
     screenReader: PropTypes.bool.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
-    currentFloor: PropTypes.number.isRequired,
     locale: PropTypes.string.isRequired,
-    actions: PropTypes.shape({
-      showFloor: PropTypes.func.isRequired,
-    }).isRequired,
   }
 
   render() {
@@ -63,58 +55,48 @@ class EverythingScreen extends Component {
     }
 
     return (
-      <View style={[styles.container, { marginBottom: containerMargin }]}>
-        <View style={styles.segementedController}>
-          <SegmentedController
-            style={{ flex: 1 }}
-            buttons={[
-              {
-                label: I18n.t('floor2_Label'),
-                onPress: () => { this.props.actions.showFloor(1); },
-                active: this.props.currentFloor === 1,
-              },
-              {
-                label: I18n.t('floor3_Label'),
-                onPress: () => { this.props.actions.showFloor(2); },
-                active: this.props.currentFloor === 2,
-              },
-              {
-                label: I18n.t('floor4_Label'),
-                onPress: () => { this.props.actions.showFloor(3); },
-                active: this.props.currentFloor === 3,
-              },
-            ]}
-          />
+      <View style={{ flex: 1 }}>
+        <View style={styles.statusBar} />
+        <NavigationBar
+          label={I18n.t('storiesScreen_Title')}
+          labelStyle={{
+            color: OFF_BLACK,
+          }}
+          barStyle={{
+            backgroundColor: LIGHT_GRAY,
+            height: 44,
+          }}
+        />
+        <View style={[styles.container, { marginBottom: containerMargin }]}>
+          <ScrollView
+            automaticallyAdjustContentInsets={false}
+          >
+            <Grid
+              locale={this.props.locale}
+              items={this.props.tourStops}
+              selected={this.props.currentStopUUID}
+              screenReader={this.props.screenReader}
+              onCellPress={(item) => {
+                this.props.navigator.push({
+                  title: item.shortTitle,
+                  component: TourStop,
+                  barTintColor: '#ffffff',
+                  titleTextColor: OFF_BLACK,
+                  shadowHidden: true,
+                  navigationBarHidden: true,
+                  passProps: {
+                    tab: TAB_STORIES,
+                    floor: item.floor,
+                    duration: item.duration[this.props.locale],
+                    tourStop: item,
+                    initialCategory: item.initialAudio,
+                    imageURL: item.imageURL,
+                  },
+                });
+              }}
+            />
+          </ScrollView>
         </View>
-        <ScrollView
-          style={styles.scroll}
-          automaticallyAdjustContentInsets={false}
-        >
-          <Grid
-            locale={this.props.locale}
-            items={this.props.tourStops[this.props.currentFloor].stops}
-            selected={this.props.currentStopUUID}
-            screenReader={this.props.screenReader}
-            onCellPress={(item) => {
-              this.props.navigator.push({
-                title: item.shortTitle,
-                component: TourStop,
-                barTintColor: '#ffffff',
-                titleTextColor: OFF_BLACK,
-                shadowHidden: true,
-                navigationBarHidden: true,
-                passProps: {
-                  tab: TAB_STORIES,
-                  floor: item.floor,
-                  duration: item.duration[this.props.locale],
-                  tourStop: item,
-                  initialCategory: item.initialAudio,
-                  imageURL: item.imageURL,
-                },
-              });
-            }}
-          />
-        </ScrollView>
       </View>
     );
   }

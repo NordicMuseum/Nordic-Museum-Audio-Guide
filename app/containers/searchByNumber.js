@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
     digits: state.searchByNumber.digits,
     playerOpen: state.bottomPlayer.playerOpen,
     screenReader: state.accessibility.screenReader,
-    tourStops: state.filteredTourStops.tourStops,
+    tourStops: state.allTourStops.tourStops,
+    locale: state.localization.locale,
   };
 };
 

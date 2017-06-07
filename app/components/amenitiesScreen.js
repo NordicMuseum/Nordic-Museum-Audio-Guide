@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flex: 1,
     backgroundColor: '#ffffff',
-    marginTop: 65,
+    marginTop: 64,
   },
 });
 

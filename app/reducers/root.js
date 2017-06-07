@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 
 import { beacon } from './beacon';
 import { closeTourStops } from './closeTourStops';
-import { filteredTourStops } from './filteredTourStops';
+import { allTourStops } from './allTourStops';
 import { bottomPlayer } from './bottomPlayer';
 import { audioContent } from './audioContent';
 import { amenities } from './amenities';
@@ -17,7 +17,7 @@ import { searchByNumber } from './searchByNumber';
 const rootReducer = combineReducers({
   beacon,
   closeTourStops,
-  filteredTourStops,
+  allTourStops,
   bottomPlayer,
   audioContent,
   amenities,

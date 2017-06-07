@@ -4,8 +4,7 @@ import {
 } from '../actions/beacon';
 
 // TODO: In the future load data from a database to prevent memory pressure
-import { blockRules } from '../data/beaconBlockRules';
-import newBlockRules from '../data/beaconBlockRules.json';
+import blockRules from '../data/beaconBlockRules.json';
 
 import { TourStop } from '../models/tourStop';
 const tourStops = TourStop.allRealmObjects().sorted('order');
@@ -21,7 +20,6 @@ export const initialState = {
   ],
   detectedFloor: null,
   tourStops: {},
-  blockRules,
 };
 
 export function closeTourStops(state = initialState, action) {
@@ -35,7 +33,7 @@ export function closeTourStops(state = initialState, action) {
       const beaconsToBlock = [];
       const beacons = _.chain(action.newBeacons)
         .reduce((beaconList, beaconUUID) => {
-          const foundBeacon = newBlockRules[beaconUUID];
+          const foundBeacon = blockRules[beaconUUID];
 
           if (foundBeacon != null) {
             beaconList.push(foundBeacon);

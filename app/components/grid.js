@@ -83,27 +83,17 @@ const styles = StyleSheet.create({
 
 const Grid = (props) => {
   const { width, height } = Dimensions.get('window');
-  const cellWidth = width; // 2 items per row
+  const cellWidth = width;
   const cellHeight = height / 4;
   const gridLength = props.items.length;
 
-  const renderItem = (item, index, onPress, oddCell, screenReader) => {
+  const renderItem = (item, index, onPress) => {
     let traits = [];
-    const realIndex = parseInt(index, 10) + 1;
 
     if (item.uuid === props.selected) {
       traits = ['button', 'startsMedia', 'selected'];
     } else {
       traits = ['button', 'startsMedia'];
-    }
-
-    if (!screenReader) {
-      const oddIndex = realIndex % 2 !== 0;
-
-      // If even column render only even cells and vice versa with odd column
-      if ((oddIndex && !oddCell) || (!oddIndex && oddCell)) {
-        return null;
-      }
     }
 
     return (
@@ -115,7 +105,7 @@ const Grid = (props) => {
         accessible={true}
         accessibilityTraits={traits}
         accessibilityLabel={
-          `${parseVoiceoverText(I18n.t(item.longTitle))}, ${realIndex} of ${gridLength}.` +
+          `${parseVoiceoverText(I18n.t(item.longTitle))}, ${index} of ${gridLength}.` +
           ` Plays audio for ${I18n.t(item.shortTitle)} story.`
         }
       >
@@ -171,7 +161,7 @@ const Grid = (props) => {
         dataSource={dataSource}
         removeClippedSubviews={false}
         renderRow={(item, sectionIndex, index) => {
-          return renderItem(item, index, props.onCellPress, null, true);
+          return renderItem(item, index, props.onCellPress);
         }}
       />
     </View>

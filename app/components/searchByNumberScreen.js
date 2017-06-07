@@ -117,7 +117,8 @@ class SearchByNumberScreen extends Component {
     playerOpen: PropTypes.bool.isRequired,
     digits: PropTypes.array.isRequired,
     screenReader: PropTypes.bool.isRequired,
-    tourStops: PropTypes.arrayOf(PropTypes.object).isRequired,
+    tourStops: PropTypes.object.isRequired,
+    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       editDigits: PropTypes.func.isRequired,
     }).isRequired,
@@ -138,12 +139,14 @@ class SearchByNumberScreen extends Component {
     }
   }
 
-  loadTourStop(digits) {
+  loadTourStop(digits, tourStops) {
+    const foundTourStops = tourStops.filtered(
+      `audioContent.title = '${digits.toString()}'`
+    );
+
     let tourStop;
-    const stops = TourStop.allRealmObjects();
-    const tourStops = stops.filtered(`audioContent.title = '${digits.toString()}'`);
-    if (tourStops.length > 0) {
-      tourStop = tourStops[0];
+    if (foundTourStops.length > 0) {
+      tourStop = foundTourStops[0];
     }
 
     if (tourStop !== undefined) {
@@ -158,6 +161,8 @@ class SearchByNumberScreen extends Component {
         passProps: {
           tab: 'TAB_SEARCH',
           tourStop,
+          floor: tourStop.floor,
+          duration: tourStop.duration[this.props.locale],
           searchedByNumber: digits.toString(),
           initialCategory: tourStop.initialAudio,
           imageURL: tourStop.imageURL,
@@ -197,7 +202,7 @@ class SearchByNumberScreen extends Component {
     this.props.actions.editDigits(updatedDigits);
 
     if (digitIndex === 2) {
-      this.loadTourStop(updatedDigits.join(''));
+      this.loadTourStop(updatedDigits.join(''), this.props.tourStops);
     }
   }
 
