@@ -1,8 +1,6 @@
 
 import React, { PropTypes } from 'react';
 
-import I18n from 'react-native-i18n';
-
 import {
   Text,
   View,
@@ -11,6 +9,8 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
+
+import I18n from 'react-native-i18n';
 
 import NavigationBar from './navigationBar';
 
@@ -73,7 +73,7 @@ const TutorialWelcomePage = (props) => {
       </View>
       <View style={styles.contentContainer}>
         <NavigationBar
-          label={'Welcome'}
+          label={''}
           labelStyle={{
             color: OFF_BLACK,
           }}

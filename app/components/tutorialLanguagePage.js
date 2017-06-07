@@ -7,6 +7,8 @@ import {
   ScrollView,
 } from 'react-native';
 
+import I18n from 'react-native-i18n';
+
 import NavigationBar from './navigationBar';
 import TutorialWelcomePage from './tutorialWelcomePage';
 import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
@@ -33,7 +35,7 @@ const TutorialLanguagePage = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationBar
-        label={'Choose Language'}
+        label={I18n.t('settingsScreen_Title')}
         labelStyle={{
           color: OFF_BLACK,
         }}
