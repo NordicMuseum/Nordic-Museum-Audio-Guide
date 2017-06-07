@@ -250,29 +250,149 @@ export const strings = {
     '301': 'Jewellery',
     '302': 'Sweden’s Oldest Doll’s House',
     '303': 'The Textile Gallery',
+    '304': 'Two end knitting against the Nordic cold',
+    '305': 'Indian cotton in the Stockholm Archipelago',
+    '306': 'Fancy lace',
+    '307': 'Bright colours from the 15th century',
+    '308': 'Dress the cottage for a party',
+    '310': 'Embroidery with biblical motifs',
+    '311': 'Rags and lumps',
+    '312': 'Simple forms become flashy',
+    '313': 'The nobility’s medieval dinner table',
+    '314': 'An abundance to the eye and the palate',
+    '315': 'Trade instead of war',
     '316': 'A Swan on the Table',
+    '317': 'The exclusive sweets',
+    '318': 'To Sweden over the oceans',
+    '319': 'The sophisticated Punch',
+    '320': 'Let the food deceive the eye',
+    '321': 'Traces of Classical form',
+    '322': 'Mrs Hedwig’s tea-time',
+    '323': 'A drink before dinner',
+    '324': 'Party with great fanfare',
+    '325': 'A party meal from 1883',
+    '326': 'Towards simpler shapes',
+    '327': 'Selma’s coffee party',
     '328': 'Ten Kinds of Biscuits',
+    '329': '',
     '330': 'Portal to the Palace of Everyday Life',
+    '331': 'The shifting seasons and the course of life',
+    '332': 'Gentile becomes a Christian',
     '333': 'Midsummer’s Eve',
+    '334': 'In midsummer time',
+    '335': 'The 6th of June',
+    '336': 'Crayfish party and fermented herring',
+    '337': 'Michaelmas',
+    '338': 'St. Martin’s day',
+    '339': 'Spring traditions',
+    '340': 'Holy week and Witches ',
+    '341': 'Good friday',
+    '342': 'Easter',
+    '343': 'From Walpurgis night to Pentecost',
+    '344': 'Graduation',
+    '345': 'Confirmation',
+    '346': 'From overture to wedding',
+    '347': 'What belongs to the wedding',
+    '348': 'Wedding celebration and setting up house',
+    '349': 'The Lady of Årsta celebrates her name day',
+    '350': 'Congratulatory paintings',
+    '351': 'The Christmas calendar',
+    '352': 'Christmas in city and country',
+    '353': 'From Lucia to Twenties sunday',
+    '354': 'What belongs to death',
     '355': 'When Hanse-Kalle Died',
     '356': 'August Strindberg’s Writing',
     '357': 'August Strindberg’s Art',
     '358': 'Forbidden Luxury',
     '359': 'The Miniskirt',
+    '360': 'Clothing and identity',
+    '361': 'Popular fashion',
+    '362': 'Forbidden Luxury',
+    '363': 'Clothing’s value',
+    '364': '18th century fashion: printed cotton fabrics',
+    '365': 'Forming the body',
+    '366': 'Welcome to the 1860s',
+    '367': 'Smoking jacket and black robe',
+    '368': '19th century fashion: the shawl',
+    '369': 'Cotton and clothing',
+    '370': 'Fashion spreads',
+    '371': 'Folk costumes in fashion',
+    '372': 'The suit',
+    '373': 'Welcome to the 1960s',
+    '374': '20th century fashion: jeans',
+    '375': 'Paper clothing and nylon',
+    '376': 'The teenagers’ decade',
+    '377': 'Fashion for everyone',
+    '378': 'Visual description 0: Welcome',
+    '379': 'Visual description 1: Woman 1780',
+    '380': 'Visual description 2: Boy 1765',
+    '381': 'Visual description 3: Woman 1810',
+    '382': 'Visual description 4: Woman 1860',
+    '383': 'Visual description 5: Man 1860',
+    '384': 'Visual description 6: Woman 1860',
+    '385': 'Visual description 7: Woman 1925',
+    '386': 'Visual description 8: Man 1922',
+    '387': 'Visual description 9: Woman 1943',
+    '388': 'Visual description 10: Woman 1950',
+    '389': 'Visual description 11: Teenager 1958',
+    '390': 'Visual description 12: Man 1970',
+    '391': 'Visual description 13: Woman 2009',
+    '398': 'Have a seat',
+    '399': 'Breakfast in the middle of the day',
     '401': 'The Two-Room Cottage',
+    '402': 'Music from the time: traditional peasant dance from the 18th century',
+    '403': 'Voice from 1580: about the farmer’s cottage',
+    '404': 'Music from the time: Hab ich dir nicht außgerüst',
+    '405': 'Voice from 1635: about the Swedish nobility’s interior',
+    '406': 'Music from the time: Ack vad för usel koja',
+    '407': 'Voice from 1751: new rooms for the admiral',
     '408': 'The State Bedroom',
+    '409': 'Music from the time: Menuet and March with variation',
+    '410': 'A maid’s ordinary day',
+    '411': 'Music from the time: Lento and Vivace from Triosonate in D major',
+    '412': 'Voice from the 1790s: a simple Swedish home',
     '413': 'The Brewer’s House',
+    '414': 'Music from the time: Andante from Sinfonia in D major',
+    '415': 'Voice from 1799: the cold winter and the tiled stoves',
+    '416': 'Music from the time: Romance from String quartet opus 1 no. 3 in B major',
+    '417': 'Voice from 1821: the Lady of Årsta orders Empire furniture',
+    '418': 'Music from the time: Första aftonen i nya hemmet and Natthimlen',
+    '419': 'A housewife’s duties to her husband',
+    '420': 'Visual description: upholstered chair from the mid 17th century',
+    '421': 'Visual description: bureau from the 1760s',
+    '422': 'Visual description: tiled stove from the late 18th century',
     '423': 'Artur Hazelius’s Banquet Hall',
     '424': 'The Merchant’s Drawing Room',
     '425': 'Functionalist Classic Eva',
     '426': 'Sápmi',
+    '427': 'Whose story?',
+    '428': 'The Jokkmokk market',
+    '429': 'Whose cultural heritage?',
+    '430': 'Whose things? Whose history?',
+    '431': 'Whose story?',
+    '432': 'Whose voice?',
+    '433': 'Who was first?',
     '434': 'The Reindeer',
+    '445': 'Whose rights?',
+    '446': 'Sami handicraft',
+    '447': 'Whose story?',
+    '448': 'A journey of discovery in the world of folk art',
+    '449': 'From courtship to wedding',
+    '450': 'Death and burial',
     '451': 'The Shapes of the Grandfather Clocks',
+    '452': 'The image of man',
+    '453': 'Nature as a source of inspiration',
+    '454': 'The flower painting of Dalarna',
+    '455': 'Decorated shelves in the place of honor',
     '456': 'The Power of the Chair',
+    '457': 'The Bible’s stories on the wall of the cottage',
+    '458': 'Precious textiles',
+    '459': 'Noble Coats of Arms and royal monograms',
+    '460': 'Folk art today',
 
     //6. TRANSCRIPTS
-  },
-  sv: {
+},
+sv: {
     // 1. IN-APP STRINGS
     audioContentList_ChapterSingular: 'Kapitel',
     audioContentList_ChapterPlural: 'Kapitel',
@@ -518,7 +638,6 @@ export const strings = {
     '306': 'Prydlig spets',
     '307': 'Klara färger från 1400-talet',
     '308': 'Klä stugan till fest',
-    '309': 'Hattband till kvinnohatt och för brudgumshatt från Leksand i Dalarna',
     '310': 'Broderier med bibliska motiv',
     '311': 'Trasor och lump',
     '312': 'Enkel form blir prålig',
@@ -622,33 +741,33 @@ export const strings = {
     '417': 'Röst från 1821: Årstafrun beställer empiremöblemang',
     '418': 'Musik från tiden: Första aftonen i nya hemmet och Natthimlen',
     '419': 'En husmoders plikter mot sin man',
-    '420': 'Syntolkning: byrå från 1760-talet',
-    '421': 'Syntolkning: stoppad stol från mitten av 1600-talet',
-    '422': 'Syntolkning: gustaviansk kakelugn från slutet av 1700-talet',
+    '420': 'Syntolkning: stoppad stol från mitten av 1600-talet',
+    '421': 'Syntolkning: byrå från 1760-talet',
+    '422': 'Syntolkning: kakelugn från slutet av 1700-talet',
     '423': 'Artur Hazelius festsal',
     '424': 'I grosshandlarens salong',
     '425': 'Funkisklassikern Eva',
     '426': 'Sápmi',
     '427': 'Vems historia? Vems berättelse?',
-    '428': 'TBD Jokkmokks marknad',
+    '428': 'Jokkmokks marknad',
     '429': 'Vems kulturarv?',
     '430': 'Vems saker? Vems historia?',
     '431': 'Vems berättelse?',
     '432': 'Vems blick, vems röst?',
     '433': 'Vem var först?',
     '434': 'Renen',
-    '435': 'Intervju med Lars-Marcus Kuhmunen',
-    '436': 'Intervju med Elias Torkelsson',
-    '437': 'Intervju med Victoria Harnesk',
-    '438': 'Intervju med Inge Frisk',
-    '439': 'Intervju med Linda Mannela',
-    '440': 'Intervju med Lis-Maria Hjortfors',
-    '441': 'Intervju med Lotta',
-    '442': 'Intervju med Per-Gustav Idivuoma',
-    '443': 'Intervju med Staffan Palopaa',
-    '444': 'Intervju med Sylvia Simma',
+    '435': 'Intervju: Lars-Marcus Kuhmunen',
+    '436': 'Intervju: Elias Torkelsson',
+    '437': 'Intervju: Victoria Harnesk',
+    '438': 'Intervju: Inge Frisk',
+    '439': 'Intervju: Linda Mannela',
+    '440': 'Intervju: Lis-Maria Hjortfors',
+    '441': 'Intervju: Lotta',
+    '442': 'Intervju: Per-Gustav Idivuoma',
+    '443': 'Intervju: Staffan Palopaa',
+    '444': 'Intervju: Sylvia Simma',
     '445': 'Vems rätt?',
-    '446': 'TBD Den samiska slöjden',
+    '446': 'Den samiska slöjden',
     '447': 'Vems historia? Vems berättelse?',
     '448': 'En upptäcktsfärd i folkkonstens värld',
     '449': 'Från frieri till bröllop',
@@ -660,13 +779,13 @@ export const strings = {
     '455': 'Prydnadshylla på hedersplats',
     '456': 'Stolens makt',
     '457': 'Bibelns berättelser på stugans vägg',
-    '458': 'Textilmontern',
+    '458': 'Dyrbara textilier',
     '459': 'Adliga vapen och kungliga monogram',
-    '460': 'TBD Folkkonst idag',
+    '460': 'Folkkonst idag',
 
     //6. TRANSCRIPTS
-  },
-  it: {
+},
+it: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -796,8 +915,8 @@ export const strings = {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia. Mi chiamo Sanne Houby-Nielsen e sono la Direttrice del Museo.\n\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\n\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\n\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\n\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\n\nCercate gli stand gialli delle audioguide.\n\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
-  },
-  ar: {
+},
+ar: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -927,8 +1046,8 @@ export const strings = {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\n\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\n\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\n\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\n\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\n\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\n\nانتبهوا للافتات الإرشاد السمعي الصفراء .\n\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
-  },
-  es: {
+},
+es: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1059,8 +1178,8 @@ export const strings = {
     '456': 'El poder de una silla',
 
     //6. TRANSCRIPTS
-  },
-  fi: {
+},
+fi: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1189,8 +1308,8 @@ export const strings = {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\n\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\n\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\n\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\n\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\n\nEtsikää keltaisia audio-opas-telineitä.\n\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
-  },
-  de: {
+},
+de: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1324,8 +1443,8 @@ export const strings = {
     '456': 'Die Macht des Stuhls',
 
     //6. TRANSCRIPTS
-  },
-  ru: {
+},
+ru: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1453,8 +1572,8 @@ export const strings = {
     '456': 'Власть кресла',
 
     //6. TRANSCRIPTS
-  },
-  fr: {
+},
+fr: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1582,8 +1701,8 @@ export const strings = {
     '456': 'Les sièges qui symbolisent le pouvoir',
 
     //6. TRANSCRIPTS
-  },
-  zh: {
+},
+zh: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1712,8 +1831,8 @@ export const strings = {
 
     // 6. TRANSCRIPTS
     '201_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n\n請留意黃色的導賞台。\n\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
-  },
-  svSimple: {
+},
+svSimple: {
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
@@ -1744,8 +1863,8 @@ export const strings = {
     '451': 'Golvurens former',
     '456': 'Dyrbara stolar och kistor',
     //6. TRANSCRIPTS
-  },
-  svKids: {
+},
+svKids: {
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
@@ -1776,7 +1895,7 @@ export const strings = {
     '451': 'Färgade ullstrumpor',
     '456': 'En serietidning från förr',
     //6. TRANSCRIPTS
-  },
+},
 
   seSme: { // Northern Sami
     // 1. IN-APP STRINGS
@@ -1785,7 +1904,7 @@ export const strings = {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-  },
+},
   seSmj: { // Lule Sami
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
@@ -1793,7 +1912,7 @@ export const strings = {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-  },
+},
   seSma: { // Southern Sami
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
@@ -1801,5 +1920,5 @@ export const strings = {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-  },
+},
 };
