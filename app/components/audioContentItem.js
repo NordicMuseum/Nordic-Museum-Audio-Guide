@@ -76,16 +76,6 @@ function breakIntoParagraphTextComponents(text) {
   });
 }
 
-function progressWidthStyle(eleWidth, progress) {
-  return {
-    width: eleWidth * progress,
-  };
-}
-
-function getPercentage(a, b) {
-  return Math.round(a) / Math.round(b);
-}
-
 class AudioContentItem extends Component {
   static propTypes = {
     audioContent: PropTypes.object.isRequired,
