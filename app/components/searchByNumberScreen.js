@@ -107,7 +107,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const tryAgainMessageTime = 1000; // 1 second in milliseconds
+// In milliseconds:
+const foundTransitionTime = 50;
+const tryAgainMessageTime = 1000;
 
 class SearchByNumberScreen extends Component {
   static title = '#';
@@ -149,25 +151,32 @@ class SearchByNumberScreen extends Component {
       tourStop = foundTourStops[0];
     }
 
-    if (tourStop !== undefined) {
-      this.props.actions.editDigits([null, null, null]);
-      this.props.navigator.push({
-        title: tourStop.shortTitle,
-        component: TourStopScreen,
-        barTintColor: '#ffffff',
-        titleTextColor: OFF_BLACK,
-        shadowHidden: true,
-        navigationBarHidden: true,
-        passProps: {
-          tab: 'TAB_SEARCH',
-          tourStop,
-          floor: tourStop.floor,
-          duration: tourStop.duration[this.props.locale],
-          searchedByNumber: digits.toString(),
-          initialCategory: tourStop.initialAudio,
-          imageURL: tourStop.imageURL,
-        },
-      });
+    if (tourStop) {
+      setTimeout(() => {
+        this.props.navigator.push({
+          title: tourStop.shortTitle,
+          component: TourStopScreen,
+          barTintColor: '#ffffff',
+          titleTextColor: OFF_BLACK,
+          shadowHidden: true,
+          navigationBarHidden: true,
+          passProps: {
+            tab: 'TAB_SEARCH',
+            tourStop,
+            floor: tourStop.floor,
+            duration: tourStop.duration[this.props.locale],
+            searchedByNumber: digits.toString(),
+            initialCategory: tourStop.initialAudio,
+            imageURL: tourStop.imageURL,
+          },
+        });
+
+        // HACKY!
+        // Because who knows how long the transition will take?
+        setTimeout(() => {
+          this.props.actions.editDigits([null, null, null]);
+        }, tryAgainMessageTime);
+      }, foundTransitionTime);
     } else {
       const tryAgainMessage = setTimeout(() => {
         this.setState({
