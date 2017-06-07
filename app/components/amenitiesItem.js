@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 100,
+    height: 19.5,
   },
   textContainer: {
     flexDirection: 'column',
