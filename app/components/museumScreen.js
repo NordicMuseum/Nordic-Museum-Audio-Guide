@@ -15,7 +15,6 @@ import AmenitiesScreen from '../containers/amenities';
 import AboutScreen from './aboutScreen';
 import SettingsScreen from '../containers/settings';
 import AboutTheAppScreen from './aboutTheAppScreen';
-import AccessibilityScreen from './accessibilityScreen';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -85,35 +84,14 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('museumScreen_ListItem1Label'),
+                label: I18n.t('settingsScreen_Title'),
               }}
               bottomBorder={true}
-              title={I18n.t('museumScreen_ListItem1Label')}
+              title={I18n.t('settingsScreen_Title')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: I18n.t('aboutScreen_Title'),
-                  component: AboutScreen,
-                  barTintColor: '#ffffff',
-                  titleTextColor: OFF_BLACK,
-                  shadowHidden: true,
-                  navigationBarHidden: true,
-                  passProps: {
-                    navigator: this.props.navigator,
-                  },
-                });
-              }}
-            />
-            <DisclosureCell
-              accessibility={{
-                traits: ['button'],
-                label: I18n.t('museumScreen_ListItem2Label'),
-              }}
-              bottomBorder={true}
-              title={I18n.t('museumScreen_ListItem2Label')}
-              onPress={() => {
-                this.props.navigator.push({
-                  title: I18n.t('accessibilityScreen_Title'),
-                  component: AccessibilityScreen,
+                  title: I18n.t('settingsScreen_Title'),
+                  component: SettingsScreen,
                   barTintColor: '#ffffff',
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
@@ -148,14 +126,14 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('settingsScreen_Title'),
+                label: I18n.t('museumScreen_ListItem1Label'),
               }}
               bottomBorder={true}
-              title={I18n.t('settingsScreen_Title')}
+              title={I18n.t('museumScreen_ListItem1Label')}
               onPress={() => {
                 this.props.navigator.push({
-                  title: I18n.t('settingsScreen_Title'),
-                  component: SettingsScreen,
+                  title: I18n.t('aboutScreen_Title'),
+                  component: AboutScreen,
                   barTintColor: '#ffffff',
                   titleTextColor: OFF_BLACK,
                   shadowHidden: true,
