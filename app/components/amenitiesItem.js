@@ -21,10 +21,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 16,
     paddingBottom: 16,
+    paddingLeft: 16,
   },
   image: {
-    width: 100,
-    height: 19.5,
+    width: 30,
+    height: 30,
   },
   textContainer: {
     flexDirection: 'column',
