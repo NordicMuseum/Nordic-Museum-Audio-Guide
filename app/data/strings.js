@@ -69,7 +69,6 @@ export const strings = {
     timeProgressView_SecondsRemaining: 'x seconds remaining',
     tourStopScreen_ArtworkInformationAccessibilityLabel: 'Artwork Information. Double tap to go to long credits.',
     tutorialScreen_WelcomeTitle: 'Audio Guide',
-    tutorialScreen_WelcomeMessage: 'Welcome to The Nordic Museum’s inclusive audio guide',
     tutorialScreen_NoWorries: 'Don’t worry—you can change these preferences later.',
     tutorialScreen_NearMe: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
     tutorialScreen_Stories: 'The Nordic Museum Audio Guide is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters for you.',
@@ -118,7 +117,7 @@ export const strings = {
     aboutTheAppProjectManagerCarnegieInstituteHeader: 'Project manager, Carnegie Institute',
     aboutTheAppProjectManagerCarnegieInstituteBody: 'Ruben Niculcea',
     aboutTheAppDevelopmentAndDesignHeader: 'Development and Design',
-    aboutTheAppDevelopmentAndDesignBody: 'Ruben Niculcea, Carnegie Institute\nSam Ticknor, Carnegie Institute\nRobert Ziherl, Nordic Museum',
+    aboutTheAppDevelopmentAndDesignBody: 'Ruben Niculcea, Carnegie Institute\nSam Ticknor, Carnegie Institute\nAron Ambrosiani, Nordic Museum\nRobert Ziherl, Nordic Museum',
     aboutTheAppAdvisoryTeamHeader: 'Advisory Team, Nordic Museum',
     aboutTheAppAdvisoryTeamBody: 'Vanessa Gandy\nLoredana Jelmini\nSven Rentzhog',
     aboutTheAppAppIconAndDesignAssetsHeader: 'App Icon and Design Assets',
@@ -133,6 +132,7 @@ export const strings = {
     museumScreen_ListItem3Label: 'Amenities',
     museumScreen_ListItem4Label: '⚙ Settings',
     museumScreen_ListItem5Label: 'Credits',
+    tutorialScreen_welcomeMessage: 'Welcome',
 
     // 3. AMENITIES
     amenities_CloakroomTitle: 'Cloakroom',
@@ -332,13 +332,13 @@ export const strings = {
     nearMeScreen_StoriesMessageSingular: 'Det finns ett tema i närheten av dig.',
     tryAgain: 'Försök igen',
     bluetoothButton_OffLabel: 'Slå på Bluetooth',
-    tutorialScreen_WelcomeMessage: 'Välkommen till Nordiska museets audioguide',
     nearMeScreen_StoriesMessage: 'När du är på museet visar vi dig teman som finns i närheten av dig.',
     tutorialScreen_NearMe: 'När du är på museet visar vi dig teman som finns i närheten av dig. För att använda denna funktion behöver vi två saker från dig…',
     timeProgressView_SecondsRemaining: 'x sekunder återstår',
     closePlayerView_Text: 'Du har nått slutet av x.',
     settingsScreen_Title: '🌎 Språk',
     playAll: 'Spela alla',
+    tutorialScreen_welcomeMessage: 'Välkommen',
 
     // 2. MUSEUM CONTENT
     floor1_Label: 'Plan 1',
@@ -365,7 +365,7 @@ export const strings = {
     aboutTheAppProjectManagerCarnegieInstituteHeader: 'Projektledare, Carnegie Institute',
     aboutTheAppProjectManagerCarnegieInstituteBody: 'Ruben Niculcea',
     aboutTheAppDevelopmentAndDesignHeader: 'Utveckling och design',
-    aboutTheAppDevelopmentAndDesignBody: 'Ruben Niculcea, Carnegie Institute\nSam Ticknor, Carnegie Institute\nRobert Ziherl, Nordiska museet',
+    aboutTheAppDevelopmentAndDesignBody: 'Ruben Niculcea, Carnegie Institute\nSam Ticknor, Carnegie Institute\nAron Ambrosiani, Nordiska museet\nRobert Ziherl, Nordiska museet',
     aboutTheAppAdvisoryTeamHeader: 'Styrgrupp, Nordiska museet',
     aboutTheAppAdvisoryTeamBody: 'Vanessa Gandy\nLoredana Jelmini\nSven Rentzhog',
     aboutTheAppAppIconAndDesignAssetsHeader: 'Appikon och grafiska element',
@@ -731,7 +731,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'C’è un tema vicino a te.',
     'tryAgain': 'Riprova',
     'bluetoothButton_OffLabel': 'Attiva Bluetooth',
-    'tutorialScreen_WelcomeMessage': 'Benvenuti all’audioguida del Nordic Museum',
     'nearMeScreen_StoriesMessage': 'Mentre sei al museo, vedrai i temi basati su quello che è vicino a te.',
     'tutorialScreen_NearMe': 'Mentre sei al museo, vedrai i temi basati su quello che è vicino a te. Per usare questa funzionalità, ti chiediamo due cose...',
     'timeProgressView_SecondsRemaining': 'restano x secondi',
@@ -739,6 +738,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 Lingua',
     searchScreen_Title: 'Cerca #',
     playAll: 'Giocare tutto',
+    tutorialScreen_welcomeMessage: 'Benvenuto',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'Il Museo Nordico',
@@ -862,7 +862,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'يوجد موضوع واحد بالقرب منك.',
     'tryAgain': 'حاول ثانية',
     'bluetoothButton_OffLabel': 'قم بتشغيل البلوتوث',
-    'tutorialScreen_WelcomeMessage': 'مرحباً بكم في الدليل الصوتي لمتحف الشمال',
     'nearMeScreen_StoriesMessage': 'أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك.',
     'tutorialScreen_NearMe': 'أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك. لاستخدام هذه الميزة، سنحتاج إلى أمرين منك ...',
     'timeProgressView_SecondsRemaining': 'هناك x ثانية متبقية',
@@ -870,6 +869,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 لغة',
     searchScreen_Title: 'بحث #',
     playAll: 'لعب كل',
+    tutorialScreen_welcomeMessage: 'أهلا بك',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'متحف الشمال ',
@@ -993,7 +993,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'Hay un tema cercano a usted.',
     'tryAgain': 'Inténtelo de nuevo',
     'bluetoothButton_OffLabel': 'Active el Bluetooth',
-    'tutorialScreen_WelcomeMessage': 'Bienvenido a la Audioguía del Museo Nórdico',
     'nearMeScreen_StoriesMessage': 'Mientras visita el museo, le enseñaremos los temas basados en aquello cercano a usted.',
     'tutorialScreen_NearMe': 'Mientras visita el museo, le enseñaremos los temas basados en aquello cercano a usted. Para usar esta función, tendrá que hacer dos cosas…',
     'timeProgressView_SecondsRemaining': 'x segundos restantes',
@@ -1002,6 +1001,7 @@ export const strings = {
     searchScreen_Title: 'Buscar #',
     museumScreen_Title: 'Información',
     playAll: 'Jugar todo',
+    tutorialScreen_welcomeMessage: 'Bienvenido',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'El Museo Nórdico',
@@ -1125,7 +1125,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'Lähelläsi on yksi teema.',
     'tryAgain': 'Yritä uudelleen',
     'bluetoothButton_OffLabel': 'Aktivoi Bluetooth',
-    'tutorialScreen_WelcomeMessage': 'Tervetuloa Nordiska museetin äänioppaaseen',
     'nearMeScreen_StoriesMessage': 'Vierailusi aikana voit seurata, mitä teemoja läheltäsi löytyy.',
     'tutorialScreen_NearMe': 'Vierailusi aikana voit seurata, mitä teemoja läheltäsi löytyy. Käyttääksesi tätä toimintoa sinun on tehtävä kaksi asiaa…',
     'timeProgressView_SecondsRemaining': 'x sekuntia jäljellä',
@@ -1133,6 +1132,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 Kieli',
     searchScreen_Title: 'Haku #',
     playAll: 'Pelaa kaikki',
+    tutorialScreen_welcomeMessage: 'Tervetuloa',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'Nordiska museet',
@@ -1255,7 +1255,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'Es gibt ein Thema in Ihrer Nähe.',
     'tryAgain': 'Noch mal versuchen',
     'bluetoothButton_OffLabel': 'Bluetooth einschalten',
-    'tutorialScreen_WelcomeMessage': 'Willkommen zum Audioguide des Nordischen Museums.',
     'nearMeScreen_StoriesMessage': 'Während Ihres Besuchs zeigen wir Ihnen Themen in Ihrer Nähe.',
     'tutorialScreen_NearMe': 'Während Ihres Besuchs zeigen wir Ihnen Themen in Ihrer Nähe. Um diese Funktion nutzen zu können, benötigen wir zwei Dinge von Ihnen...',
     'timeProgressView_SecondsRemaining': 'x Sekunden übrig',
@@ -1263,6 +1262,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 Sprache',
     searchScreen_Title: 'Suche #',
     playAll: 'Alles spielen',
+    tutorialScreen_welcomeMessage: 'Willkommen',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'Das Nordische Museum',
@@ -1390,7 +1390,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'Рядом с вами 1 тема.',
     'tryAgain': 'Попробуйте еще раз. ',
     'bluetoothButton_OffLabel': 'Включите связь по Bluetooth',
-    'tutorialScreen_WelcomeMessage': 'Добро пожаловать на страницы аудиогида Северного музея',
     'nearMeScreen_StoriesMessage': 'Во время вашего визита в музей, мы покажем вам темы в зависимости от вашего местоположения. ',
     'tutorialScreen_NearMe': 'Во время вашего визита в музей, мы покажем вам темы в зависимости от вашего местоположения. Чтобы вы могли воспользоваться этой возможностью, нам нужно, чтобы вы сделали следующее:',
     'timeProgressView_SecondsRemaining': 'Остается Х секунд',
@@ -1398,6 +1397,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 Яазык',
     searchScreen_Title: 'Поиск #',
     playAll: 'Играть все',
+    tutorialScreen_welcomeMessage: 'Добро пожаловать',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'Музей северных стран',
@@ -1519,7 +1519,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': 'Il y a un thème à proximité.',
     'tryAgain': 'Réessayer.',
     'bluetoothButton_OffLabel': 'Activer le Bluetooth.',
-    'tutorialScreen_WelcomeMessage': 'Bienvenue dans l’audioguide du Musée nordique.',
     'nearMeScreen_StoriesMessage': 'Durant votre visite, nous vous proposons des thèmes en fonction de votre emplacement au sein du musée.',
     'tutorialScreen_NearMe': 'Durant votre visite, nous vous proposons des thèmes en fonction de votre emplacement au sein du musée. Afin de profiter de cette option, deux choses sont nécessaires…',
     'timeProgressView_SecondsRemaining': 'x secondes restantes',
@@ -1527,6 +1526,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 Langue',
     searchScreen_Title: 'Rechercher #',
     playAll: 'Jouer à tous',
+    tutorialScreen_welcomeMessage: 'Bienvenue',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: 'Le musée nordique',
@@ -1648,7 +1648,6 @@ export const strings = {
     'nearMeScreen_StoriesMessageSingular': '您的附近有一个主题',
     'tryAgain': '重试',
     'bluetoothButton_OffLabel': '开启蓝牙',
-    'tutorialScreen_WelcomeMessage': '欢迎收听北欧博物馆语音讲解',
     'nearMeScreen_StoriesMessage': '在博物馆中，我们根据您附近的情况为您显示展览主题。',
     'tutorialScreen_NearMe': '在博物馆中，我们根据您附近的情况为您显示展览主题，要使用这一功能，您需要进行两步操作…',
     'timeProgressView_SecondsRemaining': '剩余x秒',
@@ -1656,6 +1655,7 @@ export const strings = {
     'settingsScreen_Title': '🌎 语言',
     searchScreen_Title: '搜索 #',
     playAll: '全部播放',
+    tutorialScreen_welcomeMessage: '欢迎',
 
     // 2. MUSEUM CONTENT
     aboutScreen_Title: '北欧博物馆',

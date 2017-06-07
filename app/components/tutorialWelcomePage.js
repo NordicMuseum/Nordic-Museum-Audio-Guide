@@ -90,7 +90,7 @@ const TutorialWelcomePage = (props) => {
         />
         <View style={styles.welcomeContainer}>
           <Text style={styles.welcomeText}>
-            {'Welcome!'.toUpperCase()}
+            {I18n.t('tutorialScreen_welcomeMessage').toUpperCase()}
           </Text>
           <View>
             <TouchableOpacity
