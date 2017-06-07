@@ -85,10 +85,14 @@ class AudioContentItem extends Component {
     listLength: PropTypes.number.isRequired,
     locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
-      toggleAudioTranscript: PropTypes.func.isRequired,
+      analyticsTrackTranscriptOpenned: PropTypes.func.isRequired,
       audioAction: PropTypes.func.isRequired,
       reloadAudio: PropTypes.func.isRequired,
     }),
+  }
+
+  componentWillMount() {
+    this.setState({ transcriptOpened: false });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -96,6 +100,13 @@ class AudioContentItem extends Component {
         this.props.audioContent.active) {
       this.props.actions.reloadAudio();
     }
+  }
+
+  toggleTranscript() {
+    if (!this.state.transcriptOpened) {
+      this.props.actions.analyticsTrackTranscriptOpenned();
+    }
+    this.setState({ transcriptOpened: !this.state.transcriptOpened });
   }
 
   render() {
@@ -107,7 +118,6 @@ class AudioContentItem extends Component {
     } = this.props;
 
     const {
-      toggleAudioTranscript,
       audioAction,
     } = this.props.actions;
 
@@ -173,14 +183,14 @@ class AudioContentItem extends Component {
           </View>
           <TranscriptButton
             accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
-            onPress={() => { toggleAudioTranscript(); }}
-            showTranscript={audioContent.showTranscript}
+            onPress={() => { this.toggleTranscript(); }}
+            showTranscript={this.state.transcriptOpened}
           />
         </View>
 
         <Collapsible
-          style={audioContent.showTranscript ? styles.transcript : {}}
-          collapsed={!audioContent.showTranscript}
+          style={this.state.transcriptOpened ? styles.transcript : {}}
+          collapsed={!this.state.transcriptOpened}
           duration={collapsibleDuration}
         >
           <View style={styles.transcriptContainer}>

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 import TourStopScreen from '../components/tourStopScreen';
 import {
-  toggleAudioTranscript,
   loadAudio,
   togglePausePlay,
   loadAudioContent,
@@ -35,7 +34,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions:
       bindActionCreators({
-        toggleAudioTranscript,
         loadAudio,
         updateCurrentAudioRoute,
         togglePausePlay,

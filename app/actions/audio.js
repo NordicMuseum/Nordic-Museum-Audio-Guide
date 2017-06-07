@@ -536,19 +536,6 @@ export function playAudio() {
   };
 }
 
-export function toggleTranscript() {
-  return {
-    type: TOGGLE_TRANSCRIPT,
-  };
-}
-
-export function toggleAudioTranscript(uuid) {
-  return {
-    type: TOGGLE_AUDIO_TRANSCRIPT,
-    uuid,
-  };
-}
-
 export function cycleAudioSpeed(currentPlayRate) {
   let newRate;
 

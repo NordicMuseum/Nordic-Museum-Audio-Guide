@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
 
 const AudioContentList = (props) => {
   const {
-    toggleAudioTranscript,
     loadAudio,
     togglePausePlay,
+    toggleAudioTranscript,
   } = props.actions;
 
   const width = Dimensions.get('window').width;
@@ -72,9 +72,8 @@ const AudioContentList = (props) => {
             contentWidth={width}
             locale={props.locale}
             actions={{
-              toggleAudioTranscript: () => {
+              analyticsTrackTranscriptOpenned: () => {
                 analyticsTrackTranscriptOpenned(props.tourStopTitle, content.title);
-                toggleAudioTranscript(content.uuid);
               },
               reloadAudio: () => {
                 loadAudio(
@@ -134,7 +133,7 @@ const AudioContentList = (props) => {
 AudioContentList.propTypes = {
   tourStopTitle: PropTypes.string.isRequired,
   tourStopUUID: PropTypes.string.isRequired,
-  audioContent: PropTypes.array,
+  audioContent: PropTypes.object,
   currentAudio: PropTypes.string,
   currentAudioTime: PropTypes.number,
   autoplayOn: PropTypes.bool.isRequired,
@@ -142,7 +141,6 @@ AudioContentList.propTypes = {
   playerStatus: PropTypes.string.isRequired,
   locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
-    toggleAudioTranscript: PropTypes.func.isRequired,
     loadAudio: PropTypes.func.isRequired,
     togglePausePlay: PropTypes.func.isRequired,
   }),

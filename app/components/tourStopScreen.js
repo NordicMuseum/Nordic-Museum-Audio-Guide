@@ -8,14 +8,11 @@ import {
   Text,
   View,
   Image,
-  ScrollView,
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
 
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
-
-import { TourStop } from '../models/tourStop';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -182,7 +179,6 @@ class TourStopScreen extends Component {
     floor: PropTypes.number.isRequired,
     duration: PropTypes.number.isRequired,
     actions: PropTypes.shape({
-      toggleAudioTranscript: PropTypes.func.isRequired,
       loadAudio: PropTypes.func.isRequired,
       updateCurrentAudioRoute: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
@@ -192,32 +188,6 @@ class TourStopScreen extends Component {
   }
 
   componentWillMount() {
-    const currentRoute = this.props.navigator.navigationContext.currentRoute;
-    this.props.actions.updateCurrentAudioRoute(currentRoute, this.props.tab);
-  }
-
-  componentDidMount() {
-    const {
-      shortTitle,
-      uuid,
-    } = this.props.tourStop;
-
-    // TODO: Only play after bottom bar has loaded
-    if (uuid !== this.props.currentStopUUID) {
-      this.props.actions.loadAudioContent(
-        TourStop.jsonAudioContent(this.props.tourStop),
-        this.props.initialCategory,
-        this.props.autoplayOn,
-        shortTitle,
-        uuid,
-        this.props.preferences.global,
-        this.props.currentAudio,
-        this.props.currentAudioTime,
-        this.props.screenReader,
-        this.props.autoplayInitial,
-        this.props.searchedByNumber,
-      );
-    }
   }
 
   componentWillUnmount() {
@@ -225,8 +195,9 @@ class TourStopScreen extends Component {
   }
 
   render() {
+    const tourStop = this.props.tourStop;
+
     const {
-      toggleAudioTranscript,
       loadAudio,
       togglePausePlay,
     } = this.props.actions;
@@ -238,10 +209,10 @@ class TourStopScreen extends Component {
 
     let accessibilityLabel;
 
-    if (this.props.tourStop.shortCreditAccessibilityLabel) {
-      accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCreditAccessibilityLabel);
+    if (tourStop.shortCreditAccessibilityLabel) {
+      accessibilityLabel = parseVoiceoverText(tourStop.shortCreditAccessibilityLabel);
     } else {
-      accessibilityLabel = parseVoiceoverText(I18n.t(this.props.tourStop.shortCredit));
+      accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
     }
 
     return (
@@ -267,7 +238,7 @@ class TourStopScreen extends Component {
           )}
           renderStickyHeader={() => (
             <NavigationBar
-              label={parseDisplayText(I18n.t(this.props.tourStop.shortTitle))}
+              label={parseDisplayText(I18n.t(tourStop.shortTitle))}
               labelStyle={{
                 color: OFF_BLACK,
               }}
@@ -289,7 +260,7 @@ class TourStopScreen extends Component {
                   pointerEvents={'none'}
                 >
                   <Text style={styles.headerTitleText}>
-                    {parseDisplayText(I18n.t(this.props.tourStop.shortTitle)).toUpperCase()}
+                    {parseDisplayText(I18n.t(tourStop.shortTitle)).toUpperCase()}
                   </Text>
                 </View>
               </Image>
@@ -304,7 +275,7 @@ class TourStopScreen extends Component {
                       true,
                       this.props.audioContent[0].uuid,
                       0,
-                      this.props.tourStop.title,
+                      tourStop.title,
                       this.props.currentStopUUID,
                       true,
                     );
@@ -347,17 +318,16 @@ class TourStopScreen extends Component {
           )}
         >
           <AudioContentList
-            tourStopTitle={this.props.tourStop.shortTitle}
-            tourStopUUID={this.props.tourStop.uuid}
-            audioContent={this.props.audioContent}
-            currentAudio={this.props.currentAudio}
-            currentAudioTime={this.props.currentAudioTime}
+            tourStopTitle={tourStop.shortTitle}
+            tourStopUUID={tourStop.uuid}
+            audioContent={tourStop.audioContent}
+            currentAudio={null}
+            currentAudioTime={0}
             autoplayOn={this.props.autoplayOn}
             playerStatus={this.props.playerStatus}
             screenReader={this.props.screenReader}
             locale={this.props.locale}
             actions={{
-              toggleAudioTranscript,
               loadAudio,
               togglePausePlay,
             }}
