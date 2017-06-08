@@ -6,6 +6,7 @@ import TourStopScreen from '../components/tourStopScreen';
 import {
   togglePausePlay,
   playTrack,
+  unloadAudio,
 } from '../actions/audio';
 
 import {
@@ -31,6 +32,7 @@ const mapDispatchToProps = (dispatch) => {
     actions:
       bindActionCreators({
         playTrack,
+        unloadAudio,
         togglePausePlay,
         updateNearMeRootStatus,
       }, dispatch),

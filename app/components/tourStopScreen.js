@@ -176,6 +176,7 @@ class TourStopScreen extends Component {
     duration: PropTypes.number.isRequired,
     actions: PropTypes.shape({
       playTrack: PropTypes.func.isRequired,
+      unloadAudio: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
       updateNearMeRootStatus: PropTypes.func.isRequired,
     }),
@@ -196,6 +197,9 @@ class TourStopScreen extends Component {
 
   componentWillUnmount() {
     this.props.actions.updateNearMeRootStatus(true);
+    if (this.props.tab === 'TAB_SEARCH') {
+      this.props.actions.unloadAudio();
+    }
   }
 
   render() {
