@@ -22,6 +22,7 @@ import AudioContentList from './audioContentList';
 
 import {
   parseDisplayText,
+  parseVoiceoverText,
 } from '../utilities';
 
 import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
@@ -210,13 +211,13 @@ class TourStopScreen extends Component {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
     }
 
-    // let accessibilityLabel;
+    let accessibilityLabel;
 
-    // if (tourStop.shortCreditAccessibilityLabel) {
-    //   accessibilityLabel = parseVoiceoverText(tourStop.shortCreditAccessibilityLabel);
-    // } else {
-    //  accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
-    // }
+    if (tourStop.shortCreditAccessibilityLabel) {
+      accessibilityLabel = parseVoiceoverText(tourStop.shortCreditAccessibilityLabel);
+    } else {
+      accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
+    }
 
     return (
       <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
