@@ -43,23 +43,23 @@ const languages = [
   },
   {
     name: 'Lätt svenska',
-    code: 'sv-simple',
+    code: 'svSimple',
   },
   {
     name: 'Barnens audioguide',
-    code: 'sv-kids',
+    code: 'svKids',
   },
   {
     name: 'Davvisámegiella',
-    code: 'se-sme',
+    code: 'seSme',
   },
   {
     name: 'Julevsámegiella',
-    code: 'se-smj',
+    code: 'seSmj',
   },
   {
     name: 'Åarjelsaemien gïele',
-    code: 'se-sma',
+    code: 'seSma',
   },
   {
     name: 'Deutsch',

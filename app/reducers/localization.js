@@ -19,11 +19,11 @@ export function localization(state = initialState, action) {
   switch (action.type) {
     case SWITCH_LOCALE: {
       I18n.locale = action.locale;
-      if (action.locale === 'sv-kids' ||
-          action.locale === 'sv-simple' ||
-          action.locale === 'se-sme' ||
-          action.locale === 'se-smj' ||
-          action.locale === 'se-sma'
+      if (action.locale === 'svKids' ||
+          action.locale === 'svSimple' ||
+          action.locale === 'seSme' ||
+          action.locale === 'seSmj' ||
+          action.locale === 'seSma'
         ) {
         I18n.defaultLocale = 'sv';
         I18n.fallbacks = true;
