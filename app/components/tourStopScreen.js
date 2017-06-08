@@ -163,31 +163,35 @@ class TourStopScreen extends Component {
     tab: PropTypes.string.isRequired,
     imageURL: PropTypes.string,
     tourStop: PropTypes.object.isRequired,
-    audioContent: PropTypes.array,
     currentAudio: PropTypes.string,
-    currentAudioTime: PropTypes.number,
-    autoplayOn: PropTypes.bool.isRequired,
     screenReader: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
     playerOpen: PropTypes.bool.isRequired,
     initialCategory: PropTypes.string.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
-    preferences: PropTypes.object.isRequired,
     locale: PropTypes.string.isRequired,
     autoplayInitial: PropTypes.bool.isRequired,
     searchedByNumber: PropTypes.string,
     floor: PropTypes.number.isRequired,
     duration: PropTypes.number.isRequired,
     actions: PropTypes.shape({
-      loadAudio: PropTypes.func.isRequired,
-      updateCurrentAudioRoute: PropTypes.func.isRequired,
+      playTrack: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
       updateNearMeRootStatus: PropTypes.func.isRequired,
-      loadAudioContent: PropTypes.func.isRequired,
     }),
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    if (this.props.tab === 'TAB_SEARCH') {
+      const searchedTrack = this.props.tourStop.audioContent.filtered(
+        `audioURL = '${this.props.searchedByNumber}'`
+      )[0];
+      this.props.actions.playTrack(
+        this.props.tourStop,
+        searchedTrack.uuid,
+        true, // autoplay
+      );
+    }
   }
 
   componentWillUnmount() {
@@ -198,7 +202,7 @@ class TourStopScreen extends Component {
     const tourStop = this.props.tourStop;
 
     const {
-      loadAudio,
+      playTrack,
       togglePausePlay,
     } = this.props.actions;
 
@@ -269,15 +273,10 @@ class TourStopScreen extends Component {
                   style={[styles.playAllButton, { width: 0.65 * width }]}
                   activeOpacity={0.9}
                   onPress={() => {
-                    this.props.actions.loadAudio(
-                      this.props.audioContent,
-                      this.props.audioContent[0],
-                      true,
-                      this.props.audioContent[0].uuid,
-                      0,
-                      tourStop.title,
-                      this.props.currentStopUUID,
-                      true,
+                    playTrack(
+                      this.props.tourStop,
+                      this.props.tourStop.audioContent[0].uuid,
+                      true, // autoplay
                     );
                   }}
                 >
@@ -318,17 +317,13 @@ class TourStopScreen extends Component {
           )}
         >
           <AudioContentList
-            tourStopTitle={tourStop.shortTitle}
-            tourStopUUID={tourStop.uuid}
-            audioContent={tourStop.audioContent}
-            currentAudio={null}
-            currentAudioTime={0}
-            autoplayOn={this.props.autoplayOn}
+            tourStop={tourStop}
+            currentAudio={this.props.currentAudio}
             playerStatus={this.props.playerStatus}
             screenReader={this.props.screenReader}
             locale={this.props.locale}
             actions={{
-              loadAudio,
+              playTrack,
               togglePausePlay,
             }}
           />

@@ -11,9 +11,9 @@ import {
    screenReaderReloadLayout,
  } from '../actions/accessibility';
 
- import {
-    analyticsTrackAudioCompleteListen,
-  } from '../actions/analytics';
+import {
+  analyticsTrackAudioCompleteListen,
+} from '../actions/analytics';
 
 import {
   PLAYER_STATUS_FINISHED,
@@ -43,27 +43,25 @@ const styles = StyleSheet.create({
 
 function nextAudioTitle(audioContent, nextUUID, defaultTitle) {
   if (nextUUID !== null) {
-    return audioContent
-      .filter((content) => {
-        return content.uuid === nextUUID;
-      })
-      [0]
-      .title;
+    return audioContent.filtered(`uuid = "${nextUUID}"`)[0].title;
   }
   return defaultTitle;
 }
 
 class BottomPlayer extends Component {
   static propTypes = {
+    tourStop: PropTypes.object.isRequired,
+    stopUUID: PropTypes.string.isRequired,
     currentUUID: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
     navToTourStop: PropTypes.func.isRequired,
+    prevUUID: PropTypes.string,
     nextUUID: PropTypes.string,
     stopTitle: PropTypes.string.isRequired,
     audioTitle: PropTypes.string.isRequired,
-    audioContent: PropTypes.array.isRequired,
-    time: PropTypes.number.isRequired,
+    audioContent: PropTypes.object.isRequired,
     duration: PropTypes.number.isRequired,
+    time: PropTypes.number.isRequired,
     playRate: PropTypes.string.isRequired,
     playerStatus: PropTypes.string.isRequired,
     timerActive: PropTypes.bool.isRequired,
@@ -72,14 +70,11 @@ class BottomPlayer extends Component {
     autoplayOn: PropTypes.bool.isRequired,
     locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
+      playTrack: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
       replayAudio: PropTypes.func.isRequired,
       rewindAudio: PropTypes.func.isRequired,
       cycleAudioSpeed: PropTypes.func.isRequired,
-      loadNextAudio: PropTypes.func.isRequired,
-      loadNextAutoplayAudio: PropTypes.func.isRequired,
-      loadPrevAudio: PropTypes.func.isRequired,
-      toggleAutoplay: PropTypes.func.isRequired,
       unloadAudio: PropTypes.func.isRequired,
       playAudio: PropTypes.func.isRequired,
     }).isRequired,
@@ -101,10 +96,12 @@ class BottomPlayer extends Component {
 
   render() {
     const {
+      tourStop,
       currentUUID,
       index,
       navToTourStop,
       nextUUID,
+      prevUUID,
       stopTitle,
       audioTitle,
       audioContent,
@@ -124,11 +121,8 @@ class BottomPlayer extends Component {
       rewindAudio,
       cycleAudioSpeed,
       unloadAudio,
-      loadNextAudio,
-      loadNextAutoplayAudio,
-      loadPrevAudio,
       replayAudio,
-      toggleAutoplay,
+      playTrack,
     } = this.props.actions;
 
     // Force the screen reader to update with bottom player
@@ -175,14 +169,11 @@ class BottomPlayer extends Component {
         autoplayOn={autoplayOn}
         nextUUID={nextUUID}
         actions={{
-          toggleAutoplay,
           loadNextAutoplayAudio: () => {
-            loadNextAutoplayAudio(
-              audioContent,
-              currentUUID,
-              index,
-              autoplayOn,
-              stopTitle
+            playTrack(
+              tourStop,
+              nextUUID,
+              true,
             );
           },
         }}
@@ -241,32 +232,24 @@ class BottomPlayer extends Component {
             cycleAudioSpeed,
             navToTourStop,
             loadNextAudio: () => {
-              loadNextAudio(
-                audioContent,
-                currentUUID,
-                index,
-                time,
-                autoplayOn,
-                stopTitle
+              playTrack(
+                tourStop,
+                nextUUID,
+                false,
               );
             },
             loadNextAutoplayAudio: () => {
-              loadNextAutoplayAudio(
-                audioContent,
-                currentUUID,
-                index,
-                autoplayOn,
-                stopTitle
+              playTrack(
+                tourStop,
+                nextUUID,
+                true,
               );
             },
             loadPrevAudio: () => {
-              loadPrevAudio(
-                audioContent,
-                currentUUID,
-                index,
-                time,
-                autoplayOn,
-                stopTitle
+              playTrack(
+                tourStop,
+                prevUUID,
+                false,
               );
             },
           }}

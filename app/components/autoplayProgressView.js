@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
 
 const AutoplayProgressView = (props) => {
   const {
-    toggleAutoplay,
     loadNextAutoplayAudio,
   } = props.actions;
 
@@ -50,6 +49,7 @@ const AutoplayProgressView = (props) => {
   // If autoplay has reached 0, trigger next audio
   // (Can this be moved somewhere else?)
   if (timerActive && timerNumber <= 0) {
+    console.log('Should autoplay it now!');
     loadNextAutoplayAudio();
   }
 
@@ -69,13 +69,6 @@ const AutoplayProgressView = (props) => {
     }
   }
 
-  let autoplayVoiceoverMessage;
-  if (autoplayOn) {
-    autoplayVoiceoverMessage = 'Autoplay, on. Double tap to turn off.';
-  } else {
-    autoplayVoiceoverMessage = 'Autoplay, off. Double tap to turn on.';
-  }
-
   return (
     <View style={styles.container}>
       <ProgressBar
@@ -84,10 +77,6 @@ const AutoplayProgressView = (props) => {
       <View
         style={[styles.row, styles.autoplayRow]}
         accessible={true}
-        accessibilityLabel={autoplayVoiceoverMessage}
-        onAccessibilityTap={() => {
-          toggleAutoplay(autoplayOn, timerActive);
-        }}
       >
         <View>
           <Text style={[styles.autoplayText, globalStyles.progressLabel]}>
@@ -105,7 +94,6 @@ AutoplayProgressView.propTypes = {
   timerNumber: PropTypes.number.isRequired,
   autoplayOn: PropTypes.bool.isRequired,
   actions: PropTypes.shape({
-    toggleAutoplay: PropTypes.func.isRequired,
     loadNextAutoplayAudio: PropTypes.func.isRequired,
   }).isRequired,
 };

@@ -79,6 +79,7 @@ function breakIntoParagraphTextComponents(text) {
 class AudioContentItem extends Component {
   static propTypes = {
     audioContent: PropTypes.object.isRequired,
+    active: PropTypes.bool.isRequired,
     screenReader: PropTypes.bool.isRequired,
     contentWidth: PropTypes.number.isRequired,
     index: PropTypes.number.isRequired,
@@ -121,8 +122,6 @@ class AudioContentItem extends Component {
       audioAction,
     } = this.props.actions;
 
-    const active = audioContent.active;
-
     let collapsibleDuration;
     if (screenReader) {
       collapsibleDuration = 0;
@@ -136,7 +135,7 @@ class AudioContentItem extends Component {
       <View
         style={[
           styles.container,
-          active ? { backgroundColor: SELECTED } : {},
+          this.props.active ? { backgroundColor: SELECTED } : {},
         ]}
       >
         <View style={styles.row}>

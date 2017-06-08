@@ -1,6 +1,5 @@
 
 import {
-  UPDATE_CURRENT_AUDIO_ROUTE,
   UPDATE_ACTIVE_TAB,
   UPDATE_NEARME_ROOT_STATUS,
   TAB_NEARME,
@@ -15,16 +14,6 @@ const initialState = {
 
 export function nav(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_CURRENT_AUDIO_ROUTE: {
-      return Object.assign({},
-        state,
-        {
-          currentAudioRoute: action.route,
-          currentAudioTab: action.tab,
-          atNearMeRoot: state.activeTab === TAB_NEARME ? false : state.atNearMeRoot,
-        }
-      );
-    }
 
     case UPDATE_ACTIVE_TAB: {
       return Object.assign({},

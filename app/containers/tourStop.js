@@ -4,19 +4,16 @@ import { connect } from 'react-redux';
 
 import TourStopScreen from '../components/tourStopScreen';
 import {
-  loadAudio,
   togglePausePlay,
-  loadAudioContent,
+  playTrack,
 } from '../actions/audio';
 
 import {
-  updateCurrentAudioRoute,
   updateNearMeRootStatus,
 } from '../actions/navigation';
 
 const mapStateToProps = (state) => {
   return {
-    audioContent: state.audioContent,
     currentAudio: state.bottomPlayer.uuid,
     currentAudioTime: state.bottomPlayer.time,
     screenReader: state.accessibility.screenReader,
@@ -24,7 +21,6 @@ const mapStateToProps = (state) => {
     playerOpen: state.bottomPlayer.playerOpen,
     autoplayOn: state.bottomPlayer.autoplayOn,
     autoplayInitial: state.bottomPlayer.autoplayInitial,
-    preferences: state.preferences,
     currentStopUUID: state.bottomPlayer.stopUUID,
     locale: state.localization.locale,
   };
@@ -34,11 +30,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions:
       bindActionCreators({
-        loadAudio,
-        updateCurrentAudioRoute,
+        playTrack,
         togglePausePlay,
         updateNearMeRootStatus,
-        loadAudioContent,
       }, dispatch),
   };
 };

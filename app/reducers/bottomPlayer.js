@@ -20,7 +20,6 @@ import {
   PLAYER_STATUS_ERROR,
   UPDATE_AUDIO_CURRENT_TIME,
   AUDIO_DID_FINISH_PLAYING,
-  AUDIO_CONTENT_DONE,
 } from '../actions/audio';
 
 import {
@@ -33,6 +32,8 @@ import {
 } from '../actions/audioTimer';
 
 const initialState = {
+  tourStop: {},
+  audioContent: {},
   stopUUID: '',
   stopTitle: '',
   url: '',
@@ -47,6 +48,7 @@ const initialState = {
   playerStatus: PLAYER_STATUS_NOTLOADED,
   playerOpen: false,
   playRate: PLAY_RATE_NORMAL,
+  prevUUID: null,
   nextUUID: null,
   timerStartAt: 5,
   timerNumber: 0,
@@ -68,28 +70,24 @@ export function bottomPlayer(state = initialState, action) {
     }
 
     case LOAD_AUDIO_SUCCESS: {
-      const { title, url, uuid, duration } = action.activeAudio;
-
-      let stopUUID;
-      if (action.replaceAudioContent) {
-        stopUUID = action.stopUUID;
-      } else {
-        stopUUID = state.stopUUID;
-      }
+      const { title, url, uuid } = action.activeAudio;
 
       return Object.assign({},
         state,
         {
-          stopUUID,
-          stopTitle: action.stopTitle || state.stopTitle,
+          tourStop: action.tourStop,
+          stopUUID: action.stopUUID,
+          stopTitle: action.stopTitle,
+          audioContent: action.audioContent,
+          index: action.activeAudioIndex,
+          duration: action.activeAudioDuration,
+          time: 0,
           title,
           url,
           uuid,
-          index: action.activeAudioIndex,
-          duration,
-          time: 0,
-          playerStatus: action.playing ? PLAYER_STATUS_PLAY : PLAYER_STATUS_PAUSE,
+          playerStatus: PLAYER_STATUS_PLAY,
           playerOpen: true,
+          prevUUID: action.prevUUID,
           nextUUID: action.nextUUID,
         }
       );
@@ -163,20 +161,6 @@ export function bottomPlayer(state = initialState, action) {
           playerStatus: PLAYER_STATUS_ERROR,
           playerOpen: false,
           timerActive: false,
-        }
-      );
-    }
-
-    case AUDIO_CONTENT_DONE: {
-      const { playRate, timerStartAt, autoplayOn } = state;
-
-      return Object.assign({},
-        initialState,
-        {
-          playerStatus: PLAYER_STATUS_FINISHED,
-          playRate,
-          timerStartAt,
-          autoplayOn,
         }
       );
     }

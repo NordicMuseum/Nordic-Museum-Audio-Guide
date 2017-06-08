@@ -1,3 +1,4 @@
+// import store from '../store';
 
 import {
   NativeModules,
@@ -11,12 +12,7 @@ import {
 
 import {
   clearTimer,
-  stopTimer,
 } from './audioTimer';
-
-import {
-  updateLocalPreferences,
-} from './preferences';
 
 import {
   analyticsTrackDeviceAutoPlay,
@@ -38,12 +34,12 @@ export const REWIND_AUDIO = 'REWIND_AUDIO';
 export const SEEK_AUDIO_TO_TIME = 'SEEK_AUDIO_TO_TIME';
 export const REPLAY_AUDIO = 'REPLAY_AUDIO';
 export const UPDATE_PREV_UUIDS = 'UPDATE_PREV_UUIDS';
-export const UPDATE_CURRENT_AUDIO_ROUTE = 'UPDATE_CURRENT_AUDIO_ROUTE';
 
 export const TOGGLE_AUDIO_TRANSCRIPT = 'TOGGLE_AUDIO_TRANSCRIPT';
 
 export const LOAD_AUDIO_FAILURE = 'LOAD_AUDIO_FAILURE';
 export const LOAD_AUDIO_SUCCESS = 'LOAD_AUDIO_SUCCESS';
+export const LOAD_AUDIO_CONTENT_SUCCESS = 'LOAD_AUDIO_CONTENT_SUCCESS';
 
 export const UPDATE_AUDIO_CURRENT_TIME = 'UPDATE_AUDIO_CURRENT_TIME';
 export const AUDIO_DID_FINISH_PLAYING = 'AUDIO_DID_FINISH_PLAYING';
@@ -65,44 +61,29 @@ export const PLAYER_STATUS_UNLOADED = 'PLAYER_STATUS_UNLOADED';
 export const PLAYER_STATUS_LOADING = 'PLAYER_STATUS_LOADING';
 export const PLAYER_STATUS_ERROR = 'PLAYER_STATUS_ERROR';
 
-export const AUDIO_CONTENT_DONE = 'AUDIO_CONTENT_DONE';
-
 // *** Action Creators ***
-export function audioDone() {
-  return {
-    type: AUDIO_CONTENT_DONE,
-  };
-}
-
-export function loadingAudio(audioContent, uuid, time) {
-  return {
-    type: PLAYER_STATUS_LOADING,
-    audioContent,
-    uuid,
-    time,
-  };
-}
-
 function loadAudioSuccess(
-  content,
+  tourStop,
+  stopUUID,
+  stopTitle,
+  audioContent,
   activeAudio,
   activeAudioIndex,
+  activeAudioDuration,
+  prevUUID,
   nextUUID,
-  replaceAudioContent,
-  stopTitle,
-  stopUUID,
-  playing = true,
 ) {
   return {
     type: LOAD_AUDIO_SUCCESS,
-    content,
+    tourStop,
+    stopUUID,
+    stopTitle,
+    audioContent,
     activeAudio,
     activeAudioIndex,
+    activeAudioDuration,
+    prevUUID,
     nextUUID,
-    replaceAudioContent,
-    stopTitle,
-    stopUUID,
-    playing,
   };
 }
 
@@ -112,352 +93,72 @@ function loadAudioFailure(error) {
   };
 }
 
-async function fireAudioAction(
-  audioContent,
-  activeAudio,
-  dispatch,
-  replaceAudioContent,
-  autoplayOn,
-  stopTitle,
-  stopUUID,
-  playAudioAfterLoad = true,
-) {
-  const activeAudioIndex = audioContent.findIndex((content, index) => {
-    return content.uuid === activeAudio.uuid;
-  });
+export function playTrack(tourStop, trackUUID, autoplay = false) {
+  clearTimer();
 
-  let nextUUID = null;
-  if (activeAudioIndex + 1 < audioContent.length) {
-    nextUUID = audioContent[activeAudioIndex + 1].uuid;
-  }
-  setAudioManagerEventListeners(dispatch, autoplayOn, nextUUID !== null);
-  try {
+  return async (dispatch, getState) => {
+    const activeAudio = tourStop.audioContent.filtered(`uuid = "${trackUUID}"`)[0];
+
+    let activeAudioIndex;
+    for (let i = 0; i < tourStop.audioContent.length; i++) {
+      if (tourStop.audioContent[i].uuid === activeAudio.uuid) {
+        activeAudioIndex = i;
+      }
+    }
+
+    let prevUUID = null;
+    if (activeAudioIndex - 1 >= 0) {
+      prevUUID = tourStop.audioContent[activeAudioIndex - 1].uuid;
+    }
+
+    let nextUUID = null;
+    if (activeAudioIndex + 1 < tourStop.audioContent.length) {
+      nextUUID = tourStop.audioContent[activeAudioIndex + 1].uuid;
+    }
+
+    setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
+
     let url = activeAudio.audioURL;
     if (activeAudio.audioURL.length === 3) {
       url = (activeAudio.audioURL).concat('/', I18n.locale);
     }
-    const [, duration] = await AudioManager.loadLocalAudio(
+
+    let activeAudioDuration;
+    AudioManager.loadLocalAudio(
       url,
       activeAudio.uuid,
-      playAudioAfterLoad,
-    );
+      true,
+    ).then((results) => {
+      activeAudioDuration = Math.round(results[1]);
 
-    // eslint-disable-next-line no-param-reassign
-    activeAudio.duration = Math.round(duration);
-
-    clearTimer();
-    dispatch(
-      loadAudioSuccess(
-        audioContent,
-        activeAudio,
-        activeAudioIndex,
-        nextUUID,
-        replaceAudioContent,
-        stopTitle,
-        stopUUID,
-        playAudioAfterLoad,
-      )
-    );
-  } catch (e) {
-    clearTimer();
-    dispatch(
-      loadAudioFailure(e)
-    );
-  }
+      dispatch(
+        loadAudioSuccess(
+          tourStop,
+          tourStop.uuid,
+          tourStop.shortTitle,
+          tourStop.audioContent,
+          activeAudio,
+          activeAudioIndex,
+          activeAudioDuration,
+          prevUUID,
+          nextUUID,
+        )
+      );
+    })
+    .catch((e) => {
+      console.log(e.message);
+      clearTimer();
+      dispatch(
+        loadAudioFailure(e),
+      );
+    });
+  };
 }
 
 export function unloadAudio() {
   AudioManager.unloadAudio();
   return {
     type: PLAYER_STATUS_UNLOADED,
-  };
-}
-
-function swapElementsInArray(array, indexOne, indexTwo) {
-  const temp = array[indexOne];
-  array[indexOne] = array[indexTwo];
-  array[indexTwo] = temp;
-}
-
-export function loadAudioContent(
-  audioContent,
-  initialAudio,
-  autoplayOn,
-  stopTitle,
-  stopUUID,
-  globalPreferences,
-  currentUUID,
-  timeListened,
-  screenReaderOn,
-  autoplayInitial,
-  searchedByNumber,
-) {
-  AudioManager.unloadAudio();
-
-  return async (dispatch) => {
-    dispatch(
-      loadingAudio(audioContent, currentUUID, timeListened),
-    );
-
-    analyticsTrackContentOpened(stopTitle);
-
-    // if screen reader is on for a guided tactile story,
-    // change initialAudio to visual description
-    let newInitialAudio = initialAudio;
-    if (screenReaderOn && initialAudio === 'TACTILE_EXPERIENCE') {
-      newInitialAudio = 'VISUAL_DESCRIPTION';
-    }
-
-    // Reorder audio content based on global preferences
-    // A higher percentage means the audio content is preferred
-    audioContent.map((content) => {
-      const contentToUpdate = content;
-
-      if (content.category === newInitialAudio) {
-        // Initial audio should always appear at top of list
-        contentToUpdate.preferencePercentage = 1.1;
-      } else if (content.category === 'VISUAL_DESCRIPTION' && screenReaderOn) {
-        // If screenreader is on,
-        // this should be second, so assign 100%
-        contentToUpdate.preferencePercentage = 1;
-      } else {
-        // contentToUpdate.preferencePercentage = (globalPreferences.find((preference) => {
-        //  return content.category === preference.category;
-        // })).percentage;
-        contentToUpdate.preferencePercentage = 1.1;
-      }
-      return contentToUpdate;
-    });
-
-    // Make visual description always default to the back of the list
-    const categoryIndex = audioContent.findIndex((content) => {
-      return content.category === 'VISUAL_DESCRIPTION';
-    });
-
-    if (categoryIndex !== -1) {
-      swapElementsInArray(audioContent, categoryIndex, audioContent.length - 1);
-    }
-
-    // then reorder based on assigned preference percentages
-    audioContent.sort((a, b) => {
-      if (a.preferencePercentage > b.preferencePercentage) return -1;
-      else if (a.preferencePercentage < b.preferencePercentage) return 1;
-      return 0;
-    });
-
-    const activeAudio = _(audioContent)
-      .filter((content) => {
-        return content.category === newInitialAudio;
-      })
-      .first();
-
-    if (activeAudio == null) {
-      dispatch(
-        loadAudioFailure(),
-      );
-
-      return;
-    }
-
-    if (searchedByNumber !== undefined) {
-      const numberToPlay = audioContent.filter((chapter) => {
-        if (chapter.title === searchedByNumber) return true;
-        return false;
-      });
-      fireAudioAction(
-        audioContent,
-        numberToPlay[0],
-        dispatch,
-        true,
-        false,
-        stopTitle,
-        stopUUID,
-        true,
-      );
-    } else {
-      fireAudioAction(
-        audioContent,
-        activeAudio,
-        dispatch,
-        true,
-        autoplayOn,
-        stopTitle,
-        stopUUID,
-        autoplayInitial,
-      );
-    }
-  };
-}
-
-
-export function loadAudio(
-  audioContent,
-  activeAudio,
-  autoplayOn,
-  currentUUID,
-  timeListened,
-  stopTitle,
-  stopUUID,
-  playAfterLoad,
-) {
-  return async (dispatch) => {
-    for (const content of audioContent) {
-      if (content.uuid === currentUUID) {
-        analyticsTrackAudioPartialListen(
-          stopTitle,
-          content.title,
-          timeListened / content.duration,
-        );
-
-        break;
-      }
-    }
-
-    dispatch(
-      updateLocalPreferences(currentUUID, timeListened)
-    );
-
-    fireAudioAction(
-      audioContent, activeAudio, dispatch, false, autoplayOn, stopTitle, stopUUID, playAfterLoad
-    );
-  };
-}
-
-
-export function loadNextAudio(
-  audioContent,
-  currentUUID,
-  activeAudioIndex,
-  timeListened,
-  autoplayOn,
-  stopTitle,
-) {
-  return async (dispatch) => {
-    for (const content of audioContent) {
-      if (content.uuid === currentUUID) {
-        analyticsTrackAudioPartialListen(
-          stopTitle,
-          content.title,
-          timeListened / content.duration,
-        );
-
-        break;
-      }
-    }
-
-    dispatch(
-      updateLocalPreferences(currentUUID, timeListened)
-    );
-
-    let newAudioIndex = null;
-    let i = 1;
-
-    while (newAudioIndex === null &&
-           activeAudioIndex + i < audioContent.length) {
-      // If the next item is the same depth then move to it
-      // If the next item decrease the depth then move to it
-      // Otherwise, continue traversing
-      if (audioContent[activeAudioIndex + i].depth <=
-          audioContent[activeAudioIndex].depth) {
-        newAudioIndex = activeAudioIndex + i;
-      } else {
-        i++;
-      }
-    }
-
-    if (newAudioIndex === null) {
-      dispatch(audioDone);
-      return;
-    }
-
-    const newActiveAudio = audioContent[activeAudioIndex + i];
-
-    fireAudioAction(
-      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
-    );
-  };
-}
-
-
-export function loadNextAutoplayAudio(
-  audioContent,
-  currentUUID,
-  activeAudioIndex,
-  autoplayOn,
-  stopTitle
-) {
-  return async (dispatch) => {
-    if (activeAudioIndex + 1 >= audioContent.length) {
-      dispatch(audioDone);
-      return;
-    }
-
-    const newActiveAudio = audioContent[activeAudioIndex + 1];
-
-    fireAudioAction(
-      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
-    );
-  };
-}
-
-
-export function loadPrevAudio(
-  audioContent,
-  currentUUID,
-  activeAudioIndex,
-  timeListened,
-  autoplayOn,
-  stopTitle
-) {
-  return async (dispatch) => {
-    for (const content of audioContent) {
-      if (content.uuid === currentUUID) {
-        analyticsTrackAudioPartialListen(
-          stopTitle,
-          content.title,
-          timeListened / content.duration,
-        );
-
-        break;
-      }
-    }
-
-    dispatch(
-      updateLocalPreferences(currentUUID, timeListened)
-    );
-
-    let newAudioIndex = null;
-    let i = 1;
-
-    while (newAudioIndex === null &&
-           activeAudioIndex - i >= 0) {
-      // If the prev item is the same depth then move to it
-      // If the prev item decrease the depth then move to it
-      // Otherwise, continue traversing
-      if (audioContent[activeAudioIndex - i].depth <=
-          audioContent[activeAudioIndex].depth) {
-        newAudioIndex = activeAudioIndex - i;
-      } else {
-        i++;
-      }
-    }
-
-    if (newAudioIndex === null) {
-      return;
-    }
-
-    const newActiveAudio = audioContent[activeAudioIndex - i];
-
-    fireAudioAction(
-      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
-    );
-  };
-}
-
-export function updateCurrentAudioRoute(route) {
-  return {
-    type: UPDATE_CURRENT_AUDIO_ROUTE,
-    route,
   };
 }
 
@@ -478,39 +179,6 @@ export function audioDidFinishPlaying(uuid, time, displayTimer) {
   };
 }
 
-export function toggleAutoplaySuccess(autoplayOn) {
-  analyticsTrackDeviceAutoPlay(autoplayOn);
-
-  return {
-    type: TOGGLE_AUTOPLAY,
-    autoplayOn,
-  };
-}
-
-export function toggleAutoplay(autoplayOn, timerActive) {
-  return async (dispatch) => {
-    const newAutoplayStatus = !autoplayOn;
-
-    if (autoplayOn && timerActive) {
-      dispatch(
-        stopTimer()
-      );
-    }
-
-    setAudioManagerEventListeners(dispatch, newAutoplayStatus, true);
-
-    dispatch(
-      toggleAutoplaySuccess(newAutoplayStatus)
-    );
-  };
-}
-
-export function toggleAutoplayInitial(autoplayInitial) {
-  return {
-    type: TOGGLE_AUTOPLAY_INITIAL,
-    autoplayInitial,
-  };
-}
 
 export function togglePausePlay() {
   AudioManager.togglePlayPause();
