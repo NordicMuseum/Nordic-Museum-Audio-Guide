@@ -106,10 +106,7 @@ export function bottomPlayer(state = initialState, action) {
     case PLAYER_STATUS_UNLOADED: {
       return Object.assign({},
         state,
-        {
-          playerStatus: PLAYER_STATUS_UNLOADED,
-          playerOpen: false,
-        }
+        initialState,
       );
     }
 
