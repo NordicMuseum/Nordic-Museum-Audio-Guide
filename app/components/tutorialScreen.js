@@ -5,68 +5,33 @@ import {
   View,
   StyleSheet,
   Modal,
-  Text,
-  TouchableOpacity,
-  Dimensions,
+  NavigatorIOS,
 } from 'react-native';
 
-import Swiper from 'react-native-swiper';
-
 import TutorialLanguagePage from './tutorialLanguagePage';
-import TutorialWelcomePage from './tutorialWelcomePage';
-import TutorialNearMePage from './tutorialNearMePage';
 
-import { OFF_BLACK, ACTION, globalStyles } from '../styles';
+import { OFF_BLACK, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: OFF_BLACK,
+    flex: 1,
     marginTop: 20,
   },
-  floatingButtonContainer: {
-    backgroundColor: 'transparent',
-    flexDirection: 'row',
+  statusBar: {
     position: 'absolute',
-    bottom: 0,
-    paddingBottom: 50,
-    justifyContent: 'center',
-  },
-  floatingButton: {
-    height: 40,
-    justifyContent: 'center',
-  },
-  floatingButtonText: {
-    color: ACTION,
-  },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginLeft: 3,
-    marginRight: 3,
-    marginTop: 3,
-    marginBottom: 3,
-  },
-  inactiveDot: {
-    backgroundColor: ACTION,
-    opacity: 0.5,
-  },
-  activeDot: {
-    backgroundColor: ACTION,
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 20,
+    backgroundColor: LIGHT_GRAY,
   },
 });
 
-const SWIPER_REF = 'SWIPER_REF';
-
 class TutorialScreen extends Component {
   static propTypes = {
-    bluetoothOn: PropTypes.bool.isRequired,
     tutorialHidden: PropTypes.bool.isRequired,
-    currentPage: PropTypes.number.isRequired,
-    locationServicesStatus: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
-      tutorialPageDidChange: PropTypes.func.isRequired,
       hideTutorial: PropTypes.func.isRequired,
       switchLocale: PropTypes.func.isRequired,
     }),
@@ -77,6 +42,8 @@ class TutorialScreen extends Component {
     this.state = {
       modalVisible: true,
     };
+
+    this.hideModal = this.hideModal.bind(this);
   }
 
   hideModal() {
@@ -89,62 +56,16 @@ class TutorialScreen extends Component {
 
   render() {
     const {
-      bluetoothOn,
-      locationServicesStatus,
-      currentPage,
       tutorialHidden,
       locale,
     } = this.props;
 
     const {
-      tutorialPageDidChange,
       switchLocale,
     } = this.props.actions;
 
     if (tutorialHidden) {
       return null;
-    }
-
-    const width = Dimensions.get('window').width;
-
-    let floatingButton;
-
-    if (currentPage <= 1) {
-      floatingButton = (
-        <TouchableOpacity
-          accessible={true}
-          accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 3. Next Page.`}
-          style={styles.floatingButton}
-          onPress={() => {
-            this.refs[SWIPER_REF].scrollBy(1);
-          }}
-        >
-          <Text
-            style={[globalStyles.h1, styles.floatingButtonText]}
-          >
-            Next
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      floatingButton = (
-        <TouchableOpacity
-          accessible={true}
-          accessibilityTraits={'button'}
-          accessibilityLabel={`Page ${currentPage + 1} of 3. Let\'s get started.`}
-          style={styles.floatingButton}
-          onPress={() => {
-            this.hideModal();
-          }}
-        >
-          <Text
-            style={[globalStyles.h1, styles.floatingButtonText]}
-          >
-            Let's get started
-          </Text>
-        </TouchableOpacity>
-      );
     }
 
     return (
@@ -153,36 +74,25 @@ class TutorialScreen extends Component {
         animationType={'slide'}
         visible={this.state.modalVisible}
       >
-        <Swiper
-          ref={SWIPER_REF}
-          style={styles.container}
-          loop={false}
-          bounces={true}
-          dot={
-            <View style={[styles.dot, styles.inactiveDot]} />
-          }
-          activeDot={
-            <View style={[styles.dot, styles.activeDot]} />
-          }
-          onMomentumScrollEnd={(event, state) => {
-            tutorialPageDidChange(state.index);
+        <View style={styles.statusBar} />
+        <NavigatorIOS
+          style={[styles.container]}
+          initialRoute={{
+            title: '',
+            component: TutorialLanguagePage,
+            navigationBarHidden: true,
+            barTintColor: '#ffffff',
+            titleTextColor: OFF_BLACK,
+            shadowHidden: true,
+            passProps: {
+              locale,
+              actions: {
+                switchLocale,
+                hideTutorial: this.hideModal,
+              },
+            },
           }}
-        >
-          <TutorialWelcomePage />
-          <TutorialLanguagePage
-            locale={locale}
-            actions={{
-              switchLocale,
-            }}
-          />
-          <TutorialNearMePage
-            bluetoothOn={bluetoothOn}
-            locationServicesStatus={locationServicesStatus}
-          />
-        </Swiper>
-        <View style={[styles.floatingButtonContainer, { width }]}>
-          {floatingButton}
-        </View>
+        />
       </Modal>
     );
   }

@@ -9,12 +9,11 @@ import {
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
+import { OFF_WHITE, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   offStyle: {
-    borderColor: LIGHT_GRAY,
-    backgroundColor: OFF_WHITE,
+    borderColor: 'transparent',
     marginVertical: 0,
     borderRadius: 0,
   },
@@ -27,6 +26,9 @@ const styles = StyleSheet.create({
   },
   onTextStyle: {
     color: OFF_WHITE,
+  },
+  normalTextStyle: {
+    textAlign: 'center',
   },
 });
 
@@ -107,11 +109,12 @@ const LanguageSwitcherButtons = (props) => {
               ]}
               textStyle={[
                 props.locale === language.code ? styles.onTextStyle : {},
+                styles.normalTextStyle,
                 props.textStyle,
               ]}
               text={language.name}
               onPress={() => {
-                props.actions.switchLocale(language.code);
+                props.onPress(language.code);
               }}
             />
           );
@@ -131,9 +134,7 @@ LanguageSwitcherButtons.propTypes = {
     Text.propTypes.style,
     PropTypes.object,
   ]),
-  actions: PropTypes.shape({
-    switchLocale: PropTypes.func.isRequired,
-  }),
+  onPress: PropTypes.func.isRequired,
 };
 
 export default LanguageSwitcherButtons;

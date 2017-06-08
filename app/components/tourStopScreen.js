@@ -22,7 +22,6 @@ import AudioContentList from './audioContentList';
 
 import {
   parseDisplayText,
-  parseVoiceoverText,
 } from '../utilities';
 
 import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
@@ -189,7 +188,7 @@ class TourStopScreen extends Component {
       this.props.actions.playTrack(
         this.props.tourStop,
         searchedTrack.uuid,
-        true, // autoplay
+        false, // autoplay
       );
     }
   }
@@ -211,13 +210,13 @@ class TourStopScreen extends Component {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
     }
 
-    let accessibilityLabel;
+    // let accessibilityLabel;
 
-    if (tourStop.shortCreditAccessibilityLabel) {
-      accessibilityLabel = parseVoiceoverText(tourStop.shortCreditAccessibilityLabel);
-    } else {
-      accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
-    }
+    // if (tourStop.shortCreditAccessibilityLabel) {
+    //   accessibilityLabel = parseVoiceoverText(tourStop.shortCreditAccessibilityLabel);
+    // } else {
+    //  accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
+    // }
 
     return (
       <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
@@ -271,7 +270,6 @@ class TourStopScreen extends Component {
               <View style={styles.playAllButtonContainer}>
                 <TouchableOpacity
                   style={[styles.playAllButton, { width: 0.65 * width }]}
-                  activeOpacity={0.9}
                   onPress={() => {
                     playTrack(
                       this.props.tourStop,

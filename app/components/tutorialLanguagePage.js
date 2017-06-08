@@ -2,56 +2,23 @@
 import React, { PropTypes } from 'react';
 
 import {
-  Text,
   View,
-  Image,
   StyleSheet,
   ScrollView,
 } from 'react-native';
 
-import { OFF_WHITE, ACTION, GRAY } from '../styles';
+import I18n from 'react-native-i18n';
 
+import NavigationBar from './navigationBar';
+import TutorialWelcomePage from './tutorialWelcomePage';
 import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
+
+import { LIGHT_GRAY, OFF_BLACK } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    marginHorizontal: 15,
-  },
-  titleRow: {
-    flexDirection: 'row',
-    marginBottom: 35,
-  },
-  titleLogo: {
-    tintColor: ACTION,
-  },
-  titleText: {
-    marginHorizontal: 15,
-    alignSelf: 'flex-end',
-    fontWeight: '500',
-  },
-  text: {
-    color: OFF_WHITE,
-    fontSize: 18,
-  },
-  cell: {
-    flexDirection: 'column',
-    backgroundColor: GRAY,
-    marginVertical: 20,
-  },
-  cellTitle: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginHorizontal: 15,
-    height: 44,
-  },
-  cellText: {
-    flex: 1,
-    color: OFF_WHITE,
-  },
-  languageScroller: {
-    marginBottom: 150,
+    marginTop: 44,
   },
 });
 
@@ -62,27 +29,49 @@ const TutorialLanguagePage = (props) => {
 
   const {
     switchLocale,
+    hideTutorial,
   } = props.actions;
 
   return (
-    <View style={[styles.container]}>
-      <View style={styles.titleRow}>
-        <Image
-          style={styles.titleLogo}
-          source={require('../assets/storiesTab.png')}
-        />
-        <Text style={[styles.titleText, styles.text]}>
-          Language
-        </Text>
-      </View>
+    <View style={{ flex: 1 }}>
+      <NavigationBar
+        label={I18n.t('settingsScreen_Title')}
+        labelStyle={{
+          color: OFF_BLACK,
+        }}
+        barStyle={{
+          backgroundColor: LIGHT_GRAY,
+          height: 44,
+          top: 0,
+        }}
+      />
       <ScrollView
-        bounces={false}
-        style={styles.languageScroller}
+        style={styles.container}
+        automaticallyAdjustContentInsets={false}
+        contentContainerStyle={{ marginHorizontal: 25 }}
       >
         <LanguageSwitcherButtons
+          style={{ backgroundColor: 'transparent' }}
+          textStyle={{ color: OFF_BLACK }}
           locale={locale}
-          actions={{
-            switchLocale,
+          onPress={(languageCode) => {
+            switchLocale(languageCode);
+
+            props.navigator.push({
+              title: '',
+              component: TutorialWelcomePage,
+              barTintColor: '#ffffff',
+              titleTextColor: OFF_BLACK,
+              shadowHidden: true,
+              navigationBarHidden: true,
+              passProps: {
+                navigator: props.navigator,
+                locale: languageCode,
+                actions: {
+                  hideTutorial,
+                },
+              },
+            });
           }}
         />
       </ScrollView>
@@ -91,9 +80,11 @@ const TutorialLanguagePage = (props) => {
 };
 
 TutorialLanguagePage.propTypes = {
+  navigator: PropTypes.object.isRequired,
   locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
     switchLocale: PropTypes.func.isRequired,
+    hideTutorial: PropTypes.func.isRequired,
   }),
 };
 

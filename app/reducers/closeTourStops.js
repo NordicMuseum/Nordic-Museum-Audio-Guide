@@ -99,8 +99,7 @@ export function closeTourStops(state = initialState, action) {
 
       // 3. Find the tour stops with the returned regions
       const query = `regions CONTAINS "${regions.join('" OR regions CONTAINS "')}"`;
-      const showTourStops = tourStops
-        .filtered(query);
+      const showTourStops = tourStops.filtered(query);
 
       return Object.assign({},
         state,

@@ -22,6 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
+		3271C41D1EE8659400217AC1 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C41C1EE8659400217AC1 /* welcome.png */; };
 		327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDB1ECAB4F0003A67BC /* highlights.png */; };
 		327F7EF41ECAB4F1003A67BC /* homesAndInteriors.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */; };
 		327F7EF61ECAB4F1003A67BC /* museumBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDE1ECAB4F0003A67BC /* museumBackground.png */; };
@@ -334,6 +335,7 @@
 		2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.release.xcconfig"; sourceTree = "<group>"; };
 		2D260585236149398895A4E6 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
 		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		3271C41C1EE8659400217AC1 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = images/welcome.png; sourceTree = "<group>"; };
 		327F7E331ECAB30C003A67BC /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AndyWarholAccessibilityProject-Bridging-Header.h"; path = "code/AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		327F7EDB1ECAB4F0003A67BC /* highlights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlights.png; path = images/highlights.png; sourceTree = "<group>"; };
 		327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homesAndInteriors.png; path = images/homesAndInteriors.png; sourceTree = "<group>"; };
@@ -834,6 +836,7 @@
 				327F7EE41ECAB4F0003A67BC /* tableSettings.png */,
 				327F7EE81ECAB4F0003A67BC /* textileGallery.png */,
 				327F7EE91ECAB4F0003A67BC /* traditions.png */,
+				3271C41C1EE8659400217AC1 /* welcome.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -1333,6 +1336,7 @@
 				E018D4B61ECBA6D3007D0478 /* 333 in Resources */,
 				E018D4B81ECBA6D3007D0478 /* 335 in Resources */,
 				E018D4A51ECBA6D3007D0478 /* 316 in Resources */,
+				3271C41D1EE8659400217AC1 /* welcome.png in Resources */,
 				327F7EF61ECAB4F1003A67BC /* museumBackground.png in Resources */,
 				E018D4C01ECBA6D3007D0478 /* 343 in Resources */,
 				E018D4B41ECBA6D3007D0478 /* 331 in Resources */,
