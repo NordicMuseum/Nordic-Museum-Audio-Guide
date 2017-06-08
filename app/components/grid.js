@@ -20,7 +20,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { LIGHT_GRAY } from '../styles';
+import { LIGHT_GRAY, HIGHLIGHTS } from '../styles';
 
 const SPACING = 4;
 

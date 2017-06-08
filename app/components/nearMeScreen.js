@@ -115,7 +115,7 @@ class NearMeScreen extends Component {
       contentView = (
         <View style={[styles.messageContainer, styles.settingContainer]}>
           <Text style={globalStyles.body}>
-            {'While at the museum, we show you stories based on what’s near you.'
+            {'While at the museum, we show you themes based on what’s near you.'
              + '\n\n' +
             'To use this feature, we’ll need two things from you…'}
           </Text>
@@ -133,17 +133,15 @@ class NearMeScreen extends Component {
       let storiesMessage;
 
       if (this.props.floor === null) {
-        storiesMessage = 'While at the museum, we show you stories based on what’s near you.';
-      } else if (this.props.floor === '7') {
-        if (tourStopsNum === 0) {
-          storiesMessage = 'There are no stories near you.';
-        } else if (tourStopsNum === 1) {
-          storiesMessage = 'There is one story near you.';
-        } else {
-          storiesMessage = `There are ${tourStopsNum} stories near you.`;
-        }
+        storiesMessage = 'While at the museum, we show you themes based on what’s near you.';
       } else {
-        storiesMessage = 'Stories are available on floor 7.';
+        if (tourStopsNum === 0) {
+          storiesMessage = 'There are no themes near you.';
+        } else if (tourStopsNum === 1) {
+          storiesMessage = 'There is one theme near you.';
+        } else {
+          storiesMessage = `There are ${tourStopsNum} themes near you.`;
+        }
       }
 
       // Only announce changes when:
@@ -250,10 +248,6 @@ class NearMeScreen extends Component {
     let floor;
     if (this.props.floor === null) {
       floor = I18n.t('nearMeScreen_Title');
-    } else if (this.props.floor === '0') {
-      floor = 'Underground';
-    } else if (this.props.floor === '1') {
-      floor = 'Entrance Space';
     } else {
       floor = `Floor ${this.props.floor}`;
     }
