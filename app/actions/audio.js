@@ -120,7 +120,11 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
 
     let url = activeAudio.audioURL;
     if (activeAudio.audioURL.length === 3) {
-      url = (activeAudio.audioURL).concat('/', I18n.locale);
+      if (activeAudio.duration[I18n.locale]) {
+        url = (activeAudio.audioURL).concat('/', I18n.locale);
+      } else {
+        url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);
+      }
     }
 
     let activeAudioDuration;
