@@ -229,6 +229,7 @@ class NearMeScreen extends Component {
                 tintColor: TEAL,
                 titleTextColor: OFF_BLACK,
                 shadowHidden: true,
+                navigationBarHidden: true,
                 passProps: {
                   tab: TAB_NEARME,
                   floor: item.floor,
