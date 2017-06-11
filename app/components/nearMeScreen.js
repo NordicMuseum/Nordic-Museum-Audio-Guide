@@ -85,7 +85,10 @@ class NearMeScreen extends Component {
   static propTypes = {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
-    closeTourStops: PropTypes.object.isRequired,
+    closeTourStops: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object,
+    ]).isRequired,
     regions: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,

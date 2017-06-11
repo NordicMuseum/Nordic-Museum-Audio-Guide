@@ -147,6 +147,7 @@ const Grid = (props) => {
   let content = [];
   let stickyHeaders = [];
   let lastFloorSeen;
+
   props.items.forEach((tourStop, index) => {
     if (lastFloorSeen !== tourStop.floor & props.renderHeaders) {
       stickyHeaders.push(totalIndex);

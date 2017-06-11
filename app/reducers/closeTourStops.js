@@ -19,14 +19,21 @@ export const initialState = {
 
   ],
   detectedFloor: null,
-  tourStops: {},
+  tourStops: [],
 };
 
 export function closeTourStops(state = initialState, action) {
   switch (action.type) {
     case UPDATE_BEACONS: {
       if (action.newBeacons.length === 0) {
-        return state;
+        return Object.assign({},
+          state,
+          {
+            regions: [],
+            detectedFloor: null,
+            tourStops: [],
+          }
+        );
       }
 
       // 1. Filter out blocked beacons
