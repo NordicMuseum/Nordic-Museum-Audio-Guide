@@ -238,18 +238,25 @@ class NearMeScreen extends Component {
             />
           );
 
+          const uuids = [];
+          audioContent.forEach((content) => {
+            uuids.push(content.uuid);
+          });
+
+          const query = `uuid == "${uuids.join('" OR uuid == "')}"`;
+
+          // Wrap content in a 'dynamic' tourStop
+          const tourStop = {
+            uuid: uuid.v4(),
+            floor: this.props.floor,
+            shortTitle: I18n.t('Highlights_floor2_shortTitle'),
+            longTitle: I18n.t('Highlights_floor2_shortTitle'),
+            audioContent: audioContentRealm.filtered(query),
+          };
+
           highlightsList.push(
             ...audioContent.map((content, index) => {
               totalIndex++;
-
-              // Wrap content in a fake tourStop
-              const tourStop = {
-                uuid: uuid.v4(),
-                floor: this.props.floor,
-                shortTitle: I18n.t('Highlights_floor2_shortTitle'),
-                longTitle: I18n.t('Highlights_floor2_shortTitle'),
-                audioContent: audioContentRealm.filtered(`uuid == "${content.uuid}"`),
-              };
 
               return (
                 <AudioContentItem

@@ -114,6 +114,7 @@ export const tourStops = [
     audioContent: [
       {
         uuid: uuid.v4(),
+        regions: ['Table Settings'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '301',
