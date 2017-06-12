@@ -23,7 +23,6 @@ import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'column',
     paddingTop: 8,
     paddingBottom: 16,

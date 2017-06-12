@@ -17,6 +17,7 @@ export class AudioContent {
     primaryKey: 'uuid',
     properties: {
       uuid: { type: 'string' },
+      regions: { type: 'string', optional: true }, // Stored as String, but converted from Array
       category: { type: 'string' },
       title: { type: 'string' },
       duration: { type: Durations.NAME },

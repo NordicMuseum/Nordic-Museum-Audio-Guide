@@ -2,6 +2,7 @@
 import {
   UPDATE_ACTIVE_TAB,
   UPDATE_NEARME_ROOT_STATUS,
+  TAB_NEARME,
   TAB_STORIES,
 } from '../actions/navigation';
 
@@ -14,7 +15,6 @@ const initialState = {
 
 export function nav(state = initialState, action) {
   switch (action.type) {
-
     case UPDATE_ACTIVE_TAB: {
       return Object.assign({},
         state,
@@ -28,7 +28,7 @@ export function nav(state = initialState, action) {
       return Object.assign({},
         state,
         {
-          atNearMeRoot: state.activeTab === TAB_STORIES ? action.atRoot : state.atNearMeRoot,
+          atNearMeRoot: state.activeTab === TAB_NEARME ? action.atRoot : state.atNearMeRoot,
         }
       );
     }

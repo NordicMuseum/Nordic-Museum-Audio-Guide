@@ -9,6 +9,9 @@ import blockRules from '../data/beaconBlockRules.json';
 import { TourStop } from '../models/tourStop';
 const tourStops = TourStop.allRealmObjects().sorted('order');
 
+import { AudioContent } from '../models/audioContent';
+const audioContent = AudioContent.allRealmObjects().filtered('regions != null');
+
 import { _, includes } from 'lodash';
 
 export const initialState = {
@@ -19,14 +22,23 @@ export const initialState = {
 
   ],
   detectedFloor: null,
-  tourStops: {},
+  tourStops: [],
+  audioContent: [],
 };
 
 export function closeTourStops(state = initialState, action) {
   switch (action.type) {
     case UPDATE_BEACONS: {
       if (action.newBeacons.length === 0) {
-        return state;
+        return Object.assign({},
+          state,
+          {
+            regions: [],
+            detectedFloor: null,
+            tourStops: [],
+            audioContent: [],
+          }
+        );
       }
 
       // 1. Filter out blocked beacons
@@ -93,6 +105,7 @@ export function closeTourStops(state = initialState, action) {
             previousRegions,
             detectedFloor,
             tourStops: state.tourStops,
+            audioContent: state.showAudioContent,
           }
         );
       }
@@ -100,6 +113,7 @@ export function closeTourStops(state = initialState, action) {
       // 3. Find the tour stops with the returned regions
       const query = `regions CONTAINS "${regions.join('" OR regions CONTAINS "')}"`;
       const showTourStops = tourStops.filtered(query);
+      const showAudioContent = audioContent.filtered(query);
 
       return Object.assign({},
         state,
@@ -108,6 +122,7 @@ export function closeTourStops(state = initialState, action) {
           previousRegions,
           detectedFloor,
           tourStops: showTourStops,
+          audioContent: showAudioContent,
         }
       );
     }
