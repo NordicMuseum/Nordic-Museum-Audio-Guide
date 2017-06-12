@@ -14,6 +14,7 @@ import NavigationBar from './navigationBar';
 import StickyHeader from './stickyHeader';
 
 import { renderItem } from './grid';
+
 import AmenitiesItem from './amenitiesItem';
 import TourStop from '../containers/tourStop';
 
@@ -67,6 +68,9 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10,
   },
+  storiesMessageText: {
+    textAlign: 'center',
+  },
 });
 
 // I tried to do this through state but couldn't...
@@ -102,19 +106,16 @@ class NearMeScreen extends Component {
   }
 
   render() {
-    const tourStops = this.props.closeTourStops;
-    const tourStopsNum = tourStops.length;
-
     let contentView;
     let debugView;
+
+    const storiesMessage = I18n.t('nearMeScreen_StoriesMessage');
 
     if (this.props.tracking === false) {
       contentView = (
         <View style={[styles.messageContainer, styles.settingContainer]}>
-          <Text style={globalStyles.body}>
-            {'While at the museum, we show you themes based on what’s near you.'
-             + '\n\n' +
-            'To use this feature, we’ll need two things from you…'}
+          <Text style={[globalStyles.body, styles.storiesMessageText]}>
+            {`${storiesMessage}\n\nTo use this feature, we’ll need two things from you…`}
           </Text>
           <View style={styles.buttonsContainer}>
             <LocationServicesButton
@@ -127,15 +128,19 @@ class NearMeScreen extends Component {
         </View>
       );
     } else if (this.props.tracking === true) {
-      let storiesMessage;
+      const amenities = this.props.amenities;
+      const tourStops = this.props.closeTourStops;
+      const tourStopsNum = tourStops.length;
+      let voiceOverMessage;
 
       if (this.props.floor !== null) {
         if (tourStopsNum === 0) {
-          storiesMessage = 'There are no themes near you.';
+          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessageNone');
         } else if (tourStopsNum === 1) {
-          storiesMessage = 'There is one theme near you.';
+          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessageSingular');
         } else {
-          storiesMessage = `There are ${tourStopsNum} themes near you.`;
+          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessagePlural');
+          voiceOverMessage = voiceOverMessage.replace(' x ', ` ${tourStopsNum} `);
         }
       }
 
@@ -152,8 +157,8 @@ class NearMeScreen extends Component {
           this.props.playerStatus !== PLAYER_STATUS_PLAY
       ) {
         lastSeenNumber = tourStopsNum;
-        if (storiesMessage) {
-          screenReaderScreenChanged(storiesMessage);
+        if (voiceOverMessage) {
+          screenReaderScreenChanged(voiceOverMessage);
         }
       }
 
@@ -183,81 +188,91 @@ class NearMeScreen extends Component {
         }
       }
 
-      const stickyHeaders = [];
-      let totalIndex = 0;
-
-      let tourStopsList = tourStops.map((tourStop, index) => {
-        totalIndex++;
-        return renderItem(
-          tourStop,
-          index,
-          (item) => {
-            this.props.navigator.push({
-              title: tourStop.shortTitle,
-              component: TourStop,
-              barTintColor: '#ffffff',
-              tintColor: TEAL,
-              titleTextColor: OFF_BLACK,
-              shadowHidden: true,
-              navigationBarHidden: true,
-              passProps: {
-                tourStop,
-                tab: TAB_NEARME,
-                floor: tourStop.floor,
-                duration: tourStop.duration[this.props.locale],
-                initialCategory: tourStop.initialAudio,
-                imageURL: tourStop.imageURL,
-              },
-            });
-          },
-          this.props.currentStopUUID,
-          this.props.locale,
-          tourStops,
+      if (amenities.length === 0 && tourStops.length === 0) {
+        contentView = (
+          <View style={[styles.messageContainer, styles.settingContainer]}>
+            <Text style={[globalStyles.body, styles.storiesMessageText]}>
+              {`${storiesMessage}`}
+            </Text>
+          </View>
         );
-      });
+      } else {
+        const stickyHeaders = [];
+        let totalIndex = 0;
 
-      if (tourStopsList.length > 0) {
-        totalIndex++;
-        stickyHeaders.push(0);
-        tourStopsList.unshift(
-          <StickyHeader
-            key={totalIndex}
-            title={'Themes'}
-          />
+        let tourStopsList = tourStops.map((tourStop, index) => {
+          totalIndex++;
+          return renderItem(
+            tourStop,
+            index,
+            (item) => {
+              this.props.navigator.push({
+                title: tourStop.shortTitle,
+                component: TourStop,
+                barTintColor: '#ffffff',
+                tintColor: TEAL,
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+                navigationBarHidden: true,
+                passProps: {
+                  tourStop,
+                  tab: TAB_NEARME,
+                  floor: tourStop.floor,
+                  duration: tourStop.duration[this.props.locale],
+                  initialCategory: tourStop.initialAudio,
+                  imageURL: tourStop.imageURL,
+                },
+              });
+            },
+            this.props.currentStopUUID,
+            this.props.locale,
+            tourStops,
+          );
+        });
+
+        if (tourStopsList.length > 0) {
+          totalIndex++;
+          stickyHeaders.push(0);
+          tourStopsList.unshift(
+            <StickyHeader
+              key={totalIndex}
+              title={'Themes'}
+            />
+          );
+        }
+
+        let amenitiesList = amenities.map((amenity, index) => {
+          totalIndex++;
+          return (
+            <AmenitiesItem
+              key={totalIndex}
+              amenity={amenity}
+              border={index !== (amenities.length - 1)}
+            />
+          );
+        });
+
+        if (amenitiesList.length > 0) {
+          totalIndex++;
+          stickyHeaders.push(tourStops.length + 1);
+          amenitiesList.unshift(
+            <StickyHeader
+              key={totalIndex}
+              title={I18n.t('nearMeScreen_Amenities')}
+            />
+          );
+        }
+
+        contentView = (
+          <ScrollView
+            automaticallyAdjustContentInsets={false}
+            stickyHeaderIndices={stickyHeaders}
+          >
+            {tourStopsList}
+            {amenitiesList}
+          </ScrollView>
         );
       }
-
-      let amenitiesList = this.props.amenities.map((amenity, index) => {
-        totalIndex++;
-        return (
-          <AmenitiesItem
-            key={totalIndex}
-            amenity={amenity}
-            border={index !== (this.props.amenities.length - 1)}
-          />
-        );
-      });
-
-      if (amenitiesList.length > 0) {
-        totalIndex++;
-        stickyHeaders.push(tourStops.length + 1);
-        amenitiesList.unshift(
-          <StickyHeader
-            key={totalIndex}
-            title={'Amenities'}
-          />
-        );
-      }
-
-      contentView = (
-        <ScrollView
-          automaticallyAdjustContentInsets={false}
-          stickyHeaderIndices={stickyHeaders}
-        >
-          {tourStopsList}
-          {amenitiesList}
-        </ScrollView>
-      );
     }
 
     let floor;

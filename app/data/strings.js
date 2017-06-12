@@ -401,8 +401,8 @@ export const strings = {
     '460': 'Folk art today',
 
     //6. TRANSCRIPTS
-},
-sv: {
+  },
+  sv: {
     // 1. IN-APP STRINGS
     audioContentList_ChapterSingular: 'Kapitel',
     audioContentList_ChapterPlural: 'Kapitel',
@@ -795,8 +795,8 @@ sv: {
     '460': 'Folkkonst idag',
 
     //6. TRANSCRIPTS
-},
-it: {
+  },
+  it: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -926,8 +926,8 @@ it: {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia. Mi chiamo Sanne Houby-Nielsen e sono la Direttrice del Museo.\n\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\n\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\n\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\n\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\n\nCercate gli stand gialli delle audioguide.\n\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.',
-},
-ar: {
+  },
+  ar: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1057,8 +1057,8 @@ ar: {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\n\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\n\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\n\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\n\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\n\nتدعى هذه الجولة السياحية "مقتطفات من متحف نورديسكا". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\n\nانتبهوا للافتات الإرشاد السمعي الصفراء .\n\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى "المنازل والتصاميم الداخلية". أتمنى لكم جولة سعيدة',
-},
-es: {
+  },
+  es: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1189,8 +1189,8 @@ es: {
     '456': 'El poder de una silla',
 
     //6. TRANSCRIPTS
-},
-fi: {
+  },
+  fi: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1319,8 +1319,8 @@ fi: {
 
     // 6. TRANSCRIPTS
     '201_transcript': 'Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\n\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\n\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\n\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\n\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\n\nEtsikää keltaisia audio-opas-telineitä.\n\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.',
-},
-de: {
+  },
+  de: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1454,8 +1454,8 @@ de: {
     '456': 'Die Macht des Stuhls',
 
     //6. TRANSCRIPTS
-},
-ru: {
+  },
+  ru: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1512,7 +1512,7 @@ ru: {
     'toggleSpeedButton_NormalAccessibilityLabel': 'Скорость 1Х',
     'toggleSpeedButton_FastestAccessibilityLabel': 'Скорость 2Х',
     'autoplayProgressView_CountDownTextSingular': 'Начало через 1 секунду',
-    'autoplayProgressView_CountDownTextPlural': 'Начало через Х секунд',
+    'autoplayProgressView_CountDownTextPlural': 'Начало через x секунд',
     'tutorialScreen_Stories': 'Аудиогид Северного музея разделен на темы. Каждая тема содержит значительное число аудиофайлов, относящихся к теме выставки. Если включена опция ',
     'nearMeScreen_StoriesMessageFallback': 'Темы можно прослушать на этажах 2, 3 и 4',
     'nearMeScreen_StoriesMessageNone': 'Рядом с вами нет тем.',
@@ -1583,8 +1583,8 @@ ru: {
     '456': 'Власть кресла',
 
     //6. TRANSCRIPTS
-},
-fr: {
+  },
+  fr: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1712,8 +1712,8 @@ fr: {
     '456': 'Les sièges qui symbolisent le pouvoir',
 
     //6. TRANSCRIPTS
-},
-zh: {
+  },
+  zh: {
     // 1. IN-APP STRINGS
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
@@ -1842,8 +1842,8 @@ zh: {
 
     // 6. TRANSCRIPTS
     '201_transcript': '歡迎來到北歐博物館，這是瑞典最大的歷史文化博物館。將由我來為大家介紹這座博物館的收藏品。\n\n這一座巨型雕像上的是古斯塔夫．瓦薩，一位在16世紀統一瑞典的國王。這座博物館會展示從古斯塔夫．瓦薩年代到今時今日人們的生活狀況—當中包括他們居住的房屋，穿著的衣服，進食的食物還有他們如何慶祝節日。這座雕像出自瑞典雕塑家卡爾．米勒斯手筆。\n\n這座博物館在19世紀末剛剛成立的時候，本意為展出來自各個北歐國家的展品。因此冠以北歐博物館之名。不過時至今日這裡只展出瑞典人的生活寫照。你可以見到國王古斯塔夫．瓦薩腳下刻有一句金句，中文的意思即是「做個瑞典人」！博物館的創辦人，亞瑟．哈茲里烏斯相信對歷史的興趣和愛國主義是相輔相成的。\n\n今天北歐博物館會為你講述過去和現在瑞典和北歐地區居民的故事。\n\n這個導賞團稱為北歐博物館重點導賞團。你將會認識到博物館裡最有趣的各項展品。全程大約需一小時。\n\n請留意黃色的導賞台。\n\n請搭乘電梯到4樓。你可以繼續參觀家居及室內設計展覽區。祝你有個愉快的旅程。',
-},
-svSimple: {
+  },
+  svSimple: {
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
@@ -1874,8 +1874,8 @@ svSimple: {
     '451': 'Golvurens former',
     '456': 'Dyrbara stolar och kistor',
     //6. TRANSCRIPTS
-},
-svKids: {
+  },
+  svKids: {
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
@@ -1906,7 +1906,7 @@ svKids: {
     '451': 'Färgade ullstrumpor',
     '456': 'En serietidning från förr',
     //6. TRANSCRIPTS
-},
+  },
 
   seSme: { // Northern Sami
     // 1. IN-APP STRINGS
@@ -1915,7 +1915,7 @@ svKids: {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-},
+  },
   seSmj: { // Lule Sami
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
@@ -1923,7 +1923,7 @@ svKids: {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-},
+  },
   seSma: { // Southern Sami
     // 1. IN-APP STRINGS
     // 2. MUSEUM CONTENT
@@ -1931,5 +1931,5 @@ svKids: {
     // 4. STORY HEADERS
     // 5. CHAPTER HEADERS
     // 6. TRANSCRIPTS
-},
+  },
 };
