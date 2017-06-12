@@ -73,83 +73,83 @@ const styles = StyleSheet.create({
   },
 });
 
-const Grid = (props) => {
+export const renderItem = (item, index, onPress, selected, locale, items) => {
   const { width, height } = Dimensions.get('window');
   const cellWidth = width;
   const cellHeight = height / 4;
-  const gridLength = props.items.length;
+  const gridLength = items.length;
 
-  const renderItem = (item, index, onPress) => {
-    let traits = [];
+  let traits = [];
 
-    if (item.uuid === props.selected) {
-      traits = ['button', 'startsMedia', 'selected'];
-    } else {
-      traits = ['button', 'startsMedia'];
-    }
+  if (item.uuid === selected) {
+    traits = ['button', 'startsMedia', 'selected'];
+  } else {
+    traits = ['button', 'startsMedia'];
+  }
 
-    return (
-      <View
-        style={[styles.cellContainer, {
-          width: cellWidth,
-          flex: 1,
-        }]}
-        key={item.uuid}
-        accessible={true}
-        accessibilityTraits={traits}
-        accessibilityLabel={
-          `${parseVoiceoverText(I18n.t(item.longTitle))}, ${index} of ${gridLength}.` +
-          ` Plays audio for ${I18n.t(item.shortTitle)} story.`
-        }
+  return (
+    <View
+      style={[styles.cellContainer, {
+        width: cellWidth,
+        flex: 1,
+      }]}
+      key={item.uuid}
+      accessible={true}
+      accessibilityTraits={traits}
+      accessibilityLabel={
+        `${parseVoiceoverText(I18n.t(item.longTitle))}, ${index} of ${gridLength}.` +
+        ` Plays audio for ${I18n.t(item.shortTitle)} story.`
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.6}
+        onPress={() => onPress(item)}
       >
-        <TouchableOpacity
-          activeOpacity={0.6}
-          onPress={() => onPress(item)}
-        >
-          <View>
-            <Image
-              style={[
-                styles.cellImage,
-                {
-                  width: cellWidth,
-                  height: cellHeight,
-                },
-              ]}
-              source={{
-                uri: item.imageURL,
-              }}
-            >
-              <View style={{ flex: 0.6 }}>
-                <Text style={styles.cellTitleText}>
-                  {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
-                </Text>
-              </View>
-              <View style={styles.cellDuration}>
-                <Image
-                  style={styles.cellDurationIcon}
-                  source={require('../assets/ClockIcon.png')}
-                />
-                <Text style={styles.cellDurationText}>
-                  {Math.floor(item.duration[props.locale] / 60)}
-                </Text>
-                <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
-                  MIN
-                </Text>
-              </View>
-            </Image>
-          </View>
-        </TouchableOpacity>
-      </View>
-    );
-  };
+        <View>
+          <Image
+            style={[
+              styles.cellImage,
+              {
+                width: cellWidth,
+                height: cellHeight,
+              },
+            ]}
+            source={{
+              uri: item.imageURL,
+            }}
+          >
+            <View style={{ flex: 0.6 }}>
+              <Text style={styles.cellTitleText}>
+                {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
+              </Text>
+            </View>
+            <View style={styles.cellDuration}>
+              <Image
+                style={styles.cellDurationIcon}
+                source={require('../assets/ClockIcon.png')}
+              />
+              <Text style={styles.cellDurationText}>
+                {Math.floor(item.duration[locale] / 60)}
+              </Text>
+              <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
+                MIN
+              </Text>
+            </View>
+          </Image>
+        </View>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
+const Grid = (props) => {
   let totalIndex = 0;
   let content = [];
   let stickyHeaders = [];
   let lastFloorSeen;
 
   props.items.forEach((tourStop, index) => {
-    if (lastFloorSeen !== tourStop.floor & props.renderHeaders) {
+    if (lastFloorSeen !== tourStop.floor) {
       stickyHeaders.push(totalIndex);
       content.push(
         <StickyHeader
@@ -162,7 +162,7 @@ const Grid = (props) => {
     }
 
     content.push(
-      renderItem(tourStop, index, props.onCellPress)
+      renderItem(tourStop, index, props.onCellPress, props.selected, props.locale, props.items)
     );
     totalIndex++;
   });
@@ -185,9 +185,7 @@ Grid.propTypes = {
     PropTypes.object,
   ]).isRequired,
   selected: PropTypes.string,
-  renderHeaders: PropTypes.bool.isRequired,
   onCellPress: PropTypes.func.isRequired,
-  screenReader: PropTypes.bool.isRequired,
   locale: PropTypes.string.isRequired,
 };
 

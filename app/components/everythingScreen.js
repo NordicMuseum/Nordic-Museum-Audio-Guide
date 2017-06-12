@@ -70,9 +70,7 @@ class EverythingScreen extends Component {
           <Grid
             locale={this.props.locale}
             items={this.props.tourStops}
-            renderHeaders={true}
             selected={this.props.currentStopUUID}
-            screenReader={this.props.screenReader}
             onCellPress={(item) => {
               this.props.navigator.push({
                 title: item.shortTitle,

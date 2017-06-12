@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
     screenReader: state.accessibility.screenReader,
     playerStatus: state.bottomPlayer.playerStatus,
     timerActive: state.bottomPlayer.timerActive,
+    currentStopUUID: state.bottomPlayer.stopUUID,
     atNearMeRoot: state.nav.atNearMeRoot,
     tracking: state.beacon.tracking,
     bluetoothOn: state.beacon.bluetoothOn,

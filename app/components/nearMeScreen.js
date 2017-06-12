@@ -11,7 +11,9 @@ import {
 } from 'react-native';
 
 import NavigationBar from './navigationBar';
-import Grid from './grid';
+import StickyHeader from './stickyHeader';
+
+import { renderItem } from './grid';
 import AmenitiesItem from './amenitiesItem';
 import TourStop from '../containers/tourStop';
 
@@ -56,15 +58,6 @@ const styles = StyleSheet.create({
     paddingTop: 25,
     paddingBottom: 15,
   },
-  amenitiesContainer: {
-    margin: 10,
-    marginTop: 25,
-    padding: 10,
-    paddingBottom: 0,
-  },
-  amenitiesTitle: {
-    marginBottom: 10,
-  },
   buttonsContainer: {
     marginTop: 15,
   },
@@ -96,6 +89,7 @@ class NearMeScreen extends Component {
     screenReader: PropTypes.bool.isRequired,
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
+    currentStopUUID: PropTypes.string.isRequired,
     floor: PropTypes.string,
     tracking: PropTypes.bool,
     bluetoothOn: PropTypes.bool.isRequired,
@@ -109,7 +103,7 @@ class NearMeScreen extends Component {
 
   render() {
     const tourStops = this.props.closeTourStops;
-    const tourStopsNum = tourStops.length || 0;
+    const tourStopsNum = tourStops.length;
 
     let contentView;
     let debugView;
@@ -135,9 +129,7 @@ class NearMeScreen extends Component {
     } else if (this.props.tracking === true) {
       let storiesMessage;
 
-      if (this.props.floor === null) {
-        storiesMessage = 'While at the museum, we show you themes based on what’s near you.';
-      } else {
+      if (this.props.floor !== null) {
         if (tourStopsNum === 0) {
           storiesMessage = 'There are no themes near you.';
         } else if (tourStopsNum === 1) {
@@ -160,7 +152,9 @@ class NearMeScreen extends Component {
           this.props.playerStatus !== PLAYER_STATUS_PLAY
       ) {
         lastSeenNumber = tourStopsNum;
-        screenReaderScreenChanged(storiesMessage);
+        if (storiesMessage) {
+          screenReaderScreenChanged(storiesMessage);
+        }
       }
 
       const regionsDetected = this.props.regions ? this.props.regions.join(', ') : '';
@@ -189,63 +183,80 @@ class NearMeScreen extends Component {
         }
       }
 
-      let amenitiesList;
-      if (this.props.amenities.length !== 0) {
-        amenitiesList = (
-          <View style={[styles.amenitiesContainer, { backgroundColor: LIGHT_BLUE }]}>
-            <Text
-              allowFontScaling={false}
-              style={[styles.amenitiesTitle, globalStyles.h1]}
-            >
-              Amenities
-            </Text>
-            {this.props.amenities.map((amenity, index) => {
-              return (
-                <AmenitiesItem
-                  key={amenity.uuid}
-                  amenity={amenity}
-                  border={index !== (this.props.amenities.length - 1)}
-                />
-              );
-            })}
-          </View>
+      const stickyHeaders = [];
+      let totalIndex = 0;
+
+      let tourStopsList = tourStops.map((tourStop, index) => {
+        totalIndex++;
+        return renderItem(
+          tourStop,
+          index,
+          (item) => {
+            this.props.navigator.push({
+              title: tourStop.shortTitle,
+              component: TourStop,
+              barTintColor: '#ffffff',
+              tintColor: TEAL,
+              titleTextColor: OFF_BLACK,
+              shadowHidden: true,
+              navigationBarHidden: true,
+              passProps: {
+                tourStop,
+                tab: TAB_NEARME,
+                floor: tourStop.floor,
+                duration: tourStop.duration[this.props.locale],
+                initialCategory: tourStop.initialAudio,
+                imageURL: tourStop.imageURL,
+              },
+            });
+          },
+          this.props.currentStopUUID,
+          this.props.locale,
+          tourStops,
+        );
+      });
+
+      if (tourStopsList.length > 0) {
+        totalIndex++;
+        stickyHeaders.push(0);
+        tourStopsList.unshift(
+          <StickyHeader
+            key={totalIndex}
+            title={'Themes'}
+          />
+        );
+      }
+
+      let amenitiesList = this.props.amenities.map((amenity, index) => {
+        totalIndex++;
+        return (
+          <AmenitiesItem
+            key={totalIndex}
+            amenity={amenity}
+            border={index !== (this.props.amenities.length - 1)}
+          />
+        );
+      });
+
+      if (amenitiesList.length > 0) {
+        totalIndex++;
+        stickyHeaders.push(tourStops.length + 1);
+        amenitiesList.unshift(
+          <StickyHeader
+            key={totalIndex}
+            title={'Amenities'}
+          />
         );
       }
 
       contentView = (
-        <View>
-          <View style={styles.messageContainer}>
-            <Text style={globalStyles.body}>
-              {storiesMessage}
-            </Text>
-          </View>
-          <Grid
-            locale={this.props.locale}
-            items={tourStops}
-            renderHeaders={false}
-            screenReader={this.props.screenReader}
-            onCellPress={(item) => {
-              this.props.navigator.push({
-                title: item.shortTitle,
-                component: TourStop,
-                barTintColor: '#ffffff',
-                tintColor: TEAL,
-                titleTextColor: OFF_BLACK,
-                shadowHidden: true,
-                navigationBarHidden: true,
-                passProps: {
-                  tab: TAB_NEARME,
-                  floor: item.floor,
-                  duration: item.duration[this.props.locale],
-                  tourStop: item,
-                  initialCategory: item.initialAudio,
-                  imageURL: item.imageURL,
-                },
-              });
-            }}
-          />
+        <ScrollView
+          automaticallyAdjustContentInsets={false}
+          stickyHeaderIndices={stickyHeaders}
+        >
+          {tourStopsList}
           {amenitiesList}
-        </View>
+        </ScrollView>
       );
     }
 
@@ -253,7 +264,7 @@ class NearMeScreen extends Component {
     if (this.props.floor === null) {
       floor = I18n.t('nearMeScreen_Title');
     } else {
-      floor = `Floor ${this.props.floor}`;
+      floor = `${I18n.t('floor')} ${this.props.floor}`;
     }
 
     let containerMargin = BOTTOMBARHEIGHT;
@@ -278,11 +289,7 @@ class NearMeScreen extends Component {
           style={[styles.container, { marginBottom: containerMargin }]}
         >
           {debugView}
-          <ScrollView
-            automaticallyAdjustContentInsets={false}
-          >
-            {contentView}
-          </ScrollView>
+          {contentView}
         </View>
       </View>
     );
