@@ -12,6 +12,12 @@ function saveToRealm(tourStop) {
       ...tourStop,
       tags: tourStop.tags.join(','),
       regions: tourStop.regions.join(','),
+      audioContent: tourStop.audioContent.map((audio) => {
+        return {
+          ...audio,
+          regions: audio.regions ? audio.regions.join(',') : null,
+        };
+      }),
     }
   );
 }

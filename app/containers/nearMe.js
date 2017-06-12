@@ -1,12 +1,21 @@
 
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import NearMeScreen from '../components/nearMeScreen';
 
+import {
+  togglePausePlay,
+  playTrack,
+} from '../actions/audio';
+
 const mapStateToProps = (state) => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
+
     closeTourStops: state.closeTourStops.tourStops,
+    audioContent: state.closeTourStops.audioContent,
+
     regions: state.closeTourStops.regions,
     floor: state.closeTourStops.detectedFloor,
     amenities: ((state.closeTourStops.detectedFloor === null) ? [] : state.amenities.allAmenities[state.closeTourStops.detectedFloor].amenities),
@@ -24,7 +33,13 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    actions:
+      bindActionCreators({
+        togglePausePlay,
+        playTrack,
+      }, dispatch),
+  };
 };
 
 export default connect(

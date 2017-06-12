@@ -1,22 +1,25 @@
 
 import React, { Component, PropTypes } from 'react';
 
-import I18n from 'react-native-i18n';
-
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
+  Dimensions,
 } from 'react-native';
+
+import I18n from 'react-native-i18n';
+import uuid from 'uuid';
 
 import NavigationBar from './navigationBar';
 import StickyHeader from './stickyHeader';
 
 import { renderItem } from './grid';
 
-import AmenitiesItem from './amenitiesItem';
+import AudioContentItem from './audioContentItem';
 import TourStop from '../containers/tourStop';
+import AmenitiesItem from './amenitiesItem';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -25,6 +28,14 @@ import { PLAYER_STATUS_PLAY } from '../actions/audio';
 
 import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
+
+// I really hate this...
+import { getRealmInstance } from '../realm';
+import { AudioContent } from '../models/audioContent';
+const realm = getRealmInstance();
+const audioContentRealm = realm.objects(AudioContent.NAME);
+// This, ↓, creates a circular reference. Fix it!
+// const audioContentRealm = AudioContent.allRealmObjects();
 
 import {
    screenReaderScreenChanged,
@@ -86,6 +97,10 @@ class NearMeScreen extends Component {
       PropTypes.array,
       PropTypes.object,
     ]).isRequired,
+    audioContent: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object,
+    ]).isRequired,
     regions: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,
@@ -99,6 +114,10 @@ class NearMeScreen extends Component {
     bluetoothOn: PropTypes.bool.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired,
+    actions: PropTypes.shape({
+      playTrack: PropTypes.func.isRequired,
+      togglePausePlay: PropTypes.func.isRequired,
+    }).isRequired,
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -128,9 +147,10 @@ class NearMeScreen extends Component {
         </View>
       );
     } else if (this.props.tracking === true) {
-      const amenities = this.props.amenities;
       const tourStops = this.props.closeTourStops;
       const tourStopsNum = tourStops.length;
+      const amenities = this.props.amenities;
+      const audioContent = this.props.audioContent;
       let voiceOverMessage;
 
       if (this.props.floor !== null) {
@@ -188,7 +208,9 @@ class NearMeScreen extends Component {
         }
       }
 
-      if (amenities.length === 0 && tourStops.length === 0) {
+      if (amenities.length === 0 &&
+          tourStops.length === 0 &&
+          audioContent.length === 0) {
         contentView = (
           <View style={[styles.messageContainer, styles.settingContainer]}>
             <Text style={[globalStyles.body, styles.storiesMessageText]}>
@@ -197,69 +219,146 @@ class NearMeScreen extends Component {
           </View>
         );
       } else {
+        const width = Dimensions.get('window').width;
         const stickyHeaders = [];
         let totalIndex = 0;
 
-        let tourStopsList = tourStops.map((tourStop, index) => {
-          totalIndex++;
-          return renderItem(
-            tourStop,
-            index,
-            (item) => {
-              this.props.navigator.push({
-                title: tourStop.shortTitle,
-                component: TourStop,
-                barTintColor: '#ffffff',
-                tintColor: TEAL,
-                titleTextColor: OFF_BLACK,
-                shadowHidden: true,
-                navigationBarHidden: true,
-                passProps: {
-                  tourStop,
-                  tab: TAB_NEARME,
-                  floor: tourStop.floor,
-                  duration: tourStop.duration[this.props.locale],
-                  initialCategory: tourStop.initialAudio,
-                  imageURL: tourStop.imageURL,
-                },
-              });
-            },
-            this.props.currentStopUUID,
-            this.props.locale,
-            tourStops,
-          );
-        });
+        const {
+          playTrack,
+          togglePausePlay,
+        } = this.props.actions;
 
-        if (tourStopsList.length > 0) {
+        let highlightsList = [];
+        if (audioContent.length > 0) {
+          stickyHeaders.push(totalIndex);
+          highlightsList.push(
+            <StickyHeader
+              key={totalIndex}
+              title={I18n.t('Highlights_floor2_shortTitle')}
+            />
+          );
+
+          highlightsList.push(
+            ...audioContent.map((content, index) => {
+              totalIndex++;
+
+              // Wrap content in a fake tourStop
+              const tourStop = {
+                uuid: uuid.v4(),
+                floor: this.props.floor,
+                shortTitle: I18n.t('Highlights_floor2_shortTitle'),
+                longTitle: I18n.t('Highlights_floor2_shortTitle'),
+                audioContent: audioContentRealm.filtered(`uuid == "${content.uuid}"`),
+              };
+
+              return (
+                <AudioContentItem
+                  key={totalIndex}
+                  audioContent={content}
+                  active={this.props.currentStopUUID === content.uuid}
+                  screenReader={this.props.screenReader}
+                  index={index}
+                  listLength={audioContent.length}
+                  contentWidth={width}
+                  locale={this.props.locale}
+                  actions={{
+                    analyticsTrackTranscriptOpenned: () => {
+                    //   analyticsTrackTranscriptOpenned(tourStop.title, content.title);
+                    },
+                    reloadAudio: () => {
+                      playTrack(
+                        tourStop,
+                        content.uuid,
+                        false,
+                      );
+                    },
+                    audioAction: () => {
+                      if (this.props.currentStopUUID === content.uuid) {
+                        togglePausePlay();
+                      } else {
+                        playTrack(
+                          tourStop,
+                          content.uuid,
+                          false,
+                        );
+                      }
+                    },
+                  }}
+                />
+              );
+            })
+          );
+        }
+
+
+        let tourStopsList = [];
+        if (tourStops.length > 0) {
           totalIndex++;
-          stickyHeaders.push(0);
-          tourStopsList.unshift(
+          stickyHeaders.push(totalIndex);
+          tourStopsList.push(
             <StickyHeader
               key={totalIndex}
               title={'Themes'}
             />
           );
+
+          tourStopsList.push(
+            ...tourStops.map((tourStop, index) => {
+              totalIndex++;
+
+              return renderItem(
+                tourStop,
+                index,
+                (item) => {
+                  this.props.navigator.push({
+                    title: tourStop.shortTitle,
+                    component: TourStop,
+                    barTintColor: '#ffffff',
+                    tintColor: TEAL,
+                    titleTextColor: OFF_BLACK,
+                    shadowHidden: true,
+                    navigationBarHidden: true,
+                    passProps: {
+                      tourStop,
+                      tab: TAB_NEARME,
+                      floor: tourStop.floor,
+                      duration: tourStop.duration[this.props.locale],
+                      initialCategory: tourStop.initialAudio,
+                      imageURL: tourStop.imageURL,
+                    },
+                  });
+                },
+                this.props.currentStopUUID,
+                this.props.locale,
+                tourStops,
+              );
+            })
+          );
         }
 
-        let amenitiesList = amenities.map((amenity, index) => {
+        let amenitiesList = [];
+        if (amenities.length > 0) {
           totalIndex++;
-          return (
-            <AmenitiesItem
-              key={totalIndex}
-              amenity={amenity}
-              border={index !== (amenities.length - 1)}
-            />
-          );
-        });
-
-        if (amenitiesList.length > 0) {
-          totalIndex++;
-          stickyHeaders.push(tourStops.length + 1);
-          amenitiesList.unshift(
+          stickyHeaders.push(totalIndex);
+          amenitiesList.push(
             <StickyHeader
               key={totalIndex}
               title={I18n.t('nearMeScreen_Amenities')}
             />
+          );
+
+          amenitiesList.push(
+            ...amenities.map((amenity, index) => {
+              totalIndex++;
+
+              return (
+                <AmenitiesItem
+                  key={totalIndex}
+                  amenity={amenity}
+                  border={index !== (amenities.length - 1)}
+                />
+              );
+            })
           );
         }
 
@@ -268,6 +367,7 @@ class NearMeScreen extends Component {
             automaticallyAdjustContentInsets={false}
             stickyHeaderIndices={stickyHeaders}
           >
+            {highlightsList}
             {tourStopsList}
             {amenitiesList}
           </ScrollView>
