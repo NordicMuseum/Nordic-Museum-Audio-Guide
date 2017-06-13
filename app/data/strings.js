@@ -43,12 +43,13 @@ export const strings = {
     grid_Of: 'of',
     grid_AccessibilityLabel: 'Plays audio for x story.',
     nearMeScreen_Title: 'Near Me',
-    nearMeScreen_LocationOffText: 'While at the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
-    nearMeScreen_StoriesMessage: 'While at the museum, we show you stories based on what’s near you.',
-    nearMeScreen_StoriesMessageNone: 'There are no stories near you.',
-    nearMeScreen_StoriesMessageSingular: 'There is one story near you.',
-    nearMeScreen_StoriesMessagePlural: 'There are x stories near you.',
-    nearMeScreen_StoriesMessageFallback: 'Stories are available on floor 2, 3 and 4.',
+    nearMeScreen_LocationOffText: 'While at the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…',
+    nearMeScreen_StoriesMessage: 'While at the museum, we show you themes based on what’s near you.',
+    nearMeScreen_LocationNeeds: 'To use this feature, we’ll need two things from you…',
+    nearMeScreen_StoriesMessageNone: 'There are no themes near you.',
+    nearMeScreen_StoriesMessageSingular: 'There is one theme near you.',
+    nearMeScreen_StoriesMessagePlural: 'There are x themes near you.',
+    nearMeScreen_StoriesMessageFallback: 'Themes are available on floor 2, 3 and 4.',
     nearMeScreen_Regions: 'regions',
     nearMeScreen_Amenities: 'Amenities',
     nearMeScreen_Entrance: 'Entrance Space',
@@ -62,15 +63,15 @@ export const strings = {
     settingsScreen_AutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
     settingsScreen_AutoplayOffAccessibilityLabel: 'Autoplay, off. Double tap to turn on.',
     settingsScreen_NearMeHeader: 'Near Me',
-    settingsSceen_NearMeBody: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
+    settingsSceen_NearMeBody: 'At the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…',
     settingsScreen_AutoplayHeader: 'Autoplay',
-    settingsScreen_AutoplayBody: 'The Nordic Museum Audio Guide is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters within a story.',
+    settingsScreen_AutoplayBody: 'The Nordic Museum Audio Guide is organized into themes. Each theme contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters within a theme.',
     timeProgressView_SecondsRemaining: 'x seconds remaining',
     tourStopScreen_ArtworkInformationAccessibilityLabel: 'Artwork Information. Double tap to go to long credits.',
     tutorialScreen_WelcomeTitle: 'Audio Guide',
     tutorialScreen_NoWorries: 'Don’t worry—you can change these preferences later.',
-    tutorialScreen_NearMe: 'At the museum, we show you stories based on what’s near you. To use this feature, we’ll need two things from you…',
-    tutorialScreen_Stories: 'The Nordic Museum Audio Guide is organized into stories. Each story contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters for you.',
+    tutorialScreen_NearMe: 'At the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…',
+    tutorialScreen_Stories: 'The Nordic Museum Audio Guide is organized into themes. Each story contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters for you.',
     tutorialScreen_StoriesAutoplayOn: 'Autoplay is on',
     tutorialScreen_StoriesAutoplayOnAccessibilityLabel: 'Autoplay, on. Double tap to turn off.',
     tutorialScreen_StoriesAutoplayOff: 'Autoplay is off',
@@ -83,6 +84,7 @@ export const strings = {
     playAll: 'Play all',
 
     // 2. MUSEUM CONTENT
+    themes: 'Themes',
     floor: 'Floor',
     floor1_Label: 'Floor 1',
     floor2_Label: 'Floor 2',
@@ -132,6 +134,7 @@ export const strings = {
     museumScreen_ListItem4Label: '⚙ Settings',
     museumScreen_ListItem5Label: 'Credits',
     tutorialScreen_welcomeMessage: 'Welcome',
+    highlights: 'Highlights',
 
     // 3. AMENITIES
     amenities_CloakroomTitle: 'Cloakroom',
@@ -462,6 +465,7 @@ export const strings = {
     bluetoothButton_OffLabel: 'Slå på Bluetooth',
     nearMeScreen_StoriesMessage: 'När du är på museet visar vi dig teman som finns i närheten av dig.',
     tutorialScreen_NearMe: 'När du är på museet visar vi dig teman som finns i närheten av dig. För att använda denna funktion behöver vi två saker från dig…',
+    nearMeScreen_LocationNeeds: 'För att använda denna funktion behöver vi två saker från dig…',
     timeProgressView_SecondsRemaining: 'x sekunder återstår',
     closePlayerView_Text: 'Du har nått slutet av ',
     settingsScreen_Title: '🌎 Språk',
@@ -469,6 +473,7 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Välkommen',
 
     // 2. MUSEUM CONTENT
+    themes: 'Teman',
     floor1_Label: 'Plan 1',
     floor2_Label: 'Plan 2',
     floor3_Label: 'Plan 3',
@@ -515,6 +520,7 @@ export const strings = {
     aboutScreen_AdmissionHeader: 'Entré',
     aboutScreen_AdmissionBody1: 'Juni–augusti: Vuxen: 120 kr, Barn och ungdomar till och med 18 år: fri entré',
     aboutScreen_AdmissionBody2: 'September–maj: Vuxen: 100 kr, Barn och ungdomar till och med 18 år: fri entré',
+    highlights: 'Höjdpunkter',
 
     // 3. AMENITIES
     amenities_CloakroomTitle: 'Garderob',
@@ -860,7 +866,8 @@ export const strings = {
     'tryAgain': 'Riprova',
     'bluetoothButton_OffLabel': 'Attiva Bluetooth',
     'nearMeScreen_StoriesMessage': 'Mentre sei al museo, vedrai i temi basati su quello che è vicino a te.',
-    'tutorialScreen_NearMe': 'Mentre sei al museo, vedrai i temi basati su quello che è vicino a te. Per usare questa funzionalità, ti chiediamo due cose...',
+    'tutorialScreen_NearMe': 'Mentre sei al museo, vedrai i temi basati su quello che è vicino a te. Per usare questa funzionalità, ti chiediamo due cose…',
+    nearMeScreen_LocationNeeds: 'Per usare questa funzionalità, ti chiediamo due cose…',
     'timeProgressView_SecondsRemaining': 'restano x secondi',
     'closePlayerView_Text': 'Sei alla fine di ',
     'settingsScreen_Title': '🌎 Lingua',
@@ -869,10 +876,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Benvenuto',
 
     // 2. MUSEUM CONTENT
+    themes: 'Temi',
     aboutScreen_Title: 'Il Museo Nordico',
     aboutScreen_Overview: 'Il Museo Nordico è il più grande museo di storia culturale della Svezia. Un palazzo della quotidianità, luogo di storie sulla vita e sulle persone che vivono nella regione nordica – ieri, oggi e domani. Scoprirete abiti e costumi, tessuti e gioielli, case e arredamento, fotografia, giocattoli, arte popolare, oggetti in vetro e porcellana. È anche presente un’esposizione sull’unica popolazione indigena della Svezia, i Sami.',
     aboutScreen_AboutHeader: 'L’edificio',
     aboutScreen_AboutBody: 'Il museo è stato fondato da Artur Hazelius nel 1873. L’imponente edificio, situato sull’isola di Djurgården, essa stessa luogo di interesse, è stato progettato in stile rinascimentale da Isak Gustaf Clason ed è stato aperto nel 1907.',
+    highlights: 'Le parti salienti',
 
     // 3. AMENITIES
 
@@ -992,6 +1001,7 @@ export const strings = {
     'bluetoothButton_OffLabel': 'قم بتشغيل البلوتوث',
     'nearMeScreen_StoriesMessage': 'أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك.',
     'tutorialScreen_NearMe': 'أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك. لاستخدام هذه الميزة، سنحتاج إلى أمرين منك ...',
+    nearMeScreen_LocationNeeds: 'لاستخدام هذه الميزة، سنحتاج إلى أمرين منك …',
     'timeProgressView_SecondsRemaining': 'هناك x ثانية متبقية',
     'closePlayerView_Text': 'لقد وصلت إلى نهاية ',
     'settingsScreen_Title': '🌎 لغة',
@@ -1000,10 +1010,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'أهلا بك',
 
     // 2. MUSEUM CONTENT
+    themes: 'المواضيع',
     aboutScreen_Title: 'متحف الشمال ',
     aboutScreen_Overview: 'متحف الشمال هو أكبر متحف يحتفي بالتاريخ الثقافي في السويد. وهو قصر يعج بالحياة اليومية، ومكان يسرد حكايات عن سكان منطقة الشمال ويصور معيشتهم - في الأمس واليوم والغد. اكتشف الملابس والأزياء، والمنسوجات والحُلي، والمنازل والأثاث، والأعمال التصويرية، والألعاب، والفنون الشعبية، وأعمال الزجاج والخزف. كما يوجد أيضًا معرض عن السكان الأصليين الوحيدين في السويد، ألا وهم الساميون. ',
     aboutScreen_AboutHeader: 'المبنى',
     aboutScreen_AboutBody: 'يعود تأسيس المتحف إلى عام 1873 على يد آرتور هازليوس. ويقع هذا المبنى الفخم على جزيرة ديورجاردن - وهو مشهد طبيعي في حد ذاته - وقد صممه إيزاك غوستاف كلاسون على طراز عصر النهضة، وتم افتتاحه في 1907.',
+    'highlights': 'مقتطفات',
 
 
     // 3. AMENITIES
@@ -1123,6 +1135,7 @@ export const strings = {
     'bluetoothButton_OffLabel': 'Active el Bluetooth',
     'nearMeScreen_StoriesMessage': 'Mientras visita el museo, le enseñaremos los temas basados en aquello cercano a usted.',
     'tutorialScreen_NearMe': 'Mientras visita el museo, le enseñaremos los temas basados en aquello cercano a usted. Para usar esta función, tendrá que hacer dos cosas…',
+    nearMeScreen_LocationNeeds: 'Para usar esta función, tendrá que hacer dos cosas…',
     'timeProgressView_SecondsRemaining': 'x segundos restantes',
     'closePlayerView_Text': 'Ha llegado al final de ',
     'settingsScreen_Title': '🌎 Idioma',
@@ -1132,12 +1145,14 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Bienvenido',
 
     // 2. MUSEUM CONTENT
+    themes: 'Temas',
     aboutScreen_Title: 'El Museo Nórdico',
     aboutScreen_Overview: 'El Museo Nórdico es el mayor museo de historia cultural de Suecia. Un palacio cotidiano y un lugar donde se cuentan historias sobre la vida y la gente de la región nórdica: de ayer, de hoy y de mañana. Descubra trajes y moda, tejidos y joyería, hogares y muebles, fotografía, juguetes, arte tradicional y piezas de cristal y porcelana. El museo también alberga una exposición sobre el único pueblo indígena de Suecia: los sami.',
     aboutScreen_AboutHeader: 'Edificio',
     aboutScreen_AboutBody: 'El museo fue fundado en 1873 por Artur Hazelius. El imponente edificio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.',
     aboutScreen_HoursHeader: 'Horario de apertura',
     aboutScreen_AdmissionHeader: 'Entrada',
+    'highlights': 'Atracciones principales',
 
     // 3. AMENITIES
 
@@ -1255,6 +1270,7 @@ export const strings = {
     'bluetoothButton_OffLabel': 'Aktivoi Bluetooth',
     'nearMeScreen_StoriesMessage': 'Vierailusi aikana voit seurata, mitä teemoja läheltäsi löytyy.',
     'tutorialScreen_NearMe': 'Vierailusi aikana voit seurata, mitä teemoja läheltäsi löytyy. Käyttääksesi tätä toimintoa sinun on tehtävä kaksi asiaa…',
+    nearMeScreen_LocationNeeds: 'Käyttääksesi tätä toimintoa sinun on tehtävä kaksi asiaa…',
     'timeProgressView_SecondsRemaining': 'x sekuntia jäljellä',
     'closePlayerView_Text': 'on lopussa ',
     'settingsScreen_Title': '🌎 Kieli',
@@ -1263,10 +1279,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Tervetuloa',
 
     // 2. MUSEUM CONTENT
+    themes: 'Teemoja',
     aboutScreen_Title: 'Nordiska museet',
     aboutScreen_Overview: 'Nordiska museet on Ruotsin suurin kulttuuri-historiallinen museo. Se on arjen palatsi, joka toimii näyttämönä tarinoille ihmisten elämästä Pohjoismaissa eilen, tänään ja huomenna. Museossa voit tutustua vaatteisiin ja muotiin, tekstiileihin ja koruihin, huonekaluihin ja tapaan asua, valokuviin, leluihin, kansantaiteeseen sekä lasiin ja posliiniin. Museossa on myös Ruotsin ainoaa alkuperäiskansaa saamelaisia käsittelevä näyttely.',
     aboutScreen_AboutHeader: 'Rakennus',
     aboutScreen_AboutBody: 'Museon perusti kielentutkija ja etnografian keräilijä Artur Hazelius jo vuonna 1873. Djurgårdenilla sijaitseva valtava renessanssityylinen rakennus on jo itsessään nähtävyys. Sen suunnitteli arkkitehti Isak Gustaf Clason, ja se vihittiin käyttöön vuonna 1907.',
+    'highlights': 'Kohokohtia',
 
     // 3. AMENITIES
 
@@ -1384,7 +1402,8 @@ export const strings = {
     'tryAgain': 'Noch mal versuchen',
     'bluetoothButton_OffLabel': 'Bluetooth einschalten',
     'nearMeScreen_StoriesMessage': 'Während Ihres Besuchs zeigen wir Ihnen Themen in Ihrer Nähe.',
-    'tutorialScreen_NearMe': 'Während Ihres Besuchs zeigen wir Ihnen Themen in Ihrer Nähe. Um diese Funktion nutzen zu können, benötigen wir zwei Dinge von Ihnen...',
+    'tutorialScreen_NearMe': 'Während Ihres Besuchs zeigen wir Ihnen Themen in Ihrer Nähe. Um diese Funktion nutzen zu können, benötigen wir zwei Dinge von Ihnen…',
+    nearMeScreen_LocationNeeds: 'Um diese Funktion nutzen zu können, benötigen wir zwei Dinge von Ihnen…',
     'timeProgressView_SecondsRemaining': 'x Sekunden übrig',
     'closePlayerView_Text': 'Sie haben erreicht das Ende von ',
     'settingsScreen_Title': '🌎 Sprache',
@@ -1393,10 +1412,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Willkommen',
 
     // 2. MUSEUM CONTENT
+    themes: 'Themen',
     aboutScreen_Title: 'Das Nordische Museum',
     aboutScreen_Overview: 'Das Nordische Museum ist das größte kulturgeschicht-liche Museum Schwedens. Ein Palast der Alltagskultur, in dem vom Leben und von den Menschen in Skandinavien gestern, heute und morgen erzählt wird. Entdecken Sie Kleidung und Mode, Textilien und Schmuck, Möbel und Einrichtungsgegenstände, Fotos, Spielzeug, Volkskunst, Glas und Geschirr. Hier gibt es auch eine Ausstellung zur einzigen Urbevölkerung Schwedens, den Samen, zu sehen.',
     aboutScreen_AboutHeader: 'Das Gebäude',
     aboutScreen_AboutBody: 'Das Museum wurde im Jahr 1873 von Artur Hazelius gegründet. Schon das riesige Gebäude im Stadtteil Djurgården an sich ist eine Sehenswürdigkeit. Es wurde von Isak Gustaf Clason im Renaissance-Stil entworfen und 1907 eingeweiht.',
+    'highlights': 'Höhepunkte',
 
     // 3. AMENITIES
 
@@ -1537,6 +1558,7 @@ export const strings = {
     'bluetoothButton_OffLabel': 'Включите связь по Bluetooth',
     'nearMeScreen_StoriesMessage': 'Во время вашего визита в музей, мы покажем вам темы в зависимости от вашего местоположения. ',
     'tutorialScreen_NearMe': 'Во время вашего визита в музей, мы покажем вам темы в зависимости от вашего местоположения. Чтобы вы могли воспользоваться этой возможностью, нам нужно, чтобы вы сделали следующее:',
+    nearMeScreen_LocationNeeds: 'Чтобы вы могли воспользоваться этой возможностью, нам нужно, чтобы вы сделали следующее:',
     'timeProgressView_SecondsRemaining': 'Остается Х секунд',
     'closePlayerView_Text': 'Вы дошли до конца ',
     'settingsScreen_Title': '🌎 Яазык',
@@ -1545,10 +1567,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Добро пожаловать',
 
     // 2. MUSEUM CONTENT
+    themes: 'Темы',
     aboutScreen_Title: 'Музей северных стран',
     aboutScreen_Overview: 'Музей северных стран — крупнейший в Швеции историко-культурный музей. Это общедоступный дворец, в котором можно прикоснуться к прошлому, настоящему и будущему Северных стран и их жителей. Посетите экспозиции, посвященные одежде и моде, текстилю и украшениям, жилищам и мебели, фотографии, игрушкам, народному искусству, стеклу и фарфору. Отдельная выставка посвящена единственному коренному народу Швеции, саамам.',
     aboutScreen_AboutHeader: 'Здание',
     aboutScreen_AboutBody: 'Музей был основан в 1873 году Артуром Хазелиусом. Величественное здание на острове Юргорден, которое само по себе является архитектурной достопримечательностью, было спроектировано в стиле неоренессанса Исаком Густавом Класоном и открыто в 1907 году.',
+    'highlights': 'Реликвии',
 
     // 3. AMENITIES
 
@@ -1666,6 +1690,7 @@ export const strings = {
     'bluetoothButton_OffLabel': 'Activer le Bluetooth.',
     'nearMeScreen_StoriesMessage': 'Durant votre visite, nous vous proposons des thèmes en fonction de votre emplacement au sein du musée.',
     'tutorialScreen_NearMe': 'Durant votre visite, nous vous proposons des thèmes en fonction de votre emplacement au sein du musée. Afin de profiter de cette option, deux choses sont nécessaires…',
+    nearMeScreen_LocationNeeds: 'Afin de profiter de cette option, deux choses sont nécessaires…',
     'timeProgressView_SecondsRemaining': 'x secondes restantes',
     'closePlayerView_Text': 'Vous avez atteint la fin de ',
     'settingsScreen_Title': '🌎 Langue',
@@ -1674,10 +1699,12 @@ export const strings = {
     tutorialScreen_welcomeMessage: 'Bienvenue',
 
     // 2. MUSEUM CONTENT
+    themes: 'Thèmes',
     aboutScreen_Title: 'Le musée nordique',
     aboutScreen_Overview: 'Le musée nordique est le plus grand musée d’histoire culturelle de Suède. Ce véritable palais abrite des collections consacrées aux peuples des régions nordiques et à leur vie au fil des époques. Découvrez vêtements, modes, textiles, bijoux, habitations, meubles, photographies, jouets, art populaire, pièces en verre et en porcelaine. L’une des expositions retrace l’histoire du seul peuple indigène de Suède, les Samis.',
     aboutScreen_AboutHeader: 'L’édifice',
     aboutScreen_AboutBody: 'Le musée a vu le jour en 1873 grâce à Artur Hazelius. L’imposant monument situé sur l’île de Djurgården, l’île aux loisirs, a été imaginé dans un style Renaissance par Isak Gustaf Clason et a ouvert ses portes en 1907.',
+    'highlights': 'Les incontournables',
 
     // 3. AMENITIES
 
@@ -1795,6 +1822,7 @@ export const strings = {
     'bluetoothButton_OffLabel': '开启蓝牙',
     'nearMeScreen_StoriesMessage': '在博物馆中，我们根据您附近的情况为您显示展览主题。',
     'tutorialScreen_NearMe': '在博物馆中，我们根据您附近的情况为您显示展览主题，要使用这一功能，您需要进行两步操作…',
+    nearMeScreen_LocationNeeds: '要使用这一功能，您需要进行两步操作…',
     'timeProgressView_SecondsRemaining': '剩余x秒',
     'closePlayerView_Text': '您已欣赏完',
     'settingsScreen_Title': '🌎 语言',
@@ -1803,31 +1831,33 @@ export const strings = {
     tutorialScreen_welcomeMessage: '欢迎',
 
     // 2. MUSEUM CONTENT
+    themes: '主题',
     aboutScreen_Title: '北欧博物馆',
     aboutScreen_Overview: '北欧博物馆是瑞典最大的文化历史博物馆。这是一座展示日常生活实景的博物馆，讲述了北欧地区的人文风情、生活百态，是连接过去、现在以及未来的桥梁。在这里可以看到各式衣着服饰和时尚潮流、纺织品和珠宝首饰、家居摆设和家具陈列、摄影作品、玩具、民间艺术、玻璃和瓷器作品。同时，这里还有关于瑞典唯一的土著居民萨米人的展览。',
     aboutScreen_AboutHeader: '建筑',
     aboutScreen_AboutBody: '博物馆由亚瑟•哈兹里乌斯于 1873 年成立。这座建筑坐落于动物园岛上，由伊萨克•古斯塔夫•克拉松按照文艺复兴时期的建筑风格设计，并于 1907 年落成，壮观伟岸，已然成为一道风景。',
+    'highlights': 'Highlights',
 
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Höjdpunkter',
-    'Highlights_floor2_longTitle': 'Höjdpunkter',
-    'Highlights_floor2_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor2_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+    'Highlights_floor2_shortTitle': 'Highlights',
+    'Highlights_floor2_longTitle': 'Highlights',
+    'Highlights_floor2_imageAccessibilityLabel': 'Highlights',
+    'Highlights_floor2_shortCredit': '<i>Highlights</i>',
+    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
 
-    'Highlights_floor3_shortTitle': 'Höjdpunkter',
-    'Highlights_floor3_longTitle': 'Höjdpunkter',
-    'Highlights_floor3_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor3_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+    'Highlights_floor3_shortTitle': 'Highlights',
+    'Highlights_floor3_longTitle': 'Highlights',
+    'Highlights_floor3_imageAccessibilityLabel': 'Highlights',
+    'Highlights_floor3_shortCredit': '<i>Highlights</i>',
+    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
 
-    'Highlights_floor4_shortTitle': 'Höjdpunkter',
-    'Highlights_floor4_longTitle': 'Höjdpunkter',
-    'Highlights_floor4_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor4_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+    'Highlights_floor4_shortTitle': 'Highlights',
+    'Highlights_floor4_longTitle': 'Highlights',
+    'Highlights_floor4_imageAccessibilityLabel': 'Highlights',
+    'Highlights_floor4_shortCredit': '<i>Highlights</i>',
+    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
 
     // 5. CHAPTER HEADERS
     '201': '欢迎来到北欧博物馆',
