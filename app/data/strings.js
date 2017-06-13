@@ -1,6 +1,7 @@
 export const strings = {
   en: {
     // 1. IN-APP STRINGS
+    min: 'min',
     bluetoothButton_OnLabel: 'Bluetooth is on',
     bluetoothButton_OffLabel: 'Turn Bluetooth on',
     bluetoothAlert_Header: 'Bluetooth',
@@ -405,6 +406,7 @@ export const strings = {
   },
   sv: {
     // 1. IN-APP STRINGS
+    min: 'min',
     audioContentList_ChapterSingular: 'Kapitel',
     audioContentList_ChapterPlural: 'Kapitel',
     toggleSpeedButton_NormalLabel: '1',
@@ -802,6 +804,7 @@ export const strings = {
   },
   it: {
     // 1. IN-APP STRINGS
+    min: 'min',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Tocca due volte per cambiare la velocità audio.',
@@ -936,6 +939,7 @@ export const strings = {
   },
   ar: {
     // 1. IN-APP STRINGS
+    min: 'الدقائق',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'انقر نقراً مزدوجاً لتغيير سرعة الصوت.',
@@ -1070,6 +1074,7 @@ export const strings = {
   },
   es: {
     // 1. IN-APP STRINGS
+    min: 'min',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Tocar dos veces para cambiar la velocidad del audio.',
@@ -1205,6 +1210,7 @@ export const strings = {
   },
   fi: {
     // 1. IN-APP STRINGS
+    min: 'min',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Muuta toistonopeutta näpäyttämällä kahdesti.',
@@ -1338,6 +1344,7 @@ export const strings = {
   },
   de: {
     // 1. IN-APP STRINGS
+    min: 'min',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Zweimal drücken, um die Abspielgeschwindigkeit zu ändern.',
@@ -1493,6 +1500,7 @@ export const strings = {
   },
   ru: {
     // 1. IN-APP STRINGS
+    min: 'мин',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Нажмите два раза, чтобы изменить скорость проигрывания',
@@ -1625,6 +1633,7 @@ export const strings = {
   },
   fr: {
     // 1. IN-APP STRINGS
+    min: 'min',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': 'Appuyez deux fois pour modifier la vitesse de lecture.',
@@ -1757,6 +1766,7 @@ export const strings = {
   },
   zh: {
     // 1. IN-APP STRINGS
+    min: '分钟',
     'toggleSpeedButton_NormalLabel': '1',
     'toggleSpeedButton_FastestLabel': '2',
     'toggleSpeedButton_AccessibilityLabel': '双击改变音频速度',
