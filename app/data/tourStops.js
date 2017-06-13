@@ -10,7 +10,7 @@ export const tourStops = [
     order: 0,
     shortTitle: 'Highlights_floor2_shortTitle',
     longTitle: 'Highlights_floor2_longTitle',
-    regions: ['Great Hall', '1940s Apartment'],
+    regions: [],
     imageURL: 'highlights.png',
     imageWidth: 750,
     imageHeight: 345,
@@ -36,6 +36,7 @@ export const tourStops = [
     audioContent: [
       {
         uuid: uuid.v4(),
+        regions: ['Great Hall'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '201',
@@ -59,6 +60,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['1940s Apartment'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '202',
@@ -88,7 +90,7 @@ export const tourStops = [
     order: 0,
     shortTitle: 'Highlights_floor3_shortTitle',
     longTitle: 'Highlights_floor3_longTitle',
-    regions: ['Traditions', 'Table Settings', 'Power of Fashion', 'Textile Gallery', 'Jewellery', 'Strindberg'],
+    regions: [],
     imageURL: 'highlights.png',
     imageWidth: 750,
     imageHeight: 345,
@@ -114,7 +116,7 @@ export const tourStops = [
     audioContent: [
       {
         uuid: uuid.v4(),
-        regions: ['Table Settings'],
+        regions: ['Jewellery'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '301',
@@ -138,7 +140,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
-        regions: ['Table Settings'],
+        regions: ['Doll House'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '302',
@@ -162,6 +164,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Textile Gallery'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '303',
@@ -185,6 +188,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Table Settings'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '316',
@@ -208,6 +212,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Table Settings'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '328',
@@ -231,6 +236,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Gustav Vasa'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '330',
@@ -254,6 +260,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Traditions'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '333',
@@ -277,6 +284,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Traditions'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '355',
@@ -300,6 +308,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Strindberg'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '356',
@@ -323,6 +332,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Strindberg'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '357',
@@ -346,6 +356,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Power of Fashion'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '358',
@@ -369,6 +380,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Power of Fashion'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '359',
@@ -1057,20 +1069,6 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
-        category: 'CONTEXT',
-        depth: 0,
-        title: '329',
-        duration: {
-          de: 3,
-          en: 3,
-          sv: 3,
-        },
-        audioURL: '329',
-        transcript: '329_transcript',
-        speaker: 'null',
-      },
-      {
-        uuid: uuid.v4(),
         category: 'INTRODUCTION',
         depth: 0,
         title: '398',
@@ -1744,7 +1742,7 @@ export const tourStops = [
     order: 0,
     shortTitle: 'Highlights_floor4_shortTitle',
     longTitle: 'Highlights_floor4_longTitle',
-    regions: ['Sapmi', 'Swedish Folk Art', 'Homes and Interiors'],
+    regions: [],
     imageURL: 'highlights.png',
     imageWidth: 750,
     imageHeight: 345,
@@ -1770,6 +1768,7 @@ export const tourStops = [
     audioContent: [
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors E'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '401',
@@ -1796,6 +1795,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors E'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '408',
@@ -1822,6 +1822,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors E'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '413',
@@ -1848,6 +1849,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors W'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '423',
@@ -1874,6 +1876,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors W'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '424',
@@ -1900,6 +1903,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Homes and Interiors W'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '425',
@@ -1926,6 +1930,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Sapmi'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '426',
@@ -1952,6 +1957,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Sapmi'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '434',
@@ -1978,6 +1984,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Swedish Folk Art'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '451',
@@ -2004,6 +2011,7 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        regions: ['Swedish Folk Art'],
         category: 'HIGHLIGHT',
         depth: 0,
         title: '456',

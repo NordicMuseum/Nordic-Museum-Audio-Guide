@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   Image,
   Alert,
@@ -35,7 +37,7 @@ const BluetoothButton = (props) => {
     bluetoothButton = (<WideButton
       style={[styles.onStyle, props.style]}
       textStyle={props.textStyle}
-      text={"Bluetooth is on"}
+      text={I18n.t('bluetoothButton_OnLabel')}
       disabled={true}
       accessoryView={
         <Image
@@ -47,11 +49,11 @@ const BluetoothButton = (props) => {
     bluetoothButton = (<WideButton
       style={[styles.offStyle, props.style]}
       textStyle={[styles.offTextStyle, props.textStyle]}
-      text={'Turn Bluetooth on'}
+      text={I18n.t('bluetoothButton_OffLabel')}
       onPress={() => {
         Alert.alert(
-          'Bluetooth',
-          'Go to Settings, then Bluetooth to turn on Bluetooth.',
+          I18n.t('bluetoothAlert_Header'),
+          I18n.t('bluetoothAlert_Body'),
         );
       }}
     />);
