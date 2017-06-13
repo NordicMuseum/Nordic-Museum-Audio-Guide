@@ -46,10 +46,10 @@ const ClosePlayerView = (props) => {
           onPress={props.navToTourStop}
           accessible={true}
           accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`You've reached the end of ${I18n.t(props.stopTitle)}. Double tap to return to the chapter listing for this story.`}
+          accessibilityLabel={`${I18n.t('closePlayerView_Text')} ${I18n.t(props.stopTitle)}. Double tap to return to the chapter listing for this story.`}
         >
           <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
-            You've reached the end of
+            {I18n.t('closePlayerView_Text')}
           </Text>
           <Text
             style={[
@@ -68,10 +68,10 @@ const ClosePlayerView = (props) => {
           onPress={props.closePlayer}
           accessible={true}
           accessibilityTraits={'button'}
-          accessibilityLabel={'Close Player'}
+          accessibilityLabel={I18n.t('closePlayerView_ClosePlayer')}
         >
           <Text style={[globalStyles.disclosure, { color: ACTION }]}>
-           Close Player
+           {I18n.t('closePlayerView_ClosePlayer')}
           </Text>
         </TouchableOpacity>
       </View>
