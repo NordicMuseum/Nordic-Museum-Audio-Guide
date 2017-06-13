@@ -311,7 +311,7 @@ class TourStopScreen extends Component {
                     <Text style={styles.durationText}>
                       {`${
                         Math.floor(this.props.duration / 60)
-                        } MIN`}
+                        } ${I18n.t('min').toUpperCase()}`}
                     </Text>
                   </View>
                 </View>

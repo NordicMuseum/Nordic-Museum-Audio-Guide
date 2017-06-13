@@ -132,7 +132,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
                 {Math.floor(item.duration[locale] / 60)}
               </Text>
               <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
-                MIN
+                {I18n.t('min').toUpperCase()}
               </Text>
             </View>
           </Image>
