@@ -1069,20 +1069,6 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
-        category: 'CONTEXT',
-        depth: 0,
-        title: '329',
-        duration: {
-          de: 3,
-          en: 3,
-          sv: 3,
-        },
-        audioURL: '329',
-        transcript: '329_transcript',
-        speaker: 'null',
-      },
-      {
-        uuid: uuid.v4(),
         category: 'INTRODUCTION',
         depth: 0,
         title: '398',
