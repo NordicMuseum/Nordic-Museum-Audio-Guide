@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   Image,
   Alert,
@@ -45,7 +47,7 @@ const LocationServicesButton = (props) => {
       locationServicesButton = (<WideButton
         style={[styles.notAllowedBackground, props.style]}
         textStyle={[styles.notAllowedText, props.textStyle]}
-        text={'Allow location access'}
+        text={I18n.t('locationServicesButton_Label')}
         onPress={() => {
           requestLocationServicesAuthorization();
         }}
@@ -56,14 +58,14 @@ const LocationServicesButton = (props) => {
       locationServicesButton = (<WideButton
         style={[styles.notAllowedBackground, props.style]}
         textStyle={[styles.notAllowedText, props.textStyle]}
-        text={'Allow location access'}
+        text={I18n.t('locationServicesButton_Label')}
         onPress={() => {
           Alert.alert(
-            'Location Access',
-            'Go to Settings, then Privacy, then Location Services, then The Warhol to allow location access while using this app.',
+            I18n.t('locationServicesAlert_Header'),
+            I18n.t('locationServicesAlert_Body'),
             [
-              { text: 'Cancel', style: 'cancel' },
-              { text: 'Settings',
+              { text: I18n.t('locationServicesAlert_CancelButton_Label'), style: 'cancel' },
+              { text: I18n.t('locationServicesAlert_SettingsButton_Label'),
                 onPress: () => {
                   const url = 'app-settings:';
                   Linking.canOpenURL(url).then(supported => {
@@ -87,7 +89,7 @@ const LocationServicesButton = (props) => {
       locationServicesButton = (<WideButton
         style={[styles.allowedBackground, props.style]}
         textStyle={props.textStyle}
-        text={'Location access allowed'}
+        text={I18n.t('locationServicesButton_AuthorizedLabel')}
         disabled={true}
         accessoryView={
           <Image
