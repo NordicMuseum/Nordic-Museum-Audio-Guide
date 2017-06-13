@@ -237,267 +237,158 @@ class SearchByNumberScreen extends Component {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
     }
 
-    let display;
-
-    if (I18nManager.isRTL) {
-      display = (<View style={[styles.container, { marginBottom: containerMargin }]}>
-        <View style={styles.display}>
-          <View style={styles.displayRow}>
-            {this.props.digits.slice(0).reverse().map((digit, index) => {
-              return (
-                <View
-                  key={index}
-                  style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
-                >
-                  {digit !== null &&
-                    <Text style={styles.digitDisplayText}>
-                      {digit}
-                    </Text>
-                  }
-                </View>
-              );
-            })}
-          </View>
-          {this.state.numberNotFound &&
-            <View style={styles.tryAgainMessage}>
-              <Text style={styles.tryAgainText}>
-                {I18n.t('tryAgain')}
-              </Text>
-            </View>
-          }
+    return (<View style={[styles.container, { marginBottom: containerMargin }]}>
+      <View style={styles.display}>
+        <View
+          style={[
+            styles.displayRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
+          {this.props.digits.map((digit, index) => {
+            return (
+              <View
+                key={index}
+                style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
+              >
+                {digit !== null &&
+                  <Text style={styles.digitDisplayText}>
+                    {digit}
+                  </Text>
+                }
+              </View>
+            );
+          })}
         </View>
-        <View style={[styles.digitPad, { width }]}>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(3); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                3
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(2); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                2
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(1); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                1
-              </Text>
-            </TouchableOpacity>
+        {this.state.numberNotFound &&
+          <View style={styles.tryAgainMessage}>
+            <Text style={styles.tryAgainText}>
+              {I18n.t('tryAgain')}
+            </Text>
           </View>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(6); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                6
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(5); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                5
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(4); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                4
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(9); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                9
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(8); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                8
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(7); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                7
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.deleteDigit(); }}
-              style={styles.nonDigit}
-            >
-              <Image
-                source={require('../assets/DeleteButton.png')}
-                style={styles.deleteButton}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(0); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                0
-              </Text>
-            </TouchableOpacity>
-            <View style={styles.nonDigit} />
-          </View>
+        }
+      </View>
+      <View style={[styles.digitPad, { width }]}>
+        <View
+          style={[
+            styles.digitRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
+          <TouchableOpacity
+            onPress={() => { this.addDigit(1); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              1
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(2); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              2
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(3); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              3
+            </Text>
+          </TouchableOpacity>
         </View>
-      </View>);
-    } else {
-      display = (<View style={[styles.container, { marginBottom: containerMargin }]}>
-        <View style={styles.display}>
-          <View style={styles.displayRow}>
-            {this.props.digits.map((digit, index) => {
-              return (
-                <View
-                  key={index}
-                  style={digit !== null ? styles.digitDisplay : styles.emptyDigit}
-                >
-                  {digit !== null &&
-                    <Text style={styles.digitDisplayText}>
-                      {digit}
-                    </Text>
-                  }
-                </View>
-              );
-            })}
-          </View>
-          {this.state.numberNotFound &&
-            <View style={styles.tryAgainMessage}>
-              <Text style={styles.tryAgainText}>
-                {I18n.t('tryAgain')}
-              </Text>
-            </View>
-          }
+        <View
+          style={[
+            styles.digitRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
+          <TouchableOpacity
+            onPress={() => { this.addDigit(4); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              4
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(5); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              5
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(6); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              6
+            </Text>
+          </TouchableOpacity>
         </View>
-        <View style={[styles.digitPad, { width }]}>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(1); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                1
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(2); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                2
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(3); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                3
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(4); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                4
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(5); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                5
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(6); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                6
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.digitRow}>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(7); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                7
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(8); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                8
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.addDigit(9); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                9
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.digitRow}>
-            <View style={styles.nonDigit} />
-            <TouchableOpacity
-              onPress={() => { this.addDigit(0); }}
-              style={styles.digit}
-            >
-              <Text style={styles.digitText}>
-                0
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { this.deleteDigit(); }}
-              style={styles.nonDigit}
-            >
-              <Image
-                source={require('../assets/DeleteButton.png')}
-                style={styles.deleteButton}
-              />
-            </TouchableOpacity>
-          </View>
+        <View
+          style={[
+            styles.digitRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
+          <TouchableOpacity
+            onPress={() => { this.addDigit(7); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              7
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(8); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              8
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.addDigit(9); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              9
+            </Text>
+          </TouchableOpacity>
         </View>
-      </View>);
-    }
-
-    return display;
+        <View
+          style={[
+            styles.digitRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
+          <View style={styles.nonDigit} />
+          <TouchableOpacity
+            onPress={() => { this.addDigit(0); }}
+            style={styles.digit}
+          >
+            <Text style={styles.digitText}>
+              0
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => { this.deleteDigit(); }}
+            style={styles.nonDigit}
+          >
+            <Image
+              source={require('../assets/DeleteButton.png')}
+              style={styles.deleteButton}
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>);
   }
 }
 
