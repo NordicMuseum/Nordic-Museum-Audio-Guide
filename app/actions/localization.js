@@ -14,9 +14,9 @@ function updateRTL(rtl) {
 }
 
 export function switchLocale(locale) {
-  return async (dispatch, getState) => {
+  return async (dispatch) => {
     const rtl = locale === 'ar';
-    const prevRTL = getState().localization.rtl;
+    const prevRTL = I18nManager.isRTL;
 
     if (rtl !== prevRTL && prevRTL != null) {
       Settings.set({
@@ -29,7 +29,6 @@ export function switchLocale(locale) {
     dispatch({
       type: SWITCH_LOCALE,
       locale,
-      rtl,
     });
   };
 }

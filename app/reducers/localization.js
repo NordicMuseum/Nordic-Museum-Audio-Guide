@@ -7,7 +7,6 @@ import {
 
 const initialState = {
   locale: 'en',
-  rtl: null,
 };
 
 I18n.translations = strings;
@@ -31,16 +30,14 @@ export function localization(state = initialState, action) {
         I18n.defaultLocale = 'en';
         if (__DEV__) {
           I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
-        }
-        else {
-          I18n.fallbacks = true; 
+        } else {
+          I18n.fallbacks = true;
         }
       }
       return Object.assign({},
         state,
         {
           locale: action.locale,
-          rtl: action.rtl !== undefined ? action.rtl : state.rtl,
         }
       );
     }
