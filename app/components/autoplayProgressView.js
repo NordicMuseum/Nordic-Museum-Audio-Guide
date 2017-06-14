@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import I18n from 'react-native-i18n';
+
 import {
   StyleSheet,
   View,
@@ -63,9 +65,9 @@ const AutoplayProgressView = (props) => {
   let countDownText = '';
   if (timerActive && autoplayOn) {
     if (timerNumber === 1) {
-      countDownText = 'Starts in 1 second';
+      countDownText = I18n.t('autoplayProgressView_CountDownTextSingular');
     } else {
-      countDownText = `Starts in ${timerNumber} seconds`;
+      countDownText = `${I18n.t('autoplayProgressView_CountDownText')} ${timerNumber} ${I18n.t('autoplayProgressView_Seconds')}`;
     }
   }
 
