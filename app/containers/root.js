@@ -17,11 +17,15 @@ import {
 } from '../actions/navigation';
 
 const mapStateToProps = (state) => {
+  const tourStopsLen = state.closeTourStops.tourStops.length;
+  const audioContentLen = state.closeTourStops.audioContent.length;
+  const beaconsNum = tourStopsLen + audioContentLen;
+
   return {
     floor: state.closeTourStops.detectedFloor,
     currentAudioRoute: state.nav.currentAudioRoute,
     currentAudioTab: state.nav.currentAudioTab,
-    beaconsNum: state.closeTourStops.tourStops.length || 0,
+    beaconsNum,
     activeTab: state.nav.activeTab,
     playerStatus: state.bottomPlayer.playerStatus,
     locale: state.localization.locale,
