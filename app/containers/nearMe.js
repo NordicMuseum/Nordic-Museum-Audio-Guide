@@ -10,15 +10,17 @@ import {
 } from '../actions/audio';
 
 const mapStateToProps = (state) => {
+  const floor = state.closeTourStops.detectedFloor;
+  const allAmenities = state.amenities.allAmenities;
+  const amenities = floor ? allAmenities[floor].amenities : [];
+
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-
     closeTourStops: state.closeTourStops.tourStops,
     audioContent: state.closeTourStops.audioContent,
-
     regions: state.closeTourStops.regions,
-    floor: state.closeTourStops.detectedFloor,
-    amenities: ((state.closeTourStops.detectedFloor === null) ? [] : state.amenities.allAmenities[state.closeTourStops.detectedFloor].amenities),
+    floor,
+    amenities,
     activeTab: state.nav.activeTab,
     screenReader: state.accessibility.screenReader,
     playerStatus: state.bottomPlayer.playerStatus,

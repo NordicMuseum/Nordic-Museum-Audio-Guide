@@ -37,7 +37,7 @@ const AmenitiesScreen = (props) => {
   let totalIndex = 0;
   let content = [];
   let stickyHeaders = [];
-  props.allAmenities.forEach((floor) => {
+  Object.values(props.allAmenities).forEach((floor) => {
     stickyHeaders.push(totalIndex);
     content.push(
       <StickyHeader
@@ -93,7 +93,7 @@ const AmenitiesScreen = (props) => {
 AmenitiesScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
   playerOpen: PropTypes.bool.isRequired,
-  allAmenities: PropTypes.array.isRequired,
+  allAmenities: PropTypes.object.isRequired,
   screenReader: PropTypes.bool.isRequired,
 };
 

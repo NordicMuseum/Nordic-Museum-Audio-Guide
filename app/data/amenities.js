@@ -1,9 +1,9 @@
 
 import uuid from 'uuid';
 
-export const allAmenities = [
-  {
-    floor: 1,
+export const allAmenities = {
+  1: {
+    floor: '1',
     floorTitle: 'floor1_Label',
     amenities: [
       {
@@ -56,8 +56,8 @@ export const allAmenities = [
       },
     ],
   },
-  {
-    floor: 2,
+  2: {
+    floor: '2',
     floorTitle: 'floor2_Label',
     amenities: [
       {
@@ -146,8 +146,8 @@ export const allAmenities = [
       },
     ],
   },
-  {
-    floor: 3,
+  3: {
+    floor: '3',
     floorTitle: 'floor3_Label',
     amenities: [
       {
@@ -176,8 +176,8 @@ export const allAmenities = [
       },
     ],
   },
-  {
-    floor: 4,
+  4: {
+    floor: '4',
     floorTitle: 'floor4_Label',
     amenities: [
       {
@@ -194,4 +194,4 @@ export const allAmenities = [
       },
     ],
   },
-];
+};

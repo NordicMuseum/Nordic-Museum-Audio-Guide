@@ -105,7 +105,7 @@ export function closeTourStops(state = initialState, action) {
             previousRegions,
             detectedFloor,
             tourStops: state.tourStops,
-            audioContent: state.showAudioContent,
+            audioContent: state.audioContent,
           }
         );
       }
