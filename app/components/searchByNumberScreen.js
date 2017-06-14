@@ -142,12 +142,17 @@ class SearchByNumberScreen extends Component {
   }
 
   loadTourStop(digits, tourStops) {
-    const foundTourStops = tourStops.filtered(
+    let foundTourStops = tourStops.filtered(
       `audioContent.title = '${digits.toString()}'`
     );
 
     let tourStop;
     if (foundTourStops.length > 0) {
+      if (foundTourStops.length > 1) {
+        // If two exist then favor the nonhighlighted one
+        foundTourStops = foundTourStops.filtered('audioContent.regions = null');
+      }
+
       tourStop = foundTourStops[0];
     }
 
