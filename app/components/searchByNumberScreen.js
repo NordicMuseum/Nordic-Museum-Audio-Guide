@@ -149,7 +149,7 @@ class SearchByNumberScreen extends Component {
     let tourStop;
     if (foundTourStops.length > 0) {
       if (foundTourStops.length > 1) {
-        // If two exist then favor the nonhighlighted one
+        // If two exist then favor the nonhighlighted one. Only the highlight audio content has an assigned region.
         foundTourStops = foundTourStops.filtered('audioContent.regions = null');
       }
 
