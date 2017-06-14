@@ -197,9 +197,6 @@ class TourStopScreen extends Component {
 
   componentWillUnmount() {
     this.props.actions.updateNearMeRootStatus(true);
-    if (this.props.tab === 'TAB_SEARCH') {
-      this.props.actions.unloadAudio();
-    }
   }
 
   render() {
