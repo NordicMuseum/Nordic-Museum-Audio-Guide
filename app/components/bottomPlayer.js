@@ -41,10 +41,16 @@ const styles = StyleSheet.create({
   },
 });
 
-function nextAudioTitle(audioContent, nextUUID, defaultTitle) {
+function nextAudioProps(audioContent, nextUUID, defaultTitle) {
   if (nextUUID !== null) {
-    return audioContent.filtered(`uuid = "${nextUUID}"`)[0].title;
+    const audio = audioContent.filtered(`uuid = "${nextUUID}"`)[0];
+
+    return {
+      code: audio.title,
+      highlighted: audio.category === 'HIGHLIGHT',
+    };
   }
+
   return defaultTitle;
 }
 
@@ -97,7 +103,6 @@ class BottomPlayer extends Component {
   render() {
     const {
       tourStop,
-      currentUUID,
       index,
       navToTourStop,
       nextUUID,
@@ -188,14 +193,11 @@ class BottomPlayer extends Component {
 
     let prevDisabled = false;
     let nextDisabled = false;
-    const activeAudioIndex = audioContent.findIndex((content) => {
-      return content.uuid === currentUUID;
-    });
 
-    if ((activeAudioIndex - 1) < 0) {
+    if ((index - 1) < 0) {
       prevDisabled = true;
     }
-    if (activeAudioIndex + 1 >= audioContent.length) {
+    if (index + 1 >= audioContent.length) {
       nextDisabled = true;
     }
 
@@ -215,9 +217,10 @@ class BottomPlayer extends Component {
       >
         {progress}
         <ControlsView
+          highlight={audioContent[index].category === 'HIGHLIGHT'}
           stopTitle={stopTitle}
-          audioTitle={audioTitle}
-          nextAudioTitle={nextAudioTitle(audioContent, nextUUID, audioTitle)}
+          audioCode={audioTitle}
+          nextAudioProps={nextAudioProps(audioContent, nextUUID, audioTitle)}
           time={time}
           playerStatus={playerStatus}
           prevDisabled={prevDisabled}

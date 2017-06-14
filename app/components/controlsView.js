@@ -19,7 +19,7 @@ import {
    parseVoiceoverText,
  } from '../utilities';
 
-import { globalStyles } from '../styles';
+import { globalStyles, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
 import PlayPauseButton from './buttons/playPauseButton';
 import PrevButton from './buttons/previousButton';
@@ -47,14 +47,24 @@ const styles = StyleSheet.create({
   controlsRow: {
     justifyContent: 'space-around',
   },
+  highlightedBox: {
+    backgroundColor: HIGHLIGHTS,
+    height: 20,
+    paddingHorizontal: 3,
+    borderRadius: 2,
+  },
+  highlightedNumberText: {
+    color: OFF_WHITE,
+  },
 });
 
 class ControlsView extends Component {
   static propTypes = {
+    highlight: PropTypes.bool.isRequired,
     stopTitle: PropTypes.string.isRequired,
-    audioTitle: PropTypes.string.isRequired,
+    audioCode: PropTypes.string.isRequired,
     time: PropTypes.number.isRequired,
-    nextAudioTitle: PropTypes.string.isRequired,
+    nextAudioProps: PropTypes.object.isRequired,
     playRate: PropTypes.string.isRequired,
     playerStatus: PropTypes.string.isRequired,
     prevDisabled: PropTypes.bool.isRequired,
@@ -77,11 +87,11 @@ class ControlsView extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     const statusChanged = this.props.playerStatus !== nextProps.playerStatus;
     const rateChanged = this.props.playRate !== nextProps.playRate;
-    const titleChanged = this.props.audioTitle !== nextProps.audioTitle;
+    const codeChanged = this.props.audioCode !== nextProps.audioCode;
     const autoplayChanged = this.props.autoplayOn !== nextProps.autoplayOn;
     const localeChanged = this.props.locale !== nextProps.locale;
 
-    return statusChanged || rateChanged || titleChanged || autoplayChanged || localeChanged;
+    return statusChanged || rateChanged || codeChanged || autoplayChanged || localeChanged;
   }
 
   render() {
@@ -98,24 +108,23 @@ class ControlsView extends Component {
 
     const {
       playerStatus,
-      nextAudioTitle,
       stopTitle,
-      audioTitle,
+      nextAudioProps,
+      audioCode,
       prevDisabled,
       nextDisabled,
       playRate,
+      highlight,
     } = this.props;
 
-    let title;
+    let code = audioCode;
+    let highlighted = highlight;
     let controlsDisabled = false;
-    //
     if (playerStatus === PLAYER_STATUS_FINISHED) {
       // The player is in next up state:
-      title = nextAudioTitle;
+      code = nextAudioProps.code;
+      highlighted = nextAudioProps.highlight;
       controlsDisabled = true;
-    } else {
-      // The player is in play state:
-      title = audioTitle;
     }
 
     return (
@@ -125,14 +134,21 @@ class ControlsView extends Component {
           onPress={navToTourStop}
           accessible={true}
           accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`${parseVoiceoverText(I18n.t(audioTitle))}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
+          accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
         >
           <View style={[styles.row, styles.titleRow]}>
-            <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
-              {audioTitle}
-            </Text>
+            <View style={highlighted ? styles.highlightedBox : {}}>
+              <Text
+                style={[
+                  globalStyles.h2,
+                  highlighted ? styles.highlightedNumberText : { fontWeight: '300' },
+                ]}
+              >
+                {code}
+              </Text>
+            </View>
             <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
-              &nbsp; {parseDisplayText(I18n.t(title))}
+              &nbsp; {parseDisplayText(I18n.t(code))}
             </Text>
           </View>
         </TouchableOpacity>
