@@ -34,6 +34,7 @@ class TutorialScreen extends Component {
     actions: PropTypes.shape({
       hideTutorial: PropTypes.func.isRequired,
       switchLocale: PropTypes.func.isRequired,
+      switchLocaleFromTutorial: PropTypes.func.isRequired,
     }),
   }
 
@@ -62,6 +63,7 @@ class TutorialScreen extends Component {
 
     const {
       switchLocale,
+      switchLocaleFromTutorial,
     } = this.props.actions;
 
     if (tutorialHidden) {
@@ -88,6 +90,7 @@ class TutorialScreen extends Component {
               locale,
               actions: {
                 switchLocale,
+                switchLocaleFromTutorial,
                 hideTutorial: this.hideModal,
               },
             },

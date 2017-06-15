@@ -1,10 +1,11 @@
 
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 
 import {
   View,
   StyleSheet,
   ScrollView,
+  Settings,
 } from 'react-native';
 
 import I18n from 'react-native-i18n';
@@ -22,70 +23,113 @@ const styles = StyleSheet.create({
   },
 });
 
-const TutorialLanguagePage = (props) => {
-  const {
-    locale,
-  } = props;
+class TutorialLanguagePage extends Component {
+  static propTypes = {
+    navigator: PropTypes.object.isRequired,
+    locale: PropTypes.string.isRequired,
+    actions: PropTypes.shape({
+      switchLocale: PropTypes.func.isRequired,
+      switchLocaleFromTutorial: PropTypes.func.isRequired,
+      hideTutorial: PropTypes.func.isRequired,
+    }),
+  };
 
-  const {
-    switchLocale,
-    hideTutorial,
-  } = props.actions;
+  constructor(props) {
+    super(props);
+    this.advanceLanguageTutorialScreen = this.advanceLanguageTutorialScreen.bind(this);
+  }
 
-  return (
-    <View style={{ flex: 1 }}>
-      <NavigationBar
-        label={I18n.t('settingsScreen_Title')}
-        labelStyle={{
-          color: OFF_BLACK,
-        }}
-        barStyle={{
-          backgroundColor: LIGHT_GRAY,
-          height: 44,
-          top: 0,
-        }}
-      />
-      <ScrollView
-        style={styles.container}
-        automaticallyAdjustContentInsets={false}
-        contentContainerStyle={{ marginHorizontal: 25 }}
-      >
-        <LanguageSwitcherButtons
-          style={{ backgroundColor: 'transparent' }}
-          textStyle={{ color: OFF_BLACK }}
-          locale={locale}
-          onPress={(languageCode) => {
-            switchLocale(languageCode);
+  componentDidMount() {
+    if (Settings.get('advanceLanguageTutorialScreenOnLoad')) {
+      setTimeout(this.advanceLanguageTutorialScreen, 1000);
+      Settings.set({ advanceLanguageTutorialScreenOnLoad: false });
+    }
+  }
 
-            props.navigator.push({
-              title: '',
-              component: TutorialWelcomePage,
-              barTintColor: '#ffffff',
-              titleTextColor: OFF_BLACK,
-              shadowHidden: true,
-              navigationBarHidden: true,
-              passProps: {
-                navigator: props.navigator,
-                locale: languageCode,
-                actions: {
-                  hideTutorial,
-                },
-              },
-            });
+  advanceLanguageTutorialScreen() {
+    const {
+      hideTutorial,
+    } = this.props.actions;
+
+    this.props.navigator.push({
+      title: '',
+      component: TutorialWelcomePage,
+      barTintColor: '#ffffff',
+      titleTextColor: OFF_BLACK,
+      shadowHidden: true,
+      navigationBarHidden: true,
+      passProps: {
+        navigator: this.props.navigator,
+        locale: this.props.locale,
+        actions: {
+          hideTutorial,
+        },
+      },
+    });
+  }
+
+  render() {
+    const {
+      locale,
+    } = this.props;
+
+    const {
+      switchLocale,
+      switchLocaleFromTutorial,
+      hideTutorial,
+    } = this.props.actions;
+
+    return (
+      <View style={{ flex: 1 }}>
+        <NavigationBar
+          label={I18n.t('settingsScreen_Title')}
+          labelStyle={{
+            color: OFF_BLACK,
+          }}
+          barStyle={{
+            backgroundColor: LIGHT_GRAY,
+            height: 44,
+            top: 0,
           }}
         />
-      </ScrollView>
-    </View>
-  );
-};
-
-TutorialLanguagePage.propTypes = {
-  navigator: PropTypes.object.isRequired,
-  locale: PropTypes.string.isRequired,
-  actions: PropTypes.shape({
-    switchLocale: PropTypes.func.isRequired,
-    hideTutorial: PropTypes.func.isRequired,
-  }),
+        <ScrollView
+          style={styles.container}
+          automaticallyAdjustContentInsets={false}
+          contentContainerStyle={{ marginHorizontal: 25 }}
+        >
+          <LanguageSwitcherButtons
+            style={{ backgroundColor: 'transparent' }}
+            textStyle={{ color: OFF_BLACK }}
+            locale={locale}
+            onPress={(languageCode) => {
+              if (languageCode === 'ar' && locale !== 'ar') {
+                switchLocaleFromTutorial(languageCode);
+              } else if (languageCode !== 'ar' && locale === 'ar') {
+                switchLocaleFromTutorial(languageCode);
+              } else {
+                switchLocale(languageCode);
+                this.props.navigator.push({
+                  title: '',
+                  component: TutorialWelcomePage,
+                  barTintColor: '#ffffff',
+                  titleTextColor: OFF_BLACK,
+                  shadowHidden: true,
+                  navigationBarHidden: true,
+                  passProps: {
+                    navigator: this.props.navigator,
+                    locale: languageCode,
+                    actions: {
+                      hideTutorial,
+                    },
+                  },
+                });
+              }
+            }}
+          />
+        </ScrollView>
+      </View>
+    );
+  }
 };
 
 export default TutorialLanguagePage;

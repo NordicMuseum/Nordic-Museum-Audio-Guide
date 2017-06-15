@@ -32,3 +32,24 @@ export function switchLocale(locale) {
     });
   };
 }
+
+export function switchLocaleFromTutorial(locale) {
+  return async (dispatch) => {
+    const rtl = locale === 'ar';
+    const prevRTL = I18nManager.isRTL;
+
+    if (rtl !== prevRTL && prevRTL != null) {
+      Settings.set({
+        advanceLanguageTutorialScreenOnLoad: true,
+        reloadAppForRTLSwitchLocale: locale,
+        reloadAppForRTLSwitch: true,
+      });
+      updateRTL(rtl, locale);
+    }
+
+    dispatch({
+      type: SWITCH_LOCALE,
+      locale,
+    });
+  };
+}
