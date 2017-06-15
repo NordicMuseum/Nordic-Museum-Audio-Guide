@@ -11,9 +11,7 @@ import Foundation
 
 @objc(CMSRTLManager)
 class CMSRTLManager: NSObject {
-  
   @objc func forceRTL(_ rtl: Bool) -> Void {
-    let appDelegate  = UIApplication.shared.delegate as! AppDelegate
 
     if (rtl == true) {
       UIView.appearance().semanticContentAttribute = .forceRightToLeft
@@ -23,15 +21,7 @@ class CMSRTLManager: NSObject {
       UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
     }
     
-    mainThread {
-      appDelegate.forceReload()
-    }
+    // !WARNING! This is bound to break as it's imported from "RCTBridge+Private.h"
+    RCTBridge.current().reload()
   }
-  
-  func mainThread(_ closure:@escaping () -> ()) {
-    DispatchQueue.main.async {
-      closure()
-    }
-  }
-
 }
