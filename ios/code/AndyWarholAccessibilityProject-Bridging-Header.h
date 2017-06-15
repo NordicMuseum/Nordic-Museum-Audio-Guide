@@ -14,7 +14,9 @@
 
 #import "AppDelegate.h"
 
+#import "RCTBridge+Private.h"
 #import "RCTBridgeModule.h"
+
 #import "RCTEventEmitter.h"
 #import "RCTEventDispatcher.h"
 #import "RCTUIManager.h"

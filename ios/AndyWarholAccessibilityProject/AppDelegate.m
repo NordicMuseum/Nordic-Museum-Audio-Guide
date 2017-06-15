@@ -15,11 +15,9 @@
 
 @implementation AppDelegate
 
-- (void)loadReactNativeRootViewWithLaunchOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  NSURL *jsCodeLocation;
-  
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+  NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
   
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"AndyWarholAccessibilityProject"
@@ -46,16 +44,6 @@
   
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-}
-
-- (void)forceReload
-{
-  [self loadReactNativeRootViewWithLaunchOptions:nil];
-}
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  [self loadReactNativeRootViewWithLaunchOptions:launchOptions];
 
   [[RCTI18nUtil sharedInstance] allowRTL:YES];
   return YES;
