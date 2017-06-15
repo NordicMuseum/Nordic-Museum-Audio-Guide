@@ -8,6 +8,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  I18nManager,
 } from 'react-native';
 
 import {
@@ -154,7 +155,13 @@ class ControlsView extends Component {
         </TouchableOpacity>
         {/* Controls */}
         {/* Previous  */}
-        <View style={[styles.row, styles.controlsRow]}>
+        <View
+          style={[
+            styles.row,
+            styles.controlsRow,
+            I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          ]}
+        >
           <View>
             <PrevButton
               disabled={controlsDisabled}
