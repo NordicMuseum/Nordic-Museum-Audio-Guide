@@ -60,7 +60,7 @@ const AboutTheAppScreen = (props) => {
             {I18n.t('aboutTheAppAudioContentHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppAudioContentBody')}
+            {parseDisplayText(I18n.t('aboutTheAppAudioContentBody'))}
           </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppTheAppHeader')}
