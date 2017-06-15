@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Text,
+  I18nManager,
 } from 'react-native';
 
 import { globalStyles } from '../../styles';
@@ -33,8 +34,17 @@ const WideButton = (props) => {
       disabled={props.disabled || false}
     >
       <View style={[styles.wideButton, props.style]}>
-        <Text style={[globalStyles.h1, props.textStyle, { flex: 1 }]}>
-          {props.text}
+        <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
+          <Text
+            style={[
+              globalStyles.h1,
+              props.textStyle,
+              { flex: 1 },
+              { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+            ]}
+          >
+            {props.text}
+          </Text>
         </Text>
         {props.accessoryView}
       </View>

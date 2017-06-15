@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  I18nManager,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -37,9 +38,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   backArrow: {
-    transform: [
-      { rotate: '180deg' },
-    ],
     width: 30,
     height: 50,
   },
@@ -57,7 +55,11 @@ const NavigationBar = (props) => {
         >
           <Image
             source={require('../assets/DisclosureIndicator.png')}
-            style={[styles.backArrow, { tintColor: props.buttonColor }]}
+            style={[
+              styles.backArrow,
+              { tintColor: props.buttonColor },
+              { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
+            ]}
           />
           <Text style={[styles.backButtonLabel, { color: props.buttonColor }]}>
             {props.backButtonLabel}

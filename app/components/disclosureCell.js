@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   Image,
   StyleSheet,
+  I18nManager,
 } from 'react-native';
 
 import { globalStyles, LIGHT_GRAY } from '../styles';
@@ -43,11 +44,26 @@ const DisclosureCell = (props) => {
           props.bottomBorder === false ? { borderBottomWidth: 0 } : {},
         ]}
       >
-        <Text style={[styles.cellTitle, globalStyles.disclosure]}>
-          {props.title}
+        <Text
+          style={[
+            { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
+            styles.cellTitle,
+          ]}
+        >
+          <Text
+            style={[
+              globalStyles.disclosure,
+              { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+            ]}
+          >
+            {props.title}
+          </Text>
         </Text>
         <Image
-          style={styles.cellImage}
+          style={[
+            styles.cellImage,
+            { transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }] },
+          ]}
           source={require('../assets/DisclosureIndicator.png')}
         />
       </View>

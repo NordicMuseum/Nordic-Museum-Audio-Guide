@@ -8,6 +8,7 @@ import {
   StyleSheet,
   ScrollView,
   Text,
+  I18nManager,
 } from 'react-native';
 
 import NavigationBar from './navigationBar';
@@ -67,14 +68,32 @@ const AboutScreen = (props) => {
           }}
           automaticallyAdjustContentInsets={false}
         >
-          <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_Overview')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.aboutHeader]}>
-            {I18n.t('aboutScreen_AboutHeader')}
-          </Text>
-          <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_AboutBody')}
+          <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
+            <Text
+              style={[
+                globalStyles.body,
+                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+              ]}
+            >
+              {I18n.t('aboutScreen_Overview')}
+            </Text>
+            <Text
+              style={[
+                globalStyles.h1,
+                styles.aboutHeader,
+                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+              ]}
+            >
+              {I18n.t('aboutScreen_AboutHeader')}
+            </Text>
+            <Text
+              style={[
+                globalStyles.body,
+                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+              ]}
+            >
+              {I18n.t('aboutScreen_AboutBody')}
+            </Text>
           </Text>
           <Text style={[globalStyles.h1, styles.aboutHeader]}>
             {I18n.t('aboutScreen_HoursHeader')}

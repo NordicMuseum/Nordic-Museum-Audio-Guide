@@ -8,6 +8,7 @@ import {
   View,
   TouchableOpacity,
   StyleSheet,
+  I18nManager,
 } from 'react-native';
 
 import Collapsible from 'react-native-collapsible';
@@ -67,9 +68,17 @@ function breakIntoParagraphTextComponents(text) {
     return (
       <Text
         key={index}
-        style={[globalStyles.body, globalStyles.paragraph]}
+        style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}
       >
-        {parseDisplayText(paragraph)}
+        <Text
+          style={[
+            globalStyles.body,
+            styles.titleText,
+            { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+          ]}
+        >
+          {parseDisplayText(paragraph).toString()}
+        </Text>
       </Text>
     );
   });
@@ -160,7 +169,11 @@ class AudioContentItem extends Component {
               >
 
                 <View style={{ flexDirection: 'row' }}>
-                  <View style={audioContent.category === 'HIGHLIGHT' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 }}>
+                  <View
+                    style={[
+                      audioContent.category === 'HIGHLIGHT' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 },
+                    ]}
+                  >
                     <Text
                       style={[
                         globalStyles.body,
@@ -170,10 +183,15 @@ class AudioContentItem extends Component {
                       {audioContent.title}
                     </Text>
                   </View>
-                  <Text
-                    style={[globalStyles.body, styles.titleText]}
-                  >
-                    {parseDisplayText(I18n.t(audioContent.title))}
+                  <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
+                    <Text
+                      style={[
+                        globalStyles.body,
+                        styles.titleText,
+                      ]}
+                    >
+                      {parseDisplayText(I18n.t(audioContent.title))}
+                    </Text>
                   </Text>
                 </View>
               </TouchableOpacity>
