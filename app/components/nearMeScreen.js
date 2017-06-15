@@ -134,7 +134,7 @@ class NearMeScreen extends Component {
       contentView = (
         <View style={[styles.messageContainer, styles.settingContainer]}>
           <Text style={[globalStyles.body, styles.storiesMessageText]}>
-            {`${storiesMessage}\n\nTo use this feature, we’ll need two things from you…`}
+            {`${storiesMessage}\n\n${I18n.t('nearMeScreen_LocationNeeds')}`}
           </Text>
           <View style={styles.buttonsContainer}>
             <LocationServicesButton
