@@ -1,24 +1,14 @@
-
 import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-  I18nManager,
-} from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet, I18nManager } from 'react-native';
 
 import Collapsible from 'react-native-collapsible';
 
 import TranscriptButton from './buttons/transcriptButton';
 
-import {
-  parseDisplayText,
-  parseVoiceoverText,
-} from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
@@ -66,10 +56,7 @@ function breakIntoParagraphTextComponents(text) {
 
   return paragraphs.map((paragraph, index) => {
     return (
-      <Text
-        key={index}
-        style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}
-      >
+      <Text key={index} style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
         <Text
           style={[
             globalStyles.body,
@@ -98,15 +85,14 @@ class AudioContentItem extends Component {
       audioAction: PropTypes.func.isRequired,
       reloadAudio: PropTypes.func.isRequired,
     }),
-  }
+  };
 
   componentWillMount() {
     this.setState({ transcriptOpened: false });
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.locale !== nextProps.locale &&
-        this.props.audioContent.active) {
+    if (this.props.locale !== nextProps.locale && this.props.audioContent.active) {
       this.props.actions.reloadAudio();
     }
   }
@@ -119,16 +105,9 @@ class AudioContentItem extends Component {
   }
 
   render() {
-    const {
-      audioContent,
-      screenReader,
-      index,
-      listLength,
-    } = this.props;
+    const { audioContent, screenReader, index, listLength } = this.props;
 
-    const {
-      audioAction,
-    } = this.props.actions;
+    const { audioAction } = this.props.actions;
 
     let collapsibleDuration;
     if (screenReader) {
@@ -140,19 +119,9 @@ class AudioContentItem extends Component {
     const indent = audioContent.depth * 30;
 
     return (
-      <View
-        style={[
-          styles.container,
-          this.props.active ? { backgroundColor: SELECTED } : {},
-        ]}
-      >
+      <View style={[styles.container, this.props.active ? { backgroundColor: SELECTED } : {}]}>
         <View style={styles.row}>
-          <View
-            style={[
-              styles.audioItemStatus,
-              { paddingLeft: indent },
-            ]}
-          >
+          <View style={[styles.audioItemStatus, { paddingLeft: indent }]}>
             <View style={styles.row}>
               <TouchableOpacity
                 style={{ flex: 2 }}
@@ -163,7 +132,7 @@ class AudioContentItem extends Component {
                 accessible={true}
                 accessibilityTraits={['button', 'startsMedia']}
                 accessibilityLabel={
-                  `${parseVoiceoverText(I18n.t(audioContent.title))}. ${(index + 1)} of ` +
+                  `${parseVoiceoverText(I18n.t(audioContent.title))}. ${index + 1} of ` +
                   `${listLength}. ${audioContent.duration} seconds`
                 }
               >
@@ -171,7 +140,9 @@ class AudioContentItem extends Component {
                 <View style={{ flexDirection: 'row' }}>
                   <View
                     style={[
-                      audioContent.category === 'HIGHLIGHT' ? styles.highlightedNumber : { marginRight: 11, paddingLeft: 3 },
+                      audioContent.category === 'HIGHLIGHT'
+                        ? styles.highlightedNumber
+                        : { marginRight: 11, paddingLeft: 3 },
                     ]}
                   >
                     <Text
@@ -184,12 +155,7 @@ class AudioContentItem extends Component {
                     </Text>
                   </View>
                   <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
-                    <Text
-                      style={[
-                        globalStyles.body,
-                        styles.titleText,
-                      ]}
-                    >
+                    <Text style={[globalStyles.body, styles.titleText]}>
                       {parseDisplayText(I18n.t(audioContent.title))}
                     </Text>
                   </Text>
@@ -197,14 +163,14 @@ class AudioContentItem extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <TranscriptButton
+          {/* <TranscriptButton
             accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
             onPress={() => { this.toggleTranscript(); }}
             showTranscript={this.state.transcriptOpened}
-          />
+          /> */}
         </View>
 
-        <Collapsible
+        {/* <Collapsible
           style={this.state.transcriptOpened ? styles.transcript : {}}
           collapsed={!this.state.transcriptOpened}
           duration={collapsibleDuration}
@@ -212,7 +178,7 @@ class AudioContentItem extends Component {
           <View style={styles.transcriptContainer}>
             {breakIntoParagraphTextComponents(I18n.t(audioContent.transcript))}
           </View>
-        </Collapsible>
+        </Collapsible> */}
       </View>
     );
   }
