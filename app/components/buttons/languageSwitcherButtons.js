@@ -106,6 +106,7 @@ const LanguageSwitcherButtons = (props) => {
               style={[
                 props.locale === language.code ? styles.onStyle : styles.offStyle,
                 props.style,
+                { alignItems: 'center', justifyContent: 'center' },
               ]}
               textStyle={[
                 props.locale === language.code ? styles.onTextStyle : {},
