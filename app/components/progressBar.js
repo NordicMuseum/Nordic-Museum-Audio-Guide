@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   Dimensions,
+  I18nManager,
 } from 'react-native';
 
 import { ACTION, GRAY } from '../styles';
@@ -36,7 +37,12 @@ const ProgressBar = (props) => {
   return (
     <View style={styles.container}>
       <View
-        style={[styles.row, styles.progressRow, { backgroundColor: GRAY }]}
+        style={[
+          styles.row,
+          styles.progressRow,
+          { backgroundColor: GRAY },
+          I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+        ]}
       >
         <View
           style={[

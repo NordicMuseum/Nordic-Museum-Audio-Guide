@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   Text,
+  I18nManager,
 } from 'react-native';
 
 import ProgressBar from './progressBar';
@@ -82,7 +83,11 @@ const TimeProgressView = (props) => {
         percentage={progressBarPercentage}
       />
       <View
-        style={[styles.row, styles.timestampRow]}
+        style={[
+          styles.row,
+          styles.timestampRow,
+          I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+        ]}
         accessibilityLabel={`${timeRemaining} seconds remaining`}
       >
         <Text
