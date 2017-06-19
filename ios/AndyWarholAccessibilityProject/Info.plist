@@ -39,6 +39,10 @@
 	<string>The Nordic Museum Audio Guide uses your location to show you nearby highlights and themes.</string>
 	<key>StringsTable</key>
 	<string>Root</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

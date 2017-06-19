@@ -34,8 +34,8 @@ class CMSAudioManager: RCTEventEmitter {
   override init() {
     super.init()
 
-    // TODO: Handle error
     try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+    try! AVAudioSession.sharedInstance().setActive(true)
   }
 
   override func constantsToExport() -> [String: Any] {
