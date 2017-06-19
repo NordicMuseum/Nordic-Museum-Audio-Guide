@@ -7,6 +7,10 @@ import {
 // *** Action Types ***
 export const SWITCH_LOCALE = 'SWITCH_LOCALE';
 
+import {
+  playTrack,
+} from './audio';
+
 // *** Action Creators ***
 function updateRTL(rtl) {
   I18nManager.forceRTL(rtl);
@@ -14,7 +18,7 @@ function updateRTL(rtl) {
 }
 
 export function switchLocale(locale) {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
     const rtl = locale === 'ar';
     const prevRTL = I18nManager.isRTL;
 
@@ -26,10 +30,12 @@ export function switchLocale(locale) {
       updateRTL(rtl, locale);
     }
 
-    dispatch({
-      type: SWITCH_LOCALE,
-      locale,
-    });
+    if (getState().bottomPlayer.uuid !== '') {
+      await dispatch(playTrack(getState().bottomPlayer.tourStop, getState().bottomPlayer.uuid, false));
+      dispatch({ type: SWITCH_LOCALE, locale });
+    } else {
+      dispatch({ type: SWITCH_LOCALE, locale });
+    }
   };
 }
 
