@@ -23,6 +23,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		320597A01EF081400085EB7D /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3205979E1EF081400085EB7D /* Root.strings */; };
 		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
+		3226C1541EF807220024EC53 /* SupportedOrientationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */; };
 		3271C41D1EE8659400217AC1 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C41C1EE8659400217AC1 /* welcome.png */; };
 		327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDB1ECAB4F0003A67BC /* highlights.png */; };
 		327F7EF41ECAB4F1003A67BC /* homesAndInteriors.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */; };
@@ -339,6 +340,7 @@
 		320597A11EF081490085EB7D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Translations/sv.lproj/Root.strings; sourceTree = "<group>"; };
 		320597A21EF081700085EB7D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Translations/de.lproj/Root.strings; sourceTree = "<group>"; };
 		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedOrientationsViewController.swift; sourceTree = "<group>"; };
 		3271C41C1EE8659400217AC1 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = images/welcome.png; sourceTree = "<group>"; };
 		327F7E331ECAB30C003A67BC /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AndyWarholAccessibilityProject-Bridging-Header.h"; path = "code/AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		327F7EDB1ECAB4F0003A67BC /* highlights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlights.png; path = images/highlights.png; sourceTree = "<group>"; };
@@ -649,6 +651,7 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -1474,6 +1477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3226C1541EF807220024EC53 /* SupportedOrientationsViewController.swift in Sources */,
 				07CD9D641EBBBE1C0014FC81 /* CMSRTLManager.swift in Sources */,
 				07CD9D651EBBBE1C0014FC81 /* CMSRTLManagerBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,

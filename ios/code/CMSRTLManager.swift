@@ -11,6 +11,16 @@ import Foundation
 
 @objc(CMSRTLManager)
 class CMSRTLManager: NSObject {
+  override init() {
+    super.init()
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(self.switchOrientation),
+      name: NSNotification.Name.RCTJavaScriptDidLoad,
+      object: nil)
+  }
+  
   @objc func forceRTL(_ rtl: Bool) -> Void {
 
     if (rtl == true) {
@@ -23,5 +33,9 @@ class CMSRTLManager: NSObject {
     
     // !WARNING! This is bound to break as it's imported from "RCTBridge+Private.h"
     RCTBridge.current().reload()
+  }
+  
+  func switchOrientation() {
+    UIViewController.attemptRotationToDeviceOrientation()
   }
 }

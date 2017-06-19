@@ -9,6 +9,8 @@
 
 #import "AppDelegate.h"
 
+#import "AndyWarholAccessibilityProject-Swift.h"
+
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
 #import "RCTI18nUtil.h"
@@ -39,12 +41,12 @@
   }
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
+  UIViewController *rootViewController = [SupportedOrientationsViewController new];
   rootViewController.view = rootView;
   
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-
+  
   [[RCTI18nUtil sharedInstance] allowRTL:YES];
   return YES;
 }

@@ -1,12 +1,6 @@
-
 import React, { PropTypes, Component } from 'react';
 
-import {
-  View,
-  StyleSheet,
-  Modal,
-  NavigatorIOS,
-} from 'react-native';
+import { View, StyleSheet, Modal, NavigatorIOS } from 'react-native';
 
 import TutorialLanguagePage from './tutorialLanguagePage';
 
@@ -36,7 +30,7 @@ class TutorialScreen extends Component {
       switchLocale: PropTypes.func.isRequired,
       switchLocaleFromTutorial: PropTypes.func.isRequired,
     }),
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -56,15 +50,9 @@ class TutorialScreen extends Component {
   }
 
   render() {
-    const {
-      tutorialHidden,
-      locale,
-    } = this.props;
+    const { tutorialHidden, locale } = this.props;
 
-    const {
-      switchLocale,
-      switchLocaleFromTutorial,
-    } = this.props.actions;
+    const { switchLocale, switchLocaleFromTutorial } = this.props.actions;
 
     if (tutorialHidden) {
       return null;
@@ -72,6 +60,7 @@ class TutorialScreen extends Component {
 
     return (
       <Modal
+        supportedOrientations={['portrait', 'portrait-upside-down']}
         style={styles.container}
         animationType={'slide'}
         visible={this.state.modalVisible}
