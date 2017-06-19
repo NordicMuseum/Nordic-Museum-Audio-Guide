@@ -120,10 +120,16 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
 
     let url = activeAudio.audioURL;
     if (activeAudio.audioURL.length === 3) {
+      //If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
       if (activeAudio.duration[I18n.locale]) {
         url = (activeAudio.audioURL).concat('/', I18n.locale);
       } else {
-        url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);
+        if (activeAudio.duration[I18n.defaultLocale]) {
+          url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);  
+        }
+        else {
+          url = (activeAudio.audioURL).concat('/', 'sv');
+        }
       }
     }
 
