@@ -41,7 +41,7 @@ class TutorialLanguagePage extends Component {
 
   componentDidMount() {
     if (Settings.get('advanceLanguageTutorialScreenOnLoad')) {
-      setTimeout(this.advanceLanguageTutorialScreen, 1000);
+      setTimeout(this.advanceLanguageTutorialScreen, 750);
       Settings.set({ advanceLanguageTutorialScreenOnLoad: false });
     }
   }
@@ -80,7 +80,10 @@ class TutorialLanguagePage extends Component {
     } = this.props.actions;
 
     return (
-      <View style={{ flex: 1 }}>
+      <View
+        style={{ flex: 1 }}
+        pointerEvents={Settings.get('advanceLanguageTutorialScreenOnLoad') ? 'none' : 'auto'}
+      >
         <NavigationBar
           label={I18n.t('settingsScreen_Title')}
           labelStyle={{
@@ -130,6 +133,6 @@ class TutorialLanguagePage extends Component {
       </View>
     );
   }
-};
+}
 
 export default TutorialLanguagePage;
