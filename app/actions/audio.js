@@ -125,7 +125,7 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
         url = (activeAudio.audioURL).concat('/', I18n.locale);
       } else {
         if (activeAudio.duration[I18n.defaultLocale]) {
-          url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);  
+          url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);
         }
         else {
           url = (activeAudio.audioURL).concat('/', 'sv');
@@ -166,6 +166,7 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
 }
 
 export function unloadAudio() {
+  AudioManager.changeRate(1);
   AudioManager.unloadAudio();
   return {
     type: PLAYER_STATUS_UNLOADED,
