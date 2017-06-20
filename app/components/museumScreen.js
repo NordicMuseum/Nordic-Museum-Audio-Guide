@@ -1,16 +1,10 @@
-
 import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import {
-  View,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
-import DisclosureCell from './disclosureCell';
+import DisclosureCell, { DISCLOSURE_CELL_HEIGHT } from './disclosureCell';
 import AmenitiesScreen from '../containers/amenities';
 import AboutScreen from './aboutScreen';
 import SettingsScreen from '../containers/settings';
@@ -23,11 +17,7 @@ import { OFF_BLACK, NAV_BAR_BACKGROUND } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: BOTTOMBARHEIGHT,
-    alignItems: 'stretch',
-    flex: 1,
-  },
-  header: {
+    flexDirection: 'column',
     flex: 1,
   },
   image: {
@@ -35,9 +25,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   list: {
-    position: 'absolute',
-    flex: 0,
-    flexDirection: 'column',
+    flex: 1,
+    backgroundColor: 'red',
   },
   statusBar: {
     height: 20,
@@ -54,7 +43,7 @@ class MuseumScreen extends Component {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
     screenReader: PropTypes.bool.isRequired,
-  }
+  };
 
   render() {
     const width = Dimensions.get('window').width;
@@ -65,21 +54,21 @@ class MuseumScreen extends Component {
       bottomOffset += BOTTOMPLAYERHEIGHT;
     }
 
+    const listHeight = DISCLOSURE_CELL_HEIGHT * 4;
+    const imageHeight = height - (listHeight + bottomOffset);
+
     return (
-      <View style={[styles.container]}>
-        <View style={styles.header}>
+      <View style={[styles.container, { marginBottom: bottomOffset }]}>
+        <View style={{ height: imageHeight }}>
           <Image
             accessible={true}
             accessibilityLabel={I18n.t('museumScreen_ImageAccessibilityLabel')}
             accessibilityTraits={'image'}
-            resizeMode={'cover'}
-            style={[styles.image, { width, height }]}
+            style={[styles.image, { width, height: imageHeight }]}
             source={{ uri: 'museumBackground.png' }}
           />
         </View>
-        <View
-          style={[styles.list, { width, bottom: bottomOffset }]}
-        >
+        <View style={[styles.list, { width }]}>
           <View>
             <DisclosureCell
               accessibility={{
@@ -168,7 +157,8 @@ class MuseumScreen extends Component {
           </View>
         </View>
         <View
-          style={[styles.statusBar,
+          style={[
+            styles.statusBar,
             {
               width,
               backgroundColor: NAV_BAR_BACKGROUND,
@@ -179,6 +169,5 @@ class MuseumScreen extends Component {
     );
   }
 }
-
 
 export default MuseumScreen;
