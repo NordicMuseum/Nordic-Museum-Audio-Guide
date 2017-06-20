@@ -28,11 +28,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     top: -3,
+    paddingBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
     width: 80,
-    height: 50,
+    height: 60,
   },
   backButtonLabel: {
     fontSize: 17,
