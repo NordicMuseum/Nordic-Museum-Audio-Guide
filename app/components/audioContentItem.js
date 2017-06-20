@@ -119,25 +119,24 @@ class AudioContentItem extends Component {
     const indent = audioContent.depth * 30;
 
     return (
-      <View style={[styles.container, this.props.active ? { backgroundColor: SELECTED } : {}]}>
-        <View style={styles.row}>
-          <View style={[styles.audioItemStatus, { paddingLeft: indent }]}>
-            <View style={styles.row}>
-              <TouchableOpacity
-                style={{ flex: 2 }}
-                activeOpacity={0.6}
-                onPress={() => {
-                  audioAction();
-                }}
-                accessible={true}
-                accessibilityTraits={['button', 'startsMedia']}
-                accessibilityLabel={
-                  `${parseVoiceoverText(I18n.t(audioContent.title))}. ${index + 1} of ` +
-                  `${listLength}. ${audioContent.duration} seconds`
-                }
-              >
-
-                <View style={{ flexDirection: 'row' }}>
+      <TouchableOpacity
+        style={{ flex: 1 }}
+        activeOpacity={0.6}
+        onPress={() => {
+          audioAction();
+        }}
+        accessible={true}
+        accessibilityTraits={['button', 'startsMedia']}
+        accessibilityLabel={
+          `${parseVoiceoverText(I18n.t(audioContent.title))}. ${index + 1} of ` +
+          `${listLength}. ${audioContent.duration} seconds`
+        }
+      >
+        <View style={[styles.container, this.props.active ? { backgroundColor: SELECTED } : {}]}>
+          <View style={styles.row}>
+            <View style={[styles.audioItemStatus, { paddingLeft: indent }]}>
+              <View style={styles.row}>
+                <View style={{ flex: 2, flexDirection: 'row' }}>
                   <View
                     style={[
                       audioContent.category === 'HIGHLIGHT'
@@ -160,26 +159,26 @@ class AudioContentItem extends Component {
                     </Text>
                   </Text>
                 </View>
-              </TouchableOpacity>
+              </View>
             </View>
+            {/* <TranscriptButton
+              accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
+              onPress={() => { this.toggleTranscript(); }}
+              showTranscript={this.state.transcriptOpened}
+            /> */}
           </View>
-          {/* <TranscriptButton
-            accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
-            onPress={() => { this.toggleTranscript(); }}
-            showTranscript={this.state.transcriptOpened}
-          /> */}
-        </View>
 
-        {/* <Collapsible
-          style={this.state.transcriptOpened ? styles.transcript : {}}
-          collapsed={!this.state.transcriptOpened}
-          duration={collapsibleDuration}
-        >
-          <View style={styles.transcriptContainer}>
-            {breakIntoParagraphTextComponents(I18n.t(audioContent.transcript))}
-          </View>
-        </Collapsible> */}
-      </View>
+          {/* <Collapsible
+            style={this.state.transcriptOpened ? styles.transcript : {}}
+            collapsed={!this.state.transcriptOpened}
+            duration={collapsibleDuration}
+          >
+            <View style={styles.transcriptContainer}>
+              {breakIntoParagraphTextComponents(I18n.t(audioContent.transcript))}
+            </View>
+          </Collapsible> */}
+        </View>
+      </TouchableOpacity>
     );
   }
 }
