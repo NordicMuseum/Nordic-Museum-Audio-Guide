@@ -153,10 +153,14 @@ class AudioContentItem extends Component {
                       {audioContent.title}
                     </Text>
                   </View>
-                  <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
-                    <Text style={[globalStyles.body, styles.titleText]}>
-                      {parseDisplayText(I18n.t(audioContent.title))}
-                    </Text>
+                  <Text
+                    style={[
+                      globalStyles.body,
+                      styles.titleText,
+                      { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
+                    ]}
+                  >
+                    {parseDisplayText(I18n.t(audioContent.title))}
                   </Text>
                 </View>
               </View>
