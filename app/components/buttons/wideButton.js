@@ -32,6 +32,7 @@ const WideButton = (props) => {
       onPress={props.onPress}
       styles={styles.container}
       disabled={props.disabled || false}
+      activeOpacity={props.pressable ? 0.7 : 1}
     >
       <View style={[styles.wideButton, props.style]}>
         <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
@@ -65,6 +66,7 @@ WideButton.propTypes = {
   accessoryView: PropTypes.object,
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func,
+  pressable: PropTypes.bool,
 };
 
 export default WideButton;

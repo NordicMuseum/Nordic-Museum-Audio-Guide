@@ -114,6 +114,7 @@ const LanguageSwitcherButtons = (props) => {
                 props.textStyle,
               ]}
               text={language.name}
+              pressable = {props.locale !== language.code}
               onPress={() => {
                 props.onPress(language.code);
               }}
