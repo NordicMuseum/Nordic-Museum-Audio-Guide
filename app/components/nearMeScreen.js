@@ -45,7 +45,7 @@ import {
     analyticsTrackBeaconRegion,
   } from '../actions/analytics';
 
-import { globalStyles, TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
+import { globalStyles, NAV_BAR_TEXT, NAV_BAR_BACKGROUND, TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 20,
-    backgroundColor: LIGHT_GRAY,
+    backgroundColor: NAV_BAR_BACKGROUND,
   },
   messageContainer: {
     flex: 1,
@@ -400,10 +400,10 @@ class NearMeScreen extends Component {
         <NavigationBar
           label={floor}
           labelStyle={{
-            color: OFF_BLACK,
+            color: NAV_BAR_TEXT,
           }}
           barStyle={{
-            backgroundColor: LIGHT_GRAY,
+            backgroundColor: NAV_BAR_BACKGROUND,
             height: 44,
           }}
         />

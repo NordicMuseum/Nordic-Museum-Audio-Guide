@@ -15,7 +15,7 @@ import NavigationBar from './navigationBar';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, ACTION } from '../styles';
+import { NAV_BAR_TEXT, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -46,7 +46,7 @@ const SettingsScreen = (props) => {
       <NavigationBar
         label={I18n.t('settingsScreen_Title')}
         labelStyle={{
-          color: OFF_BLACK,
+          color: NAV_BAR_TEXT,
         }}
         buttonColor={ACTION}
         backButtonPress={() => { props.navigator.pop(); }}

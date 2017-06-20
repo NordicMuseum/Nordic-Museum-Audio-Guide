@@ -25,7 +25,7 @@ import {
   parseVoiceoverText,
 } from '../utilities';
 
-import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles.js';
+import { OFF_BLACK, ACTION, LIGHT_GRAY, NAV_BAR_TEXT } from '../styles.js';
 
 const width = Dimensions.get('window').width;
 
@@ -231,7 +231,7 @@ class TourStopScreen extends Component {
           renderFixedHeader={() => (
             <NavigationBar
               labelStyle={{
-                color: OFF_BLACK,
+                color: NAV_BAR_TEXT,
               }}
               buttonColor={ACTION}
               backButtonPress={() => { this.props.navigator.pop(); }}
@@ -245,9 +245,9 @@ class TourStopScreen extends Component {
             <NavigationBar
               label={parseDisplayText(I18n.t(tourStop.shortTitle))}
               labelStyle={{
-                color: OFF_BLACK,
+                color: NAV_BAR_TEXT,
               }}
-              buttonColor={OFF_BLACK}
+              buttonColor={NAV_BAR_TEXT}
               barStyle={{
                 backgroundColor: 'transparent',
                 height: 44,

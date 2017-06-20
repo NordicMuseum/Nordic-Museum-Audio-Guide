@@ -16,7 +16,7 @@ import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 import { TAB_STORIES } from '../actions/navigation';
 
-import { OFF_BLACK, LIGHT_GRAY } from '../styles';
+import { OFF_BLACK, LIGHT_GRAY, NAV_BAR_TEXT, NAV_BAR_BACKGROUND } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 20,
-    backgroundColor: LIGHT_GRAY,
+    backgroundColor: NAV_BAR_BACKGROUND,
   },
 });
 
@@ -59,10 +59,10 @@ class EverythingScreen extends Component {
         <NavigationBar
           label={I18n.t('storiesScreen_Title')}
           labelStyle={{
-            color: OFF_BLACK,
+            color: NAV_BAR_TEXT,
           }}
           barStyle={{
-            backgroundColor: LIGHT_GRAY,
+            backgroundColor: NAV_BAR_BACKGROUND,
             height: 44,
           }}
         />

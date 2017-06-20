@@ -14,7 +14,7 @@ import NavigationBar from './navigationBar';
 import TutorialWelcomePage from './tutorialWelcomePage';
 import LanguageSwitcherButtons from './buttons/languageSwitcherButtons';
 
-import { LIGHT_GRAY, OFF_BLACK } from '../styles';
+import { NAV_BAR_TEXT, NAV_BAR_BACKGROUND, OFF_BLACK } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -54,7 +54,7 @@ class TutorialLanguagePage extends Component {
       title: '',
       component: TutorialWelcomePage,
       barTintColor: '#ffffff',
-      titleTextColor: OFF_BLACK,
+      titleTextColor: NAV_BAR_TEXT,
       shadowHidden: true,
       navigationBarHidden: true,
       passProps: {
@@ -85,10 +85,10 @@ class TutorialLanguagePage extends Component {
         <NavigationBar
           label={I18n.t('settingsScreen_Title')}
           labelStyle={{
-            color: OFF_BLACK,
+            color: NAV_BAR_TEXT,
           }}
           barStyle={{
-            backgroundColor: LIGHT_GRAY,
+            backgroundColor: NAV_BAR_BACKGROUND,
             height: 44,
             top: 0,
           }}

@@ -3,6 +3,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+export const NAV_BAR_TEXT = '#1A1A1A';
+export const NAV_BAR_BACKGROUND = '#EDEDED';
 export const LIGHT_BLUE = '#EDD6DD';
 export const GREEN = '#7DCC77';
 export const GRAY = '#7D7D7D';

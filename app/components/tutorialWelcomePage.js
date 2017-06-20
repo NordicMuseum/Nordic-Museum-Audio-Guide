@@ -14,7 +14,7 @@ import I18n from 'react-native-i18n';
 
 import NavigationBar from './navigationBar';
 
-import { OFF_BLACK, ACTION, LIGHT_GRAY, GRAY } from '../styles';
+import { OFF_BLACK, ACTION, NAV_BAR_TEXT, NAV_BAR_BACKGROUND } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -76,14 +76,14 @@ const TutorialWelcomePage = (props) => {
         <NavigationBar
           label={''}
           labelStyle={{
-            color: OFF_BLACK,
+            color: NAV_BAR_TEXT,
           }}
           buttonColor={ACTION}
           backButtonPress={() => {
             props.navigator.pop();
           }}
           barStyle={{
-            backgroundColor: LIGHT_GRAY,
+            backgroundColor: NAV_BAR_BACKGROUND,
             height: 44,
             top: 0,
             zIndex: 999,

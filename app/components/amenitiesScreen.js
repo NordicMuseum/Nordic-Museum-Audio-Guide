@@ -12,7 +12,7 @@ import I18n from 'react-native-i18n';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, ACTION, LIGHT_GRAY } from '../styles';
+import { ACTION, NAV_BAR_TEXT, NAV_BAR_BACKGROUND, LIGHT_GRAY } from '../styles';
 
 import StickyHeader from './stickyHeader';
 import AmenitiesItem from './amenitiesItem';
@@ -64,12 +64,12 @@ const AmenitiesScreen = (props) => {
       <NavigationBar
         label={I18n.t('amenitiesScreen_Title')}
         labelStyle={{
-          color: OFF_BLACK,
+          color: NAV_BAR_TEXT,
         }}
         buttonColor={ACTION}
         backButtonPress={() => { props.navigator.pop(); }}
         barStyle={{
-          backgroundColor: LIGHT_GRAY,
+          backgroundColor: NAV_BAR_BACKGROUND,
           height: 44,
         }}
       />

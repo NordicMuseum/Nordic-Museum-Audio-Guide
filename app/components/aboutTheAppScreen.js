@@ -17,7 +17,7 @@ import { parseDisplayText } from '../utilities';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { globalStyles, OFF_BLACK, ACTION } from '../styles';
+import { globalStyles, NAV_BAR_TEXT, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +37,7 @@ const AboutTheAppScreen = (props) => {
       <NavigationBar
         label={I18n.t('aboutTheAppScreen_Title')}
         labelStyle={{
-          color: OFF_BLACK,
+          color: NAV_BAR_TEXT,
         }}
         buttonColor={ACTION}
         backButtonPress={() => { props.navigator.pop(); }}
@@ -73,37 +73,37 @@ const AboutTheAppScreen = (props) => {
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppProjectManagerNordicMuseumBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppProjectManagerCarnegieInstituteHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppProjectManagerCarnegieInstituteBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppDevelopmentAndDesignHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppDevelopmentAndDesignBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppAdvisoryTeamHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppAdvisoryTeamBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppAppIconAndDesignAssetsHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppAppIconAndDesignAssetsBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppTranslationsHeader')}
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppTranslationsBody')}
-          </Text>          
+          </Text>
           <Text style={[globalStyles.h1, styles.creditsHeader]}>
             {I18n.t('aboutTheAppPhotoCreditsHeader')}
           </Text>

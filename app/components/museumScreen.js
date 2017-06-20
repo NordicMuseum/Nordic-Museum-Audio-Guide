@@ -19,7 +19,7 @@ import AboutTheAppScreen from './aboutTheAppScreen';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, LIGHT_GRAY } from '../styles';
+import { OFF_BLACK, NAV_BAR_BACKGROUND } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -171,7 +171,7 @@ class MuseumScreen extends Component {
           style={[styles.statusBar,
             {
               width,
-              backgroundColor: LIGHT_GRAY,
+              backgroundColor: NAV_BAR_BACKGROUND,
             },
           ]}
         />
