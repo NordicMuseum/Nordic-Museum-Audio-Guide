@@ -30,8 +30,9 @@ export function switchLocale(locale) {
       updateRTL(rtl, locale);
     }
 
-    if (getState().bottomPlayer.uuid !== '') {
-      await dispatch(playTrack(getState().bottomPlayer.tourStop, getState().bottomPlayer.uuid, false));
+    const state = getState();
+    if (state.bottomPlayer.uuid !== '') {
+      await dispatch(playTrack(state.bottomPlayer.tourStop, state.bottomPlayer.uuid, false));
       dispatch({ type: SWITCH_LOCALE, locale });
     } else {
       dispatch({ type: SWITCH_LOCALE, locale });
