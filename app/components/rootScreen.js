@@ -77,8 +77,8 @@ class RootScreen extends Component {
         <TabBarIOS
           translucent={false}
           barTintColor={OFF_BLACK}
-          unselectedTintColor={LIGHT_GRAY}
-          tintColor={OFF_WHITE}
+          unselectedTintColor={'#bfbfbf'}
+          tintColor={'#ffffff'}
         >
         {/*
           renderAsOriginal and badge do not seem to play nice, with badge taking precedence.

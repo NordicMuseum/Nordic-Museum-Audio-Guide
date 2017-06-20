@@ -38,9 +38,9 @@ export const BOTTOMPLAYERHEIGHT = 105;
 const styles = StyleSheet.create({
   bottomBar: {
     position: 'absolute',
-    borderTopWidth: 1,
     borderBottomWidth: 1,
-    borderColor: '#666666',
+    borderColor: '#0d0d0d',
+    backgroundColor: '#1A1A1A',
   },
 });
 
@@ -154,7 +154,6 @@ class BottomPlayer extends Component {
           style={[styles.bottomBar,
                   { width, height: BOTTOMPLAYERHEIGHT,
                     bottom: BOTTOMBARHEIGHT,
-                    backgroundColor: OFF_BLACK,
                    }]}
         >
           <ClosePlayerView
