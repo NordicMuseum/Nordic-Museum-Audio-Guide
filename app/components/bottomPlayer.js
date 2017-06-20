@@ -38,6 +38,9 @@ export const BOTTOMPLAYERHEIGHT = 105;
 const styles = StyleSheet.create({
   bottomBar: {
     position: 'absolute',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: '#666666',
   },
 });
 
