@@ -29,7 +29,6 @@ class TutorialLanguagePage extends Component {
     locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       switchLocale: PropTypes.func.isRequired,
-      switchLocaleFromTutorial: PropTypes.func.isRequired,
       hideTutorial: PropTypes.func.isRequired,
     }),
   };
@@ -41,7 +40,7 @@ class TutorialLanguagePage extends Component {
 
   componentDidMount() {
     if (Settings.get('advanceLanguageTutorialScreenOnLoad')) {
-      setTimeout(this.advanceLanguageTutorialScreen, 750);
+      setTimeout(this.advanceLanguageTutorialScreen, 1000);
       Settings.set({ advanceLanguageTutorialScreenOnLoad: false });
     }
   }
@@ -75,7 +74,6 @@ class TutorialLanguagePage extends Component {
 
     const {
       switchLocale,
-      switchLocaleFromTutorial,
       hideTutorial,
     } = this.props.actions;
 
@@ -105,28 +103,22 @@ class TutorialLanguagePage extends Component {
             textStyle={{ color: OFF_BLACK }}
             locale={locale}
             onPress={(languageCode) => {
-              if (languageCode === 'ar' && locale !== 'ar') {
-                switchLocaleFromTutorial(languageCode);
-              } else if (languageCode !== 'ar' && locale === 'ar') {
-                switchLocaleFromTutorial(languageCode);
-              } else {
-                switchLocale(languageCode);
-                this.props.navigator.push({
-                  title: '',
-                  component: TutorialWelcomePage,
-                  barTintColor: '#ffffff',
-                  titleTextColor: OFF_BLACK,
-                  shadowHidden: true,
-                  navigationBarHidden: true,
-                  passProps: {
-                    navigator: this.props.navigator,
-                    locale: languageCode,
-                    actions: {
-                      hideTutorial,
-                    },
+              switchLocale(languageCode, 'tutorial');
+              this.props.navigator.push({
+                title: '',
+                component: TutorialWelcomePage,
+                barTintColor: '#ffffff',
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+                navigationBarHidden: true,
+                passProps: {
+                  navigator: this.props.navigator,
+                  locale: languageCode,
+                  actions: {
+                    hideTutorial,
                   },
-                });
-              }
+                },
+              });
             }}
           />
         </ScrollView>

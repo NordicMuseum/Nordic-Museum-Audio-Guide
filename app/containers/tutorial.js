@@ -10,7 +10,6 @@ import {
 
 import {
   switchLocale,
-  switchLocaleFromTutorial,
 } from '../actions/localization';
 
 const mapStateToProps = (state) => {
@@ -26,7 +25,6 @@ const mapDispatchToProps = (dispatch) => {
       bindActionCreators({
         hideTutorial,
         switchLocale,
-        switchLocaleFromTutorial,
       }, dispatch),
   };
 };

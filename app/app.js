@@ -20,17 +20,19 @@ import { analyticsTrackDeviceType } from './actions/analytics';
 const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
 const lastAppVersion = Settings.get('LastAppVersion');
 const showTutorialEveryTime = Settings.get('ShowTutorialEveryTime');
+const localeChangedFromSettings = Settings.get('localeChangedFromSettings');
 
 const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
 // Hydrate the DB
 import hydrate from './data/hydrate';
 hydrate(newVersion || __DEV__);
-
 const store = configureStore();
 store.dispatch(
-  decideIfToShowTutorial(showTutorialEveryTime, newVersion)
+  decideIfToShowTutorial((showTutorialEveryTime && !localeChangedFromSettings), newVersion)
 );
+
+Settings.set({ localeChangedFromSettings: false });
 
 if (newVersion) {
   Settings.set({ LastAppVersion: appVersion });

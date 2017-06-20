@@ -51,7 +51,6 @@ const AutoplayProgressView = (props) => {
   // If autoplay has reached 0, trigger next audio
   // (Can this be moved somewhere else?)
   if (timerActive && timerNumber <= 0) {
-    console.log('Should autoplay it now!');
     loadNextAutoplayAudio();
   }
 

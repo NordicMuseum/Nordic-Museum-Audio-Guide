@@ -17,16 +17,30 @@ function updateRTL(rtl) {
   NativeModules.CMSRTLManager.forceRTL(rtl);
 }
 
-export function switchLocale(locale) {
+export function switchLocale(locale, screen) {
   return async (dispatch, getState) => {
     const rtl = locale === 'ar';
     const prevRTL = I18nManager.isRTL;
 
     if (rtl !== prevRTL && prevRTL != null) {
-      Settings.set({
-        reloadAppForRTLSwitchLocale: locale,
-        reloadAppForRTLSwitch: true,
-      });
+      switch (screen) {
+        case ('tutorial') : {
+          await Settings.set({
+            advanceLanguageTutorialScreenOnLoad: true,
+            reloadAppForRTLSwitchLocale: locale,
+            reloadAppForRTLSwitch: true,
+          });
+          break;
+        } case ('settings') : {
+          await Settings.set({
+            localeChangedFromSettings: true,
+            reloadAppForRTLSwitchLocale: locale,
+            reloadAppForRTLSwitch: true,
+          });
+          break;
+        }
+        default: break;
+      }
       updateRTL(rtl, locale);
     }
 
@@ -37,26 +51,5 @@ export function switchLocale(locale) {
     } else {
       dispatch({ type: SWITCH_LOCALE, locale });
     }
-  };
-}
-
-export function switchLocaleFromTutorial(locale) {
-  return async (dispatch) => {
-    const rtl = locale === 'ar';
-    const prevRTL = I18nManager.isRTL;
-
-    if (rtl !== prevRTL && prevRTL != null) {
-      Settings.set({
-        advanceLanguageTutorialScreenOnLoad: true,
-        reloadAppForRTLSwitchLocale: locale,
-        reloadAppForRTLSwitch: true,
-      });
-      updateRTL(rtl, locale);
-    }
-
-    dispatch({
-      type: SWITCH_LOCALE,
-      locale,
-    });
   };
 }

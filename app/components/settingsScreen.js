@@ -67,7 +67,7 @@ const SettingsScreen = (props) => {
             <LanguageSwitcherButtons
               locale={locale}
               onPress={(languageCode) => {
-                switchLocale(languageCode);
+                switchLocale(languageCode, 'settings');
               }}
             />
           </View>
