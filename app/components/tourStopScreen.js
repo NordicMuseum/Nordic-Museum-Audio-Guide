@@ -188,7 +188,7 @@ class TourStopScreen extends Component {
   }
 
   render() {
-    const tourStop = this.props.tourStop;
+    const { tourStop, locale } = this.props;
 
     const { playTrack, togglePausePlay } = this.props.actions;
 
@@ -245,62 +245,70 @@ class TourStopScreen extends Component {
                 height: 44,
               }}
             />}
-          renderForeground={() =>
-            <View style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}>
-              <Image style={styles.headerImage} source={{ uri: this.props.imageURL }}>
-                <View style={styles.headerTitle} pointerEvents={'none'}>
-                  <Text style={styles.headerTitleText}>
-                    {parseDisplayText(I18n.t(tourStop.shortTitle)).toUpperCase()}
-                  </Text>
-                </View>
-              </Image>
-              <View style={styles.playAllButtonContainer}>
-                <TouchableOpacity
-                  style={[styles.playAllButton, { width: 0.65 * width }]}
-                  onPress={() => {
-                    playTrack(
-                      this.props.tourStop,
-                      this.props.tourStop.audioContent[0].uuid,
-                      true // autoplay
-                    );
-                  }}
-                >
-                  <Image
-                    style={styles.playAllButtonIcon}
-                    source={require('../assets/PlayButton.png')}
-                  />
-                  <Text style={styles.playAllButtonText}>
-                    {parseDisplayText(I18n.t('playAll')).toUpperCase()}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.audioContentInfo}>
-                <View style={styles.audioContentQuickInfo}>
-                  <View style={styles.audioContentFloor}>
-                    <Image style={styles.floorIcon} source={require('../assets/FloorIcon.png')} />
-                    <Text style={styles.floorText}>
-                      {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}
+          renderForeground={() => {
+            let imageURL = this.props.imageURL;
+            if (locale === 'svKids' && tourStop.regions.length === 0) {
+              imageURL = 'highlightsKids.png';
+            }
+
+            return (
+              <View style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}>
+                <Image style={styles.headerImage} source={{ uri: imageURL }}>
+                  <View style={styles.headerTitle} pointerEvents={'none'}>
+                    <Text style={styles.headerTitleText}>
+                      {parseDisplayText(I18n.t(tourStop.shortTitle)).toUpperCase()}
                     </Text>
                   </View>
-                  <View style={styles.audioContentDuration}>
+                </Image>
+                <View style={styles.playAllButtonContainer}>
+                  <TouchableOpacity
+                    style={[styles.playAllButton, { width: 0.65 * width }]}
+                    onPress={() => {
+                      playTrack(
+                        this.props.tourStop,
+                        this.props.tourStop.audioContent[0].uuid,
+                        true // autoplay
+                      );
+                    }}
+                  >
                     <Image
-                      style={styles.durationIcon}
-                      source={require('../assets/ClockIcon.png')}
+                      style={styles.playAllButtonIcon}
+                      source={require('../assets/PlayButton.png')}
                     />
-                    <Text style={styles.durationText}>
-                      {`${Math.floor(this.props.duration / 60)} ${I18n.t('min').toUpperCase()}`}
+                    <Text style={styles.playAllButtonText}>
+                      {parseDisplayText(I18n.t('playAll')).toUpperCase()}
                     </Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.audioContentInfo}>
+                  <View style={styles.audioContentQuickInfo}>
+                    <View style={styles.audioContentFloor}>
+                      <Image style={styles.floorIcon} source={require('../assets/FloorIcon.png')} />
+                      <Text style={styles.floorText}>
+                        {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}
+                      </Text>
+                    </View>
+                    <View style={styles.audioContentDuration}>
+                      <Image
+                        style={styles.durationIcon}
+                        source={require('../assets/ClockIcon.png')}
+                      />
+                      <Text style={styles.durationText}>
+                        {`${Math.floor(this.props.duration / 60)} ${I18n.t('min').toUpperCase()}`}
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>}
+            );
+          }}
         >
           <AudioContentList
             tourStop={tourStop}
             currentAudio={this.props.currentAudio}
             playerStatus={this.props.playerStatus}
             screenReader={this.props.screenReader}
-            locale={this.props.locale}
+            locale={locale}
             actions={{
               playTrack,
               togglePausePlay,

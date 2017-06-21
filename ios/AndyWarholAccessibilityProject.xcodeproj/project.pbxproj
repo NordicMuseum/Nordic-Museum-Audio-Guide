@@ -24,6 +24,7 @@
 		320597A01EF081400085EB7D /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3205979E1EF081400085EB7D /* Root.strings */; };
 		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
 		3226C1541EF807220024EC53 /* SupportedOrientationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */; };
+		3226C1561EFB01300024EC53 /* highlightsKids.png in Resources */ = {isa = PBXBuildFile; fileRef = 3226C1551EFB01300024EC53 /* highlightsKids.png */; };
 		3271C41D1EE8659400217AC1 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C41C1EE8659400217AC1 /* welcome.png */; };
 		327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDB1ECAB4F0003A67BC /* highlights.png */; };
 		327F7EF41ECAB4F1003A67BC /* homesAndInteriors.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */; };
@@ -341,6 +342,7 @@
 		320597A21EF081700085EB7D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Translations/de.lproj/Root.strings; sourceTree = "<group>"; };
 		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedOrientationsViewController.swift; sourceTree = "<group>"; };
+		3226C1551EFB01300024EC53 /* highlightsKids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlightsKids.png; path = images/highlightsKids.png; sourceTree = "<group>"; };
 		3271C41C1EE8659400217AC1 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = images/welcome.png; sourceTree = "<group>"; };
 		327F7E331ECAB30C003A67BC /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AndyWarholAccessibilityProject-Bridging-Header.h"; path = "code/AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		327F7EDB1ECAB4F0003A67BC /* highlights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlights.png; path = images/highlights.png; sourceTree = "<group>"; };
@@ -844,6 +846,7 @@
 			children = (
 				327F7EDB1ECAB4F0003A67BC /* highlights.png */,
 				327F7EDC1ECAB4F0003A67BC /* homesAndInteriors.png */,
+				3226C1551EFB01300024EC53 /* highlightsKids.png */,
 				327F7EDE1ECAB4F0003A67BC /* museumBackground.png */,
 				327F7EE11ECAB4F0003A67BC /* powerOfFashion.png */,
 				327F7EE21ECAB4F0003A67BC /* sapmi.png */,
@@ -1298,6 +1301,7 @@
 				E018D4FC1ECBA6D3007D0478 /* 412 in Resources */,
 				E018D4F91ECBA6D3007D0478 /* 409 in Resources */,
 				E018D4C11ECBA6D3007D0478 /* 344 in Resources */,
+				3226C1561EFB01300024EC53 /* highlightsKids.png in Resources */,
 				E018D5161ECBA6D3007D0478 /* 438 in Resources */,
 				E0F508971EE494E1002A8DB3 /* 325 in Resources */,
 				E018D4981ECBA6D3007D0478 /* 303 in Resources */,
