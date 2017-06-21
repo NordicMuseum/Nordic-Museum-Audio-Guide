@@ -119,7 +119,16 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
             }}
           >
             <View style={{ flex: 0.6 }}>
-              <Text style={styles.cellTitleText}>
+              <Text
+                style={[
+                  styles.cellTitleText,
+                  item.category === 'HIGHLIGHTS' ? {
+                    backgroundColor: HIGHLIGHTS,
+                    paddingHorizontal: 5,
+                    paddingVertical: 3,
+                  } : {},
+                ]}
+              >
                 {parseDisplayText(I18n.t(item.longTitle)).toUpperCase()}
               </Text>
             </View>
