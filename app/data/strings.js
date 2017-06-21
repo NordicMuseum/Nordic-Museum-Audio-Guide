@@ -27,6 +27,7 @@ export const strings = {
     transcriptButton_OpenedAccessibilityLabel: ' transcript opened. Double tap to close.',
     transcriptButton_ClosedAccessibilityLabel: ' transcript closed. Double tap to open.',
     tryAgain: 'Try again',
+    enterNumber: 'Enter Number',
     audioContentItem_Of: 'of', // Example: Audio item 1 of 3
     audioContentItem_Seconds: 'seconds',
     audioContentList_ChapterSingular: 'Chapter',

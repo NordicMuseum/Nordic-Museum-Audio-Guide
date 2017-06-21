@@ -5,6 +5,7 @@ import I18n from 'react-native-i18n';
 import {
   StyleSheet,
   View,
+  TouchableHighlight,
   TouchableOpacity,
   Text,
   Dimensions,
@@ -14,26 +15,23 @@ import {
 
 import TourStopScreen from '../containers/tourStop';
 
-import { BOTTOMBARHEIGHT } from './rootScreen';
-import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
-
-import { OFF_BLACK, ACTION } from '../styles';
+import { OFF_BLACK, SELECTED } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
+    backgroundColor: '#EDEDED',
     justifyContent: 'center',
     alignItems: 'center',
   },
   display: {
-    flex: 0.3,
+    flex: 0.2,
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'column',
   },
   displayRow: {
-    width: 200,
+    width: 150,
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
@@ -41,28 +39,26 @@ const styles = StyleSheet.create({
   digitDisplay: {
     width: 40,
     height: 40,
+    borderBottomWidth: 1,
+    borderBottomColor: '#808080',
   },
   digitDisplayText: {
     color: OFF_BLACK,
     fontSize: 36,
-    fontWeight: '600',
-    borderBottomWidth: 5,
+    fontWeight: '400',
     textAlign: 'center',
-    borderBottomColor: 'white',
-  },
-  emptyDigit: {
-    borderBottomWidth: 5,
-    borderBottomColor: OFF_BLACK,
-    width: 40,
-    height: 40,
+    backgroundColor: 'transparent',
+    paddingBottom: 5,
   },
   digitPad: {
     flex: 0.7,
     padding: 5,
+    paddingTop: 35,
     alignItems: 'center',
   },
   digitRow: {
     flexDirection: 'row',
+    height: 75,
   },
   digit: {
     height: 60,
@@ -71,36 +67,31 @@ const styles = StyleSheet.create({
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: ACTION,
+    borderColor: '#808080',
+    borderWidth: 1,
   },
   digitText: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: '600',
+    color: '#333333',
+    fontSize: 30,
+    fontWeight: '300',
   },
   nonDigit: {
     margin: 10,
     height: 60,
     width: 60,
+    borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
   deleteButton: {
-    tintColor: ACTION,
-    height: 30,
-    width: 40,
+    height: 25,
+    width: 35,
     resizeMode: 'contain',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  tryAgainMessage: {
-    position: 'absolute',
-    bottom: 15,
-    left: 0,
-    width: 200,
-  },
   tryAgainText: {
-    fontSize: 20,
+    fontSize: 18,
     color: OFF_BLACK,
     textAlign: 'center',
   },
@@ -239,22 +230,38 @@ class SearchByNumberScreen extends Component {
   }
 
   render() {
-    const width = Dimensions.get('window').width;
-
-    let containerMargin = BOTTOMBARHEIGHT;
-    if (this.props.playerOpen) {
-      containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    }
+    const { width, height } = Dimensions.get('window');
 
     return (
-      <View style={[styles.container, { marginBottom: containerMargin }]}>
-        <View style={styles.display}>
+      <View
+        style={[
+          styles.container,
+          height < 570 ? { paddingTop: 30 } : { paddingTop: 50 },
+          this.props.playerOpen && height < 570 ? { paddingTop: 25 } : {},
+        ]}
+      >
+        <View
+          style={[
+            styles.display,
+            this.props.playerOpen ? { flex: 0.10 } : {},
+          ]}
+        >
+          {this.state.numberNotFound &&
+            <Text style={styles.tryAgainText}>
+              {I18n.t('tryAgain')}
+            </Text>
+          }
+          {!this.state.numberNotFound &&
+            <Text style={styles.tryAgainText}>
+              {I18n.t('enterNumber')}
+            </Text>
+          }
           <View
             style={[styles.displayRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
             {this.props.digits.map((digit, index) => {
               return (
-                <View key={index} style={digit !== null ? styles.digitDisplay : styles.emptyDigit}>
+                <View key={index} style={styles.digitDisplay}>
                   {digit !== null &&
                     <Text style={styles.digitDisplayText}>
                       {digit}
@@ -263,18 +270,19 @@ class SearchByNumberScreen extends Component {
               );
             })}
           </View>
-          {this.state.numberNotFound &&
-            <View style={styles.tryAgainMessage}>
-              <Text style={styles.tryAgainText}>
-                {I18n.t('tryAgain')}
-              </Text>
-            </View>}
         </View>
-        <View style={[styles.digitPad, { width }]}>
+        <View
+          style={[
+            styles.digitPad,
+            { width },
+            this.props.playerOpen && height < 570 ? { paddingTop: 5 } : {},
+          ]}
+        >
           <View
             style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
-            <TouchableOpacity
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(1);
               }}
@@ -283,8 +291,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 1
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(2);
               }}
@@ -293,8 +302,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 2
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(3);
               }}
@@ -303,12 +313,13 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 3
               </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
           </View>
           <View
             style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
-            <TouchableOpacity
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(4);
               }}
@@ -317,8 +328,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 4
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(5);
               }}
@@ -327,8 +339,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 5
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(6);
               }}
@@ -337,12 +350,13 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 6
               </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
           </View>
           <View
             style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
-            <TouchableOpacity
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(7);
               }}
@@ -351,8 +365,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 7
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(8);
               }}
@@ -361,8 +376,9 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 8
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(9);
               }}
@@ -371,13 +387,14 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 9
               </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
           </View>
           <View
             style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
             <View style={styles.nonDigit} />
-            <TouchableOpacity
+            <TouchableHighlight
+              underlayColor={SELECTED}
               onPress={() => {
                 this.addDigit(0);
               }}
@@ -386,14 +403,15 @@ class SearchByNumberScreen extends Component {
               <Text style={styles.digitText}>
                 0
               </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
             <TouchableOpacity
-              onPress={() => {
-                this.deleteDigit();
-              }}
+              onPress={() => { this.deleteDigit(); }}
               style={styles.nonDigit}
             >
-              <Image source={require('../assets/DeleteButton.png')} style={styles.deleteButton} />
+              <Image
+                source={require('../assets/DeleteButton.png')}
+                style={styles.deleteButton}
+              />
             </TouchableOpacity>
           </View>
         </View>
