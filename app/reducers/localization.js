@@ -15,7 +15,6 @@ I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
 export function localization(state = initialState, action) {
   switch (action.type) {
     case SWITCH_LOCALE: {
-      console.log(action.locale);
       I18n.locale = action.locale;
       if (
         action.locale === 'svKids' ||

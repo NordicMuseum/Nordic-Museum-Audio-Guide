@@ -12,9 +12,12 @@ import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
+export const AUDIO_CONTENT_ITEM_HEIGHT = 45;
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    height: AUDIO_CONTENT_ITEM_HEIGHT,
     paddingTop: 8,
     paddingBottom: 16,
     paddingLeft: 15,
