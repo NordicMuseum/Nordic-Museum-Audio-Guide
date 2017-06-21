@@ -1,13 +1,6 @@
-
 import React, { PropTypes } from 'react';
 
-import {
-  View,
-  TouchableOpacity,
-  StyleSheet,
-  Text,
-  I18nManager,
-} from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text, I18nManager } from 'react-native';
 
 import { globalStyles } from '../../styles';
 
@@ -23,7 +16,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const WideButton = (props) => {
+const WideButton = props => {
   return (
     <TouchableOpacity
       accessible={true}
@@ -32,7 +25,7 @@ const WideButton = (props) => {
       onPress={props.onPress}
       styles={styles.container}
       disabled={props.disabled || false}
-      activeOpacity={props.pressable ? 0.7 : 1}
+      activeOpacity={props.pressable ? 0.5 : 1}
     >
       <View style={[styles.wideButton, props.style]}>
         <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
@@ -54,14 +47,8 @@ const WideButton = (props) => {
 };
 
 WideButton.propTypes = {
-  style: PropTypes.oneOfType([
-    View.propTypes.style,
-    PropTypes.object,
-  ]),
-  textStyle: PropTypes.oneOfType([
-    Text.propTypes.style,
-    PropTypes.object,
-  ]),
+  style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
+  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
   disabled: PropTypes.bool,
   accessoryView: PropTypes.object,
   text: PropTypes.string.isRequired,

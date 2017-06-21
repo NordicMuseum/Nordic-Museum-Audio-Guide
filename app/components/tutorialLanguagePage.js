@@ -1,12 +1,6 @@
-
 import React, { PropTypes, Component } from 'react';
 
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  Settings,
-} from 'react-native';
+import { View, StyleSheet, ScrollView, Settings } from 'react-native';
 
 import I18n from 'react-native-i18n';
 
@@ -46,9 +40,7 @@ class TutorialLanguagePage extends Component {
   }
 
   advanceLanguageTutorialScreen() {
-    const {
-      hideTutorial,
-    } = this.props.actions;
+    const { hideTutorial } = this.props.actions;
 
     this.props.navigator.push({
       title: '',
@@ -68,14 +60,9 @@ class TutorialLanguagePage extends Component {
   }
 
   render() {
-    const {
-      locale,
-    } = this.props;
+    const { locale } = this.props;
 
-    const {
-      switchLocale,
-      hideTutorial,
-    } = this.props.actions;
+    const { switchLocale, hideTutorial } = this.props.actions;
 
     return (
       <View
@@ -99,10 +86,9 @@ class TutorialLanguagePage extends Component {
           contentContainerStyle={{ marginHorizontal: 25 }}
         >
           <LanguageSwitcherButtons
-            style={{ backgroundColor: 'transparent' }}
             textStyle={{ color: OFF_BLACK }}
             locale={locale}
-            onPress={(languageCode) => {
+            onPress={languageCode => {
               switchLocale(languageCode, 'tutorial');
               this.props.navigator.push({
                 title: '',

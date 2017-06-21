@@ -1,15 +1,10 @@
-
 import React, { PropTypes } from 'react';
 
-import {
-  StyleSheet,
-  View,
-  Text,
-} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, ACTION } from '../../styles';
+import { OFF_WHITE, SELECTED } from '../../styles';
 
 const styles = StyleSheet.create({
   offStyle: {
@@ -18,14 +13,11 @@ const styles = StyleSheet.create({
     borderRadius: 0,
   },
   onStyle: {
-    backgroundColor: ACTION,
+    backgroundColor: SELECTED,
     borderWidth: 0,
     marginBottom: 0,
     marginVertical: 0,
     borderRadius: 0,
-  },
-  onTextStyle: {
-    color: OFF_WHITE,
   },
   normalTextStyle: {
     textAlign: 'center',
@@ -95,47 +87,35 @@ const languages = [
   },
 ];
 
-const LanguageSwitcherButtons = (props) => {
+const LanguageSwitcherButtons = props => {
   return (
     <View>
-      {
-        languages.map((language) => {
-          return (
-            <WideButton
-              key={language.code}
-              style={[
-                props.locale === language.code ? styles.onStyle : styles.offStyle,
-                props.style,
-                { alignItems: 'center', justifyContent: 'center' },
-              ]}
-              textStyle={[
-                props.locale === language.code ? styles.onTextStyle : {},
-                styles.normalTextStyle,
-                props.textStyle,
-              ]}
-              text={language.name}
-              pressable = {props.locale !== language.code}
-              onPress={() => {
-                props.onPress(language.code);
-              }}
-            />
-          );
-        })
-      }
+      {languages.map(language => {
+        return (
+          <WideButton
+            key={language.code}
+            style={[
+              props.locale === language.code ? styles.onStyle : styles.offStyle,
+              props.style,
+              { alignItems: 'center', justifyContent: 'center' },
+            ]}
+            textStyle={[styles.normalTextStyle, props.textStyle]}
+            text={language.name}
+            pressable={props.locale !== language.code}
+            onPress={() => {
+              props.onPress(language.code);
+            }}
+          />
+        );
+      })}
     </View>
   );
 };
 
 LanguageSwitcherButtons.propTypes = {
   locale: PropTypes.string.isRequired,
-  style: PropTypes.oneOfType([
-    View.propTypes.style,
-    PropTypes.object,
-  ]),
-  textStyle: PropTypes.oneOfType([
-    Text.propTypes.style,
-    PropTypes.object,
-  ]),
+  style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
+  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
   onPress: PropTypes.func.isRequired,
 };
 
