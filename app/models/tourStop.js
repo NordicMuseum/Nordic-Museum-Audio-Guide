@@ -24,6 +24,7 @@ export class TourStop {
       longTitle: { type: 'string' },
       shortCreditAccessibilityLabel: { type: 'string', optional: true },
       regions: { type: 'string' }, // Stored as String, but converted from Array
+      category: { type: 'string', optional: true },
       imageURL: { type: 'string', optional: true },
       imageAccessibilityLabel: { type: 'string', optional: true },
       imageWidth: { type: 'int' },
@@ -78,6 +79,7 @@ export class TourStop {
       longTitle: realmObject.longTitle,
       shortCreditAccessibilityLabel: realmObject.shortCreditAccessibilityLabel,
       regions: realmObject.regions.split(','),
+      category: realmObject.category,
       imageURL: realmObject.imageURL,
       imageAccessibilityLabel: realmObject.imageAccessibilityLabel,
       imageWidth: realmObject.imageWidth,
