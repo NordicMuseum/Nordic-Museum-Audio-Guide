@@ -12,6 +12,8 @@ import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
+export const AUDIO_CONTENT_ITEM_HEIGHT = 45;
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -153,22 +155,29 @@ class AudioContentItem extends Component {
                       {audioContent.title}
                     </Text>
                   </View>
-                  <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
-                    <Text style={[globalStyles.body, styles.titleText]}>
-                      {parseDisplayText(I18n.t(audioContent.title))}
-                    </Text>
+                  <Text
+                    style={[
+                      globalStyles.body,
+                      styles.titleText,
+                      { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
+                    ]}
+                  >
+                    {parseDisplayText(I18n.t(audioContent.title))}
                   </Text>
                 </View>
               </View>
             </View>
-            {/* <TranscriptButton
+            <TranscriptButton
+              styles={{ opacity: 0 }}
               accessibilityLabel={parseVoiceoverText(I18n.t(audioContent.title))}
-              onPress={() => { this.toggleTranscript(); }}
+              onPress={() => {
+                // this.toggleTranscript();
+              }}
               showTranscript={this.state.transcriptOpened}
-            /> */}
+            />
           </View>
 
-          {/* <Collapsible
+          <Collapsible
             style={this.state.transcriptOpened ? styles.transcript : {}}
             collapsed={!this.state.transcriptOpened}
             duration={collapsibleDuration}
@@ -176,7 +185,7 @@ class AudioContentItem extends Component {
             <View style={styles.transcriptContainer}>
               {breakIntoParagraphTextComponents(I18n.t(audioContent.transcript))}
             </View>
-          </Collapsible> */}
+          </Collapsible>
         </View>
       </TouchableOpacity>
     );

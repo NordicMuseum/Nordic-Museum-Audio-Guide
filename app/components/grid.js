@@ -1,4 +1,3 @@
-
 import React, { PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
@@ -15,10 +14,7 @@ import {
 
 import StickyHeader from './stickyHeader';
 
-import {
-  parseDisplayText,
-  parseVoiceoverText,
-} from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 import { LIGHT_GRAY, HIGHLIGHTS } from '../styles';
 
@@ -87,12 +83,20 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
     traits = ['button', 'startsMedia'];
   }
 
+  let imageURL = item.imageURL;
+  if (locale === 'svKids' && item.regions.length === 0) {
+    imageURL = 'highlightsKids.png';
+  }
+
   return (
     <View
-      style={[styles.cellContainer, {
-        width: cellWidth,
-        flex: 1,
-      }]}
+      style={[
+        styles.cellContainer,
+        {
+          width: cellWidth,
+          flex: 1,
+        },
+      ]}
       key={item.uuid}
       accessible={true}
       accessibilityTraits={traits}
@@ -101,10 +105,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
         ` Plays audio for ${I18n.t(item.shortTitle)} story.`
       }
     >
-      <TouchableOpacity
-        activeOpacity={0.6}
-        onPress={() => onPress(item)}
-      >
+      <TouchableOpacity activeOpacity={0.6} onPress={() => onPress(item)}>
         <View>
           <Image
             style={[
@@ -115,7 +116,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
               },
             ]}
             source={{
-              uri: item.imageURL,
+              uri: imageURL,
             }}
           >
             <View style={{ flex: 0.6 }}>
@@ -133,10 +134,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
               </Text>
             </View>
             <View style={styles.cellDuration}>
-              <Image
-                style={styles.cellDurationIcon}
-                source={require('../assets/ClockIcon.png')}
-              />
+              <Image style={styles.cellDurationIcon} source={require('../assets/ClockIcon.png')} />
               <Text style={styles.cellDurationText}>
                 {Math.floor(item.duration[locale] / 60)}
               </Text>
@@ -151,7 +149,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
   );
 };
 
-const Grid = (props) => {
+const Grid = props => {
   let totalIndex = 0;
   let content = [];
   let stickyHeaders = [];
@@ -161,10 +159,7 @@ const Grid = (props) => {
     if (lastFloorSeen !== tourStop.floor) {
       stickyHeaders.push(totalIndex);
       content.push(
-        <StickyHeader
-          key={totalIndex}
-          title={`${I18n.t('floor')} ${tourStop.floor}`}
-        />
+        <StickyHeader key={totalIndex} title={`${I18n.t('floor')} ${tourStop.floor}`} />
       );
       totalIndex++;
       lastFloorSeen = tourStop.floor;
@@ -178,10 +173,7 @@ const Grid = (props) => {
 
   return (
     <View style={styles.container}>
-      <ScrollView
-        automaticallyAdjustContentInsets={false}
-        stickyHeaderIndices={stickyHeaders}
-      >
+      <ScrollView automaticallyAdjustContentInsets={false} stickyHeaderIndices={stickyHeaders}>
         {content}
       </ScrollView>
     </View>
@@ -189,10 +181,7 @@ const Grid = (props) => {
 };
 
 Grid.propTypes = {
-  items: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-  ]).isRequired,
+  items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   selected: PropTypes.string,
   onCellPress: PropTypes.func.isRequired,
   locale: PropTypes.string.isRequired,

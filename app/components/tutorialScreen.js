@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 
 import { View, StyleSheet, Modal, NavigatorIOS } from 'react-native';
 
-import TutorialLanguagePage from './tutorialLanguagePage';
+import TutorialLanguage from '../containers/tutorialLanguage';
 
 import { OFF_BLACK, LIGHT_GRAY } from '../styles';
 
@@ -69,7 +69,7 @@ class TutorialScreen extends Component {
           style={[styles.container]}
           initialRoute={{
             title: '',
-            component: TutorialLanguagePage,
+            component: TutorialLanguage,
             navigationBarHidden: true,
             barTintColor: '#ffffff',
             titleTextColor: OFF_BLACK,
