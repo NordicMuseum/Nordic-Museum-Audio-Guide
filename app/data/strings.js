@@ -1964,6 +1964,23 @@ export const strings = {
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
     // 4. STORY HEADERS
+    'Highlights_floor2_shortTitle': 'Barnens audioguide',
+    'Highlights_floor2_longTitle': 'Barnens audioguide',
+    'Highlights_floor2_imageAccessibilityLabel': 'Barnens audioguide',
+    'Highlights_floor2_shortCredit': '<i>Barnens audioguide</i>',
+    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
+
+    'Highlights_floor3_shortTitle': 'Barnens audioguide',
+    'Highlights_floor3_longTitle': 'Barnens audioguide',
+    'Highlights_floor3_imageAccessibilityLabel': 'Barnens audioguide',
+    'Highlights_floor3_shortCredit': '<i>Barnens audioguide</i>',
+    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
+
+    'Highlights_floor4_shortTitle': 'Barnens audioguide',
+    'Highlights_floor4_longTitle': 'Barnens audioguide',
+    'Highlights_floor4_imageAccessibilityLabel': 'Barnens audioguide',
+    'Highlights_floor4_shortCredit': '<i>Barnens audioguide</i>',
+    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
     // 5. CHAPTER HEADERS
     '201': 'Välkommen till Nordiska museet',
     '202': 'Hemma hos familjen Johansson',
