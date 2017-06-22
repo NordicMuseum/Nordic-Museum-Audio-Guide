@@ -20,7 +20,7 @@
     "react-redux": "^4.4.5",
     "realm": "^0.14.1",
     "redux": "^3.5.2",
-    "redux-devtools-extension": "^1.0.0",
+    "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.0.1",
     "uuid": "^2.0.0"
   },
