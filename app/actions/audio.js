@@ -15,8 +15,6 @@ import {
 } from './audioTimer';
 
 import {
-  analyticsTrackDeviceAutoPlay,
-  analyticsTrackContentOpened,
   analyticsTrackAudioPartialListen,
 } from './analytics';
 
@@ -97,6 +95,18 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
   clearTimer();
 
   return async (dispatch, getState) => {
+
+    const state = getState();
+
+    if (state.bottomPlayer.uuid !== '' &&
+        state.bottomPlayer.time !== state.bottomPlayer.duration) {
+      analyticsTrackAudioPartialListen(
+        state.bottomPlayer.stopTitle,
+        state.bottomPlayer.title,
+        state.bottomPlayer.time / state.bottomPlayer.duration,
+      );
+    }
+
     const activeAudio = tourStop.audioContent.filtered(`uuid = "${trackUUID}"`)[0];
 
     let activeAudioIndex;
