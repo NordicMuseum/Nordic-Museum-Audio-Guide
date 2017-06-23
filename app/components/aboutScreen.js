@@ -77,15 +77,22 @@ const AboutScreen = (props) => {
             >
               {I18n.t('aboutScreen_Overview')}
             </Text>
+          </Text>
+          <Text
+            style={[
+              { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
+              styles.aboutHeader,
+            ]}>
             <Text
               style={[
                 globalStyles.h1,
-                styles.aboutHeader,
                 { textAlign: I18nManager.isRTL ? 'right' : 'left' },
               ]}
             >
               {I18n.t('aboutScreen_AboutHeader')}
             </Text>
+          </Text>
+          <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
             <Text
               style={[
                 globalStyles.body,
