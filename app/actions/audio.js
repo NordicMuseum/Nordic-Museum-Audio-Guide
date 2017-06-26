@@ -1,22 +1,14 @@
 // import store from '../store';
 
-import {
-  NativeModules,
-} from 'react-native';
+import { NativeModules } from 'react-native';
 
 import I18n from 'react-native-i18n';
 
-import {
-  setAudioManagerEventListeners,
-} from './audioEvents';
+import { setAudioManagerEventListeners } from './audioEvents';
 
-import {
-  clearTimer,
-} from './audioTimer';
+import { clearTimer } from './audioTimer';
 
-import {
-  analyticsTrackAudioPartialListen,
-} from './analytics';
+import { analyticsTrackAudioPartialListen } from './analytics';
 
 const AudioManager = NativeModules.CMSAudioManager;
 
@@ -69,7 +61,7 @@ function loadAudioSuccess(
   activeAudioIndex,
   activeAudioDuration,
   prevUUID,
-  nextUUID,
+  nextUUID
 ) {
   return {
     type: LOAD_AUDIO_SUCCESS,
@@ -95,17 +87,7 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
   clearTimer();
 
   return async (dispatch, getState) => {
-
     const state = getState();
-
-    if (state.bottomPlayer.uuid !== '' &&
-        state.bottomPlayer.time !== state.bottomPlayer.duration) {
-      analyticsTrackAudioPartialListen(
-        state.bottomPlayer.stopTitle,
-        state.bottomPlayer.title,
-        state.bottomPlayer.time / state.bottomPlayer.duration,
-      );
-    }
 
     const activeAudio = tourStop.audioContent.filtered(`uuid = "${trackUUID}"`)[0];
 
@@ -130,48 +112,53 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
 
     let url = activeAudio.audioURL;
     if (activeAudio.audioURL.length === 3) {
-      //If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
+      // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
       if (activeAudio.duration[I18n.locale]) {
-        url = (activeAudio.audioURL).concat('/', I18n.locale);
+        url = activeAudio.audioURL.concat('/', I18n.locale);
       } else {
         if (activeAudio.duration[I18n.defaultLocale]) {
-          url = (activeAudio.audioURL).concat('/', I18n.defaultLocale);
-        }
-        else {
-          url = (activeAudio.audioURL).concat('/', 'sv');
+          url = activeAudio.audioURL.concat('/', I18n.defaultLocale);
+        } else {
+          url = activeAudio.audioURL.concat('/', 'sv');
         }
       }
     }
 
-    let activeAudioDuration;
-    AudioManager.loadLocalAudio(
-      url,
-      activeAudio.uuid,
-      true,
-    ).then((results) => {
-      activeAudioDuration = Math.round(results[1]);
+    if (state.bottomPlayer.uuid !== '' && state.bottomPlayer.time !== state.bottomPlayer.duration) {
+      const audioLanguage = url.split('/')[1];
 
-      dispatch(
-        loadAudioSuccess(
-          tourStop,
-          tourStop.uuid,
-          tourStop.shortTitle,
-          tourStop.audioContent,
-          activeAudio,
-          activeAudioIndex,
-          activeAudioDuration,
-          prevUUID,
-          nextUUID,
-        )
+      analyticsTrackAudioPartialListen(
+        state.localization.locale,
+        audioLanguage,
+        state.bottomPlayer.title,
+        state.bottomPlayer.time / state.bottomPlayer.duration
       );
-    })
-    .catch((e) => {
-      console.log(e.message);
-      clearTimer();
-      dispatch(
-        loadAudioFailure(e),
-      );
-    });
+    }
+
+    let activeAudioDuration;
+    AudioManager.loadLocalAudio(url, activeAudio.uuid, true)
+      .then(results => {
+        activeAudioDuration = Math.round(results[1]);
+
+        dispatch(
+          loadAudioSuccess(
+            tourStop,
+            tourStop.uuid,
+            tourStop.shortTitle,
+            tourStop.audioContent,
+            activeAudio,
+            activeAudioIndex,
+            activeAudioDuration,
+            prevUUID,
+            nextUUID
+          )
+        );
+      })
+      .catch(e => {
+        console.log(e.message);
+        clearTimer();
+        dispatch(loadAudioFailure(e));
+      });
   };
 }
 
@@ -199,7 +186,6 @@ export function audioDidFinishPlaying(uuid, time, displayTimer) {
     displayTimer,
   };
 }
-
 
 export function togglePausePlay() {
   AudioManager.togglePlayPause();

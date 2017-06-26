@@ -16,7 +16,7 @@ export function analyticsTrackCodeSearched(code, success) {
 
 export function analyticsTrackLanguageSelected(locale) {
   GoogleAnalytics.trackEvent('Content', 'Language', {
-    label: `Language Selected = ${locale}`,
+    label: `Language Selected - ${locale}`,
   });
 }
 
@@ -24,15 +24,20 @@ export function analyticsTrackContentOpened(tourStop) {
   GoogleAnalytics.trackEvent('Content', 'Opened', { label: tourStop });
 }
 
-export function analyticsTrackAudioCompleteListen(tourStop, contentTitle) {
+export function analyticsTrackAudioCompleteListen(userLanguage, audioLanguage, contentCode) {
   GoogleAnalytics.trackEvent('Content', 'Complete Listen', {
-    label: `${tourStop} - ${contentTitle}`,
+    label: `${userLanguage} - ${audioLanguage} - ${contentCode}`,
   });
 }
 
-export function analyticsTrackAudioPartialListen(tourStop, contentTitle, percentageListened) {
+export function analyticsTrackAudioPartialListen(
+  userLanguage,
+  audioLanguage,
+  contentCode,
+  percentageListened
+) {
   GoogleAnalytics.trackEvent('Content', 'Partial Listen', {
-    label: `${tourStop} - ${contentTitle}`,
+    label: `${userLanguage} - ${audioLanguage} - ${contentCode}`,
     value: Math.round(percentageListened * 100),
   });
 }
