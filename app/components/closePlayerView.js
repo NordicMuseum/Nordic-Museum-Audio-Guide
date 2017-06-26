@@ -1,14 +1,8 @@
-
 import React, { PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import ProgressBar from './progressBar';
 
@@ -34,19 +28,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const ClosePlayerView = (props) => {
+const ClosePlayerView = props => {
   return (
     <View style={styles.container}>
-      <ProgressBar
-        style={styles.progressRow}
-        percentage={1}
-      />
+      <ProgressBar style={styles.progressRow} percentage={1} />
       <View style={styles.textContainer}>
-        <TouchableOpacity
-          onPress={props.navToTourStop}
+        <View
           accessible={true}
-          accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`${I18n.t('closePlayerView_Text')} ${I18n.t(props.stopTitle)}. Double tap to return to the chapter listing for this story.`}
+          accessibilityTraits={['header']}
+          accessibilityLabel={`${I18n.t('closePlayerView_Text')} ${I18n.t(props.stopTitle)}`}
         >
           <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
             {I18n.t('closePlayerView_Text')}
@@ -57,12 +47,12 @@ const ClosePlayerView = (props) => {
               {
                 fontWeight: '500',
                 textAlign: 'center',
-              }]
-            }
+              },
+            ]}
           >
             {I18n.t(props.stopTitle)}
           </Text>
-        </TouchableOpacity>
+        </View>
         <TouchableOpacity
           style={styles.closePlayerButton}
           onPress={props.closePlayer}
@@ -71,7 +61,7 @@ const ClosePlayerView = (props) => {
           accessibilityLabel={I18n.t('closePlayerView_ClosePlayer')}
         >
           <Text style={[globalStyles.disclosure, { color: ACTION }]}>
-           {I18n.t('closePlayerView_ClosePlayer')}
+            {I18n.t('closePlayerView_ClosePlayer')}
           </Text>
         </TouchableOpacity>
       </View>

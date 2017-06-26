@@ -1,24 +1,12 @@
-
 import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  I18nManager,
-} from 'react-native';
+import { StyleSheet, Text, View, I18nManager } from 'react-native';
 
-import {
-  PLAYER_STATUS_FINISHED,
- } from '../actions/audio';
+import { PLAYER_STATUS_FINISHED } from '../actions/audio';
 
-import {
-   parseDisplayText,
-   parseVoiceoverText,
- } from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 import { globalStyles, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
@@ -83,7 +71,7 @@ class ControlsView extends Component {
       loadNextAutoplayAudio: PropTypes.func.isRequired,
       loadPrevAudio: PropTypes.func.isRequired,
     }).isRequired,
-  }
+  };
 
   shouldComponentUpdate(nextProps, nextState) {
     const statusChanged = this.props.playerStatus !== nextProps.playerStatus;
@@ -131,11 +119,10 @@ class ControlsView extends Component {
     return (
       <View style={styles.container}>
         {/* Title of stop and audio file */}
-        <TouchableOpacity
-          onPress={navToTourStop}
+        <View
           accessible={true}
-          accessibilityTraits={['button', 'header']}
-          accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
+          accessibilityTraits={['header']}
+          accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}`}
         >
           <View style={[styles.row, styles.titleRow]}>
             <View style={highlighted ? styles.highlightedBox : {}}>
@@ -152,7 +139,7 @@ class ControlsView extends Component {
               &nbsp; {parseDisplayText(I18n.t(code))}
             </Text>
           </View>
-        </TouchableOpacity>
+        </View>
         {/* Controls */}
         {/* Previous  */}
         <View
@@ -166,8 +153,7 @@ class ControlsView extends Component {
             <PrevButton
               disabled={controlsDisabled}
               onPress={() => {
-                if (prevDisabled ||
-                    this.props.time > 5) {
+                if (prevDisabled || this.props.time > 5) {
                   replayAudio();
                 } else {
                   loadPrevAudio();
@@ -179,7 +165,9 @@ class ControlsView extends Component {
           <View>
             <RewindButton
               disabled={controlsDisabled}
-              onPress={() => { rewindAudio(5); }}
+              onPress={() => {
+                rewindAudio(5);
+              }}
             />
           </View>
           {/* Play/Pause */}
@@ -201,7 +189,9 @@ class ControlsView extends Component {
           <View>
             <ToggleSpeedButton
               disabled={controlsDisabled}
-              onPress={() => { cycleAudioSpeed(playRate); }}
+              onPress={() => {
+                cycleAudioSpeed(playRate);
+              }}
               playRate={playRate}
             />
           </View>
@@ -209,7 +199,9 @@ class ControlsView extends Component {
           <View>
             <NextButton
               disabled={nextDisabled || controlsDisabled}
-              onPress={() => { loadNextAudio(); }}
+              onPress={() => {
+                loadNextAudio();
+              }}
             />
           </View>
         </View>
