@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import { StyleSheet, Text, View, I18nManager } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, I18nManager } from 'react-native';
 
 import { PLAYER_STATUS_FINISHED } from '../actions/audio';
 
@@ -16,6 +16,8 @@ import NextButton from './buttons/nextButton';
 import RewindButton from './buttons/rewindButton';
 import ToggleSpeedButton from './buttons/toggleSpeedButton';
 
+import ViewTicker from './viewTicker';
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -27,6 +29,7 @@ const styles = StyleSheet.create({
   },
   titleRow: {
     justifyContent: 'center',
+    marginHorizontal: 10,
     marginBottom: 7,
   },
   titleText: {
@@ -116,30 +119,34 @@ class ControlsView extends Component {
       controlsDisabled = true;
     }
 
+    const width = Dimensions.get('window').width;
+
     return (
       <View style={styles.container}>
         {/* Title of stop and audio file */}
-        <View
-          accessible={true}
-          accessibilityTraits={['header']}
-          accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}`}
-        >
-          <View style={[styles.row, styles.titleRow]}>
-            <View style={highlighted ? styles.highlightedBox : {}}>
-              <Text
-                style={[
-                  globalStyles.h2,
-                  highlighted ? styles.highlightedNumberText : { fontWeight: '300' },
-                ]}
-              >
-                {code}
+        <ViewTicker width={width} uniqueChildrenKey={code}>
+          <View
+            accessible={true}
+            accessibilityTraits={['header']}
+            accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}`}
+          >
+            <View style={[styles.row, styles.titleRow]}>
+              <View style={highlighted ? styles.highlightedBox : {}}>
+                <Text
+                  style={[
+                    globalStyles.h2,
+                    highlighted ? styles.highlightedNumberText : { fontWeight: '300' },
+                  ]}
+                >
+                  {code}
+                </Text>
+              </View>
+              <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
+                &nbsp; {parseDisplayText(I18n.t(code))}
               </Text>
             </View>
-            <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
-              &nbsp; {parseDisplayText(I18n.t(code))}
-            </Text>
           </View>
-        </View>
+        </ViewTicker>
         {/* Controls */}
         {/* Previous  */}
         <View
