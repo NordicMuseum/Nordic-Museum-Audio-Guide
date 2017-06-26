@@ -1,19 +1,10 @@
-
 import React, { Component, PropTypes } from 'react';
 
-import {
-  StyleSheet,
-  Dimensions,
-  View,
-} from 'react-native';
+import { StyleSheet, Dimensions, View } from 'react-native';
 
-import {
-   screenReaderReloadLayout,
- } from '../actions/accessibility';
+import { screenReaderReloadLayout } from '../actions/accessibility';
 
-import {
-  analyticsTrackAudioCompleteListen,
-} from '../actions/analytics';
+import { analyticsTrackAudioCompleteListen } from '../actions/analytics';
 
 import {
   PLAYER_STATUS_FINISHED,
@@ -50,7 +41,7 @@ function nextAudioProps(audioContent, nextUUID, defaultTitle) {
 
     return {
       code: audio.title,
-      highlighted: audio.category === 'HIGHLIGHT',
+      highlight: audio.category === 'HIGHLIGHT',
     };
   }
 
@@ -87,19 +78,19 @@ class BottomPlayer extends Component {
       unloadAudio: PropTypes.func.isRequired,
       playAudio: PropTypes.func.isRequired,
     }).isRequired,
-  }
+  };
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.playerStatus === PLAYER_STATUS_LOADING &&
-        nextProps.playerStatus === PLAYER_STATUS_PLAY) {
+    if (
+      this.props.playerStatus === PLAYER_STATUS_LOADING &&
+      nextProps.playerStatus === PLAYER_STATUS_PLAY
+    ) {
       this.props.actions.playAudio();
       return;
     }
 
     if (nextProps.playerStatus === PLAYER_STATUS_FINISHED) {
-      analyticsTrackAudioCompleteListen(
-        this.props.stopTitle, this.props.audioTitle
-      );
+      analyticsTrackAudioCompleteListen(this.props.stopTitle, this.props.audioTitle);
     }
   }
 
@@ -138,10 +129,12 @@ class BottomPlayer extends Component {
 
     const width = Dimensions.get('window').width;
 
-    if (playerStatus === PLAYER_STATUS_ERROR ||
-        playerStatus === PLAYER_STATUS_NOTLOADED ||
-        playerStatus === PLAYER_STATUS_LOADING ||
-        playerStatus === PLAYER_STATUS_UNLOADED) {
+    if (
+      playerStatus === PLAYER_STATUS_ERROR ||
+      playerStatus === PLAYER_STATUS_NOTLOADED ||
+      playerStatus === PLAYER_STATUS_LOADING ||
+      playerStatus === PLAYER_STATUS_UNLOADED
+    ) {
       // We don't want the bottom player:
       return null;
     }
@@ -151,52 +144,54 @@ class BottomPlayer extends Component {
     if (playerStatus === PLAYER_STATUS_FINISHED && nextUUID === null) {
       return (
         <View
-          style={[styles.bottomBar,
-                  { width, height: BOTTOMPLAYERHEIGHT,
-                    bottom: BOTTOMBARHEIGHT,
-                   }]}
+          style={[
+            styles.bottomBar,
+            {
+              width,
+              height: BOTTOMPLAYERHEIGHT,
+              bottom: BOTTOMBARHEIGHT,
+            },
+          ]}
         >
           <ClosePlayerView
             stopTitle={stopTitle}
-            closePlayer={() => { unloadAudio(); }}
-            navToTourStop={() => { navToTourStop(); }}
+            closePlayer={() => {
+              unloadAudio();
+            }}
+            navToTourStop={() => {
+              navToTourStop();
+            }}
           />
         </View>
       );
-    } else if (playerStatus === PLAYER_STATUS_FINISHED &&
-               nextUUID !== null) {
+    } else if (playerStatus === PLAYER_STATUS_FINISHED && nextUUID !== null) {
       // display the autoplay progress
-      progress = (<AutoplayProgressView
-        time={time}
-        duration={duration}
-        playerStatus={playerStatus}
-        timerActive={timerActive}
-        timerStartAt={timerStartAt}
-        timerNumber={timerNumber}
-        autoplayOn={autoplayOn}
-        nextUUID={nextUUID}
-        actions={{
-          loadNextAutoplayAudio: () => {
-            playTrack(
-              tourStop,
-              nextUUID,
-              true,
-            );
-          },
-        }}
-      />);
+      progress = (
+        <AutoplayProgressView
+          time={time}
+          duration={duration}
+          playerStatus={playerStatus}
+          timerActive={timerActive}
+          timerStartAt={timerStartAt}
+          timerNumber={timerNumber}
+          autoplayOn={autoplayOn}
+          nextUUID={nextUUID}
+          actions={{
+            loadNextAutoplayAudio: () => {
+              playTrack(tourStop, nextUUID, true);
+            },
+          }}
+        />
+      );
     } else {
       // display the time progress
-      progress = (<TimeProgressView
-        time={time}
-        duration={duration}
-      />);
+      progress = <TimeProgressView time={time} duration={duration} />;
     }
 
     let prevDisabled = false;
     let nextDisabled = false;
 
-    if ((index - 1) < 0) {
+    if (index - 1 < 0) {
       prevDisabled = true;
     }
     if (index + 1 >= audioContent.length) {
@@ -237,25 +232,13 @@ class BottomPlayer extends Component {
             cycleAudioSpeed,
             navToTourStop,
             loadNextAudio: () => {
-              playTrack(
-                tourStop,
-                nextUUID,
-                false,
-              );
+              playTrack(tourStop, nextUUID, false);
             },
             loadNextAutoplayAudio: () => {
-              playTrack(
-                tourStop,
-                nextUUID,
-                true,
-              );
+              playTrack(tourStop, nextUUID, true);
             },
             loadPrevAudio: () => {
-              playTrack(
-                tourStop,
-                prevUUID,
-                false,
-              );
+              playTrack(tourStop, prevUUID, false);
             },
           }}
         />
