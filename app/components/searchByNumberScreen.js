@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
   digitText: {
     color: '#333333',
     fontSize: 30,
-    fontWeight: '300',
   },
   nonDigit: {
     margin: 10,
@@ -240,22 +239,15 @@ class SearchByNumberScreen extends Component {
           this.props.playerOpen && height < 570 ? { paddingTop: 25 } : {},
         ]}
       >
-        <View
-          style={[
-            styles.display,
-            this.props.playerOpen ? { flex: 0.10 } : {},
-          ]}
-        >
+        <View style={[styles.display, this.props.playerOpen ? { flex: 0.1 } : {}]}>
           {this.state.numberNotFound &&
             <Text style={styles.tryAgainText}>
               {I18n.t('tryAgain')}
-            </Text>
-          }
+            </Text>}
           {!this.state.numberNotFound &&
             <Text style={styles.tryAgainText}>
-              {I18n.t('enterNumber')}
-            </Text>
-          }
+              {I18n.t('searchScreen_Title')}
+            </Text>}
           <View
             style={[styles.displayRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
@@ -405,13 +397,12 @@ class SearchByNumberScreen extends Component {
               </Text>
             </TouchableHighlight>
             <TouchableOpacity
-              onPress={() => { this.deleteDigit(); }}
+              onPress={() => {
+                this.deleteDigit();
+              }}
               style={styles.nonDigit}
             >
-              <Image
-                source={require('../assets/DeleteButton.png')}
-                style={styles.deleteButton}
-              />
+              <Image source={require('../assets/DeleteButton.png')} style={styles.deleteButton} />
             </TouchableOpacity>
           </View>
         </View>
