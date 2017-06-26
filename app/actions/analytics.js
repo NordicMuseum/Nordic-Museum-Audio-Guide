@@ -8,6 +8,10 @@ export function analyticsTrackScreen(screenName) {
 }
 
 // Content Analytics
+export function analyticsTrackLanguageSelected(locale) {
+  GoogleAnalytics.trackEvent('Language', 'Language Selected', { label: locale });
+}
+
 export function analyticsTrackContentOpened(tourStop) {
   GoogleAnalytics.trackEvent('Content', 'Opened', { label: tourStop });
 }
@@ -26,8 +30,8 @@ export function analyticsTrackAudioPartialListen(tourStop, contentTitle, percent
 }
 
 // Beacon Analytics
-export function analyticsTrackBeaconRegion(regions) {
-  GoogleAnalytics.trackEvent('Beacon', 'RegionsDetected', { label: regions });
+export function analyticsTrackBeaconRegion(regions, locale) {
+  GoogleAnalytics.trackEvent('Beacon', `RegionsDetected - ${locale}`, { label: regions });
 }
 
 // Device Analytics

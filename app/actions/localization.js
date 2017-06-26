@@ -1,15 +1,11 @@
-import {
-  NativeModules,
-  I18nManager,
-  Settings,
-} from 'react-native';
+import { NativeModules, I18nManager, Settings } from 'react-native';
+
+import { analyticsTrackLanguageSelected } from './analytics';
 
 // *** Action Types ***
 export const SWITCH_LOCALE = 'SWITCH_LOCALE';
 
-import {
-  playTrack,
-} from './audio';
+import { playTrack } from './audio';
 
 // *** Action Creators ***
 function updateRTL(rtl) {
@@ -22,16 +18,19 @@ export function switchLocale(locale, screen) {
     const rtl = locale === 'ar';
     const prevRTL = I18nManager.isRTL;
 
+    analyticsTrackLanguageSelected(locale);
+
     if (rtl !== prevRTL && prevRTL != null) {
       switch (screen) {
-        case ('tutorial') : {
+        case 'tutorial': {
           await Settings.set({
             advanceLanguageTutorialScreenOnLoad: true,
             reloadAppForRTLSwitchLocale: locale,
             reloadAppForRTLSwitch: true,
           });
           break;
-        } case ('settings') : {
+        }
+        case 'settings': {
           await Settings.set({
             localeChangedFromSettings: true,
             reloadAppForRTLSwitchLocale: locale,
@@ -39,7 +38,8 @@ export function switchLocale(locale, screen) {
           });
           break;
         }
-        default: break;
+        default:
+          break;
       }
       updateRTL(rtl, locale);
     }

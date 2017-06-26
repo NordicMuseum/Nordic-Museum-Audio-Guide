@@ -1,13 +1,6 @@
-
 import React, { Component, PropTypes } from 'react';
 
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 
 import I18n from 'react-native-i18n';
 import uuid from 'uuid';
@@ -37,15 +30,18 @@ const audioContentRealm = realm.objects(AudioContent.NAME);
 // This, ↓, creates a circular reference. Fix it!
 // const audioContentRealm = AudioContent.allRealmObjects();
 
-import {
-   screenReaderScreenChanged,
- } from '../actions/accessibility';
+import { screenReaderScreenChanged } from '../actions/accessibility';
+
+import { analyticsTrackBeaconRegion } from '../actions/analytics';
 
 import {
-    analyticsTrackBeaconRegion,
-  } from '../actions/analytics';
-
-import { globalStyles, NAV_BAR_TEXT, NAV_BAR_BACKGROUND, TEAL, OFF_BLACK, LIGHT_BLUE, LIGHT_GRAY } from '../styles';
+  globalStyles,
+  NAV_BAR_TEXT,
+  NAV_BAR_BACKGROUND,
+  TEAL,
+  OFF_BLACK,
+  LIGHT_BLUE,
+} from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -93,14 +89,8 @@ class NearMeScreen extends Component {
   static propTypes = {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
-    closeTourStops: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-    ]).isRequired,
-    audioContent: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object,
-    ]).isRequired,
+    closeTourStops: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
+    audioContent: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
     regions: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,
@@ -118,7 +108,7 @@ class NearMeScreen extends Component {
       playTrack: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
     }).isRequired,
-  }
+  };
 
   shouldComponentUpdate(nextProps, nextState) {
     return nextProps.activeTab === TAB_NEARME && nextProps.atNearMeRoot;
@@ -137,12 +127,8 @@ class NearMeScreen extends Component {
             {`${storiesMessage}\n\n${I18n.t('nearMeScreen_LocationNeeds')}`}
           </Text>
           <View style={styles.buttonsContainer}>
-            <LocationServicesButton
-              locationServicesStatus={this.props.locationServicesStatus}
-            />
-            <BluetoothButton
-              bluetoothOn={this.props.bluetoothOn}
-            />
+            <LocationServicesButton locationServicesStatus={this.props.locationServicesStatus} />
+            <BluetoothButton bluetoothOn={this.props.bluetoothOn} />
           </View>
         </View>
       );
@@ -170,11 +156,12 @@ class NearMeScreen extends Component {
       // 3. The number of stops has changed
       // 4. The autoplay timer is not active
       // 5. The player is not currently playing
-      if (this.props.activeTab === TAB_NEARME &&
-          this.props.atNearMeRoot &&
-          lastSeenNumber !== tourStopsNum &&
-          !this.props.timerActive &&
-          this.props.playerStatus !== PLAYER_STATUS_PLAY
+      if (
+        this.props.activeTab === TAB_NEARME &&
+        this.props.atNearMeRoot &&
+        lastSeenNumber !== tourStopsNum &&
+        !this.props.timerActive &&
+        this.props.playerStatus !== PLAYER_STATUS_PLAY
       ) {
         lastSeenNumber = tourStopsNum;
         if (voiceOverMessage) {
@@ -185,7 +172,7 @@ class NearMeScreen extends Component {
       const regionsDetected = this.props.regions ? this.props.regions.join(', ') : '';
 
       if (regionsDetected) {
-        analyticsTrackBeaconRegion(regionsDetected);
+        analyticsTrackBeaconRegion(regionsDetected, this.props.locale);
 
         if (__DEV__) {
           debugView = (
@@ -208,9 +195,7 @@ class NearMeScreen extends Component {
         }
       }
 
-      if (amenities.length === 0 &&
-          tourStops.length === 0 &&
-          audioContent.length === 0) {
+      if (amenities.length === 0 && tourStops.length === 0 && audioContent.length === 0) {
         contentView = (
           <View style={[styles.messageContainer, styles.settingContainer]}>
             <Text style={[globalStyles.body, styles.storiesMessageText]}>
@@ -223,23 +208,17 @@ class NearMeScreen extends Component {
         const stickyHeaders = [];
         let totalIndex = 0;
 
-        const {
-          playTrack,
-          togglePausePlay,
-        } = this.props.actions;
+        const { playTrack, togglePausePlay } = this.props.actions;
 
         let highlightsList = [];
         if (audioContent.length > 0) {
           stickyHeaders.push(totalIndex);
           highlightsList.push(
-            <StickyHeader
-              key={totalIndex}
-              title={I18n.t('Highlights_floor2_shortTitle')}
-            />
+            <StickyHeader key={totalIndex} title={I18n.t('Highlights_floor2_shortTitle')} />
           );
 
           const uuids = [];
-          audioContent.forEach((content) => {
+          audioContent.forEach(content => {
             uuids.push(content.uuid);
           });
 
@@ -270,24 +249,16 @@ class NearMeScreen extends Component {
                   locale={this.props.locale}
                   actions={{
                     analyticsTrackTranscriptOpenned: () => {
-                    //   analyticsTrackTranscriptOpenned(tourStop.title, content.title);
+                      //   analyticsTrackTranscriptOpenned(tourStop.title, content.title);
                     },
                     reloadAudio: () => {
-                      playTrack(
-                        tourStop,
-                        content.uuid,
-                        false,
-                      );
+                      playTrack(tourStop, content.uuid, false);
                     },
                     audioAction: () => {
                       if (this.props.currentStopUUID === content.uuid) {
                         togglePausePlay();
                       } else {
-                        playTrack(
-                          tourStop,
-                          content.uuid,
-                          false,
-                        );
+                        playTrack(tourStop, content.uuid, false);
                       }
                     },
                   }}
@@ -297,17 +268,11 @@ class NearMeScreen extends Component {
           );
         }
 
-
         let tourStopsList = [];
         if (tourStops.length > 0) {
           totalIndex++;
           stickyHeaders.push(totalIndex);
-          tourStopsList.push(
-            <StickyHeader
-              key={totalIndex}
-              title={'Themes'}
-            />
-          );
+          tourStopsList.push(<StickyHeader key={totalIndex} title={'Themes'} />);
 
           tourStopsList.push(
             ...tourStops.map((tourStop, index) => {
@@ -316,7 +281,7 @@ class NearMeScreen extends Component {
               return renderItem(
                 tourStop,
                 index,
-                (item) => {
+                item => {
                   this.props.navigator.push({
                     title: tourStop.shortTitle,
                     component: TourStop,
@@ -337,7 +302,7 @@ class NearMeScreen extends Component {
                 },
                 this.props.currentStopUUID,
                 this.props.locale,
-                tourStops,
+                tourStops
               );
             })
           );
@@ -348,10 +313,7 @@ class NearMeScreen extends Component {
           totalIndex++;
           stickyHeaders.push(totalIndex);
           amenitiesList.push(
-            <StickyHeader
-              key={totalIndex}
-              title={I18n.t('nearMeScreen_Amenities')}
-            />
+            <StickyHeader key={totalIndex} title={I18n.t('nearMeScreen_Amenities')} />
           );
 
           amenitiesList.push(
@@ -362,7 +324,7 @@ class NearMeScreen extends Component {
                 <AmenitiesItem
                   key={totalIndex}
                   amenity={amenity}
-                  border={index !== (amenities.length - 1)}
+                  border={index !== amenities.length - 1}
                 />
               );
             })
@@ -370,10 +332,7 @@ class NearMeScreen extends Component {
         }
 
         contentView = (
-          <ScrollView
-            automaticallyAdjustContentInsets={false}
-            stickyHeaderIndices={stickyHeaders}
-          >
+          <ScrollView automaticallyAdjustContentInsets={false} stickyHeaderIndices={stickyHeaders}>
             {highlightsList}
             {tourStopsList}
             {amenitiesList}
@@ -407,9 +366,7 @@ class NearMeScreen extends Component {
             height: 44,
           }}
         />
-        <View
-          style={[styles.container, { marginBottom: containerMargin }]}
-        >
+        <View style={[styles.container, { marginBottom: containerMargin }]}>
           {debugView}
           {contentView}
         </View>
