@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Settings } from 'react-native';
 import { Provider } from 'react-redux';
@@ -29,7 +28,7 @@ import hydrate from './data/hydrate';
 hydrate(newVersion || __DEV__);
 const store = configureStore();
 store.dispatch(
-  decideIfToShowTutorial((showTutorialEveryTime && !localeChangedFromSettings), newVersion)
+  decideIfToShowTutorial(showTutorialEveryTime && !localeChangedFromSettings, newVersion)
 );
 
 Settings.set({ localeChangedFromSettings: false });
@@ -39,7 +38,7 @@ if (newVersion) {
 }
 
 GoogleAnalytics.setTrackerId(trackingID);
-GoogleAnalytics.setDryRun(false);
+GoogleAnalytics.setDryRun(__DEV__);
 
 analyticsTrackDeviceType(!showTutorialEveryTime);
 
@@ -52,7 +51,7 @@ const App = () => {
     <Provider store={store}>
       <RootContainer />
     </Provider>
-	);
+  );
 };
 
 export default App;

@@ -15,9 +15,7 @@ import AudioContentList from './audioContentList';
 
 import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
-import {
-  analyticsTrackContentOpened,
-} from '../actions/analytics';
+import { analyticsTrackContentOpened, analyticsTrackScreen } from '../actions/analytics';
 
 import { OFF_BLACK, ACTION, LIGHT_GRAY, NAV_BAR_TEXT } from '../styles.js';
 
@@ -179,6 +177,8 @@ class TourStopScreen extends Component {
 
   componentDidMount() {
     analyticsTrackContentOpened(this.props.tourStop.shortTitle);
+    analyticsTrackScreen('Theme Page');
+
     if (this.props.tab === 'TAB_SEARCH') {
       this.props.actions.playTrack(
         this.props.tourStop,

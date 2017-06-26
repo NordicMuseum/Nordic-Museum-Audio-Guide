@@ -1,12 +1,10 @@
-
 import React, { Component, PropTypes } from 'react';
 
 import I18n from 'react-native-i18n';
 
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import { analyticsTrackScreen } from '../actions/analytics';
 
 import NavigationBar from './navigationBar';
 import Grid from './grid';
@@ -45,6 +43,10 @@ class EverythingScreen extends Component {
     screenReader: PropTypes.bool.isRequired,
     currentStopUUID: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired,
+  };
+
+  componentDidMount() {
+    analyticsTrackScreen('Browse Tab');
   }
 
   render() {
@@ -71,7 +73,7 @@ class EverythingScreen extends Component {
             locale={this.props.locale}
             items={this.props.tourStops}
             selected={this.props.currentStopUUID}
-            onCellPress={(item) => {
+            onCellPress={item => {
               this.props.navigator.push({
                 title: item.shortTitle,
                 component: TourStop,

@@ -4,6 +4,8 @@ import I18n from 'react-native-i18n';
 
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
+import { analyticsTrackScreen } from '../actions/analytics';
+
 import DisclosureCell, { DISCLOSURE_CELL_HEIGHT } from './disclosureCell';
 import AmenitiesScreen from '../containers/amenities';
 import AboutScreen from './aboutScreen';
@@ -78,6 +80,8 @@ class MuseumScreen extends Component {
               bottomBorder={true}
               title={I18n.t('settingsScreen_Title')}
               onPress={() => {
+                analyticsTrackScreen('Language');
+
                 this.props.navigator.push({
                   title: I18n.t('settingsScreen_Title'),
                   component: SettingsScreen,
@@ -99,6 +103,8 @@ class MuseumScreen extends Component {
               bottomBorder={true}
               title={I18n.t('amenitiesScreen_Title')}
               onPress={() => {
+                analyticsTrackScreen('Amenities');
+
                 this.props.navigator.push({
                   title: I18n.t('amenitiesScreen_Title'),
                   component: AmenitiesScreen,
@@ -120,6 +126,8 @@ class MuseumScreen extends Component {
               bottomBorder={true}
               title={I18n.t('museumScreen_ListItem1Label')}
               onPress={() => {
+                analyticsTrackScreen('About The Nordic Museum');
+
                 this.props.navigator.push({
                   title: I18n.t('aboutScreen_Title'),
                   component: AboutScreen,
@@ -141,6 +149,8 @@ class MuseumScreen extends Component {
               bottomBorder={false}
               title={I18n.t('aboutTheAppScreen_Title')}
               onPress={() => {
+                analyticsTrackScreen('About the App');
+
                 this.props.navigator.push({
                   title: I18n.t('aboutTheAppScreen_Title'),
                   component: AboutTheAppScreen,
