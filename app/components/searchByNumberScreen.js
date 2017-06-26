@@ -13,6 +13,8 @@ import {
   I18nManager,
 } from 'react-native';
 
+import { analyticsTrackCodeSearched } from '../actions/analytics';
+
 import TourStopScreen from '../containers/tourStop';
 
 import { OFF_BLACK, SELECTED } from '../styles';
@@ -143,8 +145,13 @@ class SearchByNumberScreen extends Component {
       tourStop = foundTourStops[0];
     }
 
-    if (tourStop) {
-      const searchedByNumber = digits.toString();
+    const code = digits.toString();
+    const tourStopExists = tourStop != null;
+
+    analyticsTrackCodeSearched(code, tourStopExists);
+
+    if (tourStopExists) {
+      const searchedByNumber = code;
       const searchedTrackIndex = tourStop.audioContent.findIndex(content => {
         return content.audioURL === searchedByNumber;
       });

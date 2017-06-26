@@ -8,8 +8,16 @@ export function analyticsTrackScreen(screenName) {
 }
 
 // Content Analytics
+export function analyticsTrackCodeSearched(code, success) {
+  GoogleAnalytics.trackEvent('Content', 'Search', {
+    label: `${code} - ${success ? 'Success' : 'Try Again'}`,
+  });
+}
+
 export function analyticsTrackLanguageSelected(locale) {
-  GoogleAnalytics.trackEvent('Language', 'Language Selected', { label: locale });
+  GoogleAnalytics.trackEvent('Content', 'Language', {
+    label: `Language Selected = ${locale}`,
+  });
 }
 
 export function analyticsTrackContentOpened(tourStop) {
