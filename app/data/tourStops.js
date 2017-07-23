@@ -2335,7 +2335,7 @@ export const tourStops = [
         },
         audioURL: '441',
         transcript: '441_transcript',
-        speaker: 'Lotta',
+        speaker: 'Lotta Willborg Stoor',
       },
       {
         uuid: uuid.v4(),
