@@ -1,6 +1,8 @@
 
 import React, { PropTypes } from 'react';
 
+import DeviceInfo from 'react-native-device-info';
+
 import {
   View,
   StyleSheet,
@@ -109,6 +111,9 @@ const AboutTheAppScreen = (props) => {
           </Text>
           <Text style={[globalStyles.body, globalStyles.paragraph]}>
             {I18n.t('aboutTheAppPhotoCreditsBody')}
+          </Text>
+          <Text style={[globalStyles.body, globalStyles.paragraph]}>
+          {DeviceInfo.getVersion()}
           </Text>
         </ScrollView>
       </View>
