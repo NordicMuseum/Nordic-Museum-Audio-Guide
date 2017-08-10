@@ -46,8 +46,8 @@ export function switchLocale(locale, screen) {
 
     const state = getState();
     if (state.bottomPlayer.uuid !== '') {
-      await dispatch(playTrack(state.bottomPlayer.tourStop, state.bottomPlayer.uuid, false));
-      dispatch({ type: SWITCH_LOCALE, locale });
+      await dispatch({ type: SWITCH_LOCALE, locale });
+      dispatch(playTrack(state.bottomPlayer.tourStop, state.bottomPlayer.uuid, false));
     } else {
       dispatch({ type: SWITCH_LOCALE, locale });
     }
