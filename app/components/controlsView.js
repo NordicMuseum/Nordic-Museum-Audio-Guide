@@ -168,15 +168,6 @@ class ControlsView extends Component {
               }}
             />
           </View>
-          {/* Rewind */}
-          <View>
-            <RewindButton
-              disabled={controlsDisabled}
-              onPress={() => {
-                rewindAudio(5);
-              }}
-            />
-          </View>
           {/* Play/Pause */}
           <View>
             <PlayPauseButton
@@ -190,16 +181,6 @@ class ControlsView extends Component {
                   togglePausePlay();
                 }
               }}
-            />
-          </View>
-          {/* Speed */}
-          <View>
-            <ToggleSpeedButton
-              disabled={controlsDisabled}
-              onPress={() => {
-                cycleAudioSpeed(playRate);
-              }}
-              playRate={playRate}
             />
           </View>
           {/* Next */}
