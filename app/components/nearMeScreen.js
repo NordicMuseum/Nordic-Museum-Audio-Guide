@@ -272,7 +272,7 @@ class NearMeScreen extends Component {
         if (tourStops.length > 0) {
           totalIndex++;
           stickyHeaders.push(totalIndex);
-          tourStopsList.push(<StickyHeader key={totalIndex} title={'Themes'} />);
+          tourStopsList.push(<StickyHeader key={totalIndex} title={I18n.t('themes')} />);
 
           tourStopsList.push(
             ...tourStops.map((tourStop, index) => {
