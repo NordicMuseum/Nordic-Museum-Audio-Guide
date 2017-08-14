@@ -36,15 +36,6 @@
       "64983:52819"
     ]
   },
-  "39163:24424": {
-    "name": "Toy Room / M6Uy",
-    "uuid": "39163:24424",
-    "floor": "3",
-    "region": "",
-    "blocks": [
-      "10721:32292"
-    ]
-  },
   "55254:7275": {
     "name": "Table Settings N / QKDq",
     "uuid": "55254:7275",
@@ -431,15 +422,6 @@
     "floor": "3",
     "region": "Jewellery",
     "blocks": []
-  },
-  "3395:24209": {
-    "name": "Toy Room / zsUf",
-    "uuid": "3395:24209",
-    "floor": "3",
-    "region": "",
-    "blocks": [
-      "10721:32292"
-    ]
   },
   "50649:38868": {
     "name": "Jewellery S / mSfs",
