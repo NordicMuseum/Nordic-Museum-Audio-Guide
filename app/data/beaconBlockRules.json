@@ -37,10 +37,10 @@
     ]
   },
   "39163:24424": {
-    "name": "Textile Gallery N / M6Uy",
+    "name": "Toy Room / M6Uy",
     "uuid": "39163:24424",
     "floor": "3",
-    "region": "Textile Gallery",
+    "region": "",
     "blocks": [
       "10721:32292"
     ]
@@ -287,7 +287,7 @@
     "name": "NE Stairs 4 / CpV8",
     "uuid": "49122:20803",
     "floor": "4",
-    "region": "Swedish Folk Art",
+    "region": "Textile Gallery",
     "blocks": []
   },
   "48454:2700": {
@@ -433,10 +433,10 @@
     "blocks": []
   },
   "3395:24209": {
-    "name": "Textile Gallery N / zsUf",
+    "name": "Toy Room / zsUf",
     "uuid": "3395:24209",
     "floor": "3",
-    "region": "Textile Gallery",
+    "region": "",
     "blocks": [
       "10721:32292"
     ]
@@ -459,7 +459,7 @@
     "name": "NE Stairs 4 / RRmU",
     "uuid": "4566:64223",
     "floor": "4",
-    "region": "Swedish Folk Art",
+    "region": "Textile Gallery",
     "blocks": []
   },
   "71:4198": {
