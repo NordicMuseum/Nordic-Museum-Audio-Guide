@@ -13,7 +13,7 @@ And read the Redux docs as they are excellent, specifically the whole Basics sec
 Because I know your time is limited I also included a very brief introduction below:
 
 
-![Redux Architecture](./Redux\ Architecture.png)
+![Redux Architecture](Redux\ Architecture.png)
 
 ### Reducer Tree
 A reducer is a function that given an action and the current state will calculate the next state. Reducers are bundled by functionality, so that each functionality related to tour stops or beacons will have seperate reducers. After all the reducers run their state is combined into a single state. This is then passed to the UI Tree to render.
