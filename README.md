@@ -34,3 +34,7 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 ### Intellectual Property
 
 All files that are the intellectual property owned by the Nordic Museum and other third-parties have been removed from this repo and replaced with placeholders. This includes all the images and audio files included in the App Bundle. Additional museum information remains in the code to give an overall sense of the app.
+
+### Development Notes
+
+[Archecture of this project](architecture.md)
