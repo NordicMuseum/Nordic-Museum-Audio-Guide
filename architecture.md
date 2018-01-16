@@ -40,7 +40,7 @@ The containers binding can be found in the [app/containers folder](app/container
 
 *Notes:*  
 
-1. Use as small containers as possible, this will increase the portabilty and stablitity of your code.  
+1. Use as few containers as possible. This will increase the portability and stabitity of your code.  
 2. Try to make most of your UI Components deterministic/stateless. (Avoid state outside of your Reducers).  
 
 
