@@ -1,6 +1,6 @@
 # Indoor Location
 
-###Overview
+### Overview
 
 This app supports a custom form of indoor location. This indoor location solution has these goals in mind:
 
@@ -35,21 +35,23 @@ To solve issue 2, we recommend keeping all beacons at the same power. To solve i
 
 The Beacons, their regions and which beacons they block are contained in a JSON document that can be found in the [app/data/beaconBlockRules.json file](app/data/beaconBlockRules.json).
 
-###Scenarios
+The code that accomplishes the blocking is in a [closeTourStops.js reducer](app/reducers/closeTourStops.js).
+
+### Scenarios
 
 To better explain beacon blocking, let us walk through a few scenarios.
 
-###Scenario 1 
+#### Scenario 1 
 ![Scenario 1](./scenarioOne@2x.png)
 
 In this scenario, only one beacon is detected, so the region of the beacon is shown on the device.
 
-####Scenario 2
+#### Scenario 2
 ![Scenario 2](./scenarioTwo@2x.png)
 
 In this scenario, two beacons are detected. Neither of them block each other so both of the beacon's regions are shown on the device.
 
-####Scenario 3
+#### Scenario 3
 ![Scenario 3](./scenarioThree@2x.png)
 
 In this scenario, two beacons are detected. Beacon B blocks Beacon A so only Beacon B's region is shown on the device.
