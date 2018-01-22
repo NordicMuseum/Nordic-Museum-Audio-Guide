@@ -63,4 +63,4 @@ The actors can be found in the [app/actors folder](app/actors)
 
 *Notes:* 
 
-1. This is a personal addition to Redux. It helps seperate out the events that are not UI dependent from the ones that are.
+1. This is a personal addition to standard Redux archecture. It helps seperate out the events that are not UI dependent from the ones that are.

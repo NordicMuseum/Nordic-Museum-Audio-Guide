@@ -38,3 +38,5 @@ All files that are the intellectual property owned by the Nordic Museum and othe
 ### Development Notes
 
 [Archecture of this project](architecture.md)
+ 
+[Indoor Location](indoorLocation.md)
