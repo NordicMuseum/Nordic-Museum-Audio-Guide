@@ -20,7 +20,7 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
   ```
   react-native run-ios
   ```
-  
+
 #### Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
 <!-- -->
 
@@ -37,6 +37,8 @@ All files that are the intellectual property owned by the Nordic Museum and othe
 
 ### Development Notes
 
-[Archecture of this project](architecture.md)
- 
-[Indoor Location](indoorLocation.md)
+[Archecture of this project](readMe/architecture.md)
+
+[Indoor Location](readMe/indoorLocation.md)
+
+[Content structure](readMe/contentStructure.md)
