@@ -6,7 +6,7 @@ The main content is structured in two levels: tour stops and audio content. In a
 
 ## Audio Guide Content
 
-Each tour stop contains the following properties:
+Each **tour stop** item contains the following properties:
 
 * Title (I18n)
 * Header image
@@ -18,7 +18,7 @@ Each tour stop contains the following properties:
 
 There are some related properties as well. The data model is located at [app/models/tourStop.js](../app/models/tourStop.js).
 
-Each audio content contains the following properties:
+Each **audio content** item contains the following properties:
 
 * Title (I18n)
 * 3 digit ID
@@ -46,3 +46,9 @@ Amenities are listed in a separate js file: [app/data/amenities.js](../app/data/
 There are two about pages in the app. These are regular components in the app/components folder: [aboutScreen.js](../app/components/aboutScreen.js) and [aboutTheAppScreen.js](../app/components/aboutTheAppScreen.js). The components contain variables for headings and paragraphs which are then pulled from strings.js after localization.
 
 ## Localization
+
+The app is localized using [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n). Localized strings are put in [app/data/strings.js](../app/data/strings.js). In app components, localized strings are fetched using the I18n.t function:
+
+``<Text style={styles.floorText}>
+  {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}
+</Text>``
