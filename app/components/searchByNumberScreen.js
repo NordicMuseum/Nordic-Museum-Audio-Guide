@@ -238,6 +238,7 @@ class SearchByNumberScreen extends Component {
   render() {
     const { width, height } = Dimensions.get('window');
 
+    const screenTitle = this.state.numberNotFound ? 'tryAgain' : 'searchScreen_Title';
     return (
       <View
         style={[
@@ -247,14 +248,9 @@ class SearchByNumberScreen extends Component {
         ]}
       >
         <View style={[styles.display, this.props.playerOpen ? { flex: 0.1 } : {}]}>
-          {this.state.numberNotFound &&
-            <Text style={styles.tryAgainText}>
-              {I18n.t('tryAgain')}
-            </Text>}
-          {!this.state.numberNotFound &&
-            <Text style={styles.tryAgainText}>
-              {I18n.t('searchScreen_Title')}
-            </Text>}
+          <Text style={styles.tryAgainText}>
+            {I18n.t(screenTitle)}
+          </Text>
           <View
             style={[styles.displayRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
