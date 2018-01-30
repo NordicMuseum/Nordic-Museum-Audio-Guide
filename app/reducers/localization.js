@@ -10,7 +10,7 @@ const initialState = {
 I18n.translations = strings;
 I18n.defaultLocale = 'en';
 I18n.locale = initialState.locale;
-I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
+I18n.fallbacks = true;
 
 export function localization(state = initialState, action) {
   switch (action.type) {
@@ -28,7 +28,7 @@ export function localization(state = initialState, action) {
       } else {
         I18n.defaultLocale = 'en';
         if (__DEV__) {
-          I18n.fallbacks = false; // TEMPORARY SO WE KNOW WHAT TRANSLATIONS ARE MISSING
+          I18n.fallbacks = false; // Display missing translations in development mode
         } else {
           I18n.fallbacks = true;
         }
