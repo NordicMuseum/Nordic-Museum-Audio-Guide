@@ -105,8 +105,7 @@ export const strings = {
     aboutScreen_HoursBody1AccessibilityLabel: 'June to August. Opened daily 9 to 18.',
     aboutScreen_HoursBody2AccessibilityLabel: 'September to May. Opened daily 10 to 17',
     aboutScreen_AdmissionHeader: 'Admission',
-    aboutScreen_AdmissionBody1: 'June–August: Adults 120 SEK, Children/Youth 18 years and under free',
-    aboutScreen_AdmissionBody2: 'September–May: Adults 100 SEK, Children/Youth 18 years and under free',
+    aboutScreen_AdmissionBody: 'Adults 120 SEK, Children/Youth 18 years and under free',
     amenitiesScreen_Title: 'Amenities',
     amenitiesScreen_ObjectSingular: 'amenity',
     amenitesScreen_ObjectPlural: 'amenities',
@@ -533,8 +532,7 @@ export const strings = {
     aboutScreen_HoursBody1AccessibilityLabel: 'NEEDS TRANSLATION',
     aboutScreen_HoursBody2AccessibilityLabel: 'NEEDS TRANSLATION',
     aboutScreen_AdmissionHeader: 'Entré',
-    aboutScreen_AdmissionBody1: 'Juni–augusti: Vuxen: 120 kr, Barn och ungdomar till och med 18 år: fri entré',
-    aboutScreen_AdmissionBody2: 'September–maj: Vuxen: 100 kr, Barn och ungdomar till och med 18 år: fri entré',
+    aboutScreen_AdmissionBody: 'Vuxen: 120 kr, Barn och ungdomar till och med 18 år: fri entré',
     highlights: 'Höjdpunkter',
 
     // 3. AMENITIES

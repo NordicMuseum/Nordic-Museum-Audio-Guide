@@ -121,10 +121,7 @@ const AboutScreen = (props) => {
             {I18n.t('aboutScreen_AdmissionHeader')}
           </Text>
           <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_AdmissionBody1')}
-          </Text>
-          <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_AdmissionBody2')}
+            {I18n.t('aboutScreen_AdmissionBody')}
           </Text>
         </ScrollView>
       </View>
