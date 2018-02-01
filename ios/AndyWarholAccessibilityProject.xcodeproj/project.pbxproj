@@ -981,6 +981,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				7B6A234911334064989ACC65 /* Frameworks */,
 				DDB73EE62462494BA5F483C2 /* Pods */,
+				E0C80B5020233CC2005A8C51 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1001,6 +1002,17 @@
 				2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0C80B5020233CC2005A8C51 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */,
+				2D260585236149398895A4E6 /* libRealmReact.a */,
+				B991F4038E0A48CCB38481C8 /* libRCTGoogleAnalyticsBridge.a */,
+				B32456E3701E4F57ADFC4A7D /* libRNI18n.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
