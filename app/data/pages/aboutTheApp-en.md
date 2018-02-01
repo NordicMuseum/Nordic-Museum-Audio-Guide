@@ -13,14 +13,14 @@ Aron Ambrosiani
 Ruben Niculcea
 
 ## Development and Design
-Ruben Niculcea, Carnegie Institute
-Sam Ticknor, Carnegie Institute
-Aron Ambrosiani, Nordic Museum
+Ruben Niculcea, Carnegie Institute  
+Sam Ticknor, Carnegie Institute  
+Aron Ambrosiani, Nordic Museum  
 Robert Ziherl, Nordic Museum
 
 ## Advisory Team, Nordic Museum
-Vanessa Gandy
-Loredana Jelmini
+Vanessa Gandy  
+Loredana Jelmini  
 Sven Rentzhog
 
 ## App Icon
@@ -30,14 +30,14 @@ Ann-Sofi Marminge Design
 BTI Studios
 
 ## Photo Credits
-Welcome Image: NMA.03906 Photo: Karl-Erik Granath
-Highlights: NMA.0030770 Photo: Karl Heinz Hernried
-Traditions: NMA.0029961 Photo: Karl Heinz Hernried
-Table Settings: NMA.0036167 Photo: Karl-Erik Granath
-Power of Fashion: NMA.0038609 Photo: Nordin Nilsson
-Textile Gallery: NMA.0027979 Photo: Mats Landin
-Sápmi: NMA.0056303 Photo: Rolf Kjellström
-Swedish Folk Art: NM.0050874 Photo: Karolina Kristensson
+Welcome Image: NMA.03906 Photo: Karl-Erik Granath  
+Highlights: NMA.0030770 Photo: Karl Heinz Hernried  
+Traditions: NMA.0029961 Photo: Karl Heinz Hernried  
+Table Settings: NMA.0036167 Photo: Karl-Erik Granath  
+Power of Fashion: NMA.0038609 Photo: Nordin Nilsson  
+Textile Gallery: NMA.0027979 Photo: Mats Landin  
+Sápmi: NMA.0056303 Photo: Rolf Kjellström  
+Swedish Folk Art: NM.0050874 Photo: Karolina Kristensson  
 Homes and Interiors: NMA.0033276 Photo: Unknown © Nordiska museets arkiv
 
 Photo of the Nordic Museum: photo by John Swan/Canopy Aero
