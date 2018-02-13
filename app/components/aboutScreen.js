@@ -7,6 +7,7 @@ import {
   View,
   StyleSheet,
   ScrollView,
+  Text,
   I18nManager,
 } from 'react-native';
 
@@ -29,6 +30,9 @@ const styles = StyleSheet.create({
 
 const aboutText = (locale) => {
   switch (locale) {
+    //TODO Disabling Arabic translation until RTL is figured out
+    //case 'ar':
+    //  return require('../data/pages/aboutTheMuseum-ar.md').default;
     case 'de':
       return require('../data/pages/aboutTheMuseum-de.md').default;
     case 'en':
@@ -113,7 +117,7 @@ const AboutScreen = (props) => {
           }}
           automaticallyAdjustContentInsets={false}
         >
-          <Markdown 
+          <Markdown
             styles={markdownStyles}
             rules={{
               paragraph: {
@@ -130,7 +134,7 @@ const AboutScreen = (props) => {
           >
             {aboutText(props.locale)}
           </Markdown>
-          <Markdown 
+          <Markdown
             styles={markdownStyles}
             rules={{
               paragraph: {
