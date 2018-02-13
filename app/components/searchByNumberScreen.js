@@ -17,14 +17,23 @@ import { analyticsTrackCodeSearched } from '../actions/analytics';
 
 import TourStopScreen from '../containers/tourStop';
 
-import { OFF_BLACK, SELECTED } from '../styles';
+import NavigationBar from './navigationBar';
+
+import { OFF_BLACK, SELECTED, NAV_BAR_BACKGROUND, NAV_BAR_TEXT } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EDEDED',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  statusBar: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 20,
+    backgroundColor: NAV_BAR_BACKGROUND,
   },
   display: {
     flex: 0.2,
@@ -247,10 +256,18 @@ class SearchByNumberScreen extends Component {
           this.props.playerOpen && height < 570 ? { paddingTop: 25 } : {},
         ]}
       >
+        <View style={styles.statusBar} />
+        <NavigationBar
+          label={I18n.t(screenTitle)}
+          labelStyle={{
+            color: NAV_BAR_TEXT,
+          }}
+          barStyle={{
+            backgroundColor: NAV_BAR_BACKGROUND,
+            height: 44,
+          }}
+        />
         <View style={[styles.display, this.props.playerOpen ? { flex: 0.1 } : {}]}>
-          <Text style={styles.tryAgainText}>
-            {I18n.t(screenTitle)}
-          </Text>
           <View
             style={[styles.displayRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
