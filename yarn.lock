@@ -4176,9 +4176,9 @@ react-native-i18n@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/react-native-i18n/-/react-native-i18n-0.1.1.tgz#7fdc7512e71c9f5057d5f9ee8d559fc4801a1c14"
 
-react-native-parallax-scroll-view@^0.19.0:
+"react-native-parallax-scroll-view@git://github.com/NordicMuseum/react-native-parallax-scroll-view.git#v0.19.1":
   version "0.19.0"
-  resolved "https://registry.yarnpkg.com/react-native-parallax-scroll-view/-/react-native-parallax-scroll-view-0.19.0.tgz#23b9af1f13249a610f4641e2582a58997df7d80a"
+  resolved "git://github.com/NordicMuseum/react-native-parallax-scroll-view.git#b68e69d32b670d892c22ab0226dca6d9f96511f5"
 
 react-native-swiper@^1.4.11:
   version "1.5.1"
