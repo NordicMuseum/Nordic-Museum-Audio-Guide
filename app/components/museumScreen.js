@@ -45,6 +45,7 @@ class MuseumScreen extends Component {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
     screenReader: PropTypes.bool.isRequired,
+    locale: PropTypes.string.isRequired,
   };
 
   render() {
@@ -137,6 +138,7 @@ class MuseumScreen extends Component {
                   navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
+                    locale: this.props.locale,
                   },
                 });
               }}
@@ -160,6 +162,7 @@ class MuseumScreen extends Component {
                   navigationBarHidden: true,
                   passProps: {
                     navigator: this.props.navigator,
+                    locale: this.props.locale,
                   },
                 });
               }}

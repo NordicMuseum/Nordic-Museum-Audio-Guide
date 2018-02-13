@@ -8,13 +8,14 @@ import {
   StyleSheet,
   ScrollView,
   Text,
+  I18nManager,
 } from 'react-native';
 
 import I18n from 'react-native-i18n';
 
 import NavigationBar from './navigationBar';
 
-import { parseDisplayText } from '../utilities';
+import Markdown from 'react-native-simple-markdown';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -27,13 +28,40 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 65,
   },
-  creditsHeader: {
-    marginTop: 25,
-    marginBottom: 5,
-  },
 });
 
+const aboutTheAppText = (locale) => {
+  switch (locale) {
+    case 'en':
+      return require('../data/pages/aboutTheApp-en.md').default;
+    case 'svKids':
+    case 'svSimple':
+    case 'seSme':
+    case 'seSmj':
+    case 'seSma':
+    case 'sv':
+      return require('../data/pages/aboutTheApp-sv.md').default;
+    default:
+      return require('../data/pages/aboutTheApp-en.md').default;
+  }
+};
+
 const AboutTheAppScreen = (props) => {
+  const markdownStyles = {
+    heading1: {
+      marginTop: 25,
+      ...StyleSheet.flatten(globalStyles.h1),
+      writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
+      textAlign: I18nManager.isRTL ? 'right' : 'left',
+    },
+    paragraph: {
+      marginTop: 5,
+      ...StyleSheet.flatten(globalStyles.body),
+      writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
+      textAlign: I18nManager.isRTL ? 'right' : 'left',
+    },
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <NavigationBar
@@ -58,62 +86,25 @@ const AboutTheAppScreen = (props) => {
           }}
           automaticallyAdjustContentInsets={false}
         >
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppAudioContentHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {parseDisplayText(I18n.t('aboutTheAppAudioContentBody'))}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppTheAppHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppTheAppBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppProjectManagerNordicMuseumHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppProjectManagerNordicMuseumBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppProjectManagerCarnegieInstituteHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppProjectManagerCarnegieInstituteBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppDevelopmentAndDesignHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppDevelopmentAndDesignBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppAdvisoryTeamHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppAdvisoryTeamBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppAppIconAndDesignAssetsHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppAppIconAndDesignAssetsBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppTranslationsHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppTranslationsBody')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.creditsHeader]}>
-            {I18n.t('aboutTheAppPhotoCreditsHeader')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-            {I18n.t('aboutTheAppPhotoCreditsBody')}
-          </Text>
-          <Text style={[globalStyles.body, globalStyles.paragraph]}>
-          {DeviceInfo.getVersion()}
+          <Markdown 
+            styles={markdownStyles}
+            rules={{
+              paragraph: {
+                react: (node, output, state) => (
+                  <Text
+                    key={state.key}
+                    style={markdownStyles.paragraph}
+                  >
+                    {output(node.content, state)}
+                  </Text>
+                ),
+              },
+            }}
+          >
+            {aboutTheAppText(props.locale)}
+          </Markdown>
+          <Text style={[{ marginTop: 25 }, globalStyles.body, globalStyles.paragraph]}>
+            {DeviceInfo.getVersion()}
           </Text>
         </ScrollView>
       </View>
@@ -123,6 +114,7 @@ const AboutTheAppScreen = (props) => {
 
 AboutTheAppScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 export default AboutTheAppScreen;

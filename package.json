@@ -16,6 +16,7 @@
     "react-native-google-analytics-bridge": "^3.1.0",
     "react-native-i18n": "^0.1.1",
     "react-native-parallax-scroll-view": "git://github.com/NordicMuseum/react-native-parallax-scroll-view.git#v0.19.1",
+    "react-native-simple-markdown": "^1.1.0",
     "react-native-swiper": "^1.4.11",
     "react-redux": "^4.4.5",
     "realm": "^2.1.0",

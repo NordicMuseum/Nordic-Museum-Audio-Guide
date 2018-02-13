@@ -7,11 +7,12 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  Text,
   I18nManager,
 } from 'react-native';
 
 import NavigationBar from './navigationBar';
+
+import Markdown from 'react-native-simple-markdown';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
@@ -24,26 +25,70 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 65,
   },
-  aboutHeader: {
-    marginTop: 25,
-    marginBottom: 5,
-  },
-  hoursRow: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    flex: 1,
-  },
-  hoursDay: {
-    flex: 0.3,
-    paddingRight: 15,
-  },
-  hours: {
-    flex: 0.7,
-    alignItems: 'flex-start',
-  },
 });
 
+const aboutText = (locale) => {
+  switch (locale) {
+    case 'de':
+      return require('../data/pages/aboutTheMuseum-de.md').default;
+    case 'en':
+      return require('../data/pages/aboutTheMuseum-en.md').default;
+    case 'es':
+      return require('../data/pages/aboutTheMuseum-es.md').default;
+    case 'fi':
+      return require('../data/pages/aboutTheMuseum-fi.md').default;
+    case 'fr':
+      return require('../data/pages/aboutTheMuseum-fr.md').default;
+    case 'it':
+      return require('../data/pages/aboutTheMuseum-it.md').default;
+    case 'ru':
+      return require('../data/pages/aboutTheMuseum-ru.md').default;
+    case 'svKids':
+    case 'svSimple':
+    case 'seSme':
+    case 'seSmj':
+    case 'seSma':
+    case 'sv':
+      return require('../data/pages/aboutTheMuseum-sv.md').default;
+    case 'zh':
+      return require('../data/pages/aboutTheMuseum-zh.md').default;
+    default:
+      return require('../data/pages/aboutTheMuseum-en.md').default;
+  }
+};
+
+const hoursText = (locale) => {
+  switch (locale) {
+    case 'en':
+      return require('../data/pages/openingHoursAdmission-en.md').default;
+    case 'svKids':
+    case 'svSimple':
+    case 'seSme':
+    case 'seSmj':
+    case 'seSma':
+    case 'sv':
+      return require('../data/pages/openingHoursAdmission-sv.md').default;
+    default:
+      return require('../data/pages/openingHoursAdmission-en.md').default;
+  }
+};
+
 const AboutScreen = (props) => {
+  const markdownStyles = {
+    heading1: {
+      marginTop: 25,
+      ...StyleSheet.flatten(globalStyles.h1),
+      writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
+      textAlign: I18nManager.isRTL ? 'right' : 'left',
+    },
+    paragraph: {
+      marginTop: 5,
+      ...StyleSheet.flatten(globalStyles.body),
+      writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
+      textAlign: I18nManager.isRTL ? 'right' : 'left',
+    },
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <NavigationBar
@@ -68,61 +113,40 @@ const AboutScreen = (props) => {
           }}
           automaticallyAdjustContentInsets={false}
         >
-          <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
-            <Text
-              style={[
-                globalStyles.body,
-                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
-              ]}
-            >
-              {I18n.t('aboutScreen_Overview')}
-            </Text>
-          </Text>
-          <Text
-            style={[
-              { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
-              styles.aboutHeader,
-            ]}>
-            <Text
-              style={[
-                globalStyles.h1,
-                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
-              ]}
-            >
-              {I18n.t('aboutScreen_AboutHeader')}
-            </Text>
-          </Text>
-          <Text style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}>
-            <Text
-              style={[
-                globalStyles.body,
-                { textAlign: I18nManager.isRTL ? 'right' : 'left' },
-              ]}
-            >
-              {I18n.t('aboutScreen_AboutBody')}
-            </Text>
-          </Text>
-          <Text style={[globalStyles.h1, styles.aboutHeader]}>
-            {I18n.t('aboutScreen_HoursHeader')}
-          </Text>
-          <Text
-            accessibilityLabel={I18n.t('aboutScreen_HoursBody1AccessibilityLabel')}
-            style={globalStyles.body}
+          <Markdown 
+            styles={markdownStyles}
+            rules={{
+              paragraph: {
+                react: (node, output, state) => (
+                  <Text
+                    key={state.key}
+                    style={markdownStyles.paragraph}
+                  >
+                    {output(node.content, state)}
+                  </Text>
+                ),
+              },
+            }}
           >
-            {I18n.t('aboutScreen_HoursBody1')}
-          </Text>
-          <Text
-            accessibilityLabel={I18n.t('aboutScreen_HoursBody2AccessibilityLabel')}
-            style={globalStyles.body}
+            {aboutText(props.locale)}
+          </Markdown>
+          <Markdown 
+            styles={markdownStyles}
+            rules={{
+              paragraph: {
+                react: (node, output, state) => (
+                  <Text
+                    key={state.key}
+                    style={markdownStyles.paragraph}
+                  >
+                    {output(node.content, state)}
+                  </Text>
+                ),
+              },
+            }}
           >
-            {I18n.t('aboutScreen_HoursBody2')}
-          </Text>
-          <Text style={[globalStyles.h1, styles.aboutHeader]}>
-            {I18n.t('aboutScreen_AdmissionHeader')}
-          </Text>
-          <Text style={globalStyles.body}>
-            {I18n.t('aboutScreen_AdmissionBody')}
-          </Text>
+            {hoursText(props.locale)}
+          </Markdown>
         </ScrollView>
       </View>
     </View>
@@ -131,6 +155,7 @@ const AboutScreen = (props) => {
 
 AboutScreen.propTypes = {
   navigator: PropTypes.object.isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 export default AboutScreen;
