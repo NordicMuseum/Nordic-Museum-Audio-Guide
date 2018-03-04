@@ -69,10 +69,12 @@ const styles = StyleSheet.create({
   },
 });
 
+const { width, height } = Dimensions.get('window');
+const cellHeight = (height / 4);
+export const totalCellHeight = cellHeight + SPACING;
+
 export const renderItem = (item, index, onPress, selected, locale, items) => {
-  const { width, height } = Dimensions.get('window');
   const cellWidth = width;
-  const cellHeight = height / 4;
   const gridLength = items.length;
 
   let traits = [];

@@ -8,7 +8,7 @@ import uuid from 'uuid';
 import NavigationBar from './navigationBar';
 import StickyHeader from './stickyHeader';
 
-import { renderItem } from './grid';
+import { renderItem, totalCellHeight } from './grid';
 
 import AudioContentItem from './audioContentItem';
 import TourStop from '../containers/tourStop';
@@ -278,7 +278,7 @@ class NearMeScreen extends Component {
             ...tourStops.map((tourStop, index) => {
               totalIndex++;
 
-              return renderItem(
+              const tourItem = renderItem(
                 tourStop,
                 index,
                 item => {
@@ -303,6 +303,15 @@ class NearMeScreen extends Component {
                 this.props.currentStopUUID,
                 this.props.locale,
                 tourStops
+              );
+
+              return (
+                <View 
+                  style={{ height: totalCellHeight }} 
+                  key={totalIndex}
+                >
+                  {tourItem}
+                </View>
               );
             })
           );
