@@ -2653,7 +2653,7 @@ export const tourStops = [
     order: 4,
     shortTitle: 'HomesAndInteriors_shortTitle',
     longTitle: 'HomesAndInteriors_longTitle',
-    regions: ['Homes and Interiors'],
+    regions: ['Homes and Interiors W', 'Homes and Interiors E'],
     imageURL: 'homesAndInteriors.png',
     imageWidth: 750,
     imageHeight: 345,
