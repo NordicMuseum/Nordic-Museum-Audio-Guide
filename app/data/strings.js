@@ -1036,8 +1036,6 @@ export const strings = {
     'transcriptButton_OpenedAccessibilityLabel': 'transcripción abierta. Tocar dos veces para cerrar.',
     'toggleSpeedButton_FastLabel': '1.5',
     'locationServicesButton_Label': 'Permitir acceso a ubicación',
-    'nearMeScreen_Amenities': 'TBD',
-    'amenitiesScreen_Title': 'TBD',
     'tutorialScreen_WelcomeTitle': 'Audioguía',
     'settingsScreen_AutoplayHeader': 'Autorreproducción',
     'tutorialScreen_StoriesAutoplayOff': 'Autorreproducción desactivada',
