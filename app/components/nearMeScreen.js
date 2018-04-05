@@ -270,7 +270,10 @@ class NearMeScreen extends Component {
 
         let tourStopsList = [];
         if (tourStops.length > 0) {
-          totalIndex++;
+          if (audioContent.length > 0) {
+            totalIndex++;
+          }
+
           stickyHeaders.push(totalIndex);
           tourStopsList.push(<StickyHeader key={totalIndex} title={I18n.t('themes')} />);
 
@@ -319,7 +322,10 @@ class NearMeScreen extends Component {
 
         let amenitiesList = [];
         if (amenities.length > 0) {
-          totalIndex++;
+          if (tourStops.length > 0 || audioContent.length > 0) {
+            totalIndex++;
+          }
+
           stickyHeaders.push(totalIndex);
           amenitiesList.push(
             <StickyHeader key={totalIndex} title={I18n.t('nearMeScreen_Amenities')} />
