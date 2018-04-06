@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
+    "npm": "^5.8.0",
     "react": "~15.3.2",
     "react-native": "^0.34.1",
     "react-native-collapsible": "^0.6.0",
