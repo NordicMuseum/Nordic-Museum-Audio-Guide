@@ -12,8 +12,6 @@ import { analyticsTrackAudioPartialListen } from './analytics';
 
 const AudioManager = NativeModules.CMSAudioManager;
 
-import { _ } from 'lodash';
-
 // *** Action Types ***
 export const TOGGLE_PAUSE_PLAY = 'TOGGLE_PAUSE_PLAY';
 export const PAUSE_AUDIO = 'PAUSE_AUDIO';
@@ -61,7 +59,8 @@ function loadAudioSuccess(
   activeAudioIndex,
   activeAudioDuration,
   prevUUID,
-  nextUUID
+  nextUUID,
+  playAudioAfterLoad
 ) {
   return {
     type: LOAD_AUDIO_SUCCESS,
@@ -74,6 +73,7 @@ function loadAudioSuccess(
     activeAudioDuration,
     prevUUID,
     nextUUID,
+    playAudioAfterLoad,
   };
 }
 
@@ -83,7 +83,7 @@ function loadAudioFailure(error) {
   };
 }
 
-export function playTrack(tourStop, trackUUID, autoplay = false) {
+export function playTrack(tourStop, trackUUID, autoplay = false, playAudioAfterLoad = true) {
   clearTimer();
 
   return async (dispatch, getState) => {
@@ -136,7 +136,7 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
     }
 
     let activeAudioDuration;
-    AudioManager.loadLocalAudio(url, activeAudio.uuid, true)
+    AudioManager.loadLocalAudio(url, activeAudio.uuid, playAudioAfterLoad)
       .then(results => {
         activeAudioDuration = Math.round(results[1]);
 
@@ -150,7 +150,8 @@ export function playTrack(tourStop, trackUUID, autoplay = false) {
             activeAudioIndex,
             activeAudioDuration,
             prevUUID,
-            nextUUID
+            nextUUID,
+            playAudioAfterLoad
           )
         );
       })
