@@ -154,10 +154,8 @@ class RootScreen extends Component {
             selectedIcon={require('../assets/searchTabSelected.png')}
             selected={this.props.activeTab === TAB_SEARCH}
             onPress={() => {
-              if (this.props.activeTab === TAB_SEARCH &&
-                  this.refs.SEARCH_REF != null) {
+              if (this.refs.SEARCH_REF != null) {
                 this.refs.SEARCH_REF.popToTop();
-                return;
               }
 
               this.props.actions.updateActiveTab(TAB_SEARCH);
