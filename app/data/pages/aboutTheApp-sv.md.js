@@ -41,6 +41,7 @@ BTI Studios
 
 Välkomstbild: NMA.03906 Foto: Karl-Erik Granath
 Höjdpunkter: NMA.0030770 Foto: Karl Heinz Hernried
+Barnens audioguide: Illustration av Ann-Sofi Marminge
 Traditioner: NMA.0029961 Foto: Karl Heinz Hernried
 Dukade bord: NMA.0036167 Foto: Karl-Erik Granath
 Modemakt: NMA.0038609 Foto: Nordin Nilsson
