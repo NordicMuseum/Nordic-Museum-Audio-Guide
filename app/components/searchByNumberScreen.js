@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: NAV_BAR_BACKGROUND,
   },
   display: {
-    flex: 0.2,
+    flex: 0.15,
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'column',
@@ -48,34 +48,35 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   digitDisplay: {
-    width: 40,
-    height: 40,
+    width: 38,
+    height: 60,
+    paddingTop: 22,
     borderBottomWidth: 1,
     borderBottomColor: '#808080',
   },
   digitDisplayText: {
     color: OFF_BLACK,
-    fontSize: 36,
+    fontSize: 34,
     fontWeight: '400',
     textAlign: 'center',
     backgroundColor: 'transparent',
     paddingBottom: 5,
   },
   digitPad: {
-    flex: 0.7,
+    flex: 0.65,
     padding: 5,
     paddingTop: 35,
     alignItems: 'center',
   },
   digitRow: {
     flexDirection: 'row',
-    height: 75,
+    height: 71,
   },
   digit: {
-    height: 60,
-    width: 60,
-    borderRadius: 30,
-    margin: 10,
+    height: 56,
+    width: 56,
+    borderRadius: 28,
+    margin: 9,
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: '#808080',
@@ -83,19 +84,19 @@ const styles = StyleSheet.create({
   },
   digitText: {
     color: '#333333',
-    fontSize: 30,
+    fontSize: 29,
   },
   nonDigit: {
-    margin: 10,
-    height: 60,
-    width: 60,
-    borderRadius: 30,
+    margin: 9,
+    height: 56,
+    width: 56,
+    borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',
   },
   deleteButton: {
-    height: 25,
-    width: 35,
+    height: 22,
+    width: 33,
     resizeMode: 'contain',
     alignItems: 'center',
     justifyContent: 'center',
@@ -267,7 +268,7 @@ class SearchByNumberScreen extends Component {
             height: 44,
           }}
         />
-        <View style={[styles.display, this.props.playerOpen ? { flex: 0.1 } : {}]}>
+        <View style={[styles.display, this.props.playerOpen ? { flex: 0.15 } : {}]}>
           <View
             style={[styles.displayRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
           >
