@@ -35,6 +35,10 @@ export const globalStyles = StyleSheet.create({
     fontSize: 15,
     color: OFF_WHITE,
   },
+  h3: {
+    fontSize: 14,
+    color: OFF_WHITE,
+  },
   disclosure: {
     fontSize: 17,
     color: OFF_BLACK,

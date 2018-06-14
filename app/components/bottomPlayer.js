@@ -26,7 +26,7 @@ import { BOTTOMBARHEIGHT } from './rootScreen';
 
 import { OFF_BLACK } from '../styles';
 
-export const BOTTOMPLAYERHEIGHT = 105;
+export const BOTTOMPLAYERHEIGHT = 95;
 
 const styles = StyleSheet.create({
   bottomBar: {

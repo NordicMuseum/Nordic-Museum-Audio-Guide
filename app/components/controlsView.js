@@ -21,7 +21,7 @@ import ViewTicker from './viewTicker';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    paddingTop: 12,
+    paddingTop: 8,
   },
   row: {
     flexDirection: 'row',
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   titleRow: {
     justifyContent: 'center',
     marginHorizontal: 10,
-    marginBottom: 7,
+    marginBottom: 5,
   },
   titleText: {
     marginLeft: 3,
@@ -41,7 +41,12 @@ const styles = StyleSheet.create({
   },
   highlightedBox: {
     backgroundColor: HIGHLIGHTS,
-    height: 20,
+    height: 18,
+    paddingHorizontal: 3,
+    borderRadius: 2,
+  },
+  regularBox: {
+    height: 18,
     paddingHorizontal: 3,
     borderRadius: 2,
   },
@@ -131,17 +136,17 @@ class ControlsView extends Component {
             accessibilityLabel={`${parseVoiceoverText(I18n.t(code))}, ${stopTitle}`}
           >
             <View style={[styles.row, styles.titleRow]}>
-              <View style={highlighted ? styles.highlightedBox : {}}>
+              <View style={highlighted ? styles.highlightedBox : styles.regularBox}>
                 <Text
                   style={[
-                    globalStyles.h2,
+                    globalStyles.h3,
                     highlighted ? styles.highlightedNumberText : { fontWeight: '300' },
                   ]}
                 >
                   {code}
                 </Text>
               </View>
-              <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
+              <Text style={[globalStyles.h3, { fontWeight: '500' }]}>
                 &nbsp; {parseDisplayText(I18n.t(code))}
               </Text>
             </View>
