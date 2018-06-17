@@ -16,7 +16,7 @@ export const allAmenities = {
         uuid: uuid.v4(),
         title: 'amenities_ToiletsTitle',
         description: '',
-        icon: 'toilets.png',
+        icon: 'restrooms.png',
       },
       {
         uuid: uuid.v4(),
@@ -40,13 +40,13 @@ export const allAmenities = {
         uuid: uuid.v4(),
         title: 'amenities_LibraryAndArchiveTitle',
         description: 'amenities_LibraryAndArchiveDescription',
-        icon: 'placeholder.png',
+        icon: 'libraryArchive.png',
       },
       {
         uuid: uuid.v4(),
         title: 'amenities_AssemblyHallTitle',
         description: '',
-        icon: 'placeholder.png',
+        icon: 'lectureHall.png',
       },
       {
         uuid: uuid.v4(),
@@ -82,7 +82,7 @@ export const allAmenities = {
         uuid: uuid.v4(),
         title: 'amenities_RestaurantAndCafeTitle',
         description: 'amenities_RestaurantAndCafeDescription',
-        icon: 'cafe.png',
+        icon: 'restaurant.png',
       },
       {
         uuid: uuid.v4(),
@@ -172,7 +172,7 @@ export const allAmenities = {
         uuid: uuid.v4(),
         title: 'amenities_StageTitle',
         description: '',
-        icon: 'placeholder.png',
+        icon: 'lounge.png',
       },
     ],
   },
