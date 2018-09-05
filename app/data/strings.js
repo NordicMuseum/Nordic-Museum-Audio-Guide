@@ -93,6 +93,7 @@ export const strings = {
     floor: 'Floor',
     floor1_Label: 'Floor 1',
     floor2_Label: 'Floor 2',
+    floor234_Label: 'Floor 2–4',
     floor3_Label: 'Floor 3',
     floor4_Label: 'Floor 4',
     aboutScreen_Title: 'The Nordic Museum',
@@ -199,23 +200,11 @@ export const strings = {
     'HomesAndInteriorsVisualDescriptions_shortCredit': '<i>Homes and Interiors: Visual Descriptions</i>',
     'HomesAndInteriorsVisualDescriptions_longCredit': 'Photo: Karolina Kristensson\n<i>Homes and Interiors: Visual Descriptions</i>',
 
-    'Highlights_floor2_shortTitle': 'Highlights',
-    'Highlights_floor2_longTitle': 'Highlights',
-    'Highlights_floor2_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor2_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor2_longCredit': 'Photo: Karolina Kristensson\n<i>Highlights</i>',
-
-    'Highlights_floor3_shortTitle': 'Highlights',
-    'Highlights_floor3_longTitle': 'Highlights',
-    'Highlights_floor3_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor3_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor3_longCredit': 'Photo: Karolina Kristensson\n<i>Highlights</i>',
-
-    'Highlights_floor4_shortTitle': 'Highlights',
-    'Highlights_floor4_longTitle': 'Highlights',
-    'Highlights_floor4_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor4_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor4_longCredit': 'Photo: Karolina Kristensson\n<i>Highlights</i>',
+    'Highlights_shortTitle': 'Highlights',
+    'Highlights_longTitle': 'Highlights',
+    'Highlights_imageAccessibilityLabel': 'Highlights',
+    'Highlights_shortCredit': '<i>Highlights</i>',
+    'Highlights_longCredit': 'Photo: Karolina Kristensson\n<i>Highlights</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Welcome to the Nordic Museum',
@@ -416,6 +405,7 @@ export const strings = {
     themes: 'Teman',
     floor1_Label: 'Plan 1',
     floor2_Label: 'Plan 2',
+    floor234_Label: 'Plan 2–4',
     floor3_Label: 'Plan 3',
     floor4_Label: 'Plan 4',
     nearMeScreen_Title: 'Nära mig',
@@ -522,23 +512,11 @@ export const strings = {
     'HomesAndInteriorsVisualDescriptions_shortCredit': '<i>Hem och bostad: Syntolkningar</i>',
     'HomesAndInteriorsVisualDescriptions_longCredit': 'Foto: Karolina Kristensson\n<i>Hem och bostad: Syntolkningar</i>',
 
-    'Highlights_floor2_shortTitle': 'Höjdpunkter',
-    'Highlights_floor2_longTitle': 'Höjdpunkter',
-    'Highlights_floor2_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor2_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
-
-    'Highlights_floor3_shortTitle': 'Höjdpunkter',
-    'Highlights_floor3_longTitle': 'Höjdpunkter',
-    'Highlights_floor3_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor3_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
-
-    'Highlights_floor4_shortTitle': 'Höjdpunkter',
-    'Highlights_floor4_longTitle': 'Höjdpunkter',
-    'Highlights_floor4_imageAccessibilityLabel': 'Höjdpunkter',
-    'Highlights_floor4_shortCredit': '<i>Höjdpunkter</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
+    'Highlights_shortTitle': 'Höjdpunkter',
+    'Highlights_longTitle': 'Höjdpunkter',
+    'Highlights_imageAccessibilityLabel': 'Höjdpunkter',
+    'Highlights_shortCredit': '<i>Höjdpunkter</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Välkommen till Nordiska museet',
@@ -695,6 +673,7 @@ export const strings = {
     'floor': 'Piano',
     'floor1_Label': 'Piano 1',
     'floor2_Label': 'Piano 2',
+    'floor234_Label': 'Piano 2–4',
     'floor3_Label': 'Piano 3',
     'floor4_Label': 'Piano 4',
     'bluetoothAlert_Body': 'Vai a Impostazioni, Bluetooth per attivare Bluetooth.',
@@ -750,23 +729,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Le parti salienti',
-    'Highlights_floor2_longTitle': 'Le parti salienti',
-    'Highlights_floor2_imageAccessibilityLabel': 'Le parti salienti',
-    'Highlights_floor2_shortCredit': '<i>Le parti salienti</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
-
-    'Highlights_floor3_shortTitle': 'Le parti salienti',
-    'Highlights_floor3_longTitle': 'Le parti salienti',
-    'Highlights_floor3_imageAccessibilityLabel': 'Le parti salienti',
-    'Highlights_floor3_shortCredit': '<i>Le parti salienti</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
-
-    'Highlights_floor4_shortTitle': 'Le parti salienti',
-    'Highlights_floor4_longTitle': 'Le parti salienti',
-    'Highlights_floor4_imageAccessibilityLabel': 'Le parti salienti',
-    'Highlights_floor4_shortCredit': '<i>Le parti salienti</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
+    'Highlights_shortTitle': 'Le parti salienti',
+    'Highlights_longTitle': 'Le parti salienti',
+    'Highlights_imageAccessibilityLabel': 'Le parti salienti',
+    'Highlights_shortCredit': '<i>Le parti salienti</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Benvenuti al Nordic Museum',
@@ -827,6 +794,7 @@ export const strings = {
     'floor': 'طابق',
     'floor1_Label': 'طابق 1',
     'floor2_Label': 'طابق 2',
+    'floor234_Label': 'طابق 2–4',
     'floor3_Label': 'طابق 3',
     'floor4_Label': 'طابق 4',
     'bluetoothAlert_Body': 'انتقل إلى الإعدادات، ثم بلوتوث لتشغيل البلوتوث.',
@@ -883,23 +851,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'مقتطفات',
-    'Highlights_floor2_longTitle': 'مقتطفات',
-    'Highlights_floor2_imageAccessibilityLabel': 'مقتطفات',
-    'Highlights_floor2_shortCredit': '<i>مقتطفات</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
-
-    'Highlights_floor3_shortTitle': 'مقتطفات',
-    'Highlights_floor3_longTitle': 'مقتطفات',
-    'Highlights_floor3_imageAccessibilityLabel': 'مقتطفات',
-    'Highlights_floor3_shortCredit': '<i>مقتطفات</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
-
-    'Highlights_floor4_shortTitle': 'مقتطفات',
-    'Highlights_floor4_longTitle': 'مقتطفات',
-    'Highlights_floor4_imageAccessibilityLabel': 'مقتطفات',
-    'Highlights_floor4_shortCredit': '<i>مقتطفات</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
+    'Highlights_shortTitle': 'مقتطفات',
+    'Highlights_longTitle': 'مقتطفات',
+    'Highlights_imageAccessibilityLabel': 'مقتطفات',
+    'Highlights_shortCredit': '<i>مقتطفات</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'مرحباً بكم في متحف الشمال',
@@ -957,6 +913,7 @@ export const strings = {
     'floor': 'Planta',
     'floor1_Label': 'Planta 1',
     'floor2_Label': 'Planta 2',
+    'floor234_Label': 'Planta 2–4',
     'floor3_Label': 'Planta 3',
     'floor4_Label': 'Planta 4',
     'bluetoothAlert_Body': 'Vaya a Ajustes > Bluetooth para activar el Bluetooth',
@@ -1015,23 +972,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Atracciones principales',
-    'Highlights_floor2_longTitle': 'Atracciones principales',
-    'Highlights_floor2_imageAccessibilityLabel': 'Atracciones principales',
-    'Highlights_floor2_shortCredit': '<i>Atracciones principales</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
-
-    'Highlights_floor3_shortTitle': 'Atracciones principales',
-    'Highlights_floor3_longTitle': 'Atracciones principales',
-    'Highlights_floor3_imageAccessibilityLabel': 'Atracciones principales',
-    'Highlights_floor3_shortCredit': '<i>Atracciones principales</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
-
-    'Highlights_floor4_shortTitle': 'Atracciones principales',
-    'Highlights_floor4_longTitle': 'Atracciones principales',
-    'Highlights_floor4_imageAccessibilityLabel': 'Atracciones principales',
-    'Highlights_floor4_shortCredit': '<i>Atracciones principales</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
+    'Highlights_shortTitle': 'Atracciones principales',
+    'Highlights_longTitle': 'Atracciones principales',
+    'Highlights_imageAccessibilityLabel': 'Atracciones principales',
+    'Highlights_shortCredit': '<i>Atracciones principales</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Bienvenidos al Museo Nórdico',
@@ -1090,6 +1035,7 @@ export const strings = {
     'floor': 'Kerros',
     'floor1_Label': 'Kerros 1',
     'floor2_Label': 'Kerros 2',
+    'floor234_Label': 'Kerros 2–4',
     'floor3_Label': 'Kerros 3',
     'floor4_Label': 'Kerros 4',
     'bluetoothAlert_Body': 'Aktivoi Bluetooth valitsemalla Asetukset ja Bluetooth.',
@@ -1145,23 +1091,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Kohokohtia',
-    'Highlights_floor2_longTitle': 'Kohokohtia',
-    'Highlights_floor2_imageAccessibilityLabel': 'Kohokohtia',
-    'Highlights_floor2_shortCredit': '<i>Kohokohtia</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
-
-    'Highlights_floor3_shortTitle': 'Kohokohtia',
-    'Highlights_floor3_longTitle': 'Kohokohtia',
-    'Highlights_floor3_imageAccessibilityLabel': 'Kohokohtia',
-    'Highlights_floor3_shortCredit': '<i>Kohokohtia</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
-
-    'Highlights_floor4_shortTitle': 'Kohokohtia',
-    'Highlights_floor4_longTitle': 'Kohokohtia',
-    'Highlights_floor4_imageAccessibilityLabel': 'Kohokohtia',
-    'Highlights_floor4_shortCredit': '<i>Kohokohtia</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
+    'Highlights_shortTitle': 'Kohokohtia',
+    'Highlights_longTitle': 'Kohokohtia',
+    'Highlights_imageAccessibilityLabel': 'Kohokohtia',
+    'Highlights_shortCredit': '<i>Kohokohtia</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Tervetuloa Nordiska museetiin',
@@ -1221,6 +1155,7 @@ export const strings = {
     'floor': 'Etage',
     'floor1_Label': 'Etage 1',
     'floor2_Label': 'Etage 2',
+    'floor234_Label': 'Etage 2–4',
     'floor3_Label': 'Etage 3',
     'floor4_Label': 'Etage 4',
     'bluetoothAlert_Body': '',
@@ -1276,23 +1211,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Höhepunkte',
-    'Highlights_floor2_longTitle': 'Höhepunkte',
-    'Highlights_floor2_imageAccessibilityLabel': 'Höhepunkte',
-    'Highlights_floor2_shortCredit': '<i>Höhepunkte</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
-
-    'Highlights_floor3_shortTitle': 'Höhepunkte',
-    'Highlights_floor3_longTitle': 'Höhepunkte',
-    'Highlights_floor3_imageAccessibilityLabel': 'Höhepunkte',
-    'Highlights_floor3_shortCredit': '<i>Höhepunkte</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
-
-    'Highlights_floor4_shortTitle': 'Höhepunkte',
-    'Highlights_floor4_longTitle': 'Höhepunkte',
-    'Highlights_floor4_imageAccessibilityLabel': 'Höhepunkte',
-    'Highlights_floor4_shortCredit': '<i>Höhepunkte</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
+    'Highlights_shortTitle': 'Höhepunkte',
+    'Highlights_longTitle': 'Höhepunkte',
+    'Highlights_imageAccessibilityLabel': 'Höhepunkte',
+    'Highlights_shortCredit': '<i>Höhepunkte</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
 
     'TableSettings_shortTitle': 'Tischdekorationen',
     'TableSettings_longTitle': 'Tischdekorationen',
@@ -1374,6 +1297,7 @@ export const strings = {
     'floor': 'Этаж',
     'floor1_Label': 'Этаж 1',
     'floor2_Label': 'Этаж 2',
+    'floor234_Label': 'Этаж 2–4',
     'floor3_Label': 'Этаж 3',
     'floor4_Label': 'Этаж 4',
     'bluetoothAlert_Body': 'Перейдите в Настройки и к опции Bluetooth, чтобы ее включить',
@@ -1429,23 +1353,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Реликвии',
-    'Highlights_floor2_longTitle': 'Реликвии',
-    'Highlights_floor2_imageAccessibilityLabel': 'Реликвии',
-    'Highlights_floor2_shortCredit': '<i>Реликвии</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Реликвии</i>',
-
-    'Highlights_floor3_shortTitle': 'Реликвии',
-    'Highlights_floor3_longTitle': 'Реликвии',
-    'Highlights_floor3_imageAccessibilityLabel': 'Реликвии',
-    'Highlights_floor3_shortCredit': '<i>Реликвии</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Реликвии</i>',
-
-    'Highlights_floor4_shortTitle': 'Реликвии',
-    'Highlights_floor4_longTitle': 'Реликвии',
-    'Highlights_floor4_imageAccessibilityLabel': 'Реликвии',
-    'Highlights_floor4_shortCredit': '<i>Реликвии</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Реликвии</i>',
+    'Highlights_shortTitle': 'Реликвии',
+    'Highlights_longTitle': 'Реликвии',
+    'Highlights_imageAccessibilityLabel': 'Реликвии',
+    'Highlights_shortCredit': '<i>Реликвии</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Реликвии</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Добро пожаловать в Северный музей',
@@ -1504,6 +1416,7 @@ export const strings = {
     'floor': 'Étage',
     'floor1_Label': 'Étage 1',
     'floor2_Label': 'Étage 2',
+    'floor234_Label': 'Étage 2–4',
     'floor3_Label': 'Étage 3',
     'floor4_Label': 'Étage 4',
     'bluetoothAlert_Body': 'Allez dans ',
@@ -1559,23 +1472,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Les incontournables',
-    'Highlights_floor2_longTitle': 'Les incontournables',
-    'Highlights_floor2_imageAccessibilityLabel': 'Les incontournables',
-    'Highlights_floor2_shortCredit': '<i>Les incontournables</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
-
-    'Highlights_floor3_shortTitle': 'Les incontournables',
-    'Highlights_floor3_longTitle': 'Les incontournables',
-    'Highlights_floor3_imageAccessibilityLabel': 'Les incontournables',
-    'Highlights_floor3_shortCredit': '<i>Les incontournables</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
-
-    'Highlights_floor4_shortTitle': 'Les incontournables',
-    'Highlights_floor4_longTitle': 'Les incontournables',
-    'Highlights_floor4_imageAccessibilityLabel': 'Les incontournables',
-    'Highlights_floor4_shortCredit': '<i>Les incontournables</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
+    'Highlights_shortTitle': 'Les incontournables',
+    'Highlights_longTitle': 'Les incontournables',
+    'Highlights_imageAccessibilityLabel': 'Les incontournables',
+    'Highlights_shortCredit': '<i>Les incontournables</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
 
     // 5. CHAPTER HEADERS
     '201': 'Bienvenue au Musée nordique',
@@ -1634,6 +1535,7 @@ export const strings = {
     'floor': '楼层',
     'floor1_Label': '楼层 1',
     'floor2_Label': '楼层 2',
+    'floor234_Label': '楼层 2–4',
     'floor3_Label': '楼层 3',
     'floor4_Label': '楼层 4',
     'bluetoothAlert_Body': '前往“设置”，选择“蓝牙”启动蓝牙功能。',
@@ -1689,23 +1591,11 @@ export const strings = {
     // 3. AMENITIES
 
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Highlights',
-    'Highlights_floor2_longTitle': 'Highlights',
-    'Highlights_floor2_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor2_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
-
-    'Highlights_floor3_shortTitle': 'Highlights',
-    'Highlights_floor3_longTitle': 'Highlights',
-    'Highlights_floor3_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor3_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
-
-    'Highlights_floor4_shortTitle': 'Highlights',
-    'Highlights_floor4_longTitle': 'Highlights',
-    'Highlights_floor4_imageAccessibilityLabel': 'Highlights',
-    'Highlights_floor4_shortCredit': '<i>Highlights</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
+    'Highlights_shortTitle': 'Highlights',
+    'Highlights_longTitle': 'Highlights',
+    'Highlights_imageAccessibilityLabel': 'Highlights',
+    'Highlights_shortCredit': '<i>Highlights</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Highlights</i>',
 
     // 5. CHAPTER HEADERS
     '201': '欢迎来到北欧博物馆',
@@ -1769,48 +1659,35 @@ export const strings = {
     // 2. MUSEUM CONTENT
     // 3. AMENITIES
     // 4. STORY HEADERS
-    'Highlights_floor2_shortTitle': 'Barnens audioguide',
-    'Highlights_floor2_longTitle': 'Barnens audioguide',
-    'Highlights_floor2_imageAccessibilityLabel': 'Barnens audioguide',
-    'Highlights_floor2_shortCredit': '<i>Barnens audioguide</i>',
-    'Highlights_floor2_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
+    'Highlights_shortTitle': 'Barnens audioguide',
+    'Highlights_longTitle': 'Barnens audioguide',
+    'Highlights_imageAccessibilityLabel': 'Barnens audioguide',
+    'Highlights_shortCredit': '<i>Barnens audioguide</i>',
+    'Highlights_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
 
-    'Highlights_floor3_shortTitle': 'Barnens audioguide',
-    'Highlights_floor3_longTitle': 'Barnens audioguide',
-    'Highlights_floor3_imageAccessibilityLabel': 'Barnens audioguide',
-    'Highlights_floor3_shortCredit': '<i>Barnens audioguide</i>',
-    'Highlights_floor3_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
-
-    'Highlights_floor4_shortTitle': 'Barnens audioguide',
-    'Highlights_floor4_longTitle': 'Barnens audioguide',
-    'Highlights_floor4_imageAccessibilityLabel': 'Barnens audioguide',
-    'Highlights_floor4_shortCredit': '<i>Barnens audioguide</i>',
-    'Highlights_floor4_longCredit': 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
     // 5. CHAPTER HEADERS
-    '201': 'Välkommen till Nordiska museet',
-    '202': 'Hemma hos familjen Johansson',
-    '301': 'Smycken',
-    '302': 'Gunvors dockskåp med hiss',
-    '469': 'Skatter av tyg',
-    '316': 'En svan på bordet',
-    '328': 'Tio sorters kakor',
-    '330': 'Museet som handlar om dig',
-    '333': 'Midsommarafton',
-    '355': 'När tiggaren Aron dog',
-    '356': 'Författaren August Strindberg',
-    '357': 'August Strindbergs måleri',
-    '358': 'En förbjuden sidenklänning',
-    '359': 'Ungdomsmode',
-    '401': 'I bondefamiljens parstuga',
-    '408': 'Familjen Torstensons paradsängkammare',
-    '413': 'Bryggare Hartmans hus',
-    '423': 'Pampigt som ett slott',
-    '424': 'Hemma hos en fattig familj',
-    '425': 'Den märkvärdiga radion',
-    '426': 'Sápmi',
-    '434': 'Renen',
-    '451': 'Färgade ullstrumpor',
-    '456': 'En serietidning från förr',
+    '201': 'A. Välkommen till Nordiska museet',
+    '425': 'B. Den märkvärdiga radion',
+    '424': 'C. Hemma hos en fattig familj',
+    '413': 'D. Bryggare Hartmans hus',
+    '408': 'E. Familjen Torstensons paradsängkammare',
+    '401': 'F. I bondefamiljens parstuga',
+    '451': 'G. Färgade ullstrumpor',
+    '456': 'H. En serietidning från förr',
+    '469': 'I. Skatter av tyg',
+    '423': 'J. Pampigt som ett slott',
+    '426': 'K. Sápmi',
+    '434': 'L. Renen',
+    '328': 'M. Tio sorters kakor',
+    '316': 'N. En svan på bordet',
+    '302': 'O. Gunvors dockskåp med hiss',
+    '301': 'P. Smycken',
+    '356': 'Q. Författaren August Strindberg',
+    '357': 'R. August Strindbergs måleri',
+    '333': 'S. Midsommarafton',
+    '355': 'T. När tiggaren Aron dog',
+    '330': 'U. Museet som handlar om dig',
+    '202': 'V. Hemma hos familjen Johansson',
     //6. TRANSCRIPTS
   },
 
