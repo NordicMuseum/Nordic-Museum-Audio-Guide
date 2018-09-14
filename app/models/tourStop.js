@@ -19,7 +19,7 @@ export class TourStop {
     properties: {
       uuid: { type: 'string' },
       order: { type: 'int' },
-      floor: { type: 'int' },
+      floor: { type: 'string' },
       shortTitle: { type: 'string' },
       longTitle: { type: 'string' },
       shortCreditAccessibilityLabel: { type: 'string', optional: true },

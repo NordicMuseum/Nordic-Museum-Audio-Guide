@@ -214,7 +214,7 @@ class NearMeScreen extends Component {
         if (audioContent.length > 0) {
           stickyHeaders.push(totalIndex);
           highlightsList.push(
-            <StickyHeader key={totalIndex} title={I18n.t('Highlights_floor2_shortTitle')} />
+            <StickyHeader key={totalIndex} title={I18n.t('Highlights_shortTitle')} />
           );
 
           const uuids = [];
@@ -228,8 +228,8 @@ class NearMeScreen extends Component {
           const tourStop = {
             uuid: uuid.v4(),
             floor: this.props.floor,
-            shortTitle: I18n.t('Highlights_floor2_shortTitle'),
-            longTitle: I18n.t('Highlights_floor2_shortTitle'),
+            shortTitle: I18n.t('Highlights_shortTitle'),
+            longTitle: I18n.t('Highlights_shortTitle'),
             audioContent: audioContentRealm.filtered(query),
           };
 
