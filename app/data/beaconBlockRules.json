@@ -166,7 +166,7 @@
     "name": "NW Stairs 4 / J7uw",
     "uuid": "15986:5921",
     "floor": "4",
-    "region": "Sapmi",
+    "region": "N Balcony 4",
     "blocks": []
   },
   "47336:29503": {
@@ -278,7 +278,7 @@
     "name": "NE Stairs 4 / CpV8",
     "uuid": "49122:20803",
     "floor": "4",
-    "region": "Textile Gallery",
+    "region": "N Balcony 4",
     "blocks": []
   },
   "48454:2700": {
@@ -441,7 +441,7 @@
     "name": "NE Stairs 4 / RRmU",
     "uuid": "4566:64223",
     "floor": "4",
-    "region": "Textile Gallery",
+    "region": "N Balcony 4",
     "blocks": []
   },
   "71:4198": {
@@ -455,7 +455,7 @@
     "name": "NW Stairs 4 / KE1R",
     "uuid": "2696:21588",
     "floor": "4",
-    "region": "Sapmi",
+    "region": "N Balcony 4",
     "blocks": []
   },
   "30811:7446": {
