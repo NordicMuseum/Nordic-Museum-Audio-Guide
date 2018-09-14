@@ -6,7 +6,7 @@ import uuid from 'uuid';
 export const tourStops = [
   {
     uuid: uuid.v4(),
-    floor: 234,
+    floor: '2–4',
     order: 0,
     shortTitle: 'Highlights_shortTitle',
     longTitle: 'Highlights_longTitle',
@@ -600,7 +600,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 3,
+    floor: '3',
     order: 1,
     shortTitle: 'Traditions_shortTitle',
     longTitle: 'Traditions_longTitle',
@@ -980,7 +980,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 3,
+    floor: '3',
     order: 2,
     shortTitle: 'TableSettings_shortTitle',
     longTitle: 'TableSettings_longTitle',
@@ -1299,7 +1299,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 4,
+    floor: '4',
     order: 1,
     shortTitle: 'HomesAndInteriors_shortTitle',
     longTitle: 'HomesAndInteriors_longTitle',
@@ -1714,7 +1714,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 4,
+    floor: '4',
     order: 2,
     shortTitle: 'Sapmi_shortTitle',
     longTitle: 'Sapmi_longTitle',
@@ -2075,7 +2075,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 4,
+    floor: '4',
     order: 3,
     shortTitle: 'TextileGallery_shortTitle',
     longTitle: 'TextileGallery_longTitle',
@@ -2224,7 +2224,7 @@ export const tourStops = [
   },
   {
     uuid: uuid.v4(),
-    floor: 4,
+    floor: '4',
     order: 4,
     shortTitle: 'SwedishFolkArt_shortTitle',
     longTitle: 'SwedishFolkArt_longTitle',
