@@ -44,7 +44,6 @@ Höjdpunkter: NMA.0030770 Foto: Karl Heinz Hernried
 Barnens audioguide: Illustration av Ann-Sofi Marminge
 Traditioner: NMA.0029961 Foto: Karl Heinz Hernried
 Dukade bord: NMA.0036167 Foto: Karl-Erik Granath
-Modemakt: NMA.0038609 Foto: Nordin Nilsson
 Textilgalleriet: NMA.0027979 Foto: Mats Landin
 Sápmi: NMA.0056303 Foto: Rolf Kjellström
 Folkkonst: NM.0050874 Foto: Karolina Kristensson

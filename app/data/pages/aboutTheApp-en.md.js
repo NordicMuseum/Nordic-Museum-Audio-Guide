@@ -43,7 +43,6 @@ Welcome Image: NMA.03906 Photo: Karl-Erik Granath
 Highlights: NMA.0030770 Photo: Karl Heinz Hernried
 Traditions: NMA.0029961 Photo: Karl Heinz Hernried
 Table Settings: NMA.0036167 Photo: Karl-Erik Granath
-Power of Fashion: NMA.0038609 Photo: Nordin Nilsson
 Textile Gallery: NMA.0027979 Photo: Mats Landin
 Sápmi: NMA.0056303 Photo: Rolf Kjellström
 Swedish Folk Art: NM.0050874 Photo: Karolina Kristensson
