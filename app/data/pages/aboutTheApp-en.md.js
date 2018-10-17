@@ -48,6 +48,10 @@ Sápmi: NMA.0056303 Photo: Rolf Kjellström
 Swedish Folk Art: NM.0050874 Photo: Karolina Kristensson
 Homes and Interiors: NMA.0033276 Photo: Unknown © Nordiska museets arkiv
 
-Photo of the Nordic Museum: photo by John Swan/Canopy Aero`;
+Photo of the Nordic Museum: photo by John Swan/Canopy Aero
+
+# Privacy Policy
+
+https://www.nordiskamuseet.se/om-museet/integritetspolicy`;
 
 export default text;

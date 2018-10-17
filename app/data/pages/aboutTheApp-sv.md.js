@@ -49,6 +49,10 @@ Sápmi: NMA.0056303 Foto: Rolf Kjellström
 Folkkonst: NM.0050874 Foto: Karolina Kristensson
 Hem och bostad: NMA.0033276 Foto: Okänd © Nordiska museets arkiv
 
-Bild på Nordiska museet: fotograf John Swan/Canopy Aero`;
+Bild på Nordiska museet: fotograf John Swan/Canopy Aero
+
+# Integritetspolicy
+
+https://www.nordiskamuseet.se/om-museet/integritetspolicy`;
 
 export default text;
