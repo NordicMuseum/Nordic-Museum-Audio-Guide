@@ -166,7 +166,6 @@ class TourStopScreen extends Component {
     searchedTrack: PropTypes.object,
     searchedTrackIndex: PropTypes.number,
     floor: PropTypes.number.isRequired,
-    duration: PropTypes.number.isRequired,
     actions: PropTypes.shape({
       playTrack: PropTypes.func.isRequired,
       unloadAudio: PropTypes.func.isRequired,
@@ -196,6 +195,8 @@ class TourStopScreen extends Component {
     const { tourStop, locale } = this.props;
 
     const { playTrack, togglePausePlay } = this.props.actions;
+    
+    const duration = tourStop.duration[locale];
 
     let containerMargin = BOTTOMBARHEIGHT;
     if (this.props.playerOpen) {
@@ -299,7 +300,7 @@ class TourStopScreen extends Component {
                         source={require('../assets/ClockIcon.png')}
                       />
                       <Text style={styles.durationText}>
-                        {`${Math.floor(this.props.duration / 60)} ${I18n.t('min').toUpperCase()}`}
+                        {`${Math.floor(duration / 60)} ${I18n.t('min').toUpperCase()}`}
                       </Text>
                     </View>
                   </View>
