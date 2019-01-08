@@ -42,3 +42,5 @@ All files that are the intellectual property owned by the Nordic Museum and othe
 [Indoor Location](readMe/indoorLocation.md)
 
 [Content structure](readMe/contentStructure.md)
+
+Use Node 8 to install (Node 10 not supported yet)
