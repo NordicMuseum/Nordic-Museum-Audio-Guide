@@ -3,6 +3,10 @@ import {
   UPDATE_BEACONS,
 } from '../actions/beacon';
 
+import {
+  RESET,
+} from '../actions/device';
+
 // TODO: In the future load data from a database to prevent memory pressure
 import blockRules from '../data/beaconBlockRules.json';
 
@@ -28,6 +32,11 @@ export const initialState = {
 
 export function closeTourStops(state = initialState, action) {
   switch (action.type) {
+
+    case RESET: {
+      return initialState;
+    }
+
     case UPDATE_BEACONS: {
       if (action.newBeacons.length === 0) {
         return Object.assign({},

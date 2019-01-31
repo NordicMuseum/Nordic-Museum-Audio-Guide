@@ -31,6 +31,10 @@ import {
   STOP_TIMER,
 } from '../actions/audioTimer';
 
+import {
+  RESET,
+} from '../actions/device';
+
 const initialState = {
   tourStop: {},
   audioContent: {},
@@ -59,6 +63,11 @@ const initialState = {
 
 export function bottomPlayer(state = initialState, action) {
   switch (action.type) {
+
+    case RESET: {
+      return initialState;
+    }
+
     case SCREEN_READER_STATUS: {
       return Object.assign({},
         state,

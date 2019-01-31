@@ -6,6 +6,10 @@ import {
   TAB_STORIES,
 } from '../actions/navigation';
 
+import {
+  RESET,
+} from '../actions/device';
+
 const initialState = {
   currentAudioRoute: {},
   currentAudioTab: '',
@@ -15,6 +19,11 @@ const initialState = {
 
 export function nav(state = initialState, action) {
   switch (action.type) {
+
+    case RESET: {
+      return initialState;
+    }
+
     case UPDATE_ACTIVE_TAB: {
       return Object.assign({},
         state,

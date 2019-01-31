@@ -4,6 +4,10 @@ import {
   SHOW_TUTORIAL,
  } from '../actions/tutorial';
 
+import {
+  RESET
+ } from '../actions/device';
+
 const initialState = {
   tutorialHidden: false,
 };
@@ -19,6 +23,10 @@ export function tutorial(state = initialState, action) {
           }
         )
       );
+    }
+
+    case RESET: {
+      return initialState;
     }
 
     case HIDE_TUTORIAL: {

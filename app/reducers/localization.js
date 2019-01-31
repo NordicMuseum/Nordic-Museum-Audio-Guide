@@ -3,6 +3,10 @@ import { strings } from '../data/strings';
 
 import { SWITCH_LOCALE } from '../actions/localization';
 
+import {
+  RESET,
+} from '../actions/device';
+
 const initialState = {
   locale: 'en',
 };
@@ -14,6 +18,11 @@ I18n.fallbacks = true;
 
 export function localization(state = initialState, action) {
   switch (action.type) {
+
+    case RESET: {
+      return initialState;
+    }
+    
     case SWITCH_LOCALE: {
       I18n.locale = action.locale;
       if (
