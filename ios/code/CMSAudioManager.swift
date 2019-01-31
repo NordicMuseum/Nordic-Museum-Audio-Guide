@@ -9,6 +9,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 enum CMSAudioManagerEvents:String {
   case AudioManagerDidUpdateTime
@@ -34,8 +35,24 @@ class CMSAudioManager: RCTEventEmitter {
   override init() {
     super.init()
 
-    try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+    UIApplication.shared.beginReceivingRemoteControlEvents()
+    
+    try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
     try! AVAudioSession.sharedInstance().setActive(true)
+    
+    let commandCenter = MPRemoteCommandCenter.shared()
+    commandCenter.playCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
+      self.play()
+      return .success
+    }
+    commandCenter.pauseCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
+      self.pause()
+      return .success
+    }
+    commandCenter.stopCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
+      self.stop()
+      return .success
+    }
   }
 
   override func constantsToExport() -> [String: Any] {
@@ -112,6 +129,24 @@ class CMSAudioManager: RCTEventEmitter {
                        options: NSKeyValueObservingOptions.new,
                        context: nil)
     playerStatusObserving = true
+    
+    var nowPlayingInfo = [String : Any]()
+    nowPlayingInfo[MPMediaItemPropertyTitle] = "Audio Guide"
+    
+    if let image = UIImage(named: "AppIcon") {
+      if #available(iOS 10.0, *) {
+        nowPlayingInfo[MPMediaItemPropertyArtwork] =
+          MPMediaItemArtwork(boundsSize: image.size) { size in
+            return image
+        }
+      }
+    }
+    nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = playerItem.currentTime().seconds
+    nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = playerItem.asset.duration.seconds
+    nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
+    
+    // Set the metadata
+    MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
   }
 
   @objc func unloadAudio() {
@@ -205,6 +240,15 @@ class CMSAudioManager: RCTEventEmitter {
       return
     }
 
+    player.pause()
+  }
+  
+  @objc func stop() {
+    guard player.currentItem != nil else {
+      return
+    }
+    
+    self.seekToTime(0.0)
     player.pause()
   }
 
