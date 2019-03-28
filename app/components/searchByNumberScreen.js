@@ -11,6 +11,7 @@ import {
   Dimensions,
   Image,
   I18nManager,
+  Settings
 } from 'react-native';
 
 import { analyticsTrackCodeSearched } from '../actions/analytics';
@@ -20,8 +21,6 @@ import TourStopScreen from '../containers/tourStop';
 import NavigationBar from './navigationBar';
 
 import { OFF_BLACK, SELECTED, NAV_BAR_BACKGROUND, NAV_BAR_TEXT } from '../styles';
-
-const numberOfDigits = 4; //how many digits in the tourStop data model? TODO move to settings
 
 const styles = StyleSheet.create({
   container: {
@@ -130,10 +129,10 @@ class SearchByNumberScreen extends Component {
   };
 
   componentWillMount() {
-    if numberOfDigits === 3 {
+    if Settings.get('numberOfDigits') === 3 {
       this.props.actions.editDigits([null, null, null]);  
     }
-    if numberOfDigits === 4 {
+    if Settings.get('numberOfDigits') === 4 {
       this.props.actions.editDigits([null, null, null, null]);
     }
     this.setState({
@@ -197,10 +196,10 @@ class SearchByNumberScreen extends Component {
         // HACKY!
         // Because who knows how long the transition will take?
         setTimeout(() => {
-          if numberOfDigits === 3 {
+          if Settings.get('numberOfDigits') === 3 {
             this.props.actions.editDigits([null, null, null]);  
           }
-          if numberOfDigits === 4 {
+          if Settings.get('numberOfDigits') === 4 {
             this.props.actions.editDigits([null, null, null, null]);
           }
         }, tryAgainMessageTime);
@@ -211,10 +210,10 @@ class SearchByNumberScreen extends Component {
           numberNotFound: false,
           tryAgainMessage: null,
         });
-        if numberOfDigits === 3 {
+        if Settings.get('numberOfDigits') === 3 {
           this.props.actions.editDigits([null, null, null]);  
         }
-        if numberOfDigits === 4 {
+        if Settings.get('numberOfDigits') === 4 {
           this.props.actions.editDigits([null, null, null, null]);
         }
       }, tryAgainMessageTime);
@@ -229,7 +228,7 @@ class SearchByNumberScreen extends Component {
     const updatedDigits = [];
     let digitAdded = false;
     let digitIndex = 0;
-    for (let i = 0; i < numberOfDigits; i++) {
+    for (let i = 0; i < Settings.get('numberOfDigits'); i++) {
       if (this.props.digits[i] !== null) {
         updatedDigits[i] = this.props.digits[i];
       } else if (!digitAdded) {
@@ -243,7 +242,7 @@ class SearchByNumberScreen extends Component {
 
     this.props.actions.editDigits(updatedDigits);
 
-    if (digitIndex === numberOfDigits-1) {
+    if (digitIndex === Settings.get('numberOfDigits')-1) {
       this.loadTourStop(updatedDigits.join(''), this.props.tourStops);
     }
   }
@@ -251,7 +250,7 @@ class SearchByNumberScreen extends Component {
   deleteDigit() {
     const updatedDigits = [];
     let digitDeleted = false;
-    for (let i = numberOfDigits-1; i >= 0; i--) {
+    for (let i = Settings.get('numberOfDigits')-1; i >= 0; i--) {
       if (this.props.digits[i] !== null && !digitDeleted) {
         updatedDigits[i] = null;
         digitDeleted = true;

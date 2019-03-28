@@ -20,6 +20,7 @@ const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
 const lastAppVersion = Settings.get('LastAppVersion');
 const showTutorialEveryTime = Settings.get('ShowTutorialEveryTime');
 const localeChangedFromSettings = Settings.get('localeChangedFromSettings');
+const numberOfDigits = 3;
 
 const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
@@ -32,6 +33,7 @@ store.dispatch(
 );
 
 Settings.set({ localeChangedFromSettings: false });
+Settings.set({ numberOfDigits: numberOfDigits });
 
 if (newVersion) {
   Settings.set({ LastAppVersion: appVersion });
