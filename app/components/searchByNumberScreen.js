@@ -21,6 +21,8 @@ import NavigationBar from './navigationBar';
 
 import { OFF_BLACK, SELECTED, NAV_BAR_BACKGROUND, NAV_BAR_TEXT } from '../styles';
 
+const numberOfDigits = 4; //how many digits in the tourStop data model? TODO move to settings
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -128,7 +130,12 @@ class SearchByNumberScreen extends Component {
   };
 
   componentWillMount() {
-    this.props.actions.editDigits([null, null, null]);
+    if numberOfDigits === 3 {
+      this.props.actions.editDigits([null, null, null]);  
+    }
+    if numberOfDigits === 4 {
+      this.props.actions.editDigits([null, null, null, null]);
+    }
     this.setState({
       numberNotFound: false,
       tryAgainMessage: null,
@@ -190,7 +197,12 @@ class SearchByNumberScreen extends Component {
         // HACKY!
         // Because who knows how long the transition will take?
         setTimeout(() => {
-          this.props.actions.editDigits([null, null, null]);
+          if numberOfDigits === 3 {
+            this.props.actions.editDigits([null, null, null]);  
+          }
+          if numberOfDigits === 4 {
+            this.props.actions.editDigits([null, null, null, null]);
+          }
         }, tryAgainMessageTime);
       }, foundTransitionTime);
     } else {
@@ -199,7 +211,12 @@ class SearchByNumberScreen extends Component {
           numberNotFound: false,
           tryAgainMessage: null,
         });
-        this.props.actions.editDigits([null, null, null]);
+        if numberOfDigits === 3 {
+          this.props.actions.editDigits([null, null, null]);  
+        }
+        if numberOfDigits === 4 {
+          this.props.actions.editDigits([null, null, null, null]);
+        }
       }, tryAgainMessageTime);
       this.setState({
         numberNotFound: true,
@@ -212,7 +229,7 @@ class SearchByNumberScreen extends Component {
     const updatedDigits = [];
     let digitAdded = false;
     let digitIndex = 0;
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < numberOfDigits; i++) {
       if (this.props.digits[i] !== null) {
         updatedDigits[i] = this.props.digits[i];
       } else if (!digitAdded) {
@@ -226,7 +243,7 @@ class SearchByNumberScreen extends Component {
 
     this.props.actions.editDigits(updatedDigits);
 
-    if (digitIndex === 2) {
+    if (digitIndex === numberOfDigits-1) {
       this.loadTourStop(updatedDigits.join(''), this.props.tourStops);
     }
   }
@@ -234,7 +251,7 @@ class SearchByNumberScreen extends Component {
   deleteDigit() {
     const updatedDigits = [];
     let digitDeleted = false;
-    for (let i = 2; i >= 0; i--) {
+    for (let i = numberOfDigits-1; i >= 0; i--) {
       if (this.props.digits[i] !== null && !digitDeleted) {
         updatedDigits[i] = null;
         digitDeleted = true;
