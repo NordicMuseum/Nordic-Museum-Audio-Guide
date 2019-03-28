@@ -23,7 +23,6 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		320597A01EF081400085EB7D /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3205979E1EF081400085EB7D /* Root.strings */; };
 		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
-		3226C1541EF807220024EC53 /* SupportedOrientationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */; };
 		3226C1561EFB01300024EC53 /* highlightsKids.png in Resources */ = {isa = PBXBuildFile; fileRef = 3226C1551EFB01300024EC53 /* highlightsKids.png */; };
 		3271C41D1EE8659400217AC1 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C41C1EE8659400217AC1 /* welcome.png */; };
 		327F7EF31ECAB4F1003A67BC /* highlights.png in Resources */ = {isa = PBXBuildFile; fileRef = 327F7EDB1ECAB4F0003A67BC /* highlights.png */; };
@@ -51,6 +50,7 @@
 		89DB25260881405EB749C488 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC665411C24E4CF6A5C2773D /* libz.tbd */; };
 		8C5FAA5343744AA884971758 /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B991F4038E0A48CCB38481C8 /* libRCTGoogleAnalyticsBridge.a */; };
 		953AEC01E85E4481A2A84F23 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B32456E3701E4F57ADFC4A7D /* libRNI18n.a */; };
+		9594F3AE224CFD8500C033F8 /* SupportedOrientationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9594F3AD224CFD8500C033F8 /* SupportedOrientationsViewController.m */; };
 		E006A0FB1EDF5BC60022F572 /* 449 in Resources */ = {isa = PBXBuildFile; fileRef = E006A0FA1EDF5BC60022F572 /* 449 */; };
 		E018D4961ECBA6D3007D0478 /* 301 in Resources */ = {isa = PBXBuildFile; fileRef = E018D4001ECBA6D2007D0478 /* 301 */; };
 		E018D4971ECBA6D3007D0478 /* 302 in Resources */ = {isa = PBXBuildFile; fileRef = E018D4011ECBA6D2007D0478 /* 302 */; };
@@ -305,7 +305,6 @@
 		320597A11EF081490085EB7D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Translations/sv.lproj/Root.strings; sourceTree = "<group>"; };
 		320597A21EF081700085EB7D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Translations/de.lproj/Root.strings; sourceTree = "<group>"; };
 		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedOrientationsViewController.swift; sourceTree = "<group>"; };
 		3226C1551EFB01300024EC53 /* highlightsKids.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlightsKids.png; path = images/highlightsKids.png; sourceTree = "<group>"; };
 		3271C41C1EE8659400217AC1 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = images/welcome.png; sourceTree = "<group>"; };
 		327F7E331ECAB30C003A67BC /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AndyWarholAccessibilityProject-Bridging-Header.h"; path = "code/AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -340,6 +339,8 @@
 		6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9594F3AC224CFD8500C033F8 /* SupportedOrientationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupportedOrientationsViewController.h; sourceTree = "<group>"; };
+		9594F3AD224CFD8500C033F8 /* SupportedOrientationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupportedOrientationsViewController.m; sourceTree = "<group>"; };
 		95AFA373C9D0BDC4AEFE09E8 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC665411C24E4CF6A5C2773D /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B32456E3701E4F57ADFC4A7D /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
@@ -581,7 +582,8 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				3226C1531EF807220024EC53 /* SupportedOrientationsViewController.swift */,
+				9594F3AC224CFD8500C033F8 /* SupportedOrientationsViewController.h */,
+				9594F3AD224CFD8500C033F8 /* SupportedOrientationsViewController.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -1354,7 +1356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3226C1541EF807220024EC53 /* SupportedOrientationsViewController.swift in Sources */,
 				07CD9D641EBBBE1C0014FC81 /* CMSRTLManager.swift in Sources */,
 				07CD9D651EBBBE1C0014FC81 /* CMSRTLManagerBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
@@ -1362,6 +1363,7 @@
 				32CADBBE1D709B15006122E5 /* CMSAccessibilityManagerBridge.m in Sources */,
 				32CADBBD1D709B15006122E5 /* CMSAccessibilityManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				9594F3AE224CFD8500C033F8 /* SupportedOrientationsViewController.m in Sources */,
 				32CADBC11D709B15006122E5 /* CMSBeaconManager.swift in Sources */,
 				32CADBC21D709B15006122E5 /* CMSBeaconManagerBridge.m in Sources */,
 				32CADBBF1D709B15006122E5 /* CMSAudioManager.swift in Sources */,

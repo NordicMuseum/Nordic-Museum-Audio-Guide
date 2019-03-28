@@ -9,11 +9,11 @@
 
 #import "AppDelegate.h"
 
-#import "AndyWarholAccessibilityProject-Swift.h"
-
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
 #import "RCTI18nUtil.h"
+
+#import "SupportedOrientationsViewController.h"
 
 @implementation AppDelegate
 
