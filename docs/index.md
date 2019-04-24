@@ -8,6 +8,18 @@ Targets: iOS 9.0 or greater
 
 A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud). The app was released to the public in June 2017 (see [release schedule](https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide/releases)).
 
+### Development Notes
+
+[Archecture of this project](architecture.md)
+
+[Indoor Location](indoorLocation.md)
+
+[Content structure](contentStructure.md)
+
+[Features & trade-offs](features.md)
+
+Use Node 8 to install (Node 10 not supported yet)
+
 ### Building and Running
 
 1. Install all React Native dependencies  
@@ -35,12 +47,4 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 
 All files that are the intellectual property owned by the Nordic Museum and other third-parties have been removed from this repo and replaced with placeholders. This includes all the images and audio files included in the App Bundle. Additional museum information remains in the code to give an overall sense of the app.
 
-### Development Notes
 
-[Archecture of this project](architecture.md)
-
-[Indoor Location](indoorLocation.md)
-
-[Content structure](contentStructure.md)
-
-Use Node 8 to install (Node 10 not supported yet)
