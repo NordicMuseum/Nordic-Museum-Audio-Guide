@@ -23,5 +23,5 @@ footer:
   links:
     - label: "Github Repository"
       icon: "fab fa-fw fa-github"
-      url: {{ site.github.url }}
+      url: https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide
     
