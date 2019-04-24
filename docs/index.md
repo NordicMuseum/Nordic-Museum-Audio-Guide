@@ -10,13 +10,10 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 
 ### Development Notes
 
-[Archecture of this project](architecture.md)
-
-[Indoor Location](indoorLocation.md)
-
-[Content structure](contentStructure.md)
-
-[Features & trade-offs](features.md)
+* [Archecture of this project](architecture.md)
+* [Indoor Location](indoorLocation.md)
+* [Content structure](contentStructure.md)
+* [Features & trade-offs](features.md)
 
 Use Node 8 to install (Node 10 not supported yet)
 

@@ -12,13 +12,10 @@ More in-depth readme available at [https://nordicmuseum.github.io/Nordic-Museum-
 
 ### Development Notes
 
-[Archecture of this project](readMe/architecture.md)
-
-[Indoor Location](readMe/indoorLocation.md)
-
-[Content structure](readMe/contentStructure.md)
-
-[Features & trade-offs](features.md)
+* [Archecture of this project](readMe/architecture.md)
+* [Indoor Location](readMe/indoorLocation.md)
+* [Content structure](readMe/contentStructure.md)
+* [Features & trade-offs](features.md)
 
 Use Node 8 to install (Node 10 not supported yet)
 

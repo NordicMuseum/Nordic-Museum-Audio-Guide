@@ -1,4 +1,4 @@
-# # Features and trade-offs
+# Features and trade-offs
 As with all software products, there are a number of assumptions, design decisions and trade-offs that impact the feature set and end user experience. 
 
 ## Audio Guide basics
