@@ -1,10 +1,10 @@
 main:
   - title: "Architecture"
-    url: /architecture/
+    url: /architecture.html
   - title: "Content Structure"
-    url: /contentStructure/
+    url: /contentStructure.html
   - title: "Indoor Location"
-    url: /indoorLocation/
+    url: /indoorLocation.html
   - title: "Features & Trade-offs"
-    url: /features/
+    url: /features.html
     
