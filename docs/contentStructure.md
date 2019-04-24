@@ -1,4 +1,8 @@
-# Content Structure
+---
+title: Content Structure
+toc_label: Content Structure
+toc: true
+---
 
 ## Overview
 

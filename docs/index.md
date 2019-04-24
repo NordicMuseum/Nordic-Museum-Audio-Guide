@@ -1,4 +1,8 @@
-# Nordic Museum Audio Guide
+---
+title: Nordic Museum Audio Guide
+toc_label: Nordic Museum Audio Guide
+toc: true
+---
 
 Targets: iOS 9.0 or greater
 
@@ -30,8 +34,7 @@ Use Node 8 to install (Node 10 not supported yet)
   react-native run-ios
   ```
 
-#### Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
-<!-- -->
+Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
 
 1. Open ios/AndyWarholAccessibilityProject.xcworkspace in XCode.
 2. Select the project ("AndyWarholAccessibilityProject") in the top left.

@@ -41,3 +41,8 @@ android/app/libs
 android/keystores/debug.keystore
 
 *Icon?
+
+# Docs
+docs/Gemfile
+docs/_site/*
+docs/Gemfile.lock

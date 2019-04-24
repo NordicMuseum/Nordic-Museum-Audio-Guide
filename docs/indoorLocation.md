@@ -1,4 +1,8 @@
-# Indoor Location
+---
+title: Indoor Location
+toc_label: Indoor Location
+toc: true
+---
 
 ### Overview
 

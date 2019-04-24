@@ -1,1 +1,27 @@
-theme: jekyll-theme-slate
+plugins:
+  - jekyll-include-cache
+remote_theme: "mmistakes/minimal-mistakes@4.16.0"
+minimal_mistakes_skin: "dirt"
+title: "Nordic Museum Audio Guide"
+title_separator: "|"
+repository: "NordicMuseum/Nordic-Museum-Audio-Guide"
+breadcrumbs: true
+author:
+  name     : "Aron Ambrosiani, Ruben Niculcea"
+  bio      : "Documentation written by Aron Ambrosiani (Digital Media Producer at the Nordic Museum) & Ruben Niculcea (lead developer)."
+  location : "Stockholm & Pittsburgh" 
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+logo: "/assets/images/logo.png"
+footer:
+  links:
+    - label: "Github Repository"
+      icon: "fab fa-fw fa-github"
+      url: {{ site.github.url }}
+    

@@ -1,4 +1,8 @@
-# Architecture
+---
+title: Architecture
+toc_label: Architecture
+toc: true
+---
 
 This audio guide is structured to have a single direction data flow architecture. To accomplish this it uses Redux for state management, React Native for view layout and construction and Actors to handle events not triggered by the UI, for example when new Beacons are detected.
 
