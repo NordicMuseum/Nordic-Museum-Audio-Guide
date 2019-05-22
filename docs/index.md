@@ -18,6 +18,9 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 * [Indoor Location](indoorLocation.md)
 * [Content structure](contentStructure.md)
 * [Features & trade-offs](features.md)
+* [Publishing on the App Store](publishing.md)
+* [Using ipods as loan devices](ipods.md)
+* [Blog Posts by the Innovation Studio](blogposts.md)
 
 Use Node 8 to install (Node 10 not supported yet)
 

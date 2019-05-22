@@ -52,7 +52,8 @@ There are two about pages in the app. These are regular components in the app/co
 ## Localization
 
 The app is localized using [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n). Localized strings are put in [app/data/strings.js](../app/data/strings.js). In app components, localized strings are fetched using the I18n.t function. Example:
-
->`<Text style={styles.floorText}>`  
->``  {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}``  
->`</Text>`
+```
+<Text style={styles.floorText}>
+  {`${I18n.t('floor').toUpperCase()} ${this.props.floor}`}
+</Text>
+```
