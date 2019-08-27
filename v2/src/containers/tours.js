@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
   },
 });
 
+import ToursScreen from '../components/toursScreen';
+
 const pushToTourStop = (componentId, passedProps) => {
   Navigation.push(componentId, {
     component: {
@@ -45,6 +47,7 @@ const Tours = props => {
         color="#841584"
         accessibilityLabel="Push to Tour Stop 1"
       />
+      <ToursScreen />
     </View>
   );
 };
