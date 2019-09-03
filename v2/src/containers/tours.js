@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {StyleSheet, View, Text, Button} from 'react-native';
 
 import {Navigation} from 'react-native-navigation';
+
+import { NAV_BAR_TEXT, NAV_BAR_BACKGROUND }  from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,10 +33,27 @@ const pushToTourStop = (componentId, passedProps) => {
   });
 };
 
-const Tours = props => {
-  return (
+
+class Tours extends Component {
+  static options(passProps) {
+    return {
+      topBar: {
+        background: {
+          color: NAV_BAR_BACKGROUND,
+        },
+        title: {
+          text: 'Browse',
+          fontSize: 17,
+          fontFamily: 'Helvetica',
+          color: NAV_BAR_TEXT,
+        }
+      }
+    };
+  }
+
+  render() {
+    return (
     <View style={styles.container}>
-      <Text style={styles.text}>Tours</Text>
       <Button
         onPress={() => {
           const passedProps = {
@@ -50,6 +69,8 @@ const Tours = props => {
       <ToursScreen />
     </View>
   );
-};
+  }
+
+}
 
 export default Tours;

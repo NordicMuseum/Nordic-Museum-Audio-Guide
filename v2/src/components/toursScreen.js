@@ -6,7 +6,6 @@ import { StyleSheet, View } from 'react-native';
 
 // import { analyticsTrackScreen } from '../actions/analytics';
 
-import NavigationBar from './navigationBar';
 import Grid from './grid';
 import TourStop from '../containers/tourStop';
 
@@ -61,17 +60,6 @@ class ToursScreen extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <View style={styles.statusBar} />
-        <NavigationBar
-          label={'storiesScreen_Title'}
-          labelStyle={{
-            color: NAV_BAR_TEXT,
-          }}
-          barStyle={{
-            backgroundColor: NAV_BAR_BACKGROUND,
-            height: 44,
-          }}
-        />
         <View style={[styles.container, { marginBottom: containerMargin }]}>
            <Grid
             locale={this.props.locale}
@@ -103,8 +91,3 @@ class ToursScreen extends Component {
 }
 
 export default ToursScreen;
-
-/*
- <View />
-         
-        */
