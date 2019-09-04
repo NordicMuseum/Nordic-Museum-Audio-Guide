@@ -22,9 +22,9 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 * [Using ipods as loan devices](ipods.md)
 * [Blog Posts by the Innovation Studio](blogposts.md)
 
-Use Node 8 to install (Node 10 not supported yet)
-
 ### Building and Running
+
+For now, use [XCode 9.4.1](https://developer.apple.com/download/more/) and Node 9.11.1 (multiple Node versions can be handled using [NVM](https://github.com/nvm-sh/nvm)).
 
 1. Install all React Native dependencies  
 [React Native getting started guide](https://facebook.github.io/react-native/docs/getting-started.html)
