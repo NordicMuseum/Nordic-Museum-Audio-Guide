@@ -38,7 +38,6 @@ app.get('/',function(req,res){
 					// Unchanged fields
 					case 'floor':
 					case 'order':
-					case 'regions':
 					case 'imageURL':
 					case 'imageWidth':
 					case 'imageHeight':
@@ -69,7 +68,10 @@ app.get('/',function(req,res){
 
 					// Three Special Cases:
 
-					// 1) UUID --> TO DO CORRECTLY
+					// 1) Regions --> Flatten List
+					case 'regions':
+						tourStops[i]['regions'] = value.toString();
+						break;
 
 					// 2) 'LongTitle' --> record as 'Title'
 					case 'longTitle':
@@ -87,12 +89,14 @@ app.get('/',function(req,res){
 
 					// 4) Case Audio Content --> Deeper Dive
 					case 'audioContent':
+						var contentList = [];
 						for (var a in value) {
 							var audio = value[a];
 							writeAudioContentObject(audio.title, audio);
 							
-							tourStops[i]['audioContent'][a] = audio.title;
+							contentList[a] = audio.title;
 						}
+						tourStops[i]['audioContent'] = contentList.toString();
 						break;
 
 					default:

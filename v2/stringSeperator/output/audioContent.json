@@ -1,6 +1,6 @@
 {
 	"201": {
-		"uuid": "cc28abba-7c58-4ce8-b9a6-80ecbbdf218c",
+		"uuid": "f0ac8aa5-187a-476e-8fb4-cc8602ac222a",
 		"regions": [
 			"Great Hall"
 		],
@@ -43,7 +43,7 @@
 		"id": "201"
 	},
 	"202": {
-		"uuid": "8a372f19-682f-4a8b-87ad-3a7239b9f789",
+		"uuid": "ad1e7e92-3a7d-4ba3-a471-67d49f7fb728",
 		"regions": [
 			"1940s Apartment"
 		],
@@ -81,7 +81,7 @@
 		"id": "202"
 	},
 	"301": {
-		"uuid": "8c30e0f7-6f01-48cd-8c54-0e5c0cff0200",
+		"uuid": "a8ce21fd-3081-4771-a944-fe47bc595bbb",
 		"regions": [
 			"Jewellery"
 		],
@@ -119,7 +119,7 @@
 		"id": "301"
 	},
 	"302": {
-		"uuid": "b54cc574-5f7e-4474-806d-24113d0317e4",
+		"uuid": "18114276-2f76-4fdc-98ac-d9b77a028b4f",
 		"regions": [
 			"Doll House"
 		],
@@ -157,7 +157,7 @@
 		"id": "302"
 	},
 	"312": {
-		"uuid": "db34a3fa-1fdc-47b6-93e6-5779a22ae953",
+		"uuid": "e2dc2d5e-8c43-475e-92ba-c91bd4f84626",
 		"category": "CONTEXT",
 		"title": {
 			"en": "From simple shapes to flamboyance",
@@ -174,7 +174,7 @@
 		"id": "312"
 	},
 	"313": {
-		"uuid": "0b0e4284-8aeb-4a4b-bc59-30e872052d93",
+		"uuid": "2c1422c3-f564-4fa1-823e-2b55a54019f5",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The medieval dinner tables of nobles",
@@ -191,7 +191,7 @@
 		"id": "313"
 	},
 	"314": {
-		"uuid": "5f901815-f3a0-4af3-9f64-f5e8638ae2cd",
+		"uuid": "eb2d528f-8474-4c2d-a9b5-a1a30f5457f8",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Opulence for the eye and palate",
@@ -208,7 +208,7 @@
 		"id": "314"
 	},
 	"315": {
-		"uuid": "7284f3da-b561-4665-8f4f-2ecb2f1d387b",
+		"uuid": "a8cbac73-27ea-4cd6-ab3c-e10668c910d9",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Trade instead of war",
@@ -225,7 +225,7 @@
 		"id": "315"
 	},
 	"316": {
-		"uuid": "a2fb24dc-d3c3-49d4-a42c-4f27dd6ed3d3",
+		"uuid": "d8ccf8fa-cfbd-43f9-9073-7a20a75115a1",
 		"regions": [
 			"Table Settings"
 		],
@@ -263,7 +263,7 @@
 		"id": "316"
 	},
 	"317": {
-		"uuid": "f398a84e-a125-44f7-8f69-1a905c3dd535",
+		"uuid": "8b0ac33c-2f8e-41e4-8825-1a6f0ec5ad13",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The exclusive sweets",
@@ -280,7 +280,7 @@
 		"id": "317"
 	},
 	"318": {
-		"uuid": "a2fbd52f-f1b5-487c-b321-9433df3d69f5",
+		"uuid": "9e1cf693-e88f-4051-9119-9b2021b56502",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Crossing the oceans to Sweden",
@@ -297,7 +297,7 @@
 		"id": "318"
 	},
 	"319": {
-		"uuid": "da9aa2e3-3d37-4a20-9e26-efbe6371b0a5",
+		"uuid": "7f84f333-3d98-4ce3-9132-175d2b6a8ae5",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The sophisticated punsch",
@@ -314,7 +314,7 @@
 		"id": "319"
 	},
 	"320": {
-		"uuid": "51a42955-8648-47e6-a5ef-a829b6f7f082",
+		"uuid": "01514b89-a806-4360-9d2c-adb750712b29",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Food that’s more than meets the eye",
@@ -331,7 +331,7 @@
 		"id": "320"
 	},
 	"321": {
-		"uuid": "71a0f8d3-a182-418c-ab67-50884deb5e08",
+		"uuid": "73733268-f346-4c88-af34-fee0d8d5711b",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Traces of the shapes of antiquity",
@@ -348,7 +348,7 @@
 		"id": "321"
 	},
 	"322": {
-		"uuid": "5933c42c-5079-4f85-ac4e-d3e97fecf6b7",
+		"uuid": "8ca7652c-92d6-4889-a032-4debc570ec5d",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Mrs Hedwig at teatime",
@@ -365,7 +365,7 @@
 		"id": "322"
 	},
 	"323": {
-		"uuid": "56e03a62-8058-4be2-84d7-4903e5f0205b",
+		"uuid": "3ab82a9c-4902-4c20-9d1b-77c16f129cc0",
 		"category": "CONTEXT",
 		"title": {
 			"en": "A stiff drink before dinner",
@@ -382,7 +382,7 @@
 		"id": "323"
 	},
 	"324": {
-		"uuid": "af5b0d24-4771-4969-8634-e3aa201eda4b",
+		"uuid": "0de1dd49-1743-44e9-8dae-f690ed6c8c70",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Celebrations with great fanfare",
@@ -399,7 +399,7 @@
 		"id": "324"
 	},
 	"325": {
-		"uuid": "321e9f16-8c91-4343-8e39-d551ee156920",
+		"uuid": "ffe7f639-caa4-442f-9312-c5748ee16ac7",
 		"category": "CONTEXT",
 		"title": {
 			"en": "A feast from 1883",
@@ -416,7 +416,7 @@
 		"id": "325"
 	},
 	"326": {
-		"uuid": "b776b3ef-8819-4d30-80b3-a94d86ef616c",
+		"uuid": "40686b6f-4a6f-428a-b1ba-c11163d26952",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Increasingly simple shapes",
@@ -433,7 +433,7 @@
 		"id": "326"
 	},
 	"327": {
-		"uuid": "9387d16a-0895-4aa3-a3d1-455b99875a62",
+		"uuid": "a826a889-a22a-45b7-9ed4-249589172d76",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Selma’s coffee party",
@@ -450,7 +450,7 @@
 		"id": "327"
 	},
 	"328": {
-		"uuid": "c94334e9-742b-4a53-9854-c69f9dc8b3cc",
+		"uuid": "81884079-1baa-4906-920e-d42b9f6d0e38",
 		"regions": [
 			"Table Settings"
 		],
@@ -488,7 +488,7 @@
 		"id": "328"
 	},
 	"330": {
-		"uuid": "c01a0433-0fad-4f43-ad66-f74ccf531f72",
+		"uuid": "9fb58640-0ac7-4243-a411-4a91ee5bc2a5",
 		"regions": [
 			"Gustav Vasa"
 		],
@@ -526,7 +526,7 @@
 		"id": "330"
 	},
 	"331": {
-		"uuid": "648f8d87-c505-4eb2-88dd-2635fb6500de",
+		"uuid": "841f93eb-ed11-4573-9b92-40ed093fc68d",
 		"category": "INTRODUCTION",
 		"title": {
 			"en": "Changing seasons and the course of life",
@@ -541,7 +541,7 @@
 		"id": "331"
 	},
 	"332": {
-		"uuid": "d2e748b1-7726-442b-861c-cebc19f922d3",
+		"uuid": "ce588d27-b0e9-485a-88a3-08919e018a20",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Heathens become Christians",
@@ -556,7 +556,7 @@
 		"id": "332"
 	},
 	"333": {
-		"uuid": "36be8156-056b-415e-b1b7-0584fd1f457f",
+		"uuid": "27330069-3108-4794-a033-73e78f49e54d",
 		"regions": [
 			"Traditions"
 		],
@@ -594,7 +594,7 @@
 		"id": "333"
 	},
 	"334": {
-		"uuid": "6affe7f7-987f-4800-b49a-73a2199da7fb",
+		"uuid": "aa310d94-a1a1-4ba3-8338-04e63d32d51b",
 		"category": "CONTEXT",
 		"title": {
 			"en": "At midsummer",
@@ -609,7 +609,7 @@
 		"id": "334"
 	},
 	"335": {
-		"uuid": "f176301f-3ec8-499c-86e6-78503b65dc4a",
+		"uuid": "fe6941f8-1a8c-44e4-88d8-3b1ad2c9b8fb",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The 6th of June",
@@ -624,7 +624,7 @@
 		"id": "335"
 	},
 	"336": {
-		"uuid": "dab736a8-12f7-417f-8d1d-774cf8ab8f2b",
+		"uuid": "0fdf9497-f62b-44b0-85b5-7e9df7a0f575",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Crayfish parties and surströmming feasts",
@@ -639,7 +639,7 @@
 		"id": "336"
 	},
 	"337": {
-		"uuid": "50a39197-2a6b-45b1-8ddf-783d52052038",
+		"uuid": "f9d5f26d-7b36-43de-9821-76f39c682486",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Michaelmas",
@@ -654,7 +654,7 @@
 		"id": "337"
 	},
 	"338": {
-		"uuid": "94978fb7-bead-4368-9b15-e1b006e4d1a0",
+		"uuid": "eb8c2c9f-829a-42c0-b748-2d40292f1f46",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Martinmas goose dinner",
@@ -669,7 +669,7 @@
 		"id": "338"
 	},
 	"339": {
-		"uuid": "78189ade-d4b6-42b2-85fd-e47b4bb94dca",
+		"uuid": "e37892ed-3d17-429f-be1a-9cb81baa5cee",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Traditions of spring",
@@ -684,7 +684,7 @@
 		"id": "339"
 	},
 	"340": {
-		"uuid": "90e4a612-95fb-41a8-b7b4-a8219544d519",
+		"uuid": "118bc18c-2a19-4bec-8cd2-4e4fabfa52eb",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The Holy Week and belief in witches",
@@ -699,7 +699,7 @@
 		"id": "340"
 	},
 	"341": {
-		"uuid": "0378d2dc-f4a6-4499-b04c-c3b7d6435644",
+		"uuid": "950b8eb7-a6a4-44fc-8589-a7e4eac41540",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Good Friday",
@@ -714,7 +714,7 @@
 		"id": "341"
 	},
 	"342": {
-		"uuid": "a70ba544-7ffc-4a08-afcf-7fe3a1108219",
+		"uuid": "b790d139-83e5-4a4c-904b-dee6c54942a0",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Easter",
@@ -729,7 +729,7 @@
 		"id": "342"
 	},
 	"343": {
-		"uuid": "dd1cc639-b9e0-4e36-b939-dbdb13111b1a",
+		"uuid": "791c047b-59f2-43e9-a947-8ba0e8d6318d",
 		"category": "CONTEXT",
 		"title": {
 			"en": "From Walpurgis night to Whitsun",
@@ -744,7 +744,7 @@
 		"id": "343"
 	},
 	"344": {
-		"uuid": "45293cfe-e2d0-4718-add3-b8d999a7533b",
+		"uuid": "c27e7ad5-2c6a-4141-809d-05dbb6fb36b5",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Graduation",
@@ -759,7 +759,7 @@
 		"id": "344"
 	},
 	"345": {
-		"uuid": "27824323-7095-49d1-8fbb-781a2a719f3b",
+		"uuid": "d32a7edb-d3c8-466a-9a61-291ca51da232",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Confirmation",
@@ -774,7 +774,7 @@
 		"id": "345"
 	},
 	"346": {
-		"uuid": "b26a3add-e9be-4e18-a702-79bb4eed6c09",
+		"uuid": "69227ebb-314c-4ade-8f14-eaa6d528a536",
 		"category": "CONTEXT",
 		"title": {
 			"en": "From feelers to weddings",
@@ -789,7 +789,7 @@
 		"id": "346"
 	},
 	"347": {
-		"uuid": "675cbf45-4a9f-4ebd-a170-ced95f571831",
+		"uuid": "c9cd5dc0-24cb-4e70-89c8-5e0e9f94438f",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Wedding essentials",
@@ -804,7 +804,7 @@
 		"id": "347"
 	},
 	"348": {
-		"uuid": "00fc37b7-73b4-438e-bfa3-6109d1033f59",
+		"uuid": "b52ed6a2-284b-4622-905e-79902fbf10a7",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Wedding receptions and settling down",
@@ -819,7 +819,7 @@
 		"id": "348"
 	},
 	"349": {
-		"uuid": "8860774b-bff2-4f5f-baeb-08cdc7b962b2",
+		"uuid": "17239c78-7eb2-4c3b-a28e-68a9eb6e5336",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The Lady at Årsta celebrates her name day",
@@ -834,7 +834,7 @@
 		"id": "349"
 	},
 	"350": {
-		"uuid": "7f460b4e-364e-4af1-a4a2-43e231281bb4",
+		"uuid": "e821b8c4-bb72-49a9-8024-1224acc02b3d",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Greeting pictures",
@@ -849,7 +849,7 @@
 		"id": "350"
 	},
 	"351": {
-		"uuid": "782a96c0-da29-414c-8e0f-5fcf7260b76e",
+		"uuid": "5c1b9828-a38a-4aee-886b-6f159edd4de4",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The Advent calendar",
@@ -864,7 +864,7 @@
 		"id": "351"
 	},
 	"352": {
-		"uuid": "d63f8a96-bacb-42c3-a837-bb7dea5722ba",
+		"uuid": "7c634df8-19fd-464b-a085-9e62e51f0b96",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Christmas in town and country",
@@ -879,7 +879,7 @@
 		"id": "352"
 	},
 	"353": {
-		"uuid": "bbdaad54-3840-4c6c-97e4-5d44abe98014",
+		"uuid": "cb0db21b-f8ac-4ca9-84f8-baee636621b9",
 		"category": "CONTEXT",
 		"title": {
 			"en": "From Saint Lucy’s day to Saint Canute’s day",
@@ -894,7 +894,7 @@
 		"id": "353"
 	},
 	"354": {
-		"uuid": "b45c3e40-2de0-4fc7-8687-b2ebaab882ce",
+		"uuid": "be68d8e3-4033-46cc-af96-c4d9f96cf135",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Funerary rites",
@@ -909,7 +909,7 @@
 		"id": "354"
 	},
 	"355": {
-		"uuid": "6e083fd0-42ae-4cc0-8d43-46b5f85aacaa",
+		"uuid": "f3d78e2e-1b97-42bb-b2f8-291dc3214287",
 		"regions": [
 			"Traditions"
 		],
@@ -947,7 +947,7 @@
 		"id": "355"
 	},
 	"356": {
-		"uuid": "607119cd-d351-4ab5-a36a-7e7e20df779e",
+		"uuid": "705b51ae-b82b-44d4-9f8b-c94f74974ea4",
 		"regions": [
 			"Strindberg"
 		],
@@ -985,7 +985,7 @@
 		"id": "356"
 	},
 	"357": {
-		"uuid": "d4e816d3-1c66-4e43-a990-2587f6a4af14",
+		"uuid": "3626faba-99f2-4f6a-a438-41993d242681",
 		"regions": [
 			"Strindberg"
 		],
@@ -1023,7 +1023,7 @@
 		"id": "357"
 	},
 	"398": {
-		"uuid": "78093c2b-6a89-4884-bc84-c3926092d24f",
+		"uuid": "0dddfa88-6ab3-461a-aaff-8e2156bb377c",
 		"category": "INTRODUCTION",
 		"title": {
 			"en": "Welcome to our table",
@@ -1040,7 +1040,7 @@
 		"id": "398"
 	},
 	"399": {
-		"uuid": "70fc863c-1f4b-489b-821a-91e75448ae1b",
+		"uuid": "a6e5e02c-bd3f-48a4-a3d0-f759bb803d50",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Breakfast at noon",
@@ -1057,7 +1057,7 @@
 		"id": "399"
 	},
 	"401": {
-		"uuid": "0db492be-a4e6-43a2-a5db-34a64cb7d147",
+		"uuid": "f01e9f3f-1721-456b-bb63-81be7d8e9a3f",
 		"regions": [
 			"Homes and Interiors E"
 		],
@@ -1098,7 +1098,7 @@
 		"id": "401"
 	},
 	"402": {
-		"uuid": "c7c49640-5f73-4945-ad94-d7b3b4d9a23a",
+		"uuid": "79f6f6ac-d303-4b13-92f6-37bd593790e8",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Traditional 18th-century dance from Dalecarlia",
@@ -1113,7 +1113,7 @@
 		"id": "402"
 	},
 	"403": {
-		"uuid": "881645d5-6f37-4824-bb56-89320ac48d88",
+		"uuid": "be95de97-a080-46e1-b014-280d294b5012",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from 1580: On peasant housing",
@@ -1128,7 +1128,7 @@
 		"id": "403"
 	},
 	"404": {
-		"uuid": "ce7d746c-803c-49e7-a8e6-ca808f9c23f7",
+		"uuid": "305999da-05c6-4029-9f38-7b129e0c3993",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Hab ich dir nicht außgerüst",
@@ -1143,7 +1143,7 @@
 		"id": "404"
 	},
 	"405": {
-		"uuid": "3b4b0208-6480-4f38-8e3b-55a0fad2e179",
+		"uuid": "12d8a6b3-0507-45bc-9e5c-e70bb2c267df",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from 1635: The interiors of Swedish nobility",
@@ -1158,7 +1158,7 @@
 		"id": "405"
 	},
 	"406": {
-		"uuid": "0be09f9e-e377-4f8b-ba5a-3ca73d701351",
+		"uuid": "59229e90-bccf-4152-9d22-f8f6e6c870e6",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Ack vad för usel koja",
@@ -1173,7 +1173,7 @@
 		"id": "406"
 	},
 	"407": {
-		"uuid": "386d2fb5-e8a4-47bc-8f03-4363714a7c9b",
+		"uuid": "855aa3d5-b8c1-443a-af25-902af58653a8",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from 1751: A new flat for the admiral",
@@ -1188,7 +1188,7 @@
 		"id": "407"
 	},
 	"408": {
-		"uuid": "17c2dd17-9842-4f71-898e-35e82c638488",
+		"uuid": "39d667f9-909c-4919-970d-f7c6647a84a0",
 		"regions": [
 			"Homes and Interiors E"
 		],
@@ -1229,7 +1229,7 @@
 		"id": "408"
 	},
 	"409": {
-		"uuid": "6fa22b4e-84b1-4978-81b9-56c9746cf7d0",
+		"uuid": "24f8114f-a579-4bf9-8959-ed57df0e620f",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Menuet and March with variations",
@@ -1244,7 +1244,7 @@
 		"id": "409"
 	},
 	"410": {
-		"uuid": "f55a1d31-631a-49cc-8136-e87ea8ef8cf8",
+		"uuid": "97e938d3-d685-489f-b836-b877be9e6c47",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "The everyday life of a maid",
@@ -1259,7 +1259,7 @@
 		"id": "410"
 	},
 	"411": {
-		"uuid": "b6cd127e-b086-4ba4-8004-aaa6dfc05374",
+		"uuid": "eb0ce6c4-1781-4461-b78e-e938d302a670",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Lento and Vivace from Triosonate in D major",
@@ -1274,7 +1274,7 @@
 		"id": "411"
 	},
 	"412": {
-		"uuid": "25411537-0923-4aaf-88e6-f598d361a5c7",
+		"uuid": "d811bb8a-84f3-40d1-b1cb-993ddff34961",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from the 1790s: A simpler Swedish home",
@@ -1289,7 +1289,7 @@
 		"id": "412"
 	},
 	"413": {
-		"uuid": "ccb1c4c9-c499-4d8e-ac6e-6acaff9d335c",
+		"uuid": "9a8c5e0f-ad1a-49c3-9f59-0e6b7a0e587e",
 		"regions": [
 			"Homes and Interiors E"
 		],
@@ -1330,7 +1330,7 @@
 		"id": "413"
 	},
 	"414": {
-		"uuid": "0150a763-0286-4a4c-bdac-1379a0250848",
+		"uuid": "518ab23a-ac27-405a-a3e0-c9469d214872",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Andante from Symphony in D major",
@@ -1345,7 +1345,7 @@
 		"id": "414"
 	},
 	"415": {
-		"uuid": "76a02a2a-909f-4448-b903-2cb0c6af3628",
+		"uuid": "e5bb94dd-1856-4d5a-b79f-6659a807e82c",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from 1799: The cold winter and the Swedish stove",
@@ -1360,7 +1360,7 @@
 		"id": "415"
 	},
 	"416": {
-		"uuid": "a53e9920-fb17-4396-80a9-493a4b26beea",
+		"uuid": "3fb637ce-8ae3-4703-9cf8-c65b7a71a673",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Romance from String quarter in B major Op. 1 No. 3",
@@ -1375,7 +1375,7 @@
 		"id": "416"
 	},
 	"417": {
-		"uuid": "81aa5b8a-f21d-48e2-b8f5-7a6e1c88b270",
+		"uuid": "8466bfe3-1155-4746-a616-4b067fcc53d0",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A voice from 1821: The Lady at Årsta orders Empire-style furnishings",
@@ -1390,7 +1390,7 @@
 		"id": "417"
 	},
 	"418": {
-		"uuid": "7265fb0f-5a1b-4826-8414-a9faede9ed30",
+		"uuid": "93c43b01-f613-4a62-a232-706d1425c1bc",
 		"category": "MUSIC",
 		"title": {
 			"en": "Music of the time: Första aftonen i nya hemmet and Natthimlen",
@@ -1405,7 +1405,7 @@
 		"id": "418"
 	},
 	"419": {
-		"uuid": "599d9b88-b220-4eb0-8f69-d900d8a975f0",
+		"uuid": "fdeb3d65-fff1-4ec1-864f-7ae5197ec78a",
 		"category": "CONTEMPORARY VOICE",
 		"title": {
 			"en": "A matron’s duties to her husband",
@@ -1420,7 +1420,7 @@
 		"id": "419"
 	},
 	"420": {
-		"uuid": "8d163707-8d36-4e78-ab44-73265c1cd402",
+		"uuid": "cdf43399-3a62-441a-b00d-70836f5af995",
 		"category": "VISUAL DESCRIPTION",
 		"title": {
 			"en": "Visual description: mid-17th-century upholstered chair",
@@ -1435,7 +1435,7 @@
 		"id": "420"
 	},
 	"421": {
-		"uuid": "6102a1c9-a0e4-4691-be79-df1a8a846177",
+		"uuid": "c812fdc6-c3d0-4343-99b3-b171e883993d",
 		"category": "VISUAL DESCRIPTION",
 		"title": {
 			"en": "Visual description: A chest of drawers from the 1760s",
@@ -1450,7 +1450,7 @@
 		"id": "421"
 	},
 	"422": {
-		"uuid": "2bec81b0-154b-4ad3-9f03-8a54cddafc7c",
+		"uuid": "fc15b340-b79d-4abf-bc51-67baf52874bb",
 		"category": "VISUAL DESCRIPTION",
 		"title": {
 			"en": "Visual description: late 18th-century Swedish stove",
@@ -1465,7 +1465,7 @@
 		"id": "422"
 	},
 	"423": {
-		"uuid": "f1029ff8-8756-4328-89f7-3de7b66b79cd",
+		"uuid": "e6da594e-f41c-4d14-ae5f-fae10415b76b",
 		"regions": [
 			"N Balcony 4"
 		],
@@ -1506,7 +1506,7 @@
 		"id": "423"
 	},
 	"424": {
-		"uuid": "06253e78-8fe1-4ad8-baf3-ea64bf7a8980",
+		"uuid": "ba868f85-8539-4512-b68e-f890a964a859",
 		"regions": [
 			"Homes and Interiors W"
 		],
@@ -1547,7 +1547,7 @@
 		"id": "424"
 	},
 	"425": {
-		"uuid": "f50e1e2e-1dee-406e-a428-08cf2e6a67d7",
+		"uuid": "e758ef8c-0b61-44b8-9a8a-cd9c4af15fc1",
 		"regions": [
 			"Homes and Interiors W"
 		],
@@ -1588,7 +1588,7 @@
 		"id": "425"
 	},
 	"426": {
-		"uuid": "842dff02-8066-48f3-a0f2-a3c023d1b418",
+		"uuid": "611d2132-8de3-4224-8a4b-0c7c1687e91f",
 		"regions": [
 			"Sapmi"
 		],
@@ -1629,7 +1629,7 @@
 		"id": "426"
 	},
 	"427": {
-		"uuid": "2d96f108-01f4-42fc-9d6d-003309047517",
+		"uuid": "d5030af9-12dc-4844-9498-308674abeeb3",
 		"category": "INTRODUCTION",
 		"title": {
 			"en": "Whose history? Whose story?",
@@ -1647,7 +1647,7 @@
 		"id": "427"
 	},
 	"428": {
-		"uuid": "69752552-23f3-486b-9fde-cdc03d8797cf",
+		"uuid": "3386b20f-e501-4213-8163-3f77c46fb221",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The market at Jokkmokk",
@@ -1665,7 +1665,7 @@
 		"id": "428"
 	},
 	"429": {
-		"uuid": "68663826-c6f9-45ab-ab3e-a3618e8ee2b8",
+		"uuid": "ddda959e-9e81-4ba1-a84d-67b3f8beb1b9",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Whose cultural heritage?",
@@ -1683,7 +1683,7 @@
 		"id": "429"
 	},
 	"430": {
-		"uuid": "d2da227e-04a9-4a9d-95ac-c3b6943613c3",
+		"uuid": "9394f3c5-ce26-4018-9b5b-724a05657cde",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Whose objects? Whose history?",
@@ -1701,7 +1701,7 @@
 		"id": "430"
 	},
 	"431": {
-		"uuid": "700508fe-e1e9-459b-b214-5ea2b04f42ac",
+		"uuid": "2dedc04d-cd1f-4457-bc79-61b952ec2ec6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Whose story?",
@@ -1719,7 +1719,7 @@
 		"id": "431"
 	},
 	"432": {
-		"uuid": "7d391145-c431-46f6-b0c3-f6f6d4725fe4",
+		"uuid": "4cecb77a-bb0b-42f2-9b07-4ee47e962e50",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Whose gaze, whose voice?",
@@ -1737,7 +1737,7 @@
 		"id": "432"
 	},
 	"433": {
-		"uuid": "a7080072-f285-4e5b-a245-019f01d78436",
+		"uuid": "4e60add2-81f8-49f8-a273-96e5590a3300",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Who came first?",
@@ -1755,7 +1755,7 @@
 		"id": "433"
 	},
 	"434": {
-		"uuid": "96638cd3-6247-481e-a7a9-c8ba1b592853",
+		"uuid": "6b35ded9-1747-4025-a16a-c7b880ff68c5",
 		"regions": [
 			"Sapmi"
 		],
@@ -1796,7 +1796,7 @@
 		"id": "434"
 	},
 	"435": {
-		"uuid": "7317a8bb-cfcc-44e7-a134-e98b219dad9e",
+		"uuid": "803c8602-ec9e-4a5c-9684-56cb6df0e93a",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Lars-Marcus Kuhmunen (in Swedish)",
@@ -1810,7 +1810,7 @@
 		"id": "435"
 	},
 	"436": {
-		"uuid": "e6736666-a894-4dc5-84f7-0342628668bb",
+		"uuid": "40bf9c76-d775-4c0f-a3e9-d2e7cdd1422f",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Elias Torkelsson (in Swedish)",
@@ -1824,7 +1824,7 @@
 		"id": "436"
 	},
 	"437": {
-		"uuid": "1541a0ec-c0b4-40d9-974e-911c65dfbef1",
+		"uuid": "220fbb77-e633-4ef7-a38f-578abf6f1b5e",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Victoria Harnesk (in Swedish)",
@@ -1838,7 +1838,7 @@
 		"id": "437"
 	},
 	"438": {
-		"uuid": "06f2228f-dfde-4123-8570-65e24ef740ed",
+		"uuid": "53007ab6-9a52-4672-b993-58513db819c1",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Inge Frisk (in Swedish)",
@@ -1852,7 +1852,7 @@
 		"id": "438"
 	},
 	"439": {
-		"uuid": "93535f90-7c71-42cb-8db4-b8e5084629c2",
+		"uuid": "2fa184e9-e571-46ab-a9df-0b8cf82d1e2a",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Linda Mannela (in Swedish)",
@@ -1866,7 +1866,7 @@
 		"id": "439"
 	},
 	"440": {
-		"uuid": "4d3a76fb-f4c4-4749-b227-c416b8cb57b3",
+		"uuid": "fe167364-dc17-43e7-aac1-cd9d86bbf9c8",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Lis-Maria Hjortfors (in Swedish)",
@@ -1880,7 +1880,7 @@
 		"id": "440"
 	},
 	"441": {
-		"uuid": "a5e76688-5dcb-4e56-a5ab-b194ff3bd6d1",
+		"uuid": "2bb0ed83-8abc-4d6f-9b35-1c654ab875b6",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Lotta Willborg Stoor (in Swedish)",
@@ -1894,7 +1894,7 @@
 		"id": "441"
 	},
 	"442": {
-		"uuid": "69e9b014-fc7d-416a-b6ac-dff2f68a23e3",
+		"uuid": "2671570f-1f10-43b6-afc0-3084451561c4",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Per-Gustav Idivuoma (in Swedish)",
@@ -1908,7 +1908,7 @@
 		"id": "442"
 	},
 	"443": {
-		"uuid": "7901fd0e-04ff-4895-9936-de197b0e3df3",
+		"uuid": "25a31307-9348-4fb1-b728-0da87251c2fe",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Staffan Palopaa (in Swedish)",
@@ -1922,7 +1922,7 @@
 		"id": "443"
 	},
 	"444": {
-		"uuid": "7b1d7943-b561-4e1c-a3af-d652afabcc5c",
+		"uuid": "43cb87a8-dab2-47aa-bb64-61460a80b0ef",
 		"category": "INTERVIEW",
 		"title": {
 			"en": "Interview: Sylvia Simma (in Swedish)",
@@ -1936,7 +1936,7 @@
 		"id": "444"
 	},
 	"445": {
-		"uuid": "038f3298-00d2-48ce-b019-574cd623f87e",
+		"uuid": "840262db-6d8c-4993-9cc2-70362d8a337b",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Whose rights?",
@@ -1954,7 +1954,7 @@
 		"id": "445"
 	},
 	"446": {
-		"uuid": "8becb2b8-3df1-46de-8643-24d5639ffe8e",
+		"uuid": "13208165-fc81-4b78-96c8-b5885e7bd6b6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Sami crafts",
@@ -1972,7 +1972,7 @@
 		"id": "446"
 	},
 	"447": {
-		"uuid": "0058e33c-dfe4-4209-b150-9e820990dd76",
+		"uuid": "84eb6ee8-d3ea-48aa-8d32-5a727a99084e",
 		"category": "INTRODUCTION",
 		"title": {
 			"en": "Whose history? Whose story?",
@@ -1990,7 +1990,7 @@
 		"id": "447"
 	},
 	"448": {
-		"uuid": "52cf0aaa-f225-4e02-8d9f-5666b0a41f51",
+		"uuid": "3cc0dfe3-f05d-41b4-a2d4-4235d873c3e1",
 		"category": "INTRODUCTION",
 		"title": {
 			"en": "A journey of discovery in the world of vernacular art",
@@ -2005,7 +2005,7 @@
 		"id": "448"
 	},
 	"449": {
-		"uuid": "6beb3364-6d54-41d8-9eb0-c3d20928b30f",
+		"uuid": "b4e89aea-45c0-4a45-9823-80191f8edeb6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "From proposal to wedding",
@@ -2020,7 +2020,7 @@
 		"id": "449"
 	},
 	"450": {
-		"uuid": "2b6fc0e5-13ef-4e62-b722-0fdec93e1a82",
+		"uuid": "16581c15-f85f-42d3-8ddc-408e31bc8bb6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Deaths and funerals",
@@ -2035,7 +2035,7 @@
 		"id": "450"
 	},
 	"451": {
-		"uuid": "3a06c9f5-771e-4914-bab8-c5d4f54f73c9",
+		"uuid": "8825309c-36aa-4b5f-9270-a4ba176ff658",
 		"regions": [
 			"Swedish Folk Art"
 		],
@@ -2076,7 +2076,7 @@
 		"id": "451"
 	},
 	"452": {
-		"uuid": "ab499780-0314-4785-8d44-b9b96bd36e9c",
+		"uuid": "fe87591f-68f2-4a53-94e4-10f0830d5248",
 		"category": "CONTEXT",
 		"title": {
 			"en": "The image of man",
@@ -2091,7 +2091,7 @@
 		"id": "452"
 	},
 	"453": {
-		"uuid": "a09dcb25-7fc8-4a8c-95bc-0f43b583265b",
+		"uuid": "222a9a09-6ee1-46e4-825e-fe158219d3fc",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Nature as a source of inspiration",
@@ -2106,7 +2106,7 @@
 		"id": "453"
 	},
 	"454": {
-		"uuid": "f3a9f7da-635a-4b84-a0ae-a9fa41d7507a",
+		"uuid": "1ce9e83a-1a05-4f95-9d52-20e7fee6bbcd",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Dalecarlian flower painting",
@@ -2121,7 +2121,7 @@
 		"id": "454"
 	},
 	"455": {
-		"uuid": "db53d50b-8f35-4ea8-b419-50ce2a3140e2",
+		"uuid": "cb4970eb-c432-4565-bd8b-d0f1895fdc21",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Decorative shelves in places of honour",
@@ -2136,7 +2136,7 @@
 		"id": "455"
 	},
 	"456": {
-		"uuid": "53f689ac-e821-49f2-9db9-cefdb7fee041",
+		"uuid": "62f4aa39-887e-4727-b415-676bf28d0a30",
 		"regions": [
 			"Swedish Folk Art"
 		],
@@ -2177,7 +2177,7 @@
 		"id": "456"
 	},
 	"457": {
-		"uuid": "d63cae80-b0c3-46f8-93f7-b232148e519b",
+		"uuid": "9899c880-6bbf-4333-9776-b73c9daab5c2",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Bible stories on cottage walls",
@@ -2192,7 +2192,7 @@
 		"id": "457"
 	},
 	"458": {
-		"uuid": "61b86eae-6f0b-47f9-af49-5128dd26795f",
+		"uuid": "5d6d5455-4f78-4f6c-990d-c487679271a7",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Precious textiles",
@@ -2207,7 +2207,7 @@
 		"id": "458"
 	},
 	"459": {
-		"uuid": "86547361-ce4e-4fac-9e33-9460c9020b35",
+		"uuid": "19694313-ac80-48b1-8832-7bdc6d2e8ddb",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Coats of arms and royal monograms",
@@ -2222,7 +2222,7 @@
 		"id": "459"
 	},
 	"460": {
-		"uuid": "2287839a-cf2c-4d2b-8245-5be34c0ccc60",
+		"uuid": "dd34bd94-b4b4-4d15-bc07-637caf386a4a",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Vernacular art today",
@@ -2237,7 +2237,7 @@
 		"id": "460"
 	},
 	"469": {
-		"uuid": "8fa4761c-7014-40c3-8b00-347845847508",
+		"uuid": "e9111352-6ee6-4416-a09e-730f49d284e5",
 		"regions": [
 			"N Balcony 4"
 		],
@@ -2275,7 +2275,7 @@
 		"id": "469"
 	},
 	"470": {
-		"uuid": "f3fb3657-b23e-4832-9686-f69610150cb5",
+		"uuid": "9375fb03-6c64-4852-9e51-210a7e42db61",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Twined knitting against the Nordic cold",
@@ -2290,7 +2290,7 @@
 		"id": "470"
 	},
 	"471": {
-		"uuid": "85f71ffb-4392-4a6d-9087-97add50018f3",
+		"uuid": "4171ef27-5b0a-4af0-93d1-ac7544cb1cc9",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Indian chintz in the Stockholm archipelago",
@@ -2305,7 +2305,7 @@
 		"id": "471"
 	},
 	"472": {
-		"uuid": "32d69ed7-2f3b-4d49-a1f6-529fd1bc5993",
+		"uuid": "16682e32-33d5-4294-9e88-953498a26681",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Neat lace",
@@ -2320,7 +2320,7 @@
 		"id": "472"
 	},
 	"473": {
-		"uuid": "32fcd3f9-e245-4f3c-87eb-21b78b598111",
+		"uuid": "70eee460-4bff-49e8-8415-b02843ee88c6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Vivid colours from the 15th century",
@@ -2335,7 +2335,7 @@
 		"id": "473"
 	},
 	"474": {
-		"uuid": "f3113454-6418-4eee-9a3d-5d9468894ba8",
+		"uuid": "6197a174-54b8-4b43-b7db-63f61f33bec6",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Decorating the cottage for a feast",
@@ -2350,7 +2350,7 @@
 		"id": "474"
 	},
 	"475": {
-		"uuid": "553b461d-80d3-4382-9b41-dae8dd50a052",
+		"uuid": "51c0c0f6-4d2a-4ece-b38b-74a57d75852d",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Embroidery with biblical motifs",
@@ -2365,7 +2365,7 @@
 		"id": "475"
 	},
 	"476": {
-		"uuid": "a0d32624-daec-4e2a-b1bc-a84ab9cde8e2",
+		"uuid": "c95a99eb-2c70-4abb-8972-be82c3858d17",
 		"category": "CONTEXT",
 		"title": {
 			"en": "Rags and tatters",

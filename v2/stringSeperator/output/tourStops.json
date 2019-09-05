@@ -1,9 +1,9 @@
 [
 	{
-		"uuid": "07dc96fb-7bad-421b-a016-64e338987fcc",
+		"uuid": "c7b1bf97-8aee-4f36-929d-932e3e81e1cf",
 		"floor": "2–4",
 		"order": 0,
-		"regions": [],
+		"regions": "",
 		"category": "HIGHLIGHTS",
 		"imageURL": "highlights.png",
 		"imageWidth": 750,
@@ -64,30 +64,7 @@
 			"svSimple": 2756,
 			"zh": 2863
 		},
-		"audioContent": [
-			"201",
-			"401",
-			"408",
-			"413",
-			"424",
-			"425",
-			"434",
-			"426",
-			"423",
-			"469",
-			"456",
-			"451",
-			"301",
-			"302",
-			"316",
-			"328",
-			"330",
-			"355",
-			"333",
-			"357",
-			"356",
-			"202"
-		],
+		"audioContent": "201,401,408,413,424,425,434,426,423,469,456,451,301,302,316,328,330,355,333,357,356,202",
 		"title": {
 			"en": "Highlights",
 			"sv": "Höjdpunkter",
@@ -103,12 +80,10 @@
 		}
 	},
 	{
-		"uuid": "db0afda8-a668-472c-8792-54175add2d9f",
+		"uuid": "a8cf8cb8-83bd-40c7-ad78-041bba399227",
 		"floor": "3",
 		"order": 1,
-		"regions": [
-			"Traditions"
-		],
+		"regions": "Traditions",
 		"imageURL": "traditions.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -141,45 +116,17 @@
 			"svSimple": 5040,
 			"zh": 4620
 		},
-		"audioContent": [
-			"333",
-			"355",
-			"331",
-			"332",
-			"334",
-			"335",
-			"336",
-			"337",
-			"338",
-			"339",
-			"340",
-			"341",
-			"342",
-			"343",
-			"344",
-			"345",
-			"346",
-			"347",
-			"348",
-			"349",
-			"350",
-			"351",
-			"352",
-			"353",
-			"354"
-		],
+		"audioContent": "333,355,331,332,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354",
 		"title": {
 			"en": "Traditions",
 			"sv": "Traditioner"
 		}
 	},
 	{
-		"uuid": "f68078b5-b67e-450c-8e03-7748c37af824",
+		"uuid": "d5a4bc1a-e2ff-4bfc-865f-4950ea5e6701",
 		"floor": "3",
 		"order": 2,
-		"regions": [
-			"Table Settings"
-		],
+		"regions": "Table Settings",
 		"imageURL": "tableSettings.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -215,27 +162,7 @@
 			"svSimple": 2340,
 			"zh": 2160
 		},
-		"audioContent": [
-			"316",
-			"328",
-			"312",
-			"313",
-			"314",
-			"315",
-			"317",
-			"318",
-			"319",
-			"320",
-			"321",
-			"322",
-			"323",
-			"324",
-			"325",
-			"326",
-			"327",
-			"398",
-			"399"
-		],
+		"audioContent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,398,399",
 		"title": {
 			"en": "Table Settings",
 			"sv": "Dukade bord",
@@ -243,13 +170,10 @@
 		}
 	},
 	{
-		"uuid": "8ee10c5f-4d34-4437-a164-6ec7400f8647",
+		"uuid": "b1edd17d-1c1b-4f08-aae9-5b45f08dc93d",
 		"floor": "4",
 		"order": 1,
-		"regions": [
-			"Homes and Interiors W",
-			"Homes and Interiors E"
-		],
+		"regions": "Homes and Interiors W,Homes and Interiors E",
 		"imageURL": "homesAndInteriors.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -282,44 +206,17 @@
 			"svSimple": 3420,
 			"zh": 3420
 		},
-		"audioContent": [
-			"401",
-			"408",
-			"413",
-			"424",
-			"425",
-			"402",
-			"403",
-			"404",
-			"405",
-			"406",
-			"407",
-			"409",
-			"410",
-			"411",
-			"412",
-			"414",
-			"415",
-			"416",
-			"417",
-			"418",
-			"419",
-			"420",
-			"421",
-			"422"
-		],
+		"audioContent": "401,408,413,424,425,402,403,404,405,406,407,409,410,411,412,414,415,416,417,418,419,420,421,422",
 		"title": {
 			"en": "Homes and Interiors",
 			"sv": "Hem och bostad"
 		}
 	},
 	{
-		"uuid": "19a84090-13ce-4bb8-900e-549b74eade19",
+		"uuid": "6e928ade-6411-4477-8a1a-0e77707ff8ab",
 		"floor": "4",
 		"order": 2,
-		"regions": [
-			"Sapmi"
-		],
+		"regions": "Sapmi",
 		"imageURL": "sapmi.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -352,42 +249,17 @@
 			"svSimple": 2640,
 			"zh": 1260
 		},
-		"audioContent": [
-			"426",
-			"434",
-			"427",
-			"428",
-			"429",
-			"430",
-			"431",
-			"432",
-			"433",
-			"435",
-			"436",
-			"437",
-			"438",
-			"439",
-			"440",
-			"441",
-			"442",
-			"443",
-			"444",
-			"445",
-			"446",
-			"447"
-		],
+		"audioContent": "426,434,427,428,429,430,431,432,433,435,436,437,438,439,440,441,442,443,444,445,446,447",
 		"title": {
 			"en": "Sápmi",
 			"sv": "Sápmi"
 		}
 	},
 	{
-		"uuid": "14839566-ba39-4f05-8711-7d1af9ec9b04",
+		"uuid": "3d61c535-e0a0-49a2-aa2b-03674dd7119c",
 		"floor": "4",
 		"order": 3,
-		"regions": [
-			"Textile Gallery"
-		],
+		"regions": "Textile Gallery",
 		"imageURL": "textileGallery.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -420,28 +292,17 @@
 			"svSimple": 660,
 			"zh": 900
 		},
-		"audioContent": [
-			"469",
-			"470",
-			"471",
-			"472",
-			"473",
-			"474",
-			"475",
-			"476"
-		],
+		"audioContent": "469,470,471,472,473,474,475,476",
 		"title": {
 			"en": "Textile Gallery",
 			"sv": "Textilgalleriet"
 		}
 	},
 	{
-		"uuid": "ce4ca387-3da4-48bd-9d2f-2219009ace36",
+		"uuid": "ad5bdce3-196c-41dc-b1b6-b874cae47d14",
 		"floor": "4",
 		"order": 4,
-		"regions": [
-			"Swedish Folk Art"
-		],
+		"regions": "Swedish Folk Art",
 		"imageURL": "swedishFolkArt.png",
 		"imageWidth": 750,
 		"imageHeight": 345,
@@ -474,21 +335,7 @@
 			"svSimple": 1260,
 			"zh": 1320
 		},
-		"audioContent": [
-			"451",
-			"456",
-			"448",
-			"449",
-			"450",
-			"452",
-			"453",
-			"454",
-			"455",
-			"457",
-			"458",
-			"459",
-			"460"
-		],
+		"audioContent": "451,456,448,449,450,452,453,454,455,457,458,459,460",
 		"title": {
 			"en": "Swedish Folk Art",
 			"sv": "Folkkonst"
