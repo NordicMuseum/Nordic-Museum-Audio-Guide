@@ -1,4 +1,4 @@
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 
 import registerScreens from './registerScreens';
 
@@ -19,7 +19,7 @@ Navigation.events().registerAppLaunchedListener(() => {
       bottomTabs: {
         options: {
             bottomTabs: {
-                backgroundColor: OFF_BLACK,
+                backgroundColor: OFF_BLACK
             },
         },
         children: [
@@ -112,4 +112,16 @@ Navigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
+
+  // Navigation.showOverlay({
+  //   component: {
+  //     name: 'welcome',
+  //     options: {
+  //       overlay: {
+  //         interceptTouchOutside: true
+  //       }
+  //     }
+  //   }
+  // });
+
 });

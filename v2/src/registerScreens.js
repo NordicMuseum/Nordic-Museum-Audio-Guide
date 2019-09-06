@@ -5,6 +5,9 @@ import Tours from './containers/tours';
 import TourStop from './containers/tourStop';
 import Search from './containers/search';
 import Info from './containers/info';
+import Settings from './containers/settings';
+import Amenities from './containers/amenities';
+import Welcome from './containers/welcome';
 
 const registerScreens = store => {
   Navigation.registerComponent('nearMe', () => NearMe);
@@ -16,6 +19,12 @@ const registerScreens = store => {
   Navigation.registerComponent('search', () => Search);
 
   Navigation.registerComponent('info', () => Info);
+
+  Navigation.registerComponent('settings', () => Settings);
+
+  Navigation.registerComponent('amenities', () => Amenities);
+
+  Navigation.registerComponent('welcome', () => Welcome);
 };
 
 export default registerScreens;
