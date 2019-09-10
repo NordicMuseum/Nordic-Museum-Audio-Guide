@@ -125,6 +125,10 @@ class Info extends Component {
               title={I18n.t('aboutTheAppScreen_Title')}
               onPress={() => {
                 // analyticsTrackScreen('About the App');
+                // analyticsTrackScreen('About The Nordic Museum');
+                 Navigation.push(this.props.componentId, {
+                  component: { name: 'aboutApp' }
+                })
               }}
             />
           </View>

@@ -9,6 +9,7 @@ import Settings from './containers/settings';
 import Amenities from './containers/amenities';
 import Welcome from './containers/welcome';
 import AboutMuseum from './containers/aboutMuseum';
+import AboutApp from './containers/aboutApp';
 
 const registerScreens = store => {
   Navigation.registerComponent('nearMe', () => NearMe);
@@ -28,6 +29,8 @@ const registerScreens = store => {
   Navigation.registerComponent('welcome', () => Welcome);
 
   Navigation.registerComponent('aboutMuseum', () => AboutMuseum);
+
+  Navigation.registerComponent('aboutApp', () => AboutApp);
 };
 
 export default registerScreens;
