@@ -31,6 +31,10 @@ class Amenities extends Component {
         background: {
           color: NAV_BAR_BACKGROUND,
         },
+        backButton: {
+          showTitle: false,
+          color: ACTION,
+        },
         title: {
           text: 'Amenities',
           fontSize: 17,

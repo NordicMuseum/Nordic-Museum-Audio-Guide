@@ -111,6 +111,9 @@ class Info extends Component {
               title={I18n.t('museumScreen_ListItem1Label')}
               onPress={() => {
                 // analyticsTrackScreen('About The Nordic Museum');
+                 Navigation.push(this.props.componentId, {
+                  component: { name: 'aboutMuseum' }
+                })
               }}
             />
             <DisclosureCell

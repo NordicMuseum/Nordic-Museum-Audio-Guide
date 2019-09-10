@@ -14,7 +14,8 @@
     "react-native": "0.60.5",
     "react-native-collapsible": "^1.5.1",
     "react-native-navigation": "3.1.1",
-    "react-native-parallax-scroll-view": "^0.21.3"
+    "react-native-parallax-scroll-view": "^0.21.3",
+    "react-native-simple-markdown": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
