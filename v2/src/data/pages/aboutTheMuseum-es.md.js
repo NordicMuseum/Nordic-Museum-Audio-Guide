@@ -2,6 +2,6 @@ const text = `El Museo Nórdico es el mayor museo de historia cultural de Suecia
 
 # Edificio
 
-El museo fue fundado en 1873 por Artur Hazelius. El imponente edificio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.`
+El museo fue fundado en 1873 por Artur Hazelius. El imponente edificio situado en la isla de Djurgården —que ofrece unas preciosas vistas— fue diseñado en estilo renacentista por Isak Gustaf Clason y se inauguró en 1907.`;
 
 export default text;

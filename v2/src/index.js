@@ -1,26 +1,34 @@
-import { Navigation } from 'react-native-navigation';
+import {Navigation} from 'react-native-navigation';
 
+import {configureStore} from './store';
 import registerScreens from './registerScreens';
 
-import { NAV_BAR_TEXT, 
-         NAV_BAR_BACKGROUND,
-         LIGHT_BLUE, 
-         GREEN, 
-         GRAY, LIGHT_GRAY, 
-         OFF_BLACK, OFF_WHITE, 
-         HEADER_BACKGROUND_COLOR, 
-         HIGHLIGHTS, ACTION, SELECTED }  from './styles';
+import {
+  NAV_BAR_TEXT,
+  NAV_BAR_BACKGROUND,
+  LIGHT_BLUE,
+  GREEN,
+  GRAY,
+  LIGHT_GRAY,
+  OFF_BLACK,
+  OFF_WHITE,
+  HEADER_BACKGROUND_COLOR,
+  HIGHLIGHTS,
+  ACTION,
+  SELECTED,
+} from './styles';
 
-registerScreens({});
+const store = configureStore();
+registerScreens(store);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
       bottomTabs: {
         options: {
-            bottomTabs: {
-                backgroundColor: OFF_BLACK
-            },
+          bottomTabs: {
+            backgroundColor: OFF_BLACK,
+          },
         },
         children: [
           {
@@ -123,5 +131,4 @@ Navigation.events().registerAppLaunchedListener(() => {
   //     }
   //   }
   // });
-
 });

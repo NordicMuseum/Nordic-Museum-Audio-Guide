@@ -1,7 +1,4 @@
-
-import {
-  StyleSheet,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const NAV_BAR_TEXT = '#1A1A1A';
 export const NAV_BAR_BACKGROUND = '#EDEDED';
