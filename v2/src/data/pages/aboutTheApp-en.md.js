@@ -41,6 +41,7 @@ BTI Studios
 
 Welcome Image: NMA.03906 Photo: Karl-Erik Granath
 Highlights: NMA.0030770 Photo: Karl Heinz Hernried
+The Arctic – While the Ice is Melting: Photo: Camilla Andersen
 Traditions: NMA.0029961 Photo: Karl Heinz Hernried
 Table Settings: NMA.0036167 Photo: Karl-Erik Granath
 Textile Gallery: NMA.0027979 Photo: Mats Landin
