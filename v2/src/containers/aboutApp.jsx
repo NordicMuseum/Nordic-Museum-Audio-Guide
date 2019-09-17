@@ -50,7 +50,7 @@ const aboutTheAppText = locale => {
 };
 
 class AboutApp extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         background: {

@@ -21,6 +21,7 @@ import {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    justifyContent: 'flex-start',
     flex: 1,
   },
   image: {
@@ -33,10 +34,11 @@ const styles = StyleSheet.create({
 });
 
 class Info extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         visible: false,
+        drawBehind: true,
         background: {
           color: NAV_BAR_BACKGROUND,
         },

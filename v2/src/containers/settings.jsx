@@ -7,7 +7,7 @@ import {StyleSheet, View, Text} from 'react-native';
 import {NAV_BAR_TEXT, NAV_BAR_BACKGROUND, ACTION} from '../styles';
 
 class Settings extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         background: {

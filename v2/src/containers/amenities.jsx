@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 });
 
 class Amenities extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         background: {

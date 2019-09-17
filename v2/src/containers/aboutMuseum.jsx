@@ -77,7 +77,7 @@ const hoursText = locale => {
 };
 
 class AboutMuseum extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         background: {
