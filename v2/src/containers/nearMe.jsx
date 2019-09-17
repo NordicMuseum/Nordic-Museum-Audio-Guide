@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import NearMeScreen from '../components/nearMeScreen';
+import {View} from 'react-native';
+
 import {NAV_BAR_TEXT, NAV_BAR_BACKGROUND} from '../styles';
 
 class NearMe extends Component {
@@ -21,7 +22,7 @@ class NearMe extends Component {
   }
 
   render() {
-    return <NearMeScreen />;
+    return <View />;
   }
 }
 

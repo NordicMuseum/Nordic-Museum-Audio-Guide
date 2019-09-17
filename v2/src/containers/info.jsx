@@ -25,11 +25,9 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: 'cover',
-    flex: 1,
     backgroundColor: 'red',
   },
   list: {
-    flex: 1,
     backgroundColor: 'red',
   },
 });

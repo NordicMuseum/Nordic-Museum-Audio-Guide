@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import {View} from 'react-native';
 
-import SearchScreen from '../components/searchScreen';
 import {NAV_BAR_TEXT, NAV_BAR_BACKGROUND} from '../styles';
 
 class Search extends Component {
@@ -21,7 +21,7 @@ class Search extends Component {
   }
 
   render() {
-    return <SearchScreen />;
+    return <View />;
   }
 }
 
