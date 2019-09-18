@@ -16,9 +16,11 @@ import AboutMuseum from './containers/aboutMuseum';
 import AboutApp from './containers/aboutApp';
 import BottomPlayer from './containers/bottomPlayer';
 
+import Analytics from 'appcenter-analytics';
+
 const HARDWARE_BACK_BUTTON_EVENT = 'hardwareBackPress';
 
-const sceneCreator = (SceneComp, store) => {
+const sceneCreator = (SceneComp, screenName, store) => {
   return () =>
     class SceneWrapper extends Component {
       static get options() {
@@ -31,7 +33,7 @@ const sceneCreator = (SceneComp, store) => {
       }
 
       componentDidAppear() {
-        // TODO: Analytics for screen show
+        Analytics.trackEvent(screenName, {Category: 'ScreenViewed'});
 
         BackHandler.addEventListener(
           HARDWARE_BACK_BUTTON_EVENT,
@@ -51,8 +53,6 @@ const sceneCreator = (SceneComp, store) => {
       };
 
       render() {
-        console.log(this.props);
-
         return (
           <Provider store={store}>
             <SceneComp {...this.props} />
@@ -64,16 +64,34 @@ const sceneCreator = (SceneComp, store) => {
 };
 
 const registerScreens = store => {
-  Navigation.registerComponent('nearMe', sceneCreator(NearMe, store));
-  Navigation.registerComponent('tours', sceneCreator(Tours, store));
-  Navigation.registerComponent('tourStop', sceneCreator(TourStop, store));
-  Navigation.registerComponent('search', sceneCreator(Search, store));
-  Navigation.registerComponent('info', sceneCreator(Info, store));
-  Navigation.registerComponent('settings', sceneCreator(Settings, store));
-  Navigation.registerComponent('amenities', sceneCreator(Amenities, store));
-  Navigation.registerComponent('welcome', sceneCreator(Welcome, store));
-  Navigation.registerComponent('aboutMuseum', sceneCreator(AboutMuseum, store));
-  Navigation.registerComponent('aboutApp', sceneCreator(AboutApp, store));
+  Navigation.registerComponent('nearMe', sceneCreator(NearMe, 'nearMe', store));
+  Navigation.registerComponent('tours', sceneCreator(Tours, 'tours', store));
+  Navigation.registerComponent(
+    'tourStop',
+    sceneCreator(TourStop, 'tourStop', store),
+  );
+  Navigation.registerComponent('search', sceneCreator(Search, 'search', store));
+  Navigation.registerComponent('info', sceneCreator(Info, 'info', store));
+  Navigation.registerComponent(
+    'settings',
+    sceneCreator(Settings, 'settings', store),
+  );
+  Navigation.registerComponent(
+    'amenities',
+    sceneCreator(Amenities, 'amenities', store),
+  );
+  Navigation.registerComponent(
+    'welcome',
+    sceneCreator(Welcome, 'welcome', store),
+  );
+  Navigation.registerComponent(
+    'aboutMuseum',
+    sceneCreator(AboutMuseum, 'aboutMuseum', store),
+  );
+  Navigation.registerComponent(
+    'aboutApp',
+    sceneCreator(AboutApp, 'aboutApp', store),
+  );
 };
 
 export default registerScreens;

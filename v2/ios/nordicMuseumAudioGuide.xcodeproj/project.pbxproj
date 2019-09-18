@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* nordicMuseumAudioGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nordicMuseumAudioGuideTests.m */; };
 		4AC6A8D9B6A690A2CA870F98 /* libPods-nordicMuseumAudioGuide-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD19721B4245EE72EE85AA89 /* libPods-nordicMuseumAudioGuide-tvOSTests.a */; };
 		621929BF664451CD2CB20B7C /* libPods-nordicMuseumAudioGuideTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E893637101F1D4220EBF706 /* libPods-nordicMuseumAudioGuideTests.a */; };
+		95320ABD232F01DE000D6DE8 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */; };
 		D69BD601950F29C7CA74E2F8 /* libPods-nordicMuseumAudioGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAC0A2DD6C9768E65195D6 /* libPods-nordicMuseumAudioGuide.a */; };
 		FDEEE7F8D3A36BD3F5EFADAC /* libPods-nordicMuseumAudioGuide-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9780D97B8B9E59DDD9FE0F73 /* libPods-nordicMuseumAudioGuide-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		4E893637101F1D4220EBF706 /* libPods-nordicMuseumAudioGuideTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuideTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5028ACCC11EF67C205700B1E /* Pods-nordicMuseumAudioGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuide/Pods-nordicMuseumAudioGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		8BC392AAB73A69314494E1B8 /* Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuide-tvOSTests/Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
 		9780D97B8B9E59DDD9FE0F73 /* libPods-nordicMuseumAudioGuide-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD19721B4245EE72EE85AA89 /* libPods-nordicMuseumAudioGuide-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAC0A2DD6C9768E65195D6 /* libPods-nordicMuseumAudioGuide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -341,6 +344,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				95320ABD232F01DE000D6DE8 /* AppCenter-Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
