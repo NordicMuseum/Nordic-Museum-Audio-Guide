@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
-import {Navigation} from 'react-native-navigation';
-import {StyleSheet, View, ScrollView} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { connect } from 'react-redux';
+
+import { translate } from '../i18n';
 
 import StickyHeader from '../components/stickyHeader';
 import AmenitiesItem from '../components/amenitiesItem';
@@ -14,8 +11,8 @@ import {
   ACTION,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  LIGHT_GRAY,
   BOTTOM_BAR_HEIGHT,
+  BOTTOM_PLAYER_HEIGHT,
 } from '../styles';
 
 import allAmenities from '../data/amenities';
@@ -40,7 +37,7 @@ class Amenities extends Component {
           color: ACTION,
         },
         title: {
-          text: 'Amenities',
+          text: translate('amenitiesScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
@@ -50,13 +47,12 @@ class Amenities extends Component {
   }
 
   render() {
-    console.log(allAmenities);
-    let containerMargin = 0;
+    const { playerOpen } = this.props;
 
-    // let containerMargin = BOTTOM_BAR_HEIGHT;
-    // if (props.playerOpen) {
-    //   containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    // }
+    let containerMargin = BOTTOM_BAR_HEIGHT;
+    if (playerOpen) {
+      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+    }
 
     let totalIndex = 0;
     let content = [];
@@ -66,7 +62,7 @@ class Amenities extends Component {
       content.push(
         <StickyHeader
           key={totalIndex}
-          title={`${I18n.t('floor')} ${floor.floor}`}
+          title={`${translate('floor')} ${floor.floor}`}
         />,
       );
       totalIndex++;
@@ -84,7 +80,7 @@ class Amenities extends Component {
     });
 
     return (
-      <View style={{flex: 1, backgroundColor: 'LIGHT_GRAY'}}>
+      <View style={{ flex: 1, backgroundColor: 'LIGHT_GRAY' }}>
         <View
           style={[
             styles.container,
@@ -94,7 +90,7 @@ class Amenities extends Component {
           ]}>
           <ScrollView
             automaticallyAdjustContentInsets={false}
-            contentContainerStyle={{paddingBottom: 10}}
+            contentContainerStyle={{ paddingBottom: 10 }}
             stickyHeaderIndices={stickyHeaders}>
             {content}
           </ScrollView>
@@ -104,4 +100,19 @@ class Amenities extends Component {
   }
 }
 
-export default Amenities;
+const mapStateToProps = state => {
+  return {
+    playerOpen: state.bottomPlayer.playerOpen,
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(Amenities);

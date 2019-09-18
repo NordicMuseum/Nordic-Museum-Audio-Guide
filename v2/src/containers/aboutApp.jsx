@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // Re add app version to bottom of screen
 // import DeviceInfo from 'react-native-device-info';
@@ -6,24 +6,20 @@ import React, {Component} from 'react';
 //               {DeviceInfo.getVersion()}
 //             </Text>
 
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { connect } from 'react-redux';
 
-// Placeholder for BOTTOMPLAYERHEIGHT
-const BOTTOMPLAYERHEIGHT = 0;
-
-import {View, StyleSheet, ScrollView, Text} from 'react-native';
+import { View, StyleSheet, ScrollView, Text } from 'react-native';
 
 import Markdown from 'react-native-simple-markdown';
+
+import { isRTL } from '../i18n';
 
 import {
   globalStyles,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
   ACTION,
+  BOTTOM_PLAYER_HEIGHT,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -71,33 +67,32 @@ class AboutApp extends Component {
   }
 
   render() {
+    const { locale } = this.props;
+
     const markdownStyles = {
       heading1: {
         marginTop: 25,
         ...StyleSheet.flatten(globalStyles.h1),
-        // writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
-        // textAlign: I18nManager.isRTL ? 'right' : 'left',
+        writingDirection: isRTL() ? 'rtl' : 'ltr',
+        textAlign: isRTL() ? 'right' : 'left',
       },
       paragraph: {
         marginTop: 5,
         ...StyleSheet.flatten(globalStyles.body),
-        // writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
-        // textAlign: I18nManager.isRTL ? 'right' : 'left',
+        writingDirection: isRTL() ? 'rtl' : 'ltr',
+        textAlign: isRTL() ? 'right' : 'left',
       },
     };
 
-    // PLACEHODLER
-    var locale = 'en';
-
     return (
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <View style={[styles.container]}>
           <ScrollView
             contentContainerStyle={{
               paddingTop: 10,
               paddingLeft: 10,
               paddingRight: 10,
-              paddingBottom: BOTTOMPLAYERHEIGHT + 10,
+              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10,
             }}
             automaticallyAdjustContentInsets={false}>
             <Markdown
@@ -120,4 +115,19 @@ class AboutApp extends Component {
   }
 }
 
-export default AboutApp;
+const mapStateToProps = state => {
+  return {
+    locale: state.localization.locale,
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(AboutApp);

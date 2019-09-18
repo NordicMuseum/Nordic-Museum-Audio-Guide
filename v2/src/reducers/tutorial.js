@@ -1,6 +1,6 @@
-import {HIDE_TUTORIAL, SHOW_TUTORIAL} from '../actions/tutorial';
+import { HIDE_TUTORIAL, SHOW_TUTORIAL } from '../actions/tutorial';
 
-import {RESET} from '../actions/device';
+import { RESET } from '../actions/device';
 
 const initialState = {
   tutorialHidden: false,

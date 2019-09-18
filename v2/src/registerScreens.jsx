@@ -36,6 +36,7 @@ const sceneCreator = (
 
       constructor(props) {
         super(props);
+        this.sceneCompRef = React.createRef();
         Navigation.events().bindComponent(this);
 
         localizationActor().addListener(this.localeChanged);
@@ -68,7 +69,7 @@ const sceneCreator = (
       render() {
         return (
           <Provider store={store}>
-            <SceneComp {...this.props} />
+            <SceneComp ref={this.sceneCompRef} {...this.props} />
             <BottomPlayer />
           </Provider>
         );
@@ -121,10 +122,11 @@ const sceneCreator = (
         }
 
         Navigation.mergeOptions(this.props.componentId, newOptions);
+
         // TODO: Force update the screen
-        // if (this.sceneCompRef.current) {
-        //   this.sceneCompRef.current.forceUpdate();
-        // }
+        if (this.sceneCompRef.current) {
+          this.sceneCompRef.current.forceUpdate();
+        }
       };
     };
 };

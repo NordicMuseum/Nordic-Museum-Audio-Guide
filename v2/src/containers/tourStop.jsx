@@ -1,4 +1,7 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
+
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 //import I18n from 'react-native-i18n';
 
@@ -14,18 +17,26 @@ import {
 
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 
-// import { BOTTOMBARHEIGHT } from './rootScreen';
-// import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
+import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
+
+import { updateNearMeRootStatus } from '../actions/navigation';
 
 import NavigationBar from '../components/navigationBar';
 //import { AUDIO_CONTENT_ITEM_HEIGHT } from './audioContentItem';
 import AudioContentList from '../components/audioContentList';
 
-import {parseDisplayText, parseVoiceoverText} from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
 //import { analyticsTrackContentOpened, analyticsTrackScreen } from '../actions/analytics';
 
-import {OFF_BLACK, ACTION, LIGHT_GRAY, NAV_BAR_TEXT} from '../styles.js';
+import {
+  OFF_BLACK,
+  ACTION,
+  LIGHT_GRAY,
+  NAV_BAR_TEXT,
+  BOTTOM_BAR_HEIGHT,
+  BOTTOM_PLAYER_HEIGHT,
+} from '../styles.js';
 
 const width = Dimensions.get('window').width;
 
@@ -312,10 +323,10 @@ class TourStop extends Component {
 
     const duration = tourStop.duration[locale];
 
-    let containerMargin = 50; // BOTTOMBARHEIGHT;
-    // if (this.props.playerOpen) {
-    //   containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    // }
+    let containerMargin = BOTTOM_BAR_HEIGHT;
+    if (this.props.playerOpen) {
+      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+    }
 
     // let accessibilityLabel;
 
@@ -331,10 +342,10 @@ class TourStop extends Component {
     // }
 
     return (
-      <View style={{flex: 1, backgroundColor: LIGHT_GRAY}}>
+      <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
         <ParallaxScrollView
-          style={[styles.container, {marginBottom: containerMargin}]}
-          contentOffset={{x: 0, y: yOffset}}
+          style={[styles.container, { marginBottom: containerMargin }]}
+          contentOffset={{ x: 0, y: yOffset }}
           backgroundColor={LIGHT_GRAY}
           contentBackgroundColor={LIGHT_GRAY}
           parallaxHeaderHeight={254}
@@ -375,10 +386,10 @@ class TourStop extends Component {
 
             return (
               <View
-                style={{borderBottomColor: '#ffffff', borderBottomWidth: 1}}>
+                style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}>
                 <ImageBackground
                   style={styles.headerImage}
-                  source={{uri: imageURL}}>
+                  source={{ uri: imageURL }}>
                   <View style={styles.headerTitle} pointerEvents={'none'}>
                     <Text style={styles.headerTitleText}>
                       {parseDisplayText('title').toUpperCase()}
@@ -387,7 +398,7 @@ class TourStop extends Component {
                 </ImageBackground>
                 <View style={styles.playAllButtonContainer}>
                   <TouchableOpacity
-                    style={[styles.playAllButton, {width: 0.65 * width}]}
+                    style={[styles.playAllButton, { width: 0.65 * width }]}
                     onPress={() => {
                       // playTrack(
                       //   this.props.tourStop,
@@ -448,4 +459,37 @@ class TourStop extends Component {
   }
 }
 
-export default TourStop;
+const mapStateToProps = state => {
+  return {
+    currentAudio: state.bottomPlayer.uuid,
+    currentAudioTime: state.bottomPlayer.time,
+    screenReader: state.accessibility.screenReader,
+    playerStatus: state.bottomPlayer.playerStatus,
+    playerOpen: state.bottomPlayer.playerOpen,
+    autoplayOn: state.bottomPlayer.autoplayOn,
+    autoplayInitial: state.bottomPlayer.autoplayInitial,
+    currentStopUUID: state.bottomPlayer.stopUUID,
+    locale: state.localization.locale,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        playTrack,
+        unloadAudio,
+        togglePausePlay,
+        updateNearMeRootStatus,
+      },
+      dispatch,
+    ),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(TourStop);

@@ -1,17 +1,12 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-// import I18n from 'react-native-i18n';
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { translate } from '../../i18n';
 
-import {Image, Alert, StyleSheet, View, Text} from 'react-native';
+import { Image, Alert, StyleSheet, View, Text } from 'react-native';
 
 import WideButton from './wideButton';
 
-import {OFF_WHITE, LIGHT_GRAY, ACTION} from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   onStyle: {
@@ -36,7 +31,7 @@ const BluetoothButton = props => {
       <WideButton
         style={[styles.onStyle, props.style]}
         textStyle={props.textStyle}
-        text={I18n.t('bluetoothButton_OnLabel')}
+        text={translate('bluetoothButton_OnLabel')}
         disabled={true}
         accessoryView={<Image source={require('../../assets/checkmark.png')} />}
       />
@@ -46,11 +41,11 @@ const BluetoothButton = props => {
       <WideButton
         style={[styles.offStyle, props.style]}
         textStyle={[styles.offTextStyle, props.textStyle]}
-        text={I18n.t('bluetoothButton_OffLabel')}
+        text={translate('bluetoothButton_OffLabel')}
         onPress={() => {
           Alert.alert(
-            I18n.t('bluetoothAlert_Header'),
-            I18n.t('bluetoothAlert_Body'),
+            translate('bluetoothAlert_Header'),
+            translate('bluetoothAlert_Body'),
           );
         }}
       />

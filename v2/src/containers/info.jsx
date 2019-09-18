@@ -60,8 +60,6 @@ class Info extends Component {
       bottomOffset += BOTTOM_PLAYER_HEIGHT;
     }
 
-    console.log('rerender');
-
     const listHeight = DISCLOSURE_CELL_HEIGHT * 4;
     const imageHeight = height - (listHeight + bottomOffset);
 
@@ -143,6 +141,7 @@ class Info extends Component {
     );
   }
 }
+
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
@@ -156,4 +155,6 @@ const mapDispatchToProps = () => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(Info);

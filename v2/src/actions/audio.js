@@ -1,18 +1,14 @@
 // import store from '../store';
 
-import {NativeModules} from 'react-native';
+import { NativeModules } from 'react-native';
 
-// import I18n from 'react-native-i18n';
-// Placeholder
-var I18n = {};
-I18n.locale = 'en';
-I18n.defaultLocale = 'en';
+import i18n from 'i18n-js';
 
-import {setAudioManagerEventListeners} from './audioEvents';
+import { setAudioManagerEventListeners } from './audioEvents';
 
-import {clearTimer} from './audioTimer';
+import { clearTimer } from './audioTimer';
 
-import {analyticsTrackAudioPartialListen} from './analytics';
+import { analyticsTrackAudioPartialListen } from './analytics';
 
 const AudioManager = NativeModules.CMSAudioManager;
 
@@ -124,11 +120,11 @@ export function playTrack(
     let url = activeAudio.audioURL;
     if (activeAudio.audioURL.length === 3) {
       // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
-      if (activeAudio.duration[I18n.locale]) {
-        url = activeAudio.audioURL.concat('/', I18n.locale);
+      if (activeAudio.duration[i18n.locale]) {
+        url = activeAudio.audioURL.concat('/', i18n.locale);
       } else {
-        if (activeAudio.duration[I18n.defaultLocale]) {
-          url = activeAudio.audioURL.concat('/', I18n.defaultLocale);
+        if (activeAudio.duration[i18n.defaultLocale]) {
+          url = activeAudio.audioURL.concat('/', i18n.defaultLocale);
         } else {
           url = activeAudio.audioURL.concat('/', 'sv');
         }

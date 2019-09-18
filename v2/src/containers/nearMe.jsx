@@ -359,4 +359,6 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(NearMe);

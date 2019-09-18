@@ -1,16 +1,12 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View, StyleSheet, Text, Image } from 'react-native';
 
-import {View, StyleSheet, Text, Image} from 'react-native';
+import { translate } from '../i18n';
 
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { parseDisplayText } from '../utilities';
 
-import {parseDisplayText} from '../utilities';
-
-import {globalStyles} from '../styles';
+import { globalStyles } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -55,13 +51,13 @@ const AmenitiesItem = props => {
           style={[
             styles.amenityTitle,
             globalStyles.body,
-            description === '' ? {marginBottom: 0} : {marginBottom: 10},
+            description === '' ? { marginBottom: 0 } : { marginBottom: 10 },
           ]}>
-          {I18n.t(props.amenity.title)}
+          {translate(props.amenity.title)}
         </Text>
         {description !== '' && (
           <Text style={[styles.amenityDescription, globalStyles.body]}>
-            {I18n.t(description)}
+            {translate(description)}
           </Text>
         )}
       </View>
@@ -70,8 +66,8 @@ const AmenitiesItem = props => {
 };
 
 AmenitiesItem.propTypes = {
-  // amenity: PropTypes.object.isRequired,
-  // border: PropTypes.bool,
+  amenity: PropTypes.object.isRequired,
+  border: PropTypes.bool,
 };
 
 export default AmenitiesItem;
