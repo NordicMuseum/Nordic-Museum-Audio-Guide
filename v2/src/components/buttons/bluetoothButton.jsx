@@ -1,6 +1,11 @@
 import React, {PropTypes} from 'react';
 
-import I18n from 'react-native-i18n';
+// import I18n from 'react-native-i18n';
+// Placeholder for the translate function
+var I18n = {};
+I18n.t = function(t) {
+  return t;
+};
 
 import {Image, Alert, StyleSheet, View, Text} from 'react-native';
 
@@ -56,9 +61,9 @@ const BluetoothButton = props => {
 };
 
 BluetoothButton.propTypes = {
-  bluetoothOn: PropTypes.bool.isRequired,
-  style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
-  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
+  // bluetoothOn: PropTypes.bool.isRequired,
+  // style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
+  // textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
 };
 
 export default BluetoothButton;

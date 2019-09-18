@@ -1,6 +1,11 @@
 import React, {PropTypes} from 'react';
 
-import I18n from 'react-native-i18n';
+// import I18n from 'react-native-i18n';
+// Placeholder for the translate function
+var I18n = {};
+I18n.t = function(t) {
+  return t;
+};
 
 import {Image, Alert, StyleSheet, Linking, View, Text} from 'react-native';
 
@@ -32,7 +37,7 @@ const styles = StyleSheet.create({
 });
 
 const LocationServicesButton = props => {
-  let locationServicesButton;
+  let locationServicesButton = null;
 
   switch (props.locationServicesStatus) {
     case LOCATION_SERVICES_STATUS_NOTDETERMINED:
@@ -106,9 +111,9 @@ const LocationServicesButton = props => {
 };
 
 LocationServicesButton.propTypes = {
-  locationServicesStatus: PropTypes.string.isRequired,
-  style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
-  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
+  // locationServicesStatus: PropTypes.string.isRequired,
+  // style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
+  // textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
 };
 
 export default LocationServicesButton;
