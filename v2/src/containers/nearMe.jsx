@@ -1,24 +1,19 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import BluetoothButton from '../components/buttons/bluetoothButton';
 import LocationServicesButton from '../components/buttons/locationServicesButton';
 
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { translate } from '../i18n';
 
 import {
   globalStyles,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  TEAL,
-  OFF_BLACK,
+  BOTTOM_PLAYER_HEIGHT,
   LIGHT_BLUE,
   BOTTOM_BAR_HEIGHT,
 } from '../styles';
@@ -73,13 +68,13 @@ class NearMe extends Component {
     let contentView;
     let debugView;
 
-    const storiesMessage = I18n.t('nearMeScreen_StoriesMessage');
+    const storiesMessage = translate('nearMeScreen_StoriesMessage');
 
     if (this.props.tracking === false) {
       contentView = (
         <View style={[styles.messageContainer, styles.settingContainer]}>
           <Text style={[globalStyles.body, styles.storiesMessageText]}>
-            {`${storiesMessage}\n\n${I18n.t('nearMeScreen_LocationNeeds')}`}
+            {`${storiesMessage}\n\n${translate('nearMeScreen_LocationNeeds')}`}
           </Text>
           <View style={styles.buttonsContainer}>
             <LocationServicesButton
@@ -98,11 +93,11 @@ class NearMe extends Component {
 
       if (this.props.floor !== null) {
         if (tourStopsNum === 0) {
-          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessageNone');
+          voiceOverMessage = translate('nearMeScreen_StoriesMessageNone');
         } else if (tourStopsNum === 1) {
-          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessageSingular');
+          voiceOverMessage = translate('nearMeScreen_StoriesMessageSingular');
         } else {
-          voiceOverMessage = I18n.t('nearMeScreen_StoriesMessagePlural');
+          voiceOverMessage = translate('nearMeScreen_StoriesMessagePlural');
           voiceOverMessage = voiceOverMessage.replace(
             ' x ',
             ` ${tourStopsNum} `,
@@ -172,7 +167,7 @@ class NearMe extends Component {
         const stickyHeaders = [];
         let totalIndex = 0;
 
-        const {playTrack, togglePausePlay} = this.props.actions;
+        const { playTrack, togglePausePlay } = this.props.actions;
 
         let highlightsList = [];
         if (audioContent.length > 0) {
@@ -180,7 +175,7 @@ class NearMe extends Component {
           highlightsList.push(
             <StickyHeader
               key={totalIndex}
-              title={I18n.t('Highlights_shortTitle')}
+              title={translate('Highlights_shortTitle')}
             />,
           );
 
@@ -195,8 +190,8 @@ class NearMe extends Component {
           const tourStop = {
             uuid: uuid.v4(),
             floor: this.props.floor,
-            shortTitle: I18n.t('Highlights_shortTitle'),
-            longTitle: I18n.t('Highlights_shortTitle'),
+            shortTitle: translate('Highlights_shortTitle'),
+            longTitle: translate('Highlights_shortTitle'),
             audioContent: audioContentRealm.filtered(query),
           };
 
@@ -243,7 +238,7 @@ class NearMe extends Component {
 
           stickyHeaders.push(totalIndex);
           tourStopsList.push(
-            <StickyHeader key={totalIndex} title={I18n.t('themes')} />,
+            <StickyHeader key={totalIndex} title={translate('themes')} />,
           );
 
           tourStopsList.push(
@@ -260,7 +255,7 @@ class NearMe extends Component {
               );
 
               return (
-                <View style={{height: totalCellHeight}} key={totalIndex}>
+                <View style={{ height: totalCellHeight }} key={totalIndex}>
                   {tourItem}
                 </View>
               );
@@ -278,7 +273,7 @@ class NearMe extends Component {
           amenitiesList.push(
             <StickyHeader
               key={totalIndex}
-              title={I18n.t('nearMeScreen_Amenities')}
+              title={translate('nearMeScreen_Amenities')}
             />,
           );
 
@@ -311,19 +306,19 @@ class NearMe extends Component {
 
     let floor;
     if (this.props.floor === null) {
-      floor = I18n.t('nearMeScreen_Title');
+      floor = translate('nearMeScreen_Title');
     } else {
-      floor = `${I18n.t('floor')} ${this.props.floor}`;
+      floor = `${translate('floor')} ${this.props.floor}`;
     }
 
     let containerMargin = BOTTOM_BAR_HEIGHT;
-    // if (this.props.playerOpen) {
-    //   containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    // }
+    if (this.props.playerOpen) {
+      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+    }
 
     return (
-      <View style={{flex: 1}}>
-        <View style={[styles.container, {marginBottom: containerMargin}]}>
+      <View style={{ flex: 1 }}>
+        <View style={[styles.container, { marginBottom: containerMargin }]}>
           {debugView}
           {contentView}
         </View>
@@ -334,7 +329,7 @@ class NearMe extends Component {
 
 const mapStateToProps = state => {
   return {
-    show: state.bottomPlayer.show,
+    playerOpen: state.bottomPlayer.playerOpen,
     tracking: false,
     locationServicesStatus: false,
     bluetoothOn: false,

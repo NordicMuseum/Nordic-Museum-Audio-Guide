@@ -1,10 +1,11 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, ViewPropTypes } from 'react-native';
 
 import WideButton from './wideButton';
 
-import {OFF_WHITE, SELECTED} from '../../styles';
+import { OFF_WHITE, SELECTED } from '../../styles';
 
 const styles = StyleSheet.create({
   offStyle: {
@@ -97,7 +98,7 @@ const LanguageSwitcherButtons = props => {
             style={[
               props.locale === language.code ? styles.onStyle : styles.offStyle,
               props.style,
-              {alignItems: 'center', justifyContent: 'center'},
+              { alignItems: 'center', justifyContent: 'center' },
             ]}
             textStyle={[styles.normalTextStyle, props.textStyle]}
             text={language.name}
@@ -114,8 +115,8 @@ const LanguageSwitcherButtons = props => {
 
 LanguageSwitcherButtons.propTypes = {
   locale: PropTypes.string.isRequired,
-  style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
-  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
+  style: PropTypes.oneOfType([ViewPropTypes.style, PropTypes.object]),
+  textStyle: PropTypes.object,
   onPress: PropTypes.func.isRequired,
 };
 

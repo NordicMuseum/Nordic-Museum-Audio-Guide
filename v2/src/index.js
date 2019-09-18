@@ -1,7 +1,11 @@
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 
-import {configureStore} from './store';
+import { configureStore } from './store';
 import registerScreens from './registerScreens';
+
+import { setI18nConfig, translate } from './i18n';
+
+import { localizationActor } from './actors/localization';
 
 import {
   NAV_BAR_TEXT,
@@ -18,7 +22,10 @@ import {
   SELECTED,
 } from './styles';
 
+setI18nConfig();
 const store = configureStore();
+localizationActor(store);
+
 registerScreens(store);
 
 Navigation.events().registerAppLaunchedListener(() => {
@@ -42,7 +49,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Near Me',
+                  text: translate('nearMeScreen_Title'),
                   icon: require('../src/assets/nearTab.png'),
                   selectedIcon: require('../src/assets/nearTabSelected.png'),
                   textColor: OFF_WHITE,
@@ -64,7 +71,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Browse',
+                  text: translate('storiesScreen_Title'),
                   icon: require('../src/assets/storiesTab.png'),
                   selectedIcon: require('../src/assets/storiesTabSelected.png'),
                   textColor: OFF_WHITE,
@@ -85,7 +92,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Search #',
+                  text: translate('searchScreen_Title'),
                   icon: require('../src/assets/searchTab.png'),
                   selectedIcon: require('../src/assets/searchTabSelected.png'),
                   textColor: OFF_WHITE,
@@ -106,7 +113,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Info',
+                  text: translate('museumScreen_Title'),
                   icon: require('../src/assets/museumTab.png'),
                   selectedIcon: require('../src/assets/museumTabSelected.png'),
                   textColor: OFF_WHITE,
@@ -120,15 +127,4 @@ Navigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
-
-  // Navigation.showOverlay({
-  //   component: {
-  //     name: 'welcome',
-  //     options: {
-  //       overlay: {
-  //         interceptTouchOutside: true
-  //       }
-  //     }
-  //   }
-  // });
 });

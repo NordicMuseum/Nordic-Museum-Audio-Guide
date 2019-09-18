@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Dimensions,
@@ -8,13 +8,19 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import {editDigits as editDigitsAction} from '../actions/searchByNumber';
+import { editDigits as editDigitsAction } from '../actions/searchByNumber';
 
-import {OFF_BLACK, SELECTED, NAV_BAR_BACKGROUND, NAV_BAR_TEXT} from '../styles';
+import {
+  OFF_BLACK,
+  SELECTED,
+  NAV_BAR_BACKGROUND,
+  NAV_BAR_TEXT,
+} from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -112,7 +118,7 @@ class Search extends Component {
 
   static propTypes = {
     // navigator: PropTypes.object.isRequired,
-    // playerOpen: PropTypes.bool.isRequired,
+    playerOpen: PropTypes.bool.isRequired,
     // digits: PropTypes.array.isRequired,
     // screenReader: PropTypes.bool.isRequired,
     // tourStops: PropTypes.object.isRequired,
@@ -133,7 +139,7 @@ class Search extends Component {
   componentWillUnmount() {
     if (this.state.tryAgainMessage) {
       clearTimeout(this.state.tryAgainMessage);
-      this.setState({tryAgainMessage: null});
+      this.setState({ tryAgainMessage: null });
     }
   }
 
@@ -257,7 +263,7 @@ class Search extends Component {
   }
 
   render() {
-    const {width, height} = Dimensions.get('window');
+    const { width, height } = Dimensions.get('window');
 
     const screenTitle = this.state.numberNotFound
       ? 'tryAgain'
@@ -266,11 +272,11 @@ class Search extends Component {
       <View
         style={[
           styles.container,
-          height < 570 ? {paddingTop: 30} : {paddingTop: 50},
-          this.props.playerOpen && height < 570 ? {paddingTop: 25} : {},
+          height < 570 ? { paddingTop: 30 } : { paddingTop: 50 },
+          this.props.playerOpen && height < 570 ? { paddingTop: 25 } : {},
         ]}>
         <View
-          style={[styles.display, this.props.playerOpen ? {flex: 0.15} : {}]}>
+          style={[styles.display, this.props.playerOpen ? { flex: 0.15 } : {}]}>
           <View
             style={[styles.displayRow]}
             //I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}
@@ -289,8 +295,8 @@ class Search extends Component {
         <View
           style={[
             styles.digitPad,
-            {width},
-            this.props.playerOpen && height < 570 ? {paddingTop: 5} : {},
+            { width },
+            this.props.playerOpen && height < 570 ? { paddingTop: 5 } : {},
           ]}>
           <View
             // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
@@ -407,7 +413,7 @@ class Search extends Component {
 
 const mapStateToProps = state => {
   return {
-    // show: state.bottomPlayer.show,
+    playerOpen: state.bottomPlayer.playerOpen,
     digits: [null, null, null],
   };
 };

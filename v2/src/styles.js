@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const NAV_BAR_TEXT = '#1A1A1A';
 export const NAV_BAR_BACKGROUND = '#EDEDED';
@@ -15,7 +15,10 @@ export const HIGHLIGHTS = '#FFC200';
 export const ACTION = '#E52484';
 export const SELECTED = '#FAE3E7';
 
+// TODO: This should be grabbed from react-native-navigation:
 export const BOTTOM_BAR_HEIGHT = 85;
+
+export const BOTTOM_PLAYER_HEIGHT = 95;
 
 export const globalStyles = StyleSheet.create({
   body: {

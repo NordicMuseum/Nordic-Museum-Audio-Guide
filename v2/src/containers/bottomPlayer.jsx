@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import {StyleSheet, View, Text, Dimensions, Button} from 'react-native';
+import { StyleSheet, View, Text, Dimensions, Button } from 'react-native';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import {hideBottomPlayer as hideBottomPlayerAction} from '../actions/bottomPlayer';
+import { hideBottomPlayer as hideBottomPlayerAction } from '../actions/bottomPlayer';
 
-import {BOTTOM_BAR_HEIGHT} from '../styles';
+import { BOTTOM_PLAYER_HEIGHT } from '../styles';
 
-const {width} = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   positionContainer: {
     position: 'absolute',
     bottom: 0,
     left: 0,
-    height: BOTTOM_BAR_HEIGHT,
+    height: BOTTOM_PLAYER_HEIGHT,
     width,
   },
   contentContainer: {
@@ -39,7 +39,7 @@ class BottomPlayer extends Component {
         <View style={styles.contentContainer}>
           <Button
             onPress={() => {
-              const {hideBottomPlayer} = this.props.actions;
+              const { hideBottomPlayer } = this.props.actions;
               hideBottomPlayer();
             }}
             title="Hide Bottom Player"
@@ -54,7 +54,7 @@ class BottomPlayer extends Component {
 
 const mapStateToProps = state => {
   return {
-    show: state.bottomPlayer.show,
+    show: state.bottomPlayer.playerOpen,
   };
 };
 

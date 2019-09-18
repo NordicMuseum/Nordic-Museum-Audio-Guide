@@ -1,20 +1,19 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, Dimensions, Image} from 'react-native';
-import {Navigation} from 'react-native-navigation';
+import React, { Component } from 'react';
+import { View, StyleSheet, Dimensions, Image } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { connect } from 'react-redux';
+
+import { translate } from '../i18n';
 
 import DisclosureCell, {
   DISCLOSURE_CELL_HEIGHT,
 } from '../components/disclosureCell';
+
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  OFF_BLACK,
+  BOTTOM_PLAYER_HEIGHT,
   BOTTOM_BAR_HEIGHT,
 } from '../styles';
 
@@ -43,7 +42,7 @@ class Info extends Component {
           color: NAV_BAR_BACKGROUND,
         },
         title: {
-          text: I18n.t('museumScreen_Title'),
+          text: translate('museumScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
@@ -57,40 +56,43 @@ class Info extends Component {
     const height = Dimensions.get('window').height;
 
     let bottomOffset = BOTTOM_BAR_HEIGHT;
-    // if (this.props.playerOpen) {
-    //   bottomOffset += BOTTOMPLAYERHEIGHT;
-    // }
+    if (this.props.playerOpen) {
+      bottomOffset += BOTTOM_PLAYER_HEIGHT;
+    }
+
+    console.log('rerender');
 
     const listHeight = DISCLOSURE_CELL_HEIGHT * 4;
     const imageHeight = height - (listHeight + bottomOffset);
 
     return (
-      <View style={[styles.container, {marginBottom: bottomOffset}]}>
-        <View style={{height: imageHeight}}>
+      <View style={[styles.container, { marginBottom: bottomOffset }]}>
+        <View style={{ height: imageHeight }}>
           <Image
             accessible={true}
-            accessibilityLabel={I18n.t('museumScreen_ImageAccessibilityLabel')}
+            accessibilityLabel={translate(
+              'museumScreen_ImageAccessibilityLabel',
+            )}
             accessibilityTraits={'image'}
             style={[
               styles.image,
-              {width, height: imageHeight, backgroundColor: 'red'},
+              { width, height: imageHeight, backgroundColor: 'red' },
             ]}
             source={require('../assets/images/museumBackground.png')}
           />
         </View>
-        <View style={[styles.list, {width}]}>
+        <View style={[styles.list, { width }]}>
           <View>
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('settingsScreen_Title'),
+                label: translate('settingsScreen_Title'),
               }}
               bottomBorder={true}
-              title={I18n.t('settingsScreen_Title')}
+              title={translate('settingsScreen_Title')}
               onPress={() => {
-                //  analyticsTrackScreen('Language');
                 Navigation.push(this.props.componentId, {
-                  component: {name: 'settings'},
+                  component: { name: 'settings' },
                 });
               }}
             />
@@ -98,15 +100,13 @@ class Info extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('amenitiesScreen_Title'),
+                label: translate('amenitiesScreen_Title'),
               }}
               bottomBorder={true}
-              title={I18n.t('amenitiesScreen_Title')}
+              title={translate('amenitiesScreen_Title')}
               onPress={() => {
-                // analyticsTrackScreen('Amenities');
-
                 Navigation.push(this.props.componentId, {
-                  component: {name: 'amenities'},
+                  component: { name: 'amenities' },
                 });
               }}
             />
@@ -114,29 +114,26 @@ class Info extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('museumScreen_ListItem1Label'),
+                label: translate('museumScreen_ListItem1Label'),
               }}
               bottomBorder={true}
-              title={I18n.t('museumScreen_ListItem1Label')}
+              title={translate('museumScreen_ListItem1Label')}
               onPress={() => {
-                // analyticsTrackScreen('About The Nordic Museum');
                 Navigation.push(this.props.componentId, {
-                  component: {name: 'aboutMuseum'},
+                  component: { name: 'aboutMuseum' },
                 });
               }}
             />
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: I18n.t('aboutTheAppScreen_Title'),
+                label: translate('aboutTheAppScreen_Title'),
               }}
               bottomBorder={false}
-              title={I18n.t('aboutTheAppScreen_Title')}
+              title={translate('aboutTheAppScreen_Title')}
               onPress={() => {
-                // analyticsTrackScreen('About the App');
-                // analyticsTrackScreen('About The Nordic Museum');
                 Navigation.push(this.props.componentId, {
-                  component: {name: 'aboutApp'},
+                  component: { name: 'aboutApp' },
                 });
               }}
             />
@@ -146,5 +143,17 @@ class Info extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    playerOpen: state.bottomPlayer.playerOpen,
+  };
+};
 
-export default Info;
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Info);

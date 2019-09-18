@@ -1,4 +1,4 @@
-import {HIDE_BOTTOM_PLAYER} from '../actions/bottomPlayer';
+import { HIDE_BOTTOM_PLAYER } from '../actions/bottomPlayer';
 
 import {
   TOGGLE_PAUSE_PLAY,
@@ -23,14 +23,13 @@ import {
   AUDIO_DID_FINISH_PLAYING,
 } from '../actions/audio';
 
-import {SCREEN_READER_STATUS} from '../actions/accessibility';
+import { SCREEN_READER_STATUS } from '../actions/accessibility';
 
-import {FIRE_TIMER, STOP_TIMER} from '../actions/audioTimer';
+import { FIRE_TIMER, STOP_TIMER } from '../actions/audioTimer';
 
-import {RESET} from '../actions/device';
+import { RESET } from '../actions/device';
 
 const initialState = {
-  show: true,
   tourStop: {},
   audioContent: {},
   stopUUID: '',
@@ -45,7 +44,9 @@ const initialState = {
   // 1. Audio Status (Not Loaded, Loading, Failure, Success)
   // 2. Playing Status (Paused, Playing, Done)
   playerStatus: PLAYER_STATUS_NOTLOADED,
-  playerOpen: false,
+  // TODO: Only true for debugging, replace with false
+  playerOpen: true,
+
   playRate: PLAY_RATE_NORMAL,
   prevUUID: null,
   nextUUID: null,
@@ -76,7 +77,7 @@ export function bottomPlayer(state = initialState, action) {
     }
 
     case LOAD_AUDIO_SUCCESS: {
-      const {title, url, uuid} = action.activeAudio;
+      const { title, url, uuid } = action.activeAudio;
 
       return Object.assign({}, state, {
         tourStop: action.tourStop,

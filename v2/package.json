@@ -10,9 +10,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "i18n-js": "^3.3.0",
+    "lodash.memoize": "^4.1.2",
+    "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-collapsible": "^1.5.1",
+    "react-native-localize": "^1.2.0",
     "react-native-navigation": "3.1.1",
     "react-native-parallax-scroll-view": "^0.21.3",
     "react-native-simple-markdown": "^1.1.0",

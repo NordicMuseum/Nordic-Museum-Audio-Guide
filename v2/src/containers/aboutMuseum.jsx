@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // Placeholder for the translate function
 var I18n = {};
@@ -6,10 +6,7 @@ I18n.t = function(t) {
   return t;
 };
 
-// Placeholder for BOTTOMPLAYERHEIGHT
-const BOTTOMPLAYERHEIGHT = 0;
-
-import {View, StyleSheet, ScrollView, Text} from 'react-native';
+import { View, StyleSheet, ScrollView, Text } from 'react-native';
 
 import Markdown from 'react-native-simple-markdown';
 
@@ -17,6 +14,7 @@ import {
   globalStyles,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
+  BOTTOM_PLAYER_HEIGHT,
   ACTION,
 } from '../styles';
 
@@ -117,14 +115,14 @@ class AboutMuseum extends Component {
     var locale = 'en';
 
     return (
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <View style={styles.container}>
           <ScrollView
             contentContainerStyle={{
               paddingTop: 10,
               paddingLeft: 10,
               paddingRight: 10,
-              paddingBottom: BOTTOMPLAYERHEIGHT + 10,
+              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10,
             }}
             automaticallyAdjustContentInsets={false}>
             <Markdown

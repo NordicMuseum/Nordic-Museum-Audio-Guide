@@ -1,14 +1,14 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 // import { beacon } from './beacon';
 // import { closeTourStops } from './closeTourStops';
 // import { allTourStops } from './allTourStops';
-import {bottomPlayer} from './bottomPlayer';
+import { bottomPlayer } from './bottomPlayer';
 // import { amenities } from './amenities';
 // import { accessibility } from './accessibility';
 // import { nav } from './navigation';
-import {tutorial} from './tutorial';
-// import { localization } from './localization';
+import { tutorial } from './tutorial';
+import { localization } from './localization';
 // import { searchByNumber } from './searchByNumber';
 
 const rootReducer = combineReducers({
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
   // accessibility,
   // nav,
   tutorial,
-  // localization,
+  localization,
   // searchByNumber,
 });
 
