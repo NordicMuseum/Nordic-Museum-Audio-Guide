@@ -14,7 +14,7 @@ import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -55,7 +55,7 @@ class Info extends Component {
     const width = Dimensions.get('window').width;
     const height = Dimensions.get('window').height;
 
-    let bottomOffset = BOTTOM_BAR_HEIGHT;
+    let bottomOffset = getBottomTabsHeight();
     if (this.props.playerOpen) {
       bottomOffset += BOTTOM_PLAYER_HEIGHT;
     }

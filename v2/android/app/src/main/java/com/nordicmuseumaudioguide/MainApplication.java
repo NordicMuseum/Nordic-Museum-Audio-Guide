@@ -1,5 +1,6 @@
 package com.nordicmuseumaudioguide;
 
+import com.facebook.react.PackageList;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 
@@ -7,7 +8,6 @@ import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends NavigationApplication {
@@ -31,12 +31,8 @@ public class MainApplication extends NavigationApplication {
   }
 
   protected List<ReactPackage> getPackages() {
-    // Add additional packages you require here
-    // No need to add RnnPackage and MainReactPackage
-
-    return Arrays.<ReactPackage>asList(
-    // eg. new VectorIconsPackage()
-    );
+    List<ReactPackage> packages = new PackageList(this).getPackages();
+    return packages;
   }
 
   @Override

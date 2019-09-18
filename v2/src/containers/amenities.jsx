@@ -11,7 +11,7 @@ import {
   ACTION,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
 } from '../styles';
 
@@ -49,9 +49,9 @@ class Amenities extends Component {
   render() {
     const { playerOpen } = this.props;
 
-    let containerMargin = BOTTOM_BAR_HEIGHT;
+    let containerMargin = getBottomTabsHeight();
     if (playerOpen) {
-      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     let totalIndex = 0;

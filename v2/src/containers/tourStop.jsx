@@ -34,7 +34,7 @@ import {
   ACTION,
   LIGHT_GRAY,
   NAV_BAR_TEXT,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
 } from '../styles.js';
 
@@ -323,9 +323,9 @@ class TourStop extends Component {
 
     const duration = tourStop.duration[locale];
 
-    let containerMargin = BOTTOM_BAR_HEIGHT;
+    let containerMargin = getBottomTabsHeight();
     if (this.props.playerOpen) {
-      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     // let accessibilityLabel;

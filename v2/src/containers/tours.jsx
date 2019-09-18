@@ -18,7 +18,7 @@ import {
   OFF_BLACK,
   LIGHT_GRAY,
   BOTTOM_PLAYER_HEIGHT,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -76,9 +76,9 @@ class Tours extends Component {
   }
 
   render() {
-    let containerMargin = BOTTOM_BAR_HEIGHT;
+    let containerMargin = getBottomTabsHeight();
     if (this.props.playerOpen) {
-      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     return (
