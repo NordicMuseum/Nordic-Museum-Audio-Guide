@@ -14,7 +14,7 @@ import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -55,12 +55,10 @@ class Info extends Component {
     const width = Dimensions.get('window').width;
     const height = Dimensions.get('window').height;
 
-    let bottomOffset = BOTTOM_BAR_HEIGHT;
+    let bottomOffset = getBottomTabsHeight();
     if (this.props.playerOpen) {
       bottomOffset += BOTTOM_PLAYER_HEIGHT;
     }
-
-    console.log('rerender');
 
     const listHeight = DISCLOSURE_CELL_HEIGHT * 4;
     const imageHeight = height - (listHeight + bottomOffset);
@@ -143,6 +141,7 @@ class Info extends Component {
     );
   }
 }
+
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
@@ -156,4 +155,6 @@ const mapDispatchToProps = () => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(Info);

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyleSheet, View, ViewPropTypes } from 'react-native';
+import { StyleSheet, View, Text, ViewPropTypes } from 'react-native';
 
 import WideButton from './wideButton';
 
@@ -116,7 +116,7 @@ const LanguageSwitcherButtons = props => {
 LanguageSwitcherButtons.propTypes = {
   locale: PropTypes.string.isRequired,
   style: PropTypes.oneOfType([ViewPropTypes.style, PropTypes.object]),
-  textStyle: PropTypes.object,
+  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
   onPress: PropTypes.func.isRequired,
 };
 

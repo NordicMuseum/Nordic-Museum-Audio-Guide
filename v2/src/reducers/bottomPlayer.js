@@ -1,4 +1,7 @@
-import { HIDE_BOTTOM_PLAYER } from '../actions/bottomPlayer';
+import {
+  HIDE_BOTTOM_PLAYER,
+  SHOW_BOTTOM_PLAYER,
+} from '../actions/bottomPlayer';
 
 import {
   TOGGLE_PAUSE_PLAY,
@@ -44,9 +47,7 @@ const initialState = {
   // 1. Audio Status (Not Loaded, Loading, Failure, Success)
   // 2. Playing Status (Paused, Playing, Done)
   playerStatus: PLAYER_STATUS_NOTLOADED,
-  // TODO: Only true for debugging, replace with false
-  playerOpen: true,
-
+  playerOpen: false,
   playRate: PLAY_RATE_NORMAL,
   prevUUID: null,
   nextUUID: null,
@@ -59,14 +60,20 @@ const initialState = {
 
 export function bottomPlayer(state = initialState, action) {
   switch (action.type) {
-    case RESET: {
-      return initialState;
+    // These two are only used for testing
+    case SHOW_BOTTOM_PLAYER: {
+      return Object.assign({}, state, {
+        playerOpen: true,
+      });
     }
-
     case HIDE_BOTTOM_PLAYER: {
       return Object.assign({}, state, {
-        show: false,
+        playerOpen: false,
       });
+    }
+
+    case RESET: {
+      return initialState;
     }
 
     case SCREEN_READER_STATUS: {

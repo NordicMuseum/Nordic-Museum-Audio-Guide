@@ -1,6 +1,4 @@
-import React, {PropTypes} from 'react';
-
-// import I18n from 'react-native-i18n';
+import React, { PropTypes } from 'react';
 
 import {
   StyleSheet,
@@ -15,9 +13,9 @@ import {
 
 import StickyHeader from './stickyHeader';
 
-import {parseDisplayText, parseVoiceoverText} from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
-import {LIGHT_GRAY, HIGHLIGHTS} from '../styles';
+import { LIGHT_GRAY, HIGHLIGHTS } from '../styles';
 
 const SPACING = 4;
 
@@ -70,7 +68,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 const cellHeight = height / 4;
 export const totalCellHeight = cellHeight + SPACING;
 
@@ -593,7 +591,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
                 height: cellHeight,
               },
             ]}>
-            <View style={{flex: 0.6}}>
+            <View style={{ flex: 0.6 }}>
               <Text
                 style={[
                   styles.cellTitleText,
@@ -616,7 +614,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
               <Text style={styles.cellDurationText}>
                 {Math.floor(item.duration[locale] / 60)}
               </Text>
-              <Text style={[styles.cellDurationText, {fontSize: 12}]}>
+              <Text style={[styles.cellDurationText, { fontSize: 12 }]}>
                 {'min'.toUpperCase()}
               </Text>
             </View>

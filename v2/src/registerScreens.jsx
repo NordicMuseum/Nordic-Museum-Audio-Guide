@@ -36,7 +36,11 @@ const sceneCreator = (
 
       constructor(props) {
         super(props);
-        Navigation.events().bindComponent(this);
+        this.sceneCompRef = React.createRef();
+
+        if (screenType !== SCREEN_TYPES.overlay) {
+          Navigation.events().bindComponent(this);
+        }
 
         localizationActor().addListener(this.localeChanged);
       }
@@ -68,14 +72,13 @@ const sceneCreator = (
       render() {
         return (
           <Provider store={store}>
-            <SceneComp {...this.props} />
-            <BottomPlayer />
+            <SceneComp ref={this.sceneCompRef} {...this.props} />
           </Provider>
         );
       }
 
       localeChanged = () => {
-        let newOptions = {};
+        let newOptions;
 
         switch (screenType) {
           case SCREEN_TYPES.bottomTab: {
@@ -116,15 +119,21 @@ const sceneCreator = (
             break;
           }
 
+          case SCREEN_TYPES.overlay: {
+            break;
+          }
+
           default:
             break;
         }
 
-        Navigation.mergeOptions(this.props.componentId, newOptions);
-        // TODO: Force update the screen
-        // if (this.sceneCompRef.current) {
-        //   this.sceneCompRef.current.forceUpdate();
-        // }
+        if (newOptions) {
+          Navigation.mergeOptions(this.props.componentId, newOptions);
+        }
+
+        if (this.sceneCompRef.current) {
+          this.sceneCompRef.current.forceUpdate();
+        }
       };
     };
 };
@@ -134,6 +143,7 @@ const SCREEN_TYPES = {
   bottomTabWithNavBar: 'bottomTabWithNavBar',
   screenWithNavBar: 'screenWithNavBar',
   screen: 'screen',
+  overlay: 'overlay',
 };
 
 const registerScreens = store => {
@@ -226,6 +236,15 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.screenWithNavBar,
       titleTranslationsKey: 'aboutScreen_Title',
     }),
+  );
+
+  Navigation.registerComponent(
+    'bottomPlayer',
+    sceneCreator(BottomPlayer, store, {
+      screenName: 'bottomPlayer',
+      screenType: SCREEN_TYPES.overlay,
+    }),
+    () => BottomPlayer,
   );
 };
 

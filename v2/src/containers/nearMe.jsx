@@ -15,7 +15,7 @@ import {
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
   LIGHT_BLUE,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -311,9 +311,9 @@ class NearMe extends Component {
       floor = `${translate('floor')} ${this.props.floor}`;
     }
 
-    let containerMargin = BOTTOM_BAR_HEIGHT;
+    let containerMargin = getBottomTabsHeight();
     if (this.props.playerOpen) {
-      containerMargin = BOTTOM_PLAYER_HEIGHT + BOTTOM_BAR_HEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     return (
@@ -359,4 +359,6 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(NearMe);

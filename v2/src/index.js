@@ -5,6 +5,8 @@ import registerScreens from './registerScreens';
 
 import { setI18nConfig, translate } from './i18n';
 
+import { showBottomPlayer } from './actions/bottomPlayer';
+
 import { localizationActor } from './actors/localization';
 
 import {
@@ -20,6 +22,7 @@ import {
   HIGHLIGHTS,
   ACTION,
   SELECTED,
+  setBottomTabsHeight,
 } from './styles';
 
 setI18nConfig();
@@ -28,8 +31,8 @@ localizationActor(store);
 
 registerScreens(store);
 
-Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
+Navigation.events().registerAppLaunchedListener(async () => {
+  await Navigation.setRoot({
     root: {
       bottomTabs: {
         options: {
@@ -127,4 +130,16 @@ Navigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
+
+  const constants = await Navigation.constants();
+  setBottomTabsHeight(constants.bottomTabsHeight);
+
+  Navigation.showOverlay({
+    component: {
+      name: 'bottomPlayer',
+    },
+  });
+
+  // TODO: Only used for testing
+  store.dispatch(showBottomPlayer());
 });

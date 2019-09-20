@@ -12,7 +12,7 @@ import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButto
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  BOTTOM_BAR_HEIGHT,
+  getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
   ACTION,
 } from '../styles';
@@ -59,7 +59,8 @@ class Settings extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <View style={[styles.container, { marginBottom: BOTTOM_BAR_HEIGHT }]}>
+        <View
+          style={[styles.container, { marginBottom: getBottomTabsHeight() }]}>
           <ScrollView
             contentContainerStyle={{
               paddingBottom,
@@ -110,4 +111,6 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(Settings);

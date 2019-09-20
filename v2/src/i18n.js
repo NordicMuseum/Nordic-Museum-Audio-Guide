@@ -69,5 +69,5 @@ export const translate = memoize(
 );
 
 export const isRTL = () => {
-  return I18nManager.isRTL;
+  return I18nManager.getConstants().isRTL;
 };

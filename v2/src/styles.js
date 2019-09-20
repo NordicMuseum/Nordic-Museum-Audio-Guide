@@ -15,8 +15,13 @@ export const HIGHLIGHTS = '#FFC200';
 export const ACTION = '#E52484';
 export const SELECTED = '#FAE3E7';
 
-// TODO: This should be grabbed from react-native-navigation:
-export const BOTTOM_BAR_HEIGHT = 85;
+let bottomTabsHeight = 0;
+export const setBottomTabsHeight = height => {
+  bottomTabsHeight = height;
+};
+export const getBottomTabsHeight = () => {
+  return bottomTabsHeight;
+};
 
 export const BOTTOM_PLAYER_HEIGHT = 95;
 

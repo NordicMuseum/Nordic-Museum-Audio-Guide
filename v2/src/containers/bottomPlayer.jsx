@@ -7,14 +7,13 @@ import { bindActionCreators } from 'redux';
 
 import { hideBottomPlayer as hideBottomPlayerAction } from '../actions/bottomPlayer';
 
-import { BOTTOM_PLAYER_HEIGHT } from '../styles';
+import { BOTTOM_PLAYER_HEIGHT, getBottomTabsHeight } from '../styles';
 
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   positionContainer: {
     position: 'absolute',
-    bottom: 0,
     left: 0,
     height: BOTTOM_PLAYER_HEIGHT,
     width,
@@ -29,13 +28,22 @@ const styles = StyleSheet.create({
 });
 
 class BottomPlayer extends Component {
+  static get options() {
+    return {
+      overlay: {
+        interceptTouchOutside: false,
+      },
+    };
+  }
+
   render() {
-    if (this.props.show === false) {
+    if (this.props.playerOpen === false) {
       return null;
     }
 
     return (
-      <View style={styles.positionContainer}>
+      <View
+        style={[styles.positionContainer, { bottom: getBottomTabsHeight() }]}>
         <View style={styles.contentContainer}>
           <Button
             onPress={() => {
@@ -54,7 +62,7 @@ class BottomPlayer extends Component {
 
 const mapStateToProps = state => {
   return {
-    show: state.bottomPlayer.playerOpen,
+    playerOpen: state.bottomPlayer.playerOpen,
   };
 };
 
@@ -70,4 +78,6 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
 )(BottomPlayer);

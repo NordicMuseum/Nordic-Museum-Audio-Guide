@@ -1,22 +1,24 @@
-import React, {Component} from 'react';
-import {StyleSheet, View, Text, Button} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, Button } from 'react-native';
+
+import { connect } from 'react-redux';
 
 // import { analyticsTrackScreen } from '../actions/analytics';
 
 import Grid from '../components/grid';
 import TourStop from './tourStop';
 
-//import { BOTTOMBARHEIGHT } from './rootScreen';
-//import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 //import { TAB_STORIES } from '../actions/navigation';
 
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
   OFF_BLACK,
   LIGHT_GRAY,
+  BOTTOM_PLAYER_HEIGHT,
+  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -74,12 +76,9 @@ class Tours extends Component {
   }
 
   render() {
-    var BOTTOMBARHEIGHT = 0;
-    var BOTTOMPLAYERHEIGHT = 0;
-
-    let containerMargin = BOTTOMBARHEIGHT;
+    let containerMargin = getBottomTabsHeight();
     if (this.props.playerOpen) {
-      containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     return (
@@ -96,8 +95,8 @@ class Tours extends Component {
           color="#841584"
           accessibilityLabel="Push to Tour Stop 1"
         />
-        <View style={{flex: 1}}>
-          <View style={[styles.container, {marginBottom: containerMargin}]}>
+        <View style={{ flex: 1 }}>
+          <View style={[styles.container, { marginBottom: containerMargin }]}>
             <Grid
               locale={this.props.locale}
               items={this.props.tourStops}
@@ -128,4 +127,22 @@ class Tours extends Component {
   }
 }
 
-export default Tours;
+const mapStateToProps = state => {
+  return {
+    playerOpen: state.bottomPlayer.playerOpen,
+    // tourStops: state.allTourStops.tourStops,
+    currentStopUUID: state.bottomPlayer.stopUUID,
+    locale: state.localization.locale,
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(Tours);

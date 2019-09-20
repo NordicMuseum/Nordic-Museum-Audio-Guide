@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
-
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
 
+import { connect } from 'react-redux';
+
 import Markdown from 'react-native-simple-markdown';
+
+import { isRTL } from '../i18n';
 
 import {
   globalStyles,
@@ -96,23 +93,22 @@ class AboutMuseum extends Component {
   }
 
   render() {
+    const { locale } = this.props;
+
     const markdownStyles = {
       heading1: {
         marginTop: 25,
         ...StyleSheet.flatten(globalStyles.h1),
-        // writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
-        // textAlign: I18nManager.isRTL ? 'right' : 'left',
+        writingDirection: isRTL() ? 'rtl' : 'ltr',
+        textAlign: isRTL() ? 'right' : 'left',
       },
       paragraph: {
         marginTop: 5,
         ...StyleSheet.flatten(globalStyles.body),
-        // writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
-        // textAlign: I18nManager.isRTL ? 'right' : 'left',
+        writingDirection: isRTL() ? 'rtl' : 'ltr',
+        textAlign: isRTL() ? 'right' : 'left',
       },
     };
-
-    // PLACEHODLER
-    var locale = 'en';
 
     return (
       <View style={{ flex: 1 }}>
@@ -158,4 +154,19 @@ class AboutMuseum extends Component {
   }
 }
 
-export default AboutMuseum;
+const mapStateToProps = state => {
+  return {
+    locale: state.localization.locale,
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(AboutMuseum);

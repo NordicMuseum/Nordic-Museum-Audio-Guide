@@ -1,13 +1,8 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-// import I18n from 'react-native-i18n';
-// Placeholder for the translate function
-var I18n = {};
-I18n.t = function(t) {
-  return t;
-};
+import { translate } from '../../i18n';
 
-import {Image, Alert, StyleSheet, Linking, View, Text} from 'react-native';
+import { Image, Alert, StyleSheet, Linking, View, Text } from 'react-native';
 
 import WideButton from './wideButton';
 
@@ -18,7 +13,7 @@ import {
   requestLocationServicesAuthorization,
 } from '../../actions/beacon';
 
-import {OFF_WHITE, LIGHT_GRAY, ACTION} from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, ACTION } from '../../styles';
 
 const styles = StyleSheet.create({
   notAllowedText: {
@@ -45,7 +40,7 @@ const LocationServicesButton = props => {
         <WideButton
           style={[styles.notAllowedBackground, props.style]}
           textStyle={[styles.notAllowedText, props.textStyle]}
-          text={I18n.t('locationServicesButton_Label')}
+          text={translate('locationServicesButton_Label')}
           onPress={() => {
             requestLocationServicesAuthorization();
           }}
@@ -58,18 +53,18 @@ const LocationServicesButton = props => {
         <WideButton
           style={[styles.notAllowedBackground, props.style]}
           textStyle={[styles.notAllowedText, props.textStyle]}
-          text={I18n.t('locationServicesButton_Label')}
+          text={translate('locationServicesButton_Label')}
           onPress={() => {
             Alert.alert(
-              I18n.t('locationServicesAlert_Header'),
-              I18n.t('locationServicesAlert_Body'),
+              translate('locationServicesAlert_Header'),
+              translate('locationServicesAlert_Body'),
               [
                 {
-                  text: I18n.t('locationServicesAlert_CancelButton_Label'),
+                  text: translate('locationServicesAlert_CancelButton_Label'),
                   style: 'cancel',
                 },
                 {
-                  text: I18n.t('locationServicesAlert_SettingsButton_Label'),
+                  text: translate('locationServicesAlert_SettingsButton_Label'),
                   onPress: () => {
                     const url = 'app-settings:';
                     Linking.canOpenURL(url).then(supported => {
@@ -95,7 +90,7 @@ const LocationServicesButton = props => {
         <WideButton
           style={[styles.allowedBackground, props.style]}
           textStyle={props.textStyle}
-          text={I18n.t('locationServicesButton_AuthorizedLabel')}
+          text={translate('locationServicesButton_AuthorizedLabel')}
           disabled={true}
           accessoryView={
             <Image source={require('../../assets/checkmark.png')} />
