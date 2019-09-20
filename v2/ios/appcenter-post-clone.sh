@@ -1,1 +1,1 @@
-git clone https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide-Assets
+git clone https://ambrosiani:$TOKEN@github.com/NordicMuseum/Nordic-Museum-Audio-Guide-Assets.git
