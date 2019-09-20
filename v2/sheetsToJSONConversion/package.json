@@ -1,0 +1,31 @@
+{
+  "name": "string-seperator",
+  "version": "1.0.0",
+  "description": "Separates interface & content strings in localization data",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.15",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "nodemonConfig": {
+    "ignore": [
+      "output/"
+    ]
+  },
+  "scripts": {
+    "run": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmoa/teenie-harris-data-tool.git"
+  },
+  "author": "Sam Ticknor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmoa/teenie-harris-data-tool/issues"
+  },
+  "homepage": "https://github.com/cmoa/teenie-harris-data-tool#readme"
+}

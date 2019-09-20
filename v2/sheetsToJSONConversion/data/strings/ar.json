@@ -1,0 +1,80 @@
+{
+  "min": "الدقائق",
+  "bluetoothButton_OnLabel": "بلوتوث قيد التشغيل",
+  "bluetoothButton_OffLabel": "قم بتشغيل البلوتوث",
+  "bluetoothAlert_Header": "بلوتوث",
+  "bluetoothAlert_Body": "انتقل إلى الإعدادات، ثم بلوتوث لتشغيل البلوتوث.",
+  "locationServicesButton_Label": "السماح بالدخول إلى الموقع.",
+  "locationServicesButton_AuthorizedLabel": "تم السماح بالوصول إلى الموقع",
+  "locationServicesAlert_Header": "الوصول إلى الموقع",
+  "locationServicesAlert_Body": "انتقل إلى الإعدادات، ثم الخصوصية، ثم خدمات الموقع، ثم الدليل الصوتي للسماح بالوصول إلى الموقع أثناء استخدام هذا التطبيق.",
+  "rootScreen_MuseumTabItem": "معلومات",
+  "locationServicesAlert_CancelButton_Label": "إلغاء",
+  "locationServicesAlert_SettingsButton_Label": "الإعدادات",
+  "playButton_AccessibilityLabel": "تشغيل",
+  "pauseButton_AccessibilityLabel": "إيقاف مؤقت",
+  "previousButton_AccessibilityLabel": "السابق",
+  "rewindButton_AccessibilityLabel": "الترجيع 5 ثوان",
+  "toggleSpeedButton_NormalLabel": "1",
+  "toggleSpeedButton_NormalAccessibilityLabel": "سرعة 1x.",
+  "toggleSpeedButton_FastLabel": "1.5",
+  "toggleSpeedButton_FastAccessibilityLabel": "سرعة 1.5x.",
+  "toggleSpeedButton_FastestLabel": "2",
+  "toggleSpeedButton_FastestAccessibilityLabel": "سرعة 2x.",
+  "toggleSpeedButton_AccessibilityLabel": "انقر نقراً مزدوجاً لتغيير سرعة الصوت.",
+  "transcriptButton_OpenedAccessibilityLabel": "تم فتح النص. انقر نقراً مزدوجاً للإغلاق.",
+  "transcriptButton_ClosedAccessibilityLabel": "تم إغلاق النص. انقر نقراً مزدوجاً للفتح.",
+  "tryAgain": "حاول ثانية",
+  "audioContentItem_Seconds": "ثوان",
+  "autoplayProgressView_CountDownTextSingular": "يبدأ بعد ثانية واحدة",
+  "autoplayProgressView_CountDownTextPlural": "يبدأ بعد x ثوان",
+  "autoplayProgressView_CountDownText": "يبدأ بعد",
+  "autoplayProgressView_Seconds": "ثوان",
+  "autoplayProgressView_AutoplayOffAccessibilityLabel": "التشغيل التلقائي، إيقاف التشغيل. انقر نقراً مزدوجاً للتشغيل.",
+  "closePlayerView_Text": "لقد وصلت إلى نهاية ",
+  "closePlayerView_ClosePlayer": "اغلق جهاز التشغيل",
+  "controlsView_StopTitleAccessibilityLabel": "انقر نقراً مزدوجاً للعودة إلى الموضوع الرئيسي.",
+  "exandableHeader_OpenAccessibilityLabel": "انقر نقراً مزدوجاً للإغلاق.",
+  "exandableHeader_ClosedAccessibilityLabel": "انقر نقراً مزدوجاً للفتح.",
+  "grid_Of": "من",
+  "grid_AccessibilityLabel": "تم تشغيل الصوت للموضوع x.",
+  "nearMeScreen_Title": "بالقرب مني",
+  "nearMeScreen_StoriesMessage": "أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك.",
+  "nearMeScreen_LocationNeeds": "لاستخدام هذه الميزة، سنحتاج إلى أمرين منك …",
+  "nearMeScreen_StoriesMessageNone": "لا توجد مواضيع بالقرب منك.",
+  "nearMeScreen_StoriesMessageSingular": "يوجد موضوع واحد بالقرب منك.",
+  "nearMeScreen_StoriesMessagePlural": "يوجد x مواضيع بالقرب منك.",
+  "nearMeScreen_StoriesMessageFallback": "تتوفر المواضيع في الطوابق 2، 3 و 4.",
+  "nearMeScreen_Regions": "المناطق",
+  "nearMeScreen_Amenities": "وسائل الراحة",
+  "nearMeScreen_Entrance": "مدخل",
+  "searchScreen_Title": "بحث #",
+  "storiesScreen_Title": "تصفح",
+  "settingsScreen_Title": "🌎 لغة",
+  "settingsScreen_NearMeHeader": "بالقرب مني",
+  "settingsScreen_AutoplayHeader": "تشغيل تلقائي",
+  "timeProgressView_SecondsRemaining": "هناك x ثانية متبقية",
+  "tutorialScreen_WelcomeTitle": "الدليل الصوتي",
+  "tutorialScreen_NoWorries": "لا تقلق، يمكنك تغيير هذه التفضيلات لاحقاً.",
+  "tutorialScreen_NearMe": "أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك. لاستخدام هذه الميزة، سنحتاج إلى أمرين منك ...",
+  "tutorialScreen_Stories": "الدليل الصوتي لمتحف الشمال منظّم في مواضيع. يحتوي كل موضوع على ملفات صوتية متعددة متعلقة بموضوع أو معرض واحد. إذا شغلت التشغيل التلقائي، فسنعمل تلقائياً على تشغيل ملف صوتي شامل للموضوع.",
+  "tutorialScreen_StoriesAutoplayOn": "التشغيل التلقائي قيد التشغيل",
+  "tutorialScreen_StoriesAutoplayOnAccessibilityLabel": "التشغيل التلقائي، قيد التشغيل. انقر نقراً مزدوجاً لإيقاف التشغيل.",
+  "tutorialScreen_StoriesAutoplayOff": "تم إيقاف التشغيل التلقائي",
+  "tutorialScreen_NavigationButtonsAccessibilityLabel": "صفحة x من x. الصفحة التالية.",
+  "tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel": "صفحة x من x. هيا بنا نبدأ.",
+  "tutorialScreen_GetStarted": "التالى",
+  "playAll": "لعب كل",
+  "themes": "المواضيع",
+  "floor": "طابق",
+  "floor1_Label": "طابق 1",
+  "floor2_Label": "طابق 2",
+  "floor234_Label": "طابق 2–4",
+  "floor3_Label": "طابق 3",
+  "floor4_Label": "طابق 4",
+  "aboutScreen_Title": "متحف الشمال ",
+  "amenitiesScreen_Title": "وسائل الراحة",
+  "museumScreen_Title": "معلومات",
+  "tutorialScreen_welcomeMessage": "أهلا بك",
+  "highlights": "مقتطفات"
+}

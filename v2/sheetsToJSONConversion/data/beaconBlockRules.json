@@ -1,0 +1,546 @@
+{
+  "48100:31636": {
+    "beacon": "48100:31636",
+    "name": "1940s Apartment / m02n",
+    "floor": "2",
+    "region": "1940s Apartment",
+    "uuid": "b76b1390-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "12560:22011": {
+    "beacon": "12560:22011",
+    "name": "Entrance N / nwGm",
+    "floor": "2",
+    "region": "Entrance",
+    "uuid": "b76b1391-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "916:34642": {
+    "beacon": "916:34642",
+    "name": "Entrance S / cxbF",
+    "floor": "2",
+    "region": "Entrance",
+    "uuid": "b76b1392-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "49469:24250": {
+    "beacon": "49469:24250",
+    "name": "Great Hall NE Elevator / ooG2",
+    "floor": "2",
+    "region": "Great Hall",
+    "uuid": "b76b1393-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "12049:57835": {
+    "beacon": "12049:57835",
+    "name": "Great Hall SW Elevator / PnOZ",
+    "floor": "2",
+    "region": "Great Hall",
+    "uuid": "b76b1394-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "10721:32292": {
+    "beacon": "10721:32292",
+    "name": "SE Stairs 2 / IXIf",
+    "floor": "2",
+    "region": "T1_2",
+    "uuid": "b76b1395-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "59632:58752": {
+    "beacon": "59632:58752",
+    "name": "SW Stairs 2 / J8Kg",
+    "floor": "2",
+    "region": "T3_2",
+    "uuid": "b76b1396-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "28931:30514": {
+    "beacon": "28931:30514",
+    "name": "NW Stairs 2 / OOlP",
+    "floor": "2",
+    "region": "T5_2",
+    "uuid": "b76b1397-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "50397:35932": {
+    "beacon": "50397:35932",
+    "name": "NE Stairs 2 / qT2i",
+    "floor": "2",
+    "region": "T7_2",
+    "uuid": "b76b1398-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "50459:19564": {
+    "beacon": "50459:19564",
+    "name": "Doll House / hks9",
+    "floor": "3",
+    "region": "Doll House",
+    "uuid": "b76b1399-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "8938:19670": {
+    "beacon": "8938:19670",
+    "name": "Gustav Vasa / bF7O",
+    "floor": "3",
+    "region": "Gustav Vasa",
+    "uuid": "b76b139a-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "50003:7050": {
+    "beacon": "50003:7050",
+    "name": "Gustav Vasa / EgXp",
+    "floor": "3",
+    "region": "Gustav Vasa",
+    "uuid": "b76b139b-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "18104:3267": {
+    "beacon": "18104:3267",
+    "name": "Jewellery N / w95r",
+    "floor": "3",
+    "region": "Jewellery",
+    "uuid": "b76b139c-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "42635:9454": {
+    "beacon": "42635:9454",
+    "name": "Central Stairs 3S / hTf0",
+    "floor": "3",
+    "region": "Jewellery",
+    "uuid": "b76b139d-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "50649:38868": {
+    "beacon": "50649:38868",
+    "name": "Jewellery S / mSfs",
+    "floor": "3",
+    "region": "Jewellery",
+    "uuid": "b76b139e-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "64983:52819": {
+    "beacon": "64983:52819",
+    "name": "Central Stairs 3N / lvzE",
+    "floor": "3",
+    "region": "Jewellery",
+    "uuid": "b76b139f-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "2038:13923": {
+    "beacon": "2038:13923",
+    "name": "Power of Fashion S / 7TZi",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "blocks": ["64983:52819"],
+    "uuid": "b76b13a0-dbcc-11e9-8f69-0b765f410be4"
+  },
+  "26798:58347": {
+    "beacon": "26798:58347",
+    "name": "Power of Fashion N / 8362",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "uuid": "b76b13a1-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "63094:30105": {
+    "beacon": "63094:30105",
+    "name": "Power of Fashion C / XlId",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "uuid": "b76b13a2-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "48313:21116": {
+    "beacon": "48313:21116",
+    "name": "Central Stairs 3N / 83hw",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "uuid": "b76b13a3-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "45422:63734": {
+    "beacon": "45422:63734",
+    "name": "Power of Fashion S / rU4X",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "blocks": ["64983:52819"],
+    "uuid": "b76b13a4-dbcc-11e9-8f69-0b765f410be4"
+  },
+  "30811:7446": {
+    "beacon": "30811:7446",
+    "name": "Power of Fashion N / 2eVK",
+    "floor": "3",
+    "region": "Power of Fashion",
+    "uuid": "b76b13a5-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "60304:3501": {
+    "beacon": "60304:3501",
+    "name": "NE Stairs 3 / lMAa",
+    "floor": "3",
+    "region": "Strindberg",
+    "uuid": "b76b13a6-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "26837:18007": {
+    "beacon": "26837:18007",
+    "name": "Strindberg E / GY4c",
+    "floor": "3",
+    "region": "Strindberg",
+    "uuid": "b76b13a7-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "48249:64307": {
+    "beacon": "48249:64307",
+    "name": "Strindberg W / gjT8",
+    "floor": "3",
+    "region": "Strindberg",
+    "uuid": "b76b13a8-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "41906:48910": {
+    "beacon": "41906:48910",
+    "name": "NW Stairs 3 / 5abs",
+    "floor": "3",
+    "region": "Strindberg",
+    "uuid": "b76b13a9-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "49552:65149": {
+    "beacon": "49552:65149",
+    "name": "SE Stairs 3 / lXoB",
+    "floor": "3",
+    "region": "T1_3",
+    "uuid": "b76b13aa-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "41929:39606": {
+    "beacon": "41929:39606",
+    "name": "SE Stairs 3 / VUZH",
+    "floor": "3",
+    "region": "T1_3",
+    "uuid": "b76b13ab-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "64331:55483": {
+    "beacon": "64331:55483",
+    "name": "SW Stairs 3 / Rc3t",
+    "floor": "3",
+    "region": "T3_3",
+    "uuid": "b76b13ac-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "17750:62531": {
+    "beacon": "17750:62531",
+    "name": "SW Stairs 3 / 85FB",
+    "floor": "3",
+    "region": "T3_3",
+    "uuid": "b76b13ad-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "26186:39016": {
+    "beacon": "26186:39016",
+    "name": "Table Settings S / z45k",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13ae-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "55254:7275": {
+    "beacon": "55254:7275",
+    "name": "Table Settings N / QKDq",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13af-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "46380:64788": {
+    "beacon": "46380:64788",
+    "name": "Table Settings N / HgPZ",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13b0-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "2699:50318": {
+    "beacon": "2699:50318",
+    "name": "Table Settings S / xGCr",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13b1-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "37919:4093": {
+    "beacon": "37919:4093",
+    "name": "Table Settings N / wqHv",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13b2-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "25821:11923": {
+    "beacon": "25821:11923",
+    "name": "Table Settings S / 51aw",
+    "floor": "3",
+    "region": "Table Settings",
+    "uuid": "b76b13b3-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "25154:16721": {
+    "beacon": "25154:16721",
+    "name": "Traditions S / 64uY",
+    "floor": "3",
+    "region": "Traditions",
+    "uuid": "b76b13b4-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "49406:10306": {
+    "beacon": "49406:10306",
+    "name": "Traditions S / Z5YR",
+    "floor": "3",
+    "region": "Traditions",
+    "uuid": "b76b13b5-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "8894:22556": {
+    "beacon": "8894:22556",
+    "name": "Traditions S / ggg3",
+    "floor": "3",
+    "region": "Traditions",
+    "uuid": "b76b13b6-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "63022:61802": {
+    "beacon": "63022:61802",
+    "name": "Traditions N / fjPD",
+    "floor": "3",
+    "region": "Traditions",
+    "uuid": "b76b13b7-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "2915:19385": {
+    "beacon": "2915:19385",
+    "name": "Traditions N / fkFG",
+    "floor": "3",
+    "region": "Traditions",
+    "uuid": "b76b13b8-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "26287:33506": {
+    "beacon": "26287:33506",
+    "name": "Central Stairs 4N / 45mq",
+    "floor": "4",
+    "region": "Central Stairs 4",
+    "uuid": "b76b13b9-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "4647:64443": {
+    "beacon": "4647:64443",
+    "name": "SE Stairs 4 / QttE",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "uuid": "b76b13ba-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "19495:48956": {
+    "beacon": "19495:48956",
+    "name": "SE Stairs 4 / KoTj",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "uuid": "b76b13bb-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "37531:44693": {
+    "beacon": "37531:44693",
+    "name": "Homes and Interiors EC / 4IXe",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "uuid": "b76b13bc-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "13181:47913": {
+    "beacon": "13181:47913",
+    "name": "Homes and Interiors SE / fLrD",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "uuid": "b76b13bd-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "36045:43556": {
+    "beacon": "36045:43556",
+    "name": "Homes and Interiors NE / BDmZ",
+    "floor": "4",
+    "region": "Homes and Interiors E",
+    "uuid": "b76b13be-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "37149:53082": {
+    "beacon": "37149:53082",
+    "name": "Homes and Interiors SW / g2cm",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b13bf-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "56649:2920": {
+    "beacon": "56649:2920",
+    "name": "SW Stairs 4 / irXK",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b13c0-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "1734:56714": {
+    "beacon": "1734:56714",
+    "name": "Homes and Interiors NW / 1AGJ",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b13c1-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "8192:38137": {
+    "beacon": "8192:38137",
+    "name": "Homes and Interiors SW / nWyX",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b13c2-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "48454:2700": {
+    "beacon": "48454:2700",
+    "name": "SW Stairs 4 / K2SD",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b3aa0-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "30676:22048": {
+    "beacon": "30676:22048",
+    "name": "SW Elevator 4 / ulXP",
+    "floor": "4",
+    "region": "Homes and Interiors W",
+    "uuid": "b76b3aa1-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "53648:49383": {
+    "beacon": "53648:49383",
+    "name": "Central Stairs 4S / klxp",
+    "floor": "4",
+    "region": "Jewellery",
+    "uuid": "b76b3aa2-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "62786:65337": {
+    "beacon": "62786:65337",
+    "name": "Central Stairs 4N / k6mQ",
+    "floor": "4",
+    "region": "Jewellery",
+    "uuid": "b76b3aa3-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "15986:5921": {
+    "beacon": "15986:5921",
+    "name": "NW Stairs 4 / J7uw",
+    "floor": "4",
+    "region": "N Balcony 4",
+    "uuid": "b76b3aa4-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "49122:20803": {
+    "beacon": "49122:20803",
+    "name": "NE Stairs 4 / CpV8",
+    "floor": "4",
+    "region": "N Balcony 4",
+    "uuid": "b76b3aa5-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "4566:64223": {
+    "beacon": "4566:64223",
+    "name": "NE Stairs 4 / RRmU",
+    "floor": "4",
+    "region": "N Balcony 4",
+    "uuid": "b76b3aa6-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "2696:21588": {
+    "beacon": "2696:21588",
+    "name": "NW Stairs 4 / KE1R",
+    "floor": "4",
+    "region": "N Balcony 4",
+    "uuid": "b76b3aa7-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "47336:29503": {
+    "beacon": "47336:29503",
+    "name": "Sapmi S / kqSA",
+    "floor": "4",
+    "region": "Sapmi",
+    "uuid": "b76b3aa8-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "32170:20338": {
+    "beacon": "32170:20338",
+    "name": "Sapmi N / ge6h",
+    "floor": "4",
+    "region": "Sapmi",
+    "uuid": "b76b3aa9-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "52169:65240": {
+    "beacon": "52169:65240",
+    "name": "Sapmi N / qWBN",
+    "floor": "4",
+    "region": "Sapmi",
+    "uuid": "b76b3aaa-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "71:4198": {
+    "beacon": "71:4198",
+    "name": "Sapmi S / cPvv",
+    "floor": "4",
+    "region": "Sapmi",
+    "uuid": "b76b3aab-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "44397:38284": {
+    "beacon": "44397:38284",
+    "name": "Swedish Folk Art N / Kkuk",
+    "floor": "4",
+    "region": "Swedish Folk Art",
+    "uuid": "b76b3aac-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "2925:12947": {
+    "beacon": "2925:12947",
+    "name": "Swedish Folk Art S / q1jZ",
+    "floor": "4",
+    "region": "Swedish Folk Art",
+    "uuid": "b76b3aad-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "57605:29522": {
+    "beacon": "57605:29522",
+    "name": "Swedish Folk Art N / 4rtU",
+    "floor": "4",
+    "region": "Swedish Folk Art",
+    "uuid": "b76b3aae-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "50892:13985": {
+    "beacon": "50892:13985",
+    "name": "Swedish Folk Art C / HehR",
+    "floor": "4",
+    "region": "Swedish Folk Art",
+    "uuid": "b76b3aaf-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  },
+  "48658:50019": {
+    "beacon": "48658:50019",
+    "name": "Swedish Folk Art S / 5oyf",
+    "floor": "4",
+    "region": "Swedish Folk Art",
+    "uuid": "b76b3ab0-dbcc-11e9-8f69-0b765f410be4",
+    "blocks": []
+  }
+}
