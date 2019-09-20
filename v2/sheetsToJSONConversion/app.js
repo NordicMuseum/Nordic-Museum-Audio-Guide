@@ -90,8 +90,6 @@ function processAmenitiesSheet() {
       amenity['icon'] = row['icon'];
 
       var label = 'amenity_' + _.camelCase(row['title__en']);
-      amenity['title'] = label + '_title';
-      amenity['description'] = label + '_description';
 
       // Also, add translations to localizationStrings
       for (var header in row) {
@@ -101,6 +99,8 @@ function processAmenitiesSheet() {
           lang = header[1];
           uilabel = label + '_' + header[0];
           addToLocalizationStrings(lang, uilabel, string);
+
+          amenity[header[0]] = label + '_' + header[0];
         }
       }
 

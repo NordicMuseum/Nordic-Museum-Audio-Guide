@@ -37,25 +37,27 @@ const styles = StyleSheet.create({
 });
 
 const AmenitiesItem = props => {
-  const description = parseDisplayText(props.amenity.description);
+  const description = props.amenity.description;
 
   return (
     <View style={[styles.container, props.border ? styles.borderStyle : {}]}>
       <Image
         style={styles.image}
         resizeMode={'contain'}
-        source={props.amenity.icon}
+        source={{ uri: props.amenity.icon }}
       />
       <View style={styles.textContainer}>
         <Text
           style={[
             styles.amenityTitle,
             globalStyles.body,
-            description === '' ? { marginBottom: 0 } : { marginBottom: 10 },
+            description === undefined
+              ? { marginBottom: 0 }
+              : { marginBottom: 10 },
           ]}>
           {translate(props.amenity.title)}
         </Text>
-        {description !== '' && (
+        {description !== undefined && (
           <Text style={[styles.amenityDescription, globalStyles.body]}>
             {translate(description)}
           </Text>

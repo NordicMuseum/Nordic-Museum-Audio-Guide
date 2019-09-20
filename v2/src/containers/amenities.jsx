@@ -11,11 +11,10 @@ import {
   ACTION,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
 } from '../styles';
 
-import allAmenities from '../data/amenities';
+const allAmenities = require('../data/amenities.json');
 
 const styles = StyleSheet.create({
   container: {
@@ -49,7 +48,7 @@ class Amenities extends Component {
   render() {
     const { playerOpen } = this.props;
 
-    let containerMargin = getBottomTabsHeight();
+    let containerMargin = 0;
     if (playerOpen) {
       containerMargin += BOTTOM_PLAYER_HEIGHT;
     }

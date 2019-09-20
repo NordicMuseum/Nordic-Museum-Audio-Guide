@@ -1,7 +1,7 @@
 {
-  "name": "string-seperator",
+  "name": "sheets-to-data",
   "version": "1.0.0",
-  "description": "Separates interface & content strings in localization data",
+  "description": "Script to parse Nordic Museum Google Sheet",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
