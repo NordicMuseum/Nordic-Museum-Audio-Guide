@@ -25,6 +25,11 @@ import {
   setBottomTabsHeight,
 } from './styles';
 
+// Hydrate the DB
+import hydrate from './hydrate';
+hydrate(__DEV__);
+
+// TODO: Set first locale
 setI18nConfig();
 const store = configureStore();
 localizationActor(store);
