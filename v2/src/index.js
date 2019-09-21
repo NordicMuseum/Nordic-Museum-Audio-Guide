@@ -5,8 +5,6 @@ import registerScreens from './registerScreens';
 
 import { setI18nConfig, translate } from './i18n';
 
-import { showBottomPlayer } from './actions/bottomPlayer';
-
 import { localizationActor } from './actors/localization';
 
 import {
@@ -144,7 +142,4 @@ Navigation.events().registerAppLaunchedListener(async () => {
       name: 'bottomPlayer',
     },
   });
-
-  // TODO: Only used for testing
-  store.dispatch(showBottomPlayer());
 });
