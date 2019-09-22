@@ -94,25 +94,25 @@ export function playTrack(
   return async (dispatch, getState) => {
     const state = getState();
 
-    const activeAudio = tourStop.audioContent.filtered(
+    const activeAudio = tourStop.audiocontent.filtered(
       `uuid = "${trackUUID}"`,
     )[0];
 
     let activeAudioIndex;
-    for (let i = 0; i < tourStop.audioContent.length; i++) {
-      if (tourStop.audioContent[i].uuid === activeAudio.uuid) {
+    for (let i = 0; i < tourStop.audiocontent.length; i++) {
+      if (tourStop.audiocontent[i].uuid === activeAudio.uuid) {
         activeAudioIndex = i;
       }
     }
 
     let prevUUID = null;
     if (activeAudioIndex - 1 >= 0) {
-      prevUUID = tourStop.audioContent[activeAudioIndex - 1].uuid;
+      prevUUID = tourStop.audiocontent[activeAudioIndex - 1].uuid;
     }
 
     let nextUUID = null;
-    if (activeAudioIndex + 1 < tourStop.audioContent.length) {
-      nextUUID = tourStop.audioContent[activeAudioIndex + 1].uuid;
+    if (activeAudioIndex + 1 < tourStop.audiocontent.length) {
+      nextUUID = tourStop.audiocontent[activeAudioIndex + 1].uuid;
     }
 
     setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
@@ -155,7 +155,7 @@ export function playTrack(
             tourStop,
             tourStop.uuid,
             tourStop.shortTitle,
-            tourStop.audioContent,
+            tourStop.audiocontent,
             activeAudio,
             activeAudioIndex,
             activeAudioDuration,
