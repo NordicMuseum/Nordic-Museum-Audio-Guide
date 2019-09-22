@@ -20,7 +20,8 @@ export const setBottomTabsHeight = height => {
   bottomTabsHeight = height;
 };
 export const getBottomTabsHeight = () => {
-  return bottomTabsHeight;
+  // TODO: Fix this on iOS.
+  return bottomTabsHeight === 0 ? 44 : bottomTabsHeight;
 };
 
 export const BOTTOM_PLAYER_HEIGHT = 95;

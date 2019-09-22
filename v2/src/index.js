@@ -8,8 +8,6 @@ import registerScreens from './registerScreens';
 
 import { setI18nConfig, translate } from './i18n';
 
-import { showBottomPlayer } from './actions/bottomPlayer';
-
 import { localizationActor } from './actors/localization';
 
 import {
@@ -36,6 +34,7 @@ const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 import hydrate from './data/hydrate';
 hydrate(newVersion || __DEV__);
 
+// TODO: Set first locale
 setI18nConfig();
 const store = configureStore();
 localizationActor(store);
@@ -150,7 +149,4 @@ Navigation.events().registerAppLaunchedListener(async () => {
       name: 'bottomPlayer',
     },
   });
-
-  // TODO: Only used for testing
-  store.dispatch(showBottomPlayer());
 });
