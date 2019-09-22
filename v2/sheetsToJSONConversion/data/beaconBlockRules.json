@@ -4,7 +4,6 @@
     "name": "1940s Apartment / m02n",
     "floor": "2",
     "region": "1940s Apartment",
-    "uuid": "a9dbe120-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "12560:22011": {
@@ -12,7 +11,6 @@
     "name": "Entrance N / nwGm",
     "floor": "2",
     "region": "Entrance",
-    "uuid": "a9dbe121-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "916:34642": {
@@ -20,7 +18,6 @@
     "name": "Entrance S / cxbF",
     "floor": "2",
     "region": "Entrance",
-    "uuid": "a9dbe122-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "49469:24250": {
@@ -28,7 +25,6 @@
     "name": "Great Hall NE Elevator / ooG2",
     "floor": "2",
     "region": "Great Hall",
-    "uuid": "a9dbe123-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "12049:57835": {
@@ -36,7 +32,6 @@
     "name": "Great Hall SW Elevator / PnOZ",
     "floor": "2",
     "region": "Great Hall",
-    "uuid": "a9dbe124-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "10721:32292": {
@@ -44,7 +39,6 @@
     "name": "SE Stairs 2 / IXIf",
     "floor": "2",
     "region": "T1_2",
-    "uuid": "a9dbe125-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "59632:58752": {
@@ -52,7 +46,6 @@
     "name": "SW Stairs 2 / J8Kg",
     "floor": "2",
     "region": "T3_2",
-    "uuid": "a9dbe126-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "28931:30514": {
@@ -60,7 +53,6 @@
     "name": "NW Stairs 2 / OOlP",
     "floor": "2",
     "region": "T5_2",
-    "uuid": "a9dbe127-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "50397:35932": {
@@ -68,7 +60,6 @@
     "name": "NE Stairs 2 / qT2i",
     "floor": "2",
     "region": "T7_2",
-    "uuid": "a9dbe128-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "50459:19564": {
@@ -76,7 +67,6 @@
     "name": "Doll House / hks9",
     "floor": "3",
     "region": "Doll House",
-    "uuid": "a9dbe129-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "8938:19670": {
@@ -84,7 +74,6 @@
     "name": "Gustav Vasa / bF7O",
     "floor": "3",
     "region": "Gustav Vasa",
-    "uuid": "a9dbe12a-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "50003:7050": {
@@ -92,7 +81,6 @@
     "name": "Gustav Vasa / EgXp",
     "floor": "3",
     "region": "Gustav Vasa",
-    "uuid": "a9dbe12b-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "18104:3267": {
@@ -100,7 +88,6 @@
     "name": "Jewellery N / w95r",
     "floor": "3",
     "region": "Jewellery",
-    "uuid": "a9dbe12c-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "42635:9454": {
@@ -108,7 +95,6 @@
     "name": "Central Stairs 3S / hTf0",
     "floor": "3",
     "region": "Jewellery",
-    "uuid": "a9dbe12d-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "50649:38868": {
@@ -116,7 +102,6 @@
     "name": "Jewellery S / mSfs",
     "floor": "3",
     "region": "Jewellery",
-    "uuid": "a9dbe12e-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "64983:52819": {
@@ -124,7 +109,6 @@
     "name": "Central Stairs 3N / lvzE",
     "floor": "3",
     "region": "Jewellery",
-    "uuid": "a9dbe12f-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "2038:13923": {
@@ -132,15 +116,13 @@
     "name": "Power of Fashion S / 7TZi",
     "floor": "3",
     "region": "Power of Fashion",
-    "blocks": ["64983:52819"],
-    "uuid": "a9dbe130-dbd4-11e9-8c55-e5ee66373ee5"
+    "blocks": ["64983:52819"]
   },
   "26798:58347": {
     "beacon": "26798:58347",
     "name": "Power of Fashion N / 8362",
     "floor": "3",
     "region": "Power of Fashion",
-    "uuid": "a9dbe131-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "63094:30105": {
@@ -148,7 +130,6 @@
     "name": "Power of Fashion C / XlId",
     "floor": "3",
     "region": "Power of Fashion",
-    "uuid": "a9dbe132-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "48313:21116": {
@@ -156,7 +137,6 @@
     "name": "Central Stairs 3N / 83hw",
     "floor": "3",
     "region": "Power of Fashion",
-    "uuid": "a9dbe133-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "45422:63734": {
@@ -164,15 +144,13 @@
     "name": "Power of Fashion S / rU4X",
     "floor": "3",
     "region": "Power of Fashion",
-    "blocks": ["64983:52819"],
-    "uuid": "a9dbe134-dbd4-11e9-8c55-e5ee66373ee5"
+    "blocks": ["64983:52819"]
   },
   "30811:7446": {
     "beacon": "30811:7446",
     "name": "Power of Fashion N / 2eVK",
     "floor": "3",
     "region": "Power of Fashion",
-    "uuid": "a9dbe135-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "60304:3501": {
@@ -180,7 +158,6 @@
     "name": "NE Stairs 3 / lMAa",
     "floor": "3",
     "region": "Strindberg",
-    "uuid": "a9dbe136-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "26837:18007": {
@@ -188,7 +165,6 @@
     "name": "Strindberg E / GY4c",
     "floor": "3",
     "region": "Strindberg",
-    "uuid": "a9dbe137-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "48249:64307": {
@@ -196,7 +172,6 @@
     "name": "Strindberg W / gjT8",
     "floor": "3",
     "region": "Strindberg",
-    "uuid": "a9dbe138-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "41906:48910": {
@@ -204,7 +179,6 @@
     "name": "NW Stairs 3 / 5abs",
     "floor": "3",
     "region": "Strindberg",
-    "uuid": "a9dbe139-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "49552:65149": {
@@ -212,7 +186,6 @@
     "name": "SE Stairs 3 / lXoB",
     "floor": "3",
     "region": "T1_3",
-    "uuid": "a9dbe13a-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "41929:39606": {
@@ -220,7 +193,6 @@
     "name": "SE Stairs 3 / VUZH",
     "floor": "3",
     "region": "T1_3",
-    "uuid": "a9dbe13b-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "64331:55483": {
@@ -228,7 +200,6 @@
     "name": "SW Stairs 3 / Rc3t",
     "floor": "3",
     "region": "T3_3",
-    "uuid": "a9dbe13c-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "17750:62531": {
@@ -236,7 +207,6 @@
     "name": "SW Stairs 3 / 85FB",
     "floor": "3",
     "region": "T3_3",
-    "uuid": "a9dbe13d-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "26186:39016": {
@@ -244,7 +214,6 @@
     "name": "Table Settings S / z45k",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe13e-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "55254:7275": {
@@ -252,7 +221,6 @@
     "name": "Table Settings N / QKDq",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe13f-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "46380:64788": {
@@ -260,7 +228,6 @@
     "name": "Table Settings N / HgPZ",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe140-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "2699:50318": {
@@ -268,7 +235,6 @@
     "name": "Table Settings S / xGCr",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe141-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "37919:4093": {
@@ -276,7 +242,6 @@
     "name": "Table Settings N / wqHv",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe142-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "25821:11923": {
@@ -284,7 +249,6 @@
     "name": "Table Settings S / 51aw",
     "floor": "3",
     "region": "Table Settings",
-    "uuid": "a9dbe143-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "25154:16721": {
@@ -292,7 +256,6 @@
     "name": "Traditions S / 64uY",
     "floor": "3",
     "region": "Traditions",
-    "uuid": "a9dbe144-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "49406:10306": {
@@ -300,7 +263,6 @@
     "name": "Traditions S / Z5YR",
     "floor": "3",
     "region": "Traditions",
-    "uuid": "a9dbe145-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "8894:22556": {
@@ -308,7 +270,6 @@
     "name": "Traditions S / ggg3",
     "floor": "3",
     "region": "Traditions",
-    "uuid": "a9dbe146-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "63022:61802": {
@@ -316,7 +277,6 @@
     "name": "Traditions N / fjPD",
     "floor": "3",
     "region": "Traditions",
-    "uuid": "a9dbe147-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "2915:19385": {
@@ -324,7 +284,6 @@
     "name": "Traditions N / fkFG",
     "floor": "3",
     "region": "Traditions",
-    "uuid": "a9dbe148-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "26287:33506": {
@@ -332,7 +291,6 @@
     "name": "Central Stairs 4N / 45mq",
     "floor": "4",
     "region": "Central Stairs 4",
-    "uuid": "a9dbe149-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "4647:64443": {
@@ -340,7 +298,6 @@
     "name": "SE Stairs 4 / QttE",
     "floor": "4",
     "region": "Homes and Interiors E",
-    "uuid": "a9dbe14a-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "19495:48956": {
@@ -348,7 +305,6 @@
     "name": "SE Stairs 4 / KoTj",
     "floor": "4",
     "region": "Homes and Interiors E",
-    "uuid": "a9dbe14b-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "37531:44693": {
@@ -356,7 +312,6 @@
     "name": "Homes and Interiors EC / 4IXe",
     "floor": "4",
     "region": "Homes and Interiors E",
-    "uuid": "a9dbe14c-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "13181:47913": {
@@ -364,7 +319,6 @@
     "name": "Homes and Interiors SE / fLrD",
     "floor": "4",
     "region": "Homes and Interiors E",
-    "uuid": "a9dbe14d-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "36045:43556": {
@@ -372,7 +326,6 @@
     "name": "Homes and Interiors NE / BDmZ",
     "floor": "4",
     "region": "Homes and Interiors E",
-    "uuid": "a9dbe14e-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "37149:53082": {
@@ -380,7 +333,6 @@
     "name": "Homes and Interiors SW / g2cm",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe14f-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "56649:2920": {
@@ -388,7 +340,6 @@
     "name": "SW Stairs 4 / irXK",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe150-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "1734:56714": {
@@ -396,7 +347,6 @@
     "name": "Homes and Interiors NW / 1AGJ",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe151-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "8192:38137": {
@@ -404,7 +354,6 @@
     "name": "Homes and Interiors SW / nWyX",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe152-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "48454:2700": {
@@ -412,7 +361,6 @@
     "name": "SW Stairs 4 / K2SD",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe153-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "30676:22048": {
@@ -420,7 +368,6 @@
     "name": "SW Elevator 4 / ulXP",
     "floor": "4",
     "region": "Homes and Interiors W",
-    "uuid": "a9dbe154-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "53648:49383": {
@@ -428,7 +375,6 @@
     "name": "Central Stairs 4S / klxp",
     "floor": "4",
     "region": "Jewellery",
-    "uuid": "a9dbe155-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "62786:65337": {
@@ -436,7 +382,6 @@
     "name": "Central Stairs 4N / k6mQ",
     "floor": "4",
     "region": "Jewellery",
-    "uuid": "a9dbe156-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "15986:5921": {
@@ -444,7 +389,6 @@
     "name": "NW Stairs 4 / J7uw",
     "floor": "4",
     "region": "N Balcony 4",
-    "uuid": "a9dc0830-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "49122:20803": {
@@ -452,7 +396,6 @@
     "name": "NE Stairs 4 / CpV8",
     "floor": "4",
     "region": "N Balcony 4",
-    "uuid": "a9dc0831-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "4566:64223": {
@@ -460,7 +403,6 @@
     "name": "NE Stairs 4 / RRmU",
     "floor": "4",
     "region": "N Balcony 4",
-    "uuid": "a9dc0832-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "2696:21588": {
@@ -468,7 +410,6 @@
     "name": "NW Stairs 4 / KE1R",
     "floor": "4",
     "region": "N Balcony 4",
-    "uuid": "a9dc0833-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "47336:29503": {
@@ -476,7 +417,6 @@
     "name": "Sapmi S / kqSA",
     "floor": "4",
     "region": "Sapmi",
-    "uuid": "a9dc0834-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "32170:20338": {
@@ -484,7 +424,6 @@
     "name": "Sapmi N / ge6h",
     "floor": "4",
     "region": "Sapmi",
-    "uuid": "a9dc0835-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "52169:65240": {
@@ -492,7 +431,6 @@
     "name": "Sapmi N / qWBN",
     "floor": "4",
     "region": "Sapmi",
-    "uuid": "a9dc0836-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "71:4198": {
@@ -500,7 +438,6 @@
     "name": "Sapmi S / cPvv",
     "floor": "4",
     "region": "Sapmi",
-    "uuid": "a9dc0837-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "44397:38284": {
@@ -508,7 +445,6 @@
     "name": "Swedish Folk Art N / Kkuk",
     "floor": "4",
     "region": "Swedish Folk Art",
-    "uuid": "a9dc0838-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "2925:12947": {
@@ -516,7 +452,6 @@
     "name": "Swedish Folk Art S / q1jZ",
     "floor": "4",
     "region": "Swedish Folk Art",
-    "uuid": "a9dc0839-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "57605:29522": {
@@ -524,7 +459,6 @@
     "name": "Swedish Folk Art N / 4rtU",
     "floor": "4",
     "region": "Swedish Folk Art",
-    "uuid": "a9dc083a-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "50892:13985": {
@@ -532,7 +466,6 @@
     "name": "Swedish Folk Art C / HehR",
     "floor": "4",
     "region": "Swedish Folk Art",
-    "uuid": "a9dc083b-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   },
   "48658:50019": {
@@ -540,7 +473,6 @@
     "name": "Swedish Folk Art S / 5oyf",
     "floor": "4",
     "region": "Swedish Folk Art",
-    "uuid": "a9dc083c-dbd4-11e9-8c55-e5ee66373ee5",
     "blocks": []
   }
 }

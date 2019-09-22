@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flex: 1,
     backgroundColor: '#ffffff',
-    marginTop: 64,
   },
   statusBar: {
     position: 'absolute',
@@ -76,25 +75,13 @@ class Tours extends Component {
   }
 
   render() {
-    let containerMargin = getBottomTabsHeight();
+    var containerMargin = 0;
     if (this.props.playerOpen) {
       containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     return (
       <View style={styles.container}>
-        <Button
-          onPress={() => {
-            const passedProps = {
-              title: 'Tour Stop 1',
-            };
-
-            pushToTourStop(this.props.componentId, passedProps);
-          }}
-          title="Push to Tour Stop 1"
-          color="#841584"
-          accessibilityLabel="Push to Tour Stop 1"
-        />
         <View style={{ flex: 1 }}>
           <View style={[styles.container, { marginBottom: containerMargin }]}>
             <Grid
@@ -102,22 +89,12 @@ class Tours extends Component {
               items={this.props.tourStops}
               selected={this.props.currentStopUUID}
               onCellPress={item => {
-                // this.props.navigator.push({
-                //   title: item.shortTitle,
-                //   component: TourStop,
-                //   barTintColor: '#ffffff',
-                //   titleTextColor: OFF_BLACK,
-                //   shadowHidden: true,
-                //   navigationBarHidden: true,
-                //   passProps: {
-                //     tab: TAB_STORIES,
-                //     floor: item.floor,
-                //     duration: item.duration[this.props.locale],
-                //     tourStop: item,
-                //     initialCategory: item.initialAudio,
-                //     imageURL: item.imageURL,
-                //   },
-                // });
+                const passedProps = {
+                  // title: 'Tour Stop 1',
+                  tourStop: item,
+                };
+
+                pushToTourStop(this.props.componentId, passedProps);
               }}
             />
           </View>
@@ -130,7 +107,7 @@ class Tours extends Component {
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-    // tourStops: state.allTourStops.tourStops,
+    tourStops: state.allTourStops.tourStops,
     currentStopUUID: state.bottomPlayer.stopUUID,
     locale: state.localization.locale,
   };

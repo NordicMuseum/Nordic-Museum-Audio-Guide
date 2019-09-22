@@ -1,16 +1,16 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
-// import I18n from 'react-native-i18n';
+import { translate } from '../i18n';
 
-import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
 import Collapsible from 'react-native-collapsible';
 
 import TranscriptButton from './buttons/transcriptButton';
 
-import {parseDisplayText, parseVoiceoverText} from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from '../utilities';
 
-import {globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE} from '../styles';
+import { globalStyles, SELECTED, HIGHLIGHTS, OFF_WHITE } from '../styles';
 
 export const AUDIO_CONTENT_ITEM_HEIGHT = 45;
 
@@ -110,9 +110,9 @@ class AudioContentItem extends Component {
   }
 
   render() {
-    const {audioContent, screenReader, index, listLength} = this.props;
+    const { audioContent, screenReader, index, listLength } = this.props;
 
-    const {audioAction} = this.props.actions;
+    const { audioAction } = this.props.actions;
 
     let collapsibleDuration;
     if (screenReader) {
@@ -125,7 +125,7 @@ class AudioContentItem extends Component {
 
     return (
       <TouchableOpacity
-        style={{flex: 1}}
+        style={{ flex: 1 }}
         activeOpacity={0.6}
         onPress={() => {
           audioAction();
@@ -133,23 +133,24 @@ class AudioContentItem extends Component {
         accessible={true}
         accessibilityTraits={['button', 'startsMedia']}
         accessibilityLabel={
-          `${parseVoiceoverText('Title')}. ${index + 1} of ` +
-          `${listLength}. ${audioContent.duration} seconds`
+          `${parseVoiceoverText(translate(audioContent.title))}. ${index +
+            1} of ` +
+          `${listLength}. ${translate(audioContent.duration)} seconds`
         }>
         <View
           style={[
             styles.container,
-            this.props.active ? {backgroundColor: SELECTED} : {},
+            this.props.active ? { backgroundColor: SELECTED } : {},
           ]}>
           <View style={styles.row}>
-            <View style={[styles.audioItemStatus, {paddingLeft: indent}]}>
+            <View style={[styles.audioItemStatus, { paddingLeft: indent }]}>
               <View style={styles.row}>
-                <View style={{flex: 2, flexDirection: 'row'}}>
+                <View style={{ flex: 2, flexDirection: 'row' }}>
                   <View
                     style={[
                       audioContent.category === 'HIGHLIGHT'
                         ? styles.highlightedNumber
-                        : {marginRight: 11, paddingLeft: 3},
+                        : { marginRight: 11, paddingLeft: 3 },
                     ]}>
                     <Text
                       style={[
@@ -158,7 +159,7 @@ class AudioContentItem extends Component {
                           ? styles.highlightedNumberText
                           : {},
                       ]}>
-                      {audioContent.title}
+                      {audioContent.id}
                     </Text>
                   </View>
                   <Text
@@ -167,13 +168,13 @@ class AudioContentItem extends Component {
                       styles.titleText,
                       // { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
                     ]}>
-                    {parseDisplayText('title')}
+                    {parseDisplayText(translate(audioContent.title))}
                   </Text>
                 </View>
               </View>
             </View>
             <TranscriptButton
-              styles={{opacity: 0}}
+              styles={{ opacity: 0 }}
               accessibilityLabel={'title'}
               onPress={() => {
                 // this.toggleTranscript();

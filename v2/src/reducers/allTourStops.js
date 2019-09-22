@@ -1,6 +1,6 @@
-import {TourStop} from '../models/tourStop';
+import { Tour } from '../models/tour';
 
-const stops = TourStop.allRealmObjects();
+const stops = Tour.allRealmObjects();
 
 const initialState = {
   tourStops: stops,

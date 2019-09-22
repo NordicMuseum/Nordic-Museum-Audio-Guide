@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-//import I18n from 'react-native-i18n';
+import { translate } from '../i18n';
 
 import {
   StyleSheet,
@@ -22,7 +22,7 @@ import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
 import { updateNearMeRootStatus } from '../actions/navigation';
 
 import NavigationBar from '../components/navigationBar';
-//import { AUDIO_CONTENT_ITEM_HEIGHT } from './audioContentItem';
+import { AUDIO_CONTENT_ITEM_HEIGHT } from '../components/audioContentItem';
 import AudioContentList from '../components/audioContentList';
 
 import { parseDisplayText, parseVoiceoverText } from '../utilities';
@@ -169,6 +169,23 @@ const styles = StyleSheet.create({
 });
 
 class TourStop extends Component {
+  static options(passProps) {
+    return {
+      topBar: {
+        visible: false,
+        background: {
+          color: NAV_BAR_BACKGROUND,
+        },
+        title: {
+          text: 'TourStop',
+          fontSize: 17,
+          fontFamily: 'Helvetica',
+          color: NAV_BAR_TEXT,
+        },
+      },
+    };
+  }
+
   // static propTypes = {
   //   navigator: PropTypes.object.isRequired,
   //   tab: PropTypes.string.isRequired,
@@ -211,119 +228,13 @@ class TourStop extends Component {
   // }
 
   render() {
-    // const { tourStop, locale } = this.props;
-
-    locale = 'en';
-
-    tourStop = {
-      uuid: '07dc96fb-7bad-421b-a016-64e338987fcc',
-      floor: '2–4',
-      order: 0,
-      regions: [],
-      category: 'HIGHLIGHTS',
-      imageURL: 'highlights.png',
-      imageWidth: 750,
-      imageHeight: 345,
-      imageAccessibilityLabel: {
-        en: 'Highlights',
-        sv: 'Höjdpunkter',
-        it: 'Le parti salienti',
-        ar: 'مقتطفات',
-        es: 'Atracciones principales',
-        fi: 'Kohokohtia',
-        de: 'Höhepunkte',
-        ru: 'Реликвии',
-        fr: 'Les incontournables',
-        zh: 'Highlights',
-        svKids: 'Barnens audioguide',
-      },
-      shortCredit: {
-        en: '<i>Highlights</i>',
-        sv: '<i>Höjdpunkter</i>',
-        it: '<i>Le parti salienti</i>',
-        ar: '<i>مقتطفات</i>',
-        es: '<i>Atracciones principales</i>',
-        fi: '<i>Kohokohtia</i>',
-        de: '<i>Höhepunkte</i>',
-        ru: '<i>Реликвии</i>',
-        fr: '<i>Les incontournables</i>',
-        zh: '<i>Highlights</i>',
-        svKids: '<i>Barnens audioguide</i>',
-      },
-      longCredit: {
-        en: 'Photo: Karolina Kristensson\n<i>Highlights</i>',
-        sv: 'Foto: Karolina Kristensson\n<i>Höjdpunkter</i>',
-        it: 'Foto: Karolina Kristensson\n<i>Le parti salienti</i>',
-        ar: 'Foto: Karolina Kristensson\n<i>مقتطفات</i>',
-        es: 'Foto: Karolina Kristensson\n<i>Atracciones principales</i>',
-        fi: 'Foto: Karolina Kristensson\n<i>Kohokohtia</i>',
-        de: 'Foto: Karolina Kristensson\n<i>Höhepunkte</i>',
-        ru: 'Foto: Karolina Kristensson\n<i>Реликвии</i>',
-        fr: 'Foto: Karolina Kristensson\n<i>Les incontournables</i>',
-        zh: 'Foto: Karolina Kristensson\n<i>Highlights</i>',
-        svKids: 'Foto: Karolina Kristensson\n<i>Barnens audioguide</i>',
-      },
-      duration: {
-        ar: 2863,
-        de: 2841,
-        en: 2851,
-        es: 2874,
-        fi: 2986,
-        fr: 2775,
-        it: 2861,
-        ru: 3473,
-        sv: 2894,
-        seSma: 2894,
-        seSme: 2894,
-        seSmj: 2894,
-        svKids: 2286,
-        svSimple: 2756,
-        zh: 2863,
-      },
-      audioContent: [
-        '201',
-        '401',
-        '408',
-        '413',
-        '424',
-        '425',
-        '434',
-        '426',
-        '423',
-        '469',
-        '456',
-        '451',
-        '301',
-        '302',
-        '316',
-        '328',
-        '330',
-        '355',
-        '333',
-        '357',
-        '356',
-        '202',
-      ],
-      title: {
-        en: 'Highlights',
-        sv: 'Höjdpunkter',
-        it: 'Le parti salienti',
-        ar: 'مقتطفات',
-        es: 'Atracciones principales',
-        fi: 'Kohokohtia',
-        de: 'Höhepunkte',
-        ru: 'Реликвии',
-        fr: 'Les incontournables',
-        zh: 'Highlights',
-        svKids: 'Barnens audioguide',
-      },
-    };
+    let { tourStop } = this.props;
 
     // const { playTrack, togglePausePlay } = this.props.actions;
 
-    const duration = tourStop.duration[locale];
+    const duration = translate(tourStop.duration);
 
-    let containerMargin = getBottomTabsHeight();
+    let containerMargin = 0;
     if (this.props.playerOpen) {
       containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
@@ -367,7 +278,7 @@ class TourStop extends Component {
           )}
           renderStickyHeader={() => (
             <NavigationBar
-              label={parseDisplayText('title')}
+              label={parseDisplayText(translate(tourStop.title))}
               labelStyle={{
                 color: NAV_BAR_TEXT,
               }}
@@ -380,7 +291,10 @@ class TourStop extends Component {
           )}
           renderForeground={() => {
             let imageURL = this.props.imageURL;
-            if (locale === 'svKids' && tourStop.regions.length === 0) {
+            if (
+              this.props.locale === 'svKids' &&
+              this.tourStop.regions.length === 0
+            ) {
               imageURL = 'highlightsKids.png';
             }
 
@@ -392,7 +306,9 @@ class TourStop extends Component {
                   source={{ uri: imageURL }}>
                   <View style={styles.headerTitle} pointerEvents={'none'}>
                     <Text style={styles.headerTitleText}>
-                      {parseDisplayText('title').toUpperCase()}
+                      {parseDisplayText(
+                        translate(tourStop.title),
+                      ).toUpperCase()}
                     </Text>
                   </View>
                 </ImageBackground>
@@ -411,7 +327,7 @@ class TourStop extends Component {
                       source={require('../assets/PlayButton.png')}
                     />
                     <Text style={styles.playAllButtonText}>
-                      {parseDisplayText('playAll').toUpperCase()}
+                      {parseDisplayText(translate('playAll')).toUpperCase()}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -423,7 +339,7 @@ class TourStop extends Component {
                         source={require('../assets/FloorIcon.png')}
                       />
                       <Text style={styles.floorText}>
-                        {`${'floor'.toUpperCase()} `}
+                        {`${translate('floor').toUpperCase()} `}
                       </Text>
                     </View>
                     <View style={styles.audioContentDuration}>
@@ -432,7 +348,9 @@ class TourStop extends Component {
                         source={require('../assets/ClockIcon.png')}
                       />
                       <Text style={styles.durationText}>
-                        {`${Math.floor(duration / 60)} ${'min'.toUpperCase()}`}
+                        {`${Math.floor(duration / 60)} ${translate(
+                          'min',
+                        ).toUpperCase()}`}
                       </Text>
                     </View>
                   </View>
@@ -441,11 +359,11 @@ class TourStop extends Component {
             );
           }}>
           <AudioContentList
-            tourStop={tourStop}
+            tourStop={this.props.tourStop}
             //currentAudio={this.props.currentAudio}
             //playerStatus={this.props.playerStatus}
             //screenReader={this.props.screenReader}
-            locale={locale}
+            locale={this.props.locale}
             actions={
               {
                 // playTrack,

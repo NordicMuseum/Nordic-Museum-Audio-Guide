@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-import {View, StyleSheet, Dimensions} from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 // import {
 //   analyticsTrackTranscriptOpenned,
@@ -19,47 +19,47 @@ const styles = StyleSheet.create({
 });
 
 const AudioContentList = props => {
-  const {playTrack, togglePausePlay} = props.actions;
+  const { playTrack, togglePausePlay } = props.actions;
 
   const width = Dimensions.get('window').width;
   let renderView;
 
-  const contentList = props.tourStop.audioContent.map(
-    (content, index, array) => {
-      return (
-        <View key={content.title}>
-          <AudioContentItem
-            audioContent={content}
-            active={props.currentAudio === content.uuid}
-            screenReader={props.screenReader}
-            index={index}
-            listLength={props.tourStop.audioContent.length}
-            contentWidth={width}
-            locale={props.locale}
-            actions={{
-              analyticsTrackTranscriptOpenned: () => {
-                analyticsTrackTranscriptOpenned(
-                  props.tourStopTitle,
-                  content.title,
-                );
-              },
-              reloadAudio: () => {
+  let audioContent = Array.from(props.tourStop.audiocontent);
+
+  const contentList = audioContent.map((content, index, array) => {
+    return (
+      <View key={content.title}>
+        <AudioContentItem
+          audioContent={content}
+          active={props.currentAudio === content.uuid}
+          screenReader={props.screenReader}
+          index={index}
+          listLength={audioContent.length}
+          contentWidth={width}
+          locale={props.locale}
+          actions={{
+            analyticsTrackTranscriptOpenned: () => {
+              analyticsTrackTranscriptOpenned(
+                props.tourStopTitle,
+                content.title,
+              );
+            },
+            reloadAudio: () => {
+              playTrack(props.tourStop, content.uuid, false);
+            },
+            audioAction: () => {
+              if (props.currentAudio === content.uuid) {
+                togglePausePlay();
+              } else {
                 playTrack(props.tourStop, content.uuid, false);
-              },
-              audioAction: () => {
-                if (props.currentAudio === content.uuid) {
-                  togglePausePlay();
-                } else {
-                  playTrack(props.tourStop, content.uuid, false);
-                }
-              },
-            }}
-          />
-          <View style={index !== array.length - 1 ? styles.bottomBorder : {}} />
-        </View>
-      );
-    },
-  );
+              }
+            },
+          }}
+        />
+        <View style={index !== array.length - 1 ? styles.bottomBorder : {}} />
+      </View>
+    );
+  });
 
   renderView = <View>{contentList}</View>;
 

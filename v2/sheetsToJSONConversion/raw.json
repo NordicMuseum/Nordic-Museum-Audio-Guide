@@ -1,5 +1,5 @@
 {
-  "Timestamp": "Fri Sep 20 2019 14:29:18 GMT-0400 (EDT)",
+  "Timestamp": "Sat Sep 21 2019 21:36:16 GMT-0400 (EDT)",
   "UI Strings": [
     {
       "uistring": "min",
@@ -1620,7 +1620,22 @@
       "shortcredit__en": "<i>The Arctic – While the Ice is Melting</i>",
       "shortcredit__sv": "<i>Arktis – medan isen smälter</i>",
       "longcredit__en": "Photo: Camilla Andersen\\n<i>The Arctic – While the Ice is Melting</i>",
-      "longcredit__sv": "Foto: Camilla Andersen\\n<i>Arktis – medan isen smälter</i>"
+      "longcredit__sv": "Foto: Camilla Andersen\\n<i>Arktis – medan isen smälter</i>",
+      "duration__ar": 1,
+      "duration__de": 1,
+      "duration__en": 1,
+      "duration__es": 1,
+      "duration__fi": 1,
+      "duration__fr": 1,
+      "duration__it": 1,
+      "duration__ru": 1,
+      "duration__sv": 1,
+      "duration__sesma": 1,
+      "duration__sesme": 1,
+      "duration__sesmj": 1,
+      "duration__svkids": 1,
+      "duration__svsimple": 1,
+      "duration__zh": 1
     },
     {
       "floor": 3,
@@ -3615,7 +3630,6 @@
     },
     {
       "floor": "1",
-      "icon": "placeholder.png",
       "title__en": "Play area",
       "title__sv": "Lekhörna"
     },

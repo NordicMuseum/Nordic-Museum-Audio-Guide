@@ -4,55 +4,46 @@
     "label": "floor1_label",
     "amenities": [
       {
-        "uuid": "a9dc083d-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "cloakroom.png",
-        "title": "amenity_cloakroom_title"
+        "title": "amenities_cloakroom_title"
       },
       {
-        "uuid": "a9dc083e-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "restrooms.png",
-        "title": "amenity_toilets_title"
+        "title": "amenities_toilets_title"
       },
       {
-        "uuid": "a9dc083f-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "shop.png",
-        "title": "amenity_shop_title",
-        "description": "amenity_shop_description"
+        "title": "amenities_shop_title",
+        "description": "amenities_shop_description"
       },
       {
-        "uuid": "a9dc0840-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "babyChangingTable.png",
-        "title": "amenity_babyChangingTables_title"
+        "title": "amenities_babyChangingTables_title"
       },
       {
-        "uuid": "a9dc2f40-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
-        "icon": "placeholder.png",
-        "title": "amenity_playArea_title"
+        "title": "amenities_playArea_title"
       },
       {
-        "uuid": "a9dc2f41-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "libraryArchive.png",
-        "title": "amenity_libraryAndArchive_title",
-        "description": "amenity_libraryAndArchive_description"
+        "title": "amenities_libraryAndArchive_title",
+        "description": "amenities_libraryAndArchive_description"
       },
       {
-        "uuid": "a9dc2f42-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "lectureHall.png",
-        "title": "amenity_assemblyHall_title"
+        "title": "amenities_assemblyHall_title"
       },
       {
-        "uuid": "a9dc2f43-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "1",
         "icon": "wheelchairEntrance.png",
-        "title": "amenity_wheelchairPushchairEntrance_title",
-        "description": "amenity_wheelchairPushchairEntrance_description"
+        "title": "amenities_wheelchairPushchairEntrance_title",
+        "description": "amenities_wheelchairPushchairEntrance_description"
       }
     ]
   },
@@ -61,52 +52,44 @@
     "label": "floor2_label",
     "amenities": [
       {
-        "uuid": "a9dc2f44-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
         "icon": "info.png",
-        "title": "amenity_information_title"
+        "title": "amenities_information_title"
       },
       {
-        "uuid": "a9dc2f45-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
-        "title": "amenity_entrance_title"
+        "title": "amenities_entrance_title"
       },
       {
-        "uuid": "a9dc2f46-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
         "icon": "restaurant.png",
-        "title": "amenity_restaurantAndCafe_title",
-        "description": "amenity_restaurantAndCafe_description"
+        "title": "amenities_restaurantAndCafe_title",
+        "description": "amenities_restaurantAndCafe_description"
       },
       {
-        "uuid": "a9dc2f47-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
-        "title": "amenity_childrensPlayhouse_title",
-        "description": "amenity_childrensPlayhouse_description"
+        "title": "amenities_childrensPlayhouse_title",
+        "description": "amenities_childrensPlayhouse_description"
       },
       {
-        "uuid": "a9dc2f48-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
         "icon": "strollerParking.png",
-        "title": "amenity_strollerParking_title",
-        "description": "amenity_strollerParking_description"
+        "title": "amenities_strollerParking_title",
+        "description": "amenities_strollerParking_description"
       },
       {
-        "uuid": "a9dc2f49-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
         "icon": "lounge.png",
-        "title": "amenity_stage_title"
+        "title": "amenities_stage_title"
       },
       {
-        "uuid": "a9dc2f4a-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
         "icon": "lunchroom.png",
-        "title": "amenity_packedLunchRoom_title"
+        "title": "amenities_packedLunchRoom_title"
       },
       {
-        "uuid": "a9dc2f4b-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "2",
-        "title": "amenity_wifi_title"
+        "title": "amenities_wifi_title"
       }
     ]
   },
@@ -115,26 +98,22 @@
     "label": "floor3_label",
     "amenities": [
       {
-        "uuid": "a9dc2f4c-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "3",
-        "title": "amenity_playArea_title"
+        "title": "amenities_playArea_title"
       },
       {
-        "uuid": "a9dc5650-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "3",
-        "title": "amenity_toyRoom_title",
-        "description": "amenity_toyRoom_description"
+        "title": "amenities_toyRoom_title",
+        "description": "amenities_toyRoom_description"
       },
       {
-        "uuid": "a9dc5651-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "3",
-        "title": "amenity_temporaryExhibition_title"
+        "title": "amenities_temporaryExhibition_title"
       },
       {
-        "uuid": "a9dc5652-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "3",
         "icon": "lounge.png",
-        "title": "amenity_stage_title"
+        "title": "amenities_stage_title"
       }
     ]
   },
@@ -143,15 +122,13 @@
     "label": "floor4_label",
     "amenities": [
       {
-        "uuid": "a9dc5653-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "4",
-        "title": "amenity_playArea_title"
+        "title": "amenities_playArea_title"
       },
       {
-        "uuid": "a9dc5654-dbd4-11e9-8c55-e5ee66373ee5",
         "floor": "4",
-        "title": "amenity_smallThings_title",
-        "description": "amenity_smallThings_description"
+        "title": "amenities_smallThings_title",
+        "description": "amenities_smallThings_description"
       }
     ]
   }

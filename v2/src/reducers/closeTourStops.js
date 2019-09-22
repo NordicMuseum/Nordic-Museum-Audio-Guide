@@ -1,17 +1,17 @@
-import {UPDATE_BEACONS} from '../actions/beacon';
+import { UPDATE_BEACONS } from '../actions/beacon';
 
-import {RESET} from '../actions/device';
+import { RESET } from '../actions/device';
 
 // TODO: In the future load data from a database to prevent memory pressure
 import blockRules from '../data/beaconBlockRules.json';
 
-import {TourStop} from '../models/tourStop';
-const tourStops = TourStop.allRealmObjects().sorted('order');
+import { Tour } from '../models/tour';
+const tourStops = Tour.allRealmObjects().sorted('order');
 
-import {AudioContent} from '../models/audioContent';
-const audioContent = AudioContent.allRealmObjects().filtered('regions != null');
+import { Stop } from '../models/stop';
+const audioContent = Stop.allRealmObjects().filtered('regions != null');
 
-import {_, includes} from 'lodash';
+import { _, includes } from 'lodash';
 
 export const initialState = {
   regions: [],

@@ -1,5 +1,8 @@
 import { Navigation } from 'react-native-navigation';
 
+import { Settings } from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+
 import { configureStore } from './store';
 import registerScreens from './registerScreens';
 
@@ -24,6 +27,14 @@ import {
   SELECTED,
   setBottomTabsHeight,
 } from './styles';
+
+const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
+const lastAppVersion = Settings.get('LastAppVersion');
+const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
+
+// Hydrate the DB
+import hydrate from './data/hydrate';
+hydrate(newVersion || __DEV__);
 
 setI18nConfig();
 const store = configureStore();
