@@ -1,8 +1,8 @@
-import { getRealmInstance } from '../realm';
-import { Tour } from '../models/tour';
+import { getRealmInstance } from './realm';
+import { Tour } from './models/tour';
 
 const uuid = require('uuid');
-const tours = require('./tours');
+const tours = require('./data/tours');
 const realm = getRealmInstance();
 
 function saveToRealm(tour) {

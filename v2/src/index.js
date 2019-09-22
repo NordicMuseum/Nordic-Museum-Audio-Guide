@@ -31,7 +31,7 @@ const lastAppVersion = Settings.get('LastAppVersion');
 const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
 // Hydrate the DB
-import hydrate from './data/hydrate';
+import hydrate from './hydrate';
 hydrate(newVersion || __DEV__);
 
 // TODO: Set first locale
