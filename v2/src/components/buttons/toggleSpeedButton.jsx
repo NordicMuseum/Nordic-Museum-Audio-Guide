@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 import {
   PLAY_RATE_NORMAL,
@@ -8,7 +9,7 @@ import {
   PLAY_RATE_FASTEST,
 } from '../../actions/audio';
 
-import {OFF_WHITE, GRAY} from '../../styles';
+import { OFF_WHITE, GRAY } from '../../styles';
 
 const styles = StyleSheet.create({
   toggleSpeedLabel: {
@@ -59,7 +60,7 @@ const ToggleSpeedButton = props => {
         accessibilityTraits={['button', 'disabled']}
         accessibilityLabel={accessibilityLabel}>
         <View style={styles.toggleSpeedLabel}>
-          <Text style={[styles.toggleSpeedText, {color: GRAY}]}>
+          <Text style={[styles.toggleSpeedText, { color: GRAY }]}>
             {rateText}
           </Text>
           <Text
@@ -87,7 +88,7 @@ const ToggleSpeedButton = props => {
         accessibilityTraits={'button'}
         accessibilityLabel={accessibilityLabel}>
         <View style={styles.toggleSpeedLabel}>
-          <Text style={[styles.toggleSpeedText, {color: OFF_WHITE}]}>
+          <Text style={[styles.toggleSpeedText, { color: OFF_WHITE }]}>
             {rateText}
           </Text>
           <Text

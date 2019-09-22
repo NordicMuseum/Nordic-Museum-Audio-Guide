@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-import {OFF_WHITE, GRAY} from '../../styles';
+import { OFF_WHITE, GRAY } from '../../styles';
 
 const styles = StyleSheet.create({
   nextButtonImage: {
@@ -20,7 +21,7 @@ const NextButton = props => {
         accessibilityTraits={['button', 'disabled']}
         accessibilityLabel={'Next'}>
         <Image
-          style={[styles.nextButtonImage, {tintColor: GRAY}]}
+          style={[styles.nextButtonImage, { tintColor: GRAY }]}
           source={require('../../assets/SkipButton.png')}
         />
       </TouchableOpacity>
@@ -34,7 +35,7 @@ const NextButton = props => {
         accessibilityTraits={['button', 'startsMedia']}
         accessibilityLabel={'Next'}>
         <Image
-          style={[styles.nextButtonImage, {tintColor: OFF_WHITE}]}
+          style={[styles.nextButtonImage, { tintColor: OFF_WHITE }]}
           source={require('../../assets/SkipButton.png')}
         />
       </TouchableOpacity>

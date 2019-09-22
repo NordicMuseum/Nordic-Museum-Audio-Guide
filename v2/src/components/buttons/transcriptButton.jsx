@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-import {OFF_BLACK} from '../../styles';
+import { OFF_BLACK } from '../../styles';
 
 const styles = StyleSheet.create({
   transcriptButtonContainer: {
@@ -49,7 +50,7 @@ const TranscriptButton = props => {
           styles.transcriptButton,
           props.styles,
           {
-            transform: [{rotate: props.showTranscript ? '0deg' : '180deg'}],
+            transform: [{ rotate: props.showTranscript ? '0deg' : '180deg' }],
           },
         ]}
         source={require('../../assets/TranscriptButton.png')}

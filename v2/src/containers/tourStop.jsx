@@ -230,7 +230,7 @@ class TourStop extends Component {
   render() {
     let { tourStop } = this.props;
 
-    // const { playTrack, togglePausePlay } = this.props.actions;
+    const { playTrack, togglePausePlay } = this.props.actions;
 
     const duration = translate(tourStop.duration);
 
@@ -316,11 +316,11 @@ class TourStop extends Component {
                   <TouchableOpacity
                     style={[styles.playAllButton, { width: 0.65 * width }]}
                     onPress={() => {
-                      // playTrack(
-                      //   this.props.tourStop,
-                      //   this.props.tourStop.audioContent[0].uuid,
-                      //   true // autoplay
-                      // );
+                      playTrack(
+                        this.props.tourStop,
+                        this.props.tourStop.audiocontent[0].uuid,
+                        true, // autoplay
+                      );
                     }}>
                     <Image
                       style={styles.playAllButtonIcon}
@@ -364,12 +364,10 @@ class TourStop extends Component {
             //playerStatus={this.props.playerStatus}
             //screenReader={this.props.screenReader}
             locale={this.props.locale}
-            actions={
-              {
-                // playTrack,
-                // togglePausePlay,
-              }
-            }
+            actions={{
+              playTrack,
+              togglePausePlay,
+            }}
           />
         </ParallaxScrollView>
       </View>

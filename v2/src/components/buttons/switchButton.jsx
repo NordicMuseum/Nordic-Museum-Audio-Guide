@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {View, TouchableOpacity} from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 
-import {OFF_WHITE, GREEN, GRAY} from '../../styles';
+import { OFF_WHITE, GREEN, GRAY } from '../../styles';
 
 const SwitchButton = props => {
   if (props.value) {

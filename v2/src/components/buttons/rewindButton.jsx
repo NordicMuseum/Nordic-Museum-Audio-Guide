@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+import { TouchableOpacity, Image, Text, StyleSheet } from 'react-native';
 
-import {OFF_WHITE, GRAY} from '../../styles';
+import { OFF_WHITE, GRAY } from '../../styles';
 
 const styles = StyleSheet.create({
   rewindButton: {

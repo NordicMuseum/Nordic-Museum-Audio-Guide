@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-import {OFF_WHITE} from '../../styles';
+import { OFF_WHITE } from '../../styles';
 
 import {
   PLAYER_STATUS_PAUSE,
@@ -52,7 +53,7 @@ const PlayPauseButton = props => {
       accessibilityLabel={accessibilityLabel}>
       <Image
         resizeMode={'contain'}
-        style={[styles.pausePlayButton, {tintColor: OFF_WHITE}]}
+        style={[styles.pausePlayButton, { tintColor: OFF_WHITE }]}
         source={source}
       />
     </TouchableOpacity>
