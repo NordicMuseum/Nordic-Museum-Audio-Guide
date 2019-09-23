@@ -217,6 +217,7 @@ class BottomPlayer extends Component {
 
 const mapStateToProps = state => {
   return {
+    tourStop: state.bottomPlayer.tourStop,
     playerOpen: state.bottomPlayer.playerOpen,
     playerStatus: state.bottomPlayer.playerStatus,
     audioContent: state.bottomPlayer.audioContent,
