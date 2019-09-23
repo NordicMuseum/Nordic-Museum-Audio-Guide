@@ -15,6 +15,7 @@ import {
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
   ACTION,
+  WHITE,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -33,7 +34,7 @@ class Settings extends Component {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: WHITE,
         },
         backButton: {
           showTitle: false,
@@ -45,6 +46,7 @@ class Settings extends Component {
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }
