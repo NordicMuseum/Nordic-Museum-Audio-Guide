@@ -1,8 +1,14 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-import {Text, View, TouchableHighlight, Image, StyleSheet} from 'react-native';
+import {
+  Text,
+  View,
+  TouchableHighlight,
+  Image,
+  StyleSheet,
+} from 'react-native';
 
-import {globalStyles, LIGHT_GRAY} from '../styles';
+import { globalStyles, LIGHT_GRAY } from '../styles';
 
 export const DISCLOSURE_CELL_HEIGHT = 41;
 
@@ -34,7 +40,7 @@ const DisclosureCell = props => {
       <View
         style={[
           styles.cell,
-          props.bottomBorder === false ? {borderBottomWidth: 0} : {},
+          props.bottomBorder === false ? { borderBottomWidth: 0 } : {},
         ]}>
         <Text style={[styles.cellTitle]}>
           <Text

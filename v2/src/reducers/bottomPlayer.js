@@ -1,9 +1,4 @@
 import {
-  HIDE_BOTTOM_PLAYER,
-  SHOW_BOTTOM_PLAYER,
-} from '../actions/bottomPlayer';
-
-import {
   TOGGLE_PAUSE_PLAY,
   PAUSE_AUDIO,
   PLAY_AUDIO,
@@ -60,18 +55,6 @@ const initialState = {
 
 export function bottomPlayer(state = initialState, action) {
   switch (action.type) {
-    // These two are only used for testing
-    case SHOW_BOTTOM_PLAYER: {
-      return Object.assign({}, state, {
-        playerOpen: true,
-      });
-    }
-    case HIDE_BOTTOM_PLAYER: {
-      return Object.assign({}, state, {
-        playerOpen: false,
-      });
-    }
-
     case RESET: {
       return initialState;
     }

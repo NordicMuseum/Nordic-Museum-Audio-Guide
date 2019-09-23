@@ -6,15 +6,12 @@ import { connect } from 'react-redux';
 
 import { translate } from '../i18n';
 
-import DisclosureCell, {
-  DISCLOSURE_CELL_HEIGHT,
-} from '../components/disclosureCell';
+import DisclosureCell from '../components/disclosureCell';
 
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
-  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -25,10 +22,7 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: 'cover',
-    backgroundColor: 'red',
-  },
-  list: {
-    backgroundColor: 'red',
+    flex: 1,
   },
 });
 
@@ -53,33 +47,22 @@ class Info extends Component {
 
   render() {
     const width = Dimensions.get('window').width;
-    const height = Dimensions.get('window').height;
 
-    let bottomOffset = getBottomTabsHeight();
+    let bottomOffset = 0;
     if (this.props.playerOpen) {
       bottomOffset += BOTTOM_PLAYER_HEIGHT;
     }
 
-    const listHeight = DISCLOSURE_CELL_HEIGHT * 4;
-    const imageHeight = height - (listHeight + bottomOffset);
-
     return (
       <View style={[styles.container, { marginBottom: bottomOffset }]}>
-        <View style={{ height: imageHeight }}>
-          <Image
-            accessible={true}
-            accessibilityLabel={translate(
-              'museumScreen_ImageAccessibilityLabel',
-            )}
-            accessibilityTraits={'image'}
-            style={[
-              styles.image,
-              { width, height: imageHeight, backgroundColor: 'red' },
-            ]}
-            source={require('../assets/images/museumBackground.png')}
-          />
-        </View>
-        <View style={[styles.list, { width }]}>
+        <Image
+          accessible={true}
+          accessibilityLabel={translate('museumScreen_ImageAccessibilityLabel')}
+          accessibilityTraits={'image'}
+          style={[styles.image, { width }]}
+          source={require('../assets/images/museumBackground.png')}
+        />
+        <View>
           <View>
             <DisclosureCell
               accessibility={{
@@ -94,7 +77,6 @@ class Info extends Component {
                 });
               }}
             />
-
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
@@ -108,7 +90,6 @@ class Info extends Component {
                 });
               }}
             />
-
             <DisclosureCell
               accessibility={{
                 traits: ['button'],

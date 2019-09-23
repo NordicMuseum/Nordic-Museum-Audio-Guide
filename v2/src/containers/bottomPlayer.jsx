@@ -11,8 +11,6 @@ import { bindActionCreators } from 'redux';
 
 import { translate } from '../i18n';
 
-import { hideBottomPlayer as hideBottomPlayerAction } from '../actions/bottomPlayer';
-
 import {
   PLAYER_STATUS_FINISHED,
   PLAYER_STATUS_ERROR,
@@ -121,12 +119,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(
-    {
-      hideBottomPlayer: hideBottomPlayerAction,
-    },
-    dispatch,
-  ),
+  actions: bindActionCreators({}, dispatch),
 });
 
 export default connect(
