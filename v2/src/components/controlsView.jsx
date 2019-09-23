@@ -142,7 +142,7 @@ class ControlsView extends Component {
             accessibilityTraits={['header']}
             accessibilityLabel={`${parseVoiceoverText(
               translate(code),
-            )}, ${stopTitle}`}>
+            )}, ${translate(stopTitle)}`}>
             <View style={[styles.row, styles.titleRow]}>
               <View
                 style={highlighted ? styles.highlightedBox : styles.regularBox}>
@@ -153,7 +153,7 @@ class ControlsView extends Component {
                       ? styles.highlightedNumberText
                       : { fontWeight: '300' },
                   ]}>
-                  {code}
+                  {translate(code)}
                 </Text>
               </View>
               <Text style={[globalStyles.h3, { fontWeight: '500' }]}>

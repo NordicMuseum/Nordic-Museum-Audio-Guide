@@ -12,6 +12,14 @@ import { bindActionCreators } from 'redux';
 import { translate } from '../i18n';
 
 import { hideBottomPlayer as hideBottomPlayerAction } from '../actions/bottomPlayer';
+import {
+  togglePausePlay,
+  rewindAudio,
+  cycleAudioSpeed,
+  unloadAudio,
+  replayAudio,
+  playTrack,
+} from '../actions/audio';
 
 import {
   PLAYER_STATUS_FINISHED,
@@ -36,18 +44,13 @@ import {
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  positionContainer: {
+  bottomBar: {
     position: 'absolute',
-    left: 0,
+    borderBottomWidth: 1,
+    borderColor: '#0d0d0d',
+    backgroundColor: '#1A1A1A',
     height: BOTTOM_PLAYER_HEIGHT,
-    width,
-  },
-  contentContainer: {
-    flexDirection: 'row',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#F2F',
+    width: width,
   },
 });
 
@@ -60,134 +63,45 @@ class BottomPlayer extends Component {
     };
   }
 
+  // static getDerivedStateFromProps(props, state) {
+  // if (
+  //   props.playerStatus === PLAYER_STATUS_LOADING &&
+  //   props.playerStatus === PLAYER_STATUS_PLAY
+  // ) {
+  //   this.props.actions.playAudio();
+  // }
+  // return state;
+
+  // if (props.playerStatus === PLAYER_STATUS_FINISHED) {
+  //   const { audioContent, index } = this.props;
+
+  //   const activeAudio = audioContent[index];
+  //   let url = activeAudio.audioURL;
+
+  //   if (activeAudio.audioURL.length === 3) {
+  //     // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
+  //     if (activeAudio.duration[I18n.locale]) {
+  //       url = activeAudio.audioURL.concat('/', I18n.locale);
+  //     } else {
+  //       if (activeAudio.duration[I18n.defaultLocale]) {
+  //         url = activeAudio.audioURL.concat('/', I18n.defaultLocale);
+  //       } else {
+  //         url = activeAudio.audioURL.concat('/', 'sv');
+  //       }
+  //     }
+  //   }
+
+  //   const audioLanguage = url.split('/')[1];
+  //   analyticsTrackAudioCompleteListen(this.props.locale, audioLanguage, this.props.audioTitle);
+  //   return state;
+  // }
+  // }
+
   render() {
     if (this.props.playerOpen === false) {
       return null;
     }
 
-    return (
-      <View
-        style={[
-          styles.bottomBar,
-          {
-            width,
-            height: BOTTOM_PLAYER_HEIGHT,
-            bottom: 0,
-            backgroundColor: OFF_BLACK,
-          },
-        ]}
-        // Rerender when PLAYER_STATUS_FINISHED begins and ends
-        key={playerStatus === PLAYER_STATUS_FINISHED}>
-        {progress}
-        <ControlsView
-          highlight={audioContent[index].category === 'HIGHLIGHT'}
-          stopTitle={stopTitle}
-          audioCode={audioTitle}
-          nextAudioProps={nextAudioProps(audioContent, nextUUID, audioTitle)}
-          time={time}
-          playerStatus={playerStatus}
-          prevDisabled={prevDisabled}
-          nextDisabled={nextDisabled}
-          playRate={playRate}
-          autoplayOn={autoplayOn}
-          locale={locale}
-          actions={{
-            togglePausePlay,
-            replayAudio,
-            rewindAudio,
-            cycleAudioSpeed,
-            navToTourStop,
-            loadNextAudio: () => {
-              playTrack(tourStop, nextUUID, false);
-            },
-            loadNextAutoplayAudio: () => {
-              playTrack(tourStop, nextUUID, true);
-            },
-            loadPrevAudio: () => {
-              playTrack(tourStop, prevUUID, false);
-            },
-          }}
-        />
-      </View>
-    );
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    playerOpen: state.bottomPlayer.playerOpen,
-    // playerStatus: state.bottomPlayer.playerStatus,
-  };
-};
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(
-    {
-      hideBottomPlayer: hideBottomPlayerAction,
-    },
-    dispatch,
-  ),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-  undefined,
-  { forwardRef: true },
-)(BottomPlayer);
-
-function nextAudioProps(audioContent, nextUUID, defaultTitle) {
-  if (nextUUID !== null) {
-    const audio = audioContent.filtered(`uuid = "${nextUUID}"`)[0];
-
-    return {
-      code: audio.title,
-      highlight: audio.category === 'HIGHLIGHT',
-    };
-  }
-
-  return defaultTitle;
-}
-
-/*
-
-class BottomPlayer extends Component {
-  
-
-  componentWillReceiveProps(nextProps) {
-    if (
-      this.props.playerStatus === PLAYER_STATUS_LOADING &&
-      nextProps.playerStatus === PLAYER_STATUS_PLAY
-    ) {
-      this.props.actions.playAudio();
-      return;
-    }
-
-    if (nextProps.playerStatus === PLAYER_STATUS_FINISHED) {
-      const { audioContent, index } = this.props;
-
-      const activeAudio = audioContent[index];
-      let url = activeAudio.audioURL;
-
-      if (activeAudio.audioURL.length === 3) {
-        // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
-        if (activeAudio.duration[I18n.locale]) {
-          url = activeAudio.audioURL.concat('/', I18n.locale);
-        } else {
-          if (activeAudio.duration[I18n.defaultLocale]) {
-            url = activeAudio.audioURL.concat('/', I18n.defaultLocale);
-          } else {
-            url = activeAudio.audioURL.concat('/', 'sv');
-          }
-        }
-      }
-
-      const audioLanguage = url.split('/')[1];
-      analyticsTrackAudioCompleteListen(this.props.locale, audioLanguage, this.props.audioTitle);
-    }
-  }
-
-  render() {
     const {
       tourStop,
       index,
@@ -217,35 +131,11 @@ class BottomPlayer extends Component {
       playTrack,
     } = this.props.actions;
 
-    // Force the screen reader to update with bottom player
-    screenReaderReloadLayout();
-
-    const width = Dimensions.get('window').width;
-
-    if (
-      playerStatus === PLAYER_STATUS_ERROR ||
-      playerStatus === PLAYER_STATUS_NOTLOADED ||
-      playerStatus === PLAYER_STATUS_LOADING ||
-      playerStatus === PLAYER_STATUS_UNLOADED
-    ) {
-      // We don't want the bottom player:
-      return null;
-    }
-
     let progress;
 
     if (playerStatus === PLAYER_STATUS_FINISHED && nextUUID === null) {
       return (
-        <View
-          style={[
-            styles.bottomBar,
-            {
-              width,
-              height: BOTTOMPLAYERHEIGHT,
-              bottom: BOTTOMBARHEIGHT,
-            },
-          ]}
-        >
+        <View style={[styles.bottomBar, { bottom: getBottomTabsHeight() }]}>
           <ClosePlayerView
             stopTitle={stopTitle}
             closePlayer={() => {
@@ -278,7 +168,7 @@ class BottomPlayer extends Component {
       );
     } else {
       // display the time progress
-      progress = <TimeProgressView time={time} duration={duration} />;
+      progress = <View />; //<TimeProgressView time={time} duration={duration} />;
     }
 
     let prevDisabled = false;
@@ -293,22 +183,14 @@ class BottomPlayer extends Component {
 
     return (
       <View
-        style={[
-          styles.bottomBar,
-          {
-            width,
-            height: BOTTOMPLAYERHEIGHT,
-            bottom: BOTTOMBARHEIGHT,
-            backgroundColor: OFF_BLACK,
-          },
-        ]}
+        style={[styles.bottomBar, { bottom: getBottomTabsHeight() }]}
         // Rerender when PLAYER_STATUS_FINISHED begins and ends
-        key={playerStatus === PLAYER_STATUS_FINISHED}
-      >
+        key={playerStatus === PLAYER_STATUS_FINISHED}>
         {progress}
         <ControlsView
           highlight={audioContent[index].category === 'HIGHLIGHT'}
           stopTitle={stopTitle}
+          audioTitle={audioTitle}
           audioCode={audioTitle}
           nextAudioProps={nextAudioProps(audioContent, nextUUID, audioTitle)}
           time={time}
@@ -323,7 +205,9 @@ class BottomPlayer extends Component {
             replayAudio,
             rewindAudio,
             cycleAudioSpeed,
-            navToTourStop,
+            navToTourStop: () => {
+              console.log('TO DO');
+            },
             loadNextAudio: () => {
               playTrack(tourStop, nextUUID, false);
             },
@@ -340,6 +224,60 @@ class BottomPlayer extends Component {
   }
 }
 
-export default BottomPlayer;
+const mapStateToProps = state => {
+  return {
+    playerOpen: state.bottomPlayer.playerOpen,
+    playerStatus: state.bottomPlayer.playerStatus,
+    audioContent: state.bottomPlayer.audioContent,
+    audioTitle: state.bottomPlayer.title,
+    index: state.bottomPlayer.index,
+    duration: state.bottomPlayer.duration,
+    nextUUID: state.bottomPlayer.nextUUID,
+    prevUUID: state.bottomPlayer.prevUUID,
+    stopTitle: state.bottomPlayer.stopTitle,
+    time: state.bottomPlayer.time,
+    timerStartAt: state.bottomPlayer.timerStartAt,
+    timerActive: state.bottomPlayer.timerActive,
+    timerNumber: state.bottomPlayer.timerNumber,
+    autoplayOn: state.bottomPlayer.autoplayOn,
+    playRate: state.bottomPlayer.playRate,
+    locale: state.localization.locale,
+  };
+};
 
-*/
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {
+      hideBottomPlayer: hideBottomPlayerAction,
+      togglePausePlay,
+      rewindAudio,
+      cycleAudioSpeed,
+      unloadAudio,
+      replayAudio,
+      playTrack,
+    },
+    dispatch,
+  ),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  undefined,
+  { forwardRef: true },
+)(BottomPlayer);
+
+function nextAudioProps(audioContent, nextUUID, defaultTitle) {
+  if (nextUUID !== null) {
+    const audio = audioContent.filter(content => {
+      return content.uuid === nextUUID;
+    })[0];
+
+    return {
+      code: audio.title,
+      highlight: audio.category === 'HIGHLIGHT',
+    };
+  }
+
+  return defaultTitle;
+}

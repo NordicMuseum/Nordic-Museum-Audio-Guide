@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { StyleSheet, View, Text, I18nManager } from 'react-native';
 
@@ -97,8 +98,8 @@ const TimeProgressView = props => {
 };
 
 TimeProgressView.propTypes = {
-  // time: PropTypes.number.isRequired,
-  // duration: PropTypes.number.isRequired,
+  time: PropTypes.number.isRequired,
+  duration: PropTypes.number.isRequired,
 };
 
 export default TimeProgressView;

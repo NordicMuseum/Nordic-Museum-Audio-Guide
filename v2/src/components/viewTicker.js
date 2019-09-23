@@ -35,19 +35,19 @@ export default class ViewTicker extends Component {
     this.shouldCycle = this.shouldCycle.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    const update = this.props.uniqueChildrenKey !== nextProps.uniqueChildrenKey;
+  // componentWillReceiveProps(nextProps) {
+  //   const update = this.props.uniqueChildrenKey !== nextProps.uniqueChildrenKey;
 
-    if (update) {
-      this.state.xOffset.setValue(0);
-      this.setState(() => {
-        return {
-          hideCopy: true,
-          widthOfView: 0,
-        };
-      });
-    }
-  }
+  //   if (update) {
+  //     this.state.xOffset.setValue(0);
+  //     this.setState(() => {
+  //       return {
+  //         hideCopy: true,
+  //         widthOfView: 0,
+  //       };
+  //     });
+  //   }
+  // }
 
   shouldCycle(event) {
     const widthOfView = event.nativeEvent.layout.width;

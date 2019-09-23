@@ -94,42 +94,45 @@ export function playTrack(
   return async (dispatch, getState) => {
     const state = getState();
 
-    const activeAudio = tourStop.audiocontent.filtered(
-      `uuid = "${trackUUID}"`,
-    )[0];
+    let audioContent = Array.from(tourStop.audiocontent);
+
+    const activeAudio = audioContent.filter(content => {
+      return content.uuid === trackUUID;
+    })[0];
 
     let activeAudioIndex;
-    for (let i = 0; i < tourStop.audiocontent.length; i++) {
-      if (tourStop.audiocontent[i].uuid === activeAudio.uuid) {
+    for (let i = 0; i < audioContent.length; i++) {
+      if (audioContent[i].uuid === activeAudio.uuid) {
         activeAudioIndex = i;
       }
     }
 
     let prevUUID = null;
     if (activeAudioIndex - 1 >= 0) {
-      prevUUID = tourStop.audiocontent[activeAudioIndex - 1].uuid;
+      prevUUID = audioContent[activeAudioIndex - 1].uuid;
     }
 
     let nextUUID = null;
-    if (activeAudioIndex + 1 < tourStop.audiocontent.length) {
-      nextUUID = tourStop.audiocontent[activeAudioIndex + 1].uuid;
+    if (activeAudioIndex + 1 < audioContent.length) {
+      nextUUID = audioContent[activeAudioIndex + 1].uuid;
     }
 
-    setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
-
-    let url = activeAudio.audioURL;
-    if (activeAudio.audioURL.length === 3) {
-      // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
-      if (activeAudio.duration[i18n.locale]) {
-        url = activeAudio.audioURL.concat('/', i18n.locale);
-      } else {
-        if (activeAudio.duration[i18n.defaultLocale]) {
-          url = activeAudio.audioURL.concat('/', i18n.defaultLocale);
-        } else {
-          url = activeAudio.audioURL.concat('/', 'sv');
-        }
-      }
-    }
+    // setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
+    let url = activeAudio.id.concat('/', 'sv');
+    // TO DO, translate audio, but where does locale come from?
+    // let url = activeAudio.id;
+    // if (activeAudio.id.length === 3) {
+    //   // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
+    //   if (activeAudio.duration[i18n.locale]) {
+    //     url = activeAudio.id.concat('/', i18n.locale);
+    //   } else {
+    //     if (activeAudio.duration[i18n.defaultLocale]) {
+    //       url = activeAudio.id.concat('/', i18n.defaultLocale);
+    //     } else {
+    //       url = activeAudio.id.concat('/', 'sv');
+    //     }
+    //   }
+    // }
 
     if (
       state.bottomPlayer.uuid !== '' &&
@@ -137,39 +140,56 @@ export function playTrack(
     ) {
       const audioLanguage = url.split('/')[1];
 
-      analyticsTrackAudioPartialListen(
-        state.localization.locale,
-        audioLanguage,
-        state.bottomPlayer.title,
-        state.bottomPlayer.time / state.bottomPlayer.duration,
-      );
+      // analyticsTrackAudioPartialListen(
+      //   state.localization.locale,
+      //   audioLanguage,
+      //   state.bottomPlayer.title,
+      //   state.bottomPlayer.time / state.bottomPlayer.duration,
+      // );
     }
-
+    console.log('pLAY TRACK');
+    console.log(tourStop);
     let activeAudioDuration;
-    AudioManager.loadLocalAudio(url, activeAudio.uuid, playAudioAfterLoad)
-      .then(results => {
-        activeAudioDuration = Math.round(results[1]);
+    dispatch(
+      loadAudioSuccess(
+        tourStop,
+        tourStop.uuid,
+        tourStop.title,
+        audioContent,
+        activeAudio,
+        activeAudioIndex,
+        activeAudioDuration,
+        prevUUID,
+        nextUUID,
+        playAudioAfterLoad,
+      ),
+    );
 
-        dispatch(
-          loadAudioSuccess(
-            tourStop,
-            tourStop.uuid,
-            tourStop.shortTitle,
-            tourStop.audiocontent,
-            activeAudio,
-            activeAudioIndex,
-            activeAudioDuration,
-            prevUUID,
-            nextUUID,
-            playAudioAfterLoad,
-          ),
-        );
-      })
-      .catch(e => {
-        console.log(e.message);
-        clearTimer();
-        dispatch(loadAudioFailure(e));
-      });
+    // let activeAudioDuration;
+    // AudioManager.loadLocalAudio(url, activeAudio.uuid, playAudioAfterLoad)
+    //   .then(results => {
+    //     activeAudioDuration = Math.round(results[1]);
+
+    //     dispatch(
+    //       loadAudioSuccess(
+    //         tourStop,
+    //         tourStop.uuid,
+    //         tourStop.shortTitle,
+    //         tourStop.audioContent,
+    //         activeAudio,
+    //         activeAudioIndex,
+    //         activeAudioDuration,
+    //         prevUUID,
+    //         nextUUID,
+    //         playAudioAfterLoad,
+    //       ),
+    //     );
+    //   })
+    // .catch(e => {
+    //   console.log(e.message);
+    //   clearTimer();
+    //   dispatch(loadAudioFailure(e));
+    // });
   };
 }
 
