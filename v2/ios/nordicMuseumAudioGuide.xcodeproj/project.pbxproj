@@ -724,7 +724,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = se.nordiskamuseet.audioguide;
+				PRODUCT_BUNDLE_IDENTIFIER = SE.nordiskamuseet.audioguide;
 				PRODUCT_NAME = nordicMuseumAudioGuide;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -752,7 +752,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = se.nordiskamuseet.audioguide;
+				PRODUCT_BUNDLE_IDENTIFIER = SE.nordiskamuseet.audioguide;
 				PRODUCT_NAME = nordicMuseumAudioGuide;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
