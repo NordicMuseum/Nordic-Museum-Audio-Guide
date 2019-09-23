@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { translate } from '../i18n';
 import { switchLocale } from '../actions/localization';
 
 import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
@@ -12,7 +13,6 @@ import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButto
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
   ACTION,
 } from '../styles';
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'stretch',
     flex: 1,
-    marginTop: 65,
   },
   cell: {
     flexDirection: 'column',
@@ -41,7 +40,7 @@ class Settings extends Component {
           color: ACTION,
         },
         title: {
-          text: 'Settings',
+          text: translate('settingsScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
@@ -59,8 +58,7 @@ class Settings extends Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <View
-          style={[styles.container, { marginBottom: getBottomTabsHeight() }]}>
+        <View style={styles.container}>
           <ScrollView
             contentContainerStyle={{
               paddingBottom,

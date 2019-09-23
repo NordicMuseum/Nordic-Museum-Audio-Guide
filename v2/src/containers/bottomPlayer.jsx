@@ -11,7 +11,6 @@ import { bindActionCreators } from 'redux';
 
 import { translate } from '../i18n';
 
-import { hideBottomPlayer as hideBottomPlayerAction } from '../actions/bottomPlayer';
 import {
   togglePausePlay,
   rewindAudio,
@@ -248,7 +247,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      hideBottomPlayer: hideBottomPlayerAction,
       togglePausePlay,
       rewindAudio,
       cycleAudioSpeed,

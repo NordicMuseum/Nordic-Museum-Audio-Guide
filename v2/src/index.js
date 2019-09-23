@@ -1,11 +1,12 @@
 import { Navigation } from 'react-native-navigation';
 
-import { Settings } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import DeviceInfo from 'react-native-device-info';
 
 import { configureStore } from './store';
 import registerScreens from './registerScreens';
 
+import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
 import { localizationActor } from './actors/localization';
@@ -26,22 +27,28 @@ import {
   setBottomTabsHeight,
 } from './styles';
 
-const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
-const lastAppVersion = Settings.get('LastAppVersion');
-const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
-
-// Hydrate the DB
-import hydrate from './hydrate';
-hydrate(newVersion || __DEV__);
-
-// TODO: Set first locale
-setI18nConfig();
-const store = configureStore();
-localizationActor(store);
-
-registerScreens(store);
+// Fire so that the data is ready by "registerAppLaunchedListener"
+let appVersion = DeviceInfo.getReadableVersion();
+let lastAppVersion = AsyncStorage.getItem('appVersion');
 
 Navigation.events().registerAppLaunchedListener(async () => {
+  appVersion = await appVersion;
+  lastAppVersion = await lastAppVersion;
+  const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
+
+  console.log({ newVersion }, { lastAppVersion });
+  hydrate(newVersion || __DEV__);
+
+  if (newVersion) {
+    AsyncStorage.setItem('appVersion', appVersion);
+  }
+
+  const locale = setI18nConfig();
+  const store = configureStore({ localization: { locale, appVersion } });
+  localizationActor(store);
+
+  registerScreens(store);
+
   await Navigation.setRoot({
     root: {
       bottomTabs: {
