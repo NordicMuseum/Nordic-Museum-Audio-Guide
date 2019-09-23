@@ -1,9 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { translate } from '../i18n';
+
+import { Navigation } from 'react-native-navigation';
 
 import {
   StyleSheet,
@@ -182,6 +185,7 @@ class TourStop extends Component {
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        showBorder: false,
       },
     };
   }
@@ -268,7 +272,7 @@ class TourStop extends Component {
               }}
               buttonColor={ACTION}
               backButtonPress={() => {
-                //  this.props.navigator.pop();
+                Navigation.pop(this.props.componentId);
               }}
               barStyle={{
                 backgroundColor: 'transparent',

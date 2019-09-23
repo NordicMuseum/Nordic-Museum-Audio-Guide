@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
+import { translate } from '../i18n';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -253,11 +255,12 @@ class Search extends Component {
           color: NAV_BAR_BACKGROUND,
         },
         title: {
-          text: 'Search #',
+          text: translate('searchScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }

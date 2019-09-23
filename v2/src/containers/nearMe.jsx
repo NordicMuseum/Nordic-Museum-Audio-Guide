@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'stretch',
     justifyContent: 'flex-start',
-    marginTop: 65,
+    marginTop: 15,
     marginBottom: 100,
   },
   messageContainer: {
@@ -55,11 +55,12 @@ class NearMe extends Component {
           color: NAV_BAR_BACKGROUND,
         },
         title: {
-          text: 'Near Me',
+          text: translate('nearMeScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }

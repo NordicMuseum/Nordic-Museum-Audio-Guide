@@ -67,11 +67,6 @@ Navigation.events().registerAppLaunchedListener(async () => {
                 {
                   component: {
                     name: 'nearMe',
-                    options: {
-                      topBar: {
-                        visible: false,
-                      },
-                    },
                   },
                 },
               ],

@@ -161,7 +161,7 @@ const registerScreens = store => {
     'tours',
     sceneCreator(Tours, store, {
       screenName: 'tours',
-      screenType: SCREEN_TYPES.bottomTab,
+      screenType: SCREEN_TYPES.bottomTabWithNavBar,
       titleTranslationsKey: 'storiesScreen_Title',
     }),
   );

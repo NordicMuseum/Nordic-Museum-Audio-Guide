@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
 import { connect } from 'react-redux';
+import { translate } from '../i18n';
 
 // import { analyticsTrackScreen } from '../actions/analytics';
 
@@ -48,8 +49,15 @@ const pushToTourStop = (componentId, passedProps) => {
       passProps: passedProps,
       options: {
         topBar: {
+          visible: false,
+          background: {
+            color: NAV_BAR_BACKGROUND,
+          },
           title: {
-            text: passedProps.title,
+            text: passedProps.style,
+            fontSize: 17,
+            fontFamily: 'Helvetica',
+            color: NAV_BAR_TEXT,
           },
         },
       },
@@ -58,19 +66,19 @@ const pushToTourStop = (componentId, passedProps) => {
 };
 
 class Tours extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
-        visible: false,
         background: {
           color: NAV_BAR_BACKGROUND,
         },
         title: {
-          text: 'Browse',
+          text: translate('storiesScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }

@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     right: 0,
   },
   label: {
-    fontWeight: '600',
     fontSize: 17,
   },
   backButton: {
