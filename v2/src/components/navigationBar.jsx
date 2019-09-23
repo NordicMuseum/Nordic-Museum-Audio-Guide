@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Text,
@@ -54,11 +55,11 @@ const NavigationBar = props => {
             source={require('../assets/DisclosureIndicator.png')}
             style={[
               styles.backArrow,
-              {tintColor: props.buttonColor},
-              {transform: [{scaleX: I18nManager.isRTL ? 1 : -1}]},
+              { tintColor: props.buttonColor },
+              { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
             ]}
           />
-          <Text style={[styles.backButtonLabel, {color: props.buttonColor}]}>
+          <Text style={[styles.backButtonLabel, { color: props.buttonColor }]}>
             {props.backButtonLabel}
           </Text>
         </TouchableOpacity>
@@ -69,18 +70,16 @@ const NavigationBar = props => {
 };
 
 NavigationBar.propTypes = {
-  // barStyle: PropTypes.oneOfType([
-  //   View.propTypes.style,
-  //   PropTypes.object,
-  // ]).isRequired,
-  // labelStyle: PropTypes.oneOfType([
-  //   Text.propTypes.style,
-  //   PropTypes.object,
-  // ]).isRequired,
-  // label: PropTypes.string,
-  // buttonColor: PropTypes.string,
-  // backButtonLabel: PropTypes.string,
-  // backButtonPress: PropTypes.func,
+  barStyle: PropTypes.oneOfType([
+    // View.propTypes.style,
+    PropTypes.object,
+  ]).isRequired,
+  labelStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object])
+    .isRequired,
+  label: PropTypes.string,
+  buttonColor: PropTypes.string,
+  backButtonLabel: PropTypes.string,
+  backButtonPress: PropTypes.func,
 };
 
 export default NavigationBar;

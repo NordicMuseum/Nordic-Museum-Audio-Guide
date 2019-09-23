@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { View, StyleSheet, Dimensions } from 'react-native';
 
@@ -74,15 +75,14 @@ const AudioContentList = props => {
 };
 
 AudioContentList.propTypes = {
-  // tourStop: PropTypes.object.isRequired,
-  // currentAudio: PropTypes.string,
+  tourStop: PropTypes.object.isRequired,
+  currentAudio: PropTypes.string,
   // screenReader: PropTypes.bool.isRequired,
-  // playerStatus: PropTypes.string.isRequired,
-  // locale: PropTypes.string.isRequired,
-  // actions: PropTypes.shape({
-  //   playTrack: PropTypes.func.isRequired,
-  //   togglePausePlay: PropTypes.func.isRequired,
-  // }),
+  locale: PropTypes.string.isRequired,
+  actions: PropTypes.shape({
+    playTrack: PropTypes.func.isRequired,
+    togglePausePlay: PropTypes.func.isRequired,
+  }),
 };
 
 export default AudioContentList;

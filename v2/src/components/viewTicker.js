@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { StyleSheet, View, Animated } from 'react-native';
 
@@ -10,13 +11,13 @@ const styles = StyleSheet.create({
 });
 
 export default class ViewTicker extends Component {
-  // static propTypes = {
-  //   children: PropTypes.object.isRequired,
-  //   width: PropTypes.number.isRequired,
-  //   uniqueChildrenKey: PropTypes.any.isRequired,
-  //   scrollDuration: PropTypes.number,
-  //   scrollDelay: PropTypes.number,
-  // };
+  static propTypes = {
+    children: PropTypes.object.isRequired,
+    width: PropTypes.number.isRequired,
+    uniqueChildrenKey: PropTypes.any.isRequired,
+    scrollDuration: PropTypes.number,
+    scrollDelay: PropTypes.number,
+  };
 
   static defaultProps = {
     scrollDuration: 4500,

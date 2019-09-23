@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { translate } from '../i18n';
 
 import {
@@ -196,10 +198,10 @@ const Grid = props => {
 };
 
 Grid.propTypes = {
-  // items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
-  // selected: PropTypes.string,
-  // onCellPress: PropTypes.func.isRequired,
-  // locale: PropTypes.string.isRequired,
+  items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
+  selected: PropTypes.string,
+  onCellPress: PropTypes.func.isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 export default Grid;

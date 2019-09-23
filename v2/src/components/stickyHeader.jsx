@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import {View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
-import {HEADER_BACKGROUND_COLOR, OFF_WHITE} from '../styles';
+import { HEADER_BACKGROUND_COLOR, OFF_WHITE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +27,7 @@ const StickyHeader = props => {
 };
 
 StickyHeader.propTypes = {
-  // itle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default StickyHeader;

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { translate } from '../i18n';
 
@@ -75,13 +76,13 @@ const AutoplayProgressView = props => {
 };
 
 AutoplayProgressView.propTypes = {
-  // timerActive: PropTypes.bool.isRequired,
-  // timerStartAt: PropTypes.number.isRequired,
-  // timerNumber: PropTypes.number.isRequired,
-  // autoplayOn: PropTypes.bool.isRequired,
-  // actions: PropTypes.shape({
-  //   loadNextAutoplayAudio: PropTypes.func.isRequired,
-  // }).isRequired,
+  timerActive: PropTypes.bool.isRequired,
+  timerStartAt: PropTypes.number.isRequired,
+  timerNumber: PropTypes.number.isRequired,
+  autoplayOn: PropTypes.bool.isRequired,
+  actions: PropTypes.shape({
+    loadNextAutoplayAudio: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default AutoplayProgressView;

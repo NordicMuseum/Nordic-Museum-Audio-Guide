@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { translate } from '../i18n';
 
@@ -78,18 +79,18 @@ function breakIntoParagraphTextComponents(text) {
 
 class AudioContentItem extends Component {
   static propTypes = {
-    // audioContent: PropTypes.object.isRequired,
-    // active: PropTypes.bool.isRequired,
+    audioContent: PropTypes.object.isRequired,
+    active: PropTypes.bool.isRequired,
     // screenReader: PropTypes.bool.isRequired,
-    // contentWidth: PropTypes.number.isRequired,
-    // index: PropTypes.number.isRequired,
-    // listLength: PropTypes.number.isRequired,
-    // locale: PropTypes.string.isRequired,
-    // actions: PropTypes.shape({
-    //   analyticsTrackTranscriptOpenned: PropTypes.func.isRequired,
-    //   audioAction: PropTypes.func.isRequired,
-    //   reloadAudio: PropTypes.func.isRequired,
-    // }),
+    contentWidth: PropTypes.number.isRequired,
+    index: PropTypes.number.isRequired,
+    listLength: PropTypes.number.isRequired,
+    locale: PropTypes.string.isRequired,
+    actions: PropTypes.shape({
+      analyticsTrackTranscriptOpenned: PropTypes.func.isRequired,
+      audioAction: PropTypes.func.isRequired,
+      reloadAudio: PropTypes.func.isRequired,
+    }),
   };
 
   // componentWillMount() {

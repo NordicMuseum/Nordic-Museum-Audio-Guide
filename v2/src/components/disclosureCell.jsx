@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Text,
@@ -59,10 +60,10 @@ const DisclosureCell = props => {
 };
 
 DisclosureCell.propTypes = {
-  // accessibility: PropTypes.object.isRequired,
-  // title: PropTypes.string.isRequired,
-  // onPress: PropTypes.func.isRequired,
-  // bottomBorder: PropTypes.bool.isRequired,
+  accessibility: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+  bottomBorder: PropTypes.bool.isRequired,
 };
 
 export default DisclosureCell;

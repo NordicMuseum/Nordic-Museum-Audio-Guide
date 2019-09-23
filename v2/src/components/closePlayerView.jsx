@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { translate } from '../i18n';
 
@@ -69,9 +70,9 @@ const ClosePlayerView = props => {
 };
 
 ClosePlayerView.propTypes = {
-  // stopTitle: PropTypes.string.isRequired,
-  // closePlayer: PropTypes.func.isRequired,
-  // navToTourStop: PropTypes.func.isRequired,
+  stopTitle: PropTypes.string.isRequired,
+  closePlayer: PropTypes.func.isRequired,
+  navToTourStop: PropTypes.func.isRequired,
 };
 
 export default ClosePlayerView;
