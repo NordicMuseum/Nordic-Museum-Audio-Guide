@@ -101,17 +101,20 @@ class ControlsView extends Component {
       stopTitle,
       nextAudioProps,
       audioCode,
+      audioTitle,
       prevDisabled,
       nextDisabled,
       highlight,
     } = this.props;
 
     let code = audioCode;
+    let title = audioTitle;
     let highlighted = highlight;
     let controlsDisabled = false;
     if (playerStatus === PLAYER_STATUS_FINISHED) {
       // The player is in next up state:
       code = nextAudioProps.code;
+      title = nextAudioProps.title;
       highlighted = nextAudioProps.highlight;
       controlsDisabled = true;
     }
@@ -125,9 +128,9 @@ class ControlsView extends Component {
           <View
             accessible={true}
             accessibilityTraits={['header']}
-            accessibilityLabel={`${parseVoiceoverText(
-              translate(code),
-            )}, ${translate(stopTitle)}`}>
+            accessibilityLabel={`${parseVoiceoverText(code)}, ${translate(
+              stopTitle,
+            )}`}>
             <View style={[styles.row, styles.titleRow]}>
               <View
                 style={highlighted ? styles.highlightedBox : styles.regularBox}>
@@ -138,11 +141,11 @@ class ControlsView extends Component {
                       ? styles.highlightedNumberText
                       : { fontWeight: '300' },
                   ]}>
-                  {translate(code)}
+                  {code}
                 </Text>
               </View>
               <Text style={[globalStyles.h3, { fontWeight: '500' }]}>
-                &nbsp; {parseDisplayText(translate(code))}
+                &nbsp; {parseDisplayText(translate(title))}
               </Text>
             </View>
           </View>

@@ -108,6 +108,7 @@ class BottomPlayer extends Component {
       stopTitle,
       audioTitle,
       audioContent,
+      audioCode,
       time,
       duration,
       playerStatus,
@@ -185,7 +186,7 @@ class BottomPlayer extends Component {
           highlight={audioContent[index].category === 'HIGHLIGHT'}
           stopTitle={stopTitle}
           audioTitle={audioTitle}
-          audioCode={audioTitle}
+          audioCode={audioCode}
           nextAudioProps={nextAudioProps(audioContent, nextUUID, audioTitle)}
           time={time}
           playerStatus={playerStatus}
@@ -222,6 +223,7 @@ const mapStateToProps = state => {
     playerStatus: state.bottomPlayer.playerStatus,
     audioContent: state.bottomPlayer.audioContent,
     audioTitle: state.bottomPlayer.title,
+    audioCode: state.bottomPlayer.audioCode,
     index: state.bottomPlayer.index,
     duration: state.bottomPlayer.duration,
     nextUUID: state.bottomPlayer.nextUUID,
@@ -262,7 +264,8 @@ function nextAudioProps(audioContent, nextUUID, defaultTitle) {
     })[0];
 
     return {
-      code: audio.title,
+      code: audio.id,
+      title: audio.title,
       highlight: audio.category === 'HIGHLIGHT',
     };
   }

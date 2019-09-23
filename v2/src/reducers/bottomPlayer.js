@@ -27,9 +27,9 @@ import { RESET } from '../actions/device';
 const initialState = {
   tourStop: {},
   audioContent: {},
+  audioCode: '',
   stopUUID: '',
   stopTitle: '',
-  url: '',
   title: '',
   uuid: '',
   index: 0,
@@ -63,7 +63,7 @@ export function bottomPlayer(state = initialState, action) {
     }
 
     case LOAD_AUDIO_SUCCESS: {
-      const { title, url, uuid } = action.activeAudio;
+      const { title, id, uuid } = action.activeAudio;
 
       return Object.assign({}, state, {
         tourStop: action.tourStop,
@@ -74,7 +74,7 @@ export function bottomPlayer(state = initialState, action) {
         duration: action.activeAudioDuration,
         time: 0,
         title,
-        url,
+        audioCode: id,
         uuid,
         playerStatus: action.playAudioAfterLoad
           ? PLAYER_STATUS_PLAY
