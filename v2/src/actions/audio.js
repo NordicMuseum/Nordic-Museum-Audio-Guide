@@ -84,6 +84,7 @@ export function playTrack(
 
   return async (dispatch, getState) => {
     const state = getState();
+    const locale = state.localization.locale;
 
     let audioContent = Array.from(tourStop.audiocontent);
 
@@ -109,7 +110,8 @@ export function playTrack(
     }
 
     // setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
-    let url = activeAudio.id.concat('/', 'sv');
+    const audioID = activeAudio.id;
+    const url = `${audioID}/${audioID}${locale}`;
     // TO DO, translate audio, but where does locale come from?
     // let url = activeAudio.id;
     // if (activeAudio.id.length === 3) {
@@ -124,6 +126,8 @@ export function playTrack(
     //     }
     //   }
     // }
+
+    console.log({ url });
 
     if (
       state.bottomPlayer.uuid !== '' &&
