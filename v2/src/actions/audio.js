@@ -1,16 +1,7 @@
 // import store from '../store';
 
-import { NativeModules } from 'react-native';
-
-import i18n from 'i18n-js';
-
-import { setAudioManagerEventListeners } from './audioEvents';
-
-import { clearTimer } from './audioTimer';
-
-import { analyticsTrackAudioPartialListen } from './analytics';
-
-const AudioManager = NativeModules.CMSAudioManager;
+// import { setAudioManagerEventListeners } from './audioEvents';
+// import { clearTimer } from './audioTimer';
 
 // *** Action Types ***
 export const TOGGLE_PAUSE_PLAY = 'TOGGLE_PAUSE_PLAY';
@@ -89,7 +80,7 @@ export function playTrack(
   autoplay = false,
   playAudioAfterLoad = true,
 ) {
-  clearTimer();
+  // clearTimer();
 
   return async (dispatch, getState) => {
     const state = getState();
@@ -194,8 +185,8 @@ export function playTrack(
 }
 
 export function unloadAudio() {
-  AudioManager.changeRate(1);
-  AudioManager.unloadAudio();
+  // AudioManager.changeRate(1);
+  // AudioManager.unloadAudio();
   return {
     type: PLAYER_STATUS_UNLOADED,
   };
@@ -219,7 +210,7 @@ export function audioDidFinishPlaying(uuid, time, displayTimer) {
 }
 
 export function togglePausePlay() {
-  AudioManager.togglePlayPause();
+  // AudioManager.togglePlayPause();
 
   return {
     type: TOGGLE_PAUSE_PLAY,
@@ -227,7 +218,7 @@ export function togglePausePlay() {
 }
 
 export function pauseAudio() {
-  AudioManager.pause();
+  // AudioManager.pause();
 
   return {
     type: PAUSE_AUDIO,
@@ -235,7 +226,7 @@ export function pauseAudio() {
 }
 
 export function playAudio() {
-  AudioManager.play();
+  // AudioManager.play();
 
   return {
     type: PLAY_AUDIO,
@@ -248,19 +239,19 @@ export function cycleAudioSpeed(currentPlayRate) {
   switch (currentPlayRate) {
     case PLAY_RATE_NORMAL: {
       newRate = PLAY_RATE_FAST;
-      AudioManager.changeRate(1.5);
+      // AudioManager.changeRate(1.5);
       break;
     }
 
     case PLAY_RATE_FAST: {
       newRate = PLAY_RATE_FASTEST;
-      AudioManager.changeRate(2);
+      // AudioManager.changeRate(2);
       break;
     }
 
     case PLAY_RATE_FASTEST: {
       newRate = PLAY_RATE_NORMAL;
-      AudioManager.changeRate(1);
+      // AudioManager.changeRate(1);
       break;
     }
 
@@ -274,7 +265,7 @@ export function cycleAudioSpeed(currentPlayRate) {
 }
 
 export function rewindAudio(seconds) {
-  AudioManager.rewind(seconds);
+  // AudioManager.rewind(seconds);
 
   return {
     type: REWIND_AUDIO,
@@ -283,7 +274,7 @@ export function rewindAudio(seconds) {
 }
 
 export function seekAudioToTime(time) {
-  AudioManager.seekToTime(time);
+  // AudioManager.seekToTime(time);
 
   return {
     type: SEEK_AUDIO_TO_TIME,
@@ -292,7 +283,7 @@ export function seekAudioToTime(time) {
 }
 
 export function replayAudio() {
-  AudioManager.replay();
+  // AudioManager.replay();
 
   return {
     type: REPLAY_AUDIO,

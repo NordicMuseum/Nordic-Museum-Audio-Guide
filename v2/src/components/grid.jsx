@@ -153,7 +153,6 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
 };
 
 const Grid = props => {
-  console.log(props);
   let totalIndex = 0;
   let content = [];
   let stickyHeaders = [];
