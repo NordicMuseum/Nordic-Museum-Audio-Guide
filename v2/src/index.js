@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation';
 
-import { Settings } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import DeviceInfo from 'react-native-device-info';
 
 import { configureStore } from './store';
@@ -27,21 +27,28 @@ import {
   setBottomTabsHeight,
 } from './styles';
 
-const appVersion = DeviceInfo.getVersion();
-const lastAppVersion = Settings.get('LastAppVersion');
-const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
-
-// Hydrate the DB
-// hydrate(newVersion || __DEV__);
-hydrate(true);
-
-const locale = setI18nConfig();
-const store = configureStore({ localization: { locale } });
-localizationActor(store);
-
-registerScreens(store);
+// Fire so that the data is ready by "registerAppLaunchedListener"
+let appVersion = DeviceInfo.getReadableVersion();
+let lastAppVersion = AsyncStorage.getItem('appVersion');
 
 Navigation.events().registerAppLaunchedListener(async () => {
+  appVersion = await appVersion;
+  lastAppVersion = await lastAppVersion;
+  const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
+
+  console.log({ newVersion }, { lastAppVersion });
+  hydrate(newVersion || __DEV__);
+
+  if (newVersion) {
+    AsyncStorage.setItem('appVersion', appVersion);
+  }
+
+  const locale = setI18nConfig();
+  const store = configureStore({ localization: { locale, appVersion } });
+  localizationActor(store);
+
+  registerScreens(store);
+
   await Navigation.setRoot({
     root: {
       bottomTabs: {

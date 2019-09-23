@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 
-// Re add app version to bottom of screen
-// import DeviceInfo from 'react-native-device-info';
-// <Text style={[{ marginTop: 25 }, globalStyles.body, globalStyles.paragraph]}>
-//               {DeviceInfo.getVersion()}
-//             </Text>
-
 import { connect } from 'react-redux';
 
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
@@ -67,7 +61,7 @@ class AboutApp extends Component {
   }
 
   render() {
-    const { locale } = this.props;
+    const { locale, appVersion } = this.props;
 
     const markdownStyles = {
       heading1: {
@@ -108,6 +102,14 @@ class AboutApp extends Component {
               }}>
               {aboutTheAppText(locale)}
             </Markdown>
+            <Text
+              style={[
+                { marginTop: 25 },
+                globalStyles.body,
+                globalStyles.paragraph,
+              ]}>
+              {appVersion}
+            </Text>
           </ScrollView>
         </View>
       </View>
@@ -118,6 +120,7 @@ class AboutApp extends Component {
 const mapStateToProps = state => {
   return {
     locale: state.localization.locale,
+    appVersion: state.localization.appVersion,
   };
 };
 

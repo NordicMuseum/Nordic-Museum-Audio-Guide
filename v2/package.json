@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.6.1",
     "i18n-js": "^3.3.0",
     "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.2",

@@ -4,8 +4,10 @@ import { RESET } from '../actions/device';
 
 const initialState = {
   locale: 'en',
+  appVersion: '',
 };
 
+// TODO: Rename this "Device" and combine a lot of states
 export function localization(state = initialState, action) {
   switch (action.type) {
     case RESET: {

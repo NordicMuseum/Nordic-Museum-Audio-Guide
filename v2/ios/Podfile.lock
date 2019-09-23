@@ -99,6 +99,8 @@ PODS:
     - React-Core (= 0.60.5)
   - ReactNativeNavigation (3.1.1):
     - React
+  - RNCAsyncStorage (1.6.1):
+    - React
   - RNDeviceInfo (3.1.4):
     - React
   - RNLocalize (1.2.0):
@@ -130,6 +132,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNLocalize (from `../node_modules/react-native-localize`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -189,6 +192,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/WebSocket"
   ReactNativeNavigation:
     :path: "../node_modules/react-native-navigation"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNLocalize:
@@ -224,6 +229,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 2105b2e0e2b66a6408fc69a46c8a7fb5b2fdade0
   React-RCTWebSocket: cd932a16b7214898b6b7f788c8bddb3637246ac4
   ReactNativeNavigation: 6e3da7b6e4ee329294a15608d47f1a4e1962e3bb
+  RNCAsyncStorage: 2e2e3feb9bdadc752a026703d8c4065ca912e75a
   RNDeviceInfo: 88099e84466f053bae3f34c307b506738b2b6946
   RNLocalize: 18737f1e6c0762579c8c5730c8f7eca881e2d205
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
