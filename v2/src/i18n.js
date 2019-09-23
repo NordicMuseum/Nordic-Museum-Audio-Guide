@@ -5,9 +5,21 @@ import memoize from 'lodash.memoize';
 import i18n from 'i18n-js';
 
 const translationGetters = {
-  es: () => require('./data/strings/es.json'),
+  ar: () => require('./data/strings/ar.json'),
+  de: () => require('./data/strings/de.json'),
   en: () => require('./data/strings/en.json'),
+  es: () => require('./data/strings/es.json'),
+  fi: () => require('./data/strings/fi.json'),
+  fr: () => require('./data/strings/fr.json'),
+  it: () => require('./data/strings/it.json'),
+  ru: () => require('./data/strings/ru.json'),
+  seSma: () => require('./data/strings/seSma.json'),
+  seSme: () => require('./data/strings/seSme.json'),
+  seSmj: () => require('./data/strings/seSmj.json'),
   sv: () => require('./data/strings/sv.json'),
+  svKids: () => require('./data/strings/svKids.json'),
+  svSimple: () => require('./data/strings/svSimple.json'),
+  zh: () => require('./data/strings/zh.json'),
 };
 
 export const setI18nConfig = forceLocale => {
