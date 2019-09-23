@@ -6,6 +6,7 @@ import DeviceInfo from 'react-native-device-info';
 import { configureStore } from './store';
 import registerScreens from './registerScreens';
 
+import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
 import { localizationActor } from './actors/localization';
@@ -26,17 +27,16 @@ import {
   setBottomTabsHeight,
 } from './styles';
 
-const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
+const appVersion = DeviceInfo.getVersion();
 const lastAppVersion = Settings.get('LastAppVersion');
 const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
 // Hydrate the DB
-import hydrate from './hydrate';
-hydrate(newVersion || __DEV__);
+// hydrate(newVersion || __DEV__);
+hydrate(true);
 
-// TODO: Set first locale
-setI18nConfig();
-const store = configureStore();
+const locale = setI18nConfig();
+const store = configureStore({ localization: { locale } });
 localizationActor(store);
 
 registerScreens(store);
