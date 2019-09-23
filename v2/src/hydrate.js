@@ -10,7 +10,7 @@ function saveToRealm(tour) {
     ...tour,
     uuid: uuid.v1(),
     floor: tour.floor.toString(),
-    audioContent: tour.audiocontent.map(audio => {
+    audioContent: tour.audioContent.map(audio => {
       audio.uuid = uuid.v1();
       audio.id = audio.id.toString();
       return audio;

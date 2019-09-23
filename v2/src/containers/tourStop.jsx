@@ -318,7 +318,7 @@ class TourStop extends Component {
                     onPress={() => {
                       playTrack(
                         this.props.tourStop,
-                        this.props.tourStop.audiocontent[0].uuid,
+                        this.props.tourStop.audioContent[0].uuid,
                         true,
                       );
                     }}>

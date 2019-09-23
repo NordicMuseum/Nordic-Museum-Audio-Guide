@@ -24,7 +24,7 @@ const AudioContentList = props => {
   const width = Dimensions.get('window').width;
   let renderView;
 
-  let audioContent = Array.from(props.tourStop.audiocontent);
+  let audioContent = Array.from(props.tourStop.audioContent);
 
   const contentList = audioContent.map((content, index, array) => {
     return (

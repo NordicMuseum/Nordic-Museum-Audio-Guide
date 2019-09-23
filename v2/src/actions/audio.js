@@ -80,7 +80,7 @@ export function playTrack(
 
   return async (dispatch, getState) => {
     const state = getState();
-    let audioContent = Array.from(tourStop.audiocontent);
+    let audioContent = Array.from(tourStop.audioContent);
 
     const activeAudio = audioContent.filter(content => {
       return content.uuid === trackUUID;

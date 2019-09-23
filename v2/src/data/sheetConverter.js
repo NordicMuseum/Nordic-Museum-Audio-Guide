@@ -27,7 +27,7 @@ var stops = processSheet('Stops');
 
 tours.map(tour => {
   //console.log(tour);
-  tour.audiocontent = tour.audiocontent.split(',').map(stopID => {
+  tour.audioContent = tour.audioContent.split(',').map(stopID => {
     try {
       return stops.filter(stop => {
         return stop.id == stopID;
@@ -105,8 +105,8 @@ function processStringsSheet() {
   try {
     for (var row in sheetData['UI Strings']) {
       var stringData = sheetData['UI Strings'][row];
-      var uilabel = stringData.uistring;
-      var translations = _.omit(stringData, 'uistring');
+      var uilabel = stringData.UIString;
+      var translations = _.omit(stringData, 'UIString');
       _.map(translations, function(string, lang) {
         addToLocalizationStrings(lang, uilabel, string);
       });
@@ -126,7 +126,7 @@ function addToLocalizationStrings(lang, uilabel, string) {
 
 function exportFiles() {
   fs.writeFile(
-    'data/beaconBlockRules.json',
+    'beaconBlockRules.json',
     JSON.stringify(beacons, null, '\t'),
     'utf8',
     function(err) {
@@ -139,7 +139,7 @@ function exportFiles() {
   );
 
   fs.writeFile(
-    'data/amenities.json',
+    'amenities.json',
     JSON.stringify(amenities, null, '\t'),
     'utf8',
     function(err) {
@@ -152,7 +152,7 @@ function exportFiles() {
   );
 
   fs.writeFile(
-    'data/tours.json',
+    'tours.json',
     JSON.stringify(tours, null, '\t'),
     'utf8',
     function(err) {
@@ -166,7 +166,7 @@ function exportFiles() {
 
   for (var lang in localizationStrings) {
     fs.writeFile(
-      'data/strings/' + lang + '.json',
+      'strings/' + lang + '.json',
       JSON.stringify(localizationStrings[lang], null, '\t'),
       'utf8',
       function(err) {

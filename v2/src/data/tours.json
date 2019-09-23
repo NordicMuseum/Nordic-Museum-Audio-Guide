@@ -3,14 +3,13 @@
     "floor": "2–4",
     "order": 1,
     "title": "tours_highlights_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "201",
         "region": "Great Hall",
         "category": "HIGHLIGHT",
         "title": "stops_welcomeToTheNordicMuseum_title",
         "duration": "stops_welcomeToTheNordicMuseum_duration",
-        "audiourl": "201",
         "transcript": "stops_welcomeToTheNordicMuseum_transcript"
       },
       {
@@ -18,184 +17,163 @@
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theTwoRoomCottage_title",
-        "duration": "stops_theTwoRoomCottage_duration",
-        "audiourl": "401"
+        "duration": "stops_theTwoRoomCottage_duration"
       },
       {
         "id": "408",
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theStateBedroom_title",
-        "duration": "stops_theStateBedroom_duration",
-        "audiourl": "408"
+        "duration": "stops_theStateBedroom_duration"
       },
       {
         "id": "413",
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theBrewersHouse_title",
-        "duration": "stops_theBrewersHouse_duration",
-        "audiourl": "413"
+        "duration": "stops_theBrewersHouse_duration"
       },
       {
         "id": "424",
         "region": "Homes and Interiors W",
         "category": "HIGHLIGHT",
         "title": "stops_theMerchantsDrawingRoom_title",
-        "duration": "stops_theMerchantsDrawingRoom_duration",
-        "audiourl": "424"
+        "duration": "stops_theMerchantsDrawingRoom_duration"
       },
       {
         "id": "425",
         "region": "Homes and Interiors W",
         "category": "HIGHLIGHT",
         "title": "stops_functionalistClassicEva_title",
-        "duration": "stops_functionalistClassicEva_duration",
-        "audiourl": "425"
+        "duration": "stops_functionalistClassicEva_duration"
       },
       {
         "id": "434",
         "region": "Sapmi",
         "category": "HIGHLIGHT",
         "title": "stops_theReindeer_title",
-        "duration": "stops_theReindeer_duration",
-        "audiourl": "434"
+        "duration": "stops_theReindeer_duration"
       },
       {
         "id": "426",
         "region": "Sapmi",
         "category": "HIGHLIGHT",
         "title": "stops_sapmi_title",
-        "duration": "stops_sapmi_duration",
-        "audiourl": "426"
+        "duration": "stops_sapmi_duration"
       },
       {
         "id": "423",
         "region": "N Balcony 4",
         "category": "HIGHLIGHT",
         "title": "stops_arturHazeliussBanquetHall_title",
-        "duration": "stops_arturHazeliussBanquetHall_duration",
-        "audiourl": "423"
+        "duration": "stops_arturHazeliussBanquetHall_duration"
       },
       {
         "id": "469",
         "region": "N Balcony 4",
         "category": "HIGHLIGHT",
         "title": "stops_theTextileGallery_title",
-        "duration": "stops_theTextileGallery_duration",
-        "audiourl": "469"
+        "duration": "stops_theTextileGallery_duration"
       },
       {
         "id": "456",
         "region": "Swedish Folk Art",
         "category": "HIGHLIGHT",
         "title": "stops_thePowerOfTheChair_title",
-        "duration": "stops_thePowerOfTheChair_duration",
-        "audiourl": "456"
+        "duration": "stops_thePowerOfTheChair_duration"
       },
       {
         "id": "451",
         "region": "Swedish Folk Art",
         "category": "HIGHLIGHT",
         "title": "stops_theShapesOfTheGrandfatherClocks_title",
-        "duration": "stops_theShapesOfTheGrandfatherClocks_duration",
-        "audiourl": "451"
+        "duration": "stops_theShapesOfTheGrandfatherClocks_duration"
       },
       {
         "id": "301",
         "region": "Jewellery",
         "category": "HIGHLIGHT",
         "title": "stops_jewellery_title",
-        "duration": "stops_jewellery_duration",
-        "audiourl": "301"
+        "duration": "stops_jewellery_duration"
       },
       {
         "id": "302",
         "region": "Doll House",
         "category": "HIGHLIGHT",
         "title": "stops_swedensOldestDollsHouse_title",
-        "duration": "stops_swedensOldestDollsHouse_duration",
-        "audiourl": "302"
+        "duration": "stops_swedensOldestDollsHouse_duration"
       },
       {
         "id": "316",
         "region": "Table Settings",
         "category": "HIGHLIGHT",
         "title": "stops_aSwanOnTheTable_title",
-        "duration": "stops_aSwanOnTheTable_duration",
-        "audiourl": "316"
+        "duration": "stops_aSwanOnTheTable_duration"
       },
       {
         "id": "328",
         "region": "Table Settings",
         "category": "HIGHLIGHT",
         "title": "stops_tenKindsOfBiscuits_title",
-        "duration": "stops_tenKindsOfBiscuits_duration",
-        "audiourl": "328"
+        "duration": "stops_tenKindsOfBiscuits_duration"
       },
       {
         "id": "330",
         "region": "Gustav Vasa",
         "category": "HIGHLIGHT",
         "title": "stops_portalToThePalaceOfEverydayLife_title",
-        "duration": "stops_portalToThePalaceOfEverydayLife_duration",
-        "audiourl": "330"
+        "duration": "stops_portalToThePalaceOfEverydayLife_duration"
       },
       {
         "id": "355",
         "region": "Traditions",
         "category": "HIGHLIGHT",
         "title": "stops_whenHanseKalleDied_title",
-        "duration": "stops_whenHanseKalleDied_duration",
-        "audiourl": "355"
+        "duration": "stops_whenHanseKalleDied_duration"
       },
       {
         "id": "333",
         "region": "Traditions",
         "category": "HIGHLIGHT",
         "title": "stops_midsummersEve_title",
-        "duration": "stops_midsummersEve_duration",
-        "audiourl": "333"
+        "duration": "stops_midsummersEve_duration"
       },
       {
         "id": "357",
         "region": "Strindberg",
         "category": "HIGHLIGHT",
         "title": "stops_augustStrindbergsArt_title",
-        "duration": "stops_augustStrindbergsArt_duration",
-        "audiourl": "357"
+        "duration": "stops_augustStrindbergsArt_duration"
       },
       {
         "id": "356",
         "region": "Strindberg",
         "category": "HIGHLIGHT",
         "title": "stops_augustStrindbergsWriting_title",
-        "duration": "stops_augustStrindbergsWriting_duration",
-        "audiourl": "356"
+        "duration": "stops_augustStrindbergsWriting_duration"
       },
       {
         "id": "202",
         "region": "1940s Apartment",
         "category": "HIGHLIGHT",
         "title": "stops_the1940SApartment_title",
-        "duration": "stops_the1940SApartment_duration",
-        "audiourl": "202"
+        "duration": "stops_the1940SApartment_duration"
       }
     ],
     "category": "HIGHLIGHTS",
-    "imageurl": "highlights.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_highlights_imageaccessibilitylabel",
-    "shortcredit": "tours_highlights_shortcredit",
-    "longcredit": "tours_highlights_longcredit",
+    "imageURL": "highlights.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_highlights_imageAccessibilityLabel",
+    "shortCredit": "tours_highlights_shortCredit",
+    "longCredit": "tours_highlights_longCredit",
     "duration": "tours_highlights_duration"
   },
   {
     "floor": 2,
     "order": 1,
     "title": "tours_theArcticWhileTheIceIsMelting_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": 203,
         "category": "CONTEXT",
@@ -317,12 +295,12 @@
         "title": "stops_theFuture_title"
       }
     ],
-    "imageurl": "arctic.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_theArcticWhileTheIceIsMelting_imageaccessibilitylabel",
-    "shortcredit": "tours_theArcticWhileTheIceIsMelting_shortcredit",
-    "longcredit": "tours_theArcticWhileTheIceIsMelting_longcredit",
+    "imageURL": "arctic.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_theArcticWhileTheIceIsMelting_imageAccessibilityLabel",
+    "shortCredit": "tours_theArcticWhileTheIceIsMelting_shortCredit",
+    "longCredit": "tours_theArcticWhileTheIceIsMelting_longCredit",
     "duration": "tours_theArcticWhileTheIceIsMelting_duration"
   },
   {
@@ -330,191 +308,166 @@
     "order": 1,
     "regions": ["Traditions"],
     "title": "tours_traditions_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "333",
         "region": "Traditions",
         "category": "HIGHLIGHT",
         "title": "stops_midsummersEve_title",
-        "duration": "stops_midsummersEve_duration",
-        "audiourl": "333"
+        "duration": "stops_midsummersEve_duration"
       },
       {
         "id": "355",
         "region": "Traditions",
         "category": "HIGHLIGHT",
         "title": "stops_whenHanseKalleDied_title",
-        "duration": "stops_whenHanseKalleDied_duration",
-        "audiourl": "355"
+        "duration": "stops_whenHanseKalleDied_duration"
       },
       {
         "id": "331",
         "category": "INTRODUCTION",
         "title": "stops_changingSeasonsAndTheCourseOfLife_title",
-        "duration": "stops_changingSeasonsAndTheCourseOfLife_duration",
-        "audiourl": "331"
+        "duration": "stops_changingSeasonsAndTheCourseOfLife_duration"
       },
       {
         "id": "332",
         "category": "CONTEXT",
         "title": "stops_heathensBecomeChristians_title",
-        "duration": "stops_heathensBecomeChristians_duration",
-        "audiourl": "332"
+        "duration": "stops_heathensBecomeChristians_duration"
       },
       {
         "id": "334",
         "category": "CONTEXT",
         "title": "stops_atMidsummer_title",
-        "duration": "stops_atMidsummer_duration",
-        "audiourl": "334"
+        "duration": "stops_atMidsummer_duration"
       },
       {
         "id": "335",
         "category": "CONTEXT",
         "title": "stops_the6thOfJune_title",
-        "duration": "stops_the6thOfJune_duration",
-        "audiourl": "335"
+        "duration": "stops_the6thOfJune_duration"
       },
       {
         "id": "336",
         "category": "CONTEXT",
         "title": "stops_crayfishPartiesAndSurstrommingFeasts_title",
-        "duration": "stops_crayfishPartiesAndSurstrommingFeasts_duration",
-        "audiourl": "336"
+        "duration": "stops_crayfishPartiesAndSurstrommingFeasts_duration"
       },
       {
         "id": "337",
         "category": "CONTEXT",
         "title": "stops_michaelmas_title",
-        "duration": "stops_michaelmas_duration",
-        "audiourl": "337"
+        "duration": "stops_michaelmas_duration"
       },
       {
         "id": "338",
         "category": "CONTEXT",
         "title": "stops_martinmasGooseDinner_title",
-        "duration": "stops_martinmasGooseDinner_duration",
-        "audiourl": "338"
+        "duration": "stops_martinmasGooseDinner_duration"
       },
       {
         "id": "339",
         "category": "CONTEXT",
         "title": "stops_traditionsOfSpring_title",
-        "duration": "stops_traditionsOfSpring_duration",
-        "audiourl": "339"
+        "duration": "stops_traditionsOfSpring_duration"
       },
       {
         "id": "340",
         "category": "CONTEXT",
         "title": "stops_theHolyWeekAndBeliefInWitches_title",
-        "duration": "stops_theHolyWeekAndBeliefInWitches_duration",
-        "audiourl": "340"
+        "duration": "stops_theHolyWeekAndBeliefInWitches_duration"
       },
       {
         "id": "341",
         "category": "CONTEXT",
         "title": "stops_goodFriday_title",
-        "duration": "stops_goodFriday_duration",
-        "audiourl": "341"
+        "duration": "stops_goodFriday_duration"
       },
       {
         "id": "342",
         "category": "CONTEXT",
         "title": "stops_easter_title",
-        "duration": "stops_easter_duration",
-        "audiourl": "342"
+        "duration": "stops_easter_duration"
       },
       {
         "id": "343",
         "category": "CONTEXT",
         "title": "stops_fromWalpurgisNightToWhitsun_title",
-        "duration": "stops_fromWalpurgisNightToWhitsun_duration",
-        "audiourl": "343"
+        "duration": "stops_fromWalpurgisNightToWhitsun_duration"
       },
       {
         "id": "344",
         "category": "CONTEXT",
         "title": "stops_graduation_title",
-        "duration": "stops_graduation_duration",
-        "audiourl": "344"
+        "duration": "stops_graduation_duration"
       },
       {
         "id": "345",
         "category": "CONTEXT",
         "title": "stops_confirmation_title",
-        "duration": "stops_confirmation_duration",
-        "audiourl": "345"
+        "duration": "stops_confirmation_duration"
       },
       {
         "id": "346",
         "category": "CONTEXT",
         "title": "stops_fromFeelersToWeddings_title",
-        "duration": "stops_fromFeelersToWeddings_duration",
-        "audiourl": "346"
+        "duration": "stops_fromFeelersToWeddings_duration"
       },
       {
         "id": "347",
         "category": "CONTEXT",
         "title": "stops_weddingEssentials_title",
-        "duration": "stops_weddingEssentials_duration",
-        "audiourl": "347"
+        "duration": "stops_weddingEssentials_duration"
       },
       {
         "id": "348",
         "category": "CONTEXT",
         "title": "stops_weddingReceptionsAndSettlingDown_title",
-        "duration": "stops_weddingReceptionsAndSettlingDown_duration",
-        "audiourl": "348"
+        "duration": "stops_weddingReceptionsAndSettlingDown_duration"
       },
       {
         "id": "349",
         "category": "CONTEXT",
         "title": "stops_theLadyAtArstaCelebratesHerNameDay_title",
-        "duration": "stops_theLadyAtArstaCelebratesHerNameDay_duration",
-        "audiourl": "349"
+        "duration": "stops_theLadyAtArstaCelebratesHerNameDay_duration"
       },
       {
         "id": "350",
         "category": "CONTEXT",
         "title": "stops_greetingPictures_title",
-        "duration": "stops_greetingPictures_duration",
-        "audiourl": "350"
+        "duration": "stops_greetingPictures_duration"
       },
       {
         "id": "351",
         "category": "CONTEXT",
         "title": "stops_theAdventCalendar_title",
-        "duration": "stops_theAdventCalendar_duration",
-        "audiourl": "351"
+        "duration": "stops_theAdventCalendar_duration"
       },
       {
         "id": "352",
         "category": "CONTEXT",
         "title": "stops_christmasInTownAndCountry_title",
-        "duration": "stops_christmasInTownAndCountry_duration",
-        "audiourl": "352"
+        "duration": "stops_christmasInTownAndCountry_duration"
       },
       {
         "id": "353",
         "category": "CONTEXT",
         "title": "stops_fromSaintLucysDayToSaintCanutesDay_title",
-        "duration": "stops_fromSaintLucysDayToSaintCanutesDay_duration",
-        "audiourl": "353"
+        "duration": "stops_fromSaintLucysDayToSaintCanutesDay_duration"
       },
       {
         "id": "354",
         "category": "CONTEXT",
         "title": "stops_funeraryRites_title",
-        "duration": "stops_funeraryRites_duration",
-        "audiourl": "354"
+        "duration": "stops_funeraryRites_duration"
       }
     ],
-    "imageurl": "traditions.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_traditions_imageaccessibilitylabel",
-    "shortcredit": "tours_traditions_shortcredit",
-    "longcredit": "tours_traditions_longcredit",
+    "imageURL": "traditions.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_traditions_imageAccessibilityLabel",
+    "shortCredit": "tours_traditions_shortCredit",
+    "longCredit": "tours_traditions_longCredit",
     "duration": "tours_traditions_duration"
   },
   {
@@ -522,149 +475,130 @@
     "order": 2,
     "regions": ["Table Settings"],
     "title": "tours_tableSettings_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "316",
         "region": "Table Settings",
         "category": "HIGHLIGHT",
         "title": "stops_aSwanOnTheTable_title",
-        "duration": "stops_aSwanOnTheTable_duration",
-        "audiourl": "316"
+        "duration": "stops_aSwanOnTheTable_duration"
       },
       {
         "id": "328",
         "region": "Table Settings",
         "category": "HIGHLIGHT",
         "title": "stops_tenKindsOfBiscuits_title",
-        "duration": "stops_tenKindsOfBiscuits_duration",
-        "audiourl": "328"
+        "duration": "stops_tenKindsOfBiscuits_duration"
       },
       {
         "id": "312",
         "category": "CONTEXT",
         "title": "stops_fromSimpleShapesToFlamboyance_title",
-        "duration": "stops_fromSimpleShapesToFlamboyance_duration",
-        "audiourl": "312"
+        "duration": "stops_fromSimpleShapesToFlamboyance_duration"
       },
       {
         "id": "313",
         "category": "CONTEXT",
         "title": "stops_theMedievalDinnerTablesOfNobles_title",
-        "duration": "stops_theMedievalDinnerTablesOfNobles_duration",
-        "audiourl": "313"
+        "duration": "stops_theMedievalDinnerTablesOfNobles_duration"
       },
       {
         "id": "314",
         "category": "CONTEXT",
         "title": "stops_opulenceForTheEyeAndPalate_title",
-        "duration": "stops_opulenceForTheEyeAndPalate_duration",
-        "audiourl": "314"
+        "duration": "stops_opulenceForTheEyeAndPalate_duration"
       },
       {
         "id": "315",
         "category": "CONTEXT",
         "title": "stops_tradeInsteadOfWar_title",
-        "duration": "stops_tradeInsteadOfWar_duration",
-        "audiourl": "315"
+        "duration": "stops_tradeInsteadOfWar_duration"
       },
       {
         "id": "317",
         "category": "CONTEXT",
         "title": "stops_theExclusiveSweets_title",
-        "duration": "stops_theExclusiveSweets_duration",
-        "audiourl": "317"
+        "duration": "stops_theExclusiveSweets_duration"
       },
       {
         "id": "318",
         "category": "CONTEXT",
         "title": "stops_crossingTheOceansToSweden_title",
-        "duration": "stops_crossingTheOceansToSweden_duration",
-        "audiourl": "318"
+        "duration": "stops_crossingTheOceansToSweden_duration"
       },
       {
         "id": "319",
         "category": "CONTEXT",
         "title": "stops_theSophisticatedPunsch_title",
-        "duration": "stops_theSophisticatedPunsch_duration",
-        "audiourl": "319"
+        "duration": "stops_theSophisticatedPunsch_duration"
       },
       {
         "id": "320",
         "category": "CONTEXT",
         "title": "stops_foodThatsMoreThanMeetsTheEye_title",
-        "duration": "stops_foodThatsMoreThanMeetsTheEye_duration",
-        "audiourl": "320"
+        "duration": "stops_foodThatsMoreThanMeetsTheEye_duration"
       },
       {
         "id": "321",
         "category": "CONTEXT",
         "title": "stops_tracesOfTheShapesOfAntiquity_title",
-        "duration": "stops_tracesOfTheShapesOfAntiquity_duration",
-        "audiourl": "321"
+        "duration": "stops_tracesOfTheShapesOfAntiquity_duration"
       },
       {
         "id": "322",
         "category": "CONTEXT",
         "title": "stops_mrsHedwigAtTeatime_title",
-        "duration": "stops_mrsHedwigAtTeatime_duration",
-        "audiourl": "322"
+        "duration": "stops_mrsHedwigAtTeatime_duration"
       },
       {
         "id": "323",
         "category": "CONTEXT",
         "title": "stops_aStiffDrinkBeforeDinner_title",
-        "duration": "stops_aStiffDrinkBeforeDinner_duration",
-        "audiourl": "323"
+        "duration": "stops_aStiffDrinkBeforeDinner_duration"
       },
       {
         "id": "324",
         "category": "CONTEXT",
         "title": "stops_celebrationsWithGreatFanfare_title",
-        "duration": "stops_celebrationsWithGreatFanfare_duration",
-        "audiourl": "324"
+        "duration": "stops_celebrationsWithGreatFanfare_duration"
       },
       {
         "id": "325",
         "category": "CONTEXT",
         "title": "stops_aFeastFrom1883_title",
-        "duration": "stops_aFeastFrom1883_duration",
-        "audiourl": "325"
+        "duration": "stops_aFeastFrom1883_duration"
       },
       {
         "id": "326",
         "category": "CONTEXT",
         "title": "stops_increasinglySimpleShapes_title",
-        "duration": "stops_increasinglySimpleShapes_duration",
-        "audiourl": "326"
+        "duration": "stops_increasinglySimpleShapes_duration"
       },
       {
         "id": "327",
         "category": "CONTEXT",
         "title": "stops_selmasCoffeeParty_title",
-        "duration": "stops_selmasCoffeeParty_duration",
-        "audiourl": "327"
+        "duration": "stops_selmasCoffeeParty_duration"
       },
       {
         "id": "398",
         "category": "INTRODUCTION",
         "title": "stops_welcomeToOurTable_title",
-        "duration": "stops_welcomeToOurTable_duration",
-        "audiourl": "398"
+        "duration": "stops_welcomeToOurTable_duration"
       },
       {
         "id": "399",
         "category": "CONTEXT",
         "title": "stops_breakfastAtNoon_title",
-        "duration": "stops_breakfastAtNoon_duration",
-        "audiourl": "399"
+        "duration": "stops_breakfastAtNoon_duration"
       }
     ],
-    "imageurl": "tableSettings.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_tableSettings_imageaccessibilitylabel",
-    "shortcredit": "tours_tableSettings_shortcredit",
-    "longcredit": "tours_tableSettings_longcredit",
+    "imageURL": "tableSettings.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_tableSettings_imageAccessibilityLabel",
+    "shortCredit": "tours_tableSettings_shortCredit",
+    "longCredit": "tours_tableSettings_longCredit",
     "duration": "tours_tableSettings_duration"
   },
   {
@@ -672,187 +606,163 @@
     "order": 1,
     "regions": ["Homes and Interiors W", "Homes and Interiors E"],
     "title": "tours_homesAndInteriors_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "401",
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theTwoRoomCottage_title",
-        "duration": "stops_theTwoRoomCottage_duration",
-        "audiourl": "401"
+        "duration": "stops_theTwoRoomCottage_duration"
       },
       {
         "id": "408",
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theStateBedroom_title",
-        "duration": "stops_theStateBedroom_duration",
-        "audiourl": "408"
+        "duration": "stops_theStateBedroom_duration"
       },
       {
         "id": "413",
         "region": "Homes and Interiors E",
         "category": "HIGHLIGHT",
         "title": "stops_theBrewersHouse_title",
-        "duration": "stops_theBrewersHouse_duration",
-        "audiourl": "413"
+        "duration": "stops_theBrewersHouse_duration"
       },
       {
         "id": "424",
         "region": "Homes and Interiors W",
         "category": "HIGHLIGHT",
         "title": "stops_theMerchantsDrawingRoom_title",
-        "duration": "stops_theMerchantsDrawingRoom_duration",
-        "audiourl": "424"
+        "duration": "stops_theMerchantsDrawingRoom_duration"
       },
       {
         "id": "425",
         "region": "Homes and Interiors W",
         "category": "HIGHLIGHT",
         "title": "stops_functionalistClassicEva_title",
-        "duration": "stops_functionalistClassicEva_duration",
-        "audiourl": "425"
+        "duration": "stops_functionalistClassicEva_duration"
       },
       {
         "id": "402",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeTraditional18thCenturyDanceFromDalecarlia_title",
-        "duration": "stops_musicOfTheTimeTraditional18thCenturyDanceFromDalecarlia_duration",
-        "audiourl": "402"
+        "duration": "stops_musicOfTheTimeTraditional18thCenturyDanceFromDalecarlia_duration"
       },
       {
         "id": "403",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFrom1580OnPeasantHousing_title",
-        "duration": "stops_aVoiceFrom1580OnPeasantHousing_duration",
-        "audiourl": "403"
+        "duration": "stops_aVoiceFrom1580OnPeasantHousing_duration"
       },
       {
         "id": "404",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeHabIchDirNichtAussgerust_title",
-        "duration": "stops_musicOfTheTimeHabIchDirNichtAussgerust_duration",
-        "audiourl": "404"
+        "duration": "stops_musicOfTheTimeHabIchDirNichtAussgerust_duration"
       },
       {
         "id": "405",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFrom1635TheInteriorsOfSwedishNobility_title",
-        "duration": "stops_aVoiceFrom1635TheInteriorsOfSwedishNobility_duration",
-        "audiourl": "405"
+        "duration": "stops_aVoiceFrom1635TheInteriorsOfSwedishNobility_duration"
       },
       {
         "id": "406",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeAckVadForUselKoja_title",
-        "duration": "stops_musicOfTheTimeAckVadForUselKoja_duration",
-        "audiourl": "406"
+        "duration": "stops_musicOfTheTimeAckVadForUselKoja_duration"
       },
       {
         "id": "407",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFrom1751ANewFlatForTheAdmiral_title",
-        "duration": "stops_aVoiceFrom1751ANewFlatForTheAdmiral_duration",
-        "audiourl": "407"
+        "duration": "stops_aVoiceFrom1751ANewFlatForTheAdmiral_duration"
       },
       {
         "id": "409",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeMenuetAndMarchWithVariations_title",
-        "duration": "stops_musicOfTheTimeMenuetAndMarchWithVariations_duration",
-        "audiourl": "409"
+        "duration": "stops_musicOfTheTimeMenuetAndMarchWithVariations_duration"
       },
       {
         "id": "410",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_theEverydayLifeOfAMaid_title",
-        "duration": "stops_theEverydayLifeOfAMaid_duration",
-        "audiourl": "410"
+        "duration": "stops_theEverydayLifeOfAMaid_duration"
       },
       {
         "id": "411",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeLentoAndVivaceFromTriosonateInDMajor_title",
-        "duration": "stops_musicOfTheTimeLentoAndVivaceFromTriosonateInDMajor_duration",
-        "audiourl": "411"
+        "duration": "stops_musicOfTheTimeLentoAndVivaceFromTriosonateInDMajor_duration"
       },
       {
         "id": "412",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFromThe1790SASimplerSwedishHome_title",
-        "duration": "stops_aVoiceFromThe1790SASimplerSwedishHome_duration",
-        "audiourl": "412"
+        "duration": "stops_aVoiceFromThe1790SASimplerSwedishHome_duration"
       },
       {
         "id": "414",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeAndanteFromSymphonyInDMajor_title",
-        "duration": "stops_musicOfTheTimeAndanteFromSymphonyInDMajor_duration",
-        "audiourl": "414"
+        "duration": "stops_musicOfTheTimeAndanteFromSymphonyInDMajor_duration"
       },
       {
         "id": "415",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFrom1799TheColdWinterAndTheSwedishStove_title",
-        "duration": "stops_aVoiceFrom1799TheColdWinterAndTheSwedishStove_duration",
-        "audiourl": "415"
+        "duration": "stops_aVoiceFrom1799TheColdWinterAndTheSwedishStove_duration"
       },
       {
         "id": "416",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeRomanceFromStringQuarterInBMajorOp1No3_title",
-        "duration": "stops_musicOfTheTimeRomanceFromStringQuarterInBMajorOp1No3_duration",
-        "audiourl": "416"
+        "duration": "stops_musicOfTheTimeRomanceFromStringQuarterInBMajorOp1No3_duration"
       },
       {
         "id": "417",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aVoiceFrom1821TheLadyAtArstaOrdersEmpireStyleFurnishings_title",
-        "duration": "stops_aVoiceFrom1821TheLadyAtArstaOrdersEmpireStyleFurnishings_duration",
-        "audiourl": "417"
+        "duration": "stops_aVoiceFrom1821TheLadyAtArstaOrdersEmpireStyleFurnishings_duration"
       },
       {
         "id": "418",
         "category": "MUSIC",
         "title": "stops_musicOfTheTimeForstaAftonenINyaHemmetAndNatthimlen_title",
-        "duration": "stops_musicOfTheTimeForstaAftonenINyaHemmetAndNatthimlen_duration",
-        "audiourl": "418"
+        "duration": "stops_musicOfTheTimeForstaAftonenINyaHemmetAndNatthimlen_duration"
       },
       {
         "id": "419",
         "category": "CONTEMPORARY VOICE",
         "title": "stops_aMatronsDutiesToHerHusband_title",
-        "duration": "stops_aMatronsDutiesToHerHusband_duration",
-        "audiourl": "419"
+        "duration": "stops_aMatronsDutiesToHerHusband_duration"
       },
       {
         "id": "420",
         "category": "VISUAL DESCRIPTION",
         "title": "stops_visualDescriptionMid17thCenturyUpholsteredChair_title",
-        "duration": "stops_visualDescriptionMid17thCenturyUpholsteredChair_duration",
-        "audiourl": "420"
+        "duration": "stops_visualDescriptionMid17thCenturyUpholsteredChair_duration"
       },
       {
         "id": "421",
         "category": "VISUAL DESCRIPTION",
         "title": "stops_visualDescriptionAChestOfDrawersFromThe1760S_title",
-        "duration": "stops_visualDescriptionAChestOfDrawersFromThe1760S_duration",
-        "audiourl": "421"
+        "duration": "stops_visualDescriptionAChestOfDrawersFromThe1760S_duration"
       },
       {
         "id": "422",
         "category": "VISUAL DESCRIPTION",
         "title": "stops_visualDescriptionLate18thCenturySwedishStove_title",
-        "duration": "stops_visualDescriptionLate18thCenturySwedishStove_duration",
-        "audiourl": "422"
+        "duration": "stops_visualDescriptionLate18thCenturySwedishStove_duration"
       }
     ],
-    "imageurl": "homesAndInteriors.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_homesAndInteriors_imageaccessibilitylabel",
-    "shortcredit": "tours_homesAndInteriors_shortcredit",
-    "longcredit": "tours_homesAndInteriors_longcredit",
+    "imageURL": "homesAndInteriors.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_homesAndInteriors_imageAccessibilityLabel",
+    "shortCredit": "tours_homesAndInteriors_shortCredit",
+    "longCredit": "tours_homesAndInteriors_longCredit",
     "duration": "tours_homesAndInteriors_duration"
   },
   {
@@ -860,170 +770,148 @@
     "order": 2,
     "regions": ["Sapmi"],
     "title": "tours_sapmi_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "426",
         "region": "Sapmi",
         "category": "HIGHLIGHT",
         "title": "stops_sapmi_title",
-        "duration": "stops_sapmi_duration",
-        "audiourl": "426"
+        "duration": "stops_sapmi_duration"
       },
       {
         "id": "434",
         "region": "Sapmi",
         "category": "HIGHLIGHT",
         "title": "stops_theReindeer_title",
-        "duration": "stops_theReindeer_duration",
-        "audiourl": "434"
+        "duration": "stops_theReindeer_duration"
       },
       {
         "id": "427",
         "category": "INTRODUCTION",
         "title": "stops_whoseHistoryWhoseStory_title",
-        "duration": "stops_whoseHistoryWhoseStory_duration",
-        "audiourl": "427"
+        "duration": "stops_whoseHistoryWhoseStory_duration"
       },
       {
         "id": "428",
         "category": "CONTEXT",
         "title": "stops_theMarketAtJokkmokk_title",
-        "duration": "stops_theMarketAtJokkmokk_duration",
-        "audiourl": "428"
+        "duration": "stops_theMarketAtJokkmokk_duration"
       },
       {
         "id": "429",
         "category": "CONTEXT",
         "title": "stops_whoseCulturalHeritage_title",
-        "duration": "stops_whoseCulturalHeritage_duration",
-        "audiourl": "429"
+        "duration": "stops_whoseCulturalHeritage_duration"
       },
       {
         "id": "430",
         "category": "CONTEXT",
         "title": "stops_whoseObjectsWhoseHistory_title",
-        "duration": "stops_whoseObjectsWhoseHistory_duration",
-        "audiourl": "430"
+        "duration": "stops_whoseObjectsWhoseHistory_duration"
       },
       {
         "id": "431",
         "category": "CONTEXT",
         "title": "stops_whoseStory_title",
-        "duration": "stops_whoseStory_duration",
-        "audiourl": "431"
+        "duration": "stops_whoseStory_duration"
       },
       {
         "id": "432",
         "category": "CONTEXT",
         "title": "stops_whoseGazeWhoseVoice_title",
-        "duration": "stops_whoseGazeWhoseVoice_duration",
-        "audiourl": "432"
+        "duration": "stops_whoseGazeWhoseVoice_duration"
       },
       {
         "id": "433",
         "category": "CONTEXT",
         "title": "stops_whoCameFirst_title",
-        "duration": "stops_whoCameFirst_duration",
-        "audiourl": "433"
+        "duration": "stops_whoCameFirst_duration"
       },
       {
         "id": "435",
         "category": "INTERVIEW",
         "title": "stops_interviewLarsMarcusKuhmunenInSwedish_title",
-        "duration": "stops_interviewLarsMarcusKuhmunenInSwedish_duration",
-        "audiourl": "435"
+        "duration": "stops_interviewLarsMarcusKuhmunenInSwedish_duration"
       },
       {
         "id": "436",
         "category": "INTERVIEW",
         "title": "stops_interviewEliasTorkelssonInSwedish_title",
-        "duration": "stops_interviewEliasTorkelssonInSwedish_duration",
-        "audiourl": "436"
+        "duration": "stops_interviewEliasTorkelssonInSwedish_duration"
       },
       {
         "id": "437",
         "category": "INTERVIEW",
         "title": "stops_interviewVictoriaHarneskInSwedish_title",
-        "duration": "stops_interviewVictoriaHarneskInSwedish_duration",
-        "audiourl": "437"
+        "duration": "stops_interviewVictoriaHarneskInSwedish_duration"
       },
       {
         "id": "438",
         "category": "INTERVIEW",
         "title": "stops_interviewIngeFriskInSwedish_title",
-        "duration": "stops_interviewIngeFriskInSwedish_duration",
-        "audiourl": "438"
+        "duration": "stops_interviewIngeFriskInSwedish_duration"
       },
       {
         "id": "439",
         "category": "INTERVIEW",
         "title": "stops_interviewLindaMannelaInSwedish_title",
-        "duration": "stops_interviewLindaMannelaInSwedish_duration",
-        "audiourl": "439"
+        "duration": "stops_interviewLindaMannelaInSwedish_duration"
       },
       {
         "id": "440",
         "category": "INTERVIEW",
         "title": "stops_interviewLisMariaHjortforsInSwedish_title",
-        "duration": "stops_interviewLisMariaHjortforsInSwedish_duration",
-        "audiourl": "440"
+        "duration": "stops_interviewLisMariaHjortforsInSwedish_duration"
       },
       {
         "id": "441",
         "category": "INTERVIEW",
         "title": "stops_interviewLottaWillborgStoorInSwedish_title",
-        "duration": "stops_interviewLottaWillborgStoorInSwedish_duration",
-        "audiourl": "441"
+        "duration": "stops_interviewLottaWillborgStoorInSwedish_duration"
       },
       {
         "id": "442",
         "category": "INTERVIEW",
         "title": "stops_interviewPerGustavIdivuomaInSwedish_title",
-        "duration": "stops_interviewPerGustavIdivuomaInSwedish_duration",
-        "audiourl": "442"
+        "duration": "stops_interviewPerGustavIdivuomaInSwedish_duration"
       },
       {
         "id": "443",
         "category": "INTERVIEW",
         "title": "stops_interviewStaffanPalopaaInSwedish_title",
-        "duration": "stops_interviewStaffanPalopaaInSwedish_duration",
-        "audiourl": "443"
+        "duration": "stops_interviewStaffanPalopaaInSwedish_duration"
       },
       {
         "id": "444",
         "category": "INTERVIEW",
         "title": "stops_interviewSylviaSimmaInSwedish_title",
-        "duration": "stops_interviewSylviaSimmaInSwedish_duration",
-        "audiourl": "444"
+        "duration": "stops_interviewSylviaSimmaInSwedish_duration"
       },
       {
         "id": "445",
         "category": "CONTEXT",
         "title": "stops_whoseRights_title",
-        "duration": "stops_whoseRights_duration",
-        "audiourl": "445"
+        "duration": "stops_whoseRights_duration"
       },
       {
         "id": "446",
         "category": "CONTEXT",
         "title": "stops_samiCrafts_title",
-        "duration": "stops_samiCrafts_duration",
-        "audiourl": "446"
+        "duration": "stops_samiCrafts_duration"
       },
       {
         "id": "447",
         "category": "INTRODUCTION",
         "title": "stops_whoseHistoryWhoseStory_title",
-        "duration": "stops_whoseHistoryWhoseStory_duration",
-        "audiourl": "447"
+        "duration": "stops_whoseHistoryWhoseStory_duration"
       }
     ],
-    "imageurl": "sapmi.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_sapmi_imageaccessibilitylabel",
-    "shortcredit": "tours_sapmi_shortcredit",
-    "longcredit": "tours_sapmi_longcredit",
+    "imageURL": "sapmi.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_sapmi_imageAccessibilityLabel",
+    "shortCredit": "tours_sapmi_shortCredit",
+    "longCredit": "tours_sapmi_longCredit",
     "duration": "tours_sapmi_duration"
   },
   {
@@ -1031,71 +919,63 @@
     "order": 3,
     "regions": ["Textile Gallery"],
     "title": "tours_textileGallery_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "469",
         "region": "N Balcony 4",
         "category": "HIGHLIGHT",
         "title": "stops_theTextileGallery_title",
-        "duration": "stops_theTextileGallery_duration",
-        "audiourl": "469"
+        "duration": "stops_theTextileGallery_duration"
       },
       {
         "id": "470",
         "category": "CONTEXT",
         "title": "stops_twinedKnittingAgainstTheNordicCold_title",
-        "duration": "stops_twinedKnittingAgainstTheNordicCold_duration",
-        "audiourl": "470"
+        "duration": "stops_twinedKnittingAgainstTheNordicCold_duration"
       },
       {
         "id": "471",
         "category": "CONTEXT",
         "title": "stops_indianChintzInTheStockholmArchipelago_title",
-        "duration": "stops_indianChintzInTheStockholmArchipelago_duration",
-        "audiourl": "471"
+        "duration": "stops_indianChintzInTheStockholmArchipelago_duration"
       },
       {
         "id": "472",
         "category": "CONTEXT",
         "title": "stops_neatLace_title",
-        "duration": "stops_neatLace_duration",
-        "audiourl": "472"
+        "duration": "stops_neatLace_duration"
       },
       {
         "id": "473",
         "category": "CONTEXT",
         "title": "stops_vividColoursFromThe15thCentury_title",
-        "duration": "stops_vividColoursFromThe15thCentury_duration",
-        "audiourl": "473"
+        "duration": "stops_vividColoursFromThe15thCentury_duration"
       },
       {
         "id": "474",
         "category": "CONTEXT",
         "title": "stops_decoratingTheCottageForAFeast_title",
-        "duration": "stops_decoratingTheCottageForAFeast_duration",
-        "audiourl": "474"
+        "duration": "stops_decoratingTheCottageForAFeast_duration"
       },
       {
         "id": "475",
         "category": "CONTEXT",
         "title": "stops_embroideryWithBiblicalMotifs_title",
-        "duration": "stops_embroideryWithBiblicalMotifs_duration",
-        "audiourl": "475"
+        "duration": "stops_embroideryWithBiblicalMotifs_duration"
       },
       {
         "id": "476",
         "category": "CONTEXT",
         "title": "stops_ragsAndTatters_title",
-        "duration": "stops_ragsAndTatters_duration",
-        "audiourl": "476"
+        "duration": "stops_ragsAndTatters_duration"
       }
     ],
-    "imageurl": "textileGallery.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_textileGallery_imageaccessibilitylabel",
-    "shortcredit": "tours_textileGallery_shortcredit",
-    "longcredit": "tours_textileGallery_longcredit",
+    "imageURL": "textileGallery.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_textileGallery_imageAccessibilityLabel",
+    "shortCredit": "tours_textileGallery_shortCredit",
+    "longCredit": "tours_textileGallery_longCredit",
     "duration": "tours_textileGallery_duration"
   },
   {
@@ -1103,107 +983,94 @@
     "order": 4,
     "regions": ["Swedish Folk Art"],
     "title": "tours_swedishFolkArt_title",
-    "audiocontent": [
+    "audioContent": [
       {
         "id": "451",
         "region": "Swedish Folk Art",
         "category": "HIGHLIGHT",
         "title": "stops_theShapesOfTheGrandfatherClocks_title",
-        "duration": "stops_theShapesOfTheGrandfatherClocks_duration",
-        "audiourl": "451"
+        "duration": "stops_theShapesOfTheGrandfatherClocks_duration"
       },
       {
         "id": "456",
         "region": "Swedish Folk Art",
         "category": "HIGHLIGHT",
         "title": "stops_thePowerOfTheChair_title",
-        "duration": "stops_thePowerOfTheChair_duration",
-        "audiourl": "456"
+        "duration": "stops_thePowerOfTheChair_duration"
       },
       {
         "id": "448",
         "category": "INTRODUCTION",
         "title": "stops_aJourneyOfDiscoveryInTheWorldOfVernacularArt_title",
-        "duration": "stops_aJourneyOfDiscoveryInTheWorldOfVernacularArt_duration",
-        "audiourl": "448"
+        "duration": "stops_aJourneyOfDiscoveryInTheWorldOfVernacularArt_duration"
       },
       {
         "id": "449",
         "category": "CONTEXT",
         "title": "stops_fromProposalToWedding_title",
-        "duration": "stops_fromProposalToWedding_duration",
-        "audiourl": "449"
+        "duration": "stops_fromProposalToWedding_duration"
       },
       {
         "id": "450",
         "category": "CONTEXT",
         "title": "stops_deathsAndFunerals_title",
-        "duration": "stops_deathsAndFunerals_duration",
-        "audiourl": "450"
+        "duration": "stops_deathsAndFunerals_duration"
       },
       {
         "id": "452",
         "category": "CONTEXT",
         "title": "stops_theImageOfMan_title",
-        "duration": "stops_theImageOfMan_duration",
-        "audiourl": "452"
+        "duration": "stops_theImageOfMan_duration"
       },
       {
         "id": "453",
         "category": "CONTEXT",
         "title": "stops_natureAsASourceOfInspiration_title",
-        "duration": "stops_natureAsASourceOfInspiration_duration",
-        "audiourl": "453"
+        "duration": "stops_natureAsASourceOfInspiration_duration"
       },
       {
         "id": "454",
         "category": "CONTEXT",
         "title": "stops_dalecarlianFlowerPainting_title",
-        "duration": "stops_dalecarlianFlowerPainting_duration",
-        "audiourl": "454"
+        "duration": "stops_dalecarlianFlowerPainting_duration"
       },
       {
         "id": "455",
         "category": "CONTEXT",
         "title": "stops_decorativeShelvesInPlacesOfHonour_title",
-        "duration": "stops_decorativeShelvesInPlacesOfHonour_duration",
-        "audiourl": "455"
+        "duration": "stops_decorativeShelvesInPlacesOfHonour_duration"
       },
       {
         "id": "457",
         "category": "CONTEXT",
         "title": "stops_bibleStoriesOnCottageWalls_title",
-        "duration": "stops_bibleStoriesOnCottageWalls_duration",
-        "audiourl": "457"
+        "duration": "stops_bibleStoriesOnCottageWalls_duration"
       },
       {
         "id": "458",
         "category": "CONTEXT",
         "title": "stops_preciousTextiles_title",
-        "duration": "stops_preciousTextiles_duration",
-        "audiourl": "458"
+        "duration": "stops_preciousTextiles_duration"
       },
       {
         "id": "459",
         "category": "CONTEXT",
         "title": "stops_coatsOfArmsAndRoyalMonograms_title",
-        "duration": "stops_coatsOfArmsAndRoyalMonograms_duration",
-        "audiourl": "459"
+        "duration": "stops_coatsOfArmsAndRoyalMonograms_duration"
       },
       {
         "id": "460",
         "category": "CONTEXT",
         "title": "stops_vernacularArtToday_title",
-        "duration": "stops_vernacularArtToday_duration",
-        "audiourl": "460"
+        "duration": "stops_vernacularArtToday_duration"
       }
     ],
-    "imageurl": "swedishFolkArt.png",
-    "imagewidth": 750,
-    "imageheight": 345,
-    "imageaccessibilitylabel": "tours_swedishFolkArt_imageaccessibilitylabel",
-    "shortcredit": "tours_swedishFolkArt_shortcredit",
-    "longcredit": "tours_swedishFolkArt_longcredit",
+    "imageURL": "swedishFolkArt.png",
+    "imageWidth": 750,
+    "imageHeight": 345,
+    "imageAccessibilityLabel": "tours_swedishFolkArt_imageAccessibilityLabel",
+    "shortCredit": "tours_swedishFolkArt_shortCredit",
+    "longCredit": "tours_swedishFolkArt_longCredit",
     "duration": "tours_swedishFolkArt_duration"
   }
 ]

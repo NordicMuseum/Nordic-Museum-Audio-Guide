@@ -1,8 +1,8 @@
 {
-  "Timestamp": "Sat Sep 21 2019 21:36:16 GMT-0400 (EDT)",
+  "Timestamp": "Mon Sep 23 2019 09:41:30 GMT-0400 (EDT)",
   "UI Strings": [
     {
-      "uistring": "min",
+      "UIString": "min",
       "en": "min",
       "sv": "min",
       "it": "min",
@@ -15,7 +15,7 @@
       "zh": "分钟"
     },
     {
-      "uistring": "bluetoothButton_OnLabel",
+      "UIString": "bluetoothButton_OnLabel",
       "en": "Bluetooth is on",
       "sv": "Bluetooth är på",
       "it": "Bluetooth attivato",
@@ -28,7 +28,7 @@
       "zh": "蓝牙已开启"
     },
     {
-      "uistring": "bluetoothButton_OffLabel",
+      "UIString": "bluetoothButton_OffLabel",
       "en": "Turn Bluetooth on",
       "sv": "Slå på Bluetooth",
       "it": "Attiva Bluetooth",
@@ -41,7 +41,7 @@
       "zh": "开启蓝牙"
     },
     {
-      "uistring": "bluetoothAlert_Header",
+      "UIString": "bluetoothAlert_Header",
       "en": "Bluetooth",
       "sv": "Bluetooth",
       "it": "Bluetooth",
@@ -54,7 +54,7 @@
       "zh": "蓝牙"
     },
     {
-      "uistring": "bluetoothAlert_Body",
+      "UIString": "bluetoothAlert_Body",
       "en": "Go to Settings, then Bluetooth to turn on Bluetooth.",
       "sv": "Gå till Inställningar, därefter Bluetooth för att aktivera Bluetooth.",
       "it": "Vai a Impostazioni, Bluetooth per attivare Bluetooth.",
@@ -66,7 +66,7 @@
       "zh": "前往“设置”，选择“蓝牙”启动蓝牙功能。"
     },
     {
-      "uistring": "locationServicesButton_Label",
+      "UIString": "locationServicesButton_Label",
       "en": "Allow location access",
       "sv": "Tillåt platsdelning",
       "it": "Consenti accesso alla posizione",
@@ -79,7 +79,7 @@
       "zh": "允许共享位置"
     },
     {
-      "uistring": "locationServicesButton_AuthorizedLabel",
+      "UIString": "locationServicesButton_AuthorizedLabel",
       "en": "Location access allowed",
       "sv": "Platsdelning tillåten",
       "it": "Accesso alla posizione consentito",
@@ -92,7 +92,7 @@
       "zh": "已允许共享位置"
     },
     {
-      "uistring": "locationServicesAlert_Header",
+      "UIString": "locationServicesAlert_Header",
       "en": "Location Access",
       "sv": "Platsdelning",
       "it": "Accesso alla posizione",
@@ -105,7 +105,7 @@
       "zh": "共享位置"
     },
     {
-      "uistring": "locationServicesAlert_Body",
+      "UIString": "locationServicesAlert_Body",
       "en": "Go to Settings, then Privacy, then Location Services, then The Warhol to allow location access while using this app.",
       "sv": "Gå till Inställningar, därefter Integritetsskydd, därefter Platstjänster, därefter Audio Guide för att tillåta platsdelning medan du använder appen.",
       "it": "Vai a Impostazioni, Privacy, Servizi di posizione, Audioguida per consentire l’accesso alla posizione durante l’utilizzo di questa app.",
@@ -118,7 +118,7 @@
       "zh": "前往“设置”，依次选择“隐私”、“定位服务”、“语音讲解”，允许本应用共享位置。"
     },
     {
-      "uistring": "rootScreen_MuseumTabItem",
+      "UIString": "rootScreen_MuseumTabItem",
       "sv": "Info",
       "it": "Informazioni",
       "ar": "معلومات",
@@ -130,7 +130,7 @@
       "zh": "信息"
     },
     {
-      "uistring": "locationServicesAlert_CancelButton_Label",
+      "UIString": "locationServicesAlert_CancelButton_Label",
       "en": "Cancel",
       "sv": "Avbryt",
       "it": "Annulla",
@@ -143,7 +143,7 @@
       "zh": "取消"
     },
     {
-      "uistring": "locationServicesAlert_SettingsButton_Label",
+      "UIString": "locationServicesAlert_SettingsButton_Label",
       "en": "Settings",
       "sv": "Inställningar",
       "it": "Impostazioni",
@@ -156,7 +156,7 @@
       "zh": "设置"
     },
     {
-      "uistring": "playButton_AccessibilityLabel",
+      "UIString": "playButton_AccessibilityLabel",
       "en": "Play",
       "sv": "Spela",
       "it": "Riproduci",
@@ -169,7 +169,7 @@
       "zh": "播放"
     },
     {
-      "uistring": "pauseButton_AccessibilityLabel",
+      "UIString": "pauseButton_AccessibilityLabel",
       "en": "Pause",
       "sv": "Pausa",
       "it": "Pausa",
@@ -182,7 +182,7 @@
       "zh": "暂停"
     },
     {
-      "uistring": "previousButton_AccessibilityLabel",
+      "UIString": "previousButton_AccessibilityLabel",
       "en": "Previous",
       "sv": "Förra",
       "it": "Precedente",
@@ -195,11 +195,11 @@
       "zh": "上一项"
     },
     {
-      "uistring": "nextButton_AccessibilityLabel",
+      "UIString": "nextButton_AccessibilityLabel",
       "en": "Next"
     },
     {
-      "uistring": "rewindButton_AccessibilityLabel",
+      "UIString": "rewindButton_AccessibilityLabel",
       "en": "Rewind 5 seconds",
       "sv": "Backa 5 sekunder",
       "it": "Riavvolgi 5 secondi",
@@ -212,7 +212,7 @@
       "zh": "倒退5秒"
     },
     {
-      "uistring": "toggleSpeedButton_NormalLabel",
+      "UIString": "toggleSpeedButton_NormalLabel",
       "en": "1",
       "sv": "1",
       "it": "1",
@@ -225,7 +225,7 @@
       "zh": "1"
     },
     {
-      "uistring": "toggleSpeedButton_NormalAccessibilityLabel",
+      "UIString": "toggleSpeedButton_NormalAccessibilityLabel",
       "en": "Speed 1x.",
       "sv": "1x hastighet",
       "it": "Velocità 1x.",
@@ -238,7 +238,7 @@
       "zh": "1倍速"
     },
     {
-      "uistring": "toggleSpeedButton_FastLabel",
+      "UIString": "toggleSpeedButton_FastLabel",
       "en": "1.5",
       "sv": "1.5",
       "it": "1.5",
@@ -251,7 +251,7 @@
       "zh": " 1.5"
     },
     {
-      "uistring": "toggleSpeedButton_FastAccessibilityLabel",
+      "UIString": "toggleSpeedButton_FastAccessibilityLabel",
       "en": "Speed 1.5x.",
       "sv": "1,5x hastighet",
       "it": "Velocità 1,5x.",
@@ -264,7 +264,7 @@
       "zh": "1.5倍速"
     },
     {
-      "uistring": "toggleSpeedButton_FastestLabel",
+      "UIString": "toggleSpeedButton_FastestLabel",
       "en": "2",
       "sv": "2",
       "it": "2",
@@ -277,7 +277,7 @@
       "zh": "2"
     },
     {
-      "uistring": "toggleSpeedButton_FastestAccessibilityLabel",
+      "UIString": "toggleSpeedButton_FastestAccessibilityLabel",
       "en": "Speed 2x.",
       "sv": "2x hastighet",
       "it": "Velocità 2x.",
@@ -290,7 +290,7 @@
       "zh": "2倍速"
     },
     {
-      "uistring": "toggleSpeedButton_AccessibilityLabel",
+      "UIString": "toggleSpeedButton_AccessibilityLabel",
       "en": " Double tap to change audio speed.",
       "sv": "Tryck två gånger för att ändra uppspelningshastighet",
       "it": "Tocca due volte per cambiare la velocità audio.",
@@ -303,7 +303,7 @@
       "zh": "双击改变音频速度"
     },
     {
-      "uistring": "transcriptButton_OpenedAccessibilityLabel",
+      "UIString": "transcriptButton_OpenedAccessibilityLabel",
       "en": " transcript opened. Double tap to close.",
       "sv": "transkribering öppnad. Tryck två gånger för att stänga.",
       "it": "trascrizione aperta. Tocca due volte per chiudere.",
@@ -316,7 +316,7 @@
       "zh": "文本已打开，双击关闭"
     },
     {
-      "uistring": "transcriptButton_ClosedAccessibilityLabel",
+      "UIString": "transcriptButton_ClosedAccessibilityLabel",
       "en": " transcript closed. Double tap to open.",
       "sv": "transkribering stängd. Tryck två gånger för att öppna.",
       "it": "trascrizione chiusa. Tocca due volte per aprire.",
@@ -329,7 +329,7 @@
       "zh": "文本已关闭，双击打开"
     },
     {
-      "uistring": "tryAgain",
+      "UIString": "tryAgain",
       "en": "Try again",
       "sv": "Försök igen",
       "it": "Riprova",
@@ -342,15 +342,15 @@
       "zh": "重试"
     },
     {
-      "uistring": "enterNumber",
+      "UIString": "enterNumber",
       "en": "Enter Number"
     },
     {
-      "uistring": "audioContentItem_Of",
+      "UIString": "audioContentItem_Of",
       "en": "of"
     },
     {
-      "uistring": "audioContentItem_Seconds",
+      "UIString": "audioContentItem_Seconds",
       "en": "seconds",
       "sv": "sekunder",
       "it": "secondi",
@@ -363,17 +363,17 @@
       "zh": "秒"
     },
     {
-      "uistring": "audioContentList_ChapterSingular",
+      "UIString": "audioContentList_ChapterSingular",
       "en": "Chapter",
       "sv": "Kapitel"
     },
     {
-      "uistring": "audioContentList_ChapterPlural",
+      "UIString": "audioContentList_ChapterPlural",
       "en": "Chapters",
       "sv": "Kapitel"
     },
     {
-      "uistring": "autoplayProgressView_CountDownTextSingular",
+      "UIString": "autoplayProgressView_CountDownTextSingular",
       "en": "Starts in 1 second",
       "sv": "Börjar om 1 sekund",
       "it": "Inizia tra 1 secondo",
@@ -386,7 +386,7 @@
       "zh": "1秒后开始"
     },
     {
-      "uistring": "autoplayProgressView_CountDownTextPlural",
+      "UIString": "autoplayProgressView_CountDownTextPlural",
       "en": "Starts in x seconds",
       "sv": "Börjar om x sekunder",
       "it": "Inizia tra x secondi",
@@ -399,7 +399,7 @@
       "zh": "x秒后开始"
     },
     {
-      "uistring": "autoplayProgressView_CountDownText",
+      "UIString": "autoplayProgressView_CountDownText",
       "en": "Starts in",
       "sv": "Börjar om",
       "it": "Inizia tra",
@@ -411,7 +411,7 @@
       "fr": "Commence dans"
     },
     {
-      "uistring": "autoplayProgressView_Seconds",
+      "UIString": "autoplayProgressView_Seconds",
       "en": "seconds",
       "sv": "sekunder",
       "it": "secondi",
@@ -424,11 +424,11 @@
       "zh": "秒后开始"
     },
     {
-      "uistring": "autoplayProgressView_AutoplayOnAccessibilityLabel",
+      "UIString": "autoplayProgressView_AutoplayOnAccessibilityLabel",
       "en": "Autoplay, on. Double tap to turn off."
     },
     {
-      "uistring": "autoplayProgressView_AutoplayOffAccessibilityLabel",
+      "UIString": "autoplayProgressView_AutoplayOffAccessibilityLabel",
       "en": "Autoplay, off. Double tap to turn on.",
       "sv": "Automatisk uppspelning är av. Tryck två gånger för att slå på.",
       "it": "Autoplay, disattivato. Tocca due volte per attivare.",
@@ -441,7 +441,7 @@
       "zh": "自动播放已关闭，双击开启"
     },
     {
-      "uistring": "closePlayerView_Text",
+      "UIString": "closePlayerView_Text",
       "en": "You’ve reached the end of ",
       "sv": "Du har nått slutet av ",
       "it": "Sei alla fine di ",
@@ -454,11 +454,11 @@
       "zh": "您已欣赏完"
     },
     {
-      "uistring": "closePlayerView_AccessibilityLabel",
+      "UIString": "closePlayerView_AccessibilityLabel",
       "en": "Double tap to return to the chapter listing for this story."
     },
     {
-      "uistring": "closePlayerView_ClosePlayer",
+      "UIString": "closePlayerView_ClosePlayer",
       "en": "Close Player",
       "sv": "Stäng spelare",
       "it": "Chiudi lettore",
@@ -471,7 +471,7 @@
       "zh": "关闭播放器"
     },
     {
-      "uistring": "controlsView_StopTitleAccessibilityLabel",
+      "UIString": "controlsView_StopTitleAccessibilityLabel",
       "en": " Double tap to return to the chapter listing for this story.",
       "sv": "Tryck två gånger för att återvända till temat.",
       "it": "Tocca due volte per tornare al tema.",
@@ -484,7 +484,7 @@
       "zh": "双击回到主题"
     },
     {
-      "uistring": "exandableHeader_OpenAccessibilityLabel",
+      "UIString": "exandableHeader_OpenAccessibilityLabel",
       "en": " Double tap to close.",
       "sv": "Tryck två gånger för att stänga.",
       "it": "Tocca due volte per chiudere.",
@@ -497,7 +497,7 @@
       "zh": "双击关闭"
     },
     {
-      "uistring": "exandableHeader_ClosedAccessibilityLabel",
+      "UIString": "exandableHeader_ClosedAccessibilityLabel",
       "en": " Double tap to open.",
       "sv": "Tryck två gånger för att öppna.",
       "it": "Tocca due volte per aprire.",
@@ -510,7 +510,7 @@
       "zh": "双击打开"
     },
     {
-      "uistring": "grid_Of",
+      "UIString": "grid_Of",
       "en": "of",
       "sv": "av",
       "it": "di",
@@ -522,7 +522,7 @@
       "zh": "来自"
     },
     {
-      "uistring": "grid_AccessibilityLabel",
+      "UIString": "grid_AccessibilityLabel",
       "en": "Plays audio for x story.",
       "sv": "Spelar ljud för tema x.",
       "it": "Riproduce audio per tema x.",
@@ -535,7 +535,7 @@
       "zh": "播放x故事音频"
     },
     {
-      "uistring": "nearMeScreen_Title",
+      "UIString": "nearMeScreen_Title",
       "en": "Near Me",
       "sv": "Nära mig",
       "it": "Vicino a me",
@@ -548,11 +548,11 @@
       "zh": "附近展览"
     },
     {
-      "uistring": "nearMeScreen_LocationOffText",
+      "UIString": "nearMeScreen_LocationOffText",
       "en": "While at the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…"
     },
     {
-      "uistring": "nearMeScreen_StoriesMessage",
+      "UIString": "nearMeScreen_StoriesMessage",
       "en": "While at the museum, we show you themes based on what’s near you.",
       "sv": "När du är på museet visar vi dig teman som finns i närheten av dig.",
       "it": "Mentre sei al museo, vedrai i temi basati su quello che è vicino a te.",
@@ -565,7 +565,7 @@
       "zh": "在博物馆中，我们根据您附近的情况为您显示展览主题。"
     },
     {
-      "uistring": "nearMeScreen_LocationNeeds",
+      "UIString": "nearMeScreen_LocationNeeds",
       "en": "To use this feature, we’ll need two things from you…",
       "sv": "För att använda denna funktion behöver vi två saker från dig…",
       "it": "Per usare questa funzionalità, ti chiediamo due cose…",
@@ -578,7 +578,7 @@
       "zh": "要使用这一功能，您需要进行两步操作…"
     },
     {
-      "uistring": "nearMeScreen_StoriesMessageNone",
+      "UIString": "nearMeScreen_StoriesMessageNone",
       "en": "There are no themes near you.",
       "sv": "Det finns inga teman i närheten av dig.",
       "it": "Non ci sono temi vicino a te.",
@@ -591,7 +591,7 @@
       "zh": "您的附近没有主题"
     },
     {
-      "uistring": "nearMeScreen_StoriesMessageSingular",
+      "UIString": "nearMeScreen_StoriesMessageSingular",
       "en": "There is one theme near you.",
       "sv": "Det finns ett tema i närheten av dig.",
       "it": "C’è un tema vicino a te.",
@@ -604,7 +604,7 @@
       "zh": "您的附近有一个主题"
     },
     {
-      "uistring": "nearMeScreen_StoriesMessagePlural",
+      "UIString": "nearMeScreen_StoriesMessagePlural",
       "en": "There are x themes near you.",
       "sv": "Det finns x teman i närheten av dig.",
       "it": "Ci sono x temi vicino a te.",
@@ -617,7 +617,7 @@
       "zh": "您的附近有x个主题"
     },
     {
-      "uistring": "nearMeScreen_StoriesMessageFallback",
+      "UIString": "nearMeScreen_StoriesMessageFallback",
       "en": "Themes are available on floor 2, 3 and 4.",
       "sv": "Teman finns tillgängliga på plan 2, 3 och 4.",
       "it": "I temi sono disponibili ai piani 2, 3 e 4.",
@@ -630,7 +630,7 @@
       "zh": "第2、3、4层主题"
     },
     {
-      "uistring": "nearMeScreen_Regions",
+      "UIString": "nearMeScreen_Regions",
       "en": "regions",
       "sv": "regioner",
       "it": "regioni",
@@ -643,7 +643,7 @@
       "zh": "区域"
     },
     {
-      "uistring": "nearMeScreen_Amenities",
+      "UIString": "nearMeScreen_Amenities",
       "en": "Amenities",
       "sv": "Hitta på museet",
       "it": "Servizi",
@@ -655,7 +655,7 @@
       "zh": "寻找设施"
     },
     {
-      "uistring": "nearMeScreen_Entrance",
+      "UIString": "nearMeScreen_Entrance",
       "en": "Entrance Space",
       "sv": "Entré",
       "it": "Entrata",
@@ -668,11 +668,11 @@
       "zh": "入口"
     },
     {
-      "uistring": "nearMeScreen_Underground",
+      "UIString": "nearMeScreen_Underground",
       "en": "Underground"
     },
     {
-      "uistring": "searchScreen_Title",
+      "UIString": "searchScreen_Title",
       "en": "Search #",
       "sv": "Sök #",
       "it": "Cerca #",
@@ -685,7 +685,7 @@
       "zh": "搜索 #"
     },
     {
-      "uistring": "storiesScreen_Title",
+      "UIString": "storiesScreen_Title",
       "en": "Browse",
       "sv": "Bläddra",
       "it": "Sfoglia",
@@ -698,7 +698,7 @@
       "zh": "浏览"
     },
     {
-      "uistring": "settingsScreen_Title",
+      "UIString": "settingsScreen_Title",
       "en": "🌎 Language",
       "sv": "🌎 Språk",
       "it": "🌎 Lingua",
@@ -711,15 +711,15 @@
       "zh": "🌎 语言"
     },
     {
-      "uistring": "settingsScreen_AutoplayOnAccessibilityLabel",
+      "UIString": "settingsScreen_AutoplayOnAccessibilityLabel",
       "en": "Autoplay, on. Double tap to turn off."
     },
     {
-      "uistring": "settingsScreen_AutoplayOffAccessibilityLabel",
+      "UIString": "settingsScreen_AutoplayOffAccessibilityLabel",
       "en": "Autoplay, off. Double tap to turn on."
     },
     {
-      "uistring": "settingsScreen_NearMeHeader",
+      "UIString": "settingsScreen_NearMeHeader",
       "en": "Near Me",
       "sv": "Nära mig",
       "it": "Vicino a me",
@@ -732,11 +732,11 @@
       "zh": "附近展览"
     },
     {
-      "uistring": "settingsSceen_NearMeBody",
+      "UIString": "settingsSceen_NearMeBody",
       "en": "At the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…"
     },
     {
-      "uistring": "settingsScreen_AutoplayHeader",
+      "UIString": "settingsScreen_AutoplayHeader",
       "en": "Autoplay",
       "sv": "Automatisk uppspelning",
       "it": "Autoplay",
@@ -749,11 +749,11 @@
       "zh": "自动播放"
     },
     {
-      "uistring": "settingsScreen_AutoplayBody",
+      "UIString": "settingsScreen_AutoplayBody",
       "en": "The Nordic Museum Audio Guide is organized into themes. Each theme contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters within a theme."
     },
     {
-      "uistring": "timeProgressView_SecondsRemaining",
+      "UIString": "timeProgressView_SecondsRemaining",
       "en": "x seconds remaining",
       "sv": "x sekunder återstår",
       "it": "restano x secondi",
@@ -766,11 +766,11 @@
       "zh": "剩余x秒"
     },
     {
-      "uistring": "tourStopScreen_ArtworkInformationAccessibilityLabel",
+      "UIString": "tourStopScreen_ArtworkInformationAccessibilityLabel",
       "en": "Artwork Information. Double tap to go to long credits."
     },
     {
-      "uistring": "tutorialScreen_WelcomeTitle",
+      "UIString": "tutorialScreen_WelcomeTitle",
       "en": "Audio Guide",
       "sv": "Audioguide",
       "it": "Audioguida",
@@ -783,7 +783,7 @@
       "zh": "语音讲解"
     },
     {
-      "uistring": "tutorialScreen_NoWorries",
+      "UIString": "tutorialScreen_NoWorries",
       "en": "Don’t worry—you can change these preferences later.",
       "sv": "Oroa dig inte, du kan ändra inställningarna i efterhand.",
       "it": "Non ti preoccupare, potrai cambiare queste preferenze in seguito.",
@@ -796,7 +796,7 @@
       "zh": "无需担心，您稍后也可改变首选项设置。"
     },
     {
-      "uistring": "tutorialScreen_NearMe",
+      "UIString": "tutorialScreen_NearMe",
       "en": "At the museum, we show you themes based on what’s near you. To use this feature, we’ll need two things from you…",
       "sv": "När du är på museet visar vi dig teman som finns i närheten av dig. För att använda denna funktion behöver vi två saker från dig…",
       "it": "Mentre sei al museo, vedrai i temi basati su quello che è vicino a te. Per usare questa funzionalità, ti chiediamo due cose…",
@@ -809,7 +809,7 @@
       "zh": "在博物馆中，我们根据您附近的情况为您显示展览主题，要使用这一功能，您需要进行两步操作…"
     },
     {
-      "uistring": "tutorialScreen_Stories",
+      "UIString": "tutorialScreen_Stories",
       "en": "The Nordic Museum Audio Guide is organized into themes. Each story contains multiple audio files, or chapters, related to one theme or exhibition. If you turn on autoplay, we’ll automatically play all chapters for you.",
       "sv": "Nordiska museets audioguide är sorterad i teman. Varje tema innehåller flera ljudspår som hänger samman med ett tema eller en utställning. Om du slår på automatisk uppspelning kommer vi spela alla ljudspår i ett tema efter varandra.",
       "it": "L’audioguida del Nordic Museum è suddivisa in temi. Ogni tema contiene vari file audio legati a un tema o a una mostra. Attivando autoplay, saranno riprodotti tutti i file audio contenuti in un tema.",
@@ -822,7 +822,7 @@
       "zh": "北欧博物馆语音讲解分为不同主题，每个主题包含与某个主题或展览相关的几段音频，如打开自动播放功能，将自动播放同一主题下的所有音频。"
     },
     {
-      "uistring": "tutorialScreen_StoriesAutoplayOn",
+      "UIString": "tutorialScreen_StoriesAutoplayOn",
       "en": "Autoplay is on",
       "sv": "Automatisk uppspelning är på",
       "it": "Autoplay attivato",
@@ -835,7 +835,7 @@
       "zh": "自动播放已开启"
     },
     {
-      "uistring": "tutorialScreen_StoriesAutoplayOnAccessibilityLabel",
+      "UIString": "tutorialScreen_StoriesAutoplayOnAccessibilityLabel",
       "en": "Autoplay, on. Double tap to turn off.",
       "sv": "Automatisk uppspelning är på. Tryck två gånger för att slå av.",
       "it": "Autoplay, attivato. Tocca due volte per disattivare.",
@@ -848,7 +848,7 @@
       "zh": "自动播放已开启，双击关闭"
     },
     {
-      "uistring": "tutorialScreen_StoriesAutoplayOff",
+      "UIString": "tutorialScreen_StoriesAutoplayOff",
       "en": "Autoplay is off",
       "sv": "Automatisk uppspelning är av.",
       "it": "Autoplay disattivato",
@@ -861,11 +861,11 @@
       "zh": "自动播放已关闭"
     },
     {
-      "uistring": "tutorialScreen_StoriesAutoplayOffAccessibilityLabel",
+      "UIString": "tutorialScreen_StoriesAutoplayOffAccessibilityLabel",
       "en": "Autoplay, off. Double tap to turn on."
     },
     {
-      "uistring": "tutorialScreen_NavigationButtonsAccessibilityLabel",
+      "UIString": "tutorialScreen_NavigationButtonsAccessibilityLabel",
       "en": "Page x of x. Next Page.",
       "sv": "Sida x av x. Nästa sida.",
       "it": "Pagina x di x. Pagina successiva.",
@@ -878,7 +878,7 @@
       "zh": "第x页，共x页，下一页"
     },
     {
-      "uistring": "tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel",
+      "UIString": "tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel",
       "en": "Page x of x. Let’s get started.",
       "sv": "Sida x av x. Kom igång.",
       "it": "Pagina x di x. Come iniziare.",
@@ -891,7 +891,7 @@
       "zh": "第x页，共x页，开始"
     },
     {
-      "uistring": "tutorialScreen_GetStarted",
+      "UIString": "tutorialScreen_GetStarted",
       "en": "Let’s Get Started",
       "sv": "Nästa",
       "it": "Avanti",
@@ -904,11 +904,11 @@
       "zh": "下一项"
     },
     {
-      "uistring": "imageDetailScreen_Title",
+      "UIString": "imageDetailScreen_Title",
       "en": "Artwork"
     },
     {
-      "uistring": "playAll",
+      "UIString": "playAll",
       "en": "Play all",
       "sv": "Spela alla",
       "it": "Giocare tutto",
@@ -921,7 +921,7 @@
       "zh": "全部播放"
     },
     {
-      "uistring": "themes",
+      "UIString": "themes",
       "en": "Themes",
       "sv": "Teman",
       "it": "Temi",
@@ -934,7 +934,7 @@
       "zh": "主题"
     },
     {
-      "uistring": "floor",
+      "UIString": "floor",
       "en": "Floor",
       "sv": "Plan",
       "it": "Piano",
@@ -947,7 +947,7 @@
       "zh": "楼层"
     },
     {
-      "uistring": "floor1_Label",
+      "UIString": "floor1_Label",
       "en": "Floor 1",
       "sv": "Plan 1",
       "it": "Piano 1",
@@ -960,7 +960,7 @@
       "zh": "楼层 1"
     },
     {
-      "uistring": "floor2_Label",
+      "UIString": "floor2_Label",
       "en": "Floor 2",
       "sv": "Plan 2",
       "it": "Piano 2",
@@ -973,7 +973,7 @@
       "zh": "楼层 2"
     },
     {
-      "uistring": "floor234_Label",
+      "UIString": "floor234_Label",
       "en": "Floor 2–4",
       "sv": "Plan 2–4",
       "it": "Piano 2–4",
@@ -986,7 +986,7 @@
       "zh": "楼层 2–4"
     },
     {
-      "uistring": "floor3_Label",
+      "UIString": "floor3_Label",
       "en": "Floor 3",
       "sv": "Plan 3",
       "it": "Piano 3",
@@ -999,7 +999,7 @@
       "zh": "楼层 3"
     },
     {
-      "uistring": "floor4_Label",
+      "UIString": "floor4_Label",
       "en": "Floor 4",
       "sv": "Plan 4",
       "it": "Piano 4",
@@ -1012,7 +1012,7 @@
       "zh": "楼层 4"
     },
     {
-      "uistring": "aboutScreen_Title",
+      "UIString": "aboutScreen_Title",
       "en": "The Nordic Museum",
       "sv": "Nordiska museet",
       "it": "Il Museo Nordico",
@@ -1025,15 +1025,15 @@
       "zh": "北欧博物馆"
     },
     {
-      "uistring": "aboutScreen_HoursHeader",
+      "UIString": "aboutScreen_HoursHeader",
       "es": "Horario de apertura"
     },
     {
-      "uistring": "aboutScreen_AdmissionHeader",
+      "UIString": "aboutScreen_AdmissionHeader",
       "es": "Entrada"
     },
     {
-      "uistring": "amenitiesScreen_Title",
+      "UIString": "amenitiesScreen_Title",
       "en": "Amenities",
       "sv": "Hitta på museet",
       "it": "Servizi",
@@ -1045,20 +1045,20 @@
       "zh": "寻找设施"
     },
     {
-      "uistring": "amenitiesScreen_ObjectSingular",
+      "UIString": "amenitiesScreen_ObjectSingular",
       "en": "amenity"
     },
     {
-      "uistring": "amenitesScreen_ObjectPlural",
+      "UIString": "amenitesScreen_ObjectPlural",
       "en": "amenities"
     },
     {
-      "uistring": "aboutTheAppScreen_Title",
+      "UIString": "aboutTheAppScreen_Title",
       "en": "About the App",
       "sv": "Om appen"
     },
     {
-      "uistring": "museumScreen_Title",
+      "UIString": "museumScreen_Title",
       "en": "Info",
       "sv": "Info",
       "it": "Informazioni",
@@ -1071,35 +1071,35 @@
       "zh": "信息"
     },
     {
-      "uistring": "museumScreen_ImageAccessibilityLabel",
+      "UIString": "museumScreen_ImageAccessibilityLabel",
       "en": "The Nordic Museum"
     },
     {
-      "uistring": "museumScreen_ListItem1Label",
+      "UIString": "museumScreen_ListItem1Label",
       "en": "About The Nordic Museum",
       "sv": "Om Nordiska museet"
     },
     {
-      "uistring": "museumScreen_ListItem2Label",
+      "UIString": "museumScreen_ListItem2Label",
       "sv": "Tillgänglighet"
     },
     {
-      "uistring": "museumScreen_ListItem3Label",
+      "UIString": "museumScreen_ListItem3Label",
       "en": "Amenities",
       "sv": "Hitta på museet"
     },
     {
-      "uistring": "museumScreen_ListItem4Label",
+      "UIString": "museumScreen_ListItem4Label",
       "en": "⚙ Settings",
       "sv": "⚙ Inställningar"
     },
     {
-      "uistring": "museumScreen_ListItem5Label",
+      "UIString": "museumScreen_ListItem5Label",
       "en": "Credits",
       "sv": "Medverkande"
     },
     {
-      "uistring": "tutorialScreen_welcomeMessage",
+      "UIString": "tutorialScreen_welcomeMessage",
       "en": "Welcome",
       "sv": "Välkommen",
       "it": "Benvenuto",
@@ -1112,7 +1112,7 @@
       "zh": "欢迎"
     },
     {
-      "uistring": "highlights",
+      "UIString": "highlights",
       "en": "Highlights",
       "sv": "Höjdpunkter",
       "it": "Le parti salienti",
@@ -1551,45 +1551,45 @@
       "title__ru": "Реликвии",
       "title__fr": "Les incontournables",
       "title__zh": "Highlights",
-      "title__svkids": "Barnens audioguide",
-      "audiocontent": "201,401,408,413,424,425,434,426,423,469,456,451,301,302,316,328,330,355,333,357,356,202",
+      "title__svKids": "Barnens audioguide",
+      "audioContent": "201,401,408,413,424,425,434,426,423,469,456,451,301,302,316,328,330,355,333,357,356,202",
       "category": "HIGHLIGHTS",
-      "imageurl": "highlights.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Highlights",
-      "imageaccessibilitylabel__sv": "Höjdpunkter",
-      "imageaccessibilitylabel__it": "Le parti salienti",
-      "imageaccessibilitylabel__ar": "مقتطفات",
-      "imageaccessibilitylabel__es": "Atracciones principales",
-      "imageaccessibilitylabel__fi": "Kohokohtia",
-      "imageaccessibilitylabel__de": "Höhepunkte",
-      "imageaccessibilitylabel__ru": "Реликвии",
-      "imageaccessibilitylabel__fr": "Les incontournables",
-      "imageaccessibilitylabel__zh": "Highlights",
-      "imageaccessibilitylabel__svkids": "Barnens audioguide",
-      "shortcredit__en": "<i>Highlights</i>",
-      "shortcredit__sv": "<i>Höjdpunkter</i>",
-      "shortcredit__it": "<i>Le parti salienti</i>",
-      "shortcredit__ar": "<i>مقتطفات</i>",
-      "shortcredit__es": "<i>Atracciones principales</i>",
-      "shortcredit__fi": "<i>Kohokohtia</i>",
-      "shortcredit__de": "<i>Höhepunkte</i>",
-      "shortcredit__ru": "<i>Реликвии</i>",
-      "shortcredit__fr": "<i>Les incontournables</i>",
-      "shortcredit__zh": "<i>Highlights</i>",
-      "shortcredit__svkids": "<i>Barnens audioguide</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Highlights</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Höjdpunkter</i>",
-      "longcredit__it": "Foto: Karolina Kristensson\\n<i>Le parti salienti</i>",
-      "longcredit__ar": "Foto: Karolina Kristensson\\n<i>مقتطفات</i>",
-      "longcredit__es": "Foto: Karolina Kristensson\\n<i>Atracciones principales</i>",
-      "longcredit__fi": "Foto: Karolina Kristensson\\n<i>Kohokohtia</i>",
-      "longcredit__de": "Foto: Karolina Kristensson\\n<i>Höhepunkte</i>",
-      "longcredit__ru": "Foto: Karolina Kristensson\\n<i>Реликвии</i>",
-      "longcredit__fr": "Foto: Karolina Kristensson\\n<i>Les incontournables</i>",
-      "longcredit__zh": "Foto: Karolina Kristensson\\n<i>Highlights</i>",
-      "longcredit__svkids": "Foto: Karolina Kristensson\\n<i>Barnens audioguide</i>",
+      "imageURL": "highlights.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Highlights",
+      "imageAccessibilityLabel__sv": "Höjdpunkter",
+      "imageAccessibilityLabel__it": "Le parti salienti",
+      "imageAccessibilityLabel__ar": "مقتطفات",
+      "imageAccessibilityLabel__es": "Atracciones principales",
+      "imageAccessibilityLabel__fi": "Kohokohtia",
+      "imageAccessibilityLabel__de": "Höhepunkte",
+      "imageAccessibilityLabel__ru": "Реликвии",
+      "imageAccessibilityLabel__fr": "Les incontournables",
+      "imageAccessibilityLabel__zh": "Highlights",
+      "imageAccessibilityLabel__svKids": "Barnens audioguide",
+      "shortCredit__en": "<i>Highlights</i>",
+      "shortCredit__sv": "<i>Höjdpunkter</i>",
+      "shortCredit__it": "<i>Le parti salienti</i>",
+      "shortCredit__ar": "<i>مقتطفات</i>",
+      "shortCredit__es": "<i>Atracciones principales</i>",
+      "shortCredit__fi": "<i>Kohokohtia</i>",
+      "shortCredit__de": "<i>Höhepunkte</i>",
+      "shortCredit__ru": "<i>Реликвии</i>",
+      "shortCredit__fr": "<i>Les incontournables</i>",
+      "shortCredit__zh": "<i>Highlights</i>",
+      "shortCredit__svKids": "<i>Barnens audioguide</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Highlights</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Höjdpunkter</i>",
+      "longCredit__it": "Foto: Karolina Kristensson\\n<i>Le parti salienti</i>",
+      "longCredit__ar": "Foto: Karolina Kristensson\\n<i>مقتطفات</i>",
+      "longCredit__es": "Foto: Karolina Kristensson\\n<i>Atracciones principales</i>",
+      "longCredit__fi": "Foto: Karolina Kristensson\\n<i>Kohokohtia</i>",
+      "longCredit__de": "Foto: Karolina Kristensson\\n<i>Höhepunkte</i>",
+      "longCredit__ru": "Foto: Karolina Kristensson\\n<i>Реликвии</i>",
+      "longCredit__fr": "Foto: Karolina Kristensson\\n<i>Les incontournables</i>",
+      "longCredit__zh": "Foto: Karolina Kristensson\\n<i>Highlights</i>",
+      "longCredit__svKids": "Foto: Karolina Kristensson\\n<i>Barnens audioguide</i>",
       "duration__ar": 2863,
       "duration__de": 2841,
       "duration__en": 2851,
@@ -1599,11 +1599,11 @@
       "duration__it": 2861,
       "duration__ru": 3473,
       "duration__sv": 2894,
-      "duration__sesma": 2894,
-      "duration__sesme": 2894,
-      "duration__sesmj": 2894,
-      "duration__svkids": 2286,
-      "duration__svsimple": 2756,
+      "duration__seSma": 2894,
+      "duration__seSme": 2894,
+      "duration__seSmj": 2894,
+      "duration__svKids": 2286,
+      "duration__svSimple": 2756,
       "duration__zh": 2863
     },
     {
@@ -1611,16 +1611,16 @@
       "order": 1,
       "title__en": "The Arctic – While the Ice is Melting",
       "title__sv": "Arktis – medan isen smälter",
-      "audiocontent": "203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226",
-      "imageurl": "arctic.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "The Arctic – While the Ice is Melting",
-      "imageaccessibilitylabel__sv": "Arktis – medan isen smälter",
-      "shortcredit__en": "<i>The Arctic – While the Ice is Melting</i>",
-      "shortcredit__sv": "<i>Arktis – medan isen smälter</i>",
-      "longcredit__en": "Photo: Camilla Andersen\\n<i>The Arctic – While the Ice is Melting</i>",
-      "longcredit__sv": "Foto: Camilla Andersen\\n<i>Arktis – medan isen smälter</i>",
+      "audioContent": "203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226",
+      "imageURL": "arctic.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "The Arctic – While the Ice is Melting",
+      "imageAccessibilityLabel__sv": "Arktis – medan isen smälter",
+      "shortCredit__en": "<i>The Arctic – While the Ice is Melting</i>",
+      "shortCredit__sv": "<i>Arktis – medan isen smälter</i>",
+      "longCredit__en": "Photo: Camilla Andersen\\n<i>The Arctic – While the Ice is Melting</i>",
+      "longCredit__sv": "Foto: Camilla Andersen\\n<i>Arktis – medan isen smälter</i>",
       "duration__ar": 1,
       "duration__de": 1,
       "duration__en": 1,
@@ -1630,11 +1630,11 @@
       "duration__it": 1,
       "duration__ru": 1,
       "duration__sv": 1,
-      "duration__sesma": 1,
-      "duration__sesme": 1,
-      "duration__sesmj": 1,
-      "duration__svkids": 1,
-      "duration__svsimple": 1,
+      "duration__seSma": 1,
+      "duration__seSme": 1,
+      "duration__seSmj": 1,
+      "duration__svKids": 1,
+      "duration__svSimple": 1,
       "duration__zh": 1
     },
     {
@@ -1643,16 +1643,16 @@
       "regions": "Traditions",
       "title__en": "Traditions",
       "title__sv": "Traditioner",
-      "audiocontent": "333,355,331,332,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354",
-      "imageurl": "traditions.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Traditions",
-      "imageaccessibilitylabel__sv": "Traditioner",
-      "shortcredit__en": "<i>Traditions</i>",
-      "shortcredit__sv": "<i>Traditioner</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Traditions</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Traditioner</i>",
+      "audioContent": "333,355,331,332,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354",
+      "imageURL": "traditions.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Traditions",
+      "imageAccessibilityLabel__sv": "Traditioner",
+      "shortCredit__en": "<i>Traditions</i>",
+      "shortCredit__sv": "<i>Traditioner</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Traditions</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Traditioner</i>",
       "duration__ar": 4620,
       "duration__de": 4620,
       "duration__en": 4620,
@@ -1662,11 +1662,11 @@
       "duration__it": 4620,
       "duration__ru": 4620,
       "duration__sv": 5040,
-      "duration__sesma": 5040,
-      "duration__sesme": 5040,
-      "duration__sesmj": 5040,
-      "duration__svkids": 5040,
-      "duration__svsimple": 5040,
+      "duration__seSma": 5040,
+      "duration__seSme": 5040,
+      "duration__seSmj": 5040,
+      "duration__svKids": 5040,
+      "duration__svSimple": 5040,
       "duration__zh": 4620
     },
     {
@@ -1676,19 +1676,19 @@
       "title__en": "Table Settings",
       "title__sv": "Dukade bord",
       "title__de": "Tischdekorationen",
-      "audiocontent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,398,399",
-      "imageurl": "tableSettings.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Table Settings",
-      "imageaccessibilitylabel__sv": "Dukade bord",
-      "imageaccessibilitylabel__de": "Tischdekorationen",
-      "shortcredit__en": "<i>Table Settings</i>",
-      "shortcredit__sv": "<i>Dukade bord</i>",
-      "shortcredit__de": "<i>Tischdekorationen</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Table Settings</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Dukade bord</i>",
-      "longcredit__de": "Photo: Karolina Kristensson\\n<i>Tischdekorationen</i>",
+      "audioContent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,398,399",
+      "imageURL": "tableSettings.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Table Settings",
+      "imageAccessibilityLabel__sv": "Dukade bord",
+      "imageAccessibilityLabel__de": "Tischdekorationen",
+      "shortCredit__en": "<i>Table Settings</i>",
+      "shortCredit__sv": "<i>Dukade bord</i>",
+      "shortCredit__de": "<i>Tischdekorationen</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Table Settings</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Dukade bord</i>",
+      "longCredit__de": "Photo: Karolina Kristensson\\n<i>Tischdekorationen</i>",
       "duration__ar": 2160,
       "duration__de": 2280,
       "duration__en": 2160,
@@ -1698,11 +1698,11 @@
       "duration__it": 2160,
       "duration__ru": 2160,
       "duration__sv": 2340,
-      "duration__sesma": 2340,
-      "duration__sesme": 2340,
-      "duration__sesmj": 2340,
-      "duration__svkids": 2340,
-      "duration__svsimple": 2340,
+      "duration__seSma": 2340,
+      "duration__seSme": 2340,
+      "duration__seSmj": 2340,
+      "duration__svKids": 2340,
+      "duration__svSimple": 2340,
       "duration__zh": 2160
     },
     {
@@ -1711,16 +1711,16 @@
       "regions": "Homes and Interiors W,Homes and Interiors E",
       "title__en": "Homes and Interiors",
       "title__sv": "Hem och bostad",
-      "audiocontent": "401,408,413,424,425,402,403,404,405,406,407,409,410,411,412,414,415,416,417,418,419,420,421,422",
-      "imageurl": "homesAndInteriors.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Homes and Interiors",
-      "imageaccessibilitylabel__sv": "Hem och bostad",
-      "shortcredit__en": "<i>Homes and Interiors</i>",
-      "shortcredit__sv": "<i>Hem och bostad</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Homes and Interiors</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Hem och bostad</i>",
+      "audioContent": "401,408,413,424,425,402,403,404,405,406,407,409,410,411,412,414,415,416,417,418,419,420,421,422",
+      "imageURL": "homesAndInteriors.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Homes and Interiors",
+      "imageAccessibilityLabel__sv": "Hem och bostad",
+      "shortCredit__en": "<i>Homes and Interiors</i>",
+      "shortCredit__sv": "<i>Hem och bostad</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Homes and Interiors</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Hem och bostad</i>",
       "duration__ar": 3420,
       "duration__de": 3420,
       "duration__en": 3420,
@@ -1730,11 +1730,11 @@
       "duration__it": 3420,
       "duration__ru": 3420,
       "duration__sv": 3420,
-      "duration__sesma": 3420,
-      "duration__sesme": 3420,
-      "duration__sesmj": 3420,
-      "duration__svkids": 3420,
-      "duration__svsimple": 3420,
+      "duration__seSma": 3420,
+      "duration__seSme": 3420,
+      "duration__seSmj": 3420,
+      "duration__svKids": 3420,
+      "duration__svSimple": 3420,
       "duration__zh": 3420
     },
     {
@@ -1743,16 +1743,16 @@
       "regions": "Sapmi",
       "title__en": "Sápmi",
       "title__sv": "Sápmi",
-      "audiocontent": "426,434,427,428,429,430,431,432,433,435,436,437,438,439,440,441,442,443,444,445,446,447",
-      "imageurl": "sapmi.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Sápmi",
-      "imageaccessibilitylabel__sv": "Sápmi",
-      "shortcredit__en": "<i>Sápmi</i>",
-      "shortcredit__sv": "<i>Sápmi</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Sápmi</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Sápmi</i>",
+      "audioContent": "426,434,427,428,429,430,431,432,433,435,436,437,438,439,440,441,442,443,444,445,446,447",
+      "imageURL": "sapmi.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Sápmi",
+      "imageAccessibilityLabel__sv": "Sápmi",
+      "shortCredit__en": "<i>Sápmi</i>",
+      "shortCredit__sv": "<i>Sápmi</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Sápmi</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Sápmi</i>",
       "duration__ar": 1260,
       "duration__de": 1260,
       "duration__en": 1260,
@@ -1762,11 +1762,11 @@
       "duration__it": 1260,
       "duration__ru": 1260,
       "duration__sv": 2640,
-      "duration__sesma": 2880,
-      "duration__sesme": 2700,
-      "duration__sesmj": 2700,
-      "duration__svkids": 2640,
-      "duration__svsimple": 2640,
+      "duration__seSma": 2880,
+      "duration__seSme": 2700,
+      "duration__seSmj": 2700,
+      "duration__svKids": 2640,
+      "duration__svSimple": 2640,
       "duration__zh": 1260
     },
     {
@@ -1775,16 +1775,16 @@
       "regions": "Textile Gallery",
       "title__en": "Textile Gallery",
       "title__sv": "Textilgalleriet",
-      "audiocontent": "469,470,471,472,473,474,475,476",
-      "imageurl": "textileGallery.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Textile Gallery",
-      "imageaccessibilitylabel__sv": "Textilgalleriet",
-      "shortcredit__en": "<i>Textile Gallery</i>",
-      "shortcredit__sv": "<i>Textilgalleriet</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Textile Gallery</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Textilgalleriet</i>",
+      "audioContent": "469,470,471,472,473,474,475,476",
+      "imageURL": "textileGallery.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Textile Gallery",
+      "imageAccessibilityLabel__sv": "Textilgalleriet",
+      "shortCredit__en": "<i>Textile Gallery</i>",
+      "shortCredit__sv": "<i>Textilgalleriet</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Textile Gallery</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Textilgalleriet</i>",
       "duration__ar": 900,
       "duration__de": 900,
       "duration__en": 900,
@@ -1794,11 +1794,11 @@
       "duration__it": 900,
       "duration__ru": 900,
       "duration__sv": 660,
-      "duration__sesma": 660,
-      "duration__sesme": 660,
-      "duration__sesmj": 660,
-      "duration__svkids": 660,
-      "duration__svsimple": 660,
+      "duration__seSma": 660,
+      "duration__seSme": 660,
+      "duration__seSmj": 660,
+      "duration__svKids": 660,
+      "duration__svSimple": 660,
       "duration__zh": 900
     },
     {
@@ -1807,16 +1807,16 @@
       "regions": "Swedish Folk Art",
       "title__en": "Swedish Folk Art",
       "title__sv": "Folkkonst",
-      "audiocontent": "451,456,448,449,450,452,453,454,455,457,458,459,460",
-      "imageurl": "swedishFolkArt.png",
-      "imagewidth": 750,
-      "imageheight": 345,
-      "imageaccessibilitylabel__en": "Swedish Folk Art",
-      "imageaccessibilitylabel__sv": "Folkkonst",
-      "shortcredit__en": "<i>Swedish Folk Art</i>",
-      "shortcredit__sv": "<i>Folkkonst</i>",
-      "longcredit__en": "Photo: Karolina Kristensson\\n<i>Swedish Folk Art</i>",
-      "longcredit__sv": "Foto: Karolina Kristensson\\n<i>Folkkonst</i>",
+      "audioContent": "451,456,448,449,450,452,453,454,455,457,458,459,460",
+      "imageURL": "swedishFolkArt.png",
+      "imageWidth": 750,
+      "imageHeight": 345,
+      "imageAccessibilityLabel__en": "Swedish Folk Art",
+      "imageAccessibilityLabel__sv": "Folkkonst",
+      "shortCredit__en": "<i>Swedish Folk Art</i>",
+      "shortCredit__sv": "<i>Folkkonst</i>",
+      "longCredit__en": "Photo: Karolina Kristensson\\n<i>Swedish Folk Art</i>",
+      "longCredit__sv": "Foto: Karolina Kristensson\\n<i>Folkkonst</i>",
       "duration__ar": 1320,
       "duration__de": 1320,
       "duration__en": 1320,
@@ -1826,11 +1826,11 @@
       "duration__it": 1320,
       "duration__ru": 1320,
       "duration__sv": 1260,
-      "duration__sesma": 1260,
-      "duration__sesme": 1260,
-      "duration__sesmj": 1260,
-      "duration__svkids": 1260,
-      "duration__svsimple": 1260,
+      "duration__seSma": 1260,
+      "duration__seSme": 1260,
+      "duration__seSmj": 1260,
+      "duration__svKids": 1260,
+      "duration__svSimple": 1260,
       "duration__zh": 1320
     }
   ],
@@ -1849,8 +1849,8 @@
       "title__ru": "Добро пожаловать в Северный музей",
       "title__fr": "Bienvenue au Musée nordique",
       "title__zh": "欢迎来到北欧博物馆",
-      "title__svsimple": "Välkommen till Nordiska museet",
-      "title__svkids": "A. Välkommen till Nordiska museet",
+      "title__svSimple": "Välkommen till Nordiska museet",
+      "title__svKids": "A. Välkommen till Nordiska museet",
       "duration__ar": "111",
       "duration__de": "85",
       "duration__en": "110",
@@ -1860,10 +1860,9 @@
       "duration__it": "111",
       "duration__ru": "116",
       "duration__sv": "100",
-      "duration__svkids": "105",
-      "duration__svsimple": "107",
+      "duration__svKids": "105",
+      "duration__svSimple": "107",
       "duration__zh": "111",
-      "audiourl": "201",
       "transcript__it": "Benvenuti al Nordiska museet, il museo nordico, il più grande museo dedicato alla storia della cultura in Svezia. Mi chiamo Sanne Houby-Nielsen e sono la Direttrice del Museo.\\n\\nQuesta imponente statua raffigura Gustav Vasa, il re che unificò la Svezia nel 16esimo secolo. Il Museo vi mostrerà come viveva la popolazione in Svezia, dall’epoca di Gustav Vasa fino ai giorni nostri; le varie tipologie di abitazioni, l’abbigliamento, i piatti tipici e come celebravano i giorni memorabili. La statua è opera dello scultore svedese Carl Milles.\\n\\nQuando il Museo fu fondato, alla fine del 19esimo secolo, era stato ideato per esporre oggetti provenienti da tutti i Paesi Nordici, da cui è derivato il nome “Museo Nordico”. Ma attualmente si offre solamente uno spaccato del mondo svedese. Notate l’iscrizione ai piedi del re Gustav Vasa, “Warer Svenske!”, “Siate svedesi!” Il fondatore del museo, Artur Hazelius, riteneva che la passione per la storia andasse di pari passo  con il patriottismo.\\n\\nOggi il Museo nordico vuole raccontare le storie di tutte le persone che vivono e hanno vissuto in Svezia e nella regione nordica.\\n\\nQuesta visita è chiamata “Le parti salienti del Museo Nordico” e vi mostrerà alcuni tra gli oggetti e le esposizioni più interessanti del museo. Durerà circa un’ora.\\n\\nCercate gli stand gialli delle audioguide.\\n\\nPrendete l’ascensore fino al quarto piano. La visita proseguirà con la mostra dedicata alle case e all’arredamento. Vi auguro una buona visita.",
       "transcript__ar": "أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\\n\\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\\n\\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\\n\\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\\n\\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\\n\\nتدعى هذه الجولة السياحية \"مقتطفات من متحف نورديسكا\". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\\n\\nانتبهوا للافتات الإرشاد السمعي الصفراء .\\n\\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى \"المنازل والتصاميم الداخلية\". أتمنى لكم جولة سعيدة",
       "transcript__fi": "Tervetuloa Nordiska museetiin, Ruotsin suurimpaan kulttuurihistorialliseen museoon.\\n\\nTämä valtava patsas esittää Kustaa Vaasaa, kuningasta joka yhdisti Ruotsin 1500-luvulla. Museossa esitellään ihmisten elämää Ruotsissa Kustaa Vaasan ajoista aina nykypäivään saakka – kuinka he asuivat, miten he pukeutuivat, mitä he söivät ja kuinka he juhlistivat tärkeitä tapahtumia. Patsaan on tehnyt ruotsalainen kuvanveistäjä Carl Milles.\\n\\nKun museo perustettiin 1800-luvun lopulla, siellä oli tarkoitus esitellä esineitä kaikista Pohjoismaista. Siitä juontuu nimi Nordiska museet, Pohjoismainen museo. Mutta nykyään täällä esitellään vain ruotsalaisten elämää. Huomioikaa teksti kuningas Kustaa Vaasan jalkojen alla. - Warer Svenske!, Olkaa ruotsalaisia! Museon perustaja Artur Hazelius uskoi, että kiinnostus historiaa kohtaan kulki käsi kädessä isänmaallisuuden kanssa.\\n\\nNyt haluaisimme kertoa kaikkien Ruotsissa ja Pohjolassa asuvien ja asuneiden ihmisten tarinat.\\n\\nMuseon kohokohdat -kierros esittelee useita museon kiinnostavimpia esineitä ja näyttelyitä. Se kestää noin tunnin verran.\\n\\nEtsikää keltaisia audio-opas-telineitä.\\n\\nMenkää hissillä neljänteen kerrokseen. Kierros jatkuu siellä Koti ja sisustus -näyttelyn merkeissä. Toivottavasti viihdytte.",
@@ -1883,8 +1882,8 @@
       "title__ru": "Квартира 40-х годов 20 века",
       "title__fr": "L’appartement des années 1940",
       "title__zh": "20世纪40年代的公寓",
-      "title__svsimple": "Folkhemslägenheten",
-      "title__svkids": "V. Hemma hos familjen Johansson",
+      "title__svSimple": "Folkhemslägenheten",
+      "title__svKids": "V. Hemma hos familjen Johansson",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -1894,10 +1893,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "202"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": 203,
@@ -2057,8 +2055,8 @@
       "title__ru": "Ювелирные изделия",
       "title__fr": "Bijoux",
       "title__zh": "珠宝",
-      "title__svsimple": "Smycken",
-      "title__svkids": "M. Smycken",
+      "title__svSimple": "Smycken",
+      "title__svKids": "M. Smycken",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2068,10 +2066,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "301"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "302",
@@ -2087,8 +2084,8 @@
       "title__ru": "Самый старый кукольный домик в Швеции",
       "title__fr": "La plus ancienne maison de poupées de Suède",
       "title__zh": "瑞典最古老的玩具屋",
-      "title__svsimple": "Sveriges äldsta dockskåp",
-      "title__svkids": "N. Gunvors dockskåp med hiss",
+      "title__svSimple": "Sveriges äldsta dockskåp",
+      "title__svKids": "N. Gunvors dockskåp med hiss",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2098,10 +2095,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "302"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "312",
@@ -2111,8 +2107,7 @@
       "title__de": "Von einfachen Formen zur Extravaganz",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "312"
+      "duration__sv": "3"
     },
     {
       "id": "313",
@@ -2122,8 +2117,7 @@
       "title__de": "Die mittelalterliche Tafel der Adligen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "313"
+      "duration__sv": "3"
     },
     {
       "id": "314",
@@ -2133,8 +2127,7 @@
       "title__de": "Opulenz für Auge und Gaumen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "314"
+      "duration__sv": "3"
     },
     {
       "id": "315",
@@ -2144,8 +2137,7 @@
       "title__de": "Handel statt Krieg",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "315"
+      "duration__sv": "3"
     },
     {
       "id": "316",
@@ -2161,8 +2153,8 @@
       "title__ru": "Лебедь на столе",
       "title__fr": "Un cygne à table",
       "title__zh": "餐桌上的天鹅",
-      "title__svsimple": "En svan på bordet",
-      "title__svkids": "O. En svan på bordet",
+      "title__svSimple": "En svan på bordet",
+      "title__svKids": "O. En svan på bordet",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2172,10 +2164,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "316"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "317",
@@ -2185,8 +2176,7 @@
       "title__de": "Die exklusiven Süßigkeiten",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "317"
+      "duration__sv": "3"
     },
     {
       "id": "318",
@@ -2196,8 +2186,7 @@
       "title__de": "Über die Meere nach Schweden",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "318"
+      "duration__sv": "3"
     },
     {
       "id": "319",
@@ -2207,8 +2196,7 @@
       "title__de": "Der raffinierte Punsch",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "319"
+      "duration__sv": "3"
     },
     {
       "id": "320",
@@ -2218,8 +2206,7 @@
       "title__de": "Essen, hinter dem mehr steckt",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "320"
+      "duration__sv": "3"
     },
     {
       "id": "321",
@@ -2229,8 +2216,7 @@
       "title__de": "Spuren von antiken Formen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "321"
+      "duration__sv": "3"
     },
     {
       "id": "322",
@@ -2240,8 +2226,7 @@
       "title__de": "Frau Hedwigs Teestunde",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "322"
+      "duration__sv": "3"
     },
     {
       "id": "323",
@@ -2251,8 +2236,7 @@
       "title__de": "Ein Schnaps vor dem Abendessen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "323"
+      "duration__sv": "3"
     },
     {
       "id": "324",
@@ -2262,8 +2246,7 @@
       "title__de": "Feiern mit Pomp und Prunk",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "324"
+      "duration__sv": "3"
     },
     {
       "id": "325",
@@ -2273,8 +2256,7 @@
       "title__de": "Ein Festmahl 1883",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "325"
+      "duration__sv": "3"
     },
     {
       "id": "326",
@@ -2284,8 +2266,7 @@
       "title__de": "Immer einfachere Formen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "326"
+      "duration__sv": "3"
     },
     {
       "id": "327",
@@ -2295,8 +2276,7 @@
       "title__de": "Selmas Kaffeekränzchen",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "327"
+      "duration__sv": "3"
     },
     {
       "id": "328",
@@ -2312,8 +2292,8 @@
       "title__ru": "Десять видов печенья",
       "title__fr": "Dix sortes de biscuits",
       "title__zh": "十种饼干",
-      "title__svsimple": "Tio sorters kakor",
-      "title__svkids": "P. Tio sorters kakor",
+      "title__svSimple": "Tio sorters kakor",
+      "title__svKids": "P. Tio sorters kakor",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2323,10 +2303,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "328"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "330",
@@ -2342,8 +2321,8 @@
       "title__ru": "Портал во Дворец Повседневности",
       "title__fr": "Portail du Palais de la vie quotidienne",
       "title__zh": "通往豪宅居所的大门",
-      "title__svsimple": "Pampigt som ett slott",
-      "title__svkids": "Q. Museet som handlar om dig",
+      "title__svSimple": "Pampigt som ett slott",
+      "title__svKids": "Q. Museet som handlar om dig",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2353,10 +2332,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "330"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "331",
@@ -2364,8 +2342,7 @@
       "title__en": "Changing seasons and the course of life",
       "title__sv": "Årstidernas växlingar och livets gång",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "331"
+      "duration__sv": "100"
     },
     {
       "id": "332",
@@ -2373,8 +2350,7 @@
       "title__en": "Heathens become Christians",
       "title__sv": "Hedning blir kristen",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "332"
+      "duration__sv": "100"
     },
     {
       "id": "333",
@@ -2390,8 +2366,8 @@
       "title__ru": "Канун праздника Солнцестояния",
       "title__fr": "La fête de la Saint-Jean d’été",
       "title__zh": "仲夏夜",
-      "title__svsimple": "Midsommarafton",
-      "title__svkids": "S. Midsommarafton",
+      "title__svSimple": "Midsommarafton",
+      "title__svKids": "S. Midsommarafton",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2401,10 +2377,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "333"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "334",
@@ -2412,8 +2387,7 @@
       "title__en": "At midsummer",
       "title__sv": "I midsommartid",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "334"
+      "duration__sv": "100"
     },
     {
       "id": "335",
@@ -2421,8 +2395,7 @@
       "title__en": "The 6th of June",
       "title__sv": "Den 6 juni",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "335"
+      "duration__sv": "100"
     },
     {
       "id": "336",
@@ -2430,8 +2403,7 @@
       "title__en": "Crayfish parties and surströmming feasts",
       "title__sv": "Kräftskiva och surströmmingsfest",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "336"
+      "duration__sv": "100"
     },
     {
       "id": "337",
@@ -2439,8 +2411,7 @@
       "title__en": "Michaelmas",
       "title__sv": "Mickelsmäss",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "337"
+      "duration__sv": "100"
     },
     {
       "id": "338",
@@ -2448,8 +2419,7 @@
       "title__en": "Martinmas goose dinner",
       "title__sv": "Mårten gås",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "338"
+      "duration__sv": "100"
     },
     {
       "id": "339",
@@ -2457,8 +2427,7 @@
       "title__en": "Traditions of spring",
       "title__sv": "Vårens traditioner",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "339"
+      "duration__sv": "100"
     },
     {
       "id": "340",
@@ -2466,8 +2435,7 @@
       "title__en": "The Holy Week and belief in witches",
       "title__sv": "Dymmelvecka och häxtro",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "340"
+      "duration__sv": "100"
     },
     {
       "id": "341",
@@ -2475,8 +2443,7 @@
       "title__en": "Good Friday",
       "title__sv": "Långfredagen",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "341"
+      "duration__sv": "100"
     },
     {
       "id": "342",
@@ -2484,8 +2451,7 @@
       "title__en": "Easter",
       "title__sv": "Påskdagen",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "342"
+      "duration__sv": "100"
     },
     {
       "id": "343",
@@ -2493,8 +2459,7 @@
       "title__en": "From Walpurgis night to Whitsun",
       "title__sv": "Från valborgsmässoafton till pingst",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "343"
+      "duration__sv": "100"
     },
     {
       "id": "344",
@@ -2502,8 +2467,7 @@
       "title__en": "Graduation",
       "title__sv": "Studenten",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "344"
+      "duration__sv": "100"
     },
     {
       "id": "345",
@@ -2511,8 +2475,7 @@
       "title__en": "Confirmation",
       "title__sv": "Konfirmationen",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "345"
+      "duration__sv": "100"
     },
     {
       "id": "346",
@@ -2520,8 +2483,7 @@
       "title__en": "From feelers to weddings",
       "title__sv": "Från trevare till bröllop",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "346"
+      "duration__sv": "100"
     },
     {
       "id": "347",
@@ -2529,8 +2491,7 @@
       "title__en": "Wedding essentials",
       "title__sv": "Det som hör bröllopet till",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "347"
+      "duration__sv": "100"
     },
     {
       "id": "348",
@@ -2538,8 +2499,7 @@
       "title__en": "Wedding receptions and settling down",
       "title__sv": "Bröllopsfest och bosättning",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "348"
+      "duration__sv": "100"
     },
     {
       "id": "349",
@@ -2547,8 +2507,7 @@
       "title__en": "The Lady at Årsta celebrates her name day",
       "title__sv": "Årstafrun firar namnsdag",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "349"
+      "duration__sv": "100"
     },
     {
       "id": "350",
@@ -2556,8 +2515,7 @@
       "title__en": "Greeting pictures",
       "title__sv": "Gratulationstavlor",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "350"
+      "duration__sv": "100"
     },
     {
       "id": "351",
@@ -2565,8 +2523,7 @@
       "title__en": "The Advent calendar",
       "title__sv": "Adventskalendern",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "351"
+      "duration__sv": "100"
     },
     {
       "id": "352",
@@ -2574,8 +2531,7 @@
       "title__en": "Christmas in town and country",
       "title__sv": "Jul i stad och land",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "352"
+      "duration__sv": "100"
     },
     {
       "id": "353",
@@ -2583,8 +2539,7 @@
       "title__en": "From Saint Lucy’s day to Saint Canute’s day",
       "title__sv": "Från Lucia till tjugondag Knut",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "353"
+      "duration__sv": "100"
     },
     {
       "id": "354",
@@ -2592,8 +2547,7 @@
       "title__en": "Funerary rites",
       "title__sv": "Det som hör döden till",
       "duration__en": "110",
-      "duration__sv": "100",
-      "audiourl": "354"
+      "duration__sv": "100"
     },
     {
       "id": "355",
@@ -2609,8 +2563,8 @@
       "title__ru": "День, когда умер Ганзе-Калле",
       "title__fr": "À la mort d’Hanse-Kalle",
       "title__zh": "汉斯-卡勒的葬礼",
-      "title__svsimple": "När Hanse-Kalle dog",
-      "title__svkids": "R. När tiggaren Aron dog",
+      "title__svSimple": "När Hanse-Kalle dog",
+      "title__svKids": "R. När tiggaren Aron dog",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2620,10 +2574,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "355"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "356",
@@ -2639,8 +2592,8 @@
       "title__ru": "Рукопись Артура Стриндберга",
       "title__fr": "Les œuvres d’August Strindberg",
       "title__zh": "奥古斯特·斯特林堡手稿",
-      "title__svsimple": "Författaren August Strindberg",
-      "title__svkids": "U. Författaren August Strindberg",
+      "title__svSimple": "Författaren August Strindberg",
+      "title__svKids": "U. Författaren August Strindberg",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2650,10 +2603,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "356"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "357",
@@ -2669,8 +2621,8 @@
       "title__ru": "Рисунки Артура Стриндберга",
       "title__fr": "L’art d’August Strindberg",
       "title__zh": "奥古斯特·斯特林堡画作",
-      "title__svsimple": "August Strindbergs måleri",
-      "title__svkids": "T. August Strindbergs måleri",
+      "title__svSimple": "August Strindbergs måleri",
+      "title__svKids": "T. August Strindbergs måleri",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -2680,10 +2632,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "357"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "398",
@@ -2693,8 +2644,7 @@
       "title__de": "Willkommen zu Tisch",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "398"
+      "duration__sv": "3"
     },
     {
       "id": "399",
@@ -2704,8 +2654,7 @@
       "title__de": "Frühstück am Mittag",
       "duration__de": "3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "399"
+      "duration__sv": "3"
     },
     {
       "id": "401",
@@ -2721,8 +2670,8 @@
       "title__ru": "Двухкомнатный дом",
       "title__fr": "Le cottage composé de deux pièces",
       "title__zh": "两室农舍",
-      "title__svsimple": "Parstugan",
-      "title__svkids": "B. I bondefamiljens parstuga",
+      "title__svSimple": "Parstugan",
+      "title__svKids": "B. I bondefamiljens parstuga",
       "duration__ar": "105",
       "duration__de": "99",
       "duration__en": "105",
@@ -2731,14 +2680,13 @@
       "duration__fr": "105",
       "duration__it": "105",
       "duration__ru": "101",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "105",
-      "duration__svkids": "63",
-      "duration__svsimple": "110",
-      "duration__zh": "105",
-      "audiourl": "401"
+      "duration__svKids": "63",
+      "duration__svSimple": "110",
+      "duration__zh": "105"
     },
     {
       "id": "402",
@@ -2746,8 +2694,7 @@
       "title__en": "Music of the time: Traditional 18th-century dance from Dalecarlia",
       "title__sv": "Musik från tiden: traditionell daldans från 1700-talet",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "402"
+      "duration__sv": "3"
     },
     {
       "id": "403",
@@ -2755,8 +2702,7 @@
       "title__en": "A voice from 1580: On peasant housing",
       "title__sv": "Röst från 1580: om bondebostaden",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "403"
+      "duration__sv": "3"
     },
     {
       "id": "404",
@@ -2764,8 +2710,7 @@
       "title__en": "Music of the time: Hab ich dir nicht außgerüst",
       "title__sv": "Musik från tiden: Hab ich dir nicht außgerüst",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "404"
+      "duration__sv": "3"
     },
     {
       "id": "405",
@@ -2773,8 +2718,7 @@
       "title__en": "A voice from 1635: The interiors of Swedish nobility",
       "title__sv": "Röst från 1635: den svenska adelns inredning",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "405"
+      "duration__sv": "3"
     },
     {
       "id": "406",
@@ -2782,8 +2726,7 @@
       "title__en": "Music of the time: Ack vad för usel koja",
       "title__sv": "Musik från tiden: Ack vad för usel koja",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "406"
+      "duration__sv": "3"
     },
     {
       "id": "407",
@@ -2791,8 +2734,7 @@
       "title__en": "A voice from 1751: A new flat for the admiral",
       "title__sv": "Röst från 1751: en ny våning för amiralen",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "407"
+      "duration__sv": "3"
     },
     {
       "id": "408",
@@ -2808,8 +2750,8 @@
       "title__ru": "Спальная для официальных приемов",
       "title__fr": "La chambre d’apparat",
       "title__zh": "贵宾卧室",
-      "title__svsimple": "Paradsängkammaren",
-      "title__svkids": "C. Familjen Torstensons paradsängkammare",
+      "title__svSimple": "Paradsängkammaren",
+      "title__svKids": "C. Familjen Torstensons paradsängkammare",
       "duration__ar": "95",
       "duration__de": "95",
       "duration__en": "95",
@@ -2818,14 +2760,13 @@
       "duration__fr": "85",
       "duration__it": "95",
       "duration__ru": "90",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "95",
-      "duration__svkids": "100",
-      "duration__svsimple": "114",
-      "duration__zh": "95",
-      "audiourl": "408"
+      "duration__svKids": "100",
+      "duration__svSimple": "114",
+      "duration__zh": "95"
     },
     {
       "id": "409",
@@ -2833,8 +2774,7 @@
       "title__en": "Music of the time: Menuet and March with variations",
       "title__sv": "Musik från tiden: Menuet och Marsch med variation",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "409"
+      "duration__sv": "3"
     },
     {
       "id": "410",
@@ -2842,8 +2782,7 @@
       "title__en": "The everyday life of a maid",
       "title__sv": "En pigas vardag",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "410"
+      "duration__sv": "3"
     },
     {
       "id": "411",
@@ -2851,8 +2790,7 @@
       "title__en": "Music of the time: Lento and Vivace from Triosonate in D major",
       "title__sv": "Musik från tiden: Lento och Vivace ur Triosonate D-dur",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "411"
+      "duration__sv": "3"
     },
     {
       "id": "412",
@@ -2860,8 +2798,7 @@
       "title__en": "A voice from the 1790s: A simpler Swedish home",
       "title__sv": "Röst från 1790-talet: ett enklare svenskt hem",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "412"
+      "duration__sv": "3"
     },
     {
       "id": "413",
@@ -2877,8 +2814,8 @@
       "title__ru": "Дом пивовара",
       "title__fr": "La maison du brasseur",
       "title__zh": "酒商的住宅",
-      "title__svsimple": "Bryggarbostaden",
-      "title__svkids": "D. Bryggare Hartmans hus",
+      "title__svSimple": "Bryggarbostaden",
+      "title__svKids": "D. Bryggare Hartmans hus",
       "duration__ar": "113",
       "duration__de": "114",
       "duration__en": "113",
@@ -2887,14 +2824,13 @@
       "duration__fr": "109",
       "duration__it": "113",
       "duration__ru": "91",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "113",
-      "duration__svkids": "71",
-      "duration__svsimple": "115",
-      "duration__zh": "113",
-      "audiourl": "413"
+      "duration__svKids": "71",
+      "duration__svSimple": "115",
+      "duration__zh": "113"
     },
     {
       "id": "414",
@@ -2902,8 +2838,7 @@
       "title__en": "Music of the time: Andante from Symphony in D major",
       "title__sv": "Musik från tiden: Andante ur Sinfonia D-dur",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "414"
+      "duration__sv": "3"
     },
     {
       "id": "415",
@@ -2911,8 +2846,7 @@
       "title__en": "A voice from 1799: The cold winter and the Swedish stove",
       "title__sv": "Röst från 1799: den kalla vintern och kakelugnarna",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "415"
+      "duration__sv": "3"
     },
     {
       "id": "416",
@@ -2920,8 +2854,7 @@
       "title__en": "Music of the time: Romance from String quarter in B major Op. 1 No. 3",
       "title__sv": "Musik från tiden: Romans ur Stråkkvartett B-dur opus 1 nr 3",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "416"
+      "duration__sv": "3"
     },
     {
       "id": "417",
@@ -2929,8 +2862,7 @@
       "title__en": "A voice from 1821: The Lady at Årsta orders Empire-style furnishings",
       "title__sv": "Röst från 1821: Årstafrun beställer empiremöblemang",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "417"
+      "duration__sv": "3"
     },
     {
       "id": "418",
@@ -2938,8 +2870,7 @@
       "title__en": "Music of the time: Första aftonen i nya hemmet and Natthimlen",
       "title__sv": "Musik från tiden: Första aftonen i nya hemmet och Natthimlen",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "418"
+      "duration__sv": "3"
     },
     {
       "id": "419",
@@ -2947,8 +2878,7 @@
       "title__en": "A matron’s duties to her husband",
       "title__sv": "En husmoders plikter mot sin man",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "419"
+      "duration__sv": "3"
     },
     {
       "id": "420",
@@ -2956,8 +2886,7 @@
       "title__en": "Visual description: mid-17th-century upholstered chair",
       "title__sv": "Syntolkning: stoppad stol från mitten av 1600-talet",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "420"
+      "duration__sv": "3"
     },
     {
       "id": "421",
@@ -2965,8 +2894,7 @@
       "title__en": "Visual description: A chest of drawers from the 1760s",
       "title__sv": "Syntolkning: byrå från 1760-talet",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "421"
+      "duration__sv": "3"
     },
     {
       "id": "422",
@@ -2974,8 +2902,7 @@
       "title__en": "Visual description: late 18th-century Swedish stove",
       "title__sv": "Syntolkning: kakelugn från slutet av 1700-talet",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "422"
+      "duration__sv": "3"
     },
     {
       "id": "423",
@@ -2991,8 +2918,8 @@
       "title__ru": "Банкетный зал Артура Газелиуса",
       "title__fr": "La salle de réception d’Artur Hazelius",
       "title__zh": "亚瑟·哈兹里乌斯的宴会厅",
-      "title__svsimple": "Artur Hazelius festsal",
-      "title__svkids": "I. Pampigt som ett slott",
+      "title__svSimple": "Artur Hazelius festsal",
+      "title__svKids": "I. Pampigt som ett slott",
       "duration__ar": "100",
       "duration__de": "115",
       "duration__en": "100",
@@ -3001,14 +2928,13 @@
       "duration__fr": "99",
       "duration__it": "100",
       "duration__ru": "136",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "107",
-      "duration__svkids": "61",
-      "duration__svsimple": "93",
-      "duration__zh": "100",
-      "audiourl": "423"
+      "duration__svKids": "61",
+      "duration__svSimple": "93",
+      "duration__zh": "100"
     },
     {
       "id": "424",
@@ -3024,8 +2950,8 @@
       "title__ru": "Купеческий кабинет",
       "title__fr": "Le salon du marchand",
       "title__zh": "商人的客厅",
-      "title__svsimple": "Grosshandlarens salong",
-      "title__svkids": "E. Hemma hos en fattig familj",
+      "title__svSimple": "Grosshandlarens salong",
+      "title__svKids": "E. Hemma hos en fattig familj",
       "duration__ar": "109",
       "duration__de": "113",
       "duration__en": "109",
@@ -3034,14 +2960,13 @@
       "duration__fr": "113",
       "duration__it": "109",
       "duration__ru": "137",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "121",
-      "duration__svkids": "109",
-      "duration__svsimple": "117",
-      "duration__zh": "109",
-      "audiourl": "424"
+      "duration__svKids": "109",
+      "duration__svSimple": "117",
+      "duration__zh": "109"
     },
     {
       "id": "425",
@@ -3057,8 +2982,8 @@
       "title__ru": "Классический функционалист Ева",
       "title__fr": "La chaise Eva classique et fonctionnelle",
       "title__zh": "实用型伊娃古典靠椅",
-      "title__svsimple": "Funkisklassikern Eva",
-      "title__svkids": "F. Den märkvärdiga radion",
+      "title__svSimple": "Funkisklassikern Eva",
+      "title__svKids": "F. Den märkvärdiga radion",
       "duration__ar": "92",
       "duration__de": "94",
       "duration__en": "92",
@@ -3067,14 +2992,13 @@
       "duration__fr": "95",
       "duration__it": "92",
       "duration__ru": "136",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "102",
-      "duration__svkids": "135",
-      "duration__svsimple": "80",
-      "duration__zh": "92",
-      "audiourl": "425"
+      "duration__svKids": "135",
+      "duration__svSimple": "80",
+      "duration__zh": "92"
     },
     {
       "id": "426",
@@ -3090,8 +3014,8 @@
       "title__ru": "Сапми",
       "title__fr": "Sápmi",
       "title__zh": "萨米人",
-      "title__svsimple": "Sápmi",
-      "title__svkids": "H. Sápmi",
+      "title__svSimple": "Sápmi",
+      "title__svKids": "H. Sápmi",
       "duration__ar": "192",
       "duration__de": "190",
       "duration__en": "193",
@@ -3100,14 +3024,13 @@
       "duration__fr": "191",
       "duration__it": "192",
       "duration__ru": "231",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "195",
-      "duration__svkids": "155",
-      "duration__svsimple": "199",
-      "duration__zh": "192",
-      "audiourl": "426"
+      "duration__svKids": "155",
+      "duration__svSimple": "199",
+      "duration__zh": "192"
     },
     {
       "id": "427",
@@ -3115,11 +3038,10 @@
       "title__en": "Whose history? Whose story?",
       "title__sv": "Vems historia? Vems berättelse?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "427"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "428",
@@ -3127,11 +3049,10 @@
       "title__en": "The market at Jokkmokk",
       "title__sv": "Jokkmokks marknad",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "428"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "429",
@@ -3139,11 +3060,10 @@
       "title__en": "Whose cultural heritage?",
       "title__sv": "Vems kulturarv?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "429"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "430",
@@ -3151,11 +3071,10 @@
       "title__en": "Whose objects? Whose history?",
       "title__sv": "Vems saker? Vems historia?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "430"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "431",
@@ -3163,11 +3082,10 @@
       "title__en": "Whose story?",
       "title__sv": "Vems berättelse?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "431"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "432",
@@ -3175,11 +3093,10 @@
       "title__en": "Whose gaze, whose voice?",
       "title__sv": "Vems blick, vems röst?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "432"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "433",
@@ -3187,11 +3104,10 @@
       "title__en": "Who came first?",
       "title__sv": "Vem var först?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "433"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "434",
@@ -3207,8 +3123,8 @@
       "title__ru": "Олень",
       "title__fr": "Le renne",
       "title__zh": "驯鹿",
-      "title__svsimple": "Renen",
-      "title__svkids": "G. Renen",
+      "title__svSimple": "Renen",
+      "title__svKids": "G. Renen",
       "duration__ar": "196",
       "duration__de": "180",
       "duration__en": "194",
@@ -3217,94 +3133,83 @@
       "duration__fr": "191",
       "duration__it": "196",
       "duration__ru": "251",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "199",
-      "duration__svkids": "178",
-      "duration__svsimple": "216",
-      "duration__zh": "196",
-      "audiourl": "434"
+      "duration__svKids": "178",
+      "duration__svSimple": "216",
+      "duration__zh": "196"
     },
     {
       "id": "435",
       "category": "INTERVIEW",
       "title__en": "Interview: Lars-Marcus Kuhmunen (in Swedish)",
       "title__sv": "Intervju: Lars-Marcus Kuhmunen",
-      "duration__sv": "3",
-      "audiourl": "435"
+      "duration__sv": "3"
     },
     {
       "id": "436",
       "category": "INTERVIEW",
       "title__en": "Interview: Elias Torkelsson (in Swedish)",
       "title__sv": "Intervju: Elias Torkelsson",
-      "duration__sv": "3",
-      "audiourl": "436"
+      "duration__sv": "3"
     },
     {
       "id": "437",
       "category": "INTERVIEW",
       "title__en": "Interview: Victoria Harnesk (in Swedish)",
       "title__sv": "Intervju: Victoria Harnesk",
-      "duration__sv": "3",
-      "audiourl": "437"
+      "duration__sv": "3"
     },
     {
       "id": "438",
       "category": "INTERVIEW",
       "title__en": "Interview: Inge Frisk (in Swedish)",
       "title__sv": "Intervju: Inge Frisk",
-      "duration__sv": "3",
-      "audiourl": "438"
+      "duration__sv": "3"
     },
     {
       "id": "439",
       "category": "INTERVIEW",
       "title__en": "Interview: Linda Mannela (in Swedish)",
       "title__sv": "Intervju: Linda Mannela",
-      "duration__sv": "3",
-      "audiourl": "439"
+      "duration__sv": "3"
     },
     {
       "id": "440",
       "category": "INTERVIEW",
       "title__en": "Interview: Lis-Maria Hjortfors (in Swedish)",
       "title__sv": "Intervju: Lis-Maria Hjortfors",
-      "duration__sv": "3",
-      "audiourl": "440"
+      "duration__sv": "3"
     },
     {
       "id": "441",
       "category": "INTERVIEW",
       "title__en": "Interview: Lotta Willborg Stoor (in Swedish)",
       "title__sv": "Intervju: Lotta Willborg Stoor",
-      "duration__sv": "3",
-      "audiourl": "441"
+      "duration__sv": "3"
     },
     {
       "id": "442",
       "category": "INTERVIEW",
       "title__en": "Interview: Per-Gustav Idivuoma (in Swedish)",
       "title__sv": "Intervju: Per-Gustav Idivuoma",
-      "duration__sv": "3",
-      "audiourl": "442"
+      "duration__sv": "3"
     },
     {
       "id": "443",
       "category": "INTERVIEW",
       "title__en": "Interview: Staffan Palopaa (in Swedish)",
       "title__sv": "Intervju: Staffan Palopaa",
-      "duration__sv": "3",
-      "audiourl": "443"
+      "duration__sv": "3"
     },
     {
       "id": "444",
       "category": "INTERVIEW",
       "title__en": "Interview: Sylvia Simma (in Swedish)",
       "title__sv": "Intervju: Sylvia Simma",
-      "duration__sv": "3",
-      "audiourl": "444"
+      "duration__sv": "3"
     },
     {
       "id": "445",
@@ -3312,11 +3217,10 @@
       "title__en": "Whose rights?",
       "title__sv": "Vems rätt?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "445"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "446",
@@ -3324,11 +3228,10 @@
       "title__en": "Sami crafts",
       "title__sv": "Den samiska slöjden",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "446"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "447",
@@ -3336,11 +3239,10 @@
       "title__en": "Whose history? Whose story?",
       "title__sv": "Vems historia? Vems berättelse?",
       "duration__en": "3",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
-      "duration__sv": "3",
-      "audiourl": "447"
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
+      "duration__sv": "3"
     },
     {
       "id": "448",
@@ -3348,8 +3250,7 @@
       "title__en": "A journey of discovery in the world of vernacular art",
       "title__sv": "En upptäcktsfärd i folkkonstens värld",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "448"
+      "duration__sv": "3"
     },
     {
       "id": "449",
@@ -3357,8 +3258,7 @@
       "title__en": "From proposal to wedding",
       "title__sv": "Från frieri till bröllop",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "449"
+      "duration__sv": "3"
     },
     {
       "id": "450",
@@ -3366,8 +3266,7 @@
       "title__en": "Deaths and funerals",
       "title__sv": "Död och begravning",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "450"
+      "duration__sv": "3"
     },
     {
       "id": "451",
@@ -3383,8 +3282,8 @@
       "title__ru": "Формы дедовских часов",
       "title__fr": "Les styles des horloges de parquet",
       "title__zh": "老式落地大摆钟",
-      "title__svsimple": "Golvurens former",
-      "title__svkids": "L. Färgade ullstrumpor",
+      "title__svSimple": "Golvurens former",
+      "title__svKids": "L. Färgade ullstrumpor",
       "duration__ar": "167",
       "duration__de": "166",
       "duration__en": "167",
@@ -3393,14 +3292,13 @@
       "duration__fr": "150",
       "duration__it": "167",
       "duration__ru": "221",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "162",
-      "duration__svkids": "76",
-      "duration__svsimple": "105",
-      "duration__zh": "167",
-      "audiourl": "451"
+      "duration__svKids": "76",
+      "duration__svSimple": "105",
+      "duration__zh": "167"
     },
     {
       "id": "452",
@@ -3408,8 +3306,7 @@
       "title__en": "The image of man",
       "title__sv": "Bilden av människan",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "452"
+      "duration__sv": "3"
     },
     {
       "id": "453",
@@ -3417,8 +3314,7 @@
       "title__en": "Nature as a source of inspiration",
       "title__sv": "Naturen som inspirationskälla",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "453"
+      "duration__sv": "3"
     },
     {
       "id": "454",
@@ -3426,8 +3322,7 @@
       "title__en": "Dalecarlian flower painting",
       "title__sv": "Dalarnas blomstermåleri",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "454"
+      "duration__sv": "3"
     },
     {
       "id": "455",
@@ -3435,8 +3330,7 @@
       "title__en": "Decorative shelves in places of honour",
       "title__sv": "Prydnadshylla på hedersplats",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "455"
+      "duration__sv": "3"
     },
     {
       "id": "456",
@@ -3452,8 +3346,8 @@
       "title__ru": "Власть кресла",
       "title__fr": "Les sièges qui symbolisent le pouvoir",
       "title__zh": "象征权力的座椅",
-      "title__svsimple": "Dyrbara stolar och kistor",
-      "title__svkids": "K. En serietidning från förr",
+      "title__svSimple": "Dyrbara stolar och kistor",
+      "title__svKids": "K. En serietidning från förr",
       "duration__ar": "142",
       "duration__de": "142",
       "duration__en": "142",
@@ -3462,14 +3356,13 @@
       "duration__fr": "139",
       "duration__it": "142",
       "duration__ru": "190",
-      "duration__sesma": "3",
-      "duration__sesme": "3",
-      "duration__sesmj": "3",
+      "duration__seSma": "3",
+      "duration__seSme": "3",
+      "duration__seSmj": "3",
       "duration__sv": "139",
-      "duration__svkids": "116",
-      "duration__svsimple": "102",
-      "duration__zh": "142",
-      "audiourl": "456"
+      "duration__svKids": "116",
+      "duration__svSimple": "102",
+      "duration__zh": "142"
     },
     {
       "id": "457",
@@ -3477,8 +3370,7 @@
       "title__en": "Bible stories on cottage walls",
       "title__sv": "Bibelns berättelser på stugans vägg",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "457"
+      "duration__sv": "3"
     },
     {
       "id": "458",
@@ -3486,8 +3378,7 @@
       "title__en": "Precious textiles",
       "title__sv": "Dyrbara textilier",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "458"
+      "duration__sv": "3"
     },
     {
       "id": "459",
@@ -3495,8 +3386,7 @@
       "title__en": "Coats of arms and royal monograms",
       "title__sv": "Adliga vapen och kungliga monogram",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "459"
+      "duration__sv": "3"
     },
     {
       "id": "460",
@@ -3504,8 +3394,7 @@
       "title__en": "Vernacular art today",
       "title__sv": "Folkkonst idag",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "460"
+      "duration__sv": "3"
     },
     {
       "id": "469",
@@ -3521,8 +3410,8 @@
       "title__ru": "Галерея текстиля",
       "title__fr": "La galerie des textiles",
       "title__zh": "纺织品展廊",
-      "title__svsimple": "Skatter av tyg",
-      "title__svkids": "J. Skatter av tyg",
+      "title__svSimple": "Skatter av tyg",
+      "title__svKids": "J. Skatter av tyg",
       "duration__ar": "3",
       "duration__de": "3",
       "duration__en": "3",
@@ -3532,10 +3421,9 @@
       "duration__it": "3",
       "duration__ru": "3",
       "duration__sv": "3",
-      "duration__svkids": "3",
-      "duration__svsimple": "3",
-      "duration__zh": "3",
-      "audiourl": "469"
+      "duration__svKids": "3",
+      "duration__svSimple": "3",
+      "duration__zh": "3"
     },
     {
       "id": "470",
@@ -3543,8 +3431,7 @@
       "title__en": "Twined knitting against the Nordic cold",
       "title__sv": "Tvåändsstickning mot nordisk kyla",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "470"
+      "duration__sv": "3"
     },
     {
       "id": "471",
@@ -3552,8 +3439,7 @@
       "title__en": "Indian chintz in the Stockholm archipelago",
       "title__sv": "Indisk kattun i Stockholms skärgård",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "471"
+      "duration__sv": "3"
     },
     {
       "id": "472",
@@ -3561,8 +3447,7 @@
       "title__en": "Neat lace",
       "title__sv": "Prydlig spets",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "472"
+      "duration__sv": "3"
     },
     {
       "id": "473",
@@ -3570,8 +3455,7 @@
       "title__en": "Vivid colours from the 15th century",
       "title__sv": "Klara färger från 1400-talet",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "473"
+      "duration__sv": "3"
     },
     {
       "id": "474",
@@ -3579,8 +3463,7 @@
       "title__en": "Decorating the cottage for a feast",
       "title__sv": "Klä stugan till fest",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "474"
+      "duration__sv": "3"
     },
     {
       "id": "475",
@@ -3588,8 +3471,7 @@
       "title__en": "Embroidery with biblical motifs",
       "title__sv": "Broderier med bibliska motiv",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "475"
+      "duration__sv": "3"
     },
     {
       "id": "476",
@@ -3597,8 +3479,7 @@
       "title__en": "Rags and tatters",
       "title__sv": "Trasor och lump",
       "duration__en": "3",
-      "duration__sv": "3",
-      "audiourl": "476"
+      "duration__sv": "3"
     }
   ],
   "Amenities": [
