@@ -10,6 +10,7 @@ import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
 import { localizationActor } from './actors/localization';
+import { audioActor } from './actors/audio';
 
 import {
   NAV_BAR_TEXT,
@@ -46,6 +47,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   const locale = setI18nConfig();
   const store = configureStore({ localization: { locale, appVersion } });
   localizationActor(store);
+  audioActor(store);
 
   registerScreens(store);
 
@@ -64,6 +66,11 @@ Navigation.events().registerAppLaunchedListener(async () => {
                 {
                   component: {
                     name: 'nearMe',
+                    options: {
+                      topBar: {
+                        visible: false,
+                      },
+                    },
                   },
                 },
               ],

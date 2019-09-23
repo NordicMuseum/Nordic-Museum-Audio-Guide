@@ -3,6 +3,9 @@
 // import { setAudioManagerEventListeners } from './audioEvents';
 // import { clearTimer } from './audioTimer';
 
+import i18n from 'i18n-js';
+import { audioActor } from '../actors/audio';
+
 // *** Action Types ***
 export const TOGGLE_PAUSE_PLAY = 'TOGGLE_PAUSE_PLAY';
 export const PAUSE_AUDIO = 'PAUSE_AUDIO';
@@ -77,7 +80,7 @@ function loadAudioFailure(error) {
 export function playTrack(
   tourStop,
   trackUUID,
-  autoplay = false,
+  autoPlay = false,
   playAudioAfterLoad = true,
 ) {
   // clearTimer();
@@ -109,82 +112,33 @@ export function playTrack(
       nextUUID = audioContent[activeAudioIndex + 1].uuid;
     }
 
-    // setAudioManagerEventListeners(dispatch, autoplay, nextUUID !== null);
-    const audioID = activeAudio.id;
-    const url = `${audioID}/${audioID}${locale}`;
-    // TO DO, translate audio, but where does locale come from?
-    // let url = activeAudio.id;
-    // if (activeAudio.id.length === 3) {
-    //   // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
-    //   if (activeAudio.duration[i18n.locale]) {
-    //     url = activeAudio.id.concat('/', i18n.locale);
-    //   } else {
-    //     if (activeAudio.duration[i18n.defaultLocale]) {
-    //       url = activeAudio.id.concat('/', i18n.defaultLocale);
-    //     } else {
-    //       url = activeAudio.id.concat('/', 'sv');
-    //     }
-    //   }
-    // }
-
-    console.log({ url });
-
-    if (
-      state.bottomPlayer.uuid !== '' &&
-      state.bottomPlayer.time !== state.bottomPlayer.duration
-    ) {
-      const audioLanguage = url.split('/')[1];
-
-      // analyticsTrackAudioPartialListen(
-      //   state.localization.locale,
-      //   audioLanguage,
-      //   state.bottomPlayer.title,
-      //   state.bottomPlayer.time / state.bottomPlayer.duration,
-      // );
-    }
-    console.log('pLAY TRACK');
-    console.log(tourStop);
-    let activeAudioDuration;
-    dispatch(
-      loadAudioSuccess(
-        tourStop,
-        tourStop.uuid,
-        tourStop.title,
-        audioContent,
-        activeAudio,
-        activeAudioIndex,
-        activeAudioDuration,
-        prevUUID,
-        nextUUID,
+    // const url = `${activeAudio.id}${locale}.mp3`;
+    try {
+      const { locale, duration } = await audioActor().loadAudio({
+        audioID: activeAudio.id,
+        // Fallback to default locale, else play audio in Swedish.
+        localeOrder: [locale, i18n.defaultLocale, 'sv'],
         playAudioAfterLoad,
-      ),
-    );
+      });
 
-    // let activeAudioDuration;
-    // AudioManager.loadLocalAudio(url, activeAudio.uuid, playAudioAfterLoad)
-    //   .then(results => {
-    //     activeAudioDuration = Math.round(results[1]);
-
-    //     dispatch(
-    //       loadAudioSuccess(
-    //         tourStop,
-    //         tourStop.uuid,
-    //         tourStop.shortTitle,
-    //         tourStop.audioContent,
-    //         activeAudio,
-    //         activeAudioIndex,
-    //         activeAudioDuration,
-    //         prevUUID,
-    //         nextUUID,
-    //         playAudioAfterLoad,
-    //       ),
-    //     );
-    //   })
-    // .catch(e => {
-    //   console.log(e.message);
-    //   clearTimer();
-    //   dispatch(loadAudioFailure(e));
-    // });
+      dispatch(
+        loadAudioSuccess(
+          tourStop,
+          tourStop.uuid,
+          tourStop.title,
+          audioContent,
+          activeAudio,
+          activeAudioIndex,
+          duration,
+          prevUUID,
+          nextUUID,
+          playAudioAfterLoad,
+        ),
+      );
+    } catch (e) {
+      console.log(e);
+      dispatch(loadAudioFailure(e));
+    }
   };
 }
 

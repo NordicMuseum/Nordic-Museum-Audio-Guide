@@ -319,7 +319,7 @@ class TourStop extends Component {
                       playTrack(
                         this.props.tourStop,
                         this.props.tourStop.audiocontent[0].uuid,
-                        true, // autoplay
+                        true,
                       );
                     }}>
                     <Image

@@ -61,6 +61,7 @@ class Tours extends Component {
   static options(passProps) {
     return {
       topBar: {
+        visible: false,
         background: {
           color: NAV_BAR_BACKGROUND,
         },
