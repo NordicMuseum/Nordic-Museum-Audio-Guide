@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package && yarn run transfer-assets-android",
+    "postinstall": "patch-package",
     "start": "react-native start",
     "transfer-assets-android": "node ./copyAudioAssets.js",
     "run-ios": "react-native run-ios",
