@@ -3,6 +3,8 @@
 // import { setAudioManagerEventListeners } from './audioEvents';
 // import { clearTimer } from './audioTimer';
 
+import { Navigation } from 'react-native-navigation';
+
 import i18n from 'i18n-js';
 import { audioActor } from '../actors/audio';
 
@@ -114,12 +116,25 @@ export function playTrack(
 
     // const url = `${activeAudio.id}${locale}.mp3`;
     try {
-      const { locale, duration } = await audioActor().loadAudio({
+      const { duration } = await audioActor().loadAudio({
         audioID: activeAudio.id,
         // Fallback to default locale, else play audio in Swedish.
         localeOrder: [locale, i18n.defaultLocale, 'sv'],
         playAudioAfterLoad,
       });
+
+      if (state.bottomPlayer.playerOpen === false) {
+        Navigation.showOverlay({
+          component: {
+            name: 'bottomPlayer',
+            options: {
+              overlay: {
+                interceptTouchOutside: false,
+              },
+            },
+          },
+        });
+      }
 
       dispatch(
         loadAudioSuccess(

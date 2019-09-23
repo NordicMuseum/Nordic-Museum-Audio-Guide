@@ -45,6 +45,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   }
 
   const locale = setI18nConfig();
+
   const store = configureStore({ localization: { locale, appVersion } });
   localizationActor(store);
   audioActor(store);
@@ -157,10 +158,4 @@ Navigation.events().registerAppLaunchedListener(async () => {
 
   const constants = await Navigation.constants();
   setBottomTabsHeight(constants.bottomTabsHeight);
-
-  Navigation.showOverlay({
-    component: {
-      name: 'bottomPlayer',
-    },
-  });
 });
