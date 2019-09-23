@@ -1,0 +1,18 @@
+
+diff --git a/node_modules/react-native-navigation/lib/ios/RNNBridgeManager.m b/node_modules/react-native-navigation/lib/ios/RNNBridgeManager.m
+index 5d0486a..ed52d68 100644
+--- a/node_modules/react-native-navigation/lib/ios/RNNBridgeManager.m
++++ b/node_modules/react-native-navigation/lib/ios/RNNBridgeManager.m
+@@ -79,6 +79,12 @@ - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
+ 	return _jsCodeLocation;
+ }
+ 
++#if DEBUG
++- (BOOL)bridge:(RCTBridge *)bridge didNotFindModule:(NSString *)moduleName {
++  return YES;
++}
++#endif
++
+ - (NSArray<id<RCTBridgeModule>> *)extraModulesForBridge:(RCTBridge *)bridge {
+ 	RNNEventEmitter *eventEmitter = [[RNNEventEmitter alloc] init];
+ 
