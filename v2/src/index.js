@@ -37,7 +37,6 @@ Navigation.events().registerAppLaunchedListener(async () => {
   lastAppVersion = await lastAppVersion;
   const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
-  console.log({ newVersion }, { lastAppVersion });
   hydrate(newVersion || __DEV__);
 
   if (newVersion) {
@@ -49,6 +48,12 @@ Navigation.events().registerAppLaunchedListener(async () => {
   const store = configureStore({ localization: { locale, appVersion } });
   localizationActor(store);
   audioActor(store);
+
+  Navigation.setDefaultOptions({
+    layout: {
+      orientation: ['portrait'],
+    },
+  });
 
   registerScreens(store);
 
