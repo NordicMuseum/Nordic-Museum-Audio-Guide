@@ -13,8 +13,6 @@ import { translate } from '../i18n';
 
 import {
   togglePausePlay,
-  rewindAudio,
-  cycleAudioSpeed,
   unloadAudio,
   replayAudio,
   playTrack,
@@ -112,7 +110,6 @@ class BottomPlayer extends Component {
       audioContent,
       time,
       duration,
-      playRate,
       playerStatus,
       timerActive,
       timerStartAt,
@@ -123,8 +120,6 @@ class BottomPlayer extends Component {
 
     const {
       togglePausePlay,
-      rewindAudio,
-      cycleAudioSpeed,
       unloadAudio,
       replayAudio,
       playTrack,
@@ -196,14 +191,11 @@ class BottomPlayer extends Component {
           playerStatus={playerStatus}
           prevDisabled={prevDisabled}
           nextDisabled={nextDisabled}
-          playRate={playRate}
           autoplayOn={autoplayOn}
           locale={locale}
           actions={{
             togglePausePlay,
             replayAudio,
-            rewindAudio,
-            cycleAudioSpeed,
             navToTourStop: () => {
               console.log('TO DO');
             },
@@ -239,7 +231,6 @@ const mapStateToProps = state => {
     timerActive: state.bottomPlayer.timerActive,
     timerNumber: state.bottomPlayer.timerNumber,
     autoplayOn: state.bottomPlayer.autoplayOn,
-    playRate: state.bottomPlayer.playRate,
     locale: state.localization.locale,
   };
 };
@@ -248,8 +239,6 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       togglePausePlay,
-      rewindAudio,
-      cycleAudioSpeed,
       unloadAudio,
       replayAudio,
       playTrack,

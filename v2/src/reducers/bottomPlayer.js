@@ -2,11 +2,8 @@ import {
   TOGGLE_PAUSE_PLAY,
   PAUSE_AUDIO,
   PLAY_AUDIO,
-  CYCLE_AUDIO_SPEED,
-  PLAY_RATE_NORMAL,
   LOAD_AUDIO_SUCCESS,
   LOAD_AUDIO_FAILURE,
-  SEEK_AUDIO_TO_TIME,
   REPLAY_AUDIO,
   TOGGLE_AUTOPLAY,
   TOGGLE_AUTOPLAY_INITIAL,
@@ -43,7 +40,6 @@ const initialState = {
   // 2. Playing Status (Paused, Playing, Done)
   playerStatus: PLAYER_STATUS_NOTLOADED,
   playerOpen: false,
-  playRate: PLAY_RATE_NORMAL,
   prevUUID: null,
   nextUUID: null,
   timerStartAt: 5,
@@ -197,18 +193,6 @@ export function bottomPlayer(state = initialState, action) {
       return Object.assign({}, state, {
         currentTime: 0,
         playerStatus: PLAYER_STATUS_PLAY,
-      });
-    }
-
-    case SEEK_AUDIO_TO_TIME: {
-      return Object.assign({}, state, {
-        currentTime: action.time,
-      });
-    }
-
-    case CYCLE_AUDIO_SPEED: {
-      return Object.assign({}, state, {
-        playRate: action.playRate,
       });
     }
 

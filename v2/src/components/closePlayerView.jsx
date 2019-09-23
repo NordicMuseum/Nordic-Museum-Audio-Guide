@@ -36,7 +36,7 @@ const ClosePlayerView = props => {
         <View
           accessible={true}
           accessibilityTraits={['header']}
-          accessibilityLabel={`${translate('closePlayerView_Text')} ${I18n.t(
+          accessibilityLabel={`${translate('closePlayerView_Text')} ${translate(
             props.stopTitle,
           )}`}>
           <Text style={[globalStyles.h2, { fontWeight: '300' }]}>

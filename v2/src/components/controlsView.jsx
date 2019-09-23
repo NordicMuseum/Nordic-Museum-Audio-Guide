@@ -14,8 +14,6 @@ import { globalStyles, HIGHLIGHTS, OFF_WHITE } from '../styles';
 import PlayPauseButton from './buttons/playPauseButton';
 import PrevButton from './buttons/previousButton';
 import NextButton from './buttons/nextButton';
-import RewindButton from './buttons/rewindButton';
-import ToggleSpeedButton from './buttons/toggleSpeedButton';
 
 import ViewTicker from './viewTicker';
 
@@ -63,7 +61,6 @@ class ControlsView extends Component {
     audioCode: PropTypes.string.isRequired,
     time: PropTypes.number.isRequired,
     nextAudioProps: PropTypes.object.isRequired,
-    playRate: PropTypes.string.isRequired,
     playerStatus: PropTypes.string.isRequired,
     prevDisabled: PropTypes.bool.isRequired,
     nextDisabled: PropTypes.bool.isRequired,
@@ -74,8 +71,6 @@ class ControlsView extends Component {
       navToTourStop: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
       replayAudio: PropTypes.func.isRequired,
-      rewindAudio: PropTypes.func.isRequired,
-      cycleAudioSpeed: PropTypes.func.isRequired,
       loadNextAudio: PropTypes.func.isRequired,
       loadNextAutoplayAudio: PropTypes.func.isRequired,
       loadPrevAudio: PropTypes.func.isRequired,
@@ -84,18 +79,11 @@ class ControlsView extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     const statusChanged = this.props.playerStatus !== nextProps.playerStatus;
-    const rateChanged = this.props.playRate !== nextProps.playRate;
     const codeChanged = this.props.audioCode !== nextProps.audioCode;
     const autoplayChanged = this.props.autoplayOn !== nextProps.autoplayOn;
     const localeChanged = this.props.locale !== nextProps.locale;
 
-    return (
-      statusChanged ||
-      rateChanged ||
-      codeChanged ||
-      autoplayChanged ||
-      localeChanged
-    );
+    return statusChanged || codeChanged || autoplayChanged || localeChanged;
   }
 
   render() {
@@ -103,8 +91,6 @@ class ControlsView extends Component {
       navToTourStop,
       togglePausePlay,
       replayAudio,
-      rewindAudio,
-      cycleAudioSpeed,
       loadNextAudio,
       loadNextAutoplayAudio,
       loadPrevAudio,
@@ -117,7 +103,6 @@ class ControlsView extends Component {
       audioCode,
       prevDisabled,
       nextDisabled,
-      playRate,
       highlight,
     } = this.props;
 

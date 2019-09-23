@@ -5,7 +5,6 @@
 
 import { Navigation } from 'react-native-navigation';
 
-import i18n from 'i18n-js';
 import { audioActor } from '../actors/audio';
 
 // *** Action Types ***
@@ -13,9 +12,6 @@ export const TOGGLE_PAUSE_PLAY = 'TOGGLE_PAUSE_PLAY';
 export const PAUSE_AUDIO = 'PAUSE_AUDIO';
 export const PLAY_AUDIO = 'PLAY_AUDIO';
 export const TOGGLE_TRANSCRIPT = 'TOGGLE_TRANSCRIPT';
-export const CYCLE_AUDIO_SPEED = 'CYCLE_AUDIO_SPEED';
-export const REWIND_AUDIO = 'REWIND_AUDIO';
-export const SEEK_AUDIO_TO_TIME = 'SEEK_AUDIO_TO_TIME';
 export const REPLAY_AUDIO = 'REPLAY_AUDIO';
 export const UPDATE_PREV_UUIDS = 'UPDATE_PREV_UUIDS';
 
@@ -30,11 +26,6 @@ export const AUDIO_DID_FINISH_PLAYING = 'AUDIO_DID_FINISH_PLAYING';
 
 export const TOGGLE_AUTOPLAY = 'TOGGLE_AUTOPLAY';
 export const TOGGLE_AUTOPLAY_INITIAL = 'TOGGLE_AUTOPLAY_INITIAL';
-
-// *** Play Rate Types ***
-export const PLAY_RATE_NORMAL = 'PLAY_RATE_NORMAL';
-export const PLAY_RATE_FAST = 'PLAY_RATE_FAST';
-export const PLAY_RATE_FASTEST = 'PLAY_RATE_FASTEST';
 
 // *** Player Status Types ***
 export const PLAYER_STATUS_PLAY = 'PLAYER_STATUS_PLAY';
@@ -89,8 +80,6 @@ export function playTrack(
 
   return async (dispatch, getState) => {
     const state = getState();
-    const locale = state.localization.locale;
-
     let audioContent = Array.from(tourStop.audiocontent);
 
     const activeAudio = audioContent.filter(content => {
@@ -114,18 +103,18 @@ export function playTrack(
       nextUUID = audioContent[activeAudioIndex + 1].uuid;
     }
 
-    // const url = `${activeAudio.id}${locale}.mp3`;
     try {
       const { duration } = await audioActor().loadAudio({
         audioID: activeAudio.id,
-        // Fallback to default locale, else play audio in Swedish.
-        localeOrder: [locale, i18n.defaultLocale, 'sv'],
+        audioUUID: activeAudio.uuid,
         playAudioAfterLoad,
+        autoPlay,
       });
 
       if (state.bottomPlayer.playerOpen === false) {
         Navigation.showOverlay({
           component: {
+            id: 'bottomPlayer',
             name: 'bottomPlayer',
             options: {
               overlay: {
@@ -158,10 +147,18 @@ export function playTrack(
 }
 
 export function unloadAudio() {
-  // AudioManager.changeRate(1);
-  // AudioManager.unloadAudio();
-  return {
-    type: PLAYER_STATUS_UNLOADED,
+  return async (dispatch, getState) => {
+    const state = getState();
+
+    audioActor().unloadAudio();
+
+    if (state.bottomPlayer.playerOpen) {
+      Navigation.dismissOverlay('bottomPlayer');
+    }
+
+    dispatch({
+      type: PLAYER_STATUS_UNLOADED,
+    });
   };
 }
 
@@ -183,7 +180,7 @@ export function audioDidFinishPlaying(uuid, time, displayTimer) {
 }
 
 export function togglePausePlay() {
-  // AudioManager.togglePlayPause();
+  audioActor().togglePlayPauseAudio();
 
   return {
     type: TOGGLE_PAUSE_PLAY,
@@ -191,7 +188,7 @@ export function togglePausePlay() {
 }
 
 export function pauseAudio() {
-  // AudioManager.pause();
+  audioActor().pauseAudio();
 
   return {
     type: PAUSE_AUDIO,
@@ -199,64 +196,15 @@ export function pauseAudio() {
 }
 
 export function playAudio() {
-  // AudioManager.play();
+  audioActor().playAudio();
 
   return {
     type: PLAY_AUDIO,
   };
 }
 
-export function cycleAudioSpeed(currentPlayRate) {
-  let newRate;
-
-  switch (currentPlayRate) {
-    case PLAY_RATE_NORMAL: {
-      newRate = PLAY_RATE_FAST;
-      // AudioManager.changeRate(1.5);
-      break;
-    }
-
-    case PLAY_RATE_FAST: {
-      newRate = PLAY_RATE_FASTEST;
-      // AudioManager.changeRate(2);
-      break;
-    }
-
-    case PLAY_RATE_FASTEST: {
-      newRate = PLAY_RATE_NORMAL;
-      // AudioManager.changeRate(1);
-      break;
-    }
-
-    // no default
-  }
-
-  return {
-    type: CYCLE_AUDIO_SPEED,
-    playRate: newRate,
-  };
-}
-
-export function rewindAudio(seconds) {
-  // AudioManager.rewind(seconds);
-
-  return {
-    type: REWIND_AUDIO,
-    seconds,
-  };
-}
-
-export function seekAudioToTime(time) {
-  // AudioManager.seekToTime(time);
-
-  return {
-    type: SEEK_AUDIO_TO_TIME,
-    time,
-  };
-}
-
 export function replayAudio() {
-  // AudioManager.replay();
+  audioActor().replayAudio();
 
   return {
     type: REPLAY_AUDIO,
