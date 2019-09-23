@@ -11,9 +11,9 @@ import { isRTL } from '../i18n';
 import {
   globalStyles,
   NAV_BAR_TEXT,
-  NAV_BAR_BACKGROUND,
   ACTION,
   BOTTOM_PLAYER_HEIGHT,
+  WHITE,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -44,7 +44,7 @@ class AboutApp extends Component {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: WHITE,
         },
         backButton: {
           showTitle: false,
@@ -56,6 +56,7 @@ class AboutApp extends Component {
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }

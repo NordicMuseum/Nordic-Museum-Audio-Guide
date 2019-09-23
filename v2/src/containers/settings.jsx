@@ -10,13 +10,7 @@ import { switchLocale } from '../actions/localization';
 
 import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
 
-import {
-  NAV_BAR_TEXT,
-  NAV_BAR_BACKGROUND,
-  BOTTOM_PLAYER_HEIGHT,
-  ACTION,
-  WHITE,
-} from '../styles';
+import { NAV_BAR_TEXT, BOTTOM_PLAYER_HEIGHT, ACTION, WHITE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
