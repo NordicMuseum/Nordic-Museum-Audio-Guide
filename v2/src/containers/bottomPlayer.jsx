@@ -162,7 +162,7 @@ class BottomPlayer extends Component {
       );
     } else {
       // display the time progress
-      progress = <View />; //<TimeProgressView time={time} duration={duration} />;
+      progress = <TimeProgressView time={time} duration={duration} />;
     }
 
     let prevDisabled = false;

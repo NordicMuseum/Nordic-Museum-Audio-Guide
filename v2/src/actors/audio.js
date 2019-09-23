@@ -5,12 +5,16 @@ Sound.setCategory('Playback');
 
 import i18n from 'i18n-js';
 
-import { audioDidFinishPlaying } from '../actions/audio';
+import {
+  audioDidFinishPlaying,
+  updateAudioCurrentTime,
+} from '../actions/audio';
 
 class AudioActor {
   constructor(store) {
     this._store = store;
     this._dispatch = store.dispatch;
+    this._watchAudioTimeInterval;
     this._loadedSound;
   }
 
@@ -51,6 +55,17 @@ class AudioActor {
             }),
           );
         }
+
+        clearInterval(this._watchAudioTimeInterval);
+        this._watchAudioTimeInterval = setInterval(() => {
+          if (this._loadedSound) {
+            this._loadedSound.getCurrentTime(currentTime => {
+              this._dispatch(
+                updateAudioCurrentTime(audioUUID, Math.round(currentTime)),
+              );
+            });
+          }
+        }, 250);
 
         const duration = Math.round(this._loadedSound.getDuration());
         if (playAudioAfterLoad) {
@@ -102,6 +117,7 @@ class AudioActor {
 
   unloadAudio = () => {
     if (this._loadedSound) {
+      clearInterval(this._watchAudioTimeInterval);
       this._loadedSound.release();
       this._loadedSound == null;
     }
