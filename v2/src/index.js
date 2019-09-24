@@ -13,6 +13,7 @@ import { showTutorial } from './actions/tutorial';
 
 import { localizationActor } from './actors/localization';
 import { audioActor } from './actors/audio';
+import { chargingActor } from './actors/charging';
 
 import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
 
@@ -24,7 +25,7 @@ let museumMode = AsyncStorage.getItem('museumMode');
 Navigation.events().registerAppLaunchedListener(async () => {
   appVersion = await appVersion;
   lastAppVersion = await lastAppVersion;
-  museumMode = await museumMode;
+  museumMode = JSON.parse(await museumMode);
   const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
   hydrate(newVersion || __DEV__);
@@ -40,6 +41,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   });
   localizationActor(store);
   audioActor(store);
+  chargingActor(store);
 
   Navigation.setDefaultOptions({
     layout: {
