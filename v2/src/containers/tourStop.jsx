@@ -39,6 +39,7 @@ import {
   NAV_BAR_TEXT,
   getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
+  NAV_BAR_BACKGROUND,
 } from '../styles.js';
 
 const width = Dimensions.get('window').width;
