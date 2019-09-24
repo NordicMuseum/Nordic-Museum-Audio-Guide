@@ -12,7 +12,7 @@ export function reset() {
 }
 
 export function updateMuseumMode(museumMode) {
-  AsyncStorage.setItem('museumMode', museumMode);
+  AsyncStorage.setItem('museumMode', JSON.stringify(museumMode));
 
   return {
     type: UPDATE_MUSEUM_MODE,
