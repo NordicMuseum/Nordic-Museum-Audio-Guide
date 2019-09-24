@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import { Navigation } from 'react-native-navigation';
+
 import {
   StyleSheet,
   View,
@@ -16,7 +18,15 @@ import { translate } from '../i18n';
 
 import { hideTutorial } from '../actions/tutorial';
 
-import { NAV_BAR_TEXT, NAV_BAR_BACKGROUND, OFF_BLACK, ACTION } from '../styles';
+import NavigationBar from '../components/navigationBar';
+
+import {
+  NAV_BAR_TEXT,
+  NAV_BAR_BACKGROUND,
+  OFF_BLACK,
+  ACTION,
+  WHITE,
+} from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -59,24 +69,23 @@ const styles = StyleSheet.create({
 });
 
 class TutorialWelcome extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
-        visible: true,
-        background: {
-          color: NAV_BAR_BACKGROUND,
-        },
-        title: {
-          fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
-        },
+        visible: false,
       },
     };
   }
 
   render() {
     const width = Dimensions.get('window').width;
+
+    //   barStyle: PropTypes.object,
+    // labelStyle: PropTypes.object,
+    // label: PropTypes.string,
+    // buttonColor: PropTypes.string,
+    // backButtonLabel: PropTypes.string,
+    // backButtonPress: PropTypes.func,
 
     return (
       <View style={styles.container}>
@@ -105,6 +114,19 @@ class TutorialWelcome extends Component {
             </View>
           </View>
         </View>
+        <NavigationBar
+          labelStyle={{
+            color: NAV_BAR_TEXT,
+          }}
+          buttonColor={ACTION}
+          backButtonPress={() => {
+            Navigation.pop(this.props.componentId);
+          }}
+          barStyle={{
+            backgroundColor: 'transparent',
+            height: 44,
+          }}
+        />
       </View>
     );
   }

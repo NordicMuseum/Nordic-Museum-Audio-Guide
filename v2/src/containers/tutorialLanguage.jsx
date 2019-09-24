@@ -9,7 +9,7 @@ import { translate } from '../i18n';
 
 import { switchLocale } from '../actions/localization';
 
-import { NAV_BAR_TEXT, NAV_BAR_BACKGROUND, OFF_BLACK } from '../styles';
+import { NAV_BAR_TEXT, OFF_BLACK, WHITE } from '../styles';
 
 import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
 import { Navigation } from 'react-native-navigation';
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
 });
 
 class TutorialLanguage extends Component {
-  static options(passProps) {
+  static get options() {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: WHITE,
         },
         title: {
           text: translate('settingsScreen_Title'),
@@ -33,6 +33,7 @@ class TutorialLanguage extends Component {
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
         },
+        noBorder: true,
       },
     };
   }

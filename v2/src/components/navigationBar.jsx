@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+
 import {
   Text,
   View,
@@ -16,7 +18,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    top: 20,
+    top: getStatusBarHeight(),
     left: 0,
     right: 0,
   },
@@ -69,12 +71,8 @@ const NavigationBar = props => {
 };
 
 NavigationBar.propTypes = {
-  barStyle: PropTypes.oneOfType([
-    // View.propTypes.style,
-    PropTypes.object,
-  ]).isRequired,
-  labelStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object])
-    .isRequired,
+  barStyle: PropTypes.object,
+  labelStyle: PropTypes.object,
   label: PropTypes.string,
   buttonColor: PropTypes.string,
   backButtonLabel: PropTypes.string,

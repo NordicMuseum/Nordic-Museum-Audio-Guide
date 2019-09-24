@@ -192,9 +192,6 @@ class Search extends Component {
       });
       const searchedTrack = tourStop.audioContent[searchedTrackIndex];
 
-      console.log(tourStop);
-      console.log(searchedTrack);
-
       setTimeout(() => {
         const passedProps = {
           searchedTrack,
@@ -277,8 +274,6 @@ class Search extends Component {
   }
 
   render() {
-    console.log(this.props);
-
     const { width, height } = Dimensions.get('window');
 
     return (
