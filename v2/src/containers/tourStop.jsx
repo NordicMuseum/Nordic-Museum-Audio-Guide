@@ -365,7 +365,7 @@ class TourStop extends Component {
           }}>
           <AudioContentList
             tourStop={this.props.tourStop}
-            //currentAudio={this.props.currentAudio}
+            currentAudio={this.props.currentAudio}
             //playerStatus={this.props.playerStatus}
             //screenReader={this.props.screenReader}
             locale={this.props.locale}
