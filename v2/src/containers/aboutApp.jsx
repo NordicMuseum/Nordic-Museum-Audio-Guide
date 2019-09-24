@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, Switch } from 'react-native';
+
+import { updateMuseumMode } from '../actions/device';
 
 import Markdown from 'react-native-simple-markdown';
 
@@ -14,6 +17,7 @@ import {
   ACTION,
   BOTTOM_PLAYER_HEIGHT,
   WHITE,
+  GRAY,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -62,7 +66,7 @@ class AboutApp extends Component {
   }
 
   render() {
-    const { locale, appVersion } = this.props;
+    const { locale, appVersion, museumMode, actions } = this.props;
 
     const markdownStyles = {
       heading1: {
@@ -111,6 +115,22 @@ class AboutApp extends Component {
               ]}>
               {appVersion}
             </Text>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <Text style={[globalStyles.h1]}>{'Museum Mode'}</Text>
+              <Switch
+                value={museumMode}
+                trackColor={{ true: ACTION }}
+                onValueChange={newVal => {
+                  actions.updateMuseumMode(newVal);
+                }}
+              />
+            </View>
           </ScrollView>
         </View>
       </View>
@@ -122,11 +142,19 @@ const mapStateToProps = state => {
   return {
     locale: state.localization.locale,
     appVersion: state.localization.appVersion,
+    museumMode: state.localization.museumMode,
   };
 };
 
-const mapDispatchToProps = () => {
-  return {};
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        updateMuseumMode,
+      },
+      dispatch,
+    ),
+  };
 };
 
 export default connect(

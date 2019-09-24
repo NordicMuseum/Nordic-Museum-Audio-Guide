@@ -14,7 +14,8 @@ import Search from './containers/search';
 import Info from './containers/info';
 import Settings from './containers/settings';
 import Amenities from './containers/amenities';
-import Welcome from './containers/welcome';
+import TutorialWelcome from './containers/tutorialWelcome';
+import TutorialLanguage from './containers/tutorialLanguage';
 import AboutMuseum from './containers/aboutMuseum';
 import AboutApp from './containers/aboutApp';
 import BottomPlayer from './containers/bottomPlayer';
@@ -46,7 +47,7 @@ const sceneCreator = (
       }
 
       componentDidAppear() {
-        Analytics.trackEvent(`ScreenViewed: ${screenName}`);
+        Analytics.trackEvent('Screen Viewed', { screenName });
 
         BackHandler.addEventListener(
           HARDWARE_BACK_BUTTON_EVENT,
@@ -154,7 +155,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.bottomTabWithNavBar,
       titleTranslationsKey: 'nearMeScreen_Title',
     }),
-    // () => NearMe,
+    () => NearMe,
   );
 
   Navigation.registerComponent(
@@ -164,6 +165,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.bottomTabWithNavBar,
       titleTranslationsKey: 'storiesScreen_Title',
     }),
+    () => Tours,
   );
 
   Navigation.registerComponent(
@@ -174,6 +176,7 @@ const registerScreens = store => {
       // TODO: This changes dynamically by the tourStop selected
       titleTranslationsKey: 'storiesScreen_Title',
     }),
+    () => TourStop,
   );
 
   Navigation.registerComponent(
@@ -183,6 +186,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.bottomTabWithNavBar,
       titleTranslationsKey: 'searchScreen_Title',
     }),
+    () => Search,
   );
 
   Navigation.registerComponent(
@@ -192,6 +196,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.bottomTab,
       titleTranslationsKey: 'museumScreen_Title',
     }),
+    () => Info,
   );
 
   Navigation.registerComponent(
@@ -201,6 +206,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.screenWithNavBar,
       titleTranslationsKey: 'settingsScreen_Title',
     }),
+    () => Settings,
   );
 
   Navigation.registerComponent(
@@ -210,14 +216,26 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.screenWithNavBar,
       titleTranslationsKey: 'amenitiesScreen_Title',
     }),
+    () => Amenities,
   );
 
   Navigation.registerComponent(
-    'welcome',
-    sceneCreator(Welcome, store, {
-      screenName: 'welcome',
-      screenType: SCREEN_TYPES.screen,
+    'tutorialWelcome',
+    sceneCreator(TutorialWelcome, store, {
+      screenName: 'tutorialWelcome',
+      screenType: SCREEN_TYPES.screenWithNavBar,
     }),
+    () => TutorialWelcome,
+  );
+
+  Navigation.registerComponent(
+    'tutorialLanguage',
+    sceneCreator(TutorialLanguage, store, {
+      screenName: 'tutorialLanguage',
+      screenType: SCREEN_TYPES.screenWithNavBar,
+      titleTranslationsKey: 'settingsScreen_Title',
+    }),
+    () => TutorialLanguage,
   );
 
   Navigation.registerComponent(
@@ -227,6 +245,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.screenWithNavBar,
       titleTranslationsKey: 'aboutScreen_Title',
     }),
+    () => AboutMuseum,
   );
 
   Navigation.registerComponent(
@@ -236,6 +255,7 @@ const registerScreens = store => {
       screenType: SCREEN_TYPES.screenWithNavBar,
       titleTranslationsKey: 'aboutScreen_Title',
     }),
+    () => AboutApp,
   );
 
   Navigation.registerComponent(

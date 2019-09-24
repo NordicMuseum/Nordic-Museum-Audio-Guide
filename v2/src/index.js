@@ -9,32 +9,22 @@ import registerScreens from './registerScreens';
 import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
+import { showTutorial } from './actions/tutorial';
+
 import { localizationActor } from './actors/localization';
 import { audioActor } from './actors/audio';
 
-import {
-  NAV_BAR_TEXT,
-  NAV_BAR_BACKGROUND,
-  LIGHT_BLUE,
-  GREEN,
-  GRAY,
-  LIGHT_GRAY,
-  OFF_BLACK,
-  OFF_WHITE,
-  HEADER_BACKGROUND_COLOR,
-  HIGHLIGHTS,
-  ACTION,
-  SELECTED,
-  setBottomTabsHeight,
-} from './styles';
+import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
 
 // Fire so that the data is ready by "registerAppLaunchedListener"
 let appVersion = DeviceInfo.getReadableVersion();
 let lastAppVersion = AsyncStorage.getItem('appVersion');
+let museumMode = AsyncStorage.getItem('museumMode');
 
 Navigation.events().registerAppLaunchedListener(async () => {
   appVersion = await appVersion;
   lastAppVersion = await lastAppVersion;
+  museumMode = await museumMode;
   const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
 
   hydrate(newVersion || __DEV__);
@@ -45,7 +35,9 @@ Navigation.events().registerAppLaunchedListener(async () => {
 
   const locale = setI18nConfig();
 
-  const store = configureStore({ localization: { locale, appVersion } });
+  const store = configureStore({
+    localization: { locale, appVersion, museumMode },
+  });
   localizationActor(store);
   audioActor(store);
 
@@ -158,4 +150,9 @@ Navigation.events().registerAppLaunchedListener(async () => {
 
   const constants = await Navigation.constants();
   setBottomTabsHeight(constants.bottomTabsHeight);
+
+  const shouldShowTutorial = museumMode || newVersion;
+  if (shouldShowTutorial) {
+    store.dispatch(showTutorial());
+  }
 });
