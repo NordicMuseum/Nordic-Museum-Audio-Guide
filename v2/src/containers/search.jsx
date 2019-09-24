@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
+import { Navigation } from 'react-native-navigation';
+
 import { translate } from '../i18n';
 
 import { connect } from 'react-redux';
@@ -115,100 +117,109 @@ const styles = StyleSheet.create({
 const foundTransitionTime = 50;
 const tryAgainMessageTime = 1000;
 
+const pushToTourStop = (componentId, passedProps) => {
+  Navigation.push(componentId, {
+    component: {
+      name: 'tourStop',
+      passProps: passedProps,
+      options: {
+        topBar: {
+          visible: false,
+          background: {
+            color: NAV_BAR_BACKGROUND,
+          },
+          title: {
+            text: passedProps.style,
+            fontSize: 17,
+            fontFamily: 'Helvetica',
+            color: NAV_BAR_TEXT,
+          },
+        },
+      },
+    },
+  });
+};
+
 class Search extends Component {
   static title = '#';
 
   static propTypes = {
-    // navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
-    // digits: PropTypes.array.isRequired,
+    digits: PropTypes.array.isRequired,
     // screenReader: PropTypes.bool.isRequired,
-    // tourStops: PropTypes.object.isRequired,
-    // locale: PropTypes.string.isRequired,
-    // actions: PropTypes.shape({
-    //   editDigits: PropTypes.func.isRequired,
-    // }).isRequired,
+    tourStops: PropTypes.object.isRequired,
+    locale: PropTypes.string.isRequired,
+    actions: PropTypes.shape({
+      editDigits: PropTypes.func.isRequired,
+    }).isRequired,
   };
 
-  UNSAFE_componentWillMount() {
-    this.props.actions.editDigits([null, null, null]);
-    this.setState({
-      numberNotFound: false,
-      tryAgainMessage: null,
-    });
+  componentDidMount() {
+    this.navigationEventListener = Navigation.events().bindComponent(this);
   }
 
-  componentWillUnmount() {
-    if (this.state.tryAgainMessage) {
-      clearTimeout(this.state.tryAgainMessage);
-      this.setState({ tryAgainMessage: null });
-    }
+  componentDidAppear() {
+    this.props.actions.editDigits([null, null, null]);
+  }
+
+  componentDidDisappear() {
+    this.props.actions.editDigits([null, null, null]);
   }
 
   loadTourStop(digits, tourStops) {
     let foundTourStops = tourStops.filtered(
-      `audioContent.title = '${digits.toString()}'`,
+      `audioContent.id = '${digits.toString()}'`,
     );
 
     let tourStop;
     if (foundTourStops.length > 0) {
-      if (foundTourStops.length > 1) {
-        // If two exist then favor the nonhighlighted one. Only the highlight audio content has an assigned region.
-        foundTourStops = foundTourStops.filtered('audioContent.regions = null');
-      }
-
+      // TODO: Reimplement but Throwing some realm error
+      // if (foundTourStops.length > 1) {
+      //   // If two exist then favor the nonhighlighted one. Only the highlight audio content has an assigned region.
+      //   foundTourStops = foundTourStops.filtered('audioContent.regions = null');
+      // }
       tourStop = foundTourStops[0];
     }
 
     const code = digits.toString();
     const tourStopExists = tourStop != null;
 
-    analyticsTrackCodeSearched(code, tourStopExists);
-
+    // analyticsTrackCodeSearched(code, tourStopExists);
     if (tourStopExists) {
-      // const searchedByNumber = code;
-      // const searchedTrackIndex = tourStop.audioContent.findIndex(content => {
-      //   return content.audioURL === searchedByNumber;
-      // });
-      // const searchedTrack = tourStop.audioContent[searchedTrackIndex];
-      // setTimeout(() => {
-      //   // this.props.navigator.push({
-      //   //   title: tourStop.shortTitle,
-      //   //   component: TourStopScreen,
-      //   //   barTintColor: '#ffffff',
-      //   //   titleTextColor: OFF_BLACK,
-      //   //   shadowHidden: true,
-      //   //   navigationBarHidden: true,
-      //   //   passProps: {
-      //   //     tab: 'TAB_SEARCH',
-      //   //     tourStop,
-      //   //     floor: tourStop.floor,
-      //   //     duration: tourStop.duration[this.props.locale],
-      //   //     searchedTrack,
-      //   //     searchedTrackIndex,
-      //   //     initialCategory: tourStop.initialAudio,
-      //   //     imageURL: tourStop.imageURL,
-      //   //   },
-      //   });
-      //   // HACKY!
-      //   // Because who knows how long the transition will take?
-      //   setTimeout(() => {
-      //     this.props.actions.editDigits([null, null, null]);
-      //   }, tryAgainMessageTime);
-      // }, foundTransitionTime);
+      const searchedByNumber = code;
+      const searchedTrackIndex = tourStop.audioContent.findIndex(content => {
+        return content.id === searchedByNumber;
+      });
+      const searchedTrack = tourStop.audioContent[searchedTrackIndex];
+
+      console.log(tourStop);
+      console.log(searchedTrack);
+
+      setTimeout(() => {
+        const passedProps = {
+          searchedTrack,
+          tourStop,
+          searchedTrackIndex,
+        };
+        pushToTourStop(this.props.componentId, passedProps);
+      }, foundTransitionTime);
     } else {
+      this.setScreenTitle('tryAgain');
       const tryAgainMessage = setTimeout(() => {
-        this.setState({
-          numberNotFound: false,
-          tryAgainMessage: null,
-        });
+        this.setScreenTitle('searchScreen_Title');
         this.props.actions.editDigits([null, null, null]);
       }, tryAgainMessageTime);
-      this.setState({
-        numberNotFound: true,
-        tryAgainMessage,
-      });
     }
+  }
+
+  setScreenTitle(title) {
+    Navigation.mergeOptions(this.props.componentId, {
+      topBar: {
+        title: {
+          text: translate(title),
+        },
+      },
+    });
   }
 
   addDigit(digit) {
@@ -266,11 +277,10 @@ class Search extends Component {
   }
 
   render() {
+    console.log(this.props);
+
     const { width, height } = Dimensions.get('window');
 
-    const screenTitle = this.state.numberNotFound
-      ? 'tryAgain'
-      : 'searchScreen_Title';
     return (
       <View
         style={[
@@ -417,7 +427,9 @@ class Search extends Component {
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-    digits: [null, null, null],
+    digits: state.searchByNumber.digits,
+    locale: state.localization.locale,
+    tourStops: state.allTourStops.tourStops,
   };
 };
 

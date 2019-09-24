@@ -8,7 +8,7 @@ import { accessibility } from './accessibility';
 // import { nav } from './navigation';
 import { tutorial } from './tutorial';
 import { localization } from './localization';
-// import { searchByNumber } from './searchByNumber';
+import { searchByNumber } from './searchByNumber';
 
 const rootReducer = combineReducers({
   // beacon,
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
   // nav,
   tutorial,
   localization,
-  // searchByNumber,
+  searchByNumber,
 });
 
 export default rootReducer;

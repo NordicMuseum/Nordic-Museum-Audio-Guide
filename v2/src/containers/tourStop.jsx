@@ -215,18 +215,18 @@ class TourStop extends Component {
   //   }),
   // };
 
-  // componentDidMount() {
-  //   // analyticsTrackContentOpened(this.props.tourStop.shortTitle);
-  //   // analyticsTrackScreen('Theme Page');
+  componentDidMount() {
+    //   // analyticsTrackContentOpened(this.props.tourStop.shortTitle);
+    //   // analyticsTrackScreen('Theme Page');
 
-  //   // if (this.props.tab === 'TAB_SEARCH') {
-  //   //   this.props.actions.playTrack(
-  //   //     this.props.tourStop,
-  //   //     this.props.searchedTrack.uuid,
-  //   //     false // autoplay
-  //   //   );
-  //   // }
-  // }
+    if (this.props.searchedTrack) {
+      this.props.actions.playTrack(
+        this.props.tourStop,
+        this.props.searchedTrack.uuid,
+        false, // autoplay
+      );
+    }
+  }
 
   // componentWillUnmount() {
   //   // this.props.actions.updateNearMeRootStatus(true);
@@ -253,9 +253,9 @@ class TourStop extends Component {
     // }
 
     let yOffset = 0;
-    // if (this.props.searchedTrackIndex) {
-    //   yOffset = AUDIO_CONTENT_ITEM_HEIGHT * this.props.searchedTrackIndex;
-    // }
+    if (this.props.searchedTrackIndex) {
+      yOffset = AUDIO_CONTENT_ITEM_HEIGHT * this.props.searchedTrackIndex;
+    }
 
     return (
       <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
