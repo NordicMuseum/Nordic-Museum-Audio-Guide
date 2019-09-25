@@ -172,7 +172,7 @@ const registerScreens = store => {
     'tourStop',
     sceneCreator(TourStop, store, {
       screenName: 'tourStop',
-      screenType: SCREEN_TYPES.screenWithNavBar,
+      screenType: SCREEN_TYPES.screen,
       // TODO: This changes dynamically by the tourStop selected
       titleTranslationsKey: 'storiesScreen_Title',
     }),

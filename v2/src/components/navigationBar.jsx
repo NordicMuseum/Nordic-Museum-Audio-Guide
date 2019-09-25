@@ -22,6 +22,13 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
   },
+  statusBar: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: getStatusBarHeight(),
+  },
   label: {
     fontSize: 17,
   },
@@ -46,26 +53,36 @@ const styles = StyleSheet.create({
 });
 
 const NavigationBar = props => {
+  console.log(props);
   return (
-    <View style={[styles.bar, props.barStyle]}>
-      {props.backButtonPress && (
-        <TouchableOpacity
-          onPress={props.backButtonPress}
-          style={styles.backButton}>
-          <Image
-            source={require('../assets/DisclosureIndicator.png')}
-            style={[
-              styles.backArrow,
-              { tintColor: props.buttonColor },
-              { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
-            ]}
-          />
-          <Text style={[styles.backButtonLabel, { color: props.buttonColor }]}>
-            {props.backButtonLabel}
-          </Text>
-        </TouchableOpacity>
-      )}
-      <Text style={[props.labelStyle, styles.label]}>{props.label}</Text>
+    <View>
+      <View
+        style={[
+          styles.statusBar,
+          { backgroundColor: props.barStyle.backgroundColor },
+        ]}
+      />
+      <View style={[styles.bar, props.barStyle]}>
+        {props.backButtonPress && (
+          <TouchableOpacity
+            onPress={props.backButtonPress}
+            style={styles.backButton}>
+            <Image
+              source={require('../assets/DisclosureIndicator.png')}
+              style={[
+                styles.backArrow,
+                { tintColor: props.buttonColor },
+                { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
+              ]}
+            />
+            <Text
+              style={[styles.backButtonLabel, { color: props.buttonColor }]}>
+              {props.backButtonLabel}
+            </Text>
+          </TouchableOpacity>
+        )}
+        <Text style={[props.labelStyle, styles.label]}>{props.label}</Text>
+      </View>
     </View>
   );
 };

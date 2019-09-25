@@ -18,13 +18,12 @@ import {
   ImageBackground,
 } from 'react-native';
 
-import ParallaxScrollView from 'react-native-parallax-scroll-view';
+import NavigationBarParallax from '../components/navigationBarParallax';
 
 import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
 
 import { updateNearMeRootStatus } from '../actions/navigation';
 
-import NavigationBar from '../components/navigationBar';
 import { AUDIO_CONTENT_ITEM_HEIGHT } from '../components/audioContentItem';
 import AudioContentList from '../components/audioContentList';
 
@@ -40,6 +39,7 @@ import {
   getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
   NAV_BAR_BACKGROUND,
+  SELECTED,
 } from '../styles.js';
 
 const width = Dimensions.get('window').width;
@@ -54,21 +54,12 @@ const styles = StyleSheet.create({
     width,
   },
   headerImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 167,
     resizeMode: 'cover',
     justifyContent: 'center',
     alignItems: 'center',
   },
   headerTitle: {
     backgroundColor: 'transparent',
-    position: 'absolute',
-    top: 20,
-    left: 0,
-    right: 0,
     height: 147,
     justifyContent: 'center',
     alignItems: 'center',
@@ -81,11 +72,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   playAllButtonContainer: {
-    position: 'absolute',
-    flex: 1,
-    top: 147,
-    left: 0,
-    right: 0,
+    position: 'relative',
+    top: -24,
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 5,
@@ -114,11 +102,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   audioContentInfo: {
-    position: 'absolute',
-    top: 170,
-    left: 0,
-    right: 0,
-    paddingTop: 43,
     paddingBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -154,21 +137,6 @@ const styles = StyleSheet.create({
   durationText: {
     fontSize: 16,
     color: OFF_BLACK,
-  },
-  imageTitle: {
-    fontStyle: 'italic',
-  },
-  stickySection: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    paddingTop: 30,
-  },
-  stickyHeaderTitleText: {
-    backgroundColor: 'transparent',
-    color: OFF_BLACK,
-    fontWeight: '600',
-    fontSize: 17,
   },
 });
 
@@ -233,17 +201,14 @@ class TourStop extends Component {
   // }
 
   render() {
+    const HEADER_IMAGE_HEIGHT = 167;
+
     let { tourStop } = this.props;
 
     const { playTrack, togglePausePlay } = this.props.actions;
 
     const duration = translate(tourStop.duration);
     const floor = translate('floor' + tourStop.floor + '_Label');
-
-    let containerMargin = 0;
-    if (this.props.playerOpen) {
-      containerMargin += BOTTOM_PLAYER_HEIGHT;
-    }
 
     // let accessibilityLabel;
 
@@ -253,117 +218,96 @@ class TourStop extends Component {
     //   accessibilityLabel = parseVoiceoverText(I18n.t(tourStop.shortCredit));
     // }
 
+    let bottomOffset = 0;
+    if (this.props.playerOpen) {
+      bottomOffset += BOTTOM_PLAYER_HEIGHT;
+    }
+
     let yOffset = 0;
     if (this.props.searchedTrackIndex) {
       yOffset = AUDIO_CONTENT_ITEM_HEIGHT * this.props.searchedTrackIndex;
     }
 
-    return (
-      <View style={{ flex: 1, backgroundColor: LIGHT_GRAY }}>
-        <ParallaxScrollView
-          style={[styles.container, { marginBottom: containerMargin }]}
-          contentOffset={{ x: 0, y: yOffset }}
-          backgroundColor={LIGHT_GRAY}
-          contentBackgroundColor={LIGHT_GRAY}
-          parallaxHeaderHeight={254}
-          stickyHeaderHeight={64}
-          renderFixedHeader={() => (
-            <NavigationBar
-              labelStyle={{
-                color: NAV_BAR_TEXT,
-              }}
-              buttonColor={ACTION}
-              backButtonPress={() => {
-                Navigation.pop(this.props.componentId);
-              }}
-              barStyle={{
-                backgroundColor: 'transparent',
-                height: 44,
-              }}
-            />
-          )}
-          renderStickyHeader={() => (
-            <NavigationBar
-              label={parseDisplayText(translate(tourStop.title))}
-              labelStyle={{
-                color: NAV_BAR_TEXT,
-              }}
-              buttonColor={NAV_BAR_TEXT}
-              barStyle={{
-                backgroundColor: 'transparent',
-                height: 44,
-              }}
-            />
-          )}
-          renderForeground={() => {
-            let imageURL = this.props.imageURL;
-            if (
-              this.props.locale === 'svKids' &&
-              this.tourStop.regions.length === 0
-            ) {
-              imageURL = 'highlightsKids.png';
-            }
+    let imageURL = this.props.imageURL;
+    if (this.props.locale === 'svKids' && this.tourStop.regions.length === 0) {
+      imageURL = 'highlightsKids.png';
+    }
 
-            return (
-              <View
-                style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}>
-                <ImageBackground
-                  style={styles.headerImage}
-                  source={{ uri: imageURL }}>
-                  <View style={styles.headerTitle} pointerEvents={'none'}>
-                    <Text style={styles.headerTitleText}>
-                      {parseDisplayText(
-                        translate(tourStop.title),
-                      ).toUpperCase()}
-                    </Text>
-                  </View>
-                </ImageBackground>
-                <View style={styles.playAllButtonContainer}>
-                  <TouchableOpacity
-                    style={[styles.playAllButton, { width: 0.65 * width }]}
-                    onPress={() => {
-                      playTrack(
-                        this.props.tourStop,
-                        this.props.tourStop.audioContent[0].uuid,
-                        true,
-                      );
-                    }}>
-                    <Image
-                      style={styles.playAllButtonIcon}
-                      source={require('../assets/PlayButton.png')}
-                    />
-                    <Text style={styles.playAllButtonText}>
-                      {parseDisplayText(translate('playAll')).toUpperCase()}
-                    </Text>
-                  </TouchableOpacity>
+    return (
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: LIGHT_GRAY,
+          marginBottom: bottomOffset,
+        }}>
+        <NavigationBarParallax
+          contentOffset={{ x: 0, y: yOffset }}
+          containerStyle={[styles.container]}
+          windowHeight={HEADER_IMAGE_HEIGHT}
+          navBarTitle={parseDisplayText(translate(tourStop.title))}
+          navBarColor={NAV_BAR_BACKGROUND}
+          barStyle={{ height: 44 }}
+          backButtonColor={ACTION}
+          backButtonPress={() => {
+            Navigation.pop(this.props.componentId);
+          }}>
+          <View>
+            <ImageBackground
+              style={[
+                styles.headerImage,
+                { height: HEADER_IMAGE_HEIGHT, backgroundColor: SELECTED },
+              ]}
+              source={{ uri: imageURL }}>
+              <View style={styles.headerTitle} pointerEvents={'none'}>
+                <Text style={styles.headerTitleText}>
+                  {parseDisplayText(translate(tourStop.title)).toUpperCase()}
+                </Text>
+              </View>
+            </ImageBackground>
+            <View style={styles.playAllButtonContainer}>
+              <TouchableOpacity
+                style={[styles.playAllButton, { width: 0.65 * width }]}
+                onPress={() => {
+                  playTrack(
+                    this.props.tourStop,
+                    this.props.tourStop.audioContent[0].uuid,
+                    true,
+                  );
+                }}>
+                <Image
+                  style={styles.playAllButtonIcon}
+                  source={require('../assets/PlayButton.png')}
+                />
+                <Text style={styles.playAllButtonText}>
+                  {parseDisplayText(translate('playAll')).toUpperCase()}
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.audioContentInfo}>
+              <View style={styles.audioContentQuickInfo}>
+                <View style={styles.audioContentFloor}>
+                  <Image
+                    style={styles.floorIcon}
+                    source={require('../assets/FloorIcon.png')}
+                  />
+                  <Text style={styles.floorText}>
+                    {`${floor.toUpperCase()} `}
+                  </Text>
                 </View>
-                <View style={styles.audioContentInfo}>
-                  <View style={styles.audioContentQuickInfo}>
-                    <View style={styles.audioContentFloor}>
-                      <Image
-                        style={styles.floorIcon}
-                        source={require('../assets/FloorIcon.png')}
-                      />
-                      <Text style={styles.floorText}>
-                        {`${translate('floor').toUpperCase()} `}
-                      </Text>
-                    </View>
-                    <View style={styles.audioContentDuration}>
-                      <Image
-                        style={styles.durationIcon}
-                        source={require('../assets/ClockIcon.png')}
-                      />
-                      <Text style={styles.durationText}>
-                        {`${Math.floor(duration / 60)} ${translate(
-                          'min',
-                        ).toUpperCase()}`}
-                      </Text>
-                    </View>
-                  </View>
+                <View style={styles.audioContentDuration}>
+                  <Image
+                    style={styles.durationIcon}
+                    source={require('../assets/ClockIcon.png')}
+                  />
+                  <Text style={styles.durationText}>
+                    {`${Math.floor(duration / 60)} ${translate(
+                      'min',
+                    ).toUpperCase()}`}
+                  </Text>
                 </View>
               </View>
-            );
-          }}>
+            </View>
+          </View>
           <AudioContentList
             tourStop={this.props.tourStop}
             currentAudio={this.props.currentAudio}
@@ -375,7 +319,7 @@ class TourStop extends Component {
               togglePausePlay,
             }}
           />
-        </ParallaxScrollView>
+        </NavigationBarParallax>
       </View>
     );
   }

@@ -115,9 +115,6 @@ class TutorialWelcome extends Component {
           </View>
         </View>
         <NavigationBar
-          labelStyle={{
-            color: NAV_BAR_TEXT,
-          }}
           buttonColor={ACTION}
           backButtonPress={() => {
             Navigation.pop(this.props.componentId);
