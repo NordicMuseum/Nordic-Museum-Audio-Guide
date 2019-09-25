@@ -5,16 +5,6 @@ import { Stop } from './models/stop';
 
 const SCHEMAVERSION = 1;
 
-/* eslint-disable */
-if (__DEV__) {
-  // !Undocumented will most likely break in the future!
-  // Used to delete DB from disk
-  Realm.clearTestState();
-  // !End Undocumented will most likely break in the future!
-  console.log(`Realm DB path is: ${Realm.defaultPath}`);
-}
-/* eslint-enable */
-
 // *** Realm Instance ***
 let realmInstance;
 export const getRealmInstance = () => {

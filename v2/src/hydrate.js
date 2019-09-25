@@ -21,8 +21,7 @@ function saveToRealm(tour) {
 export default function hydrate(newVersion) {
   if (newVersion) {
     realm.write(() => {
-      var realmObjects = realm.objects(Tour.NAME);
-      realm.delete(realmObjects);
+      realm.deleteAll();
 
       for (const tour of tours) {
         saveToRealm(tour);
