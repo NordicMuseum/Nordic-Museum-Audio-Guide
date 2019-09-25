@@ -238,6 +238,7 @@ class TourStop extends Component {
     const { playTrack, togglePausePlay } = this.props.actions;
 
     const duration = translate(tourStop.duration);
+    const floor = translate('floor' + tourStop.floor + '_Label');
 
     let containerMargin = 0;
     if (this.props.playerOpen) {

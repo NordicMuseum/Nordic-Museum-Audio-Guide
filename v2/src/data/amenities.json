@@ -79,13 +79,9 @@
       },
       {
         "floor": "2",
-        "icon": "lounge.png",
-        "title": "amenities_stage_title"
-      },
-      {
-        "floor": "2",
         "icon": "lunchroom.png",
-        "title": "amenities_packedLunchRoom_title"
+        "title": "amenities_packedLunchRoom_title",
+        "description": "amenities_packedLunchRoom_description"
       },
       {
         "floor": "2",
