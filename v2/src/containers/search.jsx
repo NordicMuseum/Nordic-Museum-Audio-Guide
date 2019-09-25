@@ -123,18 +123,7 @@ const pushToTourStop = (componentId, passedProps) => {
       name: 'tourStop',
       passProps: passedProps,
       options: {
-        topBar: {
-          visible: false,
-          background: {
-            color: NAV_BAR_BACKGROUND,
-          },
-          title: {
-            text: passedProps.style,
-            fontSize: 17,
-            fontFamily: 'Helvetica',
-            color: NAV_BAR_TEXT,
-          },
-        },
+        topBar: { visible: false },
       },
     },
   });

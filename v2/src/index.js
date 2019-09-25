@@ -10,6 +10,7 @@ import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
 import { showTutorial } from './actions/tutorial';
+import { updateBeacons } from './actions/beacon';
 
 import { localizationActor } from './actors/localization';
 import { audioActor } from './actors/audio';
@@ -157,4 +158,6 @@ Navigation.events().registerAppLaunchedListener(async () => {
   if (shouldShowTutorial) {
     store.dispatch(showTutorial());
   }
+
+  store.dispatch(updateBeacons(['Jewellery', '18104:3267']));
 });

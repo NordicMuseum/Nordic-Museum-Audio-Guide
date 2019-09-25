@@ -253,10 +253,7 @@ class TourStop extends Component {
           }}>
           <View>
             <ImageBackground
-              style={[
-                styles.headerImage,
-                { height: HEADER_IMAGE_HEIGHT, backgroundColor: SELECTED },
-              ]}
+              style={[styles.headerImage, { height: HEADER_IMAGE_HEIGHT }]}
               source={{ uri: imageURL }}>
               <View style={styles.headerTitle} pointerEvents={'none'}>
                 <Text style={styles.headerTitleText}>

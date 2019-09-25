@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -56,6 +57,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+const pushToTourStop = (componentId, passedProps) => {
+  Navigation.push(componentId, {
+    component: {
+      name: 'tourStop',
+      passProps: passedProps,
+      options: {
+        topBar: { visible: false },
+      },
+    },
+  });
+};
 
 class NearMe extends Component {
   static get options() {
@@ -198,8 +211,8 @@ class NearMe extends Component {
           const tourStop = {
             uuid: uuid.v4(),
             floor: this.props.floor,
-            shortTitle: translate('Highlights_shortTitle'),
-            longTitle: translate('Highlights_shortTitle'),
+            title: 'highlights',
+            // longTitle: translate('Highlights_shortTitle'),
             // audioContent: audioContentRealm.filtered(query),
             audioContent: audioContent,
           };
@@ -223,14 +236,14 @@ class NearMe extends Component {
                       //   analyticsTrackTranscriptOpenned(tourStop.title, content.title);
                     },
                     reloadAudio: () => {
-                      // playTrack(tourStop, content.uuid, false);
+                      playTrack(tourStop, content.uuid, false);
                     },
                     audioAction: () => {
-                      // if (this.props.currentStopUUID === content.uuid) {
-                      //   togglePausePlay();
-                      // } else {
-                      //   playTrack(tourStop, content.uuid, false);
-                      // }
+                      if (this.props.currentStopUUID === content.uuid) {
+                        togglePausePlay();
+                      } else {
+                        playTrack(tourStop, content.uuid, false);
+                      }
                     },
                   }}
                 />
@@ -254,10 +267,17 @@ class NearMe extends Component {
             ...tourStops.map((tourStop, index) => {
               totalIndex++;
 
+              // const renderItem = (item, index, onPress, selected, locale, items)
+
               const tourItem = renderItem(
                 tourStop,
                 index,
-                item => {},
+                () => {
+                  const passedProps = {
+                    tourStop,
+                  };
+                  pushToTourStop(this.props.componentId, passedProps);
+                },
                 this.props.currentStopUUID,
                 this.props.locale,
                 tourStops,
@@ -339,313 +359,8 @@ const mapStateToProps = state => {
     tracking: true,
     locationServicesStatus: 'LOCATION_SERVICES_STATUS_AUTHORIZED',
     bluetoothOn: true,
-    closeTourStops: [
-      {
-        floor: '2–4',
-        order: 1,
-        title: 'tours_highlights_title',
-        audioContent: [
-          {
-            id: '201',
-            region: 'Great Hall',
-            category: 'HIGHLIGHT',
-            title: 'stops_welcomeToTheNordicMuseum_title',
-            duration: 'stops_welcomeToTheNordicMuseum_duration',
-            transcript: 'stops_welcomeToTheNordicMuseum_transcript',
-          },
-          {
-            id: '401',
-            region: 'Homes and Interiors E',
-            category: 'HIGHLIGHT',
-            title: 'stops_theTwoRoomCottage_title',
-            duration: 'stops_theTwoRoomCottage_duration',
-          },
-          {
-            id: '408',
-            region: 'Homes and Interiors E',
-            category: 'HIGHLIGHT',
-            title: 'stops_theStateBedroom_title',
-            duration: 'stops_theStateBedroom_duration',
-          },
-          {
-            id: '413',
-            region: 'Homes and Interiors E',
-            category: 'HIGHLIGHT',
-            title: 'stops_theBrewersHouse_title',
-            duration: 'stops_theBrewersHouse_duration',
-          },
-          {
-            id: '424',
-            region: 'Homes and Interiors W',
-            category: 'HIGHLIGHT',
-            title: 'stops_theMerchantsDrawingRoom_title',
-            duration: 'stops_theMerchantsDrawingRoom_duration',
-          },
-          {
-            id: '425',
-            region: 'Homes and Interiors W',
-            category: 'HIGHLIGHT',
-            title: 'stops_functionalistClassicEva_title',
-            duration: 'stops_functionalistClassicEva_duration',
-          },
-          {
-            id: '434',
-            region: 'Sapmi',
-            category: 'HIGHLIGHT',
-            title: 'stops_theReindeer_title',
-            duration: 'stops_theReindeer_duration',
-          },
-          {
-            id: '426',
-            region: 'Sapmi',
-            category: 'HIGHLIGHT',
-            title: 'stops_sapmi_title',
-            duration: 'stops_sapmi_duration',
-          },
-          {
-            id: '423',
-            region: 'N Balcony 4',
-            category: 'HIGHLIGHT',
-            title: 'stops_arturHazeliussBanquetHall_title',
-            duration: 'stops_arturHazeliussBanquetHall_duration',
-          },
-          {
-            id: '469',
-            region: 'N Balcony 4',
-            category: 'HIGHLIGHT',
-            title: 'stops_theTextileGallery_title',
-            duration: 'stops_theTextileGallery_duration',
-          },
-          {
-            id: '456',
-            region: 'Swedish Folk Art',
-            category: 'HIGHLIGHT',
-            title: 'stops_thePowerOfTheChair_title',
-            duration: 'stops_thePowerOfTheChair_duration',
-          },
-          {
-            id: '451',
-            region: 'Swedish Folk Art',
-            category: 'HIGHLIGHT',
-            title: 'stops_theShapesOfTheGrandfatherClocks_title',
-            duration: 'stops_theShapesOfTheGrandfatherClocks_duration',
-          },
-          {
-            id: '301',
-            region: 'Jewellery',
-            category: 'HIGHLIGHT',
-            title: 'stops_jewellery_title',
-            duration: 'stops_jewellery_duration',
-          },
-          {
-            id: '302',
-            region: 'Doll House',
-            category: 'HIGHLIGHT',
-            title: 'stops_swedensOldestDollsHouse_title',
-            duration: 'stops_swedensOldestDollsHouse_duration',
-          },
-          {
-            id: '316',
-            region: 'Table Settings',
-            category: 'HIGHLIGHT',
-            title: 'stops_aSwanOnTheTable_title',
-            duration: 'stops_aSwanOnTheTable_duration',
-          },
-          {
-            id: '328',
-            region: 'Table Settings',
-            category: 'HIGHLIGHT',
-            title: 'stops_tenKindsOfBiscuits_title',
-            duration: 'stops_tenKindsOfBiscuits_duration',
-          },
-          {
-            id: '330',
-            region: 'Gustav Vasa',
-            category: 'HIGHLIGHT',
-            title: 'stops_portalToThePalaceOfEverydayLife_title',
-            duration: 'stops_portalToThePalaceOfEverydayLife_duration',
-          },
-          {
-            id: '355',
-            region: 'Traditions',
-            category: 'HIGHLIGHT',
-            title: 'stops_whenHanseKalleDied_title',
-            duration: 'stops_whenHanseKalleDied_duration',
-          },
-          {
-            id: '333',
-            region: 'Traditions',
-            category: 'HIGHLIGHT',
-            title: 'stops_midsummersEve_title',
-            duration: 'stops_midsummersEve_duration',
-          },
-          {
-            id: '357',
-            region: 'Strindberg',
-            category: 'HIGHLIGHT',
-            title: 'stops_augustStrindbergsArt_title',
-            duration: 'stops_augustStrindbergsArt_duration',
-          },
-          {
-            id: '356',
-            region: 'Strindberg',
-            category: 'HIGHLIGHT',
-            title: 'stops_augustStrindbergsWriting_title',
-            duration: 'stops_augustStrindbergsWriting_duration',
-          },
-          {
-            id: '202',
-            region: '1940s Apartment',
-            category: 'HIGHLIGHT',
-            title: 'stops_the1940SApartment_title',
-            duration: 'stops_the1940SApartment_duration',
-          },
-        ],
-        category: 'HIGHLIGHTS',
-        imageURL: 'highlights.png',
-        imageWidth: 750,
-        imageHeight: 345,
-        imageAccessibilityLabel: 'tours_highlights_imageAccessibilityLabel',
-        shortCredit: 'tours_highlights_shortCredit',
-        longCredit: 'tours_highlights_longCredit',
-        duration: 'tours_highlights_duration',
-      },
-      {
-        floor: 2,
-        order: 1,
-        title: 'tours_theArcticWhileTheIceIsMelting_title',
-        audioContent: [
-          {
-            id: 203,
-            category: 'CONTEXT',
-            title: 'stops_theArcticTheLandUnderTheNorthStar_title',
-          },
-          {
-            id: 204,
-            category: 'CONTEXT',
-            title: 'stops_arcticBorders_title',
-          },
-          {
-            id: 205,
-            category: 'CONTEXT',
-            title: 'stops_aMeltingWorld_title',
-          },
-          {
-            id: 206,
-            category: 'CONTEXT',
-            title: 'stops_threatenedLife_title',
-          },
-          {
-            id: 207,
-            category: 'CONTEXT',
-            title: 'stops_theLivingIce_title',
-          },
-          {
-            id: 208,
-            category: 'CONTEXT',
-            title: 'stops_humansAndIce_title',
-          },
-          {
-            id: 209,
-            category: 'CONTEXT',
-            title: 'stops_secretsOfTheIce_title',
-          },
-          {
-            id: 210,
-            category: 'CONTEXT',
-            title: 'stops_inMotion_title',
-          },
-          {
-            id: 211,
-            category: 'CONTEXT',
-            title: 'stops_atHomeInTheArctic_title',
-          },
-          {
-            id: 212,
-            category: 'CONTEXT',
-            title: 'stops_warmthAndLight_title',
-          },
-          {
-            id: 213,
-            category: 'CONTEXT',
-            title: 'stops_inThePantry_title',
-          },
-          {
-            id: 214,
-            category: 'CONTEXT',
-            title: 'stops_theSignificanceOfClothing_title',
-          },
-          {
-            id: 215,
-            category: 'CONTEXT',
-            title: 'stops_theClothesOfIcelandAndTheFaroeIslands_title',
-          },
-          {
-            id: 216,
-            category: 'CONTEXT',
-            title: 'stops_anIcelandicFormalOutfit_title',
-          },
-          {
-            id: 217,
-            category: 'CONTEXT',
-            title: 'stops_theClothesOfGreenland_title',
-          },
-          {
-            id: 218,
-            category: 'CONTEXT',
-            title: 'stops_aBoysAttire_title',
-          },
-          {
-            id: 219,
-            category: 'CONTEXT',
-            title: 'stops_womensClothingInGreenland_title',
-          },
-          {
-            id: 220,
-            category: 'CONTEXT',
-            title: 'stops_samiClothing_title',
-          },
-          {
-            id: 221,
-            category: 'CONTEXT',
-            title: 'stops_theResourceLandscape_title',
-          },
-          {
-            id: 222,
-            category: 'CONTEXT',
-            title: 'stops_theBattleForResources_title',
-          },
-          {
-            id: 223,
-            category: 'CONTEXT',
-            title: 'stops_downInTheMine_title',
-          },
-          {
-            id: 224,
-            category: 'CONTEXT',
-            title: 'stops_theWhales_title',
-          },
-          {
-            id: 225,
-            category: 'CONTEXT',
-            title: 'stops_lightInTheDarkness_title',
-          },
-          {
-            id: 226,
-            category: 'CONTEXT',
-            title: 'stops_theFuture_title',
-          },
-        ],
-        imageURL: 'arctic.png',
-        imageWidth: 750,
-        imageHeight: 345,
-        imageAccessibilityLabel:
-          'tours_theArcticWhileTheIceIsMelting_imageAccessibilityLabel',
-        shortCredit: 'tours_theArcticWhileTheIceIsMelting_shortCredit',
-        longCredit: 'tours_theArcticWhileTheIceIsMelting_longCredit',
-        duration: 'tours_theArcticWhileTheIceIsMelting_duration',
-      },
-    ],
+    closeTourStops: state.closeTourStops.tourStops,
+    audioContent: state.closeTourStops.audioContent,
     amenities: [
       {
         floor: '1',
@@ -663,28 +378,10 @@ const mapStateToProps = state => {
         title: 'amenities_shop_title',
         description: 'amenities_shop_description',
       },
-    ],
-    audioContent: [
       {
-        id: '316',
-        region: 'Table Settings',
-        category: 'HIGHLIGHT',
-        title: 'stops_aSwanOnTheTable_title',
-        duration: 'stops_aSwanOnTheTable_duration',
-      },
-      {
-        id: '328',
-        region: 'Table Settings',
-        category: 'HIGHLIGHT',
-        title: 'stops_tenKindsOfBiscuits_title',
-        duration: 'stops_tenKindsOfBiscuits_duration',
-      },
-      {
-        id: '330',
-        region: 'Gustav Vasa',
-        category: 'HIGHLIGHT',
-        title: 'stops_portalToThePalaceOfEverydayLife_title',
-        duration: 'stops_portalToThePalaceOfEverydayLife_duration',
+        floor: '1',
+        icon: 'babyChangingTable.png',
+        title: 'amenities_babyChangingTables_title',
       },
     ],
     floor: 1,
