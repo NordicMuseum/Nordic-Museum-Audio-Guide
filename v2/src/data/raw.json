@@ -1,5 +1,5 @@
 {
-  "Timestamp": "Mon Sep 23 2019 09:41:30 GMT-0400 (EDT)",
+  "Timestamp": "Tue Sep 24 2019 12:03:21 GMT-0400 (EDT)",
   "UI Strings": [
     {
       "UIString": "min",
@@ -1621,21 +1621,21 @@
       "shortCredit__sv": "<i>Arktis – medan isen smälter</i>",
       "longCredit__en": "Photo: Camilla Andersen\\n<i>The Arctic – While the Ice is Melting</i>",
       "longCredit__sv": "Foto: Camilla Andersen\\n<i>Arktis – medan isen smälter</i>",
-      "duration__ar": 1,
-      "duration__de": 1,
-      "duration__en": 1,
-      "duration__es": 1,
-      "duration__fi": 1,
-      "duration__fr": 1,
-      "duration__it": 1,
-      "duration__ru": 1,
-      "duration__sv": 1,
-      "duration__seSma": 1,
-      "duration__seSme": 1,
-      "duration__seSmj": 1,
-      "duration__svKids": 1,
-      "duration__svSimple": 1,
-      "duration__zh": 1
+      "duration__ar": 2640,
+      "duration__de": 2640,
+      "duration__en": 2640,
+      "duration__es": 2640,
+      "duration__fi": 2640,
+      "duration__fr": 2640,
+      "duration__it": 2640,
+      "duration__ru": 2640,
+      "duration__sv": 2520,
+      "duration__seSma": 2520,
+      "duration__seSme": 2520,
+      "duration__seSmj": 2520,
+      "duration__svKids": 2520,
+      "duration__svSimple": 2520,
+      "duration__zh": 2640
     },
     {
       "floor": 3,
@@ -3572,15 +3572,11 @@
     },
     {
       "floor": "2",
-      "icon": "lounge.png",
-      "title__en": "Stage",
-      "title__sv": "Scen"
-    },
-    {
-      "floor": "2",
       "icon": "lunchroom.png",
       "title__en": "Packed Lunch Room",
-      "title__sv": "Matsäcksrum"
+      "title__sv": "Matsäcksrum",
+      "description__en": "Packed Lunch Room with microwave oven is located outside the Children’s Playhouse on Floor 2 (the Great Hall).",
+      "description__sv": "Matsäcksrum med mikrovågsugn finns utanför Lekstugan på plan 2 (Stora hallen)."
     },
     {
       "floor": "2",
