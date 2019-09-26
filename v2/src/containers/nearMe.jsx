@@ -355,7 +355,7 @@ class NearMe extends Component {
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-    locale: state.localization.locale,
+    locale: state.device.locale,
     tracking: true,
     locationServicesStatus: 'LOCATION_SERVICES_STATUS_AUTHORIZED',
     bluetoothOn: true,

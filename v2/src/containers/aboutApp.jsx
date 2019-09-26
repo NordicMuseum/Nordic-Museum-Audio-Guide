@@ -140,9 +140,9 @@ class AboutApp extends Component {
 
 const mapStateToProps = state => {
   return {
-    locale: state.localization.locale,
-    appVersion: state.localization.appVersion,
-    museumMode: state.localization.museumMode,
+    locale: state.device.locale,
+    appVersion: state.device.appVersion,
+    museumMode: state.device.museumMode,
   };
 };
 

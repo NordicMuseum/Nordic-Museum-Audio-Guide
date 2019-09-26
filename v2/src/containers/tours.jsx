@@ -105,7 +105,7 @@ const mapStateToProps = state => {
     playerOpen: state.bottomPlayer.playerOpen,
     tourStops: state.allTourStops.tourStops,
     currentStopUUID: state.bottomPlayer.stopUUID,
-    locale: state.localization.locale,
+    locale: state.device.locale,
   };
 };
 

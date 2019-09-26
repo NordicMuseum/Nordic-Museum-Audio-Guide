@@ -137,7 +137,6 @@ class Search extends Component {
     digits: PropTypes.array.isRequired,
     // screenReader: PropTypes.bool.isRequired,
     tourStops: PropTypes.object.isRequired,
-    locale: PropTypes.string.isRequired,
     actions: PropTypes.shape({
       editDigits: PropTypes.func.isRequired,
     }).isRequired,
@@ -412,7 +411,6 @@ const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
     digits: state.searchByNumber.digits,
-    locale: state.localization.locale,
     tourStops: state.allTourStops.tourStops,
   };
 };

@@ -65,7 +65,7 @@ class TutorialLanguage extends Component {
 
 const mapStateToProps = state => {
   return {
-    locale: state.localization.locale,
+    locale: state.device.locale,
   };
 };
 

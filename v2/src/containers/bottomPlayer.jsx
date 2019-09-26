@@ -234,7 +234,7 @@ const mapStateToProps = state => {
     timerActive: state.bottomPlayer.timerActive,
     timerNumber: state.bottomPlayer.timerNumber,
     autoplayOn: state.bottomPlayer.autoplayOn,
-    locale: state.localization.locale,
+    locale: state.device.locale,
   };
 };
 

@@ -332,7 +332,7 @@ const mapStateToProps = state => {
     autoplayOn: state.bottomPlayer.autoplayOn,
     autoplayInitial: state.bottomPlayer.autoplayInitial,
     currentStopUUID: state.bottomPlayer.stopUUID,
-    locale: state.localization.locale,
+    locale: state.device.locale,
   };
 };
 

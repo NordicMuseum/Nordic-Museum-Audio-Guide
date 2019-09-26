@@ -87,7 +87,7 @@ Settings.propTypes = {
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-    locale: state.localization.locale,
+    locale: state.device.locale,
   };
 };
 
