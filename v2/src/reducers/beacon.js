@@ -11,7 +11,7 @@ export const initialState = {
   locationServicesStatus: LOCATION_SERVICES_STATUS_NOTDETERMINED,
   tracking: null,
   rangingUUID: 'f7826da6-4fa2-4e98-8024-bc5b71e0893e',
-  rangingIdentifier: 'Warhol Accessibility Project App',
+  rangingIdentifier: 'Nordic Museum Audio Guide',
   // beacons is only useful for debugging
   beacons: [
     // "majorNumber:minorNumber",

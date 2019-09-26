@@ -14,10 +14,12 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
     "i18n-js": "^3.3.0",
+    "lodash": "^4.17.15",
     "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-beacons-manager": "^1.0.7",
     "react-native-collapsible": "^1.5.1",
     "react-native-device-info": "^3.1.4",
     "react-native-localize": "^1.2.0",

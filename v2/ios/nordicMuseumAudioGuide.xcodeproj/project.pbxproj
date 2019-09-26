@@ -19,6 +19,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* nordicMuseumAudioGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nordicMuseumAudioGuideTests.m */; };
 		4AC6A8D9B6A690A2CA870F98 /* libPods-nordicMuseumAudioGuide-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD19721B4245EE72EE85AA89 /* libPods-nordicMuseumAudioGuide-tvOSTests.a */; };
+		4C546D27C9164451AEA5826E /* libRNiBeacon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4122593B0BF848C5A1DBFF4E /* libRNiBeacon.a */; };
 		621929BF664451CD2CB20B7C /* libPods-nordicMuseumAudioGuideTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E893637101F1D4220EBF706 /* libPods-nordicMuseumAudioGuideTests.a */; };
 		8CF4340F78D649048EF25E4F /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C8F637A4664D609ACA3244 /* libRealmReact.a */; };
 		95320ABD232F01DE000D6DE8 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */; };
@@ -41,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "nordicMuseumAudioGuide-tvOS";
+		};
+		95DAE1A4233C3DB100D8A316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6A01384E7A5499CB37A915B /* RNiBeacon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D03EBDE1E56B1E700C55E6B;
+			remoteInfo = RNiBeacon;
 		};
 		A59E9676233559FB008D82DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -72,6 +80,7 @@
 		2D02E4901E0B4A5D006451C7 /* nordicMuseumAudioGuide-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nordicMuseumAudioGuide-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322838F45DA5F86028D967C8 /* Pods-nordicMuseumAudioGuide-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuide-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuide-tvOS/Pods-nordicMuseumAudioGuide-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		3E362F2A493DDE631612316F /* Pods-nordicMuseumAudioGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuideTests/Pods-nordicMuseumAudioGuideTests.release.xcconfig"; sourceTree = "<group>"; };
+		4122593B0BF848C5A1DBFF4E /* libRNiBeacon.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNiBeacon.a; sourceTree = "<group>"; };
 		46FA88BE35074CF49D646043 /* Pods-nordicMuseumAudioGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuideTests/Pods-nordicMuseumAudioGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		49BAD80AF73EFC1053C7644A /* Pods-nordicMuseumAudioGuide-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuide-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuide-tvOSTests/Pods-nordicMuseumAudioGuide-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E893637101F1D4220EBF706 /* libPods-nordicMuseumAudioGuideTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuideTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +91,7 @@
 		95D9A6FE23389EFB00162A9E /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = ../src/assets/audio; sourceTree = "<group>"; };
 		9780D97B8B9E59DDD9FE0F73 /* libPods-nordicMuseumAudioGuide-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD19721B4245EE72EE85AA89 /* libPods-nordicMuseumAudioGuide-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A01384E7A5499CB37A915B /* RNiBeacon.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNiBeacon.xcodeproj; path = "../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon.xcodeproj"; sourceTree = "<group>"; };
 		E9CAC0A2DD6C9768E65195D6 /* libPods-nordicMuseumAudioGuide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -104,6 +114,7 @@
 				8CF4340F78D649048EF25E4F /* libRealmReact.a in Frameworks */,
 				1B22B9E744484004B85C1A59 /* libc++.tbd in Frameworks */,
 				21485FAEDDBE42F69D9E3FCD /* libz.tbd in Frameworks */,
+				4C546D27C9164451AEA5826E /* libRNiBeacon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				000136B65B23474286CFF410 /* RealmReact.xcodeproj */,
+				B6A01384E7A5499CB37A915B /* RNiBeacon.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -224,10 +236,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		95DAE1A1233C3DB100D8A316 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95DAE1A5233C3DB100D8A316 /* libRNiBeacon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A59E966B2335590B008D82DB /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				28C8F637A4664D609ACA3244 /* libRealmReact.a */,
+				4122593B0BF848C5A1DBFF4E /* libRNiBeacon.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -366,6 +387,10 @@
 					ProductGroup = A59E9673233559FB008D82DB /* Products */;
 					ProjectRef = 000136B65B23474286CFF410 /* RealmReact.xcodeproj */;
 				},
+				{
+					ProductGroup = 95DAE1A1233C3DB100D8A316 /* Products */;
+					ProjectRef = B6A01384E7A5499CB37A915B /* RNiBeacon.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -378,6 +403,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		95DAE1A5233C3DB100D8A316 /* libRNiBeacon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNiBeacon.a;
+			remoteRef = 95DAE1A4233C3DB100D8A316 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A59E9677233559FB008D82DB /* libRealmReact.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -655,12 +687,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = nordicMuseumAudioGuideTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -683,12 +717,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = nordicMuseumAudioGuideTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -716,6 +752,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = nordicMuseumAudioGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,6 +781,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = nordicMuseumAudioGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -775,11 +813,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = "nordicMuseumAudioGuide-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -811,11 +851,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = "nordicMuseumAudioGuide-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -846,11 +888,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = "nordicMuseumAudioGuide-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -881,11 +925,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon",
 				);
 				INFOPLIST_FILE = "nordicMuseumAudioGuide-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (

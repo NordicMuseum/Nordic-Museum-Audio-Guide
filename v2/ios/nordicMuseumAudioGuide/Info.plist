@@ -50,5 +50,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>The Nordic Museum Audio Guide uses your location to show you nearby highlights and themes.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>The Nordic Museum Audio Guide uses bluetooth to figure out your location and show nearby highlights and themes.</string>
 </dict>
 </plist>
