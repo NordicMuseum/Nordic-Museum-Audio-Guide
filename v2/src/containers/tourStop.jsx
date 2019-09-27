@@ -22,8 +22,6 @@ import NavigationBarParallax from '../components/navigationBarParallax';
 
 import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
 
-import { updateNearMeRootStatus } from '../actions/navigation';
-
 import { AUDIO_CONTENT_ITEM_HEIGHT } from '../components/audioContentItem';
 import AudioContentList from '../components/audioContentList';
 
@@ -343,7 +341,6 @@ const mapDispatchToProps = dispatch => {
         playTrack,
         unloadAudio,
         togglePausePlay,
-        updateNearMeRootStatus,
       },
       dispatch,
     ),

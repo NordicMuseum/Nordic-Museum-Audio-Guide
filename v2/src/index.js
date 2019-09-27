@@ -38,7 +38,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   const locale = setI18nConfig();
 
   const store = configureStore({
-    localization: { locale, appVersion, museumMode },
+    device: { locale, appVersion, museumMode },
   });
   localizationActor(store);
   audioActor(store);
