@@ -17,7 +17,7 @@ import { translate } from '../i18n';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { editDigits as editDigitsAction } from '../actions/searchByNumber';
+import { addDigit, deleteDigit, resetDigits } from '../actions/searchByNumber';
 
 import {
   OFF_BLACK,
@@ -32,14 +32,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  statusBar: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 20,
-    backgroundColor: NAV_BAR_BACKGROUND,
-  },
   display: {
     flex: 0.15,
     justifyContent: 'space-around',
@@ -47,7 +39,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   displayRow: {
-    width: 150,
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
@@ -138,20 +129,50 @@ class Search extends Component {
     // screenReader: PropTypes.bool.isRequired,
     tourStops: PropTypes.object.isRequired,
     actions: PropTypes.shape({
-      editDigits: PropTypes.func.isRequired,
+      addDigit: PropTypes.func.isRequired,
+      deleteDigit: PropTypes.func.isRequired,
+      resetDigits: PropTypes.func.isRequired,
     }).isRequired,
   };
+
+  static get options() {
+    return {
+      topBar: {
+        background: {
+          color: NAV_BAR_BACKGROUND,
+        },
+        title: {
+          text: translate('searchScreen_Title'),
+          fontSize: 17,
+          fontFamily: 'Helvetica',
+          color: NAV_BAR_TEXT,
+        },
+        noBorder: true,
+      },
+    };
+  }
 
   componentDidMount() {
     this.navigationEventListener = Navigation.events().bindComponent(this);
   }
 
   componentDidAppear() {
-    this.props.actions.editDigits([null, null, null]);
+    this.props.actions.resetDigits();
   }
 
   componentDidDisappear() {
-    this.props.actions.editDigits([null, null, null]);
+    this.props.actions.resetDigits();
+  }
+
+  addDigit(digit) {
+    // Prevents firing add digit action between completed search code and tour stop screen push
+    if (
+      this.props.digits.filter(d => {
+        return d === null;
+      }).length !== 0
+    ) {
+      this.props.actions.addDigit(this.props.digits, digit);
+    }
   }
 
   loadTourStop(digits, tourStops) {
@@ -192,7 +213,7 @@ class Search extends Component {
       this.setScreenTitle('tryAgain');
       const tryAgainMessage = setTimeout(() => {
         this.setScreenTitle('searchScreen_Title');
-        this.props.actions.editDigits([null, null, null]);
+        this.props.actions.resetDigits();
       }, tryAgainMessageTime);
     }
   }
@@ -207,62 +228,16 @@ class Search extends Component {
     });
   }
 
-  addDigit(digit) {
-    const updatedDigits = [];
-    let digitAdded = false;
-    let digitIndex = 0;
-    for (let i = 0; i < 3; i++) {
-      if (this.props.digits[i] !== null) {
-        updatedDigits[i] = this.props.digits[i];
-      } else if (!digitAdded) {
-        updatedDigits[i] = digit;
-        digitAdded = true;
-        digitIndex = i;
-      } else {
-        updatedDigits[i] = null;
-      }
-    }
-
-    this.props.actions.editDigits(updatedDigits);
-
-    if (digitIndex === 2) {
-      this.loadTourStop(updatedDigits.join(''), this.props.tourStops);
-    }
-  }
-
-  deleteDigit() {
-    const updatedDigits = [];
-    let digitDeleted = false;
-    for (let i = 2; i >= 0; i--) {
-      if (this.props.digits[i] !== null && !digitDeleted) {
-        updatedDigits[i] = null;
-        digitDeleted = true;
-      } else {
-        updatedDigits[i] = this.props.digits[i];
-      }
-    }
-    this.props.actions.editDigits(updatedDigits);
-  }
-
-  static get options() {
-    return {
-      topBar: {
-        background: {
-          color: NAV_BAR_BACKGROUND,
-        },
-        title: {
-          text: translate('searchScreen_Title'),
-          fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
-        },
-        noBorder: true,
-      },
-    };
-  }
-
   render() {
     const { width, height } = Dimensions.get('window');
+
+    if (
+      this.props.digits.filter(d => {
+        return d === null;
+      }).length === 0
+    ) {
+      this.loadTourStop(this.props.digits.join(''), this.props.tourStops);
+    }
 
     return (
       <View
@@ -274,7 +249,10 @@ class Search extends Component {
         <View
           style={[styles.display, this.props.playerOpen ? { flex: 0.15 } : {}]}>
           <View
-            style={[styles.displayRow]}
+            style={[
+              styles.displayRow,
+              { width: 50 * this.props.digits.length },
+            ]}
             //I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}
           >
             {this.props.digits.map((digit, index) => {
@@ -392,7 +370,7 @@ class Search extends Component {
             </TouchableHighlight>
             <TouchableOpacity
               onPress={() => {
-                this.deleteDigit();
+                this.props.actions.deleteDigit(this.props.digits);
               }}
               style={styles.nonDigit}>
               <Image
@@ -418,7 +396,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      editDigits: editDigitsAction,
+      resetDigits: resetDigits,
+      addDigit: addDigit,
+      deleteDigit: deleteDigit,
     },
     dispatch,
   ),
