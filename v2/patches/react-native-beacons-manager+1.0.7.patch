@@ -1,0 +1,36 @@
+diff --git a/node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon.xcodeproj/project.pbxproj b/node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon.xcodeproj/project.pbxproj
+index 1616c21..74387be 100644
+--- a/node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon.xcodeproj/project.pbxproj
++++ b/node_modules/react-native-beacons-manager/ios/RNiBeacon/RNiBeacon.xcodeproj/project.pbxproj
+@@ -107,6 +107,7 @@
+ 			developmentRegion = English;
+ 			hasScannedForEncodings = 0;
+ 			knownRegions = (
++				English,
+ 				en,
+ 			);
+ 			mainGroup = 0D03EBD51E56B1E600C55E6B;
+@@ -226,7 +227,10 @@
+ 			buildSettings = {
+ 				DEAD_CODE_STRIPPING = NO;
+ 				DEVELOPMENT_TEAM = "";
+-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../node_modules/react-native/React";
++				HEADER_SEARCH_PATHS = (
++					"$(SRCROOT)/../../../react-native/ReactCommon/**",
++					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/React-Core/**",
++				);
+ 				OTHER_LDFLAGS = "-ObjC";
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				SKIP_INSTALL = YES;
+@@ -238,7 +242,10 @@
+ 			buildSettings = {
+ 				DEAD_CODE_STRIPPING = NO;
+ 				DEVELOPMENT_TEAM = "";
+-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React";
++				HEADER_SEARCH_PATHS = (
++					"$(SRCROOT)/../../../react-native/ReactCommon/**",
++					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/React-Core/**",
++				);
+ 				OTHER_LDFLAGS = "-ObjC";
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				SKIP_INSTALL = YES;
