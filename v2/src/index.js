@@ -15,6 +15,7 @@ import { updateBeacons } from './actions/beacon';
 import { localizationActor } from './actors/localization';
 import { audioActor } from './actors/audio';
 import { chargingActor } from './actors/charging';
+import { beaconActor } from './actors/beacon';
 
 import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
 
@@ -43,6 +44,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   localizationActor(store);
   audioActor(store);
   chargingActor(store);
+  beaconActor(store);
 
   Navigation.setDefaultOptions({
     layout: {
@@ -158,6 +160,4 @@ Navigation.events().registerAppLaunchedListener(async () => {
   if (shouldShowTutorial) {
     store.dispatch(showTutorial());
   }
-
-  store.dispatch(updateBeacons(['Jewellery', '18104:3267']));
 });

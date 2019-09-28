@@ -15,10 +15,10 @@ export class Stop {
     properties: {
       id: { type: 'string' },
       uuid: { type: 'string' },
-      regions: { type: 'string?[]', optional: true },
+      region: { type: 'string?' },
       category: { type: 'string' },
       title: { type: 'string' },
-      transcript: { type: 'string', optional: true },
+      transcript: { type: 'string?' },
     },
   };
 

@@ -7,6 +7,7 @@ import {
 } from '../realm';
 
 import { Stop } from './stop';
+import { StringValue } from './stringValue';
 
 export class Tour {
   static NAME = 'Tour';
@@ -15,20 +16,22 @@ export class Tour {
     name: Tour.NAME,
     primaryKey: 'uuid',
     properties: {
-      uuid: { type: 'string', optional: true },
+      uuid: { type: 'string' },
       floor: { type: 'string' },
       order: { type: 'int' },
       title: { type: 'string' },
-      regions: { type: 'string?[]', optional: true },
-      category: { type: 'string', optional: true },
-      url: { type: 'string', optional: true },
-      imageAccessibilityLabel: { type: 'string', optional: true },
+      // Realm does not allow advanced queries on primitive types
+      // So we are wrapped a primitive type in an object type
+      regions: { type: `${StringValue.NAME}[]` },
+      category: { type: 'string?' },
+      url: { type: 'string?' },
+      imageAccessibilityLabel: { type: 'string?' },
       imageWidth: { type: 'int' },
       imageHeight: { type: 'int' },
       shortCredit: { type: 'string' },
       longCredit: { type: 'string' },
       duration: { type: 'string' },
-      audioContent: { type: 'list', objectType: Stop.NAME },
+      audioContent: { type: `${Stop.NAME}[]` },
     },
   };
 

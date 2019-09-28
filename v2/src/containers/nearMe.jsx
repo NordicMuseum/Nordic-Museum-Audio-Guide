@@ -26,7 +26,6 @@ import {
   NAV_BAR_BACKGROUND,
   BOTTOM_PLAYER_HEIGHT,
   LIGHT_BLUE,
-  getBottomTabsHeight,
 } from '../styles';
 
 const uuid = require('uuid');
@@ -88,6 +87,28 @@ class NearMe extends Component {
     };
   }
 
+  componentDidUpdate() {
+    const { floor, componentId, closeTourStops, audioContent } = this.props;
+
+    let floorName;
+    if (floor == null) {
+      floorName = translate('nearMeScreen_Title');
+    } else {
+      floorName = `${translate('floor')} ${floor}`;
+    }
+
+    Navigation.mergeOptions(componentId, {
+      topBar: {
+        title: {
+          text: floorName,
+        },
+      },
+      bottomTab: {
+        badge: `${closeTourStops.length + audioContent.length}`,
+      },
+    });
+  }
+
   render() {
     let contentView;
     let debugView;
@@ -110,8 +131,7 @@ class NearMe extends Component {
       );
     } else if (this.props.tracking === true) {
       const tourStops = this.props.closeTourStops;
-      const tourStopsNum = tourStops.length;
-      const amenities = this.props.amenities;
+      const amenities = this.props.detectedAmenities;
       const audioContent = this.props.audioContent;
       let voiceOverMessage;
 
@@ -329,13 +349,6 @@ class NearMe extends Component {
       }
     }
 
-    let floor;
-    if (this.props.floor === null) {
-      floor = translate('nearMeScreen_Title');
-    } else {
-      floor = `${translate('floor')} ${this.props.floor}`;
-    }
-
     let bottomOffset = 0;
     if (this.props.playerOpen) {
       bottomOffset += BOTTOM_PLAYER_HEIGHT;
@@ -361,30 +374,8 @@ const mapStateToProps = state => {
     bluetoothOn: true,
     closeTourStops: state.closeTourStops.tourStops,
     audioContent: state.closeTourStops.audioContent,
-    amenities: [
-      {
-        floor: '1',
-        icon: 'cloakroom.png',
-        title: 'amenities_cloakroom_title',
-      },
-      {
-        floor: '1',
-        icon: 'restrooms.png',
-        title: 'amenities_toilets_title',
-      },
-      {
-        floor: '1',
-        icon: 'shop.png',
-        title: 'amenities_shop_title',
-        description: 'amenities_shop_description',
-      },
-      {
-        floor: '1',
-        icon: 'babyChangingTable.png',
-        title: 'amenities_babyChangingTables_title',
-      },
-    ],
-    floor: 1,
+    detectedAmenities: state.closeTourStops.detectedAmenities,
+    floor: state.closeTourStops.floor,
     activeTab: null,
     atNearMeRoot: null,
     timerActive: false,

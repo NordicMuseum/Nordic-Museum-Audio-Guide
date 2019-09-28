@@ -2,15 +2,16 @@ import Realm from 'realm';
 
 import { Tour } from './models/tour';
 import { Stop } from './models/stop';
+import { StringValue } from './models/stringValue';
 
-const SCHEMAVERSION = 1;
+const SCHEMAVERSION = 2;
 
 // *** Realm Instance ***
 let realmInstance;
 export const getRealmInstance = () => {
   if (realmInstance == null) {
     realmInstance = new Realm({
-      schema: [Tour, Stop],
+      schema: [Tour, Stop, StringValue],
       schemaVersion: SCHEMAVERSION,
       migration(oldRealm, newRealm) {
         newRealm.deleteAll();

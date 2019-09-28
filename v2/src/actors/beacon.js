@@ -1,4 +1,4 @@
-import { DeviceEventEmitter } from 'react-native';
+import { DeviceEventEmitter, Platform } from 'react-native';
 import Beacons from 'react-native-beacons-manager';
 
 // import { reset } from '../actions/device';
@@ -11,22 +11,35 @@ class BeaconActor {
 
     const { rangingUUID, rangingIdentifier } = store.getState().beacon;
 
-    Beacons.getAuthorizationStatus(status => {
-      console.log({ status });
-    });
-
     const region = {
       identifier: rangingIdentifier,
       uuid: rangingUUID,
     };
 
-    console.log(region);
+    Platform.select({
+      ios: () => {
+        Beacons.getAuthorizationStatus(status => {
+          console.log({ status });
+        });
 
-    // Request for authorization while the app is open
-    Beacons.requestWhenInUseAuthorization();
+        Beacons.requestWhenInUseAuthorization();
 
-    Beacons.startRangingBeaconsInRegion(region);
-    Beacons.startUpdatingLocation();
+        Beacons.startRangingBeaconsInRegion(region);
+        Beacons.startUpdatingLocation();
+      },
+      android: () => {
+        // Tells the library to detect iBeacons
+        Beacons.detectIBeacons();
+
+        // Start detecting all iBeacons in the nearby
+        try {
+          Beacons.startRangingBeaconsInRegion(region);
+          console.log(`Beacons ranging started succesfully!`);
+        } catch (err) {
+          console.log(`Beacons ranging not started, error: ${error}`);
+        }
+      },
+    })();
 
     const subscription = DeviceEventEmitter.addListener(
       'beaconsDidRange',
