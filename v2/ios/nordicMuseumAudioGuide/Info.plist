@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -37,8 +37,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>The Nordic Museum Audio Guide uses bluetooth to figure out your location and show nearby highlights and themes.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>The Nordic Museum Audio Guide uses your location to show you nearby highlights and themes.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -50,9 +54,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationWhenInUseUsageDescription - 2</key>
-	<string>The Nordic Museum Audio Guide uses your location to show you nearby highlights and themes.</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>The Nordic Museum Audio Guide uses bluetooth to figure out your location and show nearby highlights and themes.</string>
 </dict>
 </plist>
