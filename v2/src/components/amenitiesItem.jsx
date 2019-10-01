@@ -44,7 +44,7 @@ const AmenitiesItem = props => {
       <Image
         style={styles.image}
         resizeMode={'contain'}
-        source={{ uri: props.amenity.icon }}
+        source={{ uri: `images/${props.amenity.icon}` }}
       />
       <View style={styles.textContainer}>
         <Text

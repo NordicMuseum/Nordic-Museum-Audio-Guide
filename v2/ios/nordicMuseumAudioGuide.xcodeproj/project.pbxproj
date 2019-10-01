@@ -16,6 +16,7 @@
 		4C546D27C9164451AEA5826E /* libRNiBeacon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4122593B0BF848C5A1DBFF4E /* libRNiBeacon.a */; };
 		8CF4340F78D649048EF25E4F /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C8F637A4664D609ACA3244 /* libRealmReact.a */; };
 		95320ABD232F01DE000D6DE8 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */; };
+		955C095623438B0A0084B214 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 955C095323438B0A0084B214 /* images */; };
 		95D9A6FF23389EFB00162A9E /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 95D9A6FE23389EFB00162A9E /* audio */; };
 		D69BD601950F29C7CA74E2F8 /* libPods-nordicMuseumAudioGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAC0A2DD6C9768E65195D6 /* libPods-nordicMuseumAudioGuide.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		8BC392AAB73A69314494E1B8 /* Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nordicMuseumAudioGuide-tvOSTests/Pods-nordicMuseumAudioGuide-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		90ED60F3324642BD89F5194C /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		95320ABC232F01DE000D6DE8 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
+		955C095323438B0A0084B214 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../src/assets/images; sourceTree = "<group>"; };
 		95D9A6FE23389EFB00162A9E /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = ../src/assets/audio; sourceTree = "<group>"; };
 		9780D97B8B9E59DDD9FE0F73 /* libPods-nordicMuseumAudioGuide-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD19721B4245EE72EE85AA89 /* libPods-nordicMuseumAudioGuide-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nordicMuseumAudioGuide-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				955C095323438B0A0084B214 /* images */,
 				95D9A6FE23389EFB00162A9E /* audio */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -298,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955C095623438B0A0084B214 /* images in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				95320ABD232F01DE000D6DE8 /* AppCenter-Config.plist in Resources */,

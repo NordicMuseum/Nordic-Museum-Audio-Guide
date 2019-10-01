@@ -93,7 +93,7 @@ class TutorialWelcome extends Component {
           <Image
             style={{ width, flex: 1 }}
             resizeMode={'cover'}
-            source={{ uri: 'welcome.png' }}
+            source={{ uri: 'images/welcome.png' }}
           />
         </View>
         <View style={styles.container}>
