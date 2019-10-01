@@ -16,7 +16,7 @@ index 1616c21..74387be 100644
  				DEVELOPMENT_TEAM = "";
 -				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../node_modules/react-native/React";
 +				HEADER_SEARCH_PATHS = (
-+					"$(SRCROOT)/../../../react-native/ReactCommon/**",
++					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/**",
 +					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/React-Core/**",
 +				);
  				OTHER_LDFLAGS = "-ObjC";
@@ -28,7 +28,7 @@ index 1616c21..74387be 100644
  				DEVELOPMENT_TEAM = "";
 -				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React";
 +				HEADER_SEARCH_PATHS = (
-+					"$(SRCROOT)/../../../react-native/ReactCommon/**",
++					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/**",
 +					"$(SRCROOT)/../../../../ios/Pods/Headers/Public/React-Core/**",
 +				);
  				OTHER_LDFLAGS = "-ObjC";

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package",
+    "postinstall": "patch-package && yarn run jetify",
     "start": "react-native start",
     "transfer-assets-android": "node ./copyAudioAssets.js",
     "run-ios": "react-native run-ios",
@@ -44,6 +44,7 @@
     "eslint": "^6.2.1",
     "husky": ">=1",
     "jest": "^24.9.0",
+    "jetifier": "^1.6.4",
     "lint-staged": ">=8",
     "metro-react-native-babel-preset": "^0.56.0",
     "patch-package": "^6.2.0",
