@@ -244,7 +244,7 @@ class TourStop extends Component {
           windowHeight={HEADER_IMAGE_HEIGHT}
           navBarTitle={parseDisplayText(translate(tourStop.title))}
           navBarColor={NAV_BAR_BACKGROUND}
-          barStyle={{ height: 44 }}
+          barStyle={{}}
           backButtonColor={ACTION}
           backButtonPress={() => {
             Navigation.pop(this.props.componentId);

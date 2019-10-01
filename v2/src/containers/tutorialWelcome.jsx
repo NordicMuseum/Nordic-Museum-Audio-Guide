@@ -121,7 +121,6 @@ class TutorialWelcome extends Component {
           }}
           barStyle={{
             backgroundColor: 'transparent',
-            height: 44,
           }}
         />
       </View>

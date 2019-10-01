@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     top: getStatusBarHeight(),
     left: 0,
     right: 0,
+    height: 44,
   },
   statusBar: {
     position: 'absolute',
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
 });
 
 const NavigationBar = props => {
-  console.log(props);
   return (
     <View>
       <View
