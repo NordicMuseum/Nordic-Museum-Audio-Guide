@@ -176,11 +176,10 @@ class Search extends Component {
 
     let tourStop;
     if (foundTourStops.length > 0) {
-      // TODO: Reimplement but Throwing some realm error
-      // if (foundTourStops.length > 1) {
-      //   // If two exist then favor the nonhighlighted one. Only the highlight audio content has an assigned region.
-      //   foundTourStops = foundTourStops.filtered('audioContent.regions = null');
-      // }
+      if (foundTourStops.length > 1) {
+        // If two exist then favor the nonhighlighted one. Only the highlight audio content has an assigned region.
+        foundTourStops = foundTourStops.filtered('audioContent.region = null');
+      }
       tourStop = foundTourStops[0];
     }
 
