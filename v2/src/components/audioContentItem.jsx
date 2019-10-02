@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { translate } from '../i18n';
+import { translate, isRTL } from '../i18n';
 
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -59,16 +59,12 @@ function breakIntoParagraphTextComponents(text) {
 
   return paragraphs.map((paragraph, index) => {
     return (
-      <Text
-        key={
-          index
-        } /* style={{ writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' }}*/
-      >
+      <Text key={index} style={{ writingDirection: isRTL ? 'rtl' : 'ltr' }}>
         <Text
           style={[
             globalStyles.body,
             styles.titleText,
-            // { textAlign: I18nManager.isRTL ? 'right' : 'left' },
+            { textAlign: isRTL ? 'right' : 'left' },
           ]}>
           {parseDisplayText(paragraph).toString()}
         </Text>
@@ -81,7 +77,6 @@ class AudioContentItem extends Component {
   static propTypes = {
     audioContent: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired,
-    // screenReader: PropTypes.bool.isRequired,
     contentWidth: PropTypes.number.isRequired,
     index: PropTypes.number.isRequired,
     listLength: PropTypes.number.isRequired,
@@ -92,23 +87,6 @@ class AudioContentItem extends Component {
       reloadAudio: PropTypes.func.isRequired,
     }),
   };
-
-  // componentWillMount() {
-  //   //this.setState({ transcriptOpened: false });
-  // }
-
-  // static getDerivedStateFromProps(nextProps) {
-  //   // if (this.props.locale !== nextProps.locale && this.props.audioContent.active) {
-  //   //   this.props.actions.reloadAudio();
-  //   // }
-  // }
-
-  toggleTranscript() {
-    // if (!this.state.transcriptOpened) {
-    //   this.props.actions.analyticsTrackTranscriptOpenned();
-    // }
-    // this.setState({ transcriptOpened: !this.state.transcriptOpened });
-  }
 
   render() {
     const { audioContent, screenReader, index, listLength } = this.props;
@@ -163,12 +141,7 @@ class AudioContentItem extends Component {
                       {audioContent.id}
                     </Text>
                   </View>
-                  <Text
-                    style={[
-                      globalStyles.body,
-                      styles.titleText,
-                      // { writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr' },
-                    ]}>
+                  <Text style={[globalStyles.body, styles.titleText]}>
                     {parseDisplayText(translate(audioContent.title))}
                   </Text>
                 </View>
@@ -176,22 +149,13 @@ class AudioContentItem extends Component {
             </View>
             <TranscriptButton
               styles={{ opacity: 0 }}
-              accessibilityLabel={'title'}
-              onPress={() => {
-                // this.toggleTranscript();
-              }}
-              //showTranscript={this.state.transcriptOpened}
+              accessible={false}
+              // onPress={() => {
+              //   this.toggleTranscript();
+              // }}
+              // sshowTranscript={this.state.transcriptOpened}
             />
           </View>
-
-          <Collapsible
-            //style={this.state.transcriptOpened ? styles.transcript : {}}
-            //collapsed={!this.state.transcriptOpened}
-            duration={collapsibleDuration}>
-            <View style={styles.transcriptContainer}>
-              {breakIntoParagraphTextComponents('Transcript')}
-            </View>
-          </Collapsible>
         </View>
       </TouchableOpacity>
     );

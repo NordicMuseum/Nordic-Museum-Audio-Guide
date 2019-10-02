@@ -5,8 +5,6 @@ import { StyleSheet, View, Text, Dimensions, Button } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-// import { screenReaderReloadLayout } from '../actions/accessibility';
-
 // import { analyticsTrackAudioCompleteListen } from '../actions/analytics';
 
 import { translate } from '../i18n';
@@ -59,40 +57,6 @@ class BottomPlayer extends Component {
       },
     };
   }
-
-  // static getDerivedStateFromProps(props, state) {
-  // if (
-  //   props.playerStatus === PLAYER_STATUS_LOADING &&
-  //   props.playerStatus === PLAYER_STATUS_PLAY
-  // ) {
-  //   this.props.actions.playAudio();
-  // }
-  // return state;
-
-  // if (props.playerStatus === PLAYER_STATUS_FINISHED) {
-  //   const { audioContent, index } = this.props;
-
-  //   const activeAudio = audioContent[index];
-  //   let url = activeAudio.audioURL;
-
-  //   if (activeAudio.audioURL.length === 3) {
-  //     // If available, play audio in chosen language. Else play audio in fallback language. Else play audio in Swedish.
-  //     if (activeAudio.duration[I18n.locale]) {
-  //       url = activeAudio.audioURL.concat('/', I18n.locale);
-  //     } else {
-  //       if (activeAudio.duration[I18n.defaultLocale]) {
-  //         url = activeAudio.audioURL.concat('/', I18n.defaultLocale);
-  //       } else {
-  //         url = activeAudio.audioURL.concat('/', 'sv');
-  //       }
-  //     }
-  //   }
-
-  //   const audioLanguage = url.split('/')[1];
-  //   analyticsTrackAudioCompleteListen(this.props.locale, audioLanguage, this.props.audioTitle);
-  //   return state;
-  // }
-  // }
 
   render() {
     if (this.props.playerOpen === false) {

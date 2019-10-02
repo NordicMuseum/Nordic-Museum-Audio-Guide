@@ -72,7 +72,7 @@ const NavigationBar = props => {
               style={[
                 styles.backArrow,
                 { tintColor: props.buttonColor },
-                { transform: [{ scaleX: I18nManager.isRTL ? 1 : -1 }] },
+                { transform: [{ scaleX: -1 }] },
               ]}
             />
             <Text

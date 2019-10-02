@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 
 import { translate } from '../../i18n';
 
-import { Image, Alert, StyleSheet, View, Text } from 'react-native';
+import {
+  Image,
+  Alert,
+  StyleSheet,
+  View,
+  Text,
+  ViewPropTypes,
+} from 'react-native';
 
 import WideButton from './wideButton';
 
@@ -57,9 +64,9 @@ const BluetoothButton = props => {
 };
 
 BluetoothButton.propTypes = {
-  // bluetoothOn: PropTypes.bool.isRequired,
-  // style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
-  // textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
+  bluetoothOn: PropTypes.bool.isRequired,
+  style: PropTypes.oneOfType([ViewPropTypes.style, PropTypes.object]),
+  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
 };
 
 export default BluetoothButton;

@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 import { Navigation } from 'react-native-navigation';
 
-import { translate } from '../i18n';
+import { translate, isRTL } from '../i18n';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -115,12 +115,9 @@ const pushToTourStop = (componentId, passedProps) => {
 };
 
 class Search extends Component {
-  static title = '#';
-
   static propTypes = {
     playerOpen: PropTypes.bool.isRequired,
     digits: PropTypes.array.isRequired,
-    // screenReader: PropTypes.bool.isRequired,
     tourStops: PropTypes.object.isRequired,
     actions: PropTypes.shape({
       addDigit: PropTypes.func.isRequired,
@@ -245,9 +242,8 @@ class Search extends Component {
               style={[
                 styles.displayRow,
                 { width: 50 * this.props.digits.length },
-              ]}
-              //I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}
-            >
+                // isRTL ? { flexDirection: 'row-reverse' } : {}
+              ]}>
               {this.props.digits.map((digit, index) => {
                 return (
                   <View key={index} style={styles.digitDisplay}>
@@ -266,8 +262,10 @@ class Search extends Component {
               this.props.playerOpen && height < 570 ? { paddingTop: 5 } : {},
             ]}>
             <View
-              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-              style={styles.digitRow}>
+              style={[
+                styles.digitRow,
+                // isRTL ? { flexDirection: 'row-reverse' } : {}
+              ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
                 onPress={() => {
@@ -294,8 +292,10 @@ class Search extends Component {
               </TouchableHighlight>
             </View>
             <View
-              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-              style={styles.digitRow}>
+              style={[
+                styles.digitRow,
+                // isRTL ? { flexDirection: 'row-reverse' } : {}
+              ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
                 onPress={() => {
@@ -322,8 +322,10 @@ class Search extends Component {
               </TouchableHighlight>
             </View>
             <View
-              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-              style={styles.digitRow}>
+              style={[
+                styles.digitRow,
+                // isRTL ? { flexDirection: 'row-reverse' } : {}
+              ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
                 onPress={() => {
@@ -350,8 +352,10 @@ class Search extends Component {
               </TouchableHighlight>
             </View>
             <View
-              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-              style={styles.digitRow}>
+              style={[
+                styles.digitRow,
+                // isRTL ? { flexDirection: 'row-reverse' } : {}
+              ]}>
               <View style={styles.nonDigit} />
               <TouchableHighlight
                 underlayColor={SELECTED}

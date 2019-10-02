@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 
 import { translate } from '../../i18n';
 
-import { Image, Alert, StyleSheet, Linking, View, Text } from 'react-native';
+import {
+  Image,
+  Alert,
+  StyleSheet,
+  Linking,
+  View,
+  Text,
+  ViewPropTypes,
+} from 'react-native';
 
 import WideButton from './wideButton';
 
@@ -107,9 +115,9 @@ const LocationServicesButton = props => {
 };
 
 LocationServicesButton.propTypes = {
-  // locationServicesStatus: PropTypes.string.isRequired,
-  // style: PropTypes.oneOfType([View.propTypes.style, PropTypes.object]),
-  // textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
+  locationServicesStatus: PropTypes.string.isRequired,
+  style: PropTypes.oneOfType([ViewPropTypes.style, PropTypes.object]),
+  textStyle: PropTypes.oneOfType([Text.propTypes.style, PropTypes.object]),
 };
 
 export default LocationServicesButton;

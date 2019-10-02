@@ -9,36 +9,19 @@ import { translate } from '../i18n';
 import Grid from '../components/grid';
 import TourStop from './tourStop';
 
-//import { TAB_STORIES } from '../actions/navigation';
-
 import { Navigation } from 'react-native-navigation';
 
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  OFF_BLACK,
-  LIGHT_GRAY,
   BOTTOM_PLAYER_HEIGHT,
-  getBottomTabsHeight,
 } from '../styles';
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 40,
-    alignSelf: 'center',
-  },
   container: {
     alignItems: 'stretch',
     flex: 1,
     backgroundColor: '#ffffff',
-  },
-  statusBar: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 20,
-    backgroundColor: NAV_BAR_BACKGROUND,
   },
 });
 

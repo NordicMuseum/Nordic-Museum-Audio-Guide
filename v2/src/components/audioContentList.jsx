@@ -77,7 +77,6 @@ const AudioContentList = props => {
 AudioContentList.propTypes = {
   tourStop: PropTypes.object.isRequired,
   currentAudio: PropTypes.string,
-  // screenReader: PropTypes.bool.isRequired,
   locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
     playTrack: PropTypes.func.isRequired,

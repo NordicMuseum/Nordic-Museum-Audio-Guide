@@ -60,10 +60,10 @@ const TranscriptButton = props => {
 };
 
 TranscriptButton.propTypes = {
-  // styles: PropTypes.object,
-  // showTranscript: PropTypes.bool.isRequired,
-  // onPress: PropTypes.func.isRequired,
-  // accessibilityLabel: PropTypes.string.isRequired,
+  styles: PropTypes.object,
+  showTranscript: PropTypes.bool,
+  onPress: PropTypes.func,
+  accessibilityLabel: PropTypes.string,
 };
 
 export default TranscriptButton;
