@@ -20,7 +20,7 @@ import { beaconActor } from './actors/beacon';
 import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
 
 // Fire so that the data is ready by "registerAppLaunchedListener"
-let appVersion = DeviceInfo.getReadableVersion();
+let appVersion = DeviceInfo.getVersion();
 let lastAppVersion = AsyncStorage.getItem('appVersion');
 let museumMode = AsyncStorage.getItem('museumMode');
 
