@@ -137,7 +137,7 @@ export function closeTourStops(state = initialState, action) {
         detectedFloor,
         detectedAmenities,
         tourStops: showTourStops,
-        audioContent: showAudioContent,
+        audioContent: _.uniqBy(showAudioContent, 'id'),
       });
     }
 
