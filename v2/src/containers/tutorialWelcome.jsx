@@ -9,7 +9,7 @@ import {
   StyleSheet,
   View,
   Text,
-  Image,
+  ImageBackground,
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
@@ -20,19 +20,11 @@ import { hideTutorial } from '../actions/tutorial';
 
 import NavigationBar from '../components/navigationBar';
 
-import {
-  NAV_BAR_TEXT,
-  NAV_BAR_BACKGROUND,
-  OFF_BLACK,
-  ACTION,
-  WHITE,
-} from '../styles';
+import { OFF_BLACK, ACTION } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  backgroundImageContainer: {
     position: 'absolute',
     top: 0,
     bottom: 0,
@@ -71,6 +63,7 @@ const styles = StyleSheet.create({
 class TutorialWelcome extends Component {
   static get options() {
     return {
+      // Using custom nav bar to support transparency
       topBar: {
         visible: false,
       },
@@ -80,22 +73,11 @@ class TutorialWelcome extends Component {
   render() {
     const width = Dimensions.get('window').width;
 
-    //   barStyle: PropTypes.object,
-    // labelStyle: PropTypes.object,
-    // label: PropTypes.string,
-    // buttonColor: PropTypes.string,
-    // backButtonLabel: PropTypes.string,
-    // backButtonPress: PropTypes.func,
-
     return (
-      <View style={styles.container}>
-        <View style={styles.backgroundImageContainer}>
-          <Image
-            style={{ width, flex: 1 }}
-            resizeMode={'cover'}
-            source={{ uri: 'images/welcome.png' }}
-          />
-        </View>
+      <ImageBackground
+        style={styles.container}
+        resizeMode={'cover'}
+        source={{ uri: 'images/welcome.png' }}>
         <View style={styles.container}>
           <View style={styles.welcomeContainer}>
             <Text style={styles.welcomeText}>
@@ -121,9 +103,10 @@ class TutorialWelcome extends Component {
           }}
           barStyle={{
             backgroundColor: 'transparent',
+            height: 44,
           }}
         />
-      </View>
+      </ImageBackground>
     );
   }
 }
