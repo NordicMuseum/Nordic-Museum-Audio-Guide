@@ -24,7 +24,7 @@ export class Tour {
       // So we are wrapped a primitive type in an object type
       regions: { type: `${StringValue.NAME}[]` },
       category: { type: 'string?' },
-      url: { type: 'string?' },
+      imageURL: { type: 'string?' },
       imageAccessibilityLabel: { type: 'string?' },
       imageWidth: { type: 'int' },
       imageHeight: { type: 'int' },

@@ -230,7 +230,7 @@ class TourStop extends Component {
       yOffset = AUDIO_CONTENT_ITEM_HEIGHT * this.props.searchedTrackIndex;
     }
 
-    let imageURL = this.props.imageURL;
+    let imageURL = this.props.tourStop.imageURL;
     if (this.props.locale === 'svKids' && this.tourStop.regions.length === 0) {
       imageURL = 'highlightsKids.png';
     }
@@ -256,7 +256,7 @@ class TourStop extends Component {
           <View>
             <ImageBackground
               style={[styles.headerImage, { height: HEADER_IMAGE_HEIGHT }]}
-              source={{ uri: imageURL }}>
+              source={imageURL ? { uri: 'images/' + imageURL } : {}}>
               <View style={styles.headerTitle} pointerEvents={'none'}>
                 <Text style={styles.headerTitleText}>
                   {parseDisplayText(translate(tourStop.title)).toUpperCase()}

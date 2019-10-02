@@ -4,7 +4,7 @@ import { Tour } from './models/tour';
 import { Stop } from './models/stop';
 import { StringValue } from './models/stringValue';
 
-const SCHEMAVERSION = 2;
+const SCHEMAVERSION = 3;
 
 // *** Realm Instance ***
 let realmInstance;

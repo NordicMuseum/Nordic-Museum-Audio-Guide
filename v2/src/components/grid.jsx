@@ -120,7 +120,8 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
                 width: cellWidth,
                 height: cellHeight,
               },
-            ]}>
+            ]}
+            source={imageURL ? { uri: 'images/' + imageURL } : {}}>
             <View style={{ flex: 0.6 }}>
               <Text
                 style={[
