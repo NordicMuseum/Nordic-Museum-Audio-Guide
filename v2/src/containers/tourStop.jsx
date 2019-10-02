@@ -201,6 +201,10 @@ class TourStop extends Component {
   render() {
     const HEADER_IMAGE_HEIGHT = 167;
 
+    if (!this.props.tourStop) {
+      return null;
+    }
+
     let { tourStop } = this.props;
 
     const { playTrack, togglePausePlay } = this.props.actions;
