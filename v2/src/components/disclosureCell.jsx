@@ -36,7 +36,7 @@ const DisclosureCell = props => {
   return (
     <TouchableHighlight
       onPress={props.onPress}
-      accessibilityTraits={props.accessibility.traits}
+      accessibilityRole={props.accessibility.role}
       accessibilityLabel={props.accessibility.label}>
       <View
         style={[

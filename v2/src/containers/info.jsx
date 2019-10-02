@@ -58,7 +58,7 @@ class Info extends Component {
         <Image
           accessible={true}
           accessibilityLabel={translate('museumScreen_ImageAccessibilityLabel')}
-          accessibilityTraits={'image'}
+          accessibilityRole={'image'}
           style={[styles.image, { width }]}
           source={require('../assets/images/museumBackground.png')}
         />
@@ -66,7 +66,7 @@ class Info extends Component {
           <View>
             <DisclosureCell
               accessibility={{
-                traits: ['button'],
+                role: 'button',
                 label: translate('settingsScreen_Title'),
               }}
               bottomBorder={true}
@@ -79,7 +79,7 @@ class Info extends Component {
             />
             <DisclosureCell
               accessibility={{
-                traits: ['button'],
+                role: 'button',
                 label: translate('amenitiesScreen_Title'),
               }}
               bottomBorder={true}
@@ -92,7 +92,7 @@ class Info extends Component {
             />
             <DisclosureCell
               accessibility={{
-                traits: ['button'],
+                role: 'button',
                 label: translate('museumScreen_ListItem1Label'),
               }}
               bottomBorder={true}
@@ -105,7 +105,7 @@ class Info extends Component {
             />
             <DisclosureCell
               accessibility={{
-                traits: ['button'],
+                role: 'button',
                 label: translate('aboutTheAppScreen_Title'),
               }}
               bottomBorder={false}
