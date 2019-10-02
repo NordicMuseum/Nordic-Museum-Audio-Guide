@@ -24,6 +24,7 @@ import {
   SELECTED,
   NAV_BAR_BACKGROUND,
   NAV_BAR_TEXT,
+  BOTTOM_PLAYER_HEIGHT,
 } from '../styles';
 
 const styles = StyleSheet.create({
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   display: {
-    flex: 0.15,
+    flex: 0.18,
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'column',
@@ -45,23 +46,21 @@ const styles = StyleSheet.create({
   },
   digitDisplay: {
     width: 38,
-    height: 60,
-    paddingTop: 22,
+    height: 50,
     borderBottomWidth: 1,
     borderBottomColor: '#808080',
+    justifyContent: 'flex-end',
   },
   digitDisplayText: {
     color: OFF_BLACK,
     fontSize: 34,
     fontWeight: '400',
     textAlign: 'center',
-    backgroundColor: 'transparent',
-    paddingBottom: 5,
+    padding: 5,
   },
   digitPad: {
-    flex: 0.65,
-    padding: 5,
-    paddingTop: 35,
+    flex: 0.82,
+    padding: 10,
     alignItems: 'center',
   },
   digitRow: {
@@ -96,11 +95,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  tryAgainText: {
-    fontSize: 18,
-    color: OFF_BLACK,
-    textAlign: 'center',
   },
 });
 
@@ -231,6 +225,11 @@ class Search extends Component {
   render() {
     const { width, height } = Dimensions.get('window');
 
+    let bottomOffset = 0;
+    if (this.props.playerOpen) {
+      bottomOffset += BOTTOM_PLAYER_HEIGHT;
+    }
+
     if (
       this.props.digits.filter(d => {
         return d === null;
@@ -240,144 +239,140 @@ class Search extends Component {
     }
 
     return (
-      <View
-        style={[
-          styles.container,
-          height < 570 ? { paddingTop: 30 } : { paddingTop: 50 },
-          this.props.playerOpen && height < 570 ? { paddingTop: 25 } : {},
-        ]}>
-        <View
-          style={[styles.display, this.props.playerOpen ? { flex: 0.15 } : {}]}>
+      <View style={[styles.container, { marginBottom: bottomOffset }]}>
+        <View style={{ flex: 1, maxHeight: 500 }}>
+          <View style={[styles.display]}>
+            <View
+              style={[
+                styles.displayRow,
+                { width: 50 * this.props.digits.length },
+              ]}
+              //I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}
+            >
+              {this.props.digits.map((digit, index) => {
+                return (
+                  <View key={index} style={styles.digitDisplay}>
+                    {digit !== null && (
+                      <Text style={styles.digitDisplayText}>{digit}</Text>
+                    )}
+                  </View>
+                );
+              })}
+            </View>
+          </View>
           <View
             style={[
-              styles.displayRow,
-              { width: 50 * this.props.digits.length },
-            ]}
-            //I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}
-          >
-            {this.props.digits.map((digit, index) => {
-              return (
-                <View key={index} style={styles.digitDisplay}>
-                  {digit !== null && (
-                    <Text style={styles.digitDisplayText}>{digit}</Text>
-                  )}
-                </View>
-              );
-            })}
-          </View>
-        </View>
-        <View
-          style={[
-            styles.digitPad,
-            { width },
-            this.props.playerOpen && height < 570 ? { paddingTop: 5 } : {},
-          ]}>
-          <View
-            // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-            style={styles.digitRow}>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(1);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>1</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(2);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>2</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(3);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>3</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-            style={styles.digitRow}>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(4);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>4</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(5);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>5</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(6);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>6</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-            style={styles.digitRow}>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(7);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>7</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(8);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>8</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(9);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>9</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
-            style={styles.digitRow}>
-            <View style={styles.nonDigit} />
-            <TouchableHighlight
-              underlayColor={SELECTED}
-              onPress={() => {
-                this.addDigit(0);
-              }}
-              style={styles.digit}>
-              <Text style={styles.digitText}>0</Text>
-            </TouchableHighlight>
-            <TouchableOpacity
-              onPress={() => {
-                this.props.actions.deleteDigit(this.props.digits);
-              }}
-              style={styles.nonDigit}>
-              <Image
-                source={require('../assets/DeleteButton.png')}
-                style={styles.deleteButton}
-              />
-            </TouchableOpacity>
+              styles.digitPad,
+              { width },
+              this.props.playerOpen && height < 570 ? { paddingTop: 5 } : {},
+            ]}>
+            <View
+              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
+              style={styles.digitRow}>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(1);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>1</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(2);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>2</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(3);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>3</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
+              style={styles.digitRow}>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(4);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>4</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(5);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>5</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(6);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>6</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
+              style={styles.digitRow}>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(7);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>7</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(8);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>8</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(9);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>9</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              // style={[styles.digitRow, I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {}]}
+              style={styles.digitRow}>
+              <View style={styles.nonDigit} />
+              <TouchableHighlight
+                underlayColor={SELECTED}
+                onPress={() => {
+                  this.addDigit(0);
+                }}
+                style={styles.digit}>
+                <Text style={styles.digitText}>0</Text>
+              </TouchableHighlight>
+              <TouchableOpacity
+                onPress={() => {
+                  this.props.actions.deleteDigit(this.props.digits);
+                }}
+                style={styles.nonDigit}>
+                <Image
+                  source={require('../assets/DeleteButton.png')}
+                  style={styles.deleteButton}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </View>
