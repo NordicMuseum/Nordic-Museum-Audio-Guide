@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   cellImage: {
     resizeMode: 'stretch',
     flex: 1,
+    flexDirection: 'row',
   },
   cellTitleText: {
     backgroundColor: 'transparent',
