@@ -375,7 +375,7 @@ const mapStateToProps = state => {
     closeTourStops: state.closeTourStops.tourStops,
     audioContent: state.closeTourStops.audioContent,
     detectedAmenities: state.closeTourStops.detectedAmenities,
-    floor: state.closeTourStops.floor,
+    floor: state.closeTourStops.detectedFloor,
     activeTab: null,
     atNearMeRoot: null,
     timerActive: false,
