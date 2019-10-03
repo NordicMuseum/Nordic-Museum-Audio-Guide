@@ -22,6 +22,8 @@ import NavigationBar from '../components/navigationBar';
 
 import { OFF_BLACK, ACTION } from '../styles';
 
+import { imageURI } from '../utilities';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -77,7 +79,7 @@ class TutorialWelcome extends Component {
       <ImageBackground
         style={styles.container}
         resizeMode={'cover'}
-        source={{ uri: 'images/welcome.png' }}>
+        source={{ uri: imageURI('welcome.png') }}>
         <View style={styles.container}>
           <View style={styles.welcomeContainer}>
             <Text style={styles.welcomeText}>

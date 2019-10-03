@@ -4,7 +4,7 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 
 import { translate } from '../i18n';
 
-import { parseDisplayText } from '../utilities';
+import { imageURI } from '../utilities';
 
 import { globalStyles } from '../styles';
 
@@ -44,9 +44,7 @@ const AmenitiesItem = props => {
       <Image
         style={styles.image}
         resizeMode={'contain'}
-        source={
-          props.amenity.icon ? { uri: `images/${props.amenity.icon}` } : {}
-        }
+        source={props.amenity.icon ? { uri: imageURI(props.amenity.icon) } : {}}
       />
       <View style={styles.textContainer}>
         <Text

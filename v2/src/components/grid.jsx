@@ -16,7 +16,7 @@ import {
 
 import StickyHeader from './stickyHeader';
 
-import { parseDisplayText, parseVoiceoverText } from '../utilities';
+import { parseDisplayText, parseVoiceoverText, imageURI } from '../utilities';
 
 import { LIGHT_GRAY, HIGHLIGHTS } from '../styles';
 
@@ -121,7 +121,7 @@ export const renderItem = (item, index, onPress, selected, locale, items) => {
                 height: cellHeight,
               },
             ]}
-            source={imageURL ? { uri: 'images/' + imageURL } : {}}>
+            source={imageURL ? { uri: imageURI(imageURL) } : {}}>
             <View style={{ flex: 0.6 }}>
               <Text
                 style={[

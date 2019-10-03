@@ -25,7 +25,7 @@ import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
 import { AUDIO_CONTENT_ITEM_HEIGHT } from '../components/audioContentItem';
 import AudioContentList from '../components/audioContentList';
 
-import { parseDisplayText, parseVoiceoverText } from '../utilities';
+import { parseDisplayText, parseVoiceoverText, imageURI } from '../utilities';
 
 //import { analyticsTrackContentOpened, analyticsTrackScreen } from '../actions/analytics';
 
@@ -256,7 +256,7 @@ class TourStop extends Component {
           <View>
             <ImageBackground
               style={[styles.headerImage, { height: HEADER_IMAGE_HEIGHT }]}
-              source={imageURL ? { uri: 'images/' + imageURL } : {}}>
+              source={imageURL ? { uri: imageURI(imageURL) } : {}}>
               <View style={styles.headerTitle} pointerEvents={'none'}>
                 <Text style={styles.headerTitleText}>
                   {parseDisplayText(translate(tourStop.title)).toUpperCase()}

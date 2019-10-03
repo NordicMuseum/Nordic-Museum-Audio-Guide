@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text} from 'react-native';
+import { Text, Platform } from 'react-native';
 
 function isTag(str) {
   switch (str) {
@@ -34,14 +34,14 @@ function addTag(tag, between, after) {
     case '<i>':
       return (
         <Text>
-          <Text style={{fontStyle: 'italic'}}>{between}</Text>
+          <Text style={{ fontStyle: 'italic' }}>{between}</Text>
           {after}
         </Text>
       );
     case '<b>':
       return (
         <Text>
-          <Text style={{fontWeight: 'bold'}}>{between}</Text>
+          <Text style={{ fontWeight: 'bold' }}>{between}</Text>
           {after}
         </Text>
       );
@@ -103,3 +103,10 @@ export function parseVoiceoverText(text) {
   parsedText = parsedText.replace(/(<\/[a-z]>)/g, '');
   return parsedText;
 }
+
+export const imageURI = imageName => {
+  return Platform.select({
+    ios: `images/${imageName}`,
+    android: imageName.toLowerCase().split('.')[0],
+  });
+};

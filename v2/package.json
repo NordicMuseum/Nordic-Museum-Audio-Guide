@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "patch-package && yarn run jetify",
     "start": "react-native start",
-    "transfer-assets-android": "node ./copyAudioAssets.js",
+    "transfer-assets-android": "node ./copyAndroidAssets.js",
     "run-ios": "react-native run-ios",
     "run-android": "react-native run-android",
     "test": "jest",
