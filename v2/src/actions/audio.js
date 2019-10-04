@@ -1,6 +1,3 @@
-// import store from '../store';
-
-// import { setAudioManagerEventListeners } from './audioEvents';
 // import { clearTimer } from './audioTimer';
 
 import { Navigation } from 'react-native-navigation';
