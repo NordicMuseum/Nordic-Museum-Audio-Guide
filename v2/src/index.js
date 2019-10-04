@@ -52,6 +52,18 @@ Navigation.events().registerAppLaunchedListener(async () => {
     },
   });
 
+  if (Platform.OS === 'android') {
+    Navigation.setDefaultOptions({
+      animations: {
+        push: { enabled: 'false' },
+        pop: { enabled: 'false' },
+        setRoot: { enabled: 'false' },
+        showModal: { enabled: 'false' },
+        dismissModal: { enabled: 'false' },
+      },
+    });
+  }
+
   registerScreens(store);
 
   await Navigation.setRoot({
