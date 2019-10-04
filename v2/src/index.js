@@ -62,6 +62,11 @@ Navigation.events().registerAppLaunchedListener(async () => {
         showModal: { enabled: 'false' },
         dismissModal: { enabled: 'false' },
       },
+      bottomTab: {
+        selectedIconColor: 'white',
+        selectedTextColor: 'white',
+        fontSize: 12,
+      },
     });
   }
 

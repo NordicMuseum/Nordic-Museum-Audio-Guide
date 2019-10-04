@@ -20,6 +20,8 @@ import AboutMuseum from './containers/aboutMuseum';
 import AboutApp from './containers/aboutApp';
 import BottomPlayer from './containers/bottomPlayer';
 
+import { OFF_BLACK } from './styles';
+
 import Analytics from 'appcenter-analytics';
 
 const HARDWARE_BACK_BUTTON_EVENT = 'hardwareBackPress';
@@ -87,6 +89,9 @@ const sceneCreator = (
               bottomTab: {
                 text: translate(titleTranslationsKey),
               },
+              bottomTabs: {
+                backgroundColor: OFF_BLACK,
+              },
             };
             break;
           }
@@ -101,6 +106,9 @@ const sceneCreator = (
               bottomTab: {
                 text: translate(titleTranslationsKey),
               },
+              bottomTabs: {
+                backgroundColor: OFF_BLACK,
+              },
             };
             break;
           }
@@ -111,6 +119,9 @@ const sceneCreator = (
                 title: {
                   text: translate(titleTranslationsKey),
                 },
+              },
+              bottomTabs: {
+                backgroundColor: OFF_BLACK,
               },
             };
             break;
