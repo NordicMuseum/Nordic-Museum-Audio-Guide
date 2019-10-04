@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 56,
-    elevation: 2,
+    elevation: 1.5,
   },
   label: {
     display: 'flex',
