@@ -1,4 +1,5 @@
 import { NativeEventEmitter, NativeModules } from 'react-native';
+import RNRestart from 'react-native-restart';
 
 import { reset } from '../actions/device';
 
@@ -16,7 +17,7 @@ class ChargingActor {
       ({ batteryState }) => {
         const museumMode = this.store.getState().device.museumMode;
         if (batteryState === 'charging' && museumMode) {
-          this.dispatch(reset());
+          RNRestart.Restart();
         }
       },
     );

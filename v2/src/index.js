@@ -44,7 +44,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
   });
   localizationActor(store);
   audioActor(store);
-  //chargingActor(store);
+  chargingActor(store);
   beaconActor(store);
 
   Navigation.setDefaultOptions({
