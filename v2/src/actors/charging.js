@@ -14,7 +14,7 @@ class ChargingActor {
     deviceInfoEmitter.addListener(
       'RNDeviceInfo_powerStateDidChange',
       ({ batteryState }) => {
-        const museumMode = this.store.getState().localization.museumMode;
+        const museumMode = this.store.getState().device.museumMode;
         if (batteryState === 'charging' && museumMode) {
           this.dispatch(reset());
         }
