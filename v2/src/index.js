@@ -1,4 +1,5 @@
 import { Navigation } from 'react-native-navigation';
+import { Platform } from 'react-native';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import DeviceInfo from 'react-native-device-info';
