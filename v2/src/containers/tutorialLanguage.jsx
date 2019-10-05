@@ -51,10 +51,7 @@ class TutorialLanguage extends Component {
             textStyle={{ color: OFF_BLACK }}
             locale={locale}
             onPress={languageCode => {
-              switchLocale(languageCode, 'tutorial');
-              Navigation.push(this.props.componentId, {
-                component: { name: 'tutorialWelcome' },
-              });
+              switchLocale(languageCode);
             }}
           />
         </ScrollView>

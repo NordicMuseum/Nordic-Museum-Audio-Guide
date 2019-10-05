@@ -1,5 +1,7 @@
 import { I18nManager } from 'react-native';
 
+import { Navigation } from 'react-native-navigation';
+
 import * as RNLocalize from 'react-native-localize';
 import memoize from 'lodash.memoize';
 import i18n from 'i18n-js';
@@ -27,7 +29,7 @@ export const setI18nConfig = forceLocale => {
   const tagFallback = { languageTag: 'en', isRTL: false };
 
   let language = {};
-  languageTags = Object.keys(translationGetters);
+  const languageTags = Object.keys(translationGetters);
   if (forceLocale && languageTags.includes(forceLocale)) {
     language = { languageTag: forceLocale, isRTL: forceLocale === 'ar' };
   } else {
@@ -36,6 +38,7 @@ export const setI18nConfig = forceLocale => {
   }
 
   let stringFallback;
+  i18n.fallbacks = true;
   switch (forceLocale) {
     case 'svKids':
     case 'svSimple':
@@ -43,18 +46,11 @@ export const setI18nConfig = forceLocale => {
     case 'seSmj':
     case 'seSma': {
       stringFallback = 'sv';
-      i18n.fallbacks = true;
       break;
     }
 
     default: {
       stringFallback = 'en';
-      if (__DEV__) {
-        // Display missing translations in development mode
-        i18n.fallbacks = false;
-      } else {
-        i18n.fallbacks = true;
-      }
       break;
     }
   }
@@ -62,6 +58,7 @@ export const setI18nConfig = forceLocale => {
   // clear translation cache
   translate.cache.clear();
   // update layout direction
+  I18nManager.allowRTL(language.isRTL);
   I18nManager.forceRTL(language.isRTL);
 
   // set i18n-js config
@@ -72,7 +69,10 @@ export const setI18nConfig = forceLocale => {
   i18n.defaultLocale = stringFallback;
   i18n.locale = language.languageTag;
 
-  return language.languageTag;
+  return {
+    setLocale: language.languageTag,
+    setRTL: language.isRTL,
+  };
 };
 
 export const translate = memoize(

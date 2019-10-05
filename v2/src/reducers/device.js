@@ -4,6 +4,7 @@ import { HIDE_TUTORIAL, SHOW_TUTORIAL } from '../actions/tutorial';
 
 const initialState = {
   locale: 'en',
+  isRTL: false,
   appVersion: '',
   museumMode: false,
   tutorialHidden: false,
@@ -18,6 +19,7 @@ export function device(state = initialState, action) {
     case SWITCH_LOCALE: {
       return Object.assign({}, state, {
         locale: action.locale,
+        isRTL: action.isRTL,
       });
     }
 

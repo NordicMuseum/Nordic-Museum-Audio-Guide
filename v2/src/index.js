@@ -1,7 +1,6 @@
 import { Navigation } from 'react-native-navigation';
 import { Platform } from 'react-native';
 
-import AsyncStorage from '@react-native-community/async-storage';
 import DeviceInfo from 'react-native-device-info';
 
 import { configureStore } from './store';
@@ -10,10 +9,11 @@ import registerScreens from './registerScreens';
 import hydrate from './hydrate';
 import { setI18nConfig, translate } from './i18n';
 
-import { showTutorial } from './actions/tutorial';
-import { updateBeacons } from './actions/beacon';
+import { getAppSettings, setAppVersion } from './appSettings';
 
-import { localizationActor } from './actors/localization';
+import { showTutorial } from './actions/tutorial';
+// import { updateBeacons } from './actions/beacon';
+
 import { audioActor } from './actors/audio';
 import { chargingActor } from './actors/charging';
 import { beaconActor } from './actors/beacon';
@@ -21,54 +21,54 @@ import { beaconActor } from './actors/beacon';
 import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
 
 // Fire so that the data is ready by "registerAppLaunchedListener"
-let appVersion = DeviceInfo.getVersion();
-let lastAppVersion = AsyncStorage.getItem('appVersion');
-let museumMode = AsyncStorage.getItem('museumMode');
+const currentAppVersionPromise = DeviceInfo.getVersion();
+const appSettingsPromise = getAppSettings();
 
 Navigation.events().registerAppLaunchedListener(async () => {
-  appVersion = await appVersion;
-  lastAppVersion = await lastAppVersion;
-  museumMode = JSON.parse(await museumMode);
-  const newVersion = lastAppVersion == null || lastAppVersion !== appVersion;
+  const {
+    isRTL,
+    museumMode,
+    appVersion,
+    locale,
+    skipLanguageSelection,
+  } = await appSettingsPromise;
+
+  const defaultOptions = {
+    layout: {
+      orientation: ['portrait'],
+      direction: isRTL ? 'rtl' : 'ltr',
+    },
+  };
+
+  if (Platform.OS === 'android') {
+    defaultOptions.animations = {
+      push: { enabled: 'false' },
+      pop: { enabled: 'false' },
+      setRoot: { enabled: 'false' },
+      showModal: { enabled: 'false' },
+      dismissModal: { enabled: 'false' },
+    };
+  }
+
+  Navigation.setDefaultOptions(defaultOptions);
+
+  const currentAppVersion = await currentAppVersionPromise;
+  const newVersion = appVersion == null || appVersion !== currentAppVersion;
 
   hydrate(newVersion || __DEV__);
 
   if (newVersion) {
-    AsyncStorage.setItem('appVersion', appVersion);
+    setAppVersion(currentAppVersion);
   }
 
-  const locale = setI18nConfig();
-
+  const { setLocale, setRTL } = setI18nConfig(locale);
   const store = configureStore({
-    device: { locale, appVersion, museumMode },
+    device: { locale: setLocale, isRTL: setRTL, appVersion, museumMode },
   });
-  localizationActor(store);
+
   audioActor(store);
   chargingActor(store);
   beaconActor(store);
-
-  Navigation.setDefaultOptions({
-    layout: {
-      orientation: ['portrait'],
-    },
-  });
-
-  if (Platform.OS === 'android') {
-    Navigation.setDefaultOptions({
-      animations: {
-        push: { enabled: 'false' },
-        pop: { enabled: 'false' },
-        setRoot: { enabled: 'false' },
-        showModal: { enabled: 'false' },
-        dismissModal: { enabled: 'false' },
-      },
-      bottomTab: {
-        selectedIconColor: 'white',
-        selectedTextColor: 'white',
-        fontSize: 12,
-      },
-    });
-  }
 
   registerScreens(store);
 
@@ -176,6 +176,6 @@ Navigation.events().registerAppLaunchedListener(async () => {
 
   const shouldShowTutorial = museumMode || newVersion;
   if (shouldShowTutorial) {
-    store.dispatch(showTutorial());
+    store.dispatch(showTutorial({ newVersion, skipLanguageSelection }));
   }
 });

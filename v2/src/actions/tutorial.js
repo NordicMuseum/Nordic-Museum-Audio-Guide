@@ -13,21 +13,33 @@ export function hideTutorial() {
   };
 }
 
-export function showTutorial() {
-  Navigation.showModal({
-    stack: {
-      children: [
-        {
-          component: {
-            id: 'tutorialModal',
-            name: 'tutorialLanguage',
-          },
+export function showTutorial({ newVersion, skipLanguageSelection }) {
+  return async dispatch => {
+    const children = [
+      {
+        component: {
+          id: 'tutorialModal',
+          name: 'tutorialLanguage',
         },
-      ],
-    },
-  });
+      },
+    ];
 
-  return {
-    type: SHOW_TUTORIAL,
+    if (skipLanguageSelection && !newVersion) {
+      children.push({
+        component: {
+          name: 'tutorialWelcome',
+        },
+      });
+    }
+
+    Navigation.showModal({
+      stack: {
+        children,
+      },
+    });
+
+    dispatch({
+      type: SHOW_TUTORIAL,
+    });
   };
 }

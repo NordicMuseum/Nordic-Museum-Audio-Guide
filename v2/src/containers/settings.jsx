@@ -15,6 +15,7 @@ import { NAV_BAR_TEXT, BOTTOM_PLAYER_HEIGHT, ACTION, WHITE } from '../styles';
 const styles = StyleSheet.create({
   container: {
     alignItems: 'stretch',
+    marginHorizontal: 25,
     flex: 1,
   },
   cell: {
@@ -53,24 +54,21 @@ class Settings extends Component {
     const paddingBottom = playerOpen ? BOTTOM_PLAYER_HEIGHT : 0;
 
     return (
-      <View style={{ flex: 1 }}>
-        <View style={styles.container}>
-          <ScrollView
-            contentContainerStyle={{
-              paddingBottom,
-              marginHorizontal: 25,
-            }}
-            automaticallyAdjustContentInsets={false}>
-            <View style={styles.cell}>
-              <LanguageSwitcherButtons
-                locale={locale}
-                onPress={languageCode => {
-                  switchLocale(languageCode, 'settings');
-                }}
-              />
-            </View>
-          </ScrollView>
-        </View>
+      <View style={styles.container}>
+        <ScrollView
+          contentContainerStyle={{
+            paddingBottom,
+          }}
+          automaticallyAdjustContentInsets={false}>
+          <View style={styles.cell}>
+            <LanguageSwitcherButtons
+              locale={locale}
+              onPress={languageCode => {
+                switchLocale(languageCode);
+              }}
+            />
+          </View>
+        </ScrollView>
       </View>
     );
   }

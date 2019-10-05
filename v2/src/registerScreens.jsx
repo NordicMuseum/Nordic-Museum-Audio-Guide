@@ -4,9 +4,6 @@ import { BackHandler } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 
-import { translate } from './i18n';
-import { localizationActor } from './actors/localization';
-
 import NearMe from './containers/nearMe';
 import Tours from './containers/tours';
 import TourStop from './containers/tourStop';
@@ -19,8 +16,6 @@ import TutorialLanguage from './containers/tutorialLanguage';
 import AboutMuseum from './containers/aboutMuseum';
 import AboutApp from './containers/aboutApp';
 import BottomPlayer from './containers/bottomPlayer';
-
-import { OFF_BLACK } from './styles';
 
 import Analytics from 'appcenter-analytics';
 
@@ -41,11 +36,9 @@ const sceneCreator = (
         super(props);
         this.sceneCompRef = React.createRef();
 
-        if (screenType !== SCREEN_TYPES.overlay) {
+        if (screenName !== 'bottomPlayer') {
           Navigation.events().bindComponent(this);
         }
-
-        localizationActor().addListener(this.localeChanged);
       }
 
       componentDidAppear() {
@@ -64,10 +57,6 @@ const sceneCreator = (
         );
       }
 
-      componentWillUnmount() {
-        localizationActor().removeListener(this.localeChanged);
-      }
-
       handleHardwareBack = () => {
         // TODO: Logic for Android back button
       };
@@ -79,83 +68,7 @@ const sceneCreator = (
           </Provider>
         );
       }
-
-      localeChanged = () => {
-        let newOptions;
-
-        switch (screenType) {
-          case SCREEN_TYPES.bottomTab: {
-            newOptions = {
-              bottomTab: {
-                text: translate(titleTranslationsKey),
-              },
-              bottomTabs: {
-                backgroundColor: OFF_BLACK,
-              },
-            };
-            break;
-          }
-
-          case SCREEN_TYPES.bottomTabWithNavBar: {
-            newOptions = {
-              topBar: {
-                title: {
-                  text: translate(titleTranslationsKey),
-                },
-              },
-              bottomTab: {
-                text: translate(titleTranslationsKey),
-              },
-              bottomTabs: {
-                backgroundColor: OFF_BLACK,
-              },
-            };
-            break;
-          }
-
-          case SCREEN_TYPES.screenWithNavBar: {
-            newOptions = {
-              topBar: {
-                title: {
-                  text: translate(titleTranslationsKey),
-                },
-              },
-              bottomTabs: {
-                backgroundColor: OFF_BLACK,
-              },
-            };
-            break;
-          }
-
-          case SCREEN_TYPES.screen: {
-            break;
-          }
-
-          case SCREEN_TYPES.overlay: {
-            break;
-          }
-
-          default:
-            break;
-        }
-
-        if (newOptions) {
-          Navigation.mergeOptions(this.props.componentId, newOptions);
-        }
-
-        if (this.sceneCompRef.current) {
-          this.sceneCompRef.current.forceUpdate();
-        }
-      };
     };
-};
-
-const SCREEN_TYPES = {
-  bottomTab: 'bottomTab',
-  bottomTabWithNavBar: 'bottomTabWithNavBar',
-  screenWithNavBar: 'screenWithNavBar',
-  screen: 'screen',
-  overlay: 'overlay',
 };
 
 const registerScreens = store => {
@@ -163,8 +76,6 @@ const registerScreens = store => {
     'nearMe',
     sceneCreator(NearMe, store, {
       screenName: 'nearMe',
-      screenType: SCREEN_TYPES.bottomTabWithNavBar,
-      titleTranslationsKey: 'nearMeScreen_Title',
     }),
     () => NearMe,
   );
@@ -173,8 +84,6 @@ const registerScreens = store => {
     'tours',
     sceneCreator(Tours, store, {
       screenName: 'tours',
-      screenType: SCREEN_TYPES.bottomTabWithNavBar,
-      titleTranslationsKey: 'storiesScreen_Title',
     }),
     () => Tours,
   );
@@ -183,9 +92,6 @@ const registerScreens = store => {
     'tourStop',
     sceneCreator(TourStop, store, {
       screenName: 'tourStop',
-      screenType: SCREEN_TYPES.screen,
-      // TODO: This changes dynamically by the tourStop selected
-      titleTranslationsKey: 'storiesScreen_Title',
     }),
     () => TourStop,
   );
@@ -194,8 +100,6 @@ const registerScreens = store => {
     'search',
     sceneCreator(Search, store, {
       screenName: 'search',
-      screenType: SCREEN_TYPES.bottomTabWithNavBar,
-      titleTranslationsKey: 'searchScreen_Title',
     }),
     () => Search,
   );
@@ -204,8 +108,6 @@ const registerScreens = store => {
     'info',
     sceneCreator(Info, store, {
       screenName: 'info',
-      screenType: SCREEN_TYPES.bottomTab,
-      titleTranslationsKey: 'museumScreen_Title',
     }),
     () => Info,
   );
@@ -214,8 +116,6 @@ const registerScreens = store => {
     'settings',
     sceneCreator(Settings, store, {
       screenName: 'settings',
-      screenType: SCREEN_TYPES.screenWithNavBar,
-      titleTranslationsKey: 'settingsScreen_Title',
     }),
     () => Settings,
   );
@@ -224,8 +124,6 @@ const registerScreens = store => {
     'amenities',
     sceneCreator(Amenities, store, {
       screenName: 'amenities',
-      screenType: SCREEN_TYPES.screenWithNavBar,
-      titleTranslationsKey: 'amenitiesScreen_Title',
     }),
     () => Amenities,
   );
@@ -234,7 +132,6 @@ const registerScreens = store => {
     'tutorialWelcome',
     sceneCreator(TutorialWelcome, store, {
       screenName: 'tutorialWelcome',
-      screenType: SCREEN_TYPES.screenWithNavBar,
     }),
     () => TutorialWelcome,
   );
@@ -243,8 +140,6 @@ const registerScreens = store => {
     'tutorialLanguage',
     sceneCreator(TutorialLanguage, store, {
       screenName: 'tutorialLanguage',
-      screenType: SCREEN_TYPES.screenWithNavBar,
-      titleTranslationsKey: 'settingsScreen_Title',
     }),
     () => TutorialLanguage,
   );
@@ -253,8 +148,6 @@ const registerScreens = store => {
     'aboutMuseum',
     sceneCreator(AboutMuseum, store, {
       screenName: 'aboutMuseum',
-      screenType: SCREEN_TYPES.screenWithNavBar,
-      titleTranslationsKey: 'aboutScreen_Title',
     }),
     () => AboutMuseum,
   );
@@ -263,8 +156,6 @@ const registerScreens = store => {
     'aboutApp',
     sceneCreator(AboutApp, store, {
       screenName: 'aboutApp',
-      screenType: SCREEN_TYPES.screenWithNavBar,
-      titleTranslationsKey: 'aboutScreen_Title',
     }),
     () => AboutApp,
   );
@@ -273,7 +164,6 @@ const registerScreens = store => {
     'bottomPlayer',
     sceneCreator(BottomPlayer, store, {
       screenName: 'bottomPlayer',
-      screenType: SCREEN_TYPES.overlay,
     }),
     () => BottomPlayer,
   );
