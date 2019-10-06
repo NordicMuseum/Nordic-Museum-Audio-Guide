@@ -36,13 +36,13 @@ const WideButton = props => {
       disabled={props.disabled || false}
       activeOpacity={props.pressable ? 0.5 : 1}>
       <View style={[styles.wideButton, props.style]}>
-        <Text style={{ writingDirection: isRTL() ? 'rtl' : 'ltr' }}>
+        <Text style={{ writingDirection: isRTL ? 'rtl' : 'ltr' }}>
           <Text
             style={[
               globalStyles.h1,
               props.textStyle,
               { flex: 1 },
-              { textAlign: isRTL() ? 'right' : 'left' },
+              { textAlign: isRTL ? 'right' : 'left' },
             ]}>
             {props.text}
           </Text>

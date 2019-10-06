@@ -201,7 +201,8 @@ class Search extends Component {
       }, foundTransitionTime);
     } else {
       this.setScreenTitle('tryAgain');
-      const tryAgainMessage = setTimeout(() => {
+
+      setTimeout(() => {
         this.setScreenTitle('searchScreen_Title');
         this.props.actions.resetDigits();
       }, tryAgainMessageTime);
@@ -242,7 +243,7 @@ class Search extends Component {
               style={[
                 styles.displayRow,
                 { width: 50 * this.props.digits.length },
-                // isRTL ? { flexDirection: 'row-reverse' } : {}
+                isRTL ? { flexDirection: 'row-reverse' } : {},
               ]}>
               {this.props.digits.map((digit, index) => {
                 return (
@@ -264,7 +265,7 @@ class Search extends Component {
             <View
               style={[
                 styles.digitRow,
-                // isRTL ? { flexDirection: 'row-reverse' } : {}
+                isRTL ? { flexDirection: 'row-reverse' } : {},
               ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
@@ -294,7 +295,7 @@ class Search extends Component {
             <View
               style={[
                 styles.digitRow,
-                // isRTL ? { flexDirection: 'row-reverse' } : {}
+                isRTL ? { flexDirection: 'row-reverse' } : {},
               ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
@@ -324,7 +325,7 @@ class Search extends Component {
             <View
               style={[
                 styles.digitRow,
-                // isRTL ? { flexDirection: 'row-reverse' } : {}
+                isRTL ? { flexDirection: 'row-reverse' } : {},
               ]}>
               <TouchableHighlight
                 underlayColor={SELECTED}
@@ -354,7 +355,7 @@ class Search extends Component {
             <View
               style={[
                 styles.digitRow,
-                // isRTL ? { flexDirection: 'row-reverse' } : {}
+                isRTL ? { flexDirection: 'row-reverse' } : {},
               ]}>
               <View style={styles.nonDigit} />
               <TouchableHighlight

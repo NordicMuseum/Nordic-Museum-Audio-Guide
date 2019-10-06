@@ -80,6 +80,4 @@ export const translate = memoize(
   (key, config) => (config ? key + JSON.stringify(config) : key),
 );
 
-export const isRTL = () => {
-  return I18nManager.getConstants().isRTL;
-};
+export const isRTL = I18nManager.getConstants().isRTL;

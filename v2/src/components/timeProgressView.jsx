@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyleSheet, View, Text, I18nManager } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import ProgressBar from './progressBar';
+
+import { isRTL } from '../i18n';
 
 import { globalStyles } from '../styles';
 
@@ -79,7 +81,7 @@ const TimeProgressView = props => {
         style={[
           styles.row,
           styles.timestampRow,
-          I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+          isRTL ? { flexDirection: 'row-reverse' } : {},
         ]}
         accessibilityLabel={`${timeRemaining} seconds remaining`}>
         <Text

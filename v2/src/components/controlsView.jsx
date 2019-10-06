@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { translate } from '../i18n';
+import { translate, isRTL } from '../i18n';
 
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
@@ -156,7 +156,7 @@ class ControlsView extends Component {
           style={[
             styles.row,
             styles.controlsRow,
-            // I18nManager.isRTL ? { flexDirection: 'row-reverse' } : {},
+            isRTL ? { flexDirection: 'row-reverse' } : {},
           ]}>
           <View>
             <PrevButton

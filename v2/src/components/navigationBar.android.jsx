@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  I18nManager,
-} from 'react-native';
+import { isRTL } from '../i18n';
 
 const styles = StyleSheet.create({
   bar: {
@@ -58,7 +51,7 @@ const NavigationBar = props => {
             style={[
               styles.backArrow,
               { tintColor: props.buttonColor },
-              { transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }] },
+              { transform: [{ scaleX: isRTL ? -1 : 1 }] },
             ]}
           />
           <Text style={[styles.backButtonLabel, { color: props.buttonColor }]}>

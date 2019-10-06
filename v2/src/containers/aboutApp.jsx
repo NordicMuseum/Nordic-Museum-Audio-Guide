@@ -72,14 +72,14 @@ class AboutApp extends Component {
       heading1: {
         marginTop: 25,
         ...StyleSheet.flatten(globalStyles.h1),
-        writingDirection: isRTL() ? 'rtl' : 'ltr',
-        textAlign: isRTL() ? 'right' : 'left',
+        writingDirection: isRTL ? 'rtl' : 'ltr',
+        textAlign: isRTL ? 'right' : 'left',
       },
       paragraph: {
         marginTop: 5,
         ...StyleSheet.flatten(globalStyles.body),
-        writingDirection: isRTL() ? 'rtl' : 'ltr',
-        textAlign: isRTL() ? 'right' : 'left',
+        writingDirection: isRTL ? 'rtl' : 'ltr',
+        textAlign: isRTL ? 'right' : 'left',
       },
     };
 

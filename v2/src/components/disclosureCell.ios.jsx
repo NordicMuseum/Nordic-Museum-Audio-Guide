@@ -9,6 +9,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import { isRTL } from '../i18n';
+
 import { globalStyles, LIGHT_GRAY } from '../styles';
 
 export const DISCLOSURE_CELL_HEIGHT = 41;
@@ -45,13 +47,18 @@ const DisclosureCell = props => {
         ]}>
         <Text style={[styles.cellTitle]}>
           <Text
-            style={[globalStyles.disclosure]} //,  { textAlign: I18nManager.isRTL ? 'right' : 'left' }]}
-          >
+            style={[
+              globalStyles.disclosure,
+              { textAlign: isRTL ? 'right' : 'left' },
+            ]}>
             {props.title}
           </Text>
         </Text>
         <Image
-          style={[styles.cellImage]} //, { transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }] }]}
+          style={[
+            styles.cellImage,
+            { transform: [{ scaleX: isRTL ? -1 : 1 }] },
+          ]}
           source={require('../assets/DisclosureIndicator.png')}
         />
       </View>

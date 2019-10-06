@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { StyleSheet, View, Dimensions } from 'react-native';
 
+import { isRTL } from '../i18n';
+
 import { ACTION, GRAY } from '../styles';
 
 const styles = StyleSheet.create({
@@ -36,7 +38,7 @@ const ProgressBar = props => {
           styles.row,
           styles.progressRow,
           { backgroundColor: GRAY },
-          // isRTL ? { flexDirection: 'row-reverse' } : {},
+          isRTL ? { flexDirection: 'row-reverse' } : {},
         ]}>
         <View
           style={[
