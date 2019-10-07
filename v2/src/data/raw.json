@@ -1,5 +1,5 @@
 {
-  "Timestamp": "Wed Sep 25 2019 11:13:44 GMT-0400 (EDT)",
+  "Timestamp": "Mon Oct 07 2019 07:01:06 GMT-0400 (EDT)",
   "UI Strings": [
     {
       "UIString": "min",
@@ -1609,9 +1609,10 @@
     {
       "floor": 2,
       "order": 1,
+      "regions": "Great Hall",
       "title__en": "The Arctic – While the Ice is Melting",
       "title__sv": "Arktis – medan isen smälter",
-      "audioContent": "203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226",
+      "audioContent": "001,002,003,004,005,006,007,008,009,010,011,012,013,014,015,016,017,018,019,020,021,022,023,024",
       "imageURL": "arctic.png",
       "imageWidth": 750,
       "imageHeight": 345,
@@ -1898,145 +1899,145 @@
       "duration__zh": "3"
     },
     {
-      "id": 203,
+      "id": "001",
       "category": "CONTEXT",
       "title__en": "The Arctic, the Land Under the North Star ",
       "title__sv": "Arktis, landet under polstjärnan"
     },
     {
-      "id": 204,
+      "id": "002",
       "category": "CONTEXT",
       "title__en": "Arctic Borders",
       "title__sv": "Arktis gränser"
     },
     {
-      "id": 205,
+      "id": "003",
       "category": "CONTEXT",
       "title__en": "A Melting World  ",
       "title__sv": "En smältande värld "
     },
     {
-      "id": 206,
+      "id": "004",
       "category": "CONTEXT",
       "title__en": "Threatened Life",
       "title__sv": "Hotat liv"
     },
     {
-      "id": 207,
+      "id": "005",
       "category": "CONTEXT",
       "title__en": "The Living Ice ",
       "title__sv": "Den levande isen"
     },
     {
-      "id": 208,
+      "id": "006",
       "category": "CONTEXT",
       "title__en": "Humans and Ice",
       "title__sv": "Människan och isen"
     },
     {
-      "id": 209,
+      "id": "007",
       "category": "CONTEXT",
       "title__en": "Secrets of the Ice ",
       "title__sv": "Isens hemligheter"
     },
     {
-      "id": 210,
+      "id": "008",
       "category": "CONTEXT",
       "title__en": "In Motion ",
       "title__sv": "I rörelse"
     },
     {
-      "id": 211,
+      "id": "009",
       "category": "CONTEXT",
       "title__en": "At Home in the Arctic",
       "title__sv": "Hemma i Arktis"
     },
     {
-      "id": 212,
+      "id": "010",
       "category": "CONTEXT",
       "title__en": "Warmth and Light ",
       "title__sv": "Värme och ljus"
     },
     {
-      "id": 213,
+      "id": "011",
       "category": "CONTEXT",
       "title__en": "In the Pantry",
       "title__sv": "I skafferiet"
     },
     {
-      "id": 214,
+      "id": "012",
       "category": "CONTEXT",
       "title__en": "The Significance of Clothing ",
       "title__sv": "Klädernas betydelse"
     },
     {
-      "id": 215,
+      "id": "013",
       "category": "CONTEXT",
       "title__en": "The Clothes of Iceland and the Faroe Islands ",
       "title__sv": "Kläderna på Island och Färöarna"
     },
     {
-      "id": 216,
+      "id": "014",
       "category": "CONTEXT",
       "title__en": "An Icelandic Formal Outfit  ",
       "title__sv": "En isländsk högtidsdräkt"
     },
     {
-      "id": 217,
+      "id": "015",
       "category": "CONTEXT",
       "title__en": "The Clothes of Greenland ",
       "title__sv": "Kläderna på Grönland"
     },
     {
-      "id": 218,
+      "id": "016",
       "category": "CONTEXT",
       "title__en": "A Boy’s Attire ",
       "title__sv": "En pojkdräkt "
     },
     {
-      "id": 219,
+      "id": "017",
       "category": "CONTEXT",
       "title__en": "Women’s Clothing in Greenland",
       "title__sv": "Den grönländska kvinnodräkten"
     },
     {
-      "id": 220,
+      "id": "018",
       "category": "CONTEXT",
       "title__en": "Sami Clothing ",
       "title__sv": "Samisk dräkt"
     },
     {
-      "id": 221,
+      "id": "019",
       "category": "CONTEXT",
       "title__en": "The Resource Landscape ",
       "title__sv": "Resurslandskapet"
     },
     {
-      "id": 222,
+      "id": "020",
       "category": "CONTEXT",
       "title__en": "The Battle for Resources ",
       "title__sv": "Kampen om resurserna"
     },
     {
-      "id": 223,
+      "id": "021",
       "category": "CONTEXT",
       "title__en": "Down in the Mine ",
       "title__sv": "Ner i gruvan"
     },
     {
-      "id": 224,
+      "id": "022",
       "category": "CONTEXT",
       "title__en": "The Whales ",
       "title__sv": "Valarna"
     },
     {
-      "id": 225,
+      "id": "023",
       "category": "CONTEXT",
       "title__en": "Light in the Darkness ",
       "title__sv": "Ljus i mörkret"
     },
     {
-      "id": 226,
+      "id": "024",
       "category": "CONTEXT",
       "title__en": "The Future  ",
       "title__sv": "Framtiden "
