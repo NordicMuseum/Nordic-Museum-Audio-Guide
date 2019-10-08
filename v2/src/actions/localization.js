@@ -1,8 +1,7 @@
 import { setI18nConfig } from '../i18n';
 
-import { setLocaleAndRTLForReset } from '../appSettings';
+import { restartApp } from './device';
 
-import RNRestart from 'react-native-restart';
 import Analytics from 'appcenter-analytics';
 
 // *** Action Types ***
@@ -10,17 +9,11 @@ export const SWITCH_LOCALE = 'SWITCH_LOCALE';
 
 // *** Action Creators ***
 export function switchLocale(desiredLocale) {
-  return async () => {
-    const { setLocale, setRTL } = setI18nConfig(desiredLocale);
-    Analytics.trackEvent(`LocaleChanged: ${setLocale}`);
-
-    await setLocaleAndRTLForReset({
-      locale: setLocale,
-      isRTL: setRTL,
-      showWelcomeScreen: true,
-    });
+  return async dispatch => {
+    const locale = setI18nConfig(desiredLocale);
+    Analytics.trackEvent(`LocaleChanged: ${locale}`);
 
     // Always restart app on locale change, it's easier this way
-    RNRestart.Restart();
+    dispatch(restartApp(locale));
   };
 }

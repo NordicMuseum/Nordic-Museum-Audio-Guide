@@ -1,12 +1,11 @@
 import { NativeEventEmitter, NativeModules } from 'react-native';
-import RNRestart from 'react-native-restart';
 
-import { setDefaultLocaleAndRTL } from '../appSettings';
+import { restartApp } from '../actions/device';
 
 class ChargingActor {
   constructor(store) {
-    this.store = store;
-    this.dispatch = store.dispatch;
+    this._store = store;
+    this._dispatch = store.dispatch;
 
     const deviceInfoEmitter = new NativeEventEmitter(
       NativeModules.RNDeviceInfo,
@@ -15,11 +14,9 @@ class ChargingActor {
     deviceInfoEmitter.addListener(
       'RNDeviceInfo_powerStateDidChange',
       async ({ batteryState }) => {
-        const museumMode = this.store.getState().device.museumMode;
+        const museumMode = this._store.getState().device.museumMode;
         if (batteryState === 'charging' && museumMode) {
-          await setDefaultLocaleAndRTL();
-
-          RNRestart.Restart();
+          this._dispatch(restartApp());
         }
       },
     );

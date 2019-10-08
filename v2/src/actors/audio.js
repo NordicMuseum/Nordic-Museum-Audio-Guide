@@ -1,7 +1,6 @@
 import { Platform } from 'react-native';
 
 import Sound from 'react-native-sound';
-Sound.setCategory('Playback');
 
 import i18n from 'i18n-js';
 
@@ -16,6 +15,9 @@ class AudioActor {
     this._dispatch = store.dispatch;
     this._watchAudioTimeInterval;
     this._loadedSound;
+
+    // Enable playback in silence mode
+    Sound.setCategory('Playback');
   }
 
   loadAudio = ({
@@ -37,10 +39,10 @@ class AudioActor {
         android: `audio_${audioID}${locale.toLowerCase()}.mp3`,
       });
 
+      this.unloadAudio();
       this._loadedSound = new Sound(audioUrl, Sound.MAIN_BUNDLE, error => {
         if (error) {
-          this._loadedSound.release();
-          this._loadedSound == null;
+          this.unloadAudio();
 
           if (localeOrder.length === 0) {
             reject(`Cannot load file: ${audioUrl}`);
