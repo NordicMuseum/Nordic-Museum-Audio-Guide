@@ -27,6 +27,9 @@
   [AppCenterReactNative register];
   [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
   [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+  
+//   Enable console.log in release builds:
+//   RCTSetLogThreshold(RCTLogLevelInfo - 1);
 
   return YES;
 }

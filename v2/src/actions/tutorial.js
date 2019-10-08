@@ -1,19 +1,25 @@
 import { Navigation } from 'react-native-navigation';
 
+import { setShowWelcomeScreenToFalse } from '../appSettings';
+
 // *** Action Types ***
 export const HIDE_TUTORIAL = 'HIDE_TUTORIAL';
 export const SHOW_TUTORIAL = 'SHOW_TUTORIAL';
 
 // *** Action Creators ***
 export function hideTutorial() {
-  Navigation.dismissModal('tutorialModal');
+  return async dispatch => {
+    Navigation.dismissModal('tutorialModal');
 
-  return {
-    type: HIDE_TUTORIAL,
+    await setShowWelcomeScreenToFalse();
+
+    dispatch({
+      type: HIDE_TUTORIAL,
+    });
   };
 }
 
-export function showTutorial({ newVersion, skipLanguageSelection }) {
+export function showTutorial({ showWelcomeScreen }) {
   return async dispatch => {
     const children = [
       {
@@ -24,7 +30,7 @@ export function showTutorial({ newVersion, skipLanguageSelection }) {
       },
     ];
 
-    if (skipLanguageSelection && !newVersion) {
+    if (showWelcomeScreen) {
       children.push({
         component: {
           name: 'tutorialWelcome',

@@ -17,7 +17,7 @@ export function switchLocale(desiredLocale) {
     await setLocaleAndRTLForReset({
       locale: setLocale,
       isRTL: setRTL,
-      skipLanguageSelection: true,
+      showWelcomeScreen: true,
     });
 
     // Always restart app on locale change, it's easier this way

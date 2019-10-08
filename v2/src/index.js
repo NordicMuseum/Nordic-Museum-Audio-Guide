@@ -30,7 +30,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
     museumMode,
     appVersion,
     locale,
-    skipLanguageSelection,
+    showWelcomeScreen,
   } = await appSettingsPromise;
 
   const defaultOptions = {
@@ -174,8 +174,8 @@ Navigation.events().registerAppLaunchedListener(async () => {
   const constants = await Navigation.constants();
   setBottomTabsHeight(constants.bottomTabsHeight);
 
-  const shouldShowTutorial = museumMode || newVersion;
+  const shouldShowTutorial = museumMode || newVersion || showWelcomeScreen;
   if (shouldShowTutorial) {
-    store.dispatch(showTutorial({ newVersion, skipLanguageSelection }));
+    store.dispatch(showTutorial({ showWelcomeScreen }));
   }
 });
