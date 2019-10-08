@@ -5,14 +5,15 @@ import { connect } from 'react-redux';
 
 import { StyleSheet, View, ScrollView } from 'react-native';
 
+import { Navigation } from 'react-native-navigation';
+
 import { translate } from '../i18n';
 
-import { switchLocale } from '../actions/localization';
+import { switchLocale as switchLocaleAction } from '../actions/localization';
 
 import { NAV_BAR_TEXT, OFF_BLACK, WHITE } from '../styles';
 
 import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
-import { Navigation } from 'react-native-navigation';
 
 const styles = StyleSheet.create({
   container: {
@@ -50,8 +51,15 @@ class TutorialLanguage extends Component {
           <LanguageSwitcherButtons
             textStyle={{ color: OFF_BLACK }}
             locale={locale}
-            onPress={languageCode => {
-              switchLocale(languageCode);
+            onPress={selectedLocale => {
+              if (locale === selectedLocale) {
+                Navigation.push(this.props.componentId, {
+                  component: { name: 'tutorialWelcome' },
+                });
+                return;
+              }
+
+              switchLocale(selectedLocale);
             }}
           />
         </ScrollView>
@@ -70,7 +78,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        switchLocale,
+        switchLocale: switchLocaleAction,
       },
       dispatch,
     ),

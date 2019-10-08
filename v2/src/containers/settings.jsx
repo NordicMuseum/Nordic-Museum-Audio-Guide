@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { Navigation } from 'react-native-navigation';
+
 import { translate } from '../i18n';
-import { switchLocale } from '../actions/localization';
+import { switchLocale as switchLocaleAction } from '../actions/localization';
 
 import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
 
@@ -63,8 +65,13 @@ class Settings extends Component {
           <View style={styles.cell}>
             <LanguageSwitcherButtons
               locale={locale}
-              onPress={languageCode => {
-                switchLocale(languageCode);
+              onPress={selectedLocale => {
+                if (locale === selectedLocale) {
+                  Navigation.pop(this.props.componentId);
+                  return;
+                }
+
+                switchLocale(selectedLocale);
               }}
             />
           </View>
@@ -93,7 +100,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        switchLocale,
+        switchLocale: switchLocaleAction,
       },
       dispatch,
     ),

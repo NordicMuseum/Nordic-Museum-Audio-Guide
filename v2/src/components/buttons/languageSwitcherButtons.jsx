@@ -5,7 +5,7 @@ import { StyleSheet, View, Text, ViewPropTypes } from 'react-native';
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, SELECTED } from '../../styles';
+import { SELECTED } from '../../styles';
 
 const styles = StyleSheet.create({
   offStyle: {
