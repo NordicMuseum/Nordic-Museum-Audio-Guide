@@ -42,8 +42,6 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>The Nordic Museum Audio Guide uses bluetooth to figure out your location and show nearby highlights and themes.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
-	<key>NSLocationWhenInUseUsageDescription - 2</key>
 	<string>The Nordic Museum Audio Guide uses your location to show you nearby highlights and themes.</string>
 	<key>UIBackgroundModes</key>
 	<array>
