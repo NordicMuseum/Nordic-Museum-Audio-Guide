@@ -231,7 +231,10 @@ class TourStop extends Component {
     }
 
     let imageURL = this.props.tourStop.imageURL;
-    if (this.props.locale === 'svKids' && this.tourStop.regions.length === 0) {
+    if (
+      this.props.locale === 'svKids' &&
+      this.props.tourStop.title === 'tours_highlights_title'
+    ) {
       imageURL = 'highlightsKids.png';
     }
 
