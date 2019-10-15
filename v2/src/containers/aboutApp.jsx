@@ -9,7 +9,7 @@ import { updateMuseumMode } from '../actions/device';
 
 import Markdown from 'react-native-simple-markdown';
 
-import { isRTL } from '../i18n';
+import { isRTL, translate } from '../i18n';
 
 import {
   globalStyles,
@@ -55,7 +55,7 @@ class AboutApp extends Component {
           color: ACTION,
         },
         title: {
-          text: 'About the App',
+          text: translate('aboutTheAppScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
