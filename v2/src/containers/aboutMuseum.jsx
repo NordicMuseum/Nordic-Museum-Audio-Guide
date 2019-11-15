@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import Markdown from 'react-native-simple-markdown';
 
-import { isRTL } from '../i18n';
+import { isRTL, translate } from '../i18n';
 
 import {
   globalStyles,
@@ -83,7 +83,7 @@ class AboutMuseum extends Component {
           color: ACTION,
         },
         title: {
-          text: 'The Nordic Museum',
+          text: translate('aboutScreen_Title'),
           fontSize: 17,
           fontFamily: 'Helvetica',
           color: NAV_BAR_TEXT,
