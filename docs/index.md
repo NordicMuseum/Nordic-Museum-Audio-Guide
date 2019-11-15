@@ -4,7 +4,7 @@ toc_label: Nordic Museum Audio Guide
 toc: true
 ---
 
-Targets: iOS 9.0 or greater
+Targets: iOS 10.0 or greater
 
 ### Description
 
@@ -14,40 +14,41 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 
 ### Development Notes
 
-* [Archecture of this project](architecture.md)
+* [Archecture of This Project](architecture.md)
 * [Indoor Location](indoorLocation.md)
-* [Content structure](contentStructure.md)
-* [Features & trade-offs](features.md)
+* [Content Structure](contentStructure.md)
+* [Adding Content](addingContent.md)
+* [Features & Trade-offs](features.md)
 * [Publishing on the App Store](publishing.md)
-* [Using ipods as loan devices](ipods.md)
+* [Using Ipods as Loan Devices](ipods.md)
 * [Blog Posts by the Innovation Studio](blogposts.md)
-
-Use Node 8 to install (Node 10 not supported yet)
 
 ### Building and Running
 
-1. Install all React Native dependencies  
+The current version of the app resides in the [v2](https://github.com/Ambrosiani/Nordic-Museum-Audio-Guide/tree/master/v2) folder.
+
+1. Install all React Native dependencies following the "React Native CLI Quickstart" instructions: 
 [React Native getting started guide](https://facebook.github.io/react-native/docs/getting-started.html)
+
+#### iOS
 2. Install project dependencies  
   ```
-  npm i
+  cd v2 && npm i && cd ios && pod install && cd ..
   ```  
 3. Run on the iOS simulator  
   ```
-  react-native run-ios
+  npx react-native run-ios
   ```
+  or use the XCode buttons for building to an appropriate device/simulator.
 
-Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
+There are two schemes: `nordicMuseumAudioGuide` is the debug build with hot reloading while `nordicMuseumAudioGuide-Release` is the release build used for testing and eventually publishing to the App Store.
 
-1. Open ios/AndyWarholAccessibilityProject.xcworkspace in XCode.
-2. Select the project ("AndyWarholAccessibilityProject") in the top left.
-3. In the main window, select the target and the "General" tab.
-4. Change the bundle identifier to match your app signing settings in your developer account.
-5. Under "Signing", select your team from the drop down menu.
-6. Now you should be ready to select your device in the menu bar and choose "Build" from the Product menu.
+#### Android
+
+### Adding Your Own Data
+
+See the in-depth guide on [adding content](addingContent.md).
 
 ### Intellectual Property
 
 All files that are the intellectual property owned by the Nordic Museum and other third-parties have been removed from this repo and replaced with placeholders. This includes all the images and audio files included in the App Bundle. Additional museum information remains in the code to give an overall sense of the app.
-
-

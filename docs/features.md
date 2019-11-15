@@ -12,9 +12,9 @@ The basic user story for a museum audio guide is this: during the museum visit, 
 
 ## Core functional demands
 The Nordic Museum Audio Guide has three core functional demands
-1 The audio tracks need to be available offline
-2 The audio guide needs to handle multiple languages
-3 The user should be able to select audio tracks by entering digits
+1. The audio tracks need to be available offline
+2. The audio guide needs to handle multiple languages
+3. The user should be able to select audio tracks by entering digits
 
 These demands are explained in detail below.
 
