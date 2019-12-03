@@ -14,7 +14,8 @@ The **Nordic Museum Audio Guide** is a stand-alone audio guide app used at the N
 
 **The app code is open source and any museum with similar needs can use it to build their own audio guide app.**
 
-Additional questions regarding the app can be answered by Aron Ambrosiani at the Nordic Museum. E-mail: aron.ambrosiani@nordiskamuseet.se, phone +46851954564.
+Additional questions regarding the app can be answered by Aron Ambrosiani at the Nordic Museum.
+E-mail: [aron.ambrosiani@nordiskamuseet.se](mailto:aron.ambrosiani@nordiskamuseet.se), phone +46851954564.
 
 ### Development Notes
 
