@@ -78,6 +78,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
         options: {
           bottomTabs: {
             backgroundColor: OFF_BLACK,
+            currentTabIndex: 1,
           },
         },
         children: [
