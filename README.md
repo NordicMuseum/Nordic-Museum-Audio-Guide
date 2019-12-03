@@ -1,6 +1,6 @@
 # Nordic Museum Audio Guide
 
-Targets: iOS 9.0 or greater
+Targets: iOS 10.0 or greater
 
 ### Description
 
