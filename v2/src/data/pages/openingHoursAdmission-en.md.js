@@ -8,6 +8,8 @@ September–May: daily 10–17 (Wednesdays 10–20)
 
 Adults: 140 SEK
 Children/Youth 18 years and under: Free
-Tuesday 13.00–17.00 (Sep–May): Free`;
+Tuesday 13.00–17.00 (Sep–May): Free
+
+[Current information](https://www.nordiskamuseet.se/en/visit-us)`;
 
 export default text;
