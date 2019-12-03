@@ -21,6 +21,7 @@ A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://g
 * [Features & Trade-offs](features.md)
 * [Publishing on the App Store](publishing.md)
 * [Using Ipods as Loan Devices](ipods.md)
+* [Possible improvements](improvements.md)
 * [Blog Posts by the Innovation Studio](blogposts.md)
 
 ### Building and Running
