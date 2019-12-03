@@ -1,136 +1,0 @@
-{
-	"min": "الدقائق",
-	"bluetoothButton_OnLabel": "بلوتوث قيد التشغيل",
-	"bluetoothButton_OffLabel": "قم بتشغيل البلوتوث",
-	"bluetoothAlert_Header": "بلوتوث",
-	"bluetoothAlert_Body": "انتقل إلى الإعدادات، ثم بلوتوث لتشغيل البلوتوث.",
-	"locationServicesButton_Label": "السماح بالدخول إلى الموقع.",
-	"locationServicesButton_AuthorizedLabel": "تم السماح بالوصول إلى الموقع",
-	"locationServicesAlert_Header": "الوصول إلى الموقع",
-	"locationServicesAlert_Body": "انتقل إلى الإعدادات، ثم الخصوصية، ثم خدمات الموقع، ثم الدليل الصوتي للسماح بالوصول إلى الموقع أثناء استخدام هذا التطبيق.",
-	"rootScreen_MuseumTabItem": "معلومات",
-	"locationServicesAlert_CancelButton_Label": "إلغاء",
-	"locationServicesAlert_SettingsButton_Label": "الإعدادات",
-	"playButton_AccessibilityLabel": "تشغيل",
-	"pauseButton_AccessibilityLabel": "إيقاف مؤقت",
-	"previousButton_AccessibilityLabel": "السابق",
-	"rewindButton_AccessibilityLabel": "الترجيع 5 ثوان",
-	"toggleSpeedButton_NormalLabel": "1",
-	"toggleSpeedButton_NormalAccessibilityLabel": "سرعة 1x.",
-	"toggleSpeedButton_FastLabel": "1.5",
-	"toggleSpeedButton_FastAccessibilityLabel": "سرعة 1.5x.",
-	"toggleSpeedButton_FastestLabel": "2",
-	"toggleSpeedButton_FastestAccessibilityLabel": "سرعة 2x.",
-	"toggleSpeedButton_AccessibilityLabel": "انقر نقراً مزدوجاً لتغيير سرعة الصوت.",
-	"transcriptButton_OpenedAccessibilityLabel": "تم فتح النص. انقر نقراً مزدوجاً للإغلاق.",
-	"transcriptButton_ClosedAccessibilityLabel": "تم إغلاق النص. انقر نقراً مزدوجاً للفتح.",
-	"tryAgain": "حاول ثانية",
-	"audioContentItem_Seconds": "ثوان",
-	"autoplayProgressView_CountDownTextSingular": "يبدأ بعد ثانية واحدة",
-	"autoplayProgressView_CountDownTextPlural": "يبدأ بعد x ثوان",
-	"autoplayProgressView_CountDownText": "يبدأ بعد",
-	"autoplayProgressView_Seconds": "ثوان",
-	"autoplayProgressView_AutoplayOffAccessibilityLabel": "التشغيل التلقائي، إيقاف التشغيل. انقر نقراً مزدوجاً للتشغيل.",
-	"closePlayerView_Text": "لقد وصلت إلى نهاية ",
-	"closePlayerView_ClosePlayer": "اغلق جهاز التشغيل",
-	"controlsView_StopTitleAccessibilityLabel": "انقر نقراً مزدوجاً للعودة إلى الموضوع الرئيسي.",
-	"exandableHeader_OpenAccessibilityLabel": "انقر نقراً مزدوجاً للإغلاق.",
-	"exandableHeader_ClosedAccessibilityLabel": "انقر نقراً مزدوجاً للفتح.",
-	"grid_Of": "من",
-	"grid_AccessibilityLabel": "تم تشغيل الصوت للموضوع x.",
-	"nearMeScreen_Title": "بالقرب مني",
-	"nearMeScreen_StoriesMessage": "أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك.",
-	"nearMeScreen_LocationNeeds": "لاستخدام هذه الميزة، سنحتاج إلى أمرين منك …",
-	"nearMeScreen_StoriesMessageNone": "لا توجد مواضيع بالقرب منك.",
-	"nearMeScreen_StoriesMessageSingular": "يوجد موضوع واحد بالقرب منك.",
-	"nearMeScreen_StoriesMessagePlural": "يوجد x مواضيع بالقرب منك.",
-	"nearMeScreen_StoriesMessageFallback": "تتوفر المواضيع في الطوابق 2، 3 و 4.",
-	"nearMeScreen_Regions": "المناطق",
-	"nearMeScreen_Amenities": "وسائل الراحة",
-	"nearMeScreen_Entrance": "مدخل",
-	"searchScreen_Title": "بحث #",
-	"storiesScreen_Title": "تصفح",
-	"settingsScreen_Title": "🌎 لغة",
-	"settingsScreen_NearMeHeader": "بالقرب مني",
-	"settingsScreen_AutoplayHeader": "تشغيل تلقائي",
-	"timeProgressView_SecondsRemaining": "هناك x ثانية متبقية",
-	"tutorialScreen_WelcomeTitle": "الدليل الصوتي",
-	"tutorialScreen_NoWorries": "لا تقلق، يمكنك تغيير هذه التفضيلات لاحقاً.",
-	"tutorialScreen_NearMe": "أثناء تواجدك في المتحف، نعرض لك المواضيع على أساس ما هو بالقرب منك. لاستخدام هذه الميزة، سنحتاج إلى أمرين منك ...",
-	"tutorialScreen_Stories": "الدليل الصوتي لمتحف الشمال منظّم في مواضيع. يحتوي كل موضوع على ملفات صوتية متعددة متعلقة بموضوع أو معرض واحد. إذا شغلت التشغيل التلقائي، فسنعمل تلقائياً على تشغيل ملف صوتي شامل للموضوع.",
-	"tutorialScreen_StoriesAutoplayOn": "التشغيل التلقائي قيد التشغيل",
-	"tutorialScreen_StoriesAutoplayOnAccessibilityLabel": "التشغيل التلقائي، قيد التشغيل. انقر نقراً مزدوجاً لإيقاف التشغيل.",
-	"tutorialScreen_StoriesAutoplayOff": "تم إيقاف التشغيل التلقائي",
-	"tutorialScreen_NavigationButtonsAccessibilityLabel": "صفحة x من x. الصفحة التالية.",
-	"tutorialScreen_NavigationButtonsGetStartedAccessibilityLabel": "صفحة x من x. هيا بنا نبدأ.",
-	"tutorialScreen_GetStarted": "التالى",
-	"playAll": "لعب كل",
-	"themes": "المواضيع",
-	"floor": "طابق",
-	"floor1_Label": "طابق 1",
-	"floor2_Label": "طابق 2",
-	"floor234_Label": "طابق 2–4",
-	"floor3_Label": "طابق 3",
-	"floor4_Label": "طابق 4",
-	"aboutScreen_Title": "متحف الشمال ",
-	"amenitiesScreen_Title": "وسائل الراحة",
-	"museumScreen_Title": "معلومات",
-	"tutorialScreen_welcomeMessage": "أهلا بك",
-	"highlights": "مقتطفات",
-	"tours_highlights_title": "مقتطفات",
-	"tours_highlights_imageaccessibilitylabel": "مقتطفات",
-	"tours_highlights_shortcredit": "<i>مقتطفات</i>",
-	"tours_highlights_longcredit": "Foto: Karolina Kristensson\\n<i>مقتطفات</i>",
-	"tours_highlights_duration": 2863,
-	"tours_traditions_duration": 4620,
-	"tours_tableSettings_duration": 2160,
-	"tours_homesAndInteriors_duration": 3420,
-	"tours_sapmi_duration": 1260,
-	"tours_textileGallery_duration": 900,
-	"tours_swedishFolkArt_duration": 1320,
-	"stops_welcomeToTheNordicMuseum_title": "مرحباً بكم في متحف الشمال",
-	"stops_welcomeToTheNordicMuseum_duration": "111",
-	"stops_welcomeToTheNordicMuseum_transcript": "أهلاً بكم إلى متحف (نورديسكا), أو متحف الدول الاسكندنافية، وهو المتحف الأكبر للتاريخ الحضاري في (السويد)\\n\\nاسمي (سانا هوبي نيلسين), وأنا مديرة هذا المتحف\\n\\nهذا التمثال العملاق لـ(غوستاف فاسا)، الملك الذي وحد (السويد) في القرن السادس عشر. يعرض المتحف الطريقة التي عاش فيها أبناء السويد منذ أيام (غوستاف فاسا) إلى يومنا هذا... نوع المنازل التي امتلكها الناس والطريقة التي ارتدوا ملابسهم فيها وما أكلوه وكيف احتفلوا بالأعياد والمناساب الخاصة. التمثال من نحت النحات السويدي (كارل ميلز)\\n\\nعندما تأسس المتحف في أواخر القرن التاسع عشر، كان من المفترض أن يعرض أشياء من كل البلدان الاسكندنافية. ومن هنا أخذ اسمه متحف البلدان الاسكندنافية. لكن في هذه الأيام لا يعرضون هنا إلا الحياة السويدية. لاحظوا النقش تحت قدمي الملك غوستاف فاسا... فاراسفينسكيه! أي كن سويدياً! اعتقد مؤسس المتحف (أرتور هيزيليوس) أن الاهتمام في التاريخ يرافق يداً بيد الوطنية\\n\\nنحن في متحف الدول الاسكندنافية نرغب في روي قصص كل الناس الذين عاشوا ويعيشون في (السويد) وفي الدول الاسكندنافية\\n\\nتدعى هذه الجولة السياحية \"مقتطفات من متحف نورديسكا\". ستريكم مجموعة مختارة من أكثر الأشياء والمعروضات إثارة للاهتمام في المتحف. مدتها نحو ساعة\\n\\nانتبهوا للافتات الإرشاد السمعي الصفراء .\\n\\nاركبوا المصعد إلى الطابق الرابع. تستمر الجولة هناك مع معرض يدعى \"المنازل والتصاميم الداخلية\". أتمنى لكم جولة سعيدة",
-	"stops_the1940SApartment_title": "شقة أربعينيات القرن العشرين",
-	"stops_the1940SApartment_duration": "3",
-	"stops_jewellery_title": "مجوهرات",
-	"stops_jewellery_duration": "3",
-	"stops_swedensOldestDollsHouse_title": "أقدم بيت دمى في السويد",
-	"stops_swedensOldestDollsHouse_duration": "3",
-	"stops_aSwanOnTheTable_title": "بجعة على الطاولة",
-	"stops_aSwanOnTheTable_duration": "3",
-	"stops_tenKindsOfBiscuits_title": "عشرة أنواع من البسكويت",
-	"stops_tenKindsOfBiscuits_duration": "3",
-	"stops_portalToThePalaceOfEverydayLife_title": "بوابة إلى قصر الحياة اليومية",
-	"stops_portalToThePalaceOfEverydayLife_duration": "3",
-	"stops_midsummersEve_title": "عشية منتصف الصيف",
-	"stops_midsummersEve_duration": "3",
-	"stops_whenHanseKalleDied_title": "عندما مات هانز - كال",
-	"stops_whenHanseKalleDied_duration": "3",
-	"stops_augustStrindbergsWriting_title": "مؤلّفات أوغست ستريندبرغ",
-	"stops_augustStrindbergsWriting_duration": "3",
-	"stops_augustStrindbergsArt_title": "فن أوغست ستريندبرغ",
-	"stops_augustStrindbergsArt_duration": "3",
-	"stops_theTwoRoomCottage_title": "الكوخ المؤلّف من غرفتين",
-	"stops_theTwoRoomCottage_duration": "105",
-	"stops_theStateBedroom_title": "غرفة النوم الفاخرة",
-	"stops_theStateBedroom_duration": "95",
-	"stops_theBrewersHouse_title": "بيت البيرة",
-	"stops_theBrewersHouse_duration": "113",
-	"stops_arturHazeliussBanquetHall_title": "صالة حفلات أرتور هازليوس",
-	"stops_arturHazeliussBanquetHall_duration": "100",
-	"stops_theMerchantsDrawingRoom_title": "غرفة رسم التاجر",
-	"stops_theMerchantsDrawingRoom_duration": "109",
-	"stops_functionalistClassicEva_title": "إيفا - الكرسي الوظيفي الكلاسيكي",
-	"stops_functionalistClassicEva_duration": "92",
-	"stops_sapmi_title": "لابي (المنطقة التي تقطنها قومية السامي)",
-	"stops_sapmi_duration": "192",
-	"stops_theReindeer_title": "الرنة",
-	"stops_theReindeer_duration": "196",
-	"stops_theShapesOfTheGrandfatherClocks_title": "أشكال الساعات ذات الصندوق الطويل",
-	"stops_theShapesOfTheGrandfatherClocks_duration": "167",
-	"stops_thePowerOfTheChair_title": "سطوة الكرسي",
-	"stops_thePowerOfTheChair_duration": "142",
-	"stops_theTextileGallery_title": "معرض النسيج",
-	"stops_theTextileGallery_duration": "3"
-}
