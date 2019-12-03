@@ -34,6 +34,9 @@ local.properties
 node_modules/
 npm-debug.log
 
+# Pods
+v2/ios/Pods/*
+
 # BUCK
 buck-out/
 \.buckd/
@@ -46,3 +49,5 @@ android/keystores/debug.keystore
 docs/Gemfile
 docs/_site/*
 docs/Gemfile.lock
+
+ReactNativeNavigation.h
