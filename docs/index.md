@@ -4,10 +4,6 @@ toc_label: Nordic Museum Audio Guide
 toc: true
 ---
 
-Targets: iOS 10.0 or greater
-
-### Description
-
 ![Nordic Museum Audio Guide Screenshots](assets/appScreenshots.png)
 
 The **Nordic Museum Audio Guide** is a stand-alone audio guide app used at the Nordic Museum in Stockholm, Sweden. The app was forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud) and expanded with additional functionality during the Spring of 2017. The app was released to the public in June 2017 (see [release schedule](https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide/releases)). In 2019, the app code was rewritten from scratch in the latest version of React Native.
@@ -37,11 +33,13 @@ The current version of the app resides in the [v2](https://github.com/Ambrosiani
 [React Native getting started guide](https://facebook.github.io/react-native/docs/getting-started.html)
 
 #### iOS
-2. Install project dependencies  
+Targets: iOS 10.0 or greater
+
+1. Install project dependencies  
   ```
   cd v2 && yarn install && cd ios && pod install && cd ..
   ```  
-3. Run on the iOS simulator  
+2. Run on the iOS simulator  
   ```
   npx react-native run-ios
   ```
