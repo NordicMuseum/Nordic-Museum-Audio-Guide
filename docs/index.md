@@ -10,7 +10,11 @@ Targets: iOS 10.0 or greater
 
 ![Nordic Museum Audio Guide Screenshots](assets/appScreenshots.png)
 
-A new audio guide for the Nordic Museum, forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud). The app was released to the public in June 2017 (see [release schedule](https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide/releases)).
+The **Nordic Museum Audio Guide** is a stand-alone audio guide app used at the Nordic Museum in Stockholm, Sweden. The app was forked from [Warhol Out Loud](https://github.com/CMP-Studio/TheWarholOutLoud) and expanded with additional functionality during the Spring of 2017. The app was released to the public in June 2017 (see [release schedule](https://github.com/NordicMuseum/Nordic-Museum-Audio-Guide/releases)). In 2019, the app code was rewritten from scratch in the latest version of React Native.
+
+**The app code is open source and any museum with similar needs can use it to build their own audio guide app.**
+
+Additional questions regarding the app can be answered by Aron Ambrosiani at the Nordic Museum. E-mail: aron.ambrosiani@nordiskamuseet.se, phone +46851954564.
 
 ### Development Notes
 
@@ -34,7 +38,7 @@ The current version of the app resides in the [v2](https://github.com/Ambrosiani
 #### iOS
 2. Install project dependencies  
   ```
-  cd v2 && npm i && cd ios && pod install && cd ..
+  cd v2 && yarn install && cd ios && pod install && cd ..
   ```  
 3. Run on the iOS simulator  
   ```
@@ -42,9 +46,13 @@ The current version of the app resides in the [v2](https://github.com/Ambrosiani
   ```
   or use the XCode buttons for building to an appropriate device/simulator.
 
-There are two schemes: `nordicMuseumAudioGuide` is the debug build with hot reloading while `nordicMuseumAudioGuide-Release` is the release build used for testing and eventually publishing to the App Store.
+There are two schemes: 
+- `nordicMuseumAudioGuide` is the debug build with hot reloading
+- `nordicMuseumAudioGuide-Release` is the release build used for testing and eventually publishing to the App Store.
 
 #### Android
+
+Work in progress.
 
 ### Adding Your Own Data
 
