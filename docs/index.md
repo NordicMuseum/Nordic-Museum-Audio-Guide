@@ -52,3 +52,34 @@ See the in-depth guide on [adding content](addingContent.md).
 ### Intellectual Property
 
 All files that are the intellectual property owned by the Nordic Museum and other third-parties have been removed from this repo and replaced with placeholders. This includes all the images and audio files included in the App Bundle. Additional museum information remains in the code to give an overall sense of the app.
+
+### Credits
+
+#### Project manager, Nordic Museum
+
+Aron Ambrosiani
+
+#### Project manager, Carnegie Institute
+
+Ruben Niculcea
+
+#### Development and Design
+
+Ruben Niculcea, Carnegie Institute
+Sam Ticknor, Carnegie Institute
+Aron Ambrosiani, Nordic Museum
+Robert Ziherl, Nordic Museum
+
+#### Advisory Team, Nordic Museum
+
+Vanessa Gandy
+Loredana Jelmini
+Sven Rentzhog
+
+#### App Icon
+
+Ann-Sofi Marminge Design
+
+#### Translations
+
+BTI Studios
