@@ -1,24 +1,24 @@
-import { Navigation } from 'react-native-navigation';
-import { Platform } from 'react-native';
+import { Navigation } from "react-native-navigation";
+import { Platform } from "react-native";
 
-import DeviceInfo from 'react-native-device-info';
+import DeviceInfo from "react-native-device-info";
 
-import { configureStore } from './store';
-import registerScreens from './registerScreens';
+import { configureStore } from "./store";
+import registerScreens from "./registerScreens";
 
-import hydrate from './hydrate';
-import { setI18nConfig, translate } from './i18n';
+import hydrate from "./hydrate";
+import { setI18nConfig, translate } from "./i18n";
 
-import { getAppSettings, setAppVersion } from './appSettings';
+import { getAppSettings, setAppVersion } from "./appSettings";
 
-import { showTutorial } from './actions/tutorial';
+import { showTutorial } from "./actions/tutorial";
 // import { updateBeacons } from './actions/beacon';
 
-import { audioActor } from './actors/audio';
-import { chargingActor } from './actors/charging';
-import { beaconActor } from './actors/beacon';
+import { audioActor } from "./actors/audio";
+import { chargingActor } from "./actors/charging";
+import { beaconActor } from "./actors/beacon";
 
-import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from './styles';
+import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from "./styles";
 
 // Fire so that the data is ready by "registerAppLaunchedListener"
 const currentAppVersionPromise = DeviceInfo.getVersion();
@@ -30,23 +30,23 @@ Navigation.events().registerAppLaunchedListener(async () => {
     museumMode,
     appVersion,
     locale,
-    showWelcomeScreen,
+    showWelcomeScreen
   } = await appSettingsPromise;
 
   const defaultOptions = {
     layout: {
-      orientation: ['portrait'],
-      direction: isRTL ? 'rtl' : 'ltr',
-    },
+      orientation: ["portrait"],
+      direction: isRTL ? "rtl" : "ltr"
+    }
   };
 
-  if (Platform.OS === 'android') {
+  if (Platform.OS === "android") {
     defaultOptions.animations = {
-      push: { enabled: 'false' },
-      pop: { enabled: 'false' },
-      setRoot: { enabled: 'false' },
-      showModal: { enabled: 'false' },
-      dismissModal: { enabled: 'false' },
+      push: { enabled: "false" },
+      pop: { enabled: "false" },
+      setRoot: { enabled: "false" },
+      showModal: { enabled: "false" },
+      dismissModal: { enabled: "false" }
     };
   }
 
@@ -63,7 +63,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
 
   const { setLocale, setRTL } = setI18nConfig(locale);
   const store = configureStore({
-    device: { locale: setLocale, isRTL: setRTL, appVersion, museumMode },
+    device: { locale: setLocale, isRTL: setRTL, appVersion, museumMode }
   });
 
   audioActor(store);
@@ -78,8 +78,8 @@ Navigation.events().registerAppLaunchedListener(async () => {
         options: {
           bottomTabs: {
             backgroundColor: OFF_BLACK,
-            currentTabIndex: 1,
-          },
+            currentTabIndex: 1
+          }
         },
         children: [
           {
@@ -87,89 +87,89 @@ Navigation.events().registerAppLaunchedListener(async () => {
               children: [
                 {
                   component: {
-                    name: 'nearMe',
-                  },
-                },
+                    name: "nearMe"
+                  }
+                }
               ],
               options: {
                 bottomTab: {
-                  text: translate('nearMeScreen_Title'),
-                  icon: require('../src/assets/nearTab.png'),
-                  selectedIcon: require('../src/assets/nearTabSelected.png'),
+                  text: translate("nearMeScreen_Title"),
+                  icon: require("../src/assets/nearTab.png"),
+                  selectedIcon: require("../src/assets/nearTabSelected.png"),
                   textColor: OFF_WHITE,
-                  selectedTextColor: 'white',
+                  selectedTextColor: "white",
                   fontSize: 12,
-                  badge: '0',
-                },
-              },
-            },
+                  badge: "0"
+                }
+              }
+            }
           },
           {
             stack: {
               children: [
                 {
                   component: {
-                    name: 'tours',
-                  },
-                },
+                    name: "tours"
+                  }
+                }
               ],
               options: {
                 bottomTab: {
-                  text: translate('storiesScreen_Title'),
-                  icon: require('../src/assets/storiesTab.png'),
-                  selectedIcon: require('../src/assets/storiesTabSelected.png'),
+                  text: translate("storiesScreen_Title"),
+                  icon: require("../src/assets/storiesTab.png"),
+                  selectedIcon: require("../src/assets/storiesTabSelected.png"),
                   textColor: OFF_WHITE,
-                  selectedTextColor: 'white',
-                  fontSize: 12,
-                },
-              },
-            },
+                  selectedTextColor: "white",
+                  fontSize: 12
+                }
+              }
+            }
           },
           {
             stack: {
               children: [
                 {
                   component: {
-                    name: 'search',
-                  },
-                },
+                    name: "search"
+                  }
+                }
               ],
               options: {
                 bottomTab: {
-                  text: translate('searchScreen_Title'),
-                  icon: require('../src/assets/searchTab.png'),
-                  selectedIcon: require('../src/assets/searchTabSelected.png'),
+                  text: translate("searchScreen_Title"),
+                  icon: require("../src/assets/searchTab.png"),
+                  selectedIcon: require("../src/assets/searchTabSelected.png"),
                   textColor: OFF_WHITE,
-                  selectedTextColor: 'white',
-                  fontSize: 12,
-                },
-              },
-            },
+                  selectedTextColor: "white",
+                  fontSize: 12
+                }
+              }
+            }
           },
           {
             stack: {
               children: [
                 {
                   component: {
-                    name: 'info',
-                  },
-                },
+                    name: "info"
+                  }
+                }
               ],
               options: {
                 bottomTab: {
-                  text: translate('museumScreen_Title'),
-                  icon: require('../src/assets/museumTab.png'),
-                  selectedIcon: require('../src/assets/museumTabSelected.png'),
+                  text: translate("museumScreen_Title"),
+                  icon: require("../src/assets/museumTab.png"),
+                  selectedIcon: require("../src/assets/museumTabSelected.png"),
                   textColor: OFF_WHITE,
-                  selectedTextColor: 'white',
-                  fontSize: 12,
-                },
-              },
-            },
-          },
-        ],
-      },
-    },
+                  selectedTextColor: "white",
+                  fontSize: 12
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   });
 
   const constants = await Navigation.constants();
@@ -178,5 +178,14 @@ Navigation.events().registerAppLaunchedListener(async () => {
   const shouldShowTutorial = museumMode || newVersion || showWelcomeScreen;
   if (shouldShowTutorial) {
     store.dispatch(showTutorial({ showWelcomeScreen }));
+  }
+
+  // TODO: Check if files are downloaded on Android
+  if (true) {
+    Navigation.showModal({
+      component: {
+        name: "downloadAudio"
+      }
+    });
   }
 });
