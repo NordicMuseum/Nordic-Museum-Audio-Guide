@@ -11,6 +11,6 @@ Pensionär: 120 kr (fri entré tisdag kl. 13–17 september–maj)
 Barn och ungdomar till och med 18 år: fri entré
 Lekstugan: Barn 40 kr (ingår för vuxna i entréavgift till museet)
 
-[Aktuell information](https://www.nordiskamuseet.se/besok-oss/planera-besok/valkommen-till-nordiska-museet)`;
+[Aktuell information](https://www.nordiskamuseet.se/artiklar/oppettider-och-entre)`;
 
 export default text;

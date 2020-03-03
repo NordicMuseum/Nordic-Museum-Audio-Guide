@@ -10,6 +10,6 @@ Adults: 140 SEK
 Children/Youth 18 years and under: Free
 Tuesday 13.00–17.00 (Sep–May): Free
 
-[Current information](https://www.nordiskamuseet.se/en/visit-us)`;
+[Current information](https://www.nordiskamuseet.se/en/articles/opening-hours-admission)`;
 
 export default text;
