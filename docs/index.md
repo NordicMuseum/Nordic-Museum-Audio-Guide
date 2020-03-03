@@ -32,6 +32,8 @@ The current version of the app resides in the [v2](https://github.com/Ambrosiani
 1. Install all React Native dependencies following the "React Native CLI Quickstart" instructions: 
 [React Native getting started guide](https://facebook.github.io/react-native/docs/getting-started.html)
 
+⚠️ Use Node 10! Realm is not compatible with later versions.
+
 #### iOS
 Targets: iOS 10.0 or greater
 
