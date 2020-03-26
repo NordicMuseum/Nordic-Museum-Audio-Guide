@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
-import { BackHandler } from 'react-native';
+import React, { Component } from "react";
+import { BackHandler } from "react-native";
 
-import { Navigation } from 'react-native-navigation';
-import { Provider } from 'react-redux';
+import { Navigation } from "react-native-navigation";
+import { Provider } from "react-redux";
 
-import NearMe from './containers/nearMe';
-import Tours from './containers/tours';
-import TourStop from './containers/tourStop';
-import Search from './containers/search';
-import Info from './containers/info';
-import Settings from './containers/settings';
-import Amenities from './containers/amenities';
-import TutorialWelcome from './containers/tutorialWelcome';
-import TutorialLanguage from './containers/tutorialLanguage';
-import AboutMuseum from './containers/aboutMuseum';
-import AboutApp from './containers/aboutApp';
-import BottomPlayer from './containers/bottomPlayer';
+import NearMe from "./containers/nearMe";
+import Tours from "./containers/tours";
+import TourStop from "./containers/tourStop";
+import Search from "./containers/search";
+import Info from "./containers/info";
+import Settings from "./containers/settings";
+import Amenities from "./containers/amenities";
+import TutorialWelcome from "./containers/tutorialWelcome";
+import TutorialLanguage from "./containers/tutorialLanguage";
+import AboutMuseum from "./containers/aboutMuseum";
+import AboutApp from "./containers/aboutApp";
+import BottomPlayer from "./containers/bottomPlayer";
+import Calendar from "./containers/calendar"; //inlagd för koppling till container/calendar
 
-import Analytics from 'appcenter-analytics';
+import Analytics from "appcenter-analytics";
 
-const HARDWARE_BACK_BUTTON_EVENT = 'hardwareBackPress';
+const HARDWARE_BACK_BUTTON_EVENT = "hardwareBackPress";
 
 const sceneCreator = (
   SceneComp,
   store,
-  { screenName, screenType, titleTranslationsKey },
+  { screenName, screenType, titleTranslationsKey }
 ) => {
   return () =>
     class SceneWrapper extends Component {
@@ -36,24 +37,24 @@ const sceneCreator = (
         super(props);
         this.sceneCompRef = React.createRef();
 
-        if (screenName !== 'bottomPlayer') {
+        if (screenName !== "bottomPlayer") {
           Navigation.events().bindComponent(this);
         }
       }
 
       componentDidAppear() {
-        Analytics.trackEvent('Screen Viewed', { screenName });
+        Analytics.trackEvent("Screen Viewed", { screenName });
 
         BackHandler.addEventListener(
           HARDWARE_BACK_BUTTON_EVENT,
-          this.handleHardwareBack,
+          this.handleHardwareBack
         );
       }
 
       componentDidDisappear() {
         BackHandler.removeEventListener(
           HARDWARE_BACK_BUTTON_EVENT,
-          this.handleHardwareBack,
+          this.handleHardwareBack
         );
       }
 
@@ -73,99 +74,107 @@ const sceneCreator = (
 
 const registerScreens = store => {
   Navigation.registerComponent(
-    'nearMe',
+    "nearMe",
     sceneCreator(NearMe, store, {
-      screenName: 'nearMe',
+      screenName: "nearMe"
     }),
-    () => NearMe,
+    () => NearMe
   );
 
   Navigation.registerComponent(
-    'tours',
+    "tours",
     sceneCreator(Tours, store, {
-      screenName: 'tours',
+      screenName: "tours"
     }),
-    () => Tours,
+    () => Tours
   );
 
   Navigation.registerComponent(
-    'tourStop',
+    "tourStop",
     sceneCreator(TourStop, store, {
-      screenName: 'tourStop',
+      screenName: "tourStop"
     }),
-    () => TourStop,
+    () => TourStop
   );
 
   Navigation.registerComponent(
-    'search',
+    "search",
     sceneCreator(Search, store, {
-      screenName: 'search',
+      screenName: "search"
     }),
-    () => Search,
+    () => Search
   );
 
   Navigation.registerComponent(
-    'info',
+    "info",
     sceneCreator(Info, store, {
-      screenName: 'info',
+      screenName: "info"
     }),
-    () => Info,
+    () => Info
   );
 
   Navigation.registerComponent(
-    'settings',
+    "settings",
     sceneCreator(Settings, store, {
-      screenName: 'settings',
+      screenName: "settings"
     }),
-    () => Settings,
+    () => Settings
   );
 
   Navigation.registerComponent(
-    'amenities',
+    "amenities",
     sceneCreator(Amenities, store, {
-      screenName: 'amenities',
+      screenName: "amenities"
     }),
-    () => Amenities,
+    () => Amenities
   );
 
   Navigation.registerComponent(
-    'tutorialWelcome',
+    "tutorialWelcome",
     sceneCreator(TutorialWelcome, store, {
-      screenName: 'tutorialWelcome',
+      screenName: "tutorialWelcome"
     }),
-    () => TutorialWelcome,
+    () => TutorialWelcome
   );
 
   Navigation.registerComponent(
-    'tutorialLanguage',
+    "tutorialLanguage",
     sceneCreator(TutorialLanguage, store, {
-      screenName: 'tutorialLanguage',
+      screenName: "tutorialLanguage"
     }),
-    () => TutorialLanguage,
+    () => TutorialLanguage
   );
 
   Navigation.registerComponent(
-    'aboutMuseum',
+    "aboutMuseum",
     sceneCreator(AboutMuseum, store, {
-      screenName: 'aboutMuseum',
+      screenName: "aboutMuseum"
     }),
-    () => AboutMuseum,
+    () => AboutMuseum
   );
 
   Navigation.registerComponent(
-    'aboutApp',
+    "aboutApp",
     sceneCreator(AboutApp, store, {
-      screenName: 'aboutApp',
+      screenName: "aboutApp"
     }),
-    () => AboutApp,
+    () => AboutApp
   );
 
   Navigation.registerComponent(
-    'bottomPlayer',
+    "bottomPlayer",
     sceneCreator(BottomPlayer, store, {
-      screenName: 'bottomPlayer',
+      screenName: "bottomPlayer"
     }),
-    () => BottomPlayer,
+    () => BottomPlayer
+  );
+  Navigation.registerComponent(
+    //inlagd för calendar av Christoffer
+    "calendar",
+    sceneCreator(Calendar, store, {
+      screenName: "calendar"
+    }),
+    () => Calendar
   );
 };
 
