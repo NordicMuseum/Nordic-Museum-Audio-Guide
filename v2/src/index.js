@@ -138,7 +138,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
               ],
               options: {
                 bottomTab: {
-                  text: "Calendar", //tillfälligt, behöver ändra, koppla till data/strings
+                  text: translate("calendarScreen_Title"), //tillfälligt, behöver ändra, koppla till data/strings
                   icon: require("../src/assets/calendar.png"), //nya bilder
                   selectedIcon: require("../src/assets/calendarTabSelected.png"), //behövs uppdateras
                   textColor: OFF_WHITE,
@@ -153,7 +153,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
               children: [
                 {
                   component: {
-                    name: "settings"
+                    name: "search"
                   }
                 }
               ],

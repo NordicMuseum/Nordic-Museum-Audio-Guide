@@ -1,14 +1,15 @@
-// kopia av info, tagit bort amenities
-
 import React, { Component } from "react";
-import { View, StyleSheet, Dimensions, Image } from "react-native";
-import { Navigation } from "react-native-navigation";
+import { StyleSheet, View, Text, Button } from "react-native";
 
 import { connect } from "react-redux";
-
 import { translate } from "../i18n";
 
-import DisclosureCell from "../components/disclosureCell";
+// import { analyticsTrackScreen } from '../actions/analytics';
+
+import Grid from "../components/grid";
+//import CalendarStop from './calendarStop'; onödig?
+
+import { Navigation } from "react-native-navigation";
 
 import {
   NAV_BAR_TEXT,
@@ -18,92 +19,61 @@ import {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    flex: 1
-  },
-  image: {
-    resizeMode: "cover",
-    flex: 1
+    alignItems: "stretch",
+    flex: 1,
+    backgroundColor: "#ffffff"
   }
 });
 
-class Info extends Component {
+const pushToCalendarStop = (componentId, passedProps) => {
+  Navigation.push(componentId, {
+    component: {
+      name: "calendarStop",
+      passProps: passedProps,
+      options: {
+        topBar: { visible: false }
+      }
+    }
+  });
+};
+
+class Calendar extends Component {
   static get options() {
     return {
       topBar: {
-        visible: false,
-        drawBehind: true,
         background: {
           color: NAV_BAR_BACKGROUND
         },
         title: {
-          text: "Calendar",
+          text: "Events",
           fontSize: 17,
           fontFamily: "Helvetica",
           color: NAV_BAR_TEXT
-        }
+        },
+        noBorder: true
       }
     };
   }
 
   render() {
-    const width = Dimensions.get("window").width;
-
-    let bottomOffset = 0;
+    var containerMargin = 0;
     if (this.props.playerOpen) {
-      bottomOffset += BOTTOM_PLAYER_HEIGHT;
+      containerMargin += BOTTOM_PLAYER_HEIGHT;
     }
 
     return (
-      <View style={[styles.container, { marginBottom: bottomOffset }]}>
-        <Image
-          accessible={true}
-          accessibilityLabel={translate("museumScreen_ImageAccessibilityLabel")}
-          accessibilityRole={"image"}
-          style={[styles.image, { width }]}
-          source={require("../assets/images/museumBackground.png")}
-        />
-        <View>
-          <View>
-            <DisclosureCell
-              accessibility={{
-                role: "button",
-                label: translate("settingsScreen_Title")
-              }}
-              bottomBorder={true}
-              title={translate("settingsScreen_Title")}
-              onPress={() => {
-                Navigation.push(this.props.componentId, {
-                  component: { name: "settings" }
-                });
-              }}
-            />
-
-            <DisclosureCell
-              accessibility={{
-                role: "button",
-                label: translate("museumScreen_ListItem1Label")
-              }}
-              bottomBorder={true}
-              title={translate("museumScreen_ListItem1Label")}
-              onPress={() => {
-                Navigation.push(this.props.componentId, {
-                  component: { name: "aboutMuseum" }
-                });
-              }}
-            />
-            <DisclosureCell
-              accessibility={{
-                role: "button",
-                label: translate("aboutTheAppScreen_Title")
-              }}
-              bottomBorder={false}
-              title={translate("aboutTheAppScreen_Title")}
-              onPress={() => {
-                Navigation.push(this.props.componentId, {
-                  component: { name: "aboutApp" }
-                });
+      <View style={styles.container}>
+        <View style={{ flex: 1 }}>
+          <View style={[styles.container, { marginBottom: containerMargin }]}>
+            <Grid
+              locale={this.props.locale}
+              items={this.props.calendarStops}
+              selected={this.props.currentStopUUID}
+              onCellPress={item => {
+                const passedProps = {
+                  calendarStop: item
+                };
+                pushToCalendarStop(this.props.componentId, passedProps);
               }}
             />
           </View>
@@ -115,7 +85,10 @@ class Info extends Component {
 
 const mapStateToProps = state => {
   return {
-    playerOpen: state.bottomPlayer.playerOpen
+    playerOpen: state.bottomPlayer.playerOpen,
+    calendarStops: state.allTourStops.tourStops,
+    currentStopUUID: state.bottomPlayer.stopUUID,
+    locale: state.device.locale
   };
 };
 
@@ -128,4 +101,4 @@ export default connect(
   mapDispatchToProps,
   undefined,
   { forwardRef: true }
-)(Info);
+)(Calendar);
