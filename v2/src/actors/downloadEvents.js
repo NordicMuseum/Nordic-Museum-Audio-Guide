@@ -1,11 +1,23 @@
-// import { updateEvents } from '../actions/device';
+import { updateEvents } from "../actions/device";
 
 class DownloadEventsActor {
   constructor(store) {
     this._store = store;
     this._dispatch = store.dispatch;
 
-    // this._dispatch(updateEvents());
+    // const tenMins = 1000 * 60 * 10;
+    const tenMins = 1000;
+
+    setInterval(() => {
+      const currentTime = new Date();
+      const currentTimeStr = currentTime.toISOString();
+
+      this._dispatch(
+        updateEvents({
+          [currentTimeStr]: ["football", "playdate"]
+        })
+      );
+    }, tenMins);
   }
 }
 
