@@ -1,55 +1,46 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
 
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { translate } from "../i18n";
 
-// import { analyticsTrackScreen } from '../actions/analytics';
+import { View, StyleSheet, ScrollView, Text, Switch } from "react-native";
 
-import Grid from "../components/grid";
+import { updateMuseumMode } from "../actions/device";
 
-// hanterar view när man klickar på ett event.
-import CalendarStop from "./calendarStop";
+import Markdown from "react-native-simple-markdown";
 
-import { Navigation } from "react-native-navigation";
+import { isRTL, translate } from "../i18n";
 
 import {
+  globalStyles,
   NAV_BAR_TEXT,
-  NAV_BAR_BACKGROUND,
-  BOTTOM_PLAYER_HEIGHT
+  ACTION,
+  BOTTOM_PLAYER_HEIGHT,
+  WHITE,
+  GRAY
 } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
     alignItems: "stretch",
-    flex: 1,
-    backgroundColor: "#111111" // handles barrier between objects
+    flex: 1
   }
 });
 
-const pushToCalendarStop = (componentId, passedProps) => {
-  Navigation.push(componentId, {
-    component: {
-      name: "calendarStop",
-      passProps: passedProps,
-      options: {
-        topBar: { visible: false }
-      }
-    }
-  });
-};
-
 class Calendar extends Component {
-  // handles top title (in scrollable)
   static get options() {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND
+          color: WHITE
+        },
+        backButton: {
+          showTitle: false,
+          color: ACTION
         },
         title: {
-          text: "Events",
-          fontSize: 50,
+          text: translate("calendarScreen_Title"),
+          fontSize: 17,
           fontFamily: "Helvetica",
           color: NAV_BAR_TEXT
         },
@@ -59,28 +50,68 @@ class Calendar extends Component {
   }
 
   render() {
-    // handles bottom, eg. audio player.
-    var containerMargin = 5;
-    if (this.props.playerOpen) {
-      containerMargin += BOTTOM_PLAYER_HEIGHT;
-    }
+    const { locale, events, actions } = this.props;
+    //Hur vi sparar data
+    // { string: [string]}
+    // map
+    // [string]
+    // .join()
+    // string \n string \n string
+    const eventsNewlineSeperated = Object.entries(events)
+      .map(([key, value]) => {
+        return `${key}: ${value.join(", ")}`;
+      })
+      .join("\n");
+
+    const markdownStyles = {
+      heading1: {
+        marginTop: 25,
+        ...StyleSheet.flatten(globalStyles.h1),
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
+      },
+      paragraph: {
+        marginTop: 5,
+        ...StyleSheet.flatten(globalStyles.body),
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
+      }
+    };
 
     return (
-      <View style={styles.container}>
-        <View style={{ flex: 1 }}>
-          <View style={[styles.container, { marginBottom: containerMargin }]}>
-            <Grid
-              locale={this.props.locale}
-              items={this.props.calendarStops}
-              selected={this.props.currentStopUUID}
-              onCellPress={item => {
-                const passedProps = {
-                  calendarStop: item
-                };
-                pushToCalendarStop(this.props.componentId, passedProps);
+      <View style={{ flex: 1 }}>
+        <View style={[styles.container]}>
+          <ScrollView
+            contentContainerStyle={{
+              paddingTop: 10,
+              paddingLeft: 10,
+              paddingRight: 10,
+              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10
+            }}
+            automaticallyAdjustContentInsets={false}
+          >
+            <Text
+              style={[
+                { marginTop: 25 },
+                globalStyles.body,
+                globalStyles.paragraph
+              ]}
+            >
+              {eventsNewlineSeperated}
+            </Text>
+            <Markdown
+              styles={markdownStyles}
+              rules={{
+                paragraph: {
+                  react: (node, output, state) => (
+                    <Text key={state.key} style={markdownStyles.paragraph}>
+                      {output(node.content, state)}
+                    </Text>
+                  )
+                }
               }}
-            />
-          </View>
+            ></Markdown>
+          </ScrollView>
         </View>
       </View>
     );
@@ -89,15 +120,22 @@ class Calendar extends Component {
 
 const mapStateToProps = state => {
   return {
-    playerOpen: state.bottomPlayer.playerOpen,
-    calendarStops: state.allTourStops.tourStops,
-    currentStopUUID: state.bottomPlayer.stopUUID,
-    locale: state.device.locale
+    locale: state.device.locale,
+    appVersion: state.device.appVersion,
+    museumMode: state.device.museumMode,
+    events: state.calenderEvents.events
   };
 };
 
-const mapDispatchToProps = () => {
-  return {};
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        updateMuseumMode
+      },
+      dispatch
+    )
+  };
 };
 
 export default connect(
