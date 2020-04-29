@@ -1,8 +1,8 @@
-import { DeviceEventEmitter, Platform } from 'react-native';
-import Beacons from 'react-native-beacons-manager';
+import { DeviceEventEmitter, Platform } from "react-native";
+import Beacons from "react-native-beacons-manager";
 
 // import { reset } from '../actions/device';
-import { updateBeacons } from '../actions/beacon';
+import { updateBeacons } from "../actions/beacon";
 
 class BeaconActor {
   constructor(store) {
@@ -13,7 +13,7 @@ class BeaconActor {
 
     const region = {
       identifier: rangingIdentifier,
-      uuid: rangingUUID,
+      uuid: rangingUUID
     };
 
     Platform.select({
@@ -38,12 +38,12 @@ class BeaconActor {
         } catch (err) {
           console.log(`Beacons ranging not started, error: ${error}`);
         }
-      },
+      }
     })();
 
     const subscription = DeviceEventEmitter.addListener(
-      'beaconsDidRange',
-      this.detectedBeacons,
+      "beaconsDidRange",
+      this.detectedBeacons
     );
   }
 

@@ -1,11 +1,11 @@
-import { setI18nConfig } from '../i18n';
+import { setI18nConfig } from "../i18n";
 
-import { restartApp } from './device';
+import { restartApp } from "./device";
 
-import Analytics from 'appcenter-analytics';
+import Analytics from "appcenter-analytics";
 
 // *** Action Types ***
-export const SWITCH_LOCALE = 'SWITCH_LOCALE';
+export const SWITCH_LOCALE = "SWITCH_LOCALE";
 
 // *** Action Creators ***
 export function switchLocale(desiredLocale) {

@@ -1,35 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyleSheet, View, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions } from "react-native";
 
-import { isRTL } from '../i18n';
+import { isRTL } from "../i18n";
 
-import { ACTION, GRAY } from '../styles';
+import { ACTION, GRAY } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+    flexDirection: "column"
   },
   row: {
-    flexDirection: 'row',
-    position: 'relative',
+    flexDirection: "row",
+    position: "relative"
   },
   progressRow: {
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    height: 16,
-  },
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    height: 16
+  }
 });
 
 const progressWidthStyle = (total, percentage) => {
   return {
-    width: total * percentage,
+    width: total * percentage
   };
 };
 
 const ProgressBar = props => {
-  const width = Dimensions.get('window').width;
+  const width = Dimensions.get("window").width;
 
   return (
     <View style={styles.container}>
@@ -38,13 +38,14 @@ const ProgressBar = props => {
           styles.row,
           styles.progressRow,
           { backgroundColor: GRAY },
-          isRTL ? { flexDirection: 'row-reverse' } : {},
-        ]}>
+          isRTL ? { flexDirection: "row-reverse" } : {}
+        ]}
+      >
         <View
           style={[
             styles.progressBar,
             progressWidthStyle(width, props.percentage),
-            { backgroundColor: ACTION },
+            { backgroundColor: ACTION }
           ]}
         />
       </View>
@@ -53,7 +54,7 @@ const ProgressBar = props => {
 };
 
 ProgressBar.propTypes = {
-  percentage: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired
 };
 
 export default ProgressBar;

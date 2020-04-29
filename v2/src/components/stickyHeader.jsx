@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from "react-native";
 
-import { HEADER_BACKGROUND_COLOR, OFF_WHITE } from '../styles';
+import { HEADER_BACKGROUND_COLOR, OFF_WHITE } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
     height: 44,
-    justifyContent: 'center',
-    backgroundColor: HEADER_BACKGROUND_COLOR,
+    justifyContent: "center",
+    backgroundColor: HEADER_BACKGROUND_COLOR
   },
   textStyles: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 17,
-    color: OFF_WHITE,
-  },
+    color: OFF_WHITE
+  }
 });
 
 const StickyHeader = props => {
@@ -27,7 +27,7 @@ const StickyHeader = props => {
 };
 
 StickyHeader.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default StickyHeader;

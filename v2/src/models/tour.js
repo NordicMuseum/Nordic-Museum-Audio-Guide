@@ -3,36 +3,36 @@ import {
   realmDeleteAllHelper,
   realmObjectHelper,
   allRealmObjectsHelper,
-  realmObjectIsInvalidHelper,
-} from '../realm';
+  realmObjectIsInvalidHelper
+} from "../realm";
 
-import { Stop } from './stop';
-import { StringValue } from './stringValue';
+import { Stop } from "./stop";
+import { StringValue } from "./stringValue";
 
 export class Tour {
-  static NAME = 'Tour';
+  static NAME = "Tour";
 
   static schema = {
     name: Tour.NAME,
-    primaryKey: 'uuid',
+    primaryKey: "uuid",
     properties: {
-      uuid: { type: 'string' },
-      floor: { type: 'string' },
-      order: { type: 'int' },
-      title: { type: 'string' },
+      uuid: { type: "string" },
+      floor: { type: "string" },
+      order: { type: "int" },
+      title: { type: "string" },
       // Realm does not allow advanced queries on primitive types
       // So we are wrapped a primitive type in an object type
       regions: { type: `${StringValue.NAME}[]` },
-      category: { type: 'string?' },
-      imageURL: { type: 'string?' },
-      imageAccessibilityLabel: { type: 'string?' },
-      imageWidth: { type: 'int' },
-      imageHeight: { type: 'int' },
-      shortCredit: { type: 'string' },
-      longCredit: { type: 'string' },
-      duration: { type: 'string' },
-      audioContent: { type: `${Stop.NAME}[]` },
-    },
+      category: { type: "string?" },
+      imageURL: { type: "string?" },
+      imageAccessibilityLabel: { type: "string?" },
+      imageWidth: { type: "int" },
+      imageHeight: { type: "int" },
+      shortCredit: { type: "string" },
+      longCredit: { type: "string" },
+      duration: { type: "string" },
+      audioContent: { type: `${Stop.NAME}[]` }
+    }
   };
 
   // inserting is omitted on purpose because realm inserts are expensive
@@ -55,11 +55,11 @@ export class Tour {
   }
 
   static jsonStop(realmObject) {
-    console.log('');
-    console.log('Converting stop');
+    console.log("");
+    console.log("Converting stop");
     console.log(realmObject);
     console.log(realmObject.audioContent);
-    return realmObject.audioContent.split(',').map(content => {
+    return realmObject.audioContent.split(",").map(content => {
       console.log(content);
       return Stop.json(content);
     });
@@ -86,7 +86,7 @@ export class Tour {
       shortCredit: realmObject.shortCredit,
       longCredit: realmObject.longCredit,
       duration: realmObject.duration,
-      audioContent: Tour.jsonStop(realmObject),
+      audioContent: Tour.jsonStop(realmObject)
     };
   }
 }

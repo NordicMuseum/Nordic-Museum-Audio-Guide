@@ -1,13 +1,13 @@
 // *** Action Types ***
-export const EDIT_DIGITS = 'EDIT_DIGITS';
-export const RESET_DIGITS = 'RESET_DIGITS';
+export const EDIT_DIGITS = "EDIT_DIGITS";
+export const RESET_DIGITS = "RESET_DIGITS";
 
 // *** Action Creators ***
 
 export function resetDigits(digits) {
   return {
     type: RESET_DIGITS,
-    digits,
+    digits
   };
 }
 
@@ -25,7 +25,7 @@ export function deleteDigit(digits) {
 
   return {
     type: EDIT_DIGITS,
-    digits: updatedDigits,
+    digits: updatedDigits
   };
 }
 
@@ -47,6 +47,6 @@ export function addDigit(digits, newDigit) {
 
   return {
     type: EDIT_DIGITS,
-    digits: updatedDigits,
+    digits: updatedDigits
   };
 }

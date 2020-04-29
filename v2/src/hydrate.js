@@ -1,9 +1,9 @@
-import { getRealmInstance } from './realm';
-import { Tour } from './models/tour';
-import { StringValue } from './models/stringValue';
+import { getRealmInstance } from "./realm";
+import { Tour } from "./models/tour";
+import { StringValue } from "./models/stringValue";
 
-const uuid = require('uuid');
-const tours = require('./data/tours');
+const uuid = require("uuid");
+const tours = require("./data/tours");
 const realm = getRealmInstance();
 
 function saveToRealm(tour) {
@@ -12,7 +12,7 @@ function saveToRealm(tour) {
       ? []
       : tour.regions.map(str => {
           return realm.create(StringValue.NAME, {
-            value: str,
+            value: str
           });
         });
 
@@ -25,7 +25,7 @@ function saveToRealm(tour) {
       audio.uuid = uuid.v4();
       audio.id = audio.id.toString();
       return audio;
-    }),
+    })
   });
 }
 

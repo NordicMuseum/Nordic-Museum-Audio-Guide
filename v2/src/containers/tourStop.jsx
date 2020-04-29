@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import { Navigation } from 'react-native-navigation';
+import { Navigation } from "react-native-navigation";
 
 import {
   StyleSheet,
@@ -15,17 +15,17 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+  ImageBackground
+} from "react-native";
 
-import NavigationBarParallax from '../components/navigationBarParallax';
+import NavigationBarParallax from "../components/navigationBarParallax";
 
-import { togglePausePlay, playTrack, unloadAudio } from '../actions/audio';
+import { togglePausePlay, playTrack, unloadAudio } from "../actions/audio";
 
-import { AUDIO_CONTENT_ITEM_HEIGHT } from '../components/audioContentItem';
-import AudioContentList from '../components/audioContentList';
+import { AUDIO_CONTENT_ITEM_HEIGHT } from "../components/audioContentItem";
+import AudioContentList from "../components/audioContentList";
 
-import { parseDisplayText, parseVoiceoverText, imageURI } from '../utilities';
+import { parseDisplayText, parseVoiceoverText, imageURI } from "../utilities";
 
 //import { analyticsTrackContentOpened, analyticsTrackScreen } from '../actions/analytics';
 
@@ -37,105 +37,108 @@ import {
   getBottomTabsHeight,
   BOTTOM_PLAYER_HEIGHT,
   NAV_BAR_BACKGROUND,
-  SELECTED,
-} from '../styles.js';
+  SELECTED
+} from "../styles.js";
 
-const width = Dimensions.get('window').width;
+const width = Dimensions.get("window").width;
 
+// handles visual IO
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: LIGHT_GRAY,
+    backgroundColor: LIGHT_GRAY
   },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    width,
+    flexDirection: "row",
+    alignItems: "center",
+    width
   },
   headerImage: {
-    resizeMode: 'cover',
-    justifyContent: 'center',
-    alignItems: 'center',
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems: "center"
   },
   headerTitle: {
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
     height: 147,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
   headerTitleText: {
-    backgroundColor: 'transparent',
-    color: '#FFFFFF',
-    fontWeight: '600',
-    fontSize: 22,
-    textAlign: 'center',
+    backgroundColor: "transparent",
+    color: "#FFFFFF",
+    fontWeight: "600",
+    fontSize: 50,
+    textAlign: "center"
   },
   playAllButtonContainer: {
-    position: 'relative',
+    position: "relative",
     top: -24,
-    justifyContent: 'center',
-    alignItems: 'center',
-    zIndex: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 5
   },
   playAllButton: {
     backgroundColor: ACTION,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     height: 48,
-    borderRadius: 9,
+    borderRadius: 9
   },
   playAllButtonIcon: {
-    tintColor: '#ffffff',
+    tintColor: "#ffffff",
     height: 16,
     width: 16,
     marginRight: 10,
-    resizeMode: 'contain',
+    resizeMode: "contain"
   },
   playAllButtonText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600"
   },
   scrollableContent: {
-    paddingTop: 10,
+    paddingTop: 10
   },
+  // for holding floor and min info
   audioContentInfo: {
     paddingBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderBottomColor: '#ffffff',
-    borderBottomWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    borderBottomColor: "#ffffff",
+    borderBottomWidth: 1
   },
   audioContentQuickInfo: {
-    flexDirection: 'row',
+    flexDirection: "row"
   },
   audioContentFloor: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginRight: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center"
   },
+  // handles icon for floor
   floorIcon: {
     marginRight: 10,
-    tintColor: OFF_BLACK,
+    tintColor: OFF_BLACK
   },
   floorText: {
     fontSize: 16,
-    color: OFF_BLACK,
+    color: OFF_BLACK
   },
   audioContentDuration: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
   },
   durationIcon: {
     marginRight: 10,
-    tintColor: OFF_BLACK,
+    tintColor: OFF_BLACK
   },
   durationText: {
     fontSize: 16,
-    color: OFF_BLACK,
-  },
+    color: OFF_BLACK
+  }
 });
 
 class TourStop extends Component {
@@ -144,16 +147,16 @@ class TourStop extends Component {
       topBar: {
         visible: false,
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: NAV_BAR_BACKGROUND
         },
         title: {
-          text: 'TourStop',
+          text: "TourStop",
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        showBorder: false,
-      },
+        showBorder: false
+      }
     };
   }
 
@@ -189,7 +192,7 @@ class TourStop extends Component {
       this.props.actions.playTrack(
         this.props.tourStop,
         this.props.searchedTrack.uuid,
-        false, // autoplay
+        false // autoplay
       );
     }
   }
@@ -210,7 +213,8 @@ class TourStop extends Component {
     const { playTrack, togglePausePlay } = this.props.actions;
 
     const duration = translate(tourStop.duration);
-    const floor = translate('floor' + tourStop.floor + '_Label');
+    // gives floor name
+    const floor = translate("floor" + tourStop.floor + "_Label");
 
     // let accessibilityLabel;
 
@@ -232,10 +236,10 @@ class TourStop extends Component {
 
     let imageURL = this.props.tourStop.imageURL;
     if (
-      this.props.locale === 'svKids' &&
-      this.props.tourStop.title === 'tours_highlights_title'
+      this.props.locale === "svKids" &&
+      this.props.tourStop.title === "tours_highlights_title"
     ) {
-      imageURL = 'highlightsKids.png';
+      imageURL = "highlightsKids.png";
     }
 
     return (
@@ -243,8 +247,9 @@ class TourStop extends Component {
         style={{
           flex: 1,
           backgroundColor: LIGHT_GRAY,
-          marginBottom: bottomOffset,
-        }}>
+          marginBottom: bottomOffset
+        }}
+      >
         <NavigationBarParallax
           contentOffset={{ x: 0, y: yOffset }}
           containerStyle={[styles.container]}
@@ -255,14 +260,18 @@ class TourStop extends Component {
           backButtonColor={ACTION}
           backButtonPress={() => {
             Navigation.pop(this.props.componentId);
-          }}>
+          }}
+        >
           <View>
             <ImageBackground
               style={[styles.headerImage, { height: HEADER_IMAGE_HEIGHT }]}
-              source={imageURL ? { uri: imageURI(imageURL) } : {}}>
-              <View style={styles.headerTitle} pointerEvents={'none'}>
+              source={imageURL ? { uri: imageURI(imageURL) } : {}}
+            >
+              <View style={styles.headerTitle} pointerEvents={"none"}>
                 <Text style={styles.headerTitleText}>
-                  {parseDisplayText(translate(tourStop.title)).toUpperCase()}
+                  {parseDisplayText(
+                    "TEST " + translate(tourStop.title)
+                  ).toUpperCase()}
                 </Text>
               </View>
             </ImageBackground>
@@ -273,15 +282,16 @@ class TourStop extends Component {
                   playTrack(
                     this.props.tourStop,
                     this.props.tourStop.audioContent[0].uuid,
-                    true,
+                    true
                   );
-                }}>
+                }}
+              >
                 <Image
                   style={styles.playAllButtonIcon}
-                  source={require('../assets/PlayButton.png')}
+                  source={require("../assets/PlayButton.png")}
                 />
                 <Text style={styles.playAllButtonText}>
-                  {parseDisplayText(translate('playAll')).toUpperCase()}
+                  {parseDisplayText(translate("playAll")).toUpperCase()}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -290,7 +300,7 @@ class TourStop extends Component {
                 <View style={styles.audioContentFloor}>
                   <Image
                     style={styles.floorIcon}
-                    source={require('../assets/FloorIcon.png')}
+                    source={require("../assets/FloorIcon.png")}
                   />
                   <Text style={styles.floorText}>
                     {`${floor.toUpperCase()} `}
@@ -299,11 +309,11 @@ class TourStop extends Component {
                 <View style={styles.audioContentDuration}>
                   <Image
                     style={styles.durationIcon}
-                    source={require('../assets/ClockIcon.png')}
+                    source={require("../assets/ClockIcon.png")}
                   />
                   <Text style={styles.durationText}>
                     {`${Math.floor(duration / 60)} ${translate(
-                      'min',
+                      "min"
                     ).toUpperCase()}`}
                   </Text>
                 </View>
@@ -318,7 +328,7 @@ class TourStop extends Component {
             locale={this.props.locale}
             actions={{
               playTrack,
-              togglePausePlay,
+              togglePausePlay
             }}
           />
         </NavigationBarParallax>
@@ -337,7 +347,7 @@ const mapStateToProps = state => {
     autoplayOn: state.bottomPlayer.autoplayOn,
     autoplayInitial: state.bottomPlayer.autoplayInitial,
     currentStopUUID: state.bottomPlayer.stopUUID,
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -347,10 +357,10 @@ const mapDispatchToProps = dispatch => {
       {
         playTrack,
         unloadAudio,
-        togglePausePlay,
+        togglePausePlay
       },
-      dispatch,
-    ),
+      dispatch
+    )
   };
 };
 
@@ -358,5 +368,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(TourStop);

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { Text, Platform } from 'react-native';
+import { Text, Platform } from "react-native";
 
 function isTag(str) {
   switch (str) {
-    case '<i>':
-    case '<b>':
+    case "<i>":
+    case "<b>":
       return true;
     default:
       return false;
@@ -31,17 +31,17 @@ function findClose(textArray) {
 
 function addTag(tag, between, after) {
   switch (tag) {
-    case '<i>':
+    case "<i>":
       return (
         <Text>
-          <Text style={{ fontStyle: 'italic' }}>{between}</Text>
+          <Text style={{ fontStyle: "italic" }}>{between}</Text>
           {after}
         </Text>
       );
-    case '<b>':
+    case "<b>":
       return (
         <Text>
-          <Text style={{ fontWeight: 'bold' }}>{between}</Text>
+          <Text style={{ fontWeight: "bold" }}>{between}</Text>
           {after}
         </Text>
       );
@@ -67,7 +67,7 @@ export function html2jsx(textArray) {
       return addTag(
         textArray[0],
         html2jsx(textArray.slice(1, position)),
-        html2jsx(textArray.slice(position + 1)),
+        html2jsx(textArray.slice(position + 1))
       );
     }
     return addTag(textArray[0], html2jsx(textArray.slice(1, position)));
@@ -82,15 +82,15 @@ export function html2jsx(textArray) {
 }
 
 export function parseDisplayText(text) {
-  if (text === '') {
-    return '';
+  if (text === "") {
+    return "";
   }
 
   let displayText;
-  const brackets = new RegExp('(<[a-z]>|</[a-z]>)');
+  const brackets = new RegExp("(<[a-z]>|</[a-z]>)");
   displayText = text.split(brackets);
   displayText = displayText.filter(n => {
-    return n !== '';
+    return n !== "";
   });
 
   // TODO: validate displayText
@@ -98,15 +98,15 @@ export function parseDisplayText(text) {
 }
 
 export function parseVoiceoverText(text) {
-  let parsedText = text.replace(/-/g, ' to ');
-  parsedText = parsedText.replace(/(<[a-z]>)/g, '');
-  parsedText = parsedText.replace(/(<\/[a-z]>)/g, '');
+  let parsedText = text.replace(/-/g, " to ");
+  parsedText = parsedText.replace(/(<[a-z]>)/g, "");
+  parsedText = parsedText.replace(/(<\/[a-z]>)/g, "");
   return parsedText;
 }
 
 export const imageURI = imageName => {
   return Platform.select({
     ios: `images/${imageName}`,
-    android: imageName.toLowerCase().split('.')[0],
+    android: imageName.toLowerCase().split(".")[0]
   });
 };

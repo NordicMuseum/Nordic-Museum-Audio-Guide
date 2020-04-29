@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, View, ScrollView } from "react-native";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import StickyHeader from '../components/stickyHeader';
-import AmenitiesItem from '../components/amenitiesItem';
+import StickyHeader from "../components/stickyHeader";
+import AmenitiesItem from "../components/amenitiesItem";
 import {
   ACTION,
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  BOTTOM_PLAYER_HEIGHT,
-} from '../styles';
+  BOTTOM_PLAYER_HEIGHT
+} from "../styles";
 
-const allAmenities = require('../data/amenities.json');
+const allAmenities = require("../data/amenities.json");
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
+    alignItems: "stretch",
     flex: 1,
-    backgroundColor: '#ffffff',
-  },
+    backgroundColor: "#ffffff"
+  }
 });
 
 class Amenities extends Component {
@@ -29,19 +29,19 @@ class Amenities extends Component {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: NAV_BAR_BACKGROUND
         },
         backButton: {
           showTitle: false,
-          color: ACTION,
+          color: ACTION
         },
         title: {
-          text: translate('amenitiesScreen_Title'),
+          text: translate("amenitiesScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
-        },
-      },
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
+        }
+      }
     };
   }
 
@@ -61,8 +61,8 @@ class Amenities extends Component {
       content.push(
         <StickyHeader
           key={totalIndex}
-          title={`${translate('floor')} ${floor.floor}`}
-        />,
+          title={`${translate("floor")} ${floor.floor}`}
+        />
       );
       totalIndex++;
 
@@ -72,25 +72,27 @@ class Amenities extends Component {
             key={totalIndex}
             amenity={amenity}
             border={index !== floor.amenities.length - 1}
-          />,
+          />
         );
         totalIndex++;
       });
     });
 
     return (
-      <View style={{ flex: 1, backgroundColor: 'LIGHT_GRAY' }}>
+      <View style={{ flex: 1, backgroundColor: "LIGHT_GRAY" }}>
         <View
           style={[
             styles.container,
             {
-              marginBottom: containerMargin,
-            },
-          ]}>
+              marginBottom: containerMargin
+            }
+          ]}
+        >
           <ScrollView
             automaticallyAdjustContentInsets={false}
             contentContainerStyle={{ paddingBottom: 10 }}
-            stickyHeaderIndices={stickyHeaders}>
+            stickyHeaderIndices={stickyHeaders}
+          >
             {content}
           </ScrollView>
         </View>
@@ -101,7 +103,7 @@ class Amenities extends Component {
 
 const mapStateToProps = state => {
   return {
-    playerOpen: state.bottomPlayer.playerOpen,
+    playerOpen: state.bottomPlayer.playerOpen
   };
 };
 
@@ -113,5 +115,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(Amenities);

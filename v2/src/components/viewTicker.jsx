@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { StyleSheet, View, Animated } from 'react-native';
+import { StyleSheet, View, Animated } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    overflow: 'hidden',
-  },
+    flexDirection: "row",
+    overflow: "hidden"
+  }
 });
 
 export default class ViewTicker extends Component {
@@ -16,12 +16,12 @@ export default class ViewTicker extends Component {
     width: PropTypes.number.isRequired,
     uniqueChildrenKey: PropTypes.any.isRequired,
     scrollDuration: PropTypes.number,
-    scrollDelay: PropTypes.number,
+    scrollDelay: PropTypes.number
   };
 
   static defaultProps = {
     scrollDuration: 4500,
-    scrollDelay: 3000,
+    scrollDelay: 3000
   };
 
   constructor(props) {
@@ -29,7 +29,7 @@ export default class ViewTicker extends Component {
     this.state = {
       xOffset: new Animated.Value(0),
       hideCopy: true,
-      widthOfView: 0,
+      widthOfView: 0
     };
 
     this.cycleAnimation = this.cycleAnimation.bind(this);
@@ -57,7 +57,7 @@ export default class ViewTicker extends Component {
       this.setState(() => {
         return {
           widthOfView,
-          hideCopy: false,
+          hideCopy: false
         };
       });
 
@@ -69,9 +69,9 @@ export default class ViewTicker extends Component {
     Animated.sequence([
       Animated.timing(this.state.xOffset, {
         toValue: -this.state.widthOfView,
-        duration: this.props.scrollDuration,
+        duration: this.props.scrollDuration
       }),
-      Animated.delay(this.props.scrollDelay),
+      Animated.delay(this.props.scrollDelay)
     ]).start(event => {
       this.state.xOffset.setValue(0);
 
@@ -93,14 +93,16 @@ export default class ViewTicker extends Component {
           styles.container,
           {
             width: this.props.width,
-            justifyContent: !this.state.hideCopy ? 'flex-start' : 'center',
-          },
-        ]}>
+            justifyContent: !this.state.hideCopy ? "flex-start" : "center"
+          }
+        ]}
+      >
         <Animated.View
           style={{
-            flexDirection: 'row',
-            marginLeft: this.state.xOffset,
-          }}>
+            flexDirection: "row",
+            marginLeft: this.state.xOffset
+          }}
+        >
           <View onLayout={this.shouldCycle}>{this.props.children}</View>
           {extraCopy}
         </Animated.View>

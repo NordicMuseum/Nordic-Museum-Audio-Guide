@@ -1,13 +1,13 @@
-import { EDIT_DIGITS, RESET_DIGITS } from '../actions/searchByNumber';
+import { EDIT_DIGITS, RESET_DIGITS } from "../actions/searchByNumber";
 
-import { RESET } from '../actions/device';
+import { RESET } from "../actions/device";
 
-import { audioCodeLength } from '../data/appSettings';
+import { audioCodeLength } from "../data/appSettings";
 
 // TODO: In the future load data from a database to prevent memory pressure
 
 const initialState = {
-  digits: Array(audioCodeLength).fill(null),
+  digits: Array(audioCodeLength).fill(null)
 };
 
 export function searchByNumber(state = initialState, action) {

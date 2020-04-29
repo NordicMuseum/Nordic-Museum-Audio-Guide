@@ -1,39 +1,39 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, View, Text, Button } from "react-native";
 
-import { connect } from 'react-redux';
-import { translate } from '../i18n';
+import { connect } from "react-redux";
+import { translate } from "../i18n";
 
 // import { analyticsTrackScreen } from '../actions/analytics';
 
-import Grid from '../components/grid';
-import TourStop from './tourStop';
+import Grid from "../components/grid";
+import TourStop from "./tourStop";
 
-import { Navigation } from 'react-native-navigation';
+import { Navigation } from "react-native-navigation";
 
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  BOTTOM_PLAYER_HEIGHT,
-} from '../styles';
+  BOTTOM_PLAYER_HEIGHT
+} from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
+    alignItems: "stretch",
     flex: 1,
-    backgroundColor: '#ffffff',
-  },
+    backgroundColor: "#ffffff"
+  }
 });
 
 const pushToTourStop = (componentId, passedProps) => {
   Navigation.push(componentId, {
     component: {
-      name: 'tourStop',
+      name: "tourStop",
       passProps: passedProps,
       options: {
-        topBar: { visible: false },
-      },
-    },
+        topBar: { visible: false }
+      }
+    }
   });
 };
 
@@ -42,16 +42,16 @@ class Tours extends Component {
     return {
       topBar: {
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: NAV_BAR_BACKGROUND
         },
         title: {
-          text: translate('storiesScreen_Title'),
+          text: translate("storiesScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        noBorder: true,
-      },
+        noBorder: true
+      }
     };
   }
 
@@ -71,7 +71,7 @@ class Tours extends Component {
               selected={this.props.currentStopUUID}
               onCellPress={item => {
                 const passedProps = {
-                  tourStop: item,
+                  tourStop: item
                 };
                 pushToTourStop(this.props.componentId, passedProps);
               }}
@@ -88,7 +88,7 @@ const mapStateToProps = state => {
     playerOpen: state.bottomPlayer.playerOpen,
     tourStops: state.allTourStops.tourStops,
     currentStopUUID: state.bottomPlayer.stopUUID,
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -100,5 +100,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(Tours);

@@ -1,39 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text } from "react-native";
 
-import ProgressBar from './progressBar';
+import ProgressBar from "./progressBar";
 
-import { isRTL } from '../i18n';
+import { isRTL } from "../i18n";
 
-import { globalStyles } from '../styles';
+import { globalStyles } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+    flexDirection: "column"
   },
   row: {
-    flexDirection: 'row',
-    position: 'relative',
+    flexDirection: "row",
+    position: "relative"
   },
   timestampRow: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    alignItems: "center",
     height: 16,
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
-    right: 0,
+    right: 0
   },
   timestampTextLeft: {
-    backgroundColor: 'transparent',
-    marginLeft: 5,
+    backgroundColor: "transparent",
+    marginLeft: 5
   },
   timestampTextRight: {
-    backgroundColor: 'transparent',
-    marginRight: 5,
-  },
+    backgroundColor: "transparent",
+    marginRight: 5
+  }
 });
 
 const TimeProgressView = props => {
@@ -44,8 +44,8 @@ const TimeProgressView = props => {
 
   // Formatting the timestamp
   const timeRemaining = duration - time;
-  let timeString = '';
-  let timeRemainingString = '';
+  let timeString = "";
+  let timeRemainingString = "";
 
   if (time < 10) {
     timeString = `0:0${time}`;
@@ -81,17 +81,20 @@ const TimeProgressView = props => {
         style={[
           styles.row,
           styles.timestampRow,
-          isRTL ? { flexDirection: 'row-reverse' } : {},
+          isRTL ? { flexDirection: "row-reverse" } : {}
         ]}
-        accessibilityLabel={`${timeRemaining} seconds remaining`}>
+        accessibilityLabel={`${timeRemaining} seconds remaining`}
+      >
         <Text
           style={[styles.timestampTextLeft, globalStyles.progressLabel]}
-          accessible={false}>
+          accessible={false}
+        >
           {timeString}
         </Text>
         <Text
           style={[styles.timestampTextRight, globalStyles.progressLabel]}
-          accessible={false}>
+          accessible={false}
+        >
           {timeRemainingString}
         </Text>
       </View>
@@ -101,7 +104,7 @@ const TimeProgressView = props => {
 
 TimeProgressView.propTypes = {
   time: PropTypes.number.isRequired,
-  duration: PropTypes.number.isRequired,
+  duration: PropTypes.number.isRequired
 };
 
 export default TimeProgressView;

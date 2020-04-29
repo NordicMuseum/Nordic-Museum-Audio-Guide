@@ -1,57 +1,57 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { translate, isRTL } from '../i18n';
+import { translate, isRTL } from "../i18n";
 
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 
-import { PLAYER_STATUS_FINISHED } from '../actions/audio';
+import { PLAYER_STATUS_FINISHED } from "../actions/audio";
 
-import { parseDisplayText, parseVoiceoverText } from '../utilities';
+import { parseDisplayText, parseVoiceoverText } from "../utilities";
 
-import { globalStyles, HIGHLIGHTS, OFF_WHITE } from '../styles';
+import { globalStyles, HIGHLIGHTS, OFF_WHITE } from "../styles";
 
-import PlayPauseButton from './buttons/playPauseButton';
-import PrevButton from './buttons/previousButton';
-import NextButton from './buttons/nextButton';
+import PlayPauseButton from "./buttons/playPauseButton";
+import PrevButton from "./buttons/previousButton";
+import NextButton from "./buttons/nextButton";
 
-import ViewTicker from './viewTicker';
+import ViewTicker from "./viewTicker";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    paddingTop: 8,
+    flexDirection: "column",
+    paddingTop: 8
   },
   row: {
-    flexDirection: 'row',
-    position: 'relative',
+    flexDirection: "row",
+    position: "relative"
   },
   titleRow: {
-    justifyContent: 'center',
+    justifyContent: "center",
     marginHorizontal: 10,
-    marginBottom: 5,
+    marginBottom: 5
   },
   titleText: {
     marginLeft: 3,
-    marginRight: 3,
+    marginRight: 3
   },
   controlsRow: {
-    justifyContent: 'space-around',
+    justifyContent: "space-around"
   },
   highlightedBox: {
     backgroundColor: HIGHLIGHTS,
     height: 18,
     paddingHorizontal: 3,
-    borderRadius: 2,
+    borderRadius: 2
   },
   regularBox: {
     height: 18,
     paddingHorizontal: 3,
-    borderRadius: 2,
+    borderRadius: 2
   },
   highlightedNumberText: {
-    color: OFF_WHITE,
-  },
+    color: OFF_WHITE
+  }
 });
 
 class ControlsView extends Component {
@@ -73,8 +73,8 @@ class ControlsView extends Component {
       replayAudio: PropTypes.func.isRequired,
       loadNextAudio: PropTypes.func.isRequired,
       loadNextAutoplayAudio: PropTypes.func.isRequired,
-      loadPrevAudio: PropTypes.func.isRequired,
-    }).isRequired,
+      loadPrevAudio: PropTypes.func.isRequired
+    }).isRequired
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -93,7 +93,7 @@ class ControlsView extends Component {
       replayAudio,
       loadNextAudio,
       loadNextAutoplayAudio,
-      loadPrevAudio,
+      loadPrevAudio
     } = this.props.actions;
 
     const {
@@ -104,7 +104,7 @@ class ControlsView extends Component {
       audioTitle,
       prevDisabled,
       nextDisabled,
-      highlight,
+      highlight
     } = this.props;
 
     let code = audioCode;
@@ -119,7 +119,7 @@ class ControlsView extends Component {
       controlsDisabled = true;
     }
 
-    const width = Dimensions.get('window').width;
+    const width = Dimensions.get("window").width;
 
     return (
       <View style={styles.container}>
@@ -127,24 +127,27 @@ class ControlsView extends Component {
         <ViewTicker width={width} uniqueChildrenKey={code}>
           <View
             accessible={true}
-            accessibilityTraits={['header']}
+            accessibilityTraits={["header"]}
             accessibilityLabel={`${parseVoiceoverText(code)}, ${translate(
-              stopTitle,
-            )}`}>
+              stopTitle
+            )}`}
+          >
             <View style={[styles.row, styles.titleRow]}>
               <View
-                style={highlighted ? styles.highlightedBox : styles.regularBox}>
+                style={highlighted ? styles.highlightedBox : styles.regularBox}
+              >
                 <Text
                   style={[
                     globalStyles.h3,
                     highlighted
                       ? styles.highlightedNumberText
-                      : { fontWeight: '300' },
-                  ]}>
+                      : { fontWeight: "300" }
+                  ]}
+                >
                   {code}
                 </Text>
               </View>
-              <Text style={[globalStyles.h3, { fontWeight: '500' }]}>
+              <Text style={[globalStyles.h3, { fontWeight: "500" }]}>
                 &nbsp; {parseDisplayText(translate(title))}
               </Text>
             </View>
@@ -156,8 +159,9 @@ class ControlsView extends Component {
           style={[
             styles.row,
             styles.controlsRow,
-            isRTL ? { flexDirection: 'row-reverse' } : {},
-          ]}>
+            isRTL ? { flexDirection: "row-reverse" } : {}
+          ]}
+        >
           <View>
             <PrevButton
               disabled={controlsDisabled}

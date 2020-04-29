@@ -1,23 +1,23 @@
-import { UPDATE_BEACONS } from '../actions/beacon';
+import { UPDATE_BEACONS } from "../actions/beacon";
 
-import { RESET } from '../actions/device';
+import { RESET } from "../actions/device";
 
 // TODO: In the future load data from a database to prevent memory pressure
-import blockRules from '../data/beaconBlockRules.json';
+import blockRules from "../data/beaconBlockRules.json";
 
-import { Tour } from '../models/tour';
+import { Tour } from "../models/tour";
 const tourStopsWithRegions = Tour.allRealmObjects()
-  .sorted('order')
-  .filtered('regions.@count > 0');
+  .sorted("order")
+  .filtered("regions.@count > 0");
 
-import { Stop } from '../models/stop';
+import { Stop } from "../models/stop";
 const audioContentWithRegions = Stop.allRealmObjects().filtered(
-  "region != null AND region != ''",
+  "region != null AND region != ''"
 );
 
-import allAmenities from '../data/amenities';
+import allAmenities from "../data/amenities";
 
-import { _, includes } from 'lodash';
+import { _, includes } from "lodash";
 
 export const initialState = {
   regions: [],
@@ -25,7 +25,7 @@ export const initialState = {
   detectedFloor: null,
   detectedAmenities: [],
   tourStops: [],
-  audioContent: [],
+  audioContent: []
 };
 
 export function closeTourStops(state = initialState, action) {
@@ -41,7 +41,7 @@ export function closeTourStops(state = initialState, action) {
           detectedFloor: null,
           tourStops: [],
           detectedAmenities: [],
-          audioContent: [],
+          audioContent: []
         });
       }
 
@@ -71,7 +71,7 @@ export function closeTourStops(state = initialState, action) {
       // 2. Find out the users floor and regions by the remaining beacons
       // A. Detect the floor the user is on
       const detectedFloors = _(beacons)
-        .flatMap('floor')
+        .flatMap("floor")
         .uniq()
         .value();
 
@@ -85,7 +85,7 @@ export function closeTourStops(state = initialState, action) {
 
       // B. Detect the regions
       const previousRegions = _(beacons)
-        .flatMap('region')
+        .flatMap("region")
         .uniq()
         .value();
 
@@ -108,7 +108,7 @@ export function closeTourStops(state = initialState, action) {
           detectedFloor,
           detectedAmenities: state.detectedAmenities,
           tourStops: state.tourStops,
-          audioContent: state.audioContent,
+          audioContent: state.audioContent
         });
       }
 
@@ -116,17 +116,17 @@ export function closeTourStops(state = initialState, action) {
       const tourStopQuery = regions
         .map(region => {
           return `ANY regions.value = "${region}"`;
-        }, '')
-        .join(' OR ');
+        }, "")
+        .join(" OR ");
       const showTourStops = tourStopsWithRegions.filtered(tourStopQuery);
 
       const audioContentQuery = regions
         .map(region => {
           return `region = "${region}"`;
-        }, '')
-        .join(' OR ');
+        }, "")
+        .join(" OR ");
       const showAudioContent = audioContentWithRegions.filtered(
-        audioContentQuery,
+        audioContentQuery
       );
 
       const detectedAmenities = allAmenities[detectedFloor].amenities;
@@ -137,7 +137,7 @@ export function closeTourStops(state = initialState, action) {
         detectedFloor,
         detectedAmenities,
         tourStops: showTourStops,
-        audioContent: _.uniqBy(showAudioContent, 'id'),
+        audioContent: _.uniqBy(showAudioContent, "id")
       });
     }
 

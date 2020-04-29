@@ -7,7 +7,9 @@ import { translate } from "../i18n";
 // import { analyticsTrackScreen } from '../actions/analytics';
 
 import Grid from "../components/grid";
-//import CalendarStop from './calendarStop'; onödig?
+
+// hanterar view när man klickar på ett event.
+import CalendarStop from "./calendarStop";
 
 import { Navigation } from "react-native-navigation";
 
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "stretch",
     flex: 1,
-    backgroundColor: "#ffffff"
+    backgroundColor: "#111111" // handles barrier between objects
   }
 });
 
@@ -38,6 +40,7 @@ const pushToCalendarStop = (componentId, passedProps) => {
 };
 
 class Calendar extends Component {
+  // handles top title (in scrollable)
   static get options() {
     return {
       topBar: {
@@ -46,7 +49,7 @@ class Calendar extends Component {
         },
         title: {
           text: "Events",
-          fontSize: 17,
+          fontSize: 50,
           fontFamily: "Helvetica",
           color: NAV_BAR_TEXT
         },
@@ -56,7 +59,8 @@ class Calendar extends Component {
   }
 
   render() {
-    var containerMargin = 0;
+    // handles bottom, eg. audio player.
+    var containerMargin = 5;
     if (this.props.playerOpen) {
       containerMargin += BOTTOM_PLAYER_HEIGHT;
     }

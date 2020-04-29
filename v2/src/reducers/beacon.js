@@ -3,19 +3,19 @@ import {
   START_SCANNING_FOR_BEACONS_SUCCESS,
   START_SCANNING_FOR_BEACONS_FAILURE,
   UPDATE_WAYFINDING_STATUS,
-  LOCATION_SERVICES_STATUS_NOTDETERMINED,
-} from '../actions/beacon';
+  LOCATION_SERVICES_STATUS_NOTDETERMINED
+} from "../actions/beacon";
 
 export const initialState = {
   bluetoothOn: false,
   locationServicesStatus: LOCATION_SERVICES_STATUS_NOTDETERMINED,
   tracking: null,
-  rangingUUID: 'f7826da6-4fa2-4e98-8024-bc5b71e0893e',
-  rangingIdentifier: 'Nordic Museum Audio Guide',
+  rangingUUID: "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+  rangingIdentifier: "Nordic Museum Audio Guide",
   // beacons is only useful for debugging
   beacons: [
     // "majorNumber:minorNumber",
-  ],
+  ]
 };
 
 export function beacon(state = initialState, action) {
@@ -24,7 +24,7 @@ export function beacon(state = initialState, action) {
       return Object.assign({}, state, {
         tracking: false,
         bluetoothOn: action.bluetoothOn,
-        locationServicesStatus: action.locationServicesStatus,
+        locationServicesStatus: action.locationServicesStatus
       });
     }
 
@@ -32,20 +32,20 @@ export function beacon(state = initialState, action) {
       return Object.assign({}, state, {
         tracking: true,
         rangingIdentifier: action.rangingIdentifier,
-        rangingUUID: action.rangingUUID,
+        rangingUUID: action.rangingUUID
       });
     }
 
     case START_SCANNING_FOR_BEACONS_FAILURE: {
       return Object.assign({}, state, {
-        tracking: false,
+        tracking: false
       });
     }
 
     case UPDATE_BEACONS: {
       if (__DEV__) {
         return Object.assign({}, state, {
-          beacons: action.newBeacons,
+          beacons: action.newBeacons
         });
       }
 

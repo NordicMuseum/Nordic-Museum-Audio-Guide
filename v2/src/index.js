@@ -17,6 +17,7 @@ import { showTutorial } from "./actions/tutorial";
 import { audioActor } from "./actors/audio";
 import { chargingActor } from "./actors/charging";
 import { beaconActor } from "./actors/beacon";
+import { downloadEventsActor } from "./actors/downloadEvents";
 
 import { OFF_BLACK, OFF_WHITE, setBottomTabsHeight } from "./styles";
 
@@ -66,6 +67,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
     device: { locale: setLocale, isRTL: setRTL, appVersion, museumMode }
   });
 
+  downloadEventsActor(store);
   audioActor(store);
   chargingActor(store);
   beaconActor(store);

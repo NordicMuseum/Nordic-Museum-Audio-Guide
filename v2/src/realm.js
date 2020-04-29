@@ -1,8 +1,8 @@
-import Realm from 'realm';
+import Realm from "realm";
 
-import { Tour } from './models/tour';
-import { Stop } from './models/stop';
-import { StringValue } from './models/stringValue';
+import { Tour } from "./models/tour";
+import { Stop } from "./models/stop";
+import { StringValue } from "./models/stringValue";
 
 const SCHEMAVERSION = 3;
 
@@ -15,7 +15,7 @@ export const getRealmInstance = () => {
       schemaVersion: SCHEMAVERSION,
       migration(oldRealm, newRealm) {
         newRealm.deleteAll();
-      },
+      }
     });
   }
 

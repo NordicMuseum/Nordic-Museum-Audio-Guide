@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { StyleSheet, View, Text, Dimensions, Button } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, Button } from "react-native";
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 // import { analyticsTrackAudioCompleteListen } from '../actions/analytics';
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
 import {
   togglePausePlay,
   unloadAudio,
   replayAudio,
-  playTrack,
-} from '../actions/audio';
+  playTrack
+} from "../actions/audio";
 
 import {
   PLAYER_STATUS_FINISHED,
@@ -22,39 +22,39 @@ import {
   PLAYER_STATUS_NOTLOADED,
   PLAYER_STATUS_UNLOADED,
   PLAYER_STATUS_LOADING,
-  PLAYER_STATUS_PLAY,
-} from '../actions/audio';
+  PLAYER_STATUS_PLAY
+} from "../actions/audio";
 
-import ControlsView from '../components/controlsView';
-import TimeProgressView from '../components/timeProgressView';
-import AutoplayProgressView from '../components/autoplayProgressView';
-import ClosePlayerView from '../components/closePlayerView';
+import ControlsView from "../components/controlsView";
+import TimeProgressView from "../components/timeProgressView";
+import AutoplayProgressView from "../components/autoplayProgressView";
+import ClosePlayerView from "../components/closePlayerView";
 
 import {
   BOTTOM_PLAYER_HEIGHT,
   getBottomTabsHeight,
-  OFF_BLACK,
-} from '../styles';
+  OFF_BLACK
+} from "../styles";
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   bottomBar: {
-    position: 'absolute',
+    position: "absolute",
     borderBottomWidth: 1,
-    borderColor: '#0d0d0d',
-    backgroundColor: '#1A1A1A',
+    borderColor: "#0d0d0d",
+    backgroundColor: "#1A1A1A",
     height: BOTTOM_PLAYER_HEIGHT,
-    width: width,
-  },
+    width: width
+  }
 });
 
 class BottomPlayer extends Component {
   static get options() {
     return {
       overlay: {
-        interceptTouchOutside: false,
-      },
+        interceptTouchOutside: false
+      }
     };
   }
 
@@ -80,14 +80,14 @@ class BottomPlayer extends Component {
       timerStartAt,
       timerNumber,
       autoplayOn,
-      locale,
+      locale
     } = this.props;
 
     const {
       togglePausePlay,
       unloadAudio,
       replayAudio,
-      playTrack,
+      playTrack
     } = this.props.actions;
 
     let progress;
@@ -121,7 +121,7 @@ class BottomPlayer extends Component {
           actions={{
             loadNextAutoplayAudio: () => {
               playTrack(tourStop, nextUUID, true);
-            },
+            }
           }}
         />
       );
@@ -144,10 +144,11 @@ class BottomPlayer extends Component {
       <View
         style={[styles.bottomBar, { bottom: getBottomTabsHeight() }]}
         // Rerender when PLAYER_STATUS_FINISHED begins and ends
-        key={playerStatus === PLAYER_STATUS_FINISHED}>
+        key={playerStatus === PLAYER_STATUS_FINISHED}
+      >
         {progress}
         <ControlsView
-          highlight={audioContent[index].category === 'HIGHLIGHT'}
+          highlight={audioContent[index].category === "HIGHLIGHT"}
           stopTitle={stopTitle}
           audioTitle={audioTitle}
           audioCode={audioCode}
@@ -162,7 +163,7 @@ class BottomPlayer extends Component {
             togglePausePlay,
             replayAudio,
             navToTourStop: () => {
-              console.log('TO DO');
+              console.log("TO DO");
             },
             loadNextAudio: () => {
               playTrack(tourStop, nextUUID, false);
@@ -172,7 +173,7 @@ class BottomPlayer extends Component {
             },
             loadPrevAudio: () => {
               playTrack(tourStop, prevUUID, false);
-            },
+            }
           }}
         />
       </View>
@@ -198,7 +199,7 @@ const mapStateToProps = state => {
     timerActive: state.bottomPlayer.timerActive,
     timerNumber: state.bottomPlayer.timerNumber,
     autoplayOn: state.bottomPlayer.autoplayOn,
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -208,17 +209,17 @@ const mapDispatchToProps = dispatch => ({
       togglePausePlay,
       unloadAudio,
       replayAudio,
-      playTrack,
+      playTrack
     },
-    dispatch,
-  ),
+    dispatch
+  )
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(BottomPlayer);
 
 function nextAudioProps(audioContent, nextUUID, defaultTitle) {
@@ -230,7 +231,7 @@ function nextAudioProps(audioContent, nextUUID, defaultTitle) {
     return {
       code: audio.id,
       title: audio.title,
-      highlight: audio.category === 'HIGHLIGHT',
+      highlight: audio.category === "HIGHLIGHT"
     };
   }
 

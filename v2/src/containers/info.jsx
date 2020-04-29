@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, Dimensions, Image } from 'react-native';
-import { Navigation } from 'react-native-navigation';
+import React, { Component } from "react";
+import { View, StyleSheet, Dimensions, Image } from "react-native";
+import { Navigation } from "react-native-navigation";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import DisclosureCell from '../components/disclosureCell';
+import DisclosureCell from "../components/disclosureCell";
 
 import {
   NAV_BAR_TEXT,
   NAV_BAR_BACKGROUND,
-  BOTTOM_PLAYER_HEIGHT,
-} from '../styles';
+  BOTTOM_PLAYER_HEIGHT
+} from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    flex: 1,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    flex: 1
   },
   image: {
-    resizeMode: 'cover',
-    flex: 1,
-  },
+    resizeMode: "cover",
+    flex: 1
+  }
 });
 
 class Info extends Component {
@@ -33,20 +33,20 @@ class Info extends Component {
         visible: false,
         drawBehind: true,
         background: {
-          color: NAV_BAR_BACKGROUND,
+          color: NAV_BAR_BACKGROUND
         },
         title: {
-          text: translate('museumScreen_Title'),
+          text: translate("museumScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
-        },
-      },
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
+        }
+      }
     };
   }
 
   render() {
-    const width = Dimensions.get('window').width;
+    const width = Dimensions.get("window").width;
 
     let bottomOffset = 0;
     if (this.props.playerOpen) {
@@ -57,62 +57,62 @@ class Info extends Component {
       <View style={[styles.container, { marginBottom: bottomOffset }]}>
         <Image
           accessible={true}
-          accessibilityLabel={translate('museumScreen_ImageAccessibilityLabel')}
-          accessibilityRole={'image'}
+          accessibilityLabel={translate("museumScreen_ImageAccessibilityLabel")}
+          accessibilityRole={"image"}
           style={[styles.image, { width }]}
-          source={require('../assets/images/museumBackground.png')}
+          source={require("../assets/images/museumBackground.png")}
         />
         <View>
           <View>
             <DisclosureCell
               accessibility={{
-                role: 'button',
-                label: translate('settingsScreen_Title'),
+                role: "button",
+                label: translate("settingsScreen_Title")
               }}
               bottomBorder={true}
-              title={translate('settingsScreen_Title')}
+              title={translate("settingsScreen_Title")}
               onPress={() => {
                 Navigation.push(this.props.componentId, {
-                  component: { name: 'settings' },
+                  component: { name: "settings" }
                 });
               }}
             />
             <DisclosureCell
               accessibility={{
-                role: 'button',
-                label: translate('amenitiesScreen_Title'),
+                role: "button",
+                label: translate("amenitiesScreen_Title")
               }}
               bottomBorder={true}
-              title={translate('amenitiesScreen_Title')}
+              title={translate("amenitiesScreen_Title")}
               onPress={() => {
                 Navigation.push(this.props.componentId, {
-                  component: { name: 'amenities' },
+                  component: { name: "amenities" }
                 });
               }}
             />
             <DisclosureCell
               accessibility={{
-                role: 'button',
-                label: translate('museumScreen_ListItem1Label'),
+                role: "button",
+                label: translate("museumScreen_ListItem1Label")
               }}
               bottomBorder={true}
-              title={translate('museumScreen_ListItem1Label')}
+              title={translate("museumScreen_ListItem1Label")}
               onPress={() => {
                 Navigation.push(this.props.componentId, {
-                  component: { name: 'aboutMuseum' },
+                  component: { name: "aboutMuseum" }
                 });
               }}
             />
             <DisclosureCell
               accessibility={{
-                role: 'button',
-                label: translate('aboutTheAppScreen_Title'),
+                role: "button",
+                label: translate("aboutTheAppScreen_Title")
               }}
               bottomBorder={false}
-              title={translate('aboutTheAppScreen_Title')}
+              title={translate("aboutTheAppScreen_Title")}
               onPress={() => {
                 Navigation.push(this.props.componentId, {
-                  component: { name: 'aboutApp' },
+                  component: { name: "aboutApp" }
                 });
               }}
             />
@@ -125,7 +125,7 @@ class Info extends Component {
 
 const mapStateToProps = state => {
   return {
-    playerOpen: state.bottomPlayer.playerOpen,
+    playerOpen: state.bottomPlayer.playerOpen
   };
 };
 
@@ -137,5 +137,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(Info);

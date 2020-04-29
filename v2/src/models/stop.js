@@ -3,23 +3,23 @@ import {
   realmDeleteAllHelper,
   realmObjectHelper,
   allRealmObjectsHelper,
-  realmObjectIsInvalidHelper,
-} from '../realm';
+  realmObjectIsInvalidHelper
+} from "../realm";
 
 export class Stop {
-  static NAME = 'Stop';
+  static NAME = "Stop";
 
   static schema = {
     name: Stop.NAME,
-    primaryKey: 'uuid',
+    primaryKey: "uuid",
     properties: {
-      id: { type: 'string' },
-      uuid: { type: 'string' },
-      region: { type: 'string?' },
-      category: { type: 'string' },
-      title: { type: 'string' },
-      transcript: { type: 'string?' },
-    },
+      id: { type: "string" },
+      uuid: { type: "string" },
+      region: { type: "string?" },
+      category: { type: "string" },
+      title: { type: "string" },
+      transcript: { type: "string?" }
+    }
   };
 
   // inserting is omitted on purpose because realm inserts are expensive
@@ -53,7 +53,7 @@ export class Stop {
       title: realmObject.title,
       duration: realmObject.duration,
       audioURL: realmObject.audioURL,
-      transcript: realmObject.transcript,
+      transcript: realmObject.transcript
     };
   }
 }

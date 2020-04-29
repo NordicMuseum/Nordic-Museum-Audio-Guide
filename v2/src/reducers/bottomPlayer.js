@@ -15,23 +15,23 @@ import {
   PLAYER_STATUS_LOADING,
   PLAYER_STATUS_ERROR,
   UPDATE_AUDIO_CURRENT_TIME,
-  AUDIO_DID_FINISH_PLAYING,
-} from '../actions/audio';
+  AUDIO_DID_FINISH_PLAYING
+} from "../actions/audio";
 
-import { SCREEN_READER_STATUS } from '../actions/accessibility';
+import { SCREEN_READER_STATUS } from "../actions/accessibility";
 
-import { FIRE_TIMER, STOP_TIMER } from '../actions/audioTimer';
+import { FIRE_TIMER, STOP_TIMER } from "../actions/audioTimer";
 
-import { RESET } from '../actions/device';
+import { RESET } from "../actions/device";
 
 const initialState = {
   tourStop: {},
   audioContent: {},
-  audioCode: '',
-  stopUUID: '',
-  stopTitle: '',
-  title: '',
-  uuid: '',
+  audioCode: "",
+  stopUUID: "",
+  stopTitle: "",
+  title: "",
+  uuid: "",
   index: 0,
   duration: 0,
   time: 0,
@@ -46,7 +46,7 @@ const initialState = {
   timerNumber: 0,
   timerActive: false,
   autoplayOn: true,
-  autoplayInitial: false,
+  autoplayInitial: false
 };
 
 export function bottomPlayer(state = initialState, action) {
@@ -58,7 +58,7 @@ export function bottomPlayer(state = initialState, action) {
     case SCREEN_READER_STATUS: {
       return Object.assign({}, state, {
         timerStartAt: action.screenReader ? 7 : 5,
-        autoplayOn: action.screenReader ? false : state.autoplayOn,
+        autoplayOn: action.screenReader ? false : state.autoplayOn
       });
     }
 
@@ -81,14 +81,14 @@ export function bottomPlayer(state = initialState, action) {
           : PLAYER_STATUS_PAUSE,
         playerOpen: true,
         prevUUID: action.prevUUID,
-        nextUUID: action.nextUUID,
+        nextUUID: action.nextUUID
       });
     }
 
     case PLAYER_STATUS_LOADING: {
       return Object.assign({}, state, {
         playerStatus: PLAYER_STATUS_LOADING,
-        playerOpen: false,
+        playerOpen: false
       });
     }
 
@@ -98,14 +98,14 @@ export function bottomPlayer(state = initialState, action) {
 
     case STOP_TIMER: {
       return Object.assign({}, state, {
-        timerActive: false,
+        timerActive: false
       });
     }
 
     case FIRE_TIMER: {
       if (state.timerActive) {
         return Object.assign({}, state, {
-          timerNumber: state.timerNumber - 1,
+          timerNumber: state.timerNumber - 1
         });
       }
 
@@ -114,28 +114,28 @@ export function bottomPlayer(state = initialState, action) {
 
     case TOGGLE_AUTOPLAY: {
       return Object.assign({}, state, {
-        autoplayOn: action.autoplayOn,
+        autoplayOn: action.autoplayOn
       });
     }
 
     case TOGGLE_AUTOPLAY_INITIAL: {
       return Object.assign({}, state, {
-        autoplayInitial: action.autoplayInitial,
+        autoplayInitial: action.autoplayInitial
       });
     }
 
     case LOAD_AUDIO_FAILURE: {
       return Object.assign({}, state, {
-        stopUUID: '',
+        stopUUID: "",
         playerStatus: PLAYER_STATUS_ERROR,
         playerOpen: false,
-        timerActive: false,
+        timerActive: false
       });
     }
 
     case UPDATE_AUDIO_CURRENT_TIME: {
       return Object.assign({}, state, {
-        time: action.time,
+        time: action.time
       });
     }
 
@@ -144,7 +144,7 @@ export function bottomPlayer(state = initialState, action) {
         time: state.duration,
         playerStatus: PLAYER_STATUS_FINISHED,
         timerActive: state.autoplayOn && action.displayTimer,
-        timerNumber: state.timerStartAt,
+        timerNumber: state.timerStartAt
       });
     }
 
@@ -173,26 +173,26 @@ export function bottomPlayer(state = initialState, action) {
 
       return Object.assign({}, state, {
         playerStatus: newStatus,
-        playerOpen: openStatus,
+        playerOpen: openStatus
       });
     }
 
     case PLAY_AUDIO: {
       return Object.assign({}, state, {
-        playerStatus: PLAYER_STATUS_PLAY,
+        playerStatus: PLAYER_STATUS_PLAY
       });
     }
 
     case PAUSE_AUDIO: {
       return Object.assign({}, state, {
-        playerStatus: PLAYER_STATUS_PAUSE,
+        playerStatus: PLAYER_STATUS_PAUSE
       });
     }
 
     case REPLAY_AUDIO: {
       return Object.assign({}, state, {
         currentTime: 0,
-        playerStatus: PLAYER_STATUS_PLAY,
+        playerStatus: PLAYER_STATUS_PLAY
       });
     }
 

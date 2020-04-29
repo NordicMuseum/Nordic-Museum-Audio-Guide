@@ -1,13 +1,13 @@
-import { Platform } from 'react-native';
+import { Platform } from "react-native";
 
-import Sound from 'react-native-sound';
+import Sound from "react-native-sound";
 
-import i18n from 'i18n-js';
+import i18n from "i18n-js";
 
 import {
   audioDidFinishPlaying,
-  updateAudioCurrentTime,
-} from '../actions/audio';
+  updateAudioCurrentTime
+} from "../actions/audio";
 
 class AudioActor {
   constructor(store) {
@@ -17,7 +17,7 @@ class AudioActor {
     this._loadedSound;
 
     // Enable playback in silence mode
-    Sound.setCategory('Playback');
+    Sound.setCategory("Playback");
   }
 
   loadAudio = ({
@@ -25,18 +25,18 @@ class AudioActor {
     audioUUID,
     localeOrder,
     playAudioAfterLoad,
-    autoPlay,
+    autoPlay
   }) => {
     if (localeOrder == null) {
       // Fallback to default locale, else play audio in Swedish.
-      localeOrder = [i18n.locale, i18n.defaultLocale, 'sv'];
+      localeOrder = [i18n.locale, i18n.defaultLocale, "sv"];
     }
 
     return new Promise((resolve, reject) => {
       const locale = localeOrder.shift();
       const audioUrl = Platform.select({
         ios: `audio/${audioID}/${audioID}${locale}.mp3`,
-        android: `audio_${audioID}${locale.toLowerCase()}.mp3`,
+        android: `audio_${audioID}${locale.toLowerCase()}.mp3`
       });
 
       this.unloadAudio();
@@ -53,8 +53,8 @@ class AudioActor {
             this.loadAudio({
               audioID,
               localeOrder,
-              playAudioAfterLoad,
-            }),
+              playAudioAfterLoad
+            })
           );
         }
 
@@ -63,7 +63,7 @@ class AudioActor {
           if (this._loadedSound) {
             this._loadedSound.getCurrentTime(currentTime => {
               this._dispatch(
-                updateAudioCurrentTime(audioUUID, Math.round(currentTime)),
+                updateAudioCurrentTime(audioUUID, Math.round(currentTime))
               );
             });
           }
@@ -74,7 +74,7 @@ class AudioActor {
           this._loadedSound.play(success => {
             if (success) {
               this._dispatch(
-                audioDidFinishPlaying(audioUUID, duration, autoPlay),
+                audioDidFinishPlaying(audioUUID, duration, autoPlay)
               );
             }
           });
@@ -82,7 +82,7 @@ class AudioActor {
 
         resolve({
           locale,
-          duration,
+          duration
         });
       });
     });

@@ -1,35 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text } from "react-native";
 
-import ProgressBar from './progressBar';
+import ProgressBar from "./progressBar";
 
-import { globalStyles } from '../styles';
+import { globalStyles } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+    flexDirection: "column"
   },
   row: {
-    flexDirection: 'row',
-    position: 'relative',
+    flexDirection: "row",
+    position: "relative"
   },
   autoplayRow: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     height: 16,
-    alignItems: 'center',
-    position: 'absolute',
+    alignItems: "center",
+    position: "absolute",
     top: 0,
     left: 0,
-    right: 0,
+    right: 0
   },
   autoplayText: {
     marginLeft: 5,
-    backgroundColor: 'transparent',
-  },
+    backgroundColor: "transparent"
+  }
 });
 
 const AutoplayProgressView = props => {
@@ -50,14 +50,14 @@ const AutoplayProgressView = props => {
   }
 
   // Countdown text
-  let countDownText = '';
+  let countDownText = "";
   if (timerActive && autoplayOn) {
     if (timerNumber === 1) {
-      countDownText = translate('autoplayProgressView_CountDownTextSingular');
+      countDownText = translate("autoplayProgressView_CountDownTextSingular");
     } else {
       countDownText = `${translate(
-        'autoplayProgressView_CountDownText',
-      )} ${timerNumber} ${translate('autoplayProgressView_Seconds')}`;
+        "autoplayProgressView_CountDownText"
+      )} ${timerNumber} ${translate("autoplayProgressView_Seconds")}`;
     }
   }
 
@@ -81,8 +81,8 @@ AutoplayProgressView.propTypes = {
   timerNumber: PropTypes.number.isRequired,
   autoplayOn: PropTypes.bool.isRequired,
   actions: PropTypes.shape({
-    loadNextAutoplayAudio: PropTypes.func.isRequired,
-  }).isRequired,
+    loadNextAutoplayAudio: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default AutoplayProgressView;

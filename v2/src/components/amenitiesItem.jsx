@@ -1,39 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React from "react";
+import PropTypes from "prop-types";
+import { View, StyleSheet, Text, Image } from "react-native";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import { imageURI } from '../utilities';
+import { imageURI } from "../utilities";
 
-import { globalStyles } from '../styles';
+import { globalStyles } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     paddingTop: 16,
     paddingBottom: 16,
     paddingLeft: 16,
-    paddingRight: 16,
+    paddingRight: 16
   },
   image: {
     width: 30,
-    height: 30,
+    height: 30
   },
   textContainer: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 1,
-    paddingLeft: 10,
+    paddingLeft: 10
   },
   amenityTitle: {
     marginBottom: 10,
-    fontWeight: '500',
+    fontWeight: "500"
   },
   borderStyle: {
     borderBottomWidth: 1,
-    borderColor: '#CCCCCC',
-    borderStyle: 'solid',
-  },
+    borderColor: "#CCCCCC",
+    borderStyle: "solid"
+  }
 });
 
 const AmenitiesItem = props => {
@@ -43,7 +43,7 @@ const AmenitiesItem = props => {
     <View style={[styles.container, props.border ? styles.borderStyle : {}]}>
       <Image
         style={styles.image}
-        resizeMode={'contain'}
+        resizeMode={"contain"}
         source={props.amenity.icon ? { uri: imageURI(props.amenity.icon) } : {}}
       />
       <View style={styles.textContainer}>
@@ -53,8 +53,9 @@ const AmenitiesItem = props => {
             globalStyles.body,
             description === undefined
               ? { marginBottom: 0 }
-              : { marginBottom: 10 },
-          ]}>
+              : { marginBottom: 10 }
+          ]}
+        >
           {translate(props.amenity.title)}
         </Text>
         {description !== undefined && (
@@ -69,7 +70,7 @@ const AmenitiesItem = props => {
 
 AmenitiesItem.propTypes = {
   amenity: PropTypes.object.isRequired,
-  border: PropTypes.bool,
+  border: PropTypes.bool
 };
 
 export default AmenitiesItem;

@@ -1,23 +1,23 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from "@react-native-community/async-storage";
 
 const APP_SETTINGS_TYPES = {
-  STRING: 'STRING',
-  BOOL: 'BOOL',
+  STRING: "STRING",
+  BOOL: "BOOL"
 };
 
 const APP_SETTINGS_KEYS = {
-  appVersion: { key: 'appVersion', type: APP_SETTINGS_TYPES.STRING },
-  museumMode: { key: 'museumMode', type: APP_SETTINGS_TYPES.BOOL },
-  locale: { key: 'locale', type: APP_SETTINGS_TYPES.STRING },
-  isRTL: { key: 'isRTL', type: APP_SETTINGS_TYPES.BOOL },
+  appVersion: { key: "appVersion", type: APP_SETTINGS_TYPES.STRING },
+  museumMode: { key: "museumMode", type: APP_SETTINGS_TYPES.BOOL },
+  locale: { key: "locale", type: APP_SETTINGS_TYPES.STRING },
+  isRTL: { key: "isRTL", type: APP_SETTINGS_TYPES.BOOL },
   showWelcomeScreen: {
-    key: 'showWelcomeScreen',
-    type: APP_SETTINGS_TYPES.BOOL,
-  },
+    key: "showWelcomeScreen",
+    type: APP_SETTINGS_TYPES.BOOL
+  }
 };
 
 const boolToString = bool => {
-  return bool ? 'true' : 'false';
+  return bool ? "true" : "false";
 };
 
 const appSettingsTypeParse = (keyType, value) => {
@@ -25,12 +25,12 @@ const appSettingsTypeParse = (keyType, value) => {
 
   switch (keyType) {
     case APP_SETTINGS_TYPES.STRING: {
-      parsedValue = value == null ? '' : value;
+      parsedValue = value == null ? "" : value;
       break;
     }
 
     case APP_SETTINGS_TYPES.BOOL: {
-      parsedValue = value === '1' || value === 'true';
+      parsedValue = value === "1" || value === "true";
       break;
     }
   }
@@ -40,7 +40,7 @@ const appSettingsTypeParse = (keyType, value) => {
 
 export const setShowWelcomeScreenToFalse = async () => {
   const setObj = [
-    [APP_SETTINGS_KEYS.showWelcomeScreen.key, boolToString(false)],
+    [APP_SETTINGS_KEYS.showWelcomeScreen.key, boolToString(false)]
   ];
 
   try {
@@ -72,9 +72,9 @@ export const setMuseumMode = async museumMode => {
 
 export const setDefaultLocaleAndRTL = async () => {
   const setObj = [
-    [APP_SETTINGS_KEYS.locale.key, 'en'],
-    [APP_SETTINGS_KEYS.isRTL.key, 'false'],
-    [APP_SETTINGS_KEYS.showWelcomeScreen.key, 'false'],
+    [APP_SETTINGS_KEYS.locale.key, "en"],
+    [APP_SETTINGS_KEYS.isRTL.key, "false"],
+    [APP_SETTINGS_KEYS.showWelcomeScreen.key, "false"]
   ];
 
   try {

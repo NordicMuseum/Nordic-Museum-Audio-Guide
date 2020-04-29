@@ -1,20 +1,20 @@
-import { Navigation } from 'react-native-navigation';
+import { Navigation } from "react-native-navigation";
 
-import { setShowWelcomeScreenToFalse } from '../appSettings';
+import { setShowWelcomeScreenToFalse } from "../appSettings";
 
 // *** Action Types ***
-export const HIDE_TUTORIAL = 'HIDE_TUTORIAL';
-export const SHOW_TUTORIAL = 'SHOW_TUTORIAL';
+export const HIDE_TUTORIAL = "HIDE_TUTORIAL";
+export const SHOW_TUTORIAL = "SHOW_TUTORIAL";
 
 // *** Action Creators ***
 export function hideTutorial() {
   return async dispatch => {
-    Navigation.dismissModal('tutorialModal');
+    Navigation.dismissModal("tutorialModal");
 
     await setShowWelcomeScreenToFalse();
 
     dispatch({
-      type: HIDE_TUTORIAL,
+      type: HIDE_TUTORIAL
     });
   };
 }
@@ -24,28 +24,28 @@ export function showTutorial({ showWelcomeScreen }) {
     const children = [
       {
         component: {
-          id: 'tutorialModal',
-          name: 'tutorialLanguage',
-        },
-      },
+          id: "tutorialModal",
+          name: "tutorialLanguage"
+        }
+      }
     ];
 
     if (showWelcomeScreen) {
       children.push({
         component: {
-          name: 'tutorialWelcome',
-        },
+          name: "tutorialWelcome"
+        }
       });
     }
 
     Navigation.showModal({
       stack: {
-        children,
-      },
+        children
+      }
     });
 
     dispatch({
-      type: SHOW_TUTORIAL,
+      type: SHOW_TUTORIAL
     });
   };
 }

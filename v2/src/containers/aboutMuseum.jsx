@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import React, { Component } from "react";
+import { View, StyleSheet, ScrollView, Text } from "react-native";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import Markdown from 'react-native-simple-markdown';
+import Markdown from "react-native-simple-markdown";
 
-import { isRTL, translate } from '../i18n';
+import { isRTL, translate } from "../i18n";
 
 import {
   globalStyles,
   NAV_BAR_TEXT,
   BOTTOM_PLAYER_HEIGHT,
   ACTION,
-  WHITE,
-} from '../styles';
+  WHITE
+} from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
-    flex: 1,
-  },
+    alignItems: "stretch",
+    flex: 1
+  }
 });
 
 const aboutText = locale => {
@@ -27,47 +27,47 @@ const aboutText = locale => {
     //TODO Disabling Arabic translation until RTL is figured out
     //case 'ar':
     //  return require('../data/pages/aboutTheMuseum-ar.md').default;
-    case 'de':
-      return require('../data/pages/aboutTheMuseum-de.md').default;
-    case 'en':
-      return require('../data/pages/aboutTheMuseum-en.md').default;
-    case 'es':
-      return require('../data/pages/aboutTheMuseum-es.md').default;
-    case 'fi':
-      return require('../data/pages/aboutTheMuseum-fi.md').default;
-    case 'fr':
-      return require('../data/pages/aboutTheMuseum-fr.md').default;
-    case 'it':
-      return require('../data/pages/aboutTheMuseum-it.md').default;
-    case 'ru':
-      return require('../data/pages/aboutTheMuseum-ru.md').default;
-    case 'svKids':
-    case 'svSimple':
-    case 'seSme':
-    case 'seSmj':
-    case 'seSma':
-    case 'sv':
-      return require('../data/pages/aboutTheMuseum-sv.md').default;
-    case 'zh':
-      return require('../data/pages/aboutTheMuseum-zh.md').default;
+    case "de":
+      return require("../data/pages/aboutTheMuseum-de.md").default;
+    case "en":
+      return require("../data/pages/aboutTheMuseum-en.md").default;
+    case "es":
+      return require("../data/pages/aboutTheMuseum-es.md").default;
+    case "fi":
+      return require("../data/pages/aboutTheMuseum-fi.md").default;
+    case "fr":
+      return require("../data/pages/aboutTheMuseum-fr.md").default;
+    case "it":
+      return require("../data/pages/aboutTheMuseum-it.md").default;
+    case "ru":
+      return require("../data/pages/aboutTheMuseum-ru.md").default;
+    case "svKids":
+    case "svSimple":
+    case "seSme":
+    case "seSmj":
+    case "seSma":
+    case "sv":
+      return require("../data/pages/aboutTheMuseum-sv.md").default;
+    case "zh":
+      return require("../data/pages/aboutTheMuseum-zh.md").default;
     default:
-      return require('../data/pages/aboutTheMuseum-en.md').default;
+      return require("../data/pages/aboutTheMuseum-en.md").default;
   }
 };
 
 const hoursText = locale => {
   switch (locale) {
-    case 'en':
-      return require('../data/pages/openingHoursAdmission-en.md').default;
-    case 'svKids':
-    case 'svSimple':
-    case 'seSme':
-    case 'seSmj':
-    case 'seSma':
-    case 'sv':
-      return require('../data/pages/openingHoursAdmission-sv.md').default;
+    case "en":
+      return require("../data/pages/openingHoursAdmission-en.md").default;
+    case "svKids":
+    case "svSimple":
+    case "seSme":
+    case "seSmj":
+    case "seSma":
+    case "sv":
+      return require("../data/pages/openingHoursAdmission-sv.md").default;
     default:
-      return require('../data/pages/openingHoursAdmission-en.md').default;
+      return require("../data/pages/openingHoursAdmission-en.md").default;
   }
 };
 
@@ -76,20 +76,20 @@ class AboutMuseum extends Component {
     return {
       topBar: {
         background: {
-          color: WHITE,
+          color: WHITE
         },
         backButton: {
           showTitle: false,
-          color: ACTION,
+          color: ACTION
         },
         title: {
-          text: translate('aboutScreen_Title'),
+          text: translate("aboutScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        noBorder: true,
-      },
+        noBorder: true
+      }
     };
   }
 
@@ -100,15 +100,15 @@ class AboutMuseum extends Component {
       heading1: {
         marginTop: 25,
         ...StyleSheet.flatten(globalStyles.h1),
-        writingDirection: isRTL ? 'rtl' : 'ltr',
-        textAlign: isRTL ? 'right' : 'left',
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
       },
       paragraph: {
         marginTop: 5,
         ...StyleSheet.flatten(globalStyles.body),
-        writingDirection: isRTL ? 'rtl' : 'ltr',
-        textAlign: isRTL ? 'right' : 'left',
-      },
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
+      }
     };
 
     return (
@@ -119,9 +119,10 @@ class AboutMuseum extends Component {
               paddingTop: 10,
               paddingLeft: 10,
               paddingRight: 10,
-              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10,
+              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10
             }}
-            automaticallyAdjustContentInsets={false}>
+            automaticallyAdjustContentInsets={false}
+          >
             <Markdown
               styles={markdownStyles}
               rules={{
@@ -130,9 +131,10 @@ class AboutMuseum extends Component {
                     <Text key={state.key} style={markdownStyles.paragraph}>
                       {output(node.content, state)}
                     </Text>
-                  ),
-                },
-              }}>
+                  )
+                }
+              }}
+            >
               {aboutText(locale)}
             </Markdown>
             <Markdown
@@ -143,9 +145,10 @@ class AboutMuseum extends Component {
                     <Text key={state.key} style={markdownStyles.paragraph}>
                       {output(node.content, state)}
                     </Text>
-                  ),
-                },
-              }}>
+                  )
+                }
+              }}
+            >
               {hoursText(locale)}
             </Markdown>
           </ScrollView>
@@ -157,7 +160,7 @@ class AboutMuseum extends Component {
 
 const mapStateToProps = state => {
   return {
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -169,5 +172,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(AboutMuseum);

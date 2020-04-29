@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import { StyleSheet, View, ScrollView } from "react-native";
+import PropTypes from "prop-types";
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import { Navigation } from 'react-native-navigation';
+import { Navigation } from "react-native-navigation";
 
-import { translate } from '../i18n';
-import { switchLocale as switchLocaleAction } from '../actions/localization';
+import { translate } from "../i18n";
+import { switchLocale as switchLocaleAction } from "../actions/localization";
 
-import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
+import LanguageSwitcherButtons from "../components/buttons/languageSwitcherButtons";
 
-import { NAV_BAR_TEXT, BOTTOM_PLAYER_HEIGHT, ACTION, WHITE } from '../styles';
+import { NAV_BAR_TEXT, BOTTOM_PLAYER_HEIGHT, ACTION, WHITE } from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
+    alignItems: "stretch",
     marginHorizontal: 25,
-    flex: 1,
+    flex: 1
   },
   cell: {
-    flexDirection: 'column',
-    marginBottom: 5,
-  },
+    flexDirection: "column",
+    marginBottom: 5
+  }
 });
 
 class Settings extends Component {
@@ -31,20 +31,20 @@ class Settings extends Component {
     return {
       topBar: {
         background: {
-          color: WHITE,
+          color: WHITE
         },
         backButton: {
           showTitle: false,
-          color: ACTION,
+          color: ACTION
         },
         title: {
-          text: translate('settingsScreen_Title'),
+          text: translate("settingsScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        noBorder: true,
-      },
+        noBorder: true
+      }
     };
   }
 
@@ -59,9 +59,10 @@ class Settings extends Component {
       <View style={styles.container}>
         <ScrollView
           contentContainerStyle={{
-            paddingBottom,
+            paddingBottom
           }}
-          automaticallyAdjustContentInsets={false}>
+          automaticallyAdjustContentInsets={false}
+        >
           <View style={styles.cell}>
             <LanguageSwitcherButtons
               locale={locale}
@@ -85,14 +86,14 @@ Settings.propTypes = {
   playerOpen: PropTypes.bool.isRequired,
   locale: PropTypes.string.isRequired,
   actions: PropTypes.shape({
-    switchLocale: PropTypes.func.isRequired,
-  }),
+    switchLocale: PropTypes.func.isRequired
+  })
 };
 
 const mapStateToProps = state => {
   return {
     playerOpen: state.bottomPlayer.playerOpen,
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -100,10 +101,10 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        switchLocale: switchLocaleAction,
+        switchLocale: switchLocaleAction
       },
-      dispatch,
-    ),
+      dispatch
+    )
   };
 };
 
@@ -111,5 +112,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(Settings);

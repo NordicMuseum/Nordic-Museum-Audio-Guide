@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView } from "react-native";
 
-import { Navigation } from 'react-native-navigation';
+import { Navigation } from "react-native-navigation";
 
-import { translate } from '../i18n';
+import { translate } from "../i18n";
 
-import { switchLocale as switchLocaleAction } from '../actions/localization';
+import { switchLocale as switchLocaleAction } from "../actions/localization";
 
-import { NAV_BAR_TEXT, OFF_BLACK, WHITE } from '../styles';
+import { NAV_BAR_TEXT, OFF_BLACK, WHITE } from "../styles";
 
-import LanguageSwitcherButtons from '../components/buttons/languageSwitcherButtons';
+import LanguageSwitcherButtons from "../components/buttons/languageSwitcherButtons";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 class TutorialLanguage extends Component {
@@ -26,16 +26,16 @@ class TutorialLanguage extends Component {
     return {
       topBar: {
         background: {
-          color: WHITE,
+          color: WHITE
         },
         title: {
-          text: translate('settingsScreen_Title'),
+          text: translate("settingsScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        noBorder: true,
-      },
+        noBorder: true
+      }
     };
   }
 
@@ -47,14 +47,15 @@ class TutorialLanguage extends Component {
       <View style={{ flex: 1 }}>
         <ScrollView
           style={styles.container}
-          automaticallyAdjustContentInsets={false}>
+          automaticallyAdjustContentInsets={false}
+        >
           <LanguageSwitcherButtons
             textStyle={{ color: OFF_BLACK }}
             locale={locale}
             onPress={selectedLocale => {
               if (locale === selectedLocale) {
                 Navigation.push(this.props.componentId, {
-                  component: { name: 'tutorialWelcome' },
+                  component: { name: "tutorialWelcome" }
                 });
                 return;
               }
@@ -70,7 +71,7 @@ class TutorialLanguage extends Component {
 
 const mapStateToProps = state => {
   return {
-    locale: state.device.locale,
+    locale: state.device.locale
   };
 };
 
@@ -78,10 +79,10 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        switchLocale: switchLocaleAction,
+        switchLocale: switchLocaleAction
       },
-      dispatch,
-    ),
+      dispatch
+    )
   };
 };
 
@@ -89,5 +90,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(TutorialLanguage);

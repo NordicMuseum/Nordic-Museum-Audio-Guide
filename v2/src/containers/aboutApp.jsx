@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
-import { View, StyleSheet, ScrollView, Text, Switch } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, Switch } from "react-native";
 
-import { updateMuseumMode } from '../actions/device';
+import { updateMuseumMode } from "../actions/device";
 
-import Markdown from 'react-native-simple-markdown';
+import Markdown from "react-native-simple-markdown";
 
-import { isRTL, translate } from '../i18n';
+import { isRTL, translate } from "../i18n";
 
 import {
   globalStyles,
@@ -17,29 +17,29 @@ import {
   ACTION,
   BOTTOM_PLAYER_HEIGHT,
   WHITE,
-  GRAY,
-} from '../styles';
+  GRAY
+} from "../styles";
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'stretch',
-    flex: 1,
-  },
+    alignItems: "stretch",
+    flex: 1
+  }
 });
 
 const aboutTheAppText = locale => {
   switch (locale) {
-    case 'en':
-      return require('../data/pages/aboutTheApp-en.md').default;
-    case 'svKids':
-    case 'svSimple':
-    case 'seSme':
-    case 'seSmj':
-    case 'seSma':
-    case 'sv':
-      return require('../data/pages/aboutTheApp-sv.md').default;
+    case "en":
+      return require("../data/pages/aboutTheApp-en.md").default;
+    case "svKids":
+    case "svSimple":
+    case "seSme":
+    case "seSmj":
+    case "seSma":
+    case "sv":
+      return require("../data/pages/aboutTheApp-sv.md").default;
     default:
-      return require('../data/pages/aboutTheApp-en.md').default;
+      return require("../data/pages/aboutTheApp-en.md").default;
   }
 };
 
@@ -48,39 +48,50 @@ class AboutApp extends Component {
     return {
       topBar: {
         background: {
-          color: WHITE,
+          color: WHITE
         },
         backButton: {
           showTitle: false,
-          color: ACTION,
+          color: ACTION
         },
         title: {
-          text: translate('aboutTheAppScreen_Title'),
+          text: translate("aboutTheAppScreen_Title"),
           fontSize: 17,
-          fontFamily: 'Helvetica',
-          color: NAV_BAR_TEXT,
+          fontFamily: "Helvetica",
+          color: NAV_BAR_TEXT
         },
-        noBorder: true,
-      },
+        noBorder: true
+      }
     };
   }
 
   render() {
-    const { locale, appVersion, museumMode, actions } = this.props;
+    const { locale, appVersion, museumMode, events, actions } = this.props;
+
+    // { string: [string]}
+    // map
+    // [string]
+    // .join()
+    // string \n string \n string
+    const eventsNewlineSeperated = Object.entries(events)
+      .map(([key, value]) => {
+        return `${key}: ${value.join(", ")}`;
+      })
+      .join("\n");
 
     const markdownStyles = {
       heading1: {
         marginTop: 25,
         ...StyleSheet.flatten(globalStyles.h1),
-        writingDirection: isRTL ? 'rtl' : 'ltr',
-        textAlign: isRTL ? 'right' : 'left',
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
       },
       paragraph: {
         marginTop: 5,
         ...StyleSheet.flatten(globalStyles.body),
-        writingDirection: isRTL ? 'rtl' : 'ltr',
-        textAlign: isRTL ? 'right' : 'left',
-      },
+        writingDirection: isRTL ? "rtl" : "ltr",
+        textAlign: isRTL ? "right" : "left"
+      }
     };
 
     return (
@@ -91,9 +102,19 @@ class AboutApp extends Component {
               paddingTop: 10,
               paddingLeft: 10,
               paddingRight: 10,
-              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10,
+              paddingBottom: BOTTOM_PLAYER_HEIGHT + 10
             }}
-            automaticallyAdjustContentInsets={false}>
+            automaticallyAdjustContentInsets={false}
+          >
+            <Text
+              style={[
+                { marginTop: 25 },
+                globalStyles.body,
+                globalStyles.paragraph
+              ]}
+            >
+              {eventsNewlineSeperated}
+            </Text>
             <Markdown
               styles={markdownStyles}
               rules={{
@@ -102,27 +123,30 @@ class AboutApp extends Component {
                     <Text key={state.key} style={markdownStyles.paragraph}>
                       {output(node.content, state)}
                     </Text>
-                  ),
-                },
-              }}>
+                  )
+                }
+              }}
+            >
               {aboutTheAppText(locale)}
             </Markdown>
             <Text
               style={[
                 { marginTop: 25 },
                 globalStyles.body,
-                globalStyles.paragraph,
-              ]}>
+                globalStyles.paragraph
+              ]}
+            >
               {appVersion}
             </Text>
             <View
               style={{
                 flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              }}>
-              <Text style={[globalStyles.h1]}>{'Museum Mode'}</Text>
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center"
+              }}
+            >
+              <Text style={[globalStyles.h1]}>{"Museum Mode"}</Text>
               <Switch
                 value={museumMode}
                 trackColor={{ true: ACTION }}
@@ -143,6 +167,7 @@ const mapStateToProps = state => {
     locale: state.device.locale,
     appVersion: state.device.appVersion,
     museumMode: state.device.museumMode,
+    events: state.calenderEvents.events
   };
 };
 
@@ -150,10 +175,10 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        updateMuseumMode,
+        updateMuseumMode
       },
-      dispatch,
-    ),
+      dispatch
+    )
   };
 };
 
@@ -161,5 +186,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   undefined,
-  { forwardRef: true },
+  { forwardRef: true }
 )(AboutApp);
