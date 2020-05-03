@@ -1,8 +1,10 @@
 import { updateEvents } from "../actions/device";
-require("./cal_get_promise.js")();
+
+import { getCalStr } from "./cal_get_promise";
+
+// require("./cal_get_promise.js")();
 //const https = require("https");
 //const fs = require("fs");
-
 
 class DownloadEventsActor {
   constructor(store) {
@@ -13,8 +15,12 @@ class DownloadEventsActor {
     const tenMins = 1500;
     var count = 0;
     const debugMode = true;
-    var testModule = new XMLHttpsRequest();
-    urlS = debugMode ? "https://www.calendarlabs.com/ical-calendar/ics/71/Sweden_Holidays.ics" : "https://www.nordiskamuseet.se/calendar/ical/ical/calendar-nordiska-museet.ics";
+
+    var testModule = new XMLHttpRequest();
+
+    urlS = debugMode
+      ? "https://www.calendarlabs.com/ical-calendar/ics/71/Sweden_Holidays.ics"
+      : "https://www.nordiskamuseet.se/calendar/ical/ical/calendar-nordiska-museet.ics";
     //const file = fs.createWriteStream("cal_raw.txt");
 
     setInterval(async () => {
@@ -28,7 +34,7 @@ class DownloadEventsActor {
           //Download and store the current dates events
           //as an array of strings
 
-          ["test"]: ["football"] [resultstr]
+          ["test"]: [resultstr]
         })
       );
     }, tenMins);
