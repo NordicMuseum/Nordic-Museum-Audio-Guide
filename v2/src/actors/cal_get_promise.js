@@ -1,5 +1,3 @@
-var XMLHttpRequest = new XMLHttpsRequest();
-
 function processResult(lines, dayOnly) {
   var today = new Date();
   var date_now_f =
@@ -60,40 +58,40 @@ function processResult(lines, dayOnly) {
   return final;
 }
 
-module.exports = function() {
-  this.getCalStr = function(debugMode, dayOnly) {
-    return new Promise((resolve, reject) => {
-      var request = new XMLHttpRequest();
-      url = debugMode
-        ? "https://www.calendarlabs.com/ical-calendar/ics/71/Sweden_Holidays.ics"
-        : "https://www.nordiskamuseet.se/calendar/ical/ical/calendar-nordiska-museet.ics";
-      request.open("GET", url, true);
-      var today = new Date();
-      var date_now_f =
-        today.getFullYear() +
-        "-" +
-        ("0" + (today.getMonth() + 1)).slice(-2) +
-        "-" +
-        ("0" + today.getDate()).slice(-2);
-      request.send(null);
-      HAR_HITTAT_VEVENT = false;
-      found_min_one = false;
-      request.onreadystatechange = function() {
-        //checks if response is ready.
-        if (request.readyState === 4 && request.status === 200) {
-          var type = request.getResponseHeader("Content-Type");
+export const getCalStr = function(debugMode, dayOnly) {
+  return new Promise((resolve, reject) => {
+    var request = new XMLHttpRequest();
+    url = debugMode
+      ? "https://www.calendarlabs.com/ical-calendar/ics/71/Sweden_Holidays.ics"
+      : "https://www.nordiskamuseet.se/calendar/ical/ical/calendar-nordiska-museet.ics";
+    request.open("GET", url, true);
+    var today = new Date();
+    var date_now_f =
+      today.getFullYear() +
+      "-" +
+      ("0" + (today.getMonth() + 1)).slice(-2) +
+      "-" +
+      ("0" + today.getDate()).slice(-2);
+    request.send(null);
+    HAR_HITTAT_VEVENT = false;
+    found_min_one = false;
+    request.onreadystatechange = function() {
+      //checks if response is ready.
+      if (request.readyState === 4 && request.status === 200) {
+        var type = request.getResponseHeader("Content-Type");
 
-          if (type.indexOf("text") !== 1) {
-            var lines = request.responseText.split("\n");
+        if (type.indexOf("text") !== 1) {
+          var lines = request.responseText.split("\n");
 
-            //this is where we process the data given by request.
-            final = processResult(lines, dayOnly);
-            resolve(final);
-            // END OF: if (type.indexOf("text") !== 1)
-          }
-          // END OF: if (request.readyState === 4 && request.status === 200)
+          console.log(lines);
+
+          //this is where we process the data given by request.
+          final = processResult(lines, dayOnly);
+          resolve(final);
+          // END OF: if (type.indexOf("text") !== 1)
         }
-      };
-    });
-  };
+        // END OF: if (request.readyState === 4 && request.status === 200)
+      }
+    };
+  });
 };
