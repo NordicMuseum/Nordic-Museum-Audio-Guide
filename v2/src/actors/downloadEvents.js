@@ -28,8 +28,8 @@ export const downloadEventsActor = store => {
 };
 
 async function getCal(dispatch) {
-  debugM = true;
-  dayOnly = false;
+  debugM = false;
+  dayOnly = true;
   broken = true;
   console.log("CALL TO getCal");
 
@@ -52,13 +52,16 @@ async function getCal(dispatch) {
       if (isEmpty) {
         dispatch(
           updateEvents({
-            [i]: ["There are no more events today."]
+            [i]: ["There are no listed events today."]
           })
         );
       } else {
         if (resultstr[i].time != "")
           timedate = resultstr[i].date + " - " + resultstr[i].time;
         else timedate = resultstr[i].date;
+        var title = "\n# " + resultstr[i].title;
+        var desc = resultstr[i].desc;
+        var url = resultstr[i].URL;
         dispatch(
           updateEvents({
             [i]: [
@@ -74,7 +77,7 @@ async function getCal(dispatch) {
   } else {
     dispatch(
       updateEvents({
-        [0]: ["Cannot reach server. Offline?"]
+        [0]: ["Cannot reach server. The device is most likely offline."]
       })
     );
   }

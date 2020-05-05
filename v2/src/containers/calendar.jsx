@@ -52,17 +52,32 @@ class Calendar extends Component {
 
   render() {
     const { locale, events, actions } = this.props;
+
     //Hur vi sparar data
     // { string: [string]}
     // map
     // [string]
     // .join()
     // string \n string \n string
-    const eventsNewlineSeperated = Object.entries(events)
+    //var title;
+    var count = 0;
+    var fieldArray = [];
+    var eventArray = Object.entries(events);
+    var title = eventArray.title;
+    var desc = "hell2o"; //eventArray[0].desc;
+    console.log("Title is here: " + title);
+
+    //title = Object.entries(events)[0].title;
+
+    const eventsNewlineSeperated = eventArray
       .map(([key, value]) => {
-        return `${value.filter(Boolean).join("\n")}`;
+        return `${value.filter(Boolean).join("\n\n")}`;
       })
-      .join("\n\n");
+      .join("\n____________________________________________________________\n");
+
+    //    var strings = eventsNewlineSeperated.split("##")
+
+    console.log(eventsNewlineSeperated);
 
     const markdownStyles = {
       heading1: {
@@ -78,6 +93,49 @@ class Calendar extends Component {
         textAlign: isRTL ? "right" : "left"
       }
     };
+    /*  
+    var title = strings[0]
+    var date = strings[1]
+    var desc = strings[2]
+    var url = strings[3]
+    const ShowTitle = () => 
+    <Text
+      style={[
+        { marginTop: 25 },
+          globalStyles.h1,
+          globalStyles.paragraph
+        ]}>
+      {title}
+    </Text>
+    const ShowDate = () =>
+      <Text
+        style={[
+        { marginTop: 5 },
+          globalStyles.body,
+          globalStyles.paragraph
+        ]}>
+        {date}
+      </Text>
+    const ShowDesc = () =>
+      <Text
+        style={[
+        { marginTop: 5 },
+          globalStyles.body,
+          globalStyles.paragraph
+        ]}>
+        {desc}
+      </Text>
+    const ShowURL = () =>
+      <Text
+        style={[
+        { marginTop: 0 },
+          globalStyles.body,
+          globalStyles.paragraph
+        ]}>
+        {url}
+      </Text>
+*/
+    //ShowTitle = ShowTitle + ShowText
 
     return (
       <View style={{ flex: 1 }}>
@@ -91,27 +149,7 @@ class Calendar extends Component {
             }}
             automaticallyAdjustContentInsets={false}
           >
-            <Text
-              style={[
-                { marginTop: 25 },
-                globalStyles.body,
-                globalStyles.paragraph
-              ]}
-            >
-              {eventsNewlineSeperated}
-            </Text>
-            <Markdown
-              styles={markdownStyles}
-              rules={{
-                paragraph: {
-                  react: (node, output, state) => (
-                    <Text key={state.key} style={markdownStyles.paragraph}>
-                      {output(node.content, state)}
-                    </Text>
-                  )
-                }
-              }}
-            ></Markdown>
+            <Markdown>{eventsNewlineSeperated}</Markdown>
           </ScrollView>
         </View>
       </View>
