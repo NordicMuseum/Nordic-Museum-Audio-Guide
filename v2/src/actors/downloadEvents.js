@@ -10,6 +10,7 @@ class DownloadEventsActor {
     const period = 1000 * 60 * 10;
 
     getCal(this._dispatch);
+
     setInterval(async () => {
       getCal(this._dispatch);
     }, period);
@@ -27,7 +28,7 @@ export const downloadEventsActor = store => {
 };
 
 async function getCal(dispatch) {
-  debugM = true;
+  debugM = false;
   dayOnly = false;
   resultstr = await getCalStr(debugM, dayOnly);
 
@@ -43,12 +44,14 @@ async function getCal(dispatch) {
         })
       );
     } else {
+      if (resultstr[i].time != "")
+        timedate = resultstr[i].date + " - " + resultstr[i].time;
+      else timedate = resultstr[i].date;
       dispatch(
         updateEvents({
           [i]: [
             resultstr[i].title,
-            resultstr[i].date,
-            resultstr[i].time,
+            timedate,
             resultstr[i].desc,
             resultstr[i].URL
           ]

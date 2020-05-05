@@ -60,9 +60,9 @@ class Calendar extends Component {
     // string \n string \n string
     const eventsNewlineSeperated = Object.entries(events)
       .map(([key, value]) => {
-        return `${value.join("\n")}`;
+        return `${value.filter(Boolean).join("\n")}`;
       })
-      .join("\n");
+      .join("\n\n");
 
     const markdownStyles = {
       heading1: {

@@ -81,13 +81,14 @@ export const getCalStr = function(debugMode, dayOnly) {
         var type = request.getResponseHeader("Content-Type");
 
         if (type.indexOf("text") !== 1) {
-          var lines = request.responseText.split("\n");
+          var to_split = request.responseText;
+          console.log("this is before split", to_split);
+          var lines = to_split.split("\n");
 
           //          console.log(lines);
 
           //this is where we process the data given by request.
           final = processResult(lines, dayOnly);
-          console.log("from cal_get... :", final);
           resolve(final);
           // END OF: if (type.indexOf("text") !== 1)
         }
