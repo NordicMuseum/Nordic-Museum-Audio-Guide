@@ -12,10 +12,9 @@ class DownloadEventsActor {
     this._dispatch = store.dispatch;
 
     // const tenMins = 1000 * 60 * 10;
-    const tenMins = 1500;
+    const tenMins = 1000 * 10 * 5;
+    const debugMode = false;
     var count = 0;
-    const debugMode = true;
-
     var testModule = new XMLHttpRequest();
 
     urlS = debugMode
@@ -23,20 +22,43 @@ class DownloadEventsActor {
       : "https://www.nordiskamuseet.se/calendar/ical/ical/calendar-nordiska-museet.ics";
     //const file = fs.createWriteStream("cal_raw.txt");
 
+    //
+
+    updateEvents();
+
+    //
+
     setInterval(async () => {
-      const currentTime = new Date();
-      const currentTimeStr = await currentTime.toISOString();
+      resultstr = await getCalStr(true, true);
       ++count;
-      resultstr = await getCalStr(false, true);
 
-      this._dispatch(
-        updateEvents({
-          //Download and store the current dates events
-          //as an array of strings
+      for (i = 0; i < resultstr.length; i++) {
+        // THIS IS WHERE WE PROCESS OUTPUT STRING(S)
+        var isEmpty = false;
+        if (resultstr[0].time == "NO_EVENTS") isEmpty = true;
 
-          ["test"]: [resultstr]
-        })
-      );
+        //END OF ABOVE
+        console.log("for-loop iteration is currently: ", i);
+        if (isEmpty) {
+          this._dispatch(
+            updateEvents({
+              [i]: [count] //"There are no more events today."]
+            })
+          );
+        } else {
+          this._dispatch(
+            updateEvents({
+              [i]: [
+                resultstr[i].title,
+                resultstr[i].date,
+                resultstr[i].time,
+                resultstr[i].desc,
+                resultstr[i].URL
+              ]
+            })
+          );
+        }
+      } // end of for-loop.
     }, tenMins);
   }
 }
@@ -49,4 +71,36 @@ export const downloadEventsActor = store => {
 
   _downloadEventsActor = new DownloadEventsActor(store);
   return _downloadEventsActor;
+};
+
+let downloadEvents = async () => {
+  resultstr = await getCalStr(true, true);
+
+  for (i = 0; i < resultstr.length; i++) {
+    // THIS IS WHERE WE PROCESS OUTPUT STRING(S)
+    var isEmpty = false;
+    if (resultstr[0].time == "NO_EVENTS") isEmpty = true;
+
+    //END OF ABOVE
+    console.log("for-loop iteration is currently: ", i);
+    if (isEmpty) {
+      this._dispatch(
+        updateEvents({
+          [i]: [count] //"There are no more events today."]
+        })
+      );
+    } else {
+      this._dispatch(
+        updateEvents({
+          [i]: [
+            resultstr[i].title,
+            resultstr[i].date,
+            resultstr[i].time,
+            resultstr[i].desc,
+            resultstr[i].URL
+          ]
+        })
+      );
+    }
+  }
 };

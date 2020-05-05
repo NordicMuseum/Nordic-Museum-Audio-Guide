@@ -17,7 +17,8 @@ import {
   ACTION,
   BOTTOM_PLAYER_HEIGHT,
   WHITE,
-  GRAY
+  GRAY,
+  NAV_BAR_BACKGROUND
 } from "../styles";
 
 const styles = StyleSheet.create({
@@ -32,7 +33,7 @@ class Calendar extends Component {
     return {
       topBar: {
         background: {
-          color: WHITE
+          color: NAV_BAR_BACKGROUND
         },
         backButton: {
           showTitle: false,

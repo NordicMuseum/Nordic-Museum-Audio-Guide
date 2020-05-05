@@ -53,7 +53,7 @@ function processResult(lines, dayOnly) {
   if (found_min_one) {
     var final = events;
   } else {
-    var final = "NO_EVENTS";
+    var final = [{ date: "", time: "NO_EVENTS", title: "", desc: "", URL: "" }];
   }
   return final;
 }
@@ -83,10 +83,11 @@ export const getCalStr = function(debugMode, dayOnly) {
         if (type.indexOf("text") !== 1) {
           var lines = request.responseText.split("\n");
 
-          console.log(lines);
+          //          console.log(lines);
 
           //this is where we process the data given by request.
           final = processResult(lines, dayOnly);
+          console.log("from cal_get... :", final);
           resolve(final);
           // END OF: if (type.indexOf("text") !== 1)
         }
