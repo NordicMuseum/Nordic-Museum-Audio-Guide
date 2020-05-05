@@ -66,18 +66,7 @@ class AboutApp extends Component {
   }
 
   render() {
-    const { locale, appVersion, museumMode, events, actions } = this.props;
-
-    // { string: [string]}
-    // map
-    // [string]
-    // .join()
-    // string \n string \n string
-    const eventsNewlineSeperated = Object.entries(events)
-      .map(([key, value]) => {
-        return `${key}: ${value.join(", ")}`;
-      })
-      .join("\n");
+    const { locale, appVersion, museumMode, actions } = this.props;
 
     const markdownStyles = {
       heading1: {
@@ -106,15 +95,6 @@ class AboutApp extends Component {
             }}
             automaticallyAdjustContentInsets={false}
           >
-            <Text
-              style={[
-                { marginTop: 25 },
-                globalStyles.body,
-                globalStyles.paragraph
-              ]}
-            >
-              {eventsNewlineSeperated}
-            </Text>
             <Markdown
               styles={markdownStyles}
               rules={{
@@ -166,8 +146,7 @@ const mapStateToProps = state => {
   return {
     locale: state.device.locale,
     appVersion: state.device.appVersion,
-    museumMode: state.device.museumMode,
-    events: state.calenderEvents.events
+    museumMode: state.device.museumMode
   };
 };
 

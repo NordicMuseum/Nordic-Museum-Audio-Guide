@@ -60,7 +60,7 @@ class Calendar extends Component {
     // string \n string \n string
     const eventsNewlineSeperated = Object.entries(events)
       .map(([key, value]) => {
-        return `${key}: ${value.join(", ")}`;
+        return `${value.join("\n")}`;
       })
       .join("\n");
 
