@@ -28,9 +28,9 @@ export const downloadEventsActor = store => {
 };
 
 async function getCal(dispatch) {
-  debugM = false;
-  dayOnly = true;
-  broken = true;
+  debugM = true;
+  dayOnly = false;
+  broken = false;
   console.log("CALL TO getCal");
 
   server_connected = true;
@@ -64,12 +64,7 @@ async function getCal(dispatch) {
         var url = resultstr[i].URL;
         dispatch(
           updateEvents({
-            [i]: [
-              resultstr[i].title,
-              timedate,
-              resultstr[i].desc,
-              resultstr[i].URL
-            ]
+            [i]: [title, timedate, desc, url]
           })
         );
       }
