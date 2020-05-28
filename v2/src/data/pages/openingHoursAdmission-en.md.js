@@ -1,6 +1,6 @@
 const text = `# Opening Hours
 
-June–August: daily 9–18
+June–August: daily 10–17
 
 September–May: daily 10–17 (Wednesdays 10–20)
 

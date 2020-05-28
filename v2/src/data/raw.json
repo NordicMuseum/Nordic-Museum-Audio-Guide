@@ -1,5 +1,5 @@
 {
-    "Timestamp": "Wed Dec 04 2019 16:12:09 GMT-0500 (EST)",
+    "Timestamp": "Thu May 28 2020 15:30:42 GMT-0400 (östnordamerikansk sommartid)",
     "UI Strings": [
         {
             "UIString": "min",
@@ -1685,7 +1685,7 @@
             "title__en": "Table Settings",
             "title__sv": "Dukade bord",
             "title__de": "Tischdekorationen",
-            "audioContent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,398,399",
+            "audioContent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,310,311",
             "imageURL": "tableSettings.png",
             "imageWidth": 750,
             "imageHeight": 345,
@@ -2113,6 +2113,26 @@
             "duration__svKids": "3",
             "duration__svSimple": "3",
             "duration__zh": "3"
+        },
+        {
+            "id": "310",
+            "category": "INTRODUCTION",
+            "title__en": "Welcome to our table",
+            "title__sv": "Välkommen till bords",
+            "title__de": "Willkommen zu Tisch",
+            "duration__de": "3",
+            "duration__en": "3",
+            "duration__sv": "3"
+        },
+        {
+            "id": "311",
+            "category": "CONTEXT",
+            "title__en": "Breakfast at noon",
+            "title__sv": "Frukost mitt på dagen",
+            "title__de": "Frühstück am Mittag",
+            "duration__de": "3",
+            "duration__en": "3",
+            "duration__sv": "3"
         },
         {
             "id": "312",
@@ -2652,26 +2672,6 @@
             "duration__zh": "3"
         },
         {
-            "id": "398",
-            "category": "INTRODUCTION",
-            "title__en": "Welcome to our table",
-            "title__sv": "Välkommen till bords",
-            "title__de": "Willkommen zu Tisch",
-            "duration__de": "3",
-            "duration__en": "3",
-            "duration__sv": "3"
-        },
-        {
-            "id": "399",
-            "category": "CONTEXT",
-            "title__en": "Breakfast at noon",
-            "title__sv": "Frukost mitt på dagen",
-            "title__de": "Frühstück am Mittag",
-            "duration__de": "3",
-            "duration__en": "3",
-            "duration__sv": "3"
-        },
-        {
             "id": "401",
             "region": "Homes and Interiors E",
             "category": "HIGHLIGHT",
@@ -3159,36 +3159,36 @@
         {
             "id": "435",
             "category": "INTERVIEW",
+            "title__en": "Interview: Linda Mannela (in Swedish)",
+            "title__sv": "Intervju: Linda Mannela",
+            "duration__sv": "3"
+        },
+        {
+            "id": "436",
+            "category": "INTERVIEW",
             "title__en": "Interview: Lars-Marcus Kuhmunen (in Swedish)",
             "title__sv": "Intervju: Lars-Marcus Kuhmunen",
             "duration__sv": "3"
         },
         {
-            "id": "436",
+            "id": "437",
             "category": "INTERVIEW",
             "title__en": "Interview: Elias Torkelsson (in Swedish)",
             "title__sv": "Intervju: Elias Torkelsson",
             "duration__sv": "3"
         },
         {
-            "id": "437",
-            "category": "INTERVIEW",
-            "title__en": "Interview: Victoria Harnesk (in Swedish)",
-            "title__sv": "Intervju: Victoria Harnesk",
-            "duration__sv": "3"
-        },
-        {
             "id": "438",
             "category": "INTERVIEW",
-            "title__en": "Interview: Inge Frisk (in Swedish)",
-            "title__sv": "Intervju: Inge Frisk",
+            "title__en": "Interview: Sylvia Simma (in Swedish)",
+            "title__sv": "Intervju: Sylvia Simma",
             "duration__sv": "3"
         },
         {
             "id": "439",
             "category": "INTERVIEW",
-            "title__en": "Interview: Linda Mannela (in Swedish)",
-            "title__sv": "Intervju: Linda Mannela",
+            "title__en": "Interview: Per-Gustav Idivuoma (in Swedish)",
+            "title__sv": "Intervju: Per-Gustav Idivuoma",
             "duration__sv": "3"
         },
         {
@@ -3201,29 +3201,29 @@
         {
             "id": "441",
             "category": "INTERVIEW",
-            "title__en": "Interview: Lotta Willborg Stoor (in Swedish)",
-            "title__sv": "Intervju: Lotta Willborg Stoor",
-            "duration__sv": "3"
-        },
-        {
-            "id": "442",
-            "category": "INTERVIEW",
-            "title__en": "Interview: Per-Gustav Idivuoma (in Swedish)",
-            "title__sv": "Intervju: Per-Gustav Idivuoma",
-            "duration__sv": "3"
-        },
-        {
-            "id": "443",
-            "category": "INTERVIEW",
             "title__en": "Interview: Staffan Palopaa (in Swedish)",
             "title__sv": "Intervju: Staffan Palopaa",
             "duration__sv": "3"
         },
         {
+            "id": "442",
+            "category": "INTERVIEW",
+            "title__en": "Interview: Inge Frisk (in Swedish)",
+            "title__sv": "Intervju: Inge Frisk",
+            "duration__sv": "3"
+        },
+        {
+            "id": "443",
+            "category": "INTERVIEW",
+            "title__en": "Interview: Victoria Harnesk (in Swedish)",
+            "title__sv": "Intervju: Victoria Harnesk",
+            "duration__sv": "3"
+        },
+        {
             "id": "444",
             "category": "INTERVIEW",
-            "title__en": "Interview: Sylvia Simma (in Swedish)",
-            "title__sv": "Intervju: Sylvia Simma",
+            "title__en": "Interview: Lotta Willborg Stoor (in Swedish)",
+            "title__sv": "Intervju: Lotta Willborg Stoor",
             "duration__sv": "3"
         },
         {

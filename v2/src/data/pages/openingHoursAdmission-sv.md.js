@@ -1,6 +1,6 @@
 const text = `# Öppettider
 
-Juni–augusti: dagligen kl 9–18
+Juni–augusti: dagligen kl 10–17
 
 September–maj: dagligen kl 10–17 (onsdag kl. 10–20)
 
