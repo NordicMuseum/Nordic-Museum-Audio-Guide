@@ -1,5 +1,5 @@
 {
-    "Timestamp": "Thu May 28 2020 15:30:42 GMT-0400 (östnordamerikansk sommartid)",
+    "Timestamp": "Thu Jun 25 2020 11:07:01 GMT-0400 (östnordamerikansk sommartid)",
     "UI Strings": [
         {
             "UIString": "min",
@@ -1615,6 +1615,39 @@
             "duration__zh": 2863
         },
         {
+            "floor": 1,
+            "order": 1,
+            "regions": "Floor 1 Hallway",
+            "title__en": "Floor 1 and the Backyard",
+            "title__sv": "Plan 1 och bakgården",
+            "audioContent": "101,102,103",
+            "category": "HIGHLIGHTS",
+            "imageURL": "floor1.png",
+            "imageWidth": 750,
+            "imageHeight": 345,
+            "imageAccessibilityLabel__en": "Floor 1 and the Backyard",
+            "imageAccessibilityLabel__sv": "Plan 1 och bakgården",
+            "shortCredit__en": "<i>Floor 1 and the Backyard</i>",
+            "shortCredit__sv": "<i>Plan 1 och bakgården</i>",
+            "longCredit__en": "Photo: Zynka\\n<i>Floor 1 and the Backyard</i>",
+            "longCredit__sv": "Foto: Zynka\\n<i>Plan 1 och bakgården</i>",
+            "duration__ar": 500,
+            "duration__de": 500,
+            "duration__en": 500,
+            "duration__es": 500,
+            "duration__fi": 500,
+            "duration__fr": 500,
+            "duration__it": 500,
+            "duration__ru": 500,
+            "duration__sv": 485,
+            "duration__seSma": 485,
+            "duration__seSme": 485,
+            "duration__seSmj": 485,
+            "duration__svKids": 485,
+            "duration__svSimple": 485,
+            "duration__zh": 500
+        },
+        {
             "floor": 2,
             "order": 1,
             "regions": "Great Hall",
@@ -1685,7 +1718,7 @@
             "title__en": "Table Settings",
             "title__sv": "Dukade bord",
             "title__de": "Tischdekorationen",
-            "audioContent": "316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327,310,311",
+            "audioContent": "310,311,316,328,312,313,314,315,317,318,319,320,321,322,323,324,325,326,327",
             "imageURL": "tableSettings.png",
             "imageWidth": 750,
             "imageHeight": 345,
@@ -1844,6 +1877,24 @@
         }
     ],
     "Stops": [
+        {
+            "id": "101",
+            "category": "HIGHLIGHT",
+            "title__en": "The art portal “Two Directions” by Outi Pieski",
+            "title__sv": "Konstportalen ”Två riktningar” av Outi Pieski"
+        },
+        {
+            "id": "102",
+            "category": "HIGHLIGHT",
+            "title__en": "“Sickis”",
+            "title__sv": "Sickis"
+        },
+        {
+            "id": "103",
+            "category": "HIGHLIGHT",
+            "title__en": "“Lusknäppen” building",
+            "title__sv": "Lusknäppen"
+        },
         {
             "id": "201",
             "region": "Great Hall",

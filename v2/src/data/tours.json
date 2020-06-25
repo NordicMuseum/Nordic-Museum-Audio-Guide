@@ -170,6 +170,39 @@
 		"duration": "tours_highlights_duration"
 	},
 	{
+		"floor": 1,
+		"order": 1,
+		"regions": [
+			"Floor 1 Hallway"
+		],
+		"title": "tours_floor1AndTheBackyard_title",
+		"audioContent": [
+			{
+				"id": "101",
+				"category": "HIGHLIGHT",
+				"title": "stops_theArtPortalTwoDirectionsByOutiPieski_title"
+			},
+			{
+				"id": "102",
+				"category": "HIGHLIGHT",
+				"title": "stops_sickis_title"
+			},
+			{
+				"id": "103",
+				"category": "HIGHLIGHT",
+				"title": "stops_lusknappenBuilding_title"
+			}
+		],
+		"category": "HIGHLIGHTS",
+		"imageURL": "floor1.png",
+		"imageWidth": 750,
+		"imageHeight": 345,
+		"imageAccessibilityLabel": "tours_floor1AndTheBackyard_imageAccessibilityLabel",
+		"shortCredit": "tours_floor1AndTheBackyard_shortCredit",
+		"longCredit": "tours_floor1AndTheBackyard_longCredit",
+		"duration": "tours_floor1AndTheBackyard_duration"
+	},
+	{
 		"floor": 2,
 		"order": 1,
 		"regions": [
@@ -489,6 +522,18 @@
 		"title": "tours_tableSettings_title",
 		"audioContent": [
 			{
+				"id": "310",
+				"category": "INTRODUCTION",
+				"title": "stops_welcomeToOurTable_title",
+				"duration": "stops_welcomeToOurTable_duration"
+			},
+			{
+				"id": "311",
+				"category": "CONTEXT",
+				"title": "stops_breakfastAtNoon_title",
+				"duration": "stops_breakfastAtNoon_duration"
+			},
+			{
 				"id": "316",
 				"region": "Table Settings",
 				"category": "HIGHLIGHT",
@@ -591,18 +636,6 @@
 				"category": "CONTEXT",
 				"title": "stops_selmasCoffeeParty_title",
 				"duration": "stops_selmasCoffeeParty_duration"
-			},
-			{
-				"id": "310",
-				"category": "INTRODUCTION",
-				"title": "stops_welcomeToOurTable_title",
-				"duration": "stops_welcomeToOurTable_duration"
-			},
-			{
-				"id": "311",
-				"category": "CONTEXT",
-				"title": "stops_breakfastAtNoon_title",
-				"duration": "stops_breakfastAtNoon_duration"
 			}
 		],
 		"imageURL": "tableSettings.png",
